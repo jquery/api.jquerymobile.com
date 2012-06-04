@@ -10,21 +10,10 @@
 	</longdesc>
 	<created>1.0</created>
 	<options>
-	  <option name="data-transition" default="pop">
-	    <desc>Opens the dialog using the specified transition</desc>
-	    <p>Possible Values</p>
-	    <dl>
-	      <dt>fade</dt>
-	      <dt>pop</dt>
-	      <dt>flip</dt>
-	      <dt>turn</dt>
-	      <dt>flow</dt>
-	      <dt>slidefade</dt>
-	      <dt>slide</dt>
-	      <dt>slideup</dt>
-	      <dt>slidedown</dt>
-	      <dt>none</dt>
-	    </dl>
+	  <option name="data-transition" default='"pop"'>
+	    <desc>Opens the dialog using the specified transition. (Note the recommended transitions for a more realistic dialog effect appear in bold)
+	    <p>Possible Values: "fade", <b>"pop"</b>, <b>"flip"</b>, "turn", "flow", "slidefade", "slide", "slideup", <b>"slidedown"</b>, "none". </p>
+	    </desc>
 	    <type name="String" />
 	  </option>		
 	</options>
