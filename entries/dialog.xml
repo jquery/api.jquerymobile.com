@@ -1,15 +1,32 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="dialog" namespace="fn" type="Widget" widgetnamespace="mobile">
-	<desc></desc>
+	<desc>Open content in an interactive overlay</desc>
 	<longdesc>
 		<p>
-		dialog description	
+		Any page can be presented as a modal dialog by adding the <code>data-rel="dialog"</code> attribute to the page anchor link. When the "dialog" attribute is applied, the framework adds styles to add rounded corners, margins around the page and a dark background to make the "dialog" appear to be suspended above the page.
+
 		</p>
 	</longdesc>
-	<created></created>
+	<created>1.0</created>
 	<options>
-		
+	  <option name="data-transition" default="pop">
+	    <desc>Opens the dialog using the specified transition</desc>
+	    <p>Possible Values</p>
+	    <dl>
+	      <dt>fade</dt>
+	      <dt>pop</dt>
+	      <dt>flip</dt>
+	      <dt>turn</dt>
+	      <dt>flow</dt>
+	      <dt>slidefade</dt>
+	      <dt>slide</dt>
+	      <dt>slideup</dt>
+	      <dt>slidedown</dt>
+	      <dt>none</dt>
+	    </dl>
+	    <type name="String" />
+	  </option>		
 	</options>
 	<events>
 		
@@ -20,7 +37,7 @@
 	<example>
 		<desc></desc>
 		<code><![CDATA[]]></code>
-		<html><![CDATA[
+		<html><![CDATA[<a href="foo.html" data-rel="dialog">Open dialog</a>
 
 ]]></html>
 	</example>
