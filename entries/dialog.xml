@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
+<entry name="dialog" namespace="fn" type="Widget" widgetnamespace="mobile">
+	<desc></desc>
+	<longdesc>
+		<p>
+			
+		</p>
+	</longdesc>
+	<created></created>
+	<options>
+		
+	</options>
+	<events>
+		
+	</events>
+	<methods>
+		
+	</methods>
+	<example>
+		<desc></desc>
+		<code><![CDATA[]]></code>
+		<html><![CDATA[
+
+]]></html>
+	</example
+	<category slug="widgets"/>
+</entry>
