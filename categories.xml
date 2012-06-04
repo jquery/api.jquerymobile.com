@@ -1,5 +1,5 @@
 <categories>
-	<category name="Uncategorized" slug="Uncategorized"/>
+	<category name="Uncategorized" slug="uncategorized"/>
 	<category name="Widgets" slug="widgets">
 		<desc></desc>
 	</category>
