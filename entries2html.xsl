@@ -60,6 +60,15 @@
 					</li>
 					<li>
 						<a href="#theming">Theming</a>
+                                                <ul>
+                                                        <xsl:for-each select="theming/theme">
+                                                                <li>
+                                                                        <a href="#theme-{@name}">
+                                                                                <xsl:value-of select="@name"/>
+                                                                        </a>
+                                                                </li>
+                                                        </xsl:for-each>
+                                                </ul>
 					</li>
 					<li>
 						<a href="#examples">Examples</a>
@@ -143,7 +152,30 @@
 				<header>
 					<h2 class="underline">Theming</h2>
 				</header>
-				<xsl-copy-of select="theming/node()"/>
+                                <ul>
+                                        <xsl:for-each select="theming/theme">
+                                                <li id="theme-{@name}">
+                                                        <h3>
+                                                                <xsl:value-of select="@name"/>
+                                                        </h3>
+                                                        <p>
+                                                                <strong>Type: </strong>
+                                                                <xsl:value-of select="@type"/>
+                                                                <xsl:for-each select="type">
+                                                                        <xsl:if test="position() &gt; 1">, </xsl:if>
+                                                                        <xsl:value-of select="@name"/>
+                                                                </xsl:for-each>
+                                                        </p>
+                                                        <p>
+                                                                <strong>Default: </strong>
+                                                                <xsl:value-of select="@default"/>
+                                                        </p>
+                                                        <p>
+                                                                <xsl:copy-of select="desc/node()"/>
+                                                        </p>
+                                                </li>
+                                        </xsl:for-each>
+                                </ul>
 			</section>
 			<section id="examples">
 				<header>
@@ -168,7 +200,9 @@
 &lt;script src="jquery-mobile.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
+&lt;div data-role="page"&gt;
 <xsl:copy-of select="html/text()"/>
+&lt;/div&gt;
 &lt;script&gt;<xsl:copy-of select="code/text()"/>&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;

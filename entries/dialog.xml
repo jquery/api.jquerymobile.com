@@ -11,8 +11,8 @@
 	<created>1.0</created>
 	<options>
 	  <option name="data-transition" default='"pop"'>
-	    <desc>Opens the dialog using the specified transition. (Note the recommended transitions for a more realistic dialog effect appear in bold)
-	    <p>Possible Values: "fade", <b>"pop"</b>, <b>"flip"</b>, "turn", "flow", "slidefade", "slide", "slideup", <b>"slidedown"</b>, "none". </p>
+	    <desc>Opens the dialog using the specified transition. (Note the recommended transitions for a more realistic dialog effect appear in bold).
+	    <p>Possible values: "fade", <b>"pop"</b>, <b>"flip"</b>, "turn", "flow", "slidefade", "slide", "slideup", <b>"slidedown"</b>, "none". </p>
 	    </desc>
 	    <type name="String" />
 	  </option>		
@@ -21,13 +21,24 @@
 		
 	</events>
 	<methods>
-		
+	  <method name="close">
+	    <desc>Close the dialog.</desc>
+	  </method>		
 	</methods>
+	<theming>
+	  <theme name="data-theme">
+	    <desc>main theme (a-z)</desc>
+	    <type name="String" />
+	  </theme>
+	 <theme name="data-overlay-theme">
+	   <desc>overlay theme (a-z)</desc>
+	   <type name="String" />
+	 </theme>
+	</theming>
 	<example>
 		<desc></desc>
 		<code><![CDATA[]]></code>
 		<html><![CDATA[<a href="foo.html" data-rel="dialog">Open dialog</a>
-
 ]]></html>
 	</example>
 	<category slug="widgets"/>
