@@ -16,9 +16,11 @@
 	    </desc>
 	    <type name="String" />
 	  </option>		
+	  <option name="data-close-btn-text">
+	  </option>  
 	</options>
 	<events>
-		
+
 	</events>
 	<methods>
 	  <method name="close">
@@ -27,19 +29,18 @@
 	</methods>
 	<theming>
 	  <theme name="data-theme">
-	    <desc>main theme (a-z)</desc>
+	    <desc>Dialogs can be styled with different theme swatches, just like any page by adding data-theme attributes to the header, content, or footer containers. <p>Possible values: swatch letter (a-z)</p></desc>
 	    <type name="String" />
 	  </theme>
 	 <theme name="data-overlay-theme">
-	   <desc>overlay theme (a-z)</desc>
+	   <desc>Dialogs appear to be floating above an overlay layer. This overlay adopts the swatch A content color by default, but the data-overlay-theme attribute can be added to the page wrapper to set the overlay to any swatch letter.<p> Possible values: swatch letter (a-z)</p></desc>
 	   <type name="String" />
 	 </theme>
 	</theming>
 	<example>
-		<desc></desc>
+		<desc>A basic example of opening a page as a dialog by adding <code>data-rel="dialog"</code> to the anchor tag.</desc>
 		<code><![CDATA[]]></code>
-		<html><![CDATA[<a href="foo.html" data-rel="dialog">Open dialog</a>
-]]></html>
+		<html><![CDATA[<a href="foo.html" data-rel="dialog">Open dialog</a>]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>
