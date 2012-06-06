@@ -16,7 +16,10 @@
 	    </desc>
 	    <type name="String" />
 	  </option>		
-	  <option name="data-close-btn-text">
+	  <option name="data-close-btn-text" default='"Close"'>
+	    <desc>Customizes the text of the close button which is helpful for translating this into different languages. This is displayed as an icon-only button by default so the text isn't visible on-screen, but is read by screen readers so this is an important accessibility feature.
+            </desc>
+            <type name="String" />
 	  </option>  
 	</options>
 	<events>
