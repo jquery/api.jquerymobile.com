@@ -43,7 +43,9 @@
 	<example>
 		<desc>A basic example of opening a page as a dialog by adding <code>data-rel="dialog"</code> to the anchor tag.</desc>
 		<code><![CDATA[]]></code>
-		<html><![CDATA[<a href="foo.html" data-rel="dialog">Open dialog</a>]]></html>
+		<html><![CDATA[<div data-role="content">
+<a href="foo.html" data-rel="dialog">Open dialog</a>
+</div>]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>
