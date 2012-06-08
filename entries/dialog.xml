@@ -27,7 +27,7 @@
 	</events>
 	<methods>
 	  <method name="close">
-	    <desc>Close the dialog.</desc>
+	    <desc>Closes the dialog.</desc>
 	  </method>		
 	</methods>
 	<theming>
@@ -43,9 +43,23 @@
 	<example>
 		<desc>A basic example of opening a page as a dialog by adding <code>data-rel="dialog"</code> to the anchor tag.</desc>
 		<code><![CDATA[]]></code>
-		<html><![CDATA[<div data-role="content">
-<a href="foo.html" data-rel="dialog">Open dialog</a>
-</div>]]></html>
+		<html><![CDATA[  <div data-role="header">
+        <h2>Dialog Example 1</h2>
+      </div>
+      <div data-role="content">
+        <a href="#dialogPage" data-rel="dialog">Open dialog</a>
+      </div>
+      <div data-role="footer">
+        <h2></h2>
+      </div>
+    </div>
+    <div data-role="page" id="dialogPage">
+      <div data-role="header">
+        <h2>Dialog</h2>
+      </div>
+      <div data-role="content">
+        <p>I am a dialog</p>
+      </div>]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>

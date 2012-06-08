@@ -189,22 +189,23 @@
 						</span>
 					</h4>
 					<pre>
-						<code data-linenum="true"><xsl:choose><xsl:when test="html"><xsl:attribute name="class">example demo-code</xsl:attribute></xsl:when><xsl:otherwise><xsl:attribute name="class">example</xsl:attribute></xsl:otherwise></xsl:choose>&lt;!doctype html&gt;
+						<code data-linenum="true"><xsl:choose><xsl:when test="html"><xsl:attribute name="class">example demo-code</xsl:attribute></xsl:when><xsl:otherwise><xsl:attribute name="class">example</xsl:attribute></xsl:otherwise></xsl:choose>
+&lt;!DOCTYPE html&gt;
 &lt;html&gt;
-&lt;head&gt;
-&lt;meta charset="utf-8"&gt;
-&lt;title&gt;<xsl:value-of select="desc"/>&lt;/title&gt;
-&lt;link rel="stylesheet" href="jquery-mobile.css"&gt;<xsl:if test="css">
-&lt;style&gt;<xsl:copy-of select="css/text()"/>  &lt;/style&gt;</xsl:if>
-&lt;script src="jquery.js"&gt;&lt;/script&gt;
-&lt;script src="jquery-mobile.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div data-role="page"&gt;
-<xsl:copy-of select="html/text()"/>
-&lt;/div&gt;
-&lt;script&gt;<xsl:copy-of select="code/text()"/>&lt;/script&gt;
-&lt;/body&gt;
+  &lt;head&gt;
+    &lt;title&gt;<xsl:value-of select="desc"/>&lt;/title&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;link rel="stylesheet" href="jquery-mobile.css"&gt;<xsl:if test="css">
+    &lt;style&gt;<xsl:copy-of select="css/text()"/>  &lt;/style&gt;</xsl:if>
+    &lt;script src="jquery.js"&gt;&lt;/script&gt;
+    &lt;script src="jquery-mobile.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div data-role="page"&gt;
+    <xsl:copy-of select="html/text()"/>
+    &lt;/div&gt;
+  &lt;script&gt;<xsl:copy-of select="code/text()"/>&lt;/script&gt;
+  &lt;/body&gt;
 &lt;/html&gt;
 </code>
 					</pre>
