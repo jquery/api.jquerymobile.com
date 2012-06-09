@@ -19,7 +19,7 @@ $( document ).bind( "mobileinit", function(){
 </desc>
 	    <type name="string" />
 	  </option>		
-	  <option name="collapsed" default=true>
+	  <option name="collapsed" default="true">
 	    <desc>When false, the container is initially expanded with a minus icon in the header. To set the value for all instances of this widget, bind this option to the mobileinit event:
 <code><pre>
 $( document ).bind( "mobileinit", function(){
@@ -80,7 +80,7 @@ $( document ).bind( "mobileinit", function(){
 </desc>
 	    <type name="string" />
 	  </option>
-	    <option name="initSelector"  default='":jqmData(role=\'dialog\')"'>
+	    <option name="initSelector"  default='":jqmData(role=&#39;dialog&#39;)"'>
 		<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as collapsibles. To change which elements are initialized, bind this option to the mobileinit event:
 <code><pre>
 $( document ).bind( "mobileinit", function(){
@@ -89,7 +89,7 @@ $( document ).bind( "mobileinit", function(){
 		</desc>
 		<type name="CSS selector string" />
 	  </option>
-	      <option name="mini"  default=false>
+	      <option name="mini"  default="false">
 		<desc>Sets the size of the element to a more compact, mini version. If the value is false for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set. To set the value for all instances of this widget, bind this option to the mobileinit event:
 <code><pre>
 $( document ).bind( "mobileinit", function(){
@@ -109,8 +109,8 @@ $( document ).bind( "mobileinit", function(){
 	  </method>		
 	</methods>
 	<theming>
-	  <theme name="theme" default=null, inherited from parent>
-	    <desc>Sets the color scheme (swatch) for the collapsible. It accepts a single letter from a-z that maps to the swatches included in your theme. To set the value for all instances of this widget, bind this option to the mobileinit event:</p>
+	  <theme name="theme" default="null, inherited from parent">
+	    <desc>Sets the color scheme (swatch) for the collapsible. It accepts a single letter from a-z that maps to the swatches included in your theme. To set the value for all instances of this widget, bind this option to the mobileinit event:
 <code><pre>
 $( document ).bind( "mobileinit", function(){
     $.mobile.collapsible.prototype.options.theme = "a";
@@ -118,7 +118,6 @@ $( document ).bind( "mobileinit", function(){
 </pre></code>
 <p>Possible values: swatch letter (a-z).</p>
 <p>This option is also exposed as a data attribute: <code>data-theme="a"</code>.</p>
-
 		</desc>
 	    <type name="String" />
 	  </theme>
