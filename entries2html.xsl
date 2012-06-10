@@ -204,7 +204,7 @@
     &lt;div data-role="page"&gt;
     <xsl:copy-of select="html/text()"/>
     &lt;/div&gt;
-  &lt;script&gt;<xsl:copy-of select="code/text()"/>&lt;/script&gt;
+    &lt;script&gt;<xsl:copy-of select="code/text()"/>&lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;
 </code>
