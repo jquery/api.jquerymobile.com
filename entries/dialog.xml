@@ -31,9 +31,8 @@ $( document ).bind( "mobileinit", function(){
 	</options>
 	<events>
 	<event name="create">
-	<desc>triggered when a dialog is created</desc>
+	<desc>Triggered when a dialog is created</desc>
 	</event>
-
 	</events>
 	<methods>
 	  <method name="close">
@@ -41,8 +40,8 @@ $( document ).bind( "mobileinit", function(){
 	  </method>		
 	</methods>
 	<theming>
-	  <theme name="data-theme">
-	    <desc>Dialogs can be styled with different theme swatches, just like any page by adding data-theme attributes to the header, content, or footer containers. <p>Possible values: swatch letter (a-z)</p></desc>
+	  <theme name="data-theme (as a data-attribute)">
+	    <desc>Dialogs can be styled with different theme swatches, just like any page by adding <code>data-theme</code> attributes to the header, content, or footer containers. <p>Possible values: swatch letter (a-z)</p></desc>
 	    <type name="String" />
 	  </theme>
 	 <theme name="overlayTheme" default='"a"'>
