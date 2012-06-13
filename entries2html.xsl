@@ -13,6 +13,7 @@
 		}
 	}
 </script>
+
 	<xsl:for-each select="//entry">
 		<xsl:variable name="number-examples" select="count(example)"/>
 		<article>
@@ -224,8 +225,12 @@
 					</xsl:if>
 				</xsl:for-each>
 			</section>
+           
 		</article>
+        
 	</xsl:for-each>
+	
+    
 </xsl:template>
 <!-- arguments -->
 <xsl:template name="arguments">

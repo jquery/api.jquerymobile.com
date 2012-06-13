@@ -119,24 +119,12 @@ $( document ).bind( "mobileinit", function(){
 	<events>
 	  <event name="create">
 	    <desc>Triggered when a collapsible is created</desc>
-		<code><pre>$( ".selector" ).collapsible({
-   create: function(event, ui) { ... }
-});
-</pre></code>
 	  </event>
 	  <event name="collapse">
 	<desc>Triggered when a collapsible is collapsed</desc>
-	<code><pre>$( ".selector" ).collapsible({
-   collapse: function(event, ui) { ... }
-});
-</pre></code>
 	</event>
 	<event name="expand">
 	<desc>Triggered when a collapsible is expanded</desc>
-	<code><pre>$( ".selector" ).collapsible({
-   expand: function(event, ui) { ... }
-});
-</pre></code>
 	</event>
 	</events>
 	<methods>
