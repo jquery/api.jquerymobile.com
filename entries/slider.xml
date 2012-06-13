@@ -33,7 +33,7 @@ In this example, the acceptable range is 0-100.
 &lt;input type="range" name="slider" id="slider-fill" value="60" min="0" max="100" data-highlight="true" /&gt;
 
 </pre></code>
-<h3>Fill highlight</h3>
+<h3>Mini version</h3>
 
 <p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a mini version. </p>
 
