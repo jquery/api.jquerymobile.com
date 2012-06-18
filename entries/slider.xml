@@ -16,7 +16,7 @@
 </pre></code>
 		<h3>Step increment</h3>
 		<p>To force the slider to snap to a specific increment, add the <code>step</code> attribute to the input. By default, the step is 1, but in this example, the step is 50 and the maximum value is 500.</p>
-In this example, the acceptable range is 0-100.
+<p>In this example, the acceptable range is 0-100.</p>
 <code><pre>
 
 &lt;label for="slider-0"&gt;Input slider:&lt;/label&gt;
@@ -37,12 +37,11 @@ In this example, the acceptable range is 0-100.
 
 <p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a mini version. </p>
 
-<code><pre>
-
+<code>
 &lt;label for="slider-0"&gt;Input slider:&lt;/label&gt;
 &lt;input type="range" name="slider" id="slider-0" value="25" min="0" max="100" data-highlight="true" data-mini="true" /&gt;
 
-</pre></code>
+</code>
 <p>This will produce an input that is not as tall as the standard version and has a smaller text size.</p>
 
 <h3>Field containers</h3>
@@ -50,10 +49,9 @@ In this example, the acceptable range is 0-100.
 <p>Optionally wrap the slider markup in a container with the <code>data-role="fieldcontain"</code> attribute to help visually group it in a longer form. In this example, the step attribute is omitted to allow any whole number value to be selected.</p>
 
 <code><pre>
-
 &lt;div data-role="fieldcontain"&gt;
-   &lt;label for="slider"&gt;Input slider:&lt;/label&gt;
-   &lt;input type="range" name="slider" id="slider" value="25" min="0" max="100"  /&gt;
+  &lt;label for="slider"&gt;Input slider:&lt;/label&gt;
+  &lt;input type="range" name="slider" id="slider" value="25" min="0" max="100" /&gt;
 &lt;/div&gt;
 
 </pre></code>
@@ -74,14 +72,14 @@ $('input').slider();
 	
 	<p>To set the theme swatch for the slider, add a <code>data-theme</code> attribute to the <code>input</code> which will apply the theme to both the input, handle and track. The track swatch can be set separately by adding the <code>data-track-theme</code> attribute to apply the down state version of the selected button swatch.</p>
 	
-<code><pre>
+<code>
 
 &lt;div data-role="fieldcontain"&gt;
-	&lt;label for="slider-2"&gt;Input slider:&lt;/label&gt;
-	&lt;input type="range" name="slider-2" id="slider-2" value="25" min="0" max="100" data-theme="a" data-track-theme="b" /&gt;
+  &lt;label for="slider-2"&gt;Input slider:&lt;/label&gt;
+  &lt;input type="range" name="slider-2" id="slider-2" value="25" min="0" max="100" data-theme="a" data-track-theme="b" /&gt;
 &lt;/div&gt;
 
-</pre></code>
+</code>
 	</longdesc>
 	<created>1.0</created>
 	<options>
@@ -107,7 +105,7 @@ $('.selector').slider({ highlight: "true" });
 		<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as sliders. To change which elements are initialized, bind this option to the mobileinit event:
 <code><pre>
 $( document ).bind( "mobileinit", function(){
-   $.mobile.slider.prototype.options.initSelector = ".myslider";
+  $.mobile.slider.prototype.options.initSelector = ".myslider";
 });
 </pre></code>
 		</desc>
