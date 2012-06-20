@@ -10,8 +10,8 @@
 		<p>In this example, the acceptable range is 0-100.</p>
 <code><pre>
 
-&lt;label for="slider-0"&gt;Input slider:&lt;/label&gt;
-&lt;input type="range" name="slider" id="slider-0" value="60" min="0" max="100" /&gt;
+&lt;label for="slider-1"&gt;Input slider:&lt;/label&gt;
+&lt;input type="range" name="slider-1" id="slider-1" value="60" min="0" max="100" /&gt;
 
 </pre></code>
 		<h3>Step increment</h3>
@@ -19,8 +19,8 @@
 <p>In this example, the acceptable range is 0-100.</p>
 <code><pre>
 
-&lt;label for="slider-0"&gt;Input slider:&lt;/label&gt;
-&lt;input type="range" name="slider" id="slider-0" value="60" min="0" max="100" /&gt;
+&lt;label for="slider-1"&gt;Input slider:&lt;/label&gt;
+&lt;input type="range" name="slider-1" id="slider-1" value="60" min="0" max="100" /&gt;
 
 </pre></code>	
 <p>This will produce an input that snaps to increments of 50. If a value is added to the input that isn't valid with the step increment, the value will be reset on blur to the closest step.</p>
@@ -30,7 +30,7 @@
 <code><pre>
 
 &lt;label for="slider-fill"&gt;Input slider:&lt;/label&gt;
-&lt;input type="range" name="slider" id="slider-fill" value="60" min="0" max="100" data-highlight="true" /&gt;
+&lt;input type="range" name="slider-fill" id="slider-fill" value="60" min="0" max="100" data-highlight="true" /&gt;
 
 </pre></code>
 <h3>Mini version</h3>
@@ -38,11 +38,11 @@
 <p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a mini version. </p>
 
 <code>
-&lt;label for="slider-0"&gt;Input slider:&lt;/label&gt;
-&lt;input type="range" name="slider" id="slider-0" value="25" min="0" max="100" data-highlight="true" data-mini="true" /&gt;
+&lt;label for="slider-mini"&gt;Input slider:&lt;/label&gt;
+&lt;input type="range" name="slider-mini" id="slider-mini" value="25" min="0" max="100" data-highlight="true" data-mini="true" /&gt;
 
 </code>
-<p>This will produce an input that is not as tall as the standard version and has a smaller text size.</p>
+<p>This will produce a slider and its corresponding input that are not as tall as the standard version. The input also has a smaller text size.</p>
 
 <h3>Field containers</h3>
 
@@ -50,8 +50,8 @@
 
 <code><pre>
 &lt;div data-role="fieldcontain"&gt;
-  &lt;label for="slider"&gt;Input slider:&lt;/label&gt;
-  &lt;input type="range" name="slider" id="slider" value="25" min="0" max="100" /&gt;
+  &lt;label for="slider-2"&gt;Input slider:&lt;/label&gt;
+  &lt;input type="range" name="slider-2" id="slider-2" value="25" min="0" max="100" /&gt;
 &lt;/div&gt;
 
 </pre></code>
@@ -75,8 +75,8 @@ $('input').slider();
 <code>
 
 &lt;div data-role="fieldcontain"&gt;
-  &lt;label for="slider-2"&gt;Input slider:&lt;/label&gt;
-  &lt;input type="range" name="slider-2" id="slider-2" value="25" min="0" max="100" data-theme="a" data-track-theme="b" /&gt;
+  &lt;label for="slider-3"&gt;Input slider:&lt;/label&gt;
+  &lt;input type="range" name="slider-3" id="slider-3" value="25" min="0" max="100" data-theme="a" data-track-theme="b" /&gt;
 &lt;/div&gt;
 
 </code>
