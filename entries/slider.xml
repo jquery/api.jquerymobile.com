@@ -181,10 +181,10 @@ $('.selector').slider({ trackTheme: "a" });
 	  </theme>
 	</theming>
 	<example>
-		<desc>A basic example of a collapsible content block.</desc>
+		<desc>A basic example of a slider.</desc>
 		<code><![CDATA[]]></code>
 		<html><![CDATA[  <label for="slider-0">Input slider:</label>
-      <input type="range" name="slider" id="slider-0" value="60" min="0" max="100" />	]]></html>
+      <input type="range" name="slider-0" id="slider-0" value="60" min="0" max="100" />	]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>

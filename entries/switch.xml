@@ -196,10 +196,10 @@ $('.selector').slider({ trackTheme: "a" });
 	  </theme>
 	</theming>
 	<example>
-		<desc>A basic example of a collapsible content block.</desc>
+		<desc>A basic example of a flip toggle switch.</desc>
 		<code><![CDATA[]]></code>
-		<html><![CDATA[  <label for="flip-a">Select slider:</label>
-      <select name="slider" id="flip-a" data-role="slider">
+		<html><![CDATA[  <label for="flip-0">Select slider:</label>
+      <select name="flip-0" id="flip-0" data-role="slider">
         <option value="off">Off</option>
         <option value="on">On</option>
       </select>	]]></html>
