@@ -92,9 +92,9 @@ To visually integrate multiple radio buttons into a vertically grouped button se
 	<created>1.0</created>
 	<options>
 	  <option name="mini"  default="false">
-		<desc>Sets the size of the element to a more compact, mini version. This option is also exposed as a data attribute: data-mini="true"
+		<desc>Sets the size of the element to a more compact, mini version. 
 <code><pre>
-$('.selector').slider({ mini: "true" });
+$("input[type='radio']").checkboxradio({ mini: "true" });
 
 </pre></code>
 
@@ -105,11 +105,12 @@ $('.selector').slider({ mini: "true" });
 	</options>
 	<events>
 	  <event name="create">
-	    <desc>triggered when a slider is created</desc>
+	    <desc>triggered when a radio button is created</desc>
 <code><pre>		
-$( ".selector" ).slider({
+$("input[type='radio']").checkboxradio({
    create: function(event, ui) { ... }
-});
+});		
+
 </pre></code>
 	  </event>
 	</events>
