@@ -4,7 +4,7 @@
 	<desc>Creates a radio button widget</desc>
 	<longdesc>
 		<p>Radio buttons are used to provide a list of options where only a single item can be selected. Traditional desktop radio buttons are not optimized for touch input so jQuery Mobile styles the <code>label</code> for the radio buttons so they are larger and look clickable. A custom set of icons are added to the label to provide additional visual feedback. </p>
-		<p>Both the radio and checkbox controls below use standard input/label markup, but are styled to be more touch-friendly. The styled control you see is actually the label element, which sits over the real input, so if images fail to load, you'll still have a functional control. In most browsers, clicking the label automatically triggers a click on the input, but we've had to trigger the update manually for a few mobile browsers that don't do this natively. On the desktop, these controls are keyboard and screen-reader accessible.</p>
+		<p>The radio button controls below use standard input/label markup, but are styled to be more touch-friendly. The styled control you see is actually the label element, which sits over the real input, so if images fail to load, you'll still have a functional control. In most browsers, clicking the label automatically triggers a click on the input, but we've had to trigger the update manually for a few mobile browsers that don't do this natively. On the desktop, these controls are keyboard and screen-reader accessible.</p>
 		
 		<h3>Vertically grouped radio buttons</h3>
 		<p>To create a set of radio buttons, add an input with a type="radio" attribute and a corresponding label. Set the for attribute of the label to match the id of the input so they are semantically associated.
@@ -28,7 +28,7 @@ To visually integrate multiple radio buttons into a vertically grouped button se
 
   &lt;input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4" /&gt;
   &lt;label for="radio-choice-4"&gt;Lizard&lt;/label&gt;
-&gt;/fieldset&gt;
+&lt;/fieldset&gt;
 
 </pre></code>	
 <p>This will produce a vertically grouped radio button set. The default styles set the width of the button group to 100% of the parent container and stacks the label on a separate line.</p>
@@ -110,7 +110,6 @@ $("input[type='radio']").checkboxradio({ mini: "true" });
 $("input[type='radio']").checkboxradio({
    create: function(event, ui) { ... }
 });		
-
 </pre></code>
 	  </event>
 	</events>
@@ -156,16 +155,16 @@ $("input[type='radio']").checkboxradio({ theme: "a" });
         <legend>Choose a pet:</legend>
         <input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
         <label for="radio-choice-1">Cat</label>
-
+            
         <input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2" />
         <label for="radio-choice-2">Dog</label>
-
+            
         <input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3" />
         <label for="radio-choice-3">Hamster</label>
-
+            
         <input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4" />
         <label for="radio-choice-4">Lizard</label>
-      </fieldset>	]]></html>
+      </fieldset> ]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>
