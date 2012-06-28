@@ -3,46 +3,46 @@
 <entry name="collapsible set (accordion)" namespace="fn" type="Widget" widgetnamespace="mobile">
 	<desc>Creates a collapsible set of collapsible blocks of content</desc>
 	<longdesc>
-		<p>Collapsible sets start with the exact same markup as individual collapsibles. 
+		<p>Collapsible sets start with the exact same markup as individual collapsibles.
 		By adding a parent wrapper with a <code>data-role="collapsible-set"</code> attribute around a number of collapsibles, the framework will style these to looks like a visually grouped widget and make it behave like an accordion so only one section can be open at a time.</p>
-<p>By default, all the sections will be collapsed. To set a section to be open when the page loads, add the <code>data-collapsed="false"</code> attribute to the heading of the section you want expanded.</p>	
+<p>By default, all the sections will be collapsed. To set a section to be open when the page loads, add the <code>data-collapsed="false"</code> attribute to the heading of the section you want expanded.</p>
 	</longdesc>
 	<created>1.0</created>
 	<options>
       <option name="collapsedIcon" default='"plus"'>
 	    <desc>Sets the icon for the headers of the collapsible containers when in a collapsed state. To set the value for all instances of this widget, bind this option to the mobileinit event:
-<code><pre>
+<pre><code>
 $( document ).bind( "mobileinit", function(){
     $.mobile.collapsibleset.prototype.options.collapsedIcon = "arrow-r";
 });
 
-</pre></code>
+</code></pre>
 
 <p>This option is also exposed as a data attribute: <code>data-collapsed-icon="arrow-r"</code>.</p>
 </desc>
 	    <type name="String" />
-	  </option>		
+	  </option>
 	  <option name="expandedIcon" default='"minus"'>
 	    <desc>Sets the icon for the header of the collapsible container when in an expanded state. To set the value for all instances of this widget, bind this option to the mobileinit event:
-<code><pre>
+<pre><code>
 $( document ).bind( "mobileinit", function(){
     $.mobile.collapsibleset.prototype.options.expandedIcon = "arrow-r";
 });
 
-</pre></code>
+</code></pre>
 
 <p>This option is also exposed as a data attribute: <code>data-expanded-icon="arrow-r"</code>.</p>
 </desc>
 	    <type name="String" />
-	  </option>		
+	  </option>
 	  <option name="iconpos" default='"left"'>
 	    <desc>Positions the icon in the collapsible headers. To set the value for all instances of this widget, bind this option to the mobileinit event:
-		<code><pre>
+		<pre><code>
 $( document ).bind( "mobileinit", function(){
     $.mobile.collapsibleset.prototype.options.iconpos = "right";
 });
 
-</pre></code>
+</code></pre>
 
 <p>Possible values: left, right, top, bottom, none, notext.</p>
 <p>This option is also exposed as a data attribute: <code>data-iconpos="right"</code>.</p>
@@ -51,22 +51,22 @@ $( document ).bind( "mobileinit", function(){
 	  </option>
 	    <option name="initSelector"  default='":jqmData(role=&#39;collapsible-set&#39;)"'>
 		<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as collapsibles. To change which elements are initialized, bind this option to the mobileinit event:
-<code><pre>
+<pre><code>
 $( document ).bind( "mobileinit", function(){
     $.mobile.collapsibleset.prototype.options.initSelector = ".mycollapsibleset";
 });
-</pre></code>
+</code></pre>
 		</desc>
 		<type name="CSS selector string" />
 	  </option>
 	  <option name="mini"  default="false">
 		<desc>Sets the size of the element to a more compact, mini version. If the value is false for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set. To set the value for all instances of this widget, bind this option to the mobileinit event:
-<code><pre>
+<pre><code>
 $( document ).bind( "mobileinit", function(){
     $.mobile.collapsibleset.prototype.options.mini = true;
 });
 
-</pre></code>
+</code></pre>
 
 <p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
 		</desc>
@@ -75,31 +75,31 @@ $( document ).bind( "mobileinit", function(){
 	</options>
 	<events>
 	  <event name="create">
-	    <desc>Triggered when a collapsible set is created</desc>	
-		<code><pre>$( ".selector" ).collapsibleset({
+	    <desc>Triggered when a collapsible set is created</desc>
+		<pre><code>$( ".selector" ).collapsibleset({
    create: function(event, ui) { ... }
 });
 
-</pre></code>
+</code></pre>
 	  </event>
 	</events>
 	<methods>
 	  <method name="refresh">
 	    <desc>Updates the collapsible set.
 		<p>If you manipulate a collapsible set via JavaScript (e.g. add new collapsible containers), you must call the refresh method on it to update the visual styling.</p>
-<code><pre>$('.selector').collapsibleset('refresh');
-</pre></code></desc>
-	  </method>		
+<pre><code>$('.selector').collapsibleset('refresh');
+</code></pre></desc>
+	  </method>
 	</methods>
 	<theming>
 	  <theme name="theme" default="null, inherited from parent">
 	    <desc>Sets the color scheme (swatch) for the collapsible set. It accepts a single letter from a-z that maps to the swatches included in your theme. To set the value for all instances of this widget, bind this option to the mobileinit event:
-<code><pre>
+<pre><code>
 $( document ).bind( "mobileinit", function(){
     $.mobile.collapsibleset.prototype.options.theme = "a";
 });
 
-</pre></code>
+</code></pre>
 
 <p>Possible values: swatch letter (a-z).</p>
 <p>This option is also exposed as a data attribute: <code>data-theme="a"</code>.</p>

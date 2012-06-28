@@ -4,18 +4,18 @@
 	<desc>Opens content in an interactive overlay.</desc>
 	<longdesc>
 		<p>Any page can be presented as a modal dialog by adding the <code>data-rel="dialog"</code> attribute to the page anchor link. When the "dialog" attribute is applied, the framework adds styles to add rounded corners, margins around the page and a dark background to make the "dialog" appear to be suspended above the page.</p>
-<code><pre>
+<pre><code>
 &lt;a href="foo.html" data-rel="dialog"&gt;Open dialog&lt;/a&gt;
 
-</pre></code>
+</code></pre>
 <a href="http://jquerymobile.com/demos/1.1.0/docs/pages/dialog.html" data-role="button">Open Dialog</a>
 <h3>Transitions</h3>
 
 <p>By default, the dialog will open with a 'pop' transition. Like all pages, you can specify any page transition you want on the dialog by adding the <code>data-transition</code> attribute to the link. To make it feel more dialog-like, we recommend specifying a transition of "pop", "slideup" or "flip".</p>
-<code><pre>
-&lt;a href="foo.html" data-rel="dialog" data-transition="pop"&gt;Open dialog&lt;/a&gt; 
+<pre><code>
+&lt;a href="foo.html" data-rel="dialog" data-transition="pop"&gt;Open dialog&lt;/a&gt;
 
-</pre></code>
+</code></pre>
 <h3>Closing dialogs</h3>
 
 <p>When any link is clicked within in a dialog, the framework will automatically close the dialog and transition to the requested page, just as if the dialog were a normal page. To create a "cancel" button in a dialog, just link to the page that triggered the dialog to open and add the <code>data-rel="back"</code> attribute to your link. This pattern of linking to the previous page is also usable in non-JS devices as well.
@@ -37,14 +37,14 @@ For JavaScript-generated links, you can simply set the href attribute to "#" and
 <h3>Dialog width and margins</h3>
 <p>
 For the sake of readability, dialogs have a default <code>max-width</code> of 500 pixels (plus 15px padding on each side). There is also a 10% top <code>margin</code> to give dialogs larger top margin on larger screens, but collapse to a small margin on smartphones. To override these styles, add the following CSS override rule to your stylesheet and tweak as needed:
-<code><pre>
-.ui-dialog .ui-header, 
-.ui-dialog .ui-content, 
-.ui-dialog .ui-footer { 
-	max-width: 500px; 
-	margin: 10% auto 15px auto; 
+<pre><code>
+.ui-dialog .ui-header,
+.ui-dialog .ui-content,
+.ui-dialog .ui-footer {
+	max-width: 500px;
+	margin: 10% auto 15px auto;
 }
-</pre></code>
+</code></pre>
 </p>
 	</longdesc>
 	<created>1.0</created>
@@ -54,19 +54,19 @@ For the sake of readability, dialogs have a default <code>max-width</code> of 50
 	    <p>Possible values: fade, <b>pop</b>, <b>flip</b>, turn, flow, slidefade, slide, slideup, <b>slidedown</b>, none. </p>
 	    </desc>
 	    <type name="String" />
-	  </option>		
+	  </option>
 	  <option name="closeBtnText" default='"Close"'>
 	    <desc>Customizes the text of the close button which is helpful for translating this into different languages. This is displayed as an icon-only button by default so the text isn't visible on-screen, but is read by screen readers so this is an important accessibility feature.
 			<p>This option is also exposed as a data attribute: <code>data-close-btn-text</code>.</p>
         </desc>
         <type name="String" />
-	  </option>  
+	  </option>
 	  <option name="initSelector"  default='":jqmData(role=&#39;dialog&#39;)"'>
 		<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as dialogs. To change which elements are initialized, bind this option to the mobileinit event:
-<code><pre>
+<pre><code>
 $( document ).bind( "mobileinit", function(){
     $.mobile.dialog.prototype.options.initSelector = ".mydialog";
-});</pre></code>
+});</code></pre>
 		</desc>
 		<type name="CSS selector string" />
 	  </option>
@@ -74,16 +74,16 @@ $( document ).bind( "mobileinit", function(){
 	<events>
 	<event name="create">
 	<desc>Triggered when a dialog is created</desc>
-	<code><pre>$( ".selector" ).dialog({
+	<pre><code>$( ".selector" ).dialog({
    create: function(event, ui) { ... }
 });
-</pre></code>
+</code></pre>
 	</event>
 	</events>
 	<methods>
 	  <method name="close">
 	    <desc>Closes the dialog.</desc>
-	  </method>		
+	  </method>
 	</methods>
 	<theming>
 	  <theme name="data-theme (as a data-attribute)">
