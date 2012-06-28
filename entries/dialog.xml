@@ -13,7 +13,7 @@
 
 <p>By default, the dialog will open with a 'pop' transition. Like all pages, you can specify any page transition you want on the dialog by adding the <code>data-transition</code> attribute to the link. To make it feel more dialog-like, we recommend specifying a transition of "pop", "slideup" or "flip".</p>
 <code><pre>
-&lt;a href="foo.html" data-rel="dialog" data-transition="pop"&gt;Open dialog&lt;/a&gt; 
+&lt;a href="foo.html" data-rel="dialog" data-transition="pop"&gt;Open dialog&lt;/a&gt;
 
 </pre></code>
 <h3>Closing dialogs</h3>
@@ -38,11 +38,11 @@ For JavaScript-generated links, you can simply set the href attribute to "#" and
 <p>
 For the sake of readability, dialogs have a default <code>max-width</code> of 500 pixels (plus 15px padding on each side). There is also a 10% top <code>margin</code> to give dialogs larger top margin on larger screens, but collapse to a small margin on smartphones. To override these styles, add the following CSS override rule to your stylesheet and tweak as needed:
 <code><pre>
-.ui-dialog .ui-header, 
-.ui-dialog .ui-content, 
-.ui-dialog .ui-footer { 
-	max-width: 500px; 
-	margin: 10% auto 15px auto; 
+.ui-dialog .ui-header,
+.ui-dialog .ui-content,
+.ui-dialog .ui-footer {
+	max-width: 500px;
+	margin: 10% auto 15px auto;
 }
 </pre></code>
 </p>
@@ -54,13 +54,13 @@ For the sake of readability, dialogs have a default <code>max-width</code> of 50
 	    <p>Possible values: fade, <b>pop</b>, <b>flip</b>, turn, flow, slidefade, slide, slideup, <b>slidedown</b>, none. </p>
 	    </desc>
 	    <type name="String" />
-	  </option>		
+	  </option>
 	  <option name="closeBtnText" default='"Close"'>
 	    <desc>Customizes the text of the close button which is helpful for translating this into different languages. This is displayed as an icon-only button by default so the text isn't visible on-screen, but is read by screen readers so this is an important accessibility feature.
 			<p>This option is also exposed as a data attribute: <code>data-close-btn-text</code>.</p>
         </desc>
         <type name="String" />
-	  </option>  
+	  </option>
 	  <option name="initSelector"  default='":jqmData(role=&#39;dialog&#39;)"'>
 		<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as dialogs. To change which elements are initialized, bind this option to the mobileinit event:
 <code><pre>
@@ -83,7 +83,7 @@ $( document ).bind( "mobileinit", function(){
 	<methods>
 	  <method name="close">
 	    <desc>Closes the dialog.</desc>
-	  </method>		
+	  </method>
 	</methods>
 	<theming>
 	  <theme name="data-theme (as a data-attribute)">

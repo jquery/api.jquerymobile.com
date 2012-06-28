@@ -6,7 +6,7 @@
 		<p>To create a collapsible block of content, create a container and add the data-role="collapsible" attribute. Using data-content-theme attribute allows you to set a theme for the content of the collapsible. </p>
 		<p>Directly inside this container, add any header element (H1-H6). The framework will style the header to look like a clickable button and add a "+" icon to the left to indicate it's expandable.</p>
 		<p>After the header, add any HTML markup you want to be collapsible. The framework will wrap this markup in a container that will be hidden/shown when the heading is clicked.</p>
-		<p>By default, the content will be collapsed.</p>	
+		<p>By default, the content will be collapsed.</p>
 	</longdesc>
 	<created>1.0</created>
 	<options>
@@ -18,7 +18,7 @@ $( document ).bind( "mobileinit", function(){
 });</pre></code>
 </desc>
 	    <type name="String" />
-	  </option>		
+	  </option>
 	  <option name="collapsed" default="true">
 	    <desc>When false, the container is initially expanded with a minus icon in the header. To set the value for all instances of this widget, bind this option to the mobileinit event:
 <code><pre>
@@ -31,7 +31,7 @@ $( document ).bind( "mobileinit", function(){
 <p>This option is also exposed as a data attribute: <code>data-collapsed="false"</code>.</p>
 </desc>
             <type name="Boolean" />
-	  </option> 
+	  </option>
 	    <option name="collapsedIcon" default='"plus"'>
 	    <desc>Sets the icon for the header of the collapsible container when in a collapsed state. To set the value for all instances of this widget, bind this option to the mobileinit event:
 <code><pre>
@@ -44,7 +44,7 @@ $( document ).bind( "mobileinit", function(){
 <p>This option is also exposed as a data attribute: <code>data-collapsed-icon="arrow-r"</code>.</p>
 </desc>
 	    <type name="String" />
-	  </option>		
+	  </option>
 	  <option name="expandCueText" default='" click to expand contents"'>
 	    <desc>This text is used to provide audible feedback for users with screen reader software. To set the value for all instances of this widget, bind this option to the mobileinit event:
 <code><pre>
@@ -54,7 +54,7 @@ $( document ).bind( "mobileinit", function(){
 </pre></code>
 </desc>
 	    <type name="String" />
-	  </option>		
+	  </option>
 	  <option name="expandedIcon" default='"minus"'>
 	    <desc>Sets the icon for the header of the collapsible container when in an expanded state. To set the value for all instances of this widget, bind this option to the mobileinit event:
 <code><pre>
@@ -67,7 +67,7 @@ $( document ).bind( "mobileinit", function(){
 <p>This option is also exposed as a data attribute: <code>data-expanded-icon="arrow-r"</code>.</p>
 </desc>
 	    <type name="String" />
-	  </option>		
+	  </option>
 	  <option name="heading" default='"h1,h2,h3,h4,h5,h6,legend"'>
 	    <desc>Within the collapsible container, the first immediate child element that matches this selector will be used as the header for the collapsible. To change the selector, bind this option to the mobileinit event:
 <code><pre>
@@ -77,7 +77,7 @@ $( document ).bind( "mobileinit", function(){
 </pre></code>
 </desc>
 	    <type name="String" />
-	  </option>		
+	  </option>
 	  <option name="iconpos" default='"left"'>
 	    <desc>Positions the icon in the collapsible header. To set the value for all instances of this widget, bind this option to the mobileinit event:
 		<code><pre>
@@ -130,7 +130,7 @@ $( document ).bind( "mobileinit", function(){
 	<methods>
 	  <method>
 	    <desc>The collapsible plugin has no public methods.</desc>
-	  </method>		
+	  </method>
 	</methods>
 	<theming>
 	  <theme name="theme" default="null, inherited from parent">

@@ -5,7 +5,7 @@
 	<longdesc>
 		<p>Radio buttons are used to provide a list of options where only a single item can be selected. Traditional desktop radio buttons are not optimized for touch input so jQuery Mobile styles the <code>label</code> for the radio buttons so they are larger and look clickable. A custom set of icons are added to the label to provide additional visual feedback. </p>
 		<p>The radio button controls below use standard input/label markup, but are styled to be more touch-friendly. The styled control you see is actually the label element, which sits over the real input, so if images fail to load, you'll still have a functional control. In most browsers, clicking the label automatically triggers a click on the input, but we've had to trigger the update manually for a few mobile browsers that don't do this natively. On the desktop, these controls are keyboard and screen-reader accessible.</p>
-		
+
 		<h3>Vertically grouped radio buttons</h3>
 		<p>To create a set of radio buttons, add an input with a type="radio" attribute and a corresponding label. Set the for attribute of the label to match the id of the input so they are semantically associated.
 </p><p>
@@ -19,7 +19,7 @@ To visually integrate multiple radio buttons into a vertically grouped button se
   &lt;legend&gt;Choose a pet:&lt;/legend&gt;
   &lt;input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" /&gt;
   &lt;label for="radio-choice-1"&gt;Cat&lt;/label&gt;
-		
+
   &lt;input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2" /&gt;
   &lt;label for="radio-choice-2"&gt;Dog&lt;/label&gt;
 
@@ -30,7 +30,7 @@ To visually integrate multiple radio buttons into a vertically grouped button se
   &lt;label for="radio-choice-4"&gt;Lizard&lt;/label&gt;
 &lt;/fieldset&gt;
 
-</pre></code>	
+</pre></code>
 <p>This will produce a vertically grouped radio button set. The default styles set the width of the button group to 100% of the parent container and stacks the label on a separate line.</p>
 
 <h3>Mini version</h3>
@@ -44,7 +44,7 @@ To visually integrate multiple radio buttons into a vertically grouped button se
 
   &lt;input type="radio" name="radio-mini" id="radio-mini-2" value="choice-2" /&gt;
   &lt;label for="radio-mini-2"&gt;Debit&lt;/label&gt;
-		
+
   &lt;input type="radio" name="radio-mini" id="radio-mini-3" value="choice-3" /&gt;
   &lt;label for="radio-mini-3"&gt;Cash&lt;/label&gt;
 &lt;/fieldset&gt;
@@ -83,7 +83,7 @@ To visually integrate multiple radio buttons into a vertically grouped button se
 
 <code><pre>
 
-&lt;fieldset data-role="controlgroup" data-type="horizontal" &gt; 
+&lt;fieldset data-role="controlgroup" data-type="horizontal" &gt;
 
 </pre></code>
 
@@ -92,7 +92,7 @@ To visually integrate multiple radio buttons into a vertically grouped button se
 	<created>1.0</created>
 	<options>
 	  <option name="mini"  default="false">
-		<desc>Sets the size of the element to a more compact, mini version. 
+		<desc>Sets the size of the element to a more compact, mini version.
 <code><pre>
 $("input[type='radio']").checkboxradio({ mini: "true" });
 
@@ -106,10 +106,10 @@ $("input[type='radio']").checkboxradio({ mini: "true" });
 	<events>
 	  <event name="create">
 	    <desc>triggered when a radio button is created</desc>
-<code><pre>		
+<code><pre>
 $("input[type='radio']").checkboxradio({
    create: function(event, ui) { ... }
-});		
+});
 </pre></code>
 	  </event>
 	</events>
@@ -117,26 +117,26 @@ $("input[type='radio']").checkboxradio({
 	  <method name="enable">
 	    <desc>enable a disabled radio button.
 		<code><pre>
-$("input[type='radio']").checkboxradio('enable');	
+$("input[type='radio']").checkboxradio('enable');
 		</pre></code></desc>
-	  </method>		
+	  </method>
 	  <method name="disable">
 	    <desc>disable a radio button.
 		<code><pre>
 $("input[type='radio']").checkboxradio('disable');
 		</pre></code></desc>
-	  </method>		
+	  </method>
 	  <method name="refresh">
 	    <desc>update the radio button.
 		<p>If you manipulate a radio button via JavaScript, you must call the refresh method on it to update the visual styling. </p>
 		<code><pre>
 $("input[type='radio']:first").attr("checked",true).checkboxradio("refresh");
 		</pre></code></desc>
-	  </method>			
+	  </method>
 	</methods>
 	<theming>
 	  <theme name="theme" default="null, inherited from parent">
-	    <desc>Sets the color scheme (swatch) for all instances of this widget. It accepts a single letter from a-z that maps to the swatches included in your theme. By default, it will inherit the same swatch color as its parent container if not explicitly set. 
+	    <desc>Sets the color scheme (swatch) for all instances of this widget. It accepts a single letter from a-z that maps to the swatches included in your theme. By default, it will inherit the same swatch color as its parent container if not explicitly set.
 <code><pre>
 $("input[type='radio']").checkboxradio({ theme: "a" });
 
@@ -155,13 +155,13 @@ $("input[type='radio']").checkboxradio({ theme: "a" });
         <legend>Choose a pet:</legend>
         <input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
         <label for="radio-choice-1">Cat</label>
-            
+
         <input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2" />
         <label for="radio-choice-2">Dog</label>
-            
+
         <input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3" />
         <label for="radio-choice-3">Hamster</label>
-            
+
         <input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4" />
         <label for="radio-choice-4">Lizard</label>
       </fieldset> ]]></html>

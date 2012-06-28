@@ -6,30 +6,30 @@
         <p>Checkboxes are used to provide a list of options where more than one can be selected. Traditional desktop checkboxes are not optimized for touch input so in jQuery Mobile, we style the <code>label</code> for the checkboxes so they are larger and look clickable. A custom set of icons are added to the label to provide additional visual feedback. </p>
         <p>The checkbox controls below use standard input/label markup, but are styled to be more touch-friendly. The styled control you see is actually the label element, which sits over the real input, so if images fail to load, you'll still have a functional control. In most browsers, clicking the label automatically triggers a click on the input, but we've had to trigger the update manually for a few mobile browsers that don't do this natively. On the desktop, these controls are keyboard and screen-reader accessible.</p>
         <p>To create a single checkbox, add an <code>input</code> with a <code>type="checkbox"</code> attribute and a corresponding <code>label</code>. If the <code>input</code> isn’t wrapped in its corresponding <code>label</code>, be sure to set the <code>for</code> attribute of the <code>label</code> to match the <code>id</code> of the <code>input</code> so they are semantically associated.</p>
-        
+
         <code><pre>
 &lt;label&gt;&lt;input type="checkbox" name="checkbox-0" /&gt; I agree &lt;/label&gt;
-			
+
 &lt;input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" /&gt;
 &lt;label for="checkbox-1"&gt;I agree&lt;/label&gt;
         </pre></code>
         <p>The above snippets will produce two basic checkboxes. The default styles will set the width of the element to 100% of the parent container.</p>
-        
+
         <h3>Mini version</h3>
-        
+
         <p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a mini version. </p>
-        
+
 <code><pre>
 &lt;input type="checkbox" name="checkbox-mini" id="checkbox-mini-1" class="custom" data-mini="true" /&gt;
 &lt;label for="checkbox-mini-1"&gt;I agree&lt;/label&gt;
-            
+
 </pre></code>
         <p>This will produce a checkbox that is not as tall as the standard version and has a smaller text size.</p>
-        
+
         <h3>Field containers &amp; Legends</h3>
-        
+
         <p>Because checkboxes use the <code>label</code> element for the text displayed next to the checkbox form element, we recommend wrapping the checkbox in a <code>fieldset</code> element that has a <code>legend</code> which acts as the title for the question. Add the <code>data-role="controlgroup"</code> attribute to the <code>fieldset</code> so it can be styled in a parallel way as text inputs, selects or other form elements.</p>
-        
+
 <code><pre>
 &lt;div data-role="fieldcontain"&gt;
   &lt;fieldset data-role="controlgroup"&gt;
@@ -37,32 +37,32 @@
     &lt;input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" /&gt;
     &lt;label for="checkbox-2">I agree&lt;/label&gt;
   &lt;/fieldset&gt;
-&lt;/div&gt;    
+&lt;/div&gt;
 
     </pre></code>
-        
+
         <h3>Vertically grouped checkboxes</h3>
-        
-        
+
+
         <p>Checkboxes can also be used for grouped button sets where more than one button can be selected at once, such as the bold, italic and underline button group seen in word processors. To make a horizontal button set, add the <code>data-type="horizontal"</code> to the <code>fieldset</code>. </p>
-        
-        
+
+
         <code><pre>
-            
+
 &lt;fieldset data-role="controlgroup" data-type="horizontal" &gt;
-            
+
         </pre></code>
-        
+
         <p>The framework will float the labels so they sit side-by-side on a line, hide the checkbox icons and only round the left and right edges of the group.</p>
     </longdesc>
     <created>1.0</created>
     <options>
         <option name="mini" default="false">
-            <desc>Sets the size of the element to a more compact, mini version. 
+            <desc>Sets the size of the element to a more compact, mini version.
                 <code><pre>
 $("input[type='checkbox']").checkboxradio({ mini: "true" });
                 </pre></code>
-                
+
                 <p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
             </desc>
             <type name="Boolean" />
@@ -105,7 +105,7 @@ $("input[type='checkbox']:first").attr("checked",true).checkboxradio("refresh");
                 <code><pre>
 $("input[type='radio']").checkboxradio({ theme: "a" });
                 </pre></code>
-                
+
                 <p>Possible values: swatch letter (a-z).</p>
                 <p>This option is also exposed as a data attribute: <code>data-theme="a"</code>.</p>
             </desc>
