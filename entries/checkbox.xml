@@ -11,9 +11,9 @@
 &lt;label&gt;&lt;input type="checkbox" name="checkbox-0" /&gt; I agree &lt;/label&gt;
 
 &lt;input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" /&gt;
-&lt;label for="checkbox-1"&gt;I agree&lt;/label&gt;
-        </code></pre>
-        <p>The above snippets will produce two basic checkboxes. The default styles will set the width of the element to 100% of the parent container.</p>
+&lt;label for="checkbox-1"&gt;I agree&lt;/label&gt;</code></pre>
+        <p>The above snippets will produce two basic checkboxes. The default styles will set the width of the element to 100% of the parent container.
+		<iframe src="http://users.cscs.wmin.ac.uk/~coloma/JQM/apidocs/checkbox1.html" width="480" height="120" frameborder="0"></iframe></p>
 
         <h3>Mini version</h3>
 
@@ -38,7 +38,6 @@
     &lt;label for="checkbox-2">I agree&lt;/label&gt;
   &lt;/fieldset&gt;
 &lt;/div&gt;
-
     </code></pre>
 
         <h3>Vertically grouped checkboxes</h3>
@@ -48,9 +47,7 @@
 
 
         <pre><code>
-
 &lt;fieldset data-role="controlgroup" data-type="horizontal" &gt;
-
         </code></pre>
 
         <p>The framework will float the labels so they sit side-by-side on a line, hide the checkbox icons and only round the left and right edges of the group.</p>
