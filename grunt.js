@@ -24,7 +24,7 @@ grunt.initConfig({
 		all: entryFiles
 	},
 	"build-resources": {
-		all: grunt.file.expandFiles( "resources/*" )
+		all: grunt.file.expandFiles( "resources/**" )
 	},
 	wordpress: grunt.utils._.extend({
 		dir: "dist/wordpress"
