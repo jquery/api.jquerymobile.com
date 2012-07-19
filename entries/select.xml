@@ -306,12 +306,12 @@ $('select').selectmenu({ theme: "a" }); </code></pre>
         <desc>A basic example of a simple native select</desc>
         <code><![CDATA[]]></code>
         <html><![CDATA[  <label for="select-choice-0" class="select">Shipping method:</label>
-       <select name="select-choice-0" id="select-choice-0">
-         <option value="standard">Standard: 7 day</option>
-         <option value="rush">Rush: 3 days</option>
-         <option value="express">Express: next day</option>
-         <option value="overnight">Overnight</option>
-       </select> ]]></html>
+         <select name="select-choice-0" id="select-choice-0">
+           <option value="standard">Standard: 7 day</option>
+           <option value="rush">Rush: 3 days</option>
+           <option value="express">Express: next day</option>
+           <option value="overnight">Overnight</option>
+         </select> ]]></html>
     </example>
     <category slug="widgets"/>
 </entry>

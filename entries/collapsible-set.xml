@@ -111,15 +111,15 @@ $( document ).bind( "mobileinit", function(){
 		<desc>A basic example of a collapsible set.</desc>
 		<code><![CDATA[]]></code>
 		<html><![CDATA[  <div data-role="collapsible-set">
-        <div data-role="collapsible" data-collapsed="false">
-          <h3>Section A</h3>
-          <p>I'm the collapsible set content for section A.</p>
-        </div>
-        <div data-role="collapsible">
-          <h3>Section B</h3>
-          <p>I'm the collapsible set content for section B.</p>
-        </div>
-      </div>]]></html>
+          <div data-role="collapsible" data-collapsed="false">
+            <h3>Section A</h3>
+            <p>I'm the collapsible set content for section A.</p>
+          </div>
+          <div data-role="collapsible">
+            <h3>Section B</h3>
+            <p>I'm the collapsible set content for section B.</p>
+          </div>
+        </div>]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>

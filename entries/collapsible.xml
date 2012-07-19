@@ -152,9 +152,9 @@ $( document ).bind( "mobileinit", function(){
 		<desc>A basic example of a collapsible content block.</desc>
 		<code><![CDATA[]]></code>
 		<html><![CDATA[  <div data-role="collapsible">
-        <h3>I'm a header</h3>
-        <p>I'm the collapsible content. By default I'm closed, but you can click the header to open me.</p>
-      </div>]]></html>
+          <h3>I'm a header</h3>
+          <p>I'm the collapsible content. By default I'm closed, but you can click the header to open me.</p>
+        </div>]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>

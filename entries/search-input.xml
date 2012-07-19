@@ -112,7 +112,7 @@ $('.selector').textinput({ theme: "a" }); </code></pre>
         <desc>A basic example of a search input field</desc>
         <code><![CDATA[]]></code>
         <html><![CDATA[  <label for="search-basic">Search Input:</label>
-      <input type="search" name="search" id="search-basic" value="" /> ]]></html>
+        <input type="search" name="search" id="search-basic" value="" /> ]]></html>
     </example>
     <category slug="widgets"/>
 </entry>
