@@ -197,14 +197,19 @@
   &lt;head&gt;
     &lt;title&gt;<xsl:value-of select="desc"/>&lt;/title&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
-    &lt;link rel="stylesheet" href="jquery-mobile.css"&gt;<xsl:if test="css">
+    &lt;link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css"&gt;<xsl:if test="css">
     &lt;style&gt;<xsl:copy-of select="css/text()"/>  &lt;/style&gt;</xsl:if>
-    &lt;script src="jquery.js"&gt;&lt;/script&gt;
-    &lt;script src="jquery-mobile.js"&gt;&lt;/script&gt;
+    &lt;script src="http://code.jquery.com/jquery-1.7.2.min.js"&gt;&lt;/script&gt;
+    &lt;script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"&gt;&lt;/script&gt;
   &lt;/head&gt;
   &lt;body&gt;
     &lt;div data-role="page"&gt;
-    <xsl:copy-of select="html/text()"/>
+      &lt;div data-role="header"&gt;
+        &lt;h1&gt;jQuery Mobile Example&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div data-role="content"&gt;  
+      <xsl:copy-of select="html/text()"/>
+      &lt;/div&gt;
     &lt;/div&gt;
     &lt;script&gt;<xsl:copy-of select="code/text()"/>&lt;/script&gt;
   &lt;/body&gt;
