@@ -11,24 +11,29 @@
 	<style>
 	html, body { padding: 0; margin: 0; }
 	html, .ui-mobile, .ui-mobile body {
-		height: 115px;
+    	height: 95px;
 	}
 	.ui-mobile, .ui-mobile .ui-page {
-		min-height: 115px;
+    	min-height: 95px;
 	}
 	.ui-content{
 		padding:10px 15px 0px 15px;
 	}
-    </style>
+	</style>
 </head> 
 
 <body> 
-<div data-role="page" style="max-height:120px; min-height:120px;">
-	<div data-role="content" > <label><input type="checkbox" name="checkbox-0" /> I agree </label>
-
-	<input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" />
-	<label for="checkbox-1">I agree</label>
+<div data-role="page" style="max-height:100px; min-height:100px;">
+	<div data-role="content" > 
+		<div data-role="fieldcontain">
+	 		<fieldset data-role="controlgroup">
+				<legend>Agree to the terms:</legend>
+				<input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" />
+				<label for="checkbox-2">I agree</label>
+	    	</fieldset>
+		</div>
 	</div>
 </div>
 </body>
 </html>
+

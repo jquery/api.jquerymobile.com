@@ -11,24 +11,24 @@
 	<style>
 	html, body { padding: 0; margin: 0; }
 	html, .ui-mobile, .ui-mobile body {
-		height: 115px;
+    	height: 65px;
 	}
 	.ui-mobile, .ui-mobile .ui-page {
-		min-height: 115px;
+    	min-height: 65px;
 	}
 	.ui-content{
 		padding:10px 15px 0px 15px;
 	}
-    </style>
+	</style>
 </head> 
 
 <body> 
-<div data-role="page" style="max-height:120px; min-height:120px;">
-	<div data-role="content" > <label><input type="checkbox" name="checkbox-0" /> I agree </label>
-
-	<input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" />
-	<label for="checkbox-1">I agree</label>
+<div data-role="page" style="max-height:70px; min-height:70px;">
+	<div data-role="content" > 
+		<input type="checkbox" name="checkbox-mini-0" id="checkbox-mini-0" class="custom" data-mini="true" />
+		<label for="checkbox-mini-0">I agree</label>
 	</div>
 </div>
 </body>
 </html>
+
