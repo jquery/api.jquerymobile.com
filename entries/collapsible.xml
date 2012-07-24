@@ -4,9 +4,64 @@
 	<desc>Creates a collapsible block of content</desc>
 	<longdesc>
 		<p>To create a collapsible block of content, create a container and add the data-role="collapsible" attribute. Using data-content-theme attribute allows you to set a theme for the content of the collapsible. </p>
-		<p>Directly inside this container, add any header element (H1-H6). The framework will style the header to look like a clickable button and add a "+" icon to the left to indicate it's expandable.</p>
+		<p>Directly inside this container, add any header (H1-H6) or legend element. The framework will style the header to look like a clickable button and add a "+" icon to the left to indicate it's expandable.</p>
 		<p>After the header, add any HTML markup you want to be collapsible. The framework will wrap this markup in a container that will be hidden/shown when the heading is clicked.</p>
 		<p>By default, the content will be collapsed.</p>
+<pre><code>		
+&lt;div <strong>data-role=&quot;collapsible&quot;</strong>&gt;
+   &lt;h3&gt;I&#x27;m a header&lt;/h3&gt;
+   &lt;p&gt;I&#x27;m the collapsible content. By default I'm closed, but you can click the header to open me.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>	
+			<p>This code will create a collapsible widget like this:
+		<iframe src="/resources/collapsible/example1.html" style="width:100%;height:140px;border:0px"></iframe></p>
+
+	<h3>Expanding collapsibles on load</h3>
+			
+	<p>To expand the content when the page loads, add the <code>data-collapsed="false"</code> attribute to the wrapper.</p>
+
+<code>		
+&lt;div data-role=&quot;collapsible&quot; <strong>data-collapsed=&quot;false&quot;&gt;</strong>
+</code>
+
+		<p>This code will create a collapsible widget like this:
+		<iframe src="/resources/collapsible/example2.html" style="width:100%;height:140px;border:0px"></iframe></p>
+	
+		<h3>Non-inset collapsibles</h3>
+			
+		<p>By default collapsibles have an inset appearance. To make them full width without corner styling add the <code>data-inset="false"</code> attribute to the element.</p>
+
+<code>		
+&lt;div data-role=&quot;collapsible&quot; <strong>data-inset=&quot;false&quot;&gt;</strong>
+</code>
+
+		<p>This code will create a non-inset collapsible:
+		<iframe src="/resources/collapsible/example3.html" style="width:100%;height:140px;border:0px"></iframe></p>
+
+			<h3>Mini collapsibles</h3>
+
+			<p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a <a href="../forms/forms-all-mini.html">mini version</a>. </p>
+
+		<code>		
+		&lt;div data-role=&quot;collapsible&quot; <strong>data-mini=&quot;true&quot;&gt;</strong>
+		</code>
+
+		<p>This code will create a mini collapsible widget:		
+		<iframe src="/resources/collapsible/example4.html" style="width:100%;height:140px;border:0px"></iframe></p>
+
+		
+		<h2>Custom icons</h2>
+		<p>Collapsible headings’ default icons can be overridden by using the <code>data-collapsed-icon</code> and <code>data-expanded-icon</code> attributes. In the below case, <code>data-collapsed-icon="arrow-r"</code> and <code>data-expanded-icon="arrow-d"</code>.
+
+		<iframe src="/resources/collapsible/example5.html" style="width:100%;height:140px;border:0px"></iframe></p>
+
+		<h2>Icon positioning</h2>
+		<p>Collapsible headings’ default icon positioning can be overridden by using the <code>data-iconpos</code> attribute. In the below case, <code>data-iconpos="right"</code>.
+		
+			<iframe src="/resources/collapsible/example6.html" style="width:100%;height:140px;border:0px"></iframe></p>
+		
+
+
 	</longdesc>
 	<created>1.0</created>
 	<options>
@@ -102,7 +157,19 @@ $( document ).bind( "mobileinit", function(){
 		</desc>
 		<type name="CSS selector string" />
 	  </option>
-	  <option name="mini"  default="false">
+	  <option name="inset"  default="true">
+		<desc>By setting this option to false the element will get a full width appearance without corners. If the value is false for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set. To set the value for all instances of this widget, bind this option to the mobileinit event:
+<pre><code>
+$( document ).bind( "mobileinit", function(){
+    $.mobile.collapsible.prototype.options.inset = false;
+});
+
+</code></pre>
+
+<p>This option is also exposed as a data attribute: <code>data-inset="false"</code>.</p>
+		</desc>
+		<type name="Boolean" />
+	  </option>  <option name="mini"  default="false">
 		<desc>Sets the size of the element to a more compact, mini version. If the value is false for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set. To set the value for all instances of this widget, bind this option to the mobileinit event:
 <pre><code>
 $( document ).bind( "mobileinit", function(){
