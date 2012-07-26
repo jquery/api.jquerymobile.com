@@ -202,9 +202,20 @@
     </event>
   </events>
   <methods>
-    <method>
-      <desc>The collapsible plugin has no public methods.</desc>
+    <method name="collapse">
+       <desc>collapse a collapsible.
+         <pre><code>
+$( ".selector" ).trigger( "collapse" );	
+         </code></pre>
+	  </desc>
     </method>
+	<method name="expand">
+      <desc>expand a collapsible.
+         <pre><code>
+$( ".selector" ).trigger( "expand" );	
+         </code></pre>
+	   </desc>
+     </method>
   </methods>
   <theming>
     <theme name="theme" default="null, inherited from parent">
