@@ -138,7 +138,7 @@ $('select').selectmenu();
     	<option name="corners" default="true">
 	    <desc>Applies the theme button border-radius to the select button if set to true. 
 <pre><code>
-$('select').selectmenu({ corners: "false" });
+$('select').selectmenu({ corners: false });
 </code></pre>
 		<p>This option is also exposed as a data attribute: <code>data-corners="false"</code>.</p>
 		</desc>
@@ -172,7 +172,7 @@ $('select').selectmenu({ iconpos: "left" });
 	<option name="iconshadow" default="true">
 	    	<desc>Applies the theme shadow to the select button if set to true.
 		<pre><code>
-$('select').selectmenu({ iconshadow: "false" });
+$('select').selectmenu({ iconshadow: false });
 </code></pre>
 
 		<p>This option is also exposed as a data attribute: <code>data-iconshadow="false"</code>.</p>

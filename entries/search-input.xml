@@ -59,7 +59,7 @@ $( document ).bind( "mobileinit", function(){
         <option name="mini" default="false">
             <desc>Sets the size of the element to a more compact, mini version. 
                 <pre><code>
-$('.selector').textinput({ mini: "true" }); </code></pre>
+$('.selector').textinput({ mini: true }); </code></pre>
                 
                 <p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
             </desc>

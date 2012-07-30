@@ -99,7 +99,7 @@ To visually integrate multiple radio buttons into a vertically grouped button se
 	  <option name="mini"  default="false">
 		<desc>Sets the size of the element to a more compact, mini version.
 <pre><code>
-$("input[type='radio']").checkboxradio({ mini: "true" });
+$("input[type='radio']").checkboxradio({ mini: true });
 
 </code></pre>
 

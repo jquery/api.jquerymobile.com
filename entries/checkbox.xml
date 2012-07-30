@@ -64,7 +64,7 @@
         <option name="mini" default="false">
             <desc>Sets the size of the element to a more compact, mini version.
                 <pre><code>
-$("input[type='checkbox']").checkboxradio({ mini: "true" });
+$("input[type='checkbox']").checkboxradio({ mini: true });
                 </code></pre>
 
                 <p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>

@@ -111,7 +111,7 @@ Here's an example of a flip switch with the swatch "a" applied to the track and 
 	  <option name="disabled" default="false">
 	    <desc>Sets the default state of the slider to disabled when "true".
 <pre><code>
-$('.selector').slider({ disabled: "true" });
+$('.selector').slider({ disabled: true });
 </code></pre>
 </desc>
 	    <type name="Boolean" />
@@ -129,7 +129,7 @@ $( document ).bind( "mobileinit", function(){
 	  <option name="mini"  default="false">
 		<desc>Sets the size of the element to a more compact, mini version. This option is also exposed as a data attribute: data-mini="true"
 <pre><code>
-$('.selector').slider({ mini: "true" });
+$('.selector').slider({ mini: true });
 
 </code></pre>
 
