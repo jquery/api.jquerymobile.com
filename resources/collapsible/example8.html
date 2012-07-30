@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Page Title</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	<style>
+	html, body { padding: 0; margin: 0; }
+	html, .ui-mobile, .ui-mobile body {
+    	height: 255px;
+	}
+	.ui-mobile, .ui-mobile .ui-page {
+    	min-height: 255px;
+	}
+	.ui-content{
+		padding:10px 15px 0px 15px;
+	}
+	</style>
+</head> 
+
+<body> 
+<div data-role="page" style="max-height:260px; min-height:260px;">
+	<div data-role="content" > 
+		<div data-role="collapsible" data-theme="a" data-content-theme="a">
+			<h3>Header swatch A</h3>
+			<p>I'm the collapsible content with a themed content block set to "a".</p>
+		</div>
+		
+		<div data-role="collapsible" data-theme="b" data-content-theme="d">
+			<h3>Header swatch B</h3>
+			<p>I'm the collapsible content with a themed content block set to "d".</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+

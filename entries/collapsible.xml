@@ -14,6 +14,7 @@
     <p>This code will create a collapsible widget like this:
       <iframe src="/resources/collapsible/example1.html" style="width:100%;height:140px;border:0px"></iframe>
     </p>
+	
     <h3>Expanding collapsibles on load</h3>
     <p>To expand the content when the page loads, add the
       <code>data-collapsed="false"</code>
@@ -24,6 +25,7 @@
     <p>This code will create a collapsible widget like this:
       <iframe src="/resources/collapsible/example2.html" style="width:100%;height:140px;border:0px"></iframe>
     </p>
+	
     <h3>Non-inset collapsibles</h3>
     <p>By default collapsibles have an inset appearance. To make them full width without corner styling add the
       <code>data-inset="false"</code>
@@ -34,6 +36,7 @@
     <p>This code will create a non-inset collapsible:
       <iframe src="/resources/collapsible/example3.html" style="width:100%;height:140px;border:0px"></iframe>
     </p>
+	
     <h3>Mini collapsibles</h3>
     <p>For a more compact version that is useful in toolbars and tight spaces, add the
       <code>data-mini="true"</code>
@@ -47,7 +50,8 @@
     <p>This code will create a mini collapsible widget:
       <iframe src="/resources/collapsible/example4.html" style="width:100%;height:140px;border:0px"></iframe>
     </p>
-    <h2>Custom icons</h2>
+	
+    <h3>Custom icons</h3>
     <p>Collapsible headings’ default icons can be overridden by using the
       <code>data-collapsed-icon</code>
       and
@@ -59,7 +63,8 @@
       .
       <iframe src="/resources/collapsible/example5.html" style="width:100%;height:140px;border:0px"></iframe>
     </p>
-    <h2>Icon positioning</h2>
+	
+    <h3>Icon positioning</h3>
     <p>Collapsible headings’ default icon positioning can be overridden by using the
       <code>data-iconpos</code>
       attribute. In the below case,
@@ -67,6 +72,43 @@
       .
       <iframe src="/resources/collapsible/example6.html" style="width:100%;height:140px;border:0px"></iframe>
     </p>
+	
+	<h3>Theming collapsible content</h3>
+	
+		
+		<p>Collapsible content is minimally styled - we add only a bit of margin between the bar and content, and the header adopts the default Theme styles of the container it sits within.</p>
+		
+		<p>To provide a stronger visual connection between the collapsible header and content, add the <code>data-content-theme</code> attribute to the wrapper and specify a theme swatch letter. This will apply the swatch's border and <em>flat</em> background color (not the gradient) to the content block and changes the corner rounding to square off the bottom of the header and round the bottom of the content block instead to visually group these elements.</p>
+		
+<pre><code>&lt;div data-role=&quot;collapsible&quot; data-content-theme=&quot;c&quot;&gt;
+   &lt;h3&gt;Header&lt;/h3&gt;
+   &lt;p&gt;I&#x27;m the collapsible content with a themed content block set to "c".&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+	<iframe src="/resources/collapsible/example7.html" style="width:100%;height:140px;border:0px"></iframe>
+
+	<h3>Theming collapsible headers</h3>
+		<p>To set the theme on a collapsible header button, add the <code>data-theme</code> attribute to the wrapper and specify a swatch letter. Note that you can mix and match swatch letters between the header and content with these theme attributes.</p>
+
+<pre><code>&lt;div data-role=&quot;collapsible&quot; data-theme=&quot;a&quot; data-content-theme=&quot;a&quot;&gt;
+   &lt;h3&gt;Header swatch A&lt;/h3&gt;
+   &lt;p&gt;I&#x27;m the collapsible content with a themed content block set to "a".&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+		<iframe src="/resources/collapsible/example8.html" style="width:100%;height:260px;border:0px"></iframe>
+
+	<h3>Nested Collapsibles</h3>
+		
+		<p>Collapsibles can be nested inside each other if needed. In this example, we're setting the content theme to provide clearer visual connection between the levels.
+		<iframe src="/resources/collapsible/example9.html" style="width:100%;height:540px;border:0px"></iframe></p>
+		
+	<h3>Collapsible sets (accordions)</h3>
+		<p>It's possible to combine multiple collapsibles into a grouped sets that acts like an <a href="/collapsible-set/">accordion widget</a>.</p>
+		
+
+
   </longdesc>
   <created>1.0</created>
   <options>
