@@ -28,7 +28,7 @@
 
 <pre><code>	
 &lt;label for=&quot;select-choice-min&quot; class=&quot;select&quot;&gt;Shipping method:&lt;/label&gt;
-&lt;select name=&quot;select-choice-min&quot; id=&quot;select-choice-min&quot; <strong>data-mini=&quot;true&quot;</strong>&gt;
+&lt;select name=&quot;select-choice-min&quot; id=&quot;select-choice-min&quot; data-mini=&quot;true&quot;&gt;
    &lt;option value=&quot;standard&quot;&gt;Standard: 7 day&lt;/option&gt;
    &lt;option value=&quot;rush&quot;&gt;Rush: 3 days&lt;/option&gt;
    &lt;option value=&quot;express&quot;&gt;Express: next day&lt;/option&gt;
@@ -50,8 +50,8 @@
     &lt;option value=&quot;express&quot;&gt;Express: next day&lt;/option&gt;
     &lt;option value=&quot;overnight&quot;&gt;Overnight&lt;/option&gt;
   &lt;/select&gt;
-<strong>&lt;/div&gt;
-</strong></code></pre>
+&lt;/div&gt;
+</code></pre>
 
 <h3>Optgroups</h3>
 <p>The following example organizes the options into <code>optgroup</code> elements. Support for this feature in mobile selects is a bit spotty, but is improving.</p>
@@ -123,7 +123,7 @@
 		<p>Select inputs can also be used for grouped sets with more than one related selections. To make a horizontal button set, add the <code>data-type="horizontal"</code> to the fieldset. Note that the buttons which trigger the select will resize depending on the currently selected option’s value. Note that browsers without support for <code>display: inline-block;</code> will group the selects vertically, as above.</p>
 
 <code>
-&lt;fieldset data-role="controlgroup" <strong>data-type="horizontal"</strong>&gt;
+&lt;fieldset data-role="controlgroup" data-type="horizontal"&gt;
 </code>
 
 		<h3>Calling the select menu plugin</h3>
