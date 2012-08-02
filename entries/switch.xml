@@ -15,8 +15,10 @@ To create a flip toggle, start with a <code>select</code> with two options. The 
   &lt;option value="on"&gt;On&lt;/option&gt;
 &lt;/select&gt;
 </code></pre>
-<p>This will produce a basic flip toggle switch input. The default styles set the width of the switch to 100% of the parent container and stack the label on a separate line.</p>
-
+		
+		<p>This will produce a basic flip toggle switch input. The default styles set the width of the switch to 100% of the parent container and stack the label on a separate line.
+		<iframe src="/resources/switch/example1.html" style="width:100%;height:90px;border:0px"></iframe></p>
+		
 		<h3>Longer Labels</h3>
 		<p>The control is proportionally scaled, so to use longer labels one can just add a line of CSS setting the switch to the desired width. For example, given the following markup:</p>
 
@@ -29,15 +31,18 @@ To create a flip toggle, start with a <code>select</code> with two options. The 
     &lt;option value="on"&gt;Switch On&lt;/option&gt;
   &lt;/select&gt;
 &lt;/div&gt;
-
-.containing-element .ui-slider-switch { width: 9em }
-
 </code></pre>
-<p>As some default styles hinge on fieldcontains, note that you may have to ensure that custom styles apply to switches within fieldcontains by using <code>.ui-field-contain div.ui-slider-switch { width: […]; }</code>.</p>
 
-<h3>Mini version</h3>
+		<p><code>.containing-element .ui-slider-switch { width: 9em }</code> will produce:
+		<iframe src="/resources/switch/example2.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
-<p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a mini version. </p>
+
+
+		<p>As some default styles hinge on fieldcontains, note that you may have to ensure that custom styles apply to switches within fieldcontains by using <code>.ui-field-contain div.ui-slider-switch { width: […]; }</code>.</p>
+
+		<h3>Mini version</h3>
+
+		<p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a mini version. </p>
 
 <pre><code>
 &lt;label for="flip-mini"&gt;Select slider:&lt;/label&gt;
@@ -46,11 +51,13 @@ To create a flip toggle, start with a <code>select</code> with two options. The 
   &lt;option value="on"&gt;On&lt;/option&gt;
 &lt;/select&gt;
 </code></pre>
-<p>This will produce a flip switch that is not as tall as the standard version and has a smaller text size.</p>
 
-<h3>Field containers</h3>
+		<p>This will produce a flip switch that is not as tall as the standard version and has a smaller text size.
+		<iframe src="/resources/switch/example3.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
-<p>Optionally wrap the switch markup in a container with the <code>data-role="fieldcontain"</code> attribute to help visually group it in a longer form. In this example, the step attribute is omitted to allow any whole number value to be selected.</p>
+		<h3>Field containers</h3>
+
+		<p>Optionally wrap the switch markup in a container with the <code>data-role="fieldcontain"</code> attribute to help visually group it in a longer form. In this example, the step attribute is omitted to allow any whole number value to be selected.</p>
 
 <pre><code>
 &lt;div data-role="fieldcontain"&gt;
@@ -62,11 +69,45 @@ To create a flip toggle, start with a <code>select</code> with two options. The 
 &lt;/div&gt;
 
 </code></pre>
+		
+		<p>The flip toggle switch is now displayed like this:
+		<iframe src="/resources/switch/example4.html" style="width:100%;height:90px;border:0px"></iframe></p>
+		
+		<h3>Theming the flip switch</h3>	
+		
+		<p>Like all form elements, this widget will automatically inherit the theme from its parent container. To choose a specific theme color swatch, specify the <code>data-theme</code> attribute on the <code>select</code> and specify a swatch letter.</p>	
+		
+<pre><code>&lt;div data-role=&quot;fieldcontain&quot;&gt;
+  &lt;label for=&quot;flip-3&quot;&gt;Flip switch:&lt;/label&gt;
+  &lt;select name=&quot;flip-3&quot; id=&quot;flip-3&quot; data-role=&quot;slider&quot; data-theme=&quot;a&quot;&gt;
+    &lt;option value=&quot;no&quot;&gt;No&lt;/option&gt;
+    &lt;option value=&quot;yes&quot;&gt;Yes&lt;/option&gt;
+  &lt;/select&gt; 
+&lt;/div&gt;
+</code></pre>	
+				
+		<p>This results in a switch with the swatch "a" colors for the handle. Note that the lefthand "on" state gets the active state color.
+		<iframe src="/resources/switch/example5.html" style="width:100%;height:90px;border:0px"></iframe></p>
+		<p>Here is a swatch "e" variation:
+		<iframe src="/resources/switch/example6.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
+		<p>It is also possible to theme the track of the flip switch by adding the <code>data-track-theme</code> attribute and specifying the chosen swatch letter on the <code>select</code>.</p>
+		<p>Here's an example of a flip switch with the swatch "a" applied to the track and swatch "c" applied to the handle:</p>		
 
-<h3>Calling the switch plugin</h3>
+<pre><code>&lt;div data-role="fieldcontain"&gt;
+  &lt;label for="flip-5"&gt;Flip switch:&lt;/label&gt;
+  &lt;select name="flip-5" id="flip-5" data-role="slider" data-theme="c" data-track-theme="a"&gt;
+    &lt;option value="no"&gt;No&lt;/option&gt;
+    &lt;option value="yes"&gt;Yes&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;
+</code></pre>
 
-<p>This plugin will auto initialize on any page that contains a text input with the <code>type="slider"</code> attribute. However, if needed you can directly call the slider plugin on any selector, just like any jQuery plugin:</p>
+		<iframe src="/resources/switch/example7.html" style="width:100%;height:90px;border:0px"></iframe>
+		
+		<h3>Calling the switch plugin</h3>
+
+		<p>This plugin will auto initialize on any page that contains a text input with the <code>type="slider"</code> attribute. However, if needed you can directly call the slider plugin on any selector, just like any jQuery plugin:</p>
 
 <pre><code>
 
@@ -89,10 +130,11 @@ $('input').slider();
 &lt;/div&gt;
 
 </code></pre>
-<p>This results in a switch with the swatch "a" colors for the handle. Note that the lefthand "on" state gets the active state color.</p>
-<p>It is also possible to theme the track of the flip switch by adding the data-track-theme attribute and specifying the chosen swatch letter on the select.
-</p><p>
-Here's an example of a flip switch with the swatch "a" applied to the track and swatch "c" applied to the handle:</p>
+		
+		<p>This results in a switch with the swatch "a" colors for the handle. Note that the lefthand "on" state gets the active state color.</p>
+		
+		<p>It is also possible to theme the track of the flip switch by adding the data-track-theme attribute and specifying the chosen swatch letter on the select.</p>
+		<p>Here's an example of a flip switch with the swatch "a" applied to the track and swatch "c" applied to the handle:</p>
 
 <pre><code>
 
@@ -152,21 +194,18 @@ $( ".selector" ).slider({
 	  <method name="enable">
 	    <desc>enable a disabled slider.
 		<pre><code>
-$('.selector').slider('enable');
-		</code></pre></desc>
+$('.selector').slider('enable');</code></pre></desc>
 	  </method>
 	  <method name="disable">
 	    <desc>disable a slider.
 		<pre><code>
-$('.selector').slider('disable');
-		</code></pre></desc>
+$('.selector').slider('disable');</code></pre></desc>
 	  </method>
 	  <method name="refresh">
 	    <desc>update the slider.
 		<p>If you manipulate a slider via JavaScript, you must call the refresh method on it to update the visual styling.</p>
 		<pre><code>
-$('.selector').slider('refresh');
-		</code></pre></desc>
+$('.selector').slider('refresh');</code></pre></desc>
 	  </method>
 	</methods>
 	<theming>
