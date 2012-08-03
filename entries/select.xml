@@ -160,7 +160,7 @@ $(document).bind('mobileinit',function(){
 
 
 			<p>When the <code>select</code> has a small number of options that will fit on the device's screen, the menu will appear as a small overlay with a pop transition:
-			<iframe src="/resources/select/example9.html" style="width:100%;height:190px;border:0px"></iframe></p>
+			<iframe src="/resources/select/example9.html" style="width:100%;height:270px;border:0px"></iframe></p>
 			
 			<p>When it has too many options to show on the device's screen, the framework will automatically create a new &quot;page&quot; populated with a standard <a href="listview">listview</a> for the options. This allows us to use the native scrolling included on the device for moving through a long list. The text inside the <code>label</code> is used as the title for this page.
 			<iframe src="/resources/select/example10.html" style="width:100%;height:590px;border:0px"></iframe></p>
@@ -169,7 +169,7 @@ $(document).bind('mobileinit',function(){
 		
 		<p>jQuery Mobile will automatically disable and style option tags with the <code>disabled</code> attribute.  In the demo below, the second option &quot;Rush: 3 days&quot; has been set to disabled.
 		
-		<iframe src="/resources/select/example11.html" style="width:100%;height:190px;border:0px"></iframe></p>
+		<iframe src="/resources/select/example11.html" style="width:100%;height:270px;border:0px"></iframe></p>
 		
 		<h3>Placeholder options</h3>
 		<p>It's common for developers to include a &quot;null&quot; option in their select element to force a user to choose an option. If a placeholder option is present in your markup, jQuery Mobile will hide them in the overlay menu, showing only valid choices to the user, and display the placeholder text inside the menu as a header.  A placeholder option is added when the framework finds:</p>
@@ -200,20 +200,20 @@ $.mobile.selectmenu.prototype.options.hidePlaceholderMenuItems = false;
 	<li>If no items are selected, the button's text will default to the placeholder text.</li>
 	<li>If no placeholder element exists, the default button text will be blank and the header will appear with just a close button. Because this isn't a friendly user experience, we recommended that you always specify a placeholder element when using multiple select boxes.</li>
 	</ul>
-		<iframe src="/resources/select/example13.html" style="width:100%;height:390px;border:0px"></iframe>
+		<iframe src="/resources/select/example13.html" style="width:100%;height:310px;border:0px"></iframe>
 			<p>When a select is large enough to where the menu will open in a new page, the placeholder text is displayed in the button when no items are selected, and the <code>label</code> text is displayed in the menu's header.  This differs from smaller overlay menus where the placeholder text is displayed in both the button and the header, and from full-page single selects where the placeholder text is not used at all.
 			<iframe src="/resources/select/example14.html" style="width:100%;height:590px;border:0px"></iframe></p>
 
 		<h3>Optgroup support</h3>
 	<p>If a select menu contains <code>optgroup</code> elements, jQuery Mobile will create a divider &amp; group items based on the <code>label</code> attribute's text:
-	<iframe src="/resources/select/example15.html" style="width:100%;height:390px;border:0px"></iframe></p>
+	<iframe src="/resources/select/example15.html" style="width:100%;height:500px;border:0px"></iframe></p>
 
-		<h2>Theming selects</h2>
+		<h3>Theming selects</h3>
 	<p>You can specify any jQuery Mobile button <code>data-</code> attribute on a select element, too. In this example, we're setting the theme, icon and inline properties:
-	<iframe src="/resources/select/example16.html" style="width:100%;height:190px;border:0px"></iframe></p>
+	<iframe src="/resources/select/example16.html" style="width:100%;height:310px;border:0px"></iframe></p>
 
 		<p>The <code>data-overlay-theme</code> attribute can be added to a select element to set the color of the overlay layer for the dialog-based custom select menus and the outer border of the smaller custom menus. By default, the content block colors for swatch "a"" will be used for the overlays.
-		<iframe src="/resources/select/example17.html" style="width:100%;height:190px;border:0px"></iframe></p>
+		<iframe src="/resources/select/example17.html" style="width:100%;height:290px;border:0px"></iframe></p>
  		<p><iframe src="/resources/select/example18.html" style="width:100%;height:590px;border:0px"></iframe></p>
 
 		<h3>Calling the select menu plugin</h3>
