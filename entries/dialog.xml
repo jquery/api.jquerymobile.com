@@ -19,7 +19,7 @@
 </code></pre>
 
 		<iframe src="/resources/dialog/example2.html" style="width:100%;height:420px;border:0px"></iframe>
-		
+
 		<h3>Closing dialogs</h3>
 
 		<p>When any link is clicked within in a dialog, the framework will automatically close the dialog and transition to the requested page, just as if the dialog were a normal page. To create a "cancel" button in a dialog, just link to the page that triggered the dialog to open and add the <code>data-rel="back"</code> attribute to your link. This pattern of linking to the previous page is also usable in non-JS devices as well.
@@ -37,27 +37,26 @@
 
 		<h3>Chaining Dialogs</h3>
 
-<p>Please note: If a dialog opens another dialog (chaining), closing the last one with a link of type <code>data-rel="back"</code> will always navigate to the previous dialog until the root-page of type <code>data-role="page"</code> is reached. This guarantees a consistent navigation between dialogs.</p>
-
+		<p>Please note: If a dialog opens another dialog (chaining), closing the last one with a link of type <code>data-rel="back"</code> will always navigate to the previous dialog until the root-page of type <code>data-role="page"</code> is reached. This guarantees a consistent navigation between dialogs.</p>
 
 		<h3>Styling &amp; theming</h3>
 
 		<p>Dialogs can be styled with different theme swatches, just like any page by adding <code>data-theme</code> attributes to the header, content, or footer containers.</p>
-		
+
 		<iframe src="/resources/dialog/example3.html" style="width:100%;height:420px;border:0px"></iframe>
-		
+
 		<p>Dialogs appear to be floating above an overlay layer. This overlay adopts the swatch 'a' content color by default, but the <code>data-overlay-theme</code> attribute can be added to the page wrapper to set the overlay to any swatch letter. </p>
-		
+
 		<iframe src="/resources/dialog/example4.html" style="width:100%;height:420px;border:0px"></iframe>
-		
+
 		<p>Dialogs can also be used more like a control sheet to offer multiple buttons if you simply remove the top margin from the dialog's inner container element. For example, if your dialog page had a class of <code>my-dialog</code>, you could add this CSS to pin that dialog to the top: <code>.ui-dialog.my-dialog .ui-dialog-contain { margin-top: 0 }</code>, or you could just apply that style to all dialogs with <code>.ui-dialog .ui-dialog-contain { margin-top: 0 }</code>.</p>
-		
+
 		<iframe src="/resources/dialog/example5.html" style="width:100%;height:420px;border:0px"></iframe>
 
 		<h3>Dialog width and margins</h3>
 
 		<p>For the sake of readability, dialogs have a default <code>max-width</code> of 500 pixels (plus 15px padding on each side). There is also a 10% top <code>margin</code> to give dialogs larger top margin on larger screens, but collapse to a small margin on smartphones. To override these styles, add the following CSS override rule to your stylesheet and tweak as needed:
-		
+
 <pre><code>
 .ui-dialog .ui-header,
 .ui-dialog .ui-content,
@@ -70,53 +69,57 @@
 	</longdesc>
 	<created>1.0</created>
 	<options>
-	  <option name="data-transition" default='"pop"'>
-	    <desc>Opens the dialog using the specified transition. (Note the recommended transitions for a more realistic dialog effect appear in bold).
-	    <p>Possible values: fade, <b>pop</b>, <b>flip</b>, turn, flow, slidefade, slide, slideup, <b>slidedown</b>, none. </p>
-	    </desc>
-	    <type name="String" />
-	  </option>
-	  <option name="closeBtnText" default='"Close"'>
-	    <desc>Customizes the text of the close button which is helpful for translating this into different languages. This is displayed as an icon-only button by default so the text isn't visible on-screen, but is read by screen readers so this is an important accessibility feature.
-			<p>This option is also exposed as a data attribute: <code>data-close-btn-text</code>.</p>
-        </desc>
-        <type name="String" />
-	  </option>
-	  <option name="initSelector"  default='":jqmData(role=&#39;dialog&#39;)"'>
-		<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as dialogs. To change which elements are initialized, bind this option to the mobileinit event:
+		<option name="data-transition" default='"pop"'>
+			<desc>
+				<p>Opens the dialog using the specified transition. (Note the recommended transitions for a more realistic dialog effect appear in bold).</p>
+				<p>Possible values: fade, <b>pop</b>, <b>flip</b>, turn, flow, slidefade, slide, slideup, <b>slidedown</b>, none. </p>
+			</desc>
+		<type name="String" />
+		</option>
+		<option name="closeBtnText" default='"Close"'>
+			<desc>
+				<p>Customizes the text of the close button which is helpful for translating this into different languages. This is displayed as an icon-only button by default so the text isn't visible on-screen, but is read by screen readers so this is an important accessibility feature.</p>
+				<p>This option is also exposed as a data attribute: <code>data-close-btn-text</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<option name="initSelector"  default='":jqmData(role=&#39;dialog&#39;)"'>
+			<desc>
+				This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as dialogs. To change which elements are initialized, bind this option to the mobileinit event:
 <pre><code>
-$( document ).bind( "mobileinit", function(){
-    $.mobile.dialog.prototype.options.initSelector = ".mydialog";
+$( document ).bind( "mobileinit", function() {
+	$.mobile.dialog.prototype.options.initSelector = ".mydialog";
 });</code></pre>
-		</desc>
-		<type name="CSS selector string" />
-	  </option>
+			</desc>
+			<type name="CSS selector string" />
+		</option>
 	</options>
 	<events>
-	<event name="create">
-	<desc>Triggered when a dialog is created</desc>
-	<pre><code>$( ".selector" ).dialog({
-   create: function(event, ui) { ... }
-});
-</code></pre>
-	</event>
+		<event name="create">
+			<desc>Triggered when a dialog is created</desc>
+		</event>
 	</events>
 	<methods>
-	  <method name="close">
-	    <desc>Closes the dialog.</desc>
-	  </method>
+		<method name="close">
+			<desc>Closes the dialog.</desc>
+		</method>
 	</methods>
 	<theming>
-	  <theme name="data-theme (as a data-attribute)">
-	    <desc>Dialogs can be styled with different theme swatches, just like any page by adding <code>data-theme</code> attributes to the header, content, or footer containers. <p>Possible values: swatch letter (a-z)</p></desc>
-	    <type name="String" />
-	  </theme>
-	 <theme name="overlayTheme" default='"a"'>
-	   <desc>Dialogs appear to be floating above an overlay layer. This overlay adopts the swatch A content color by default, but the data-overlay-theme attribute can be added to the page wrapper to set the overlay to any swatch letter.<p> Possible values: swatch letter (a-z)</p>
-	   <p>This option is also exposed as a data attribute: <code>data-overlay-theme</code>.</p>
-	   </desc>
-	   <type name="String" />
-	 </theme>
+		<theme name="data-theme (as a data-attribute)">
+			<desc>
+				<p>Dialogs can be styled with different theme swatches, just like any page by adding <code>data-theme</code> attributes to the header, content, or footer containers.</p>
+				<p>Possible values: swatch letter (a-z)</p>
+			</desc>
+			<type name="String" />
+		</theme>
+		<theme name="overlayTheme" default='"a"'>
+			<desc>
+				<p>Dialogs appear to be floating above an overlay layer. This overlay adopts the swatch A content color by default, but the data-overlay-theme attribute can be added to the page wrapper to set the overlay to any swatch letter.</p>
+				<p> Possible values: swatch letter (a-z)</p>
+				<p>This option is also exposed as a data attribute: <code>data-overlay-theme</code>.</p>
+			</desc>
+			<type name="String" />
+		</theme>
 	</theming>
 	<example>
 		<desc>A basic example of opening a page as a dialog by adding <code>data-rel="dialog"</code> to the anchor tag.</desc>
