@@ -132,6 +132,18 @@ $( document ).bind( "mobileinit", function(){
 			</desc>
 			<type name="Boolean" />
 		</option>
+		<option name="theme" default="null, inherited from parent">
+			<desc>Sets the color scheme (swatch) for the collapsible set. It accepts a single letter from a-z that maps to the swatches included in your theme. To set the value for all instances of this widget, bind this option to the mobileinit event:
+<pre><code>
+$( document ).bind( "mobileinit", function(){
+	$.mobile.collapsibleset.prototype.options.theme = "a";
+});
+</code></pre>
+				<p>Possible values: swatch letter (a-z).</p>
+				<p>This option is also exposed as a data attribute: <code>data-theme="a"</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
 	</options>
 	<events>
 		<event name="create">
@@ -153,20 +165,6 @@ $('.selector').collapsibleset('refresh');
 			</desc>
 		</method>
 	</methods>
-	<theming>
-		<theme name="theme" default="null, inherited from parent">
-			<desc>Sets the color scheme (swatch) for the collapsible set. It accepts a single letter from a-z that maps to the swatches included in your theme. To set the value for all instances of this widget, bind this option to the mobileinit event:
-<pre><code>
-$( document ).bind( "mobileinit", function(){
-	$.mobile.collapsibleset.prototype.options.theme = "a";
-});
-</code></pre>
-				<p>Possible values: swatch letter (a-z).</p>
-				<p>This option is also exposed as a data attribute: <code>data-theme="a"</code>.</p>
-			</desc>
-			<type name="String" />
-		</theme>
-	</theming>
 	<example>
 		<desc>A basic example of a collapsible set.</desc>
 		<code><![CDATA[]]></code>

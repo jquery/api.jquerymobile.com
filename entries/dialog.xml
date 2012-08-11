@@ -93,6 +93,21 @@ $( document ).bind( "mobileinit", function() {
 			</desc>
 			<type name="CSS selector string" />
 		</option>
+		<option name="data-theme (as a data-attribute)">
+			<desc>
+				<p>Dialogs can be styled with different theme swatches, just like any page by adding <code>data-theme</code> attributes to the header, content, or footer containers.</p>
+				<p>Possible values: swatch letter (a-z)</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<option name="overlayTheme" default='"a"'>
+			<desc>
+				<p>Dialogs appear to be floating above an overlay layer. This overlay adopts the swatch A content color by default, but the data-overlay-theme attribute can be added to the page wrapper to set the overlay to any swatch letter.</p>
+				<p> Possible values: swatch letter (a-z)</p>
+				<p>This option is also exposed as a data attribute: <code>data-overlay-theme</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
 	</options>
 	<events>
 		<event name="create">
@@ -104,23 +119,6 @@ $( document ).bind( "mobileinit", function() {
 			<desc>Closes the dialog.</desc>
 		</method>
 	</methods>
-	<theming>
-		<theme name="data-theme (as a data-attribute)">
-			<desc>
-				<p>Dialogs can be styled with different theme swatches, just like any page by adding <code>data-theme</code> attributes to the header, content, or footer containers.</p>
-				<p>Possible values: swatch letter (a-z)</p>
-			</desc>
-			<type name="String" />
-		</theme>
-		<theme name="overlayTheme" default='"a"'>
-			<desc>
-				<p>Dialogs appear to be floating above an overlay layer. This overlay adopts the swatch A content color by default, but the data-overlay-theme attribute can be added to the page wrapper to set the overlay to any swatch letter.</p>
-				<p> Possible values: swatch letter (a-z)</p>
-				<p>This option is also exposed as a data attribute: <code>data-overlay-theme</code>.</p>
-			</desc>
-			<type name="String" />
-		</theme>
-	</theming>
 	<example>
 		<desc>A basic example of opening a page as a dialog by adding <code>data-rel="dialog"</code> to the anchor tag.</desc>
 		<html><![CDATA[
