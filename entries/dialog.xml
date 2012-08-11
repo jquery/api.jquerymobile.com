@@ -12,7 +12,7 @@
 
 		<h3>Transitions</h3>
 
-		<p>By default, the dialog will open with a 'pop' transition. Like all pages, you can specify any page transition you want on the dialog by adding the <code>data-transition</code> attribute to the link. To make it feel more dialog-like, we recommend specifying a transition of "pop", "slideup" or "flip".</p>
+		<p>By default, the dialog will open with a 'pop' transition. Like all pages, you can specify any page transition you want on the dialog by adding the <code>data-transition</code> attribute to the link. To make it feel more dialog-like, we recommend specifying a transition of "pop", "slideup" or "flip".<br />Possible values include: fade, <b>pop</b>, <b>flip</b>, turn, flow, slidefade, slide, slideup, slidedown, none. </p>
 
 <pre><code>
 &lt;a href="foo.html" data-rel="dialog" data-transition="pop"&gt;Open dialog&lt;/a&gt;
@@ -55,27 +55,22 @@
 
 		<h3>Dialog width and margins</h3>
 
-		<p>For the sake of readability, dialogs have a default <code>max-width</code> of 500 pixels (plus 15px padding on each side). There is also a 10% top <code>margin</code> to give dialogs larger top margin on larger screens, but collapse to a small margin on smartphones. To override these styles, add the following CSS override rule to your stylesheet and tweak as needed:
+		<p>For the sake of readability, dialogs have a default <code>width</code> of 92.5% and a <code>max-width</code> of 500 pixels. There is also a 10% top <code>margin</code> to give dialogs larger top margin on larger screens, but collapse to a small margin on smartphones. The dialog's inner container is shifted towards the <code>top</code> with 15px to hide the corner styling if a dialog is used as a control sheet (see above). To override these styles, add the following CSS override rule to your stylesheet and tweak as needed:</p>
 
 <pre><code>
-.ui-dialog .ui-header,
-.ui-dialog .ui-content,
-.ui-dialog .ui-footer {
+.ui-dialog-contain {
+	width: 92.5%;
 	max-width: 500px;
 	margin: 10% auto 15px auto;
+	padding: 0;
+	position: relative;
+	top: -15px;
 }
 </code></pre>
-</p>
+
 	</longdesc>
 	<created>1.0</created>
 	<options>
-		<option name="data-transition" default='"pop"'>
-			<desc>
-				<p>Opens the dialog using the specified transition. (Note the recommended transitions for a more realistic dialog effect appear in bold).</p>
-				<p>Possible values: fade, <b>pop</b>, <b>flip</b>, turn, flow, slidefade, slide, slideup, <b>slidedown</b>, none. </p>
-			</desc>
-		<type name="String" />
-		</option>
 		<option name="closeBtnText" default='"Close"'>
 			<desc>
 				<p>Customizes the text of the close button which is helpful for translating this into different languages. This is displayed as an icon-only button by default so the text isn't visible on-screen, but is read by screen readers so this is an important accessibility feature.</p>
@@ -92,13 +87,6 @@ $( document ).bind( "mobileinit", function() {
 });</code></pre>
 			</desc>
 			<type name="CSS selector string" />
-		</option>
-		<option name="data-theme (as a data-attribute)">
-			<desc>
-				<p>Dialogs can be styled with different theme swatches, just like any page by adding <code>data-theme</code> attributes to the header, content, or footer containers.</p>
-				<p>Possible values: swatch letter (a-z)</p>
-			</desc>
-			<type name="String" />
 		</option>
 		<option name="overlayTheme" default='"a"'>
 			<desc>
