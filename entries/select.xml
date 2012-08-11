@@ -232,7 +232,7 @@ $('select').selectmenu();
 </code></pre>
 	
 	</longdesc>
-	<created>1.0</created>
+	<added>1.0</added>
 	<options>
 		<option name="corners" default="true">
 			<desc>Applies the theme button border-radius to the select button if set to true. 

@@ -89,7 +89,7 @@
 
 		<p>The labels float so they sit side-by-side on a line. The radio button icons are hidden and only the left and right edges of the group are rounded.</p>
 	</longdesc>
-	<created>1.0</created>
+	<added>1.0</added>
 	<options>
 		<option name="mini"  default="false">
 			<desc>Sets the size of the element to a more compact, mini version.

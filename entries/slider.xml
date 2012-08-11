@@ -90,7 +90,7 @@ $('input').slider();
 		<p>This will produce a themed slider:
 		<iframe src="/resources/slider/example5.html" style="width:100%;height:90px;border:0px"></iframe></p>
 	</longdesc>
-	<created>1.0</created>
+	<added>1.0</added>
 	<options>
 		<option name="disabled" default="false">
 			<desc>Sets the default state of the slider to disabled when "true".

@@ -140,7 +140,7 @@ $('input').slider();
 </code></pre>
 
 	</longdesc>
-	<created>1.0</created>
+	<added>1.0</added>
 	<options>
 		<option name="disabled" default="false">
 			<desc>Sets the default state of the slider to disabled when "true".
