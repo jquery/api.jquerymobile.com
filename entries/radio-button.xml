@@ -7,169 +7,165 @@
 		<p>The radio button controls below use standard input/label markup, but are styled to be more touch-friendly. The styled control you see is actually the label element, which sits over the real input, so if images fail to load, you'll still have a functional control. In most browsers, clicking the label automatically triggers a click on the input, but we've had to trigger the update manually for a few mobile browsers that don't do this natively. On the desktop, these controls are keyboard and screen-reader accessible.</p>
 
 		<h3>Vertically grouped radio buttons</h3>
-		<p>To create a set of radio buttons, add an input with a type="radio" attribute and a corresponding label. Set the for attribute of the label to match the id of the input so they are semantically associated.
-</p><p>
-The label element is displayed next to the radio form element. Wrap the radio buttons in a fieldset element that has a legend which acts as the title for the question.
-</p><p>
-To visually integrate multiple radio buttons into a vertically grouped button set, the framework will automatically remove all margins between buttons and round only the top and bottom corners of the set if there is a data-role="controlgroup" attribute on the container.</p>
+		
+		<p>To create a set of radio buttons, add an input with a type="radio" attribute and a corresponding label. Set the for attribute of the label to match the id of the input so they are semantically associated.</p>
+		<p>The label element is displayed next to the radio form element. Wrap the radio buttons in a fieldset element that has a legend which acts as the title for the question.</p>
+		<p>To visually integrate multiple radio buttons into a vertically grouped button set, the framework will automatically remove all margins between buttons and round only the top and bottom corners of the set if there is a data-role="controlgroup" attribute on the container.</p>
 
 <pre><code>
-
 &lt;fieldset data-role="controlgroup"&gt;
-  &lt;legend&gt;Choose a pet:&lt;/legend&gt;
-  &lt;input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" /&gt;
-  &lt;label for="radio-choice-1"&gt;Cat&lt;/label&gt;
+	&lt;legend&gt;Choose a pet:&lt;/legend&gt;
+	&lt;input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" /&gt;
+	&lt;label for="radio-choice-1"&gt;Cat&lt;/label&gt;
 
-  &lt;input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2" /&gt;
-  &lt;label for="radio-choice-2"&gt;Dog&lt;/label&gt;
+	&lt;input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2" /&gt;
+	&lt;label for="radio-choice-2"&gt;Dog&lt;/label&gt;
 
-  &lt;input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3" /&gt;
-  &lt;label for="radio-choice-3"&gt;Hamster&lt;/label&gt;
+	&lt;input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3" /&gt;
+	&lt;label for="radio-choice-3"&gt;Hamster&lt;/label&gt;
 
-  &lt;input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4" /&gt;
-  &lt;label for="radio-choice-4"&gt;Lizard&lt;/label&gt;
+	&lt;input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4" /&gt;
+	&lt;label for="radio-choice-4"&gt;Lizard&lt;/label&gt;
 &lt;/fieldset&gt;
-
 </code></pre>
-<p>This will produce a vertically grouped radio button set. The default styles set the width of the button group to 100% of the parent container and stacks the label on a separate line.
-	<iframe src="/resources/radiobutton/example1.html" style="width:100%;height:210px;border:0px"></iframe></p>
 
-<h3>Mini version</h3>
+		<p>This will produce a vertically grouped radio button set. The default styles set the width of the button group to 100% of the parent container and stacks the label on a separate line.
+		<iframe src="/resources/radiobutton/example1.html" style="width:100%;height:210px;border:0px"></iframe></p>
 
-<p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a mini version. </p>
+		<h3>Mini version</h3>
+
+		<p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a mini version. </p>
 
 <pre><code>
 &lt;fieldset data-role="controlgroup" data-mini="true"&gt;
-  &lt;input type="radio" name="radio-mini" id="radio-mini-1" value="choice-1" checked="checked" /&gt;
-  &lt;label for="radio-mini-1"&gt;Credit&lt;/label&gt;
+	&lt;input type="radio" name="radio-mini" id="radio-mini-1" value="choice-1" checked="checked" /&gt;
+	&lt;label for="radio-mini-1"&gt;Credit&lt;/label&gt;
 
-  &lt;input type="radio" name="radio-mini" id="radio-mini-2" value="choice-2" /&gt;
-  &lt;label for="radio-mini-2"&gt;Debit&lt;/label&gt;
+	&lt;input type="radio" name="radio-mini" id="radio-mini-2" value="choice-2" /&gt;
+	&lt;label for="radio-mini-2"&gt;Debit&lt;/label&gt;
 
-  &lt;input type="radio" name="radio-mini" id="radio-mini-3" value="choice-3" /&gt;
-  &lt;label for="radio-mini-3"&gt;Cash&lt;/label&gt;
+	&lt;input type="radio" name="radio-mini" id="radio-mini-3" value="choice-3" /&gt;
+	&lt;label for="radio-mini-3"&gt;Cash&lt;/label&gt;
 &lt;/fieldset&gt;
-
 </code></pre>
-<p>This will produce a radio button that is not as tall as the standard version and has a smaller text size.
-<iframe src="/resources/radiobutton/example2.html" style="width:100%;height:130px;border:0px"></iframe></p>
 
-<h3>Field containers</h3>
+		<p>This will produce a radio button that is not as tall as the standard version and has a smaller text size.
+		<iframe src="/resources/radiobutton/example2.html" style="width:100%;height:130px;border:0px"></iframe></p>
 
-<p>Optionally wrap the radiobuttons in a container with the <code>data-role="fieldcontain"</code> attribute to help visually group it in a longer form.</p>
+		<h3>Field containers</h3>
+
+		<p>Optionally wrap the radiobuttons in a container with the <code>data-role="fieldcontain"</code> attribute to help visually group it in a longer form.</p>
 
 <pre><code>
 &lt;div data-role="fieldcontain"&gt;
-  &lt;fieldset data-role="controlgroup"&gt;
-    &lt;legend&gt;Choose a pet:&lt;/legend&gt;
-    &lt;input type="radio" name="radio-choice-2" id="radio-choice-21" value="choice-1" checked="checked" /&gt;
-    &lt;label for="radio-choice-1">Cat&lt;/label&gt;
+	&lt;fieldset data-role="controlgroup"&gt;
+		&lt;legend&gt;Choose a pet:&lt;/legend&gt;
+		&lt;input type="radio" name="radio-choice-2" id="radio-choice-21" value="choice-1" checked="checked" /&gt;
+		&lt;label for="radio-choice-1">Cat&lt;/label&gt;
 
-    &lt;input type="radio" name="radio-choice-2" id="radio-choice-22" value="choice-2" /&gt;
-    &lt;label for="radio-choice-2">Dog&lt;/label&gt;
+		&lt;input type="radio" name="radio-choice-2" id="radio-choice-22" value="choice-2" /&gt;
+		&lt;label for="radio-choice-2">Dog&lt;/label&gt;
 
-    &lt;input type="radio" name="radio-choice-2" id="radio-choice-23" value="choice-3" /&gt;
-    &lt;label for="radio-choice-3">Hamster&lt;/label&gt;
+		&lt;input type="radio" name="radio-choice-2" id="radio-choice-23" value="choice-3" /&gt;
+		&lt;label for="radio-choice-3">Hamster&lt;/label&gt;
 
-    &lt;input type="radio" name="radio-choice-2" id="radio-choice-24" value="choice-4" /&gt;
-    &lt;label for="radio-choice-4">Lizard&lt;/label&gt;
-  &lt;/fieldset&gt;
+		&lt;input type="radio" name="radio-choice-2" id="radio-choice-24" value="choice-4" /&gt;
+		&lt;label for="radio-choice-4">Lizard&lt;/label&gt;
+	&lt;/fieldset&gt;
 &lt;/div&gt;
-
 </code></pre>
 
-<iframe src="/resources/radiobutton/example3.html" style="width:100%;height:210px;border:0px"></iframe>
+		<iframe src="/resources/radiobutton/example3.html" style="width:100%;height:210px;border:0px"></iframe>
 
-<h3>Horizontal radio button sets</h3>
+		<h3>Horizontal radio button sets</h3>
 
-<p>Radio buttons can also be used for grouped button sets where only a single button can be selected at once, such as a view switcher control. To make a horizontal radio button set, add the <code>data-type="horizontal"</code> to the <code>fieldset</code>.</p>
+		<p>Radio buttons can also be used for grouped button sets where only a single button can be selected at once, such as a view switcher control. To make a horizontal radio button set, add the <code>data-type="horizontal"</code> to the <code>fieldset</code>.</p>
 
 <pre><code>
-
 &lt;fieldset data-role="controlgroup" data-type="horizontal" &gt;
-
 </code></pre>
 
-<iframe src="/resources/radiobutton/example4.html" style="width:100%;height:90px;border:0px"></iframe>
+		<iframe src="/resources/radiobutton/example4.html" style="width:100%;height:90px;border:0px"></iframe>
 
-<p>The labels float so they sit side-by-side on a line. The radio button icons are hidden and only the left and right edges of the group are rounded.</p>
+		<p>The labels float so they sit side-by-side on a line. The radio button icons are hidden and only the left and right edges of the group are rounded.</p>
 	</longdesc>
 	<created>1.0</created>
 	<options>
-	  <option name="mini"  default="false">
-		<desc>Sets the size of the element to a more compact, mini version.
+		<option name="mini"  default="false">
+			<desc>Sets the size of the element to a more compact, mini version.
 <pre><code>
 $("input[type='radio']").checkboxradio({ mini: true });
-
 </code></pre>
-
-<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
-		</desc>
-		<type name="Boolean" />
-	  </option>
+				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
 	</options>
 	<events>
-	  <event name="create">
-	    <desc>triggered when a radio button is created</desc>
+		<event name="create">
+			<desc>triggered when a radio button is created</desc>
 <pre><code>
 $("input[type='radio']").checkboxradio({
-   create: function(event, ui) { ... }
+	create: function(event, ui) { ... }
 });
 </code></pre>
-	  </event>
+		</event>
 	</events>
 	<methods>
-	  <method name="enable">
-	    <desc>enable a disabled radio button.
-		<pre><code>
+		<method name="enable">
+			<desc>enable a disabled radio button.
+<pre><code>
 $("input[type='radio']").checkboxradio('enable');
-		</code></pre></desc>
-	  </method>
-	  <method name="disable">
-	    <desc>disable a radio button.
-		<pre><code>
+</code></pre>
+			</desc>
+		</method>
+		<method name="disable">
+			<desc>disable a radio button.
+<pre><code>
 $("input[type='radio']").checkboxradio('disable');
-		</code></pre></desc>
-	  </method>
-	  <method name="refresh">
-	    <desc>update the radio button.
-		<p>If you manipulate a radio button via JavaScript, you must call the refresh method on it to update the visual styling. </p>
-		<pre><code>
+</code></pre>
+			</desc>
+		</method>
+		<method name="refresh">
+			<desc>update the radio button.
+				<p>If you manipulate a radio button via JavaScript, you must call the refresh method on it to update the visual styling. </p>
+<pre><code>
 $("input[type='radio']:first").attr("checked",true).checkboxradio("refresh");
-		</code></pre></desc>
-	  </method>
+</code></pre>
+			</desc>
+		</method>
 	</methods>
 	<theming>
-	  <theme name="theme" default="null, inherited from parent">
-	    <desc>Sets the color scheme (swatch) for all instances of this widget. It accepts a single letter from a-z that maps to the swatches included in your theme. By default, it will inherit the same swatch color as its parent container if not explicitly set.
+		<theme name="theme" default="null, inherited from parent">
+			<desc>Sets the color scheme (swatch) for all instances of this widget. It accepts a single letter from a-z that maps to the swatches included in your theme. By default, it will inherit the same swatch color as its parent container if not explicitly set.
 <pre><code>
 $("input[type='radio']").checkboxradio({ theme: "a" });
-
 </code></pre>
 
-<p>Possible values: swatch letter (a-z).</p>
-<p>This option is also exposed as a data attribute: <code>data-theme="a"</code>.</p>
-		</desc>
-	    <type name="String" />
-	  </theme>
+				<p>Possible values: swatch letter (a-z).</p>
+				<p>This option is also exposed as a data attribute: <code>data-theme="a"</code>.</p>
+			</desc>
+			<type name="String" />
+		</theme>
 	</theming>
 	<example>
 		<desc>A basic example of vertically grouped radio buttons</desc>
 		<code><![CDATA[]]></code>
-		<html><![CDATA[  <fieldset data-role="controlgroup">
-          <legend>Choose a pet:</legend>
-          <input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
-          <label for="radio-choice-1">Cat</label>
+		<html><![CDATA[  
+		<fieldset data-role="controlgroup">
+			<legend>Choose a pet:</legend>
+			<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
+			<label for="radio-choice-1">Cat</label>
 
-          <input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2" />
-          <label for="radio-choice-2">Dog</label>
+			<input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2" />
+			<label for="radio-choice-2">Dog</label>
 
-          <input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3" />
-          <label for="radio-choice-3">Hamster</label>
+			<input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3" />
+			<label for="radio-choice-3">Hamster</label>
 
-          <input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4" />
-          <label for="radio-choice-4">Lizard</label>
-        </fieldset> ]]></html>
+			<input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4" />
+			<label for="radio-choice-4">Lizard</label>
+		</fieldset> ]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>
