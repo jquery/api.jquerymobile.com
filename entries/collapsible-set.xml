@@ -80,10 +80,10 @@ $( document ).bind( "mobileinit", function(){
 			<desc>Sets the icon for the header of the collapsible container when in an expanded state. To set the value for all instances of this widget, bind this option to the mobileinit event:
 <pre><code>
 $( document ).bind( "mobileinit", function(){
-	$.mobile.collapsibleset.prototype.options.expandedIcon = "arrow-r";
+	$.mobile.collapsibleset.prototype.options.expandedIcon = "arrow-d";
 });
 </code></pre>
-				<p>This option is also exposed as a data attribute: <code>data-expanded-icon="arrow-r"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-expanded-icon="arrow-d"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
