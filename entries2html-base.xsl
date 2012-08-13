@@ -69,20 +69,6 @@
 							</ul>
 						</li>
 					</xsl:if>
-					<xsl:if test="theming">
-						<li>
-							<a href="#theming">Theming</a>
-							<ul>
-								<xsl:for-each select="theming/theme">
-									<li>
-										<a href="#theme-{@name}">
-											<xsl:value-of select="@name"/>
-										</a>
-									</li>
-								</xsl:for-each>
-							</ul>
-						</li>
-					</xsl:if>
 					<xsl:if test="example">
 						<li><a href="#examples">Examples</a></li>
 					</xsl:if>
@@ -174,33 +160,6 @@
 									</xsl:apply-templates>
 								</div>
 								<xsl:call-template name="arguments"/>
-							</li>
-						</xsl:for-each>
-					</ul>
-				</section>
-			</xsl:if>
-			<xsl:if test="theming">
-				<section id="theming">
-					<header>
-						<h2 class="underline">Theming</h2>
-					</header>
-					<ul>
-						<xsl:for-each select="theming/theme">
-							<li id="theme-{@name}">
-								<h3>
-									<xsl:value-of select="@name"/>
-								</h3>
-								<p>
-									<strong>Type: </strong>
-									<xsl:call-template name="render-types" />
-								</p>
-								<p>
-									<strong>Default: </strong>
-									<xsl:value-of select="@default"/>
-								</p>
-								<div>
-									<xsl:copy-of select="desc/node()"/>
-								</div>
 							</li>
 						</xsl:for-each>
 					</ul>
