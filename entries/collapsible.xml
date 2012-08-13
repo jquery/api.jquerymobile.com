@@ -145,10 +145,10 @@ $( document ).bind( "mobileinit", function(){
 			<desc>Sets the icon for the header of the collapsible container when in an expanded state. To set the value for all instances of this widget, bind this option to the mobileinit event:
 <pre><code>
 $( document ).bind( "mobileinit", function(){
-	$.mobile.collapsible.prototype.options.expandedIcon = "arrow-r";
+	$.mobile.collapsible.prototype.options.expandedIcon = "arrow-d";
 });
 </code></pre>
-				<p>This option is also exposed as a data attribute: <code>data-expanded-icon="arrow-r"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-expanded-icon="arrow-d"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
@@ -220,14 +220,50 @@ $( document ).bind( "mobileinit", function(){
 		</option>
 	</options>
 	<events>
-		<event name="create">
-			<desc>Triggered when a collapsible is created</desc>
+		<event name="create" type="collapsiblecreate">	
+			<desc>Triggered when a collapsible is created
+<pre><code>
+$( ".selector" ).collapsible({
+	create: function(event, ui) { ... }
+});
+</code></pre>
+			</desc>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc></desc>
+			</argument>
 		</event>
-		<event name="collapse">
-			<desc>Triggered when a collapsible is collapsed</desc>
+		<event name="collapse" type="collapsiblecollapse">
+			<desc>Triggered when a collapsible is collapsed
+<pre><code>
+$( ".selector" ).collapsible({
+	collapse: function(event, ui) { ... }
+});
+</code></pre>
+			</desc>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc></desc>
+			</argument>
 		</event>
-		<event name="expand">
-			<desc>Triggered when a collapsible is expanded</desc>
+		<event name="expand" type="collapsibleexpand">
+			<desc>Triggered when a collapsible is expanded
+<pre><code>
+$( ".selector" ).collapsible({
+	expand: function(event, ui) { ... }
+});
+</code></pre>
+			</desc>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc></desc>
+			</argument>
 		</event>
 	</events>
 	<methods>
