@@ -220,7 +220,7 @@ $( document ).bind( "mobileinit", function(){
 		</option>
 	</options>
 	<events>
-		<event name="create" type="collapsiblecreate">	
+		<event name="create" type="create">	
 			<desc>Triggered when a collapsible is created
 <pre><code>
 $( ".selector" ).collapsible({
@@ -235,7 +235,7 @@ $( ".selector" ).collapsible({
 				<desc></desc>
 			</argument>
 		</event>
-		<event name="collapse" type="collapsiblecollapse">
+		<event name="collapse" type="collapse">
 			<desc>Triggered when a collapsible is collapsed
 <pre><code>
 $( ".selector" ).collapsible({
@@ -250,7 +250,7 @@ $( ".selector" ).collapsible({
 				<desc></desc>
 			</argument>
 		</event>
-		<event name="expand" type="collapsibleexpand">
+		<event name="expand" type="expand">
 			<desc>Triggered when a collapsible is expanded
 <pre><code>
 $( ".selector" ).collapsible({
