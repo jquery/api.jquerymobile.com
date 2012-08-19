@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="checkbox" namespace="fn" type="Widget" widgetnamespace="mobile">
+	<title>Checkbox Widget</title>
 	<desc>Creates a checkbox widget</desc>
 	<longdesc>
 		<p>Checkboxes are used to provide a list of options where more than one can be selected. Traditional desktop checkboxes are not optimized for touch input so in jQuery Mobile, we style the <code>label</code> for the checkboxes so they are larger and look clickable. A custom set of icons are added to the label to provide additional visual feedback. </p>

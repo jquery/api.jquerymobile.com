@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="select" namespace="fn" type="Widget" widgetnamespace="mobile">
+	<title>Select menu Widget</title>
 	<desc>Creates a select menu widget</desc>
 	<longdesc>
 		<p>The select menu is based on a native select element, which is hidden from view and replaced with a custom-styled select button that matches the look and feel of the jQuery Mobile framework. The select menu is ARIA-enabled and keyboard accessible on the desktop as well.</p>

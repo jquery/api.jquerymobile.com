@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="radio button" namespace="fn" type="Widget" widgetnamespace="mobile">
+	<title>Radio button Widget</title>
 	<desc>Creates a radio button widget</desc>
 	<longdesc>
 		<p>Radio buttons are used to provide a list of options where only a single item can be selected. Traditional desktop radio buttons are not optimized for touch input so jQuery Mobile styles the <code>label</code> for the radio buttons so they are larger and look clickable. A custom set of icons are added to the label to provide additional visual feedback. </p>

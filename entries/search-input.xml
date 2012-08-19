@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="search input" namespace="fn" type="Widget" widgetnamespace="mobile">
+	<title>Search input Widget</title>
     <desc>Creates a search input widget</desc>
     <longdesc>
 		<p>Search inputs are a new HTML type that is styled with pill-shaped corners and adds an "x" icon to clear the field once you start typing. Start with an input with a type="search" attribute in your markup.</p>

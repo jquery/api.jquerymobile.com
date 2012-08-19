@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="slider" namespace="fn" type="Widget" widgetnamespace="mobile">
+	<title>Slider Widget</title>
 	<desc>Creates a slider widget</desc>
 	<longdesc>
 		<p>To add a slider widget to your page, use a standard input with the <code>type="range"</code> attribute. The input's value is used to configure the starting position of the handle and the value is populated in the text input. Specify <code>min</code> and <code>max</code> attribute values to set the slider's range. If you want to constrain input to specific increments, add the <code>step</code> attribute. Set the <code>value</code> attribute to define the initial value. The framework will parse these attributes to configure the slider widget.</p>

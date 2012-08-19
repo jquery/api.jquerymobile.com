@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="switch" namespace="fn" type="Widget" widgetnamespace="mobile">
+	<title>Flip toggle switch Widget</title>
 	<desc>Creates a flip toggle switch widget</desc>
 	<longdesc>
 		<p>A binary "flip" switch is a common UI element on mobile devices that is used for binary on/off or true/false data input. You can either drag the flip handle like a slider or tap one side of the switch.</p>

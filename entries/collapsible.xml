@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="collapsible" namespace="fn" type="Widget" widgetnamespace="mobile">
+	<title>Collapsible Widget</title>
 	<desc>Creates a collapsible block of content</desc>
 	<longdesc>
 		<p>To create a collapsible block of content, create a container and add the data-role="collapsible" attribute. Using data-content-theme attribute allows you to set a theme for the content of the collapsible.</p>
