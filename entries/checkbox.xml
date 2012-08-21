@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="checkbox" namespace="fn" type="Widget" widgetnamespace="mobile">
+<entry name="checkbox" namespace="fn" type="widget" widgetnamespace="mobile">
 	<title>Checkbox Widget</title>
 	<desc>Creates a checkbox widget</desc>
 	<longdesc>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="select" namespace="fn" type="Widget" widgetnamespace="mobile">
+<entry name="select" namespace="fn" type="widget" widgetnamespace="mobile">
 	<title>Select menu Widget</title>
 	<desc>Creates a select menu widget</desc>
 	<longdesc>
