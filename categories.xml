@@ -3,4 +3,5 @@
 	<category name="Widgets" slug="widgets">
 		<desc></desc>
 	</category>
+	<category name="All" slug="all"/>
 </categories>
