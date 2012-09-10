@@ -112,7 +112,7 @@ $('.selector').textinput({ mini: true });
 			</desc>
             <type name="Boolean" />
 		</option>
-		<option name="preventFocusZoom" default=true on iOS platforms>
+		<option name="preventFocusZoom" default="true on iOS platforms">
 			<desc>This option disables page zoom temporarily when a custom input is focused, which prevents iOS devices from zooming the page into the input. By default, iOS often zooms into form controls, and the behavior is often unnecessary and intrusive in mobile-optimized layouts.
 <pre><code>
 $('input').textinput({ preventFocusZoom: true });
