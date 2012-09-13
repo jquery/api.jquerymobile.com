@@ -15,7 +15,7 @@ grunt.initConfig({
 		grunt: "grunt.js"
 	},
 	xmllint: {
-		all: [].concat( entryFiles, "cat2tax.xsl", "categories.xml", "entries2html.xsl", "xml2json.xsl" )
+		all: [].concat( entryFiles, "categories.xml", "entries2html.xsl" )
 	},
 	xmltidy: {
 		all: [].concat( entryFiles, "categories.xml" )
@@ -32,7 +32,8 @@ grunt.initConfig({
 });
 
 grunt.registerTask( "default", "build-wordpress" );
-grunt.registerTask( "build-wordpress", "clean lint xmllint build-xml-entries build-xml-categories build-resources" );
+grunt.registerTask( "build", "build-xml-entries build-xml-categories build-xml-full build-resources" );
+grunt.registerTask( "build-wordpress", "clean lint xmllint build" );
 grunt.registerTask( "tidy", "xmllint xmltidy" );
 
 };
