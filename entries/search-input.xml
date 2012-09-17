@@ -11,7 +11,8 @@
 &lt;label for="search-basic"&gt;Search Input:&lt;/label&gt;
 &lt;input type="search" name="search" id="search-basic" value="" /&gt;
 </code></pre>
-		<p>This will produce a basic search input. The default styles set the width of the input to 100% of the parent container and stack the label on a separate line.</p>
+		<p>This will produce a basic search input. The default styles set the width of the input to 100% of the parent container and stack the label on a separate line.
+		<iframe src="/resources/search-input/example1.html" style="width:100%;height:90px;border:0px"></iframe></p>
         
 		<h3>Mini version</h3>
         
