@@ -23,7 +23,8 @@
 &lt;input type=&quot;search&quot; name=&quot;search-mini&quot; id=&quot;search-mini&quot; value=&quot;&quot; data-mini=&quot;true&quot;/&gt;
 </code></pre>
 
-		<p>This will produce a search input that is not as tall as the standard version and has a smaller text size.</p>
+		<p>This will produce a search input that is not as tall as the standard version and has a smaller text size.
+		<iframe src="/resources/search-input/example2.html" style="width:100%;height:90px;border:0px"></iframe></p>
         
 		<h3>Field containers</h3>
         
@@ -35,6 +36,15 @@
 &lt;/div&gt;
 </code></pre>	
 
+		<p>The search input is now displayed like this:
+		<iframe src="/resources/search-input/example3.html" style="width:100%;height:90px;border:0px"></iframe>
+		</p>
+		
+		<h3>Theming</h3>
+		<p>The <code>data-theme</code> attribute can be added to the search input to set the theme to any swatch letter.
+		<iframe src="/resources/search-input/example4.html" style="width:100%;height:90px;border:0px"></iframe>
+		</p>
+		
 		<h3>Setting the clear button text</h3>
 		
 		<p>The text for the button used to clear the search input of text can be configured for all search inputs by binding to the <code>mobileinit</code> event and setting the 
