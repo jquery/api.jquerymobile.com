@@ -14,7 +14,8 @@
 &lt;label for=&quot;basic&quot;&gt;Text Input:&lt;/label&gt;
 &lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;basic&quot; value=&quot;&quot;  /&gt;
 </code></pre>
-		<p>This will produce a basic text input. The default styles set the width of the input to 100% of the parent container and stack the label on a separate line.</p>
+		<p>This will produce a basic text input. The default styles set the width of the input to 100% of the parent container and stack the label on a separate line.
+		<iframe src="/resources/textinput/example1.html" style="width:100%;height:90px;border:0px"></iframe></p>
         
 		<h3>Mini version</h3>
         
@@ -25,7 +26,8 @@
 &lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;basic&quot; value=&quot;&quot; <strong>data-mini=&quot;true&quot;</strong> /&gt;
 </code></pre>
 
-		<p>This will produce an input that is not as tall as the standard version and has a smaller text size.</p>
+		<p>This will produce an input that is not as tall as the standard version and has a smaller text size.
+		<iframe src="/resources/textinput/example2.html" style="width:100%;height:90px;border:0px"></iframe></p>
         
 		<h3>Field containers</h3>
         
@@ -37,12 +39,14 @@
 &lt;/div&gt;	
 </code></pre>	
 
-		<p>The text input is now displayed like this:</p>
+		<p>The text input is now displayed like this:
+		<iframe src="/resources/textinput/example3.html" style="width:100%;height:90px;border:0px"></iframe></p>
         
         <h3>More text input types</h3>
 		<p>In jQuery Mobile, you can use existing and new HTML5 input types such as <code>password</code>, <code>email</code>, <code>tel</code>, <code>number</code>, and more.  Some type values are rendered differently across browsers. For example, Chrome renders the <code>range</code> input as a slider. jQuery Mobile standardizes the appearance of <code>range</code> and <code>search</code> by dynamically changing their type to <code>text</code>. You can configure which input types are degraded to <code>text</code> with the <code>page</code> plugin's options.</p>
 			
-		<p>One major advantage of using these more specific input types if that on mobile devices, specialized keyboards that speed data entry are offered in place of the standard text keyboard. Try the following inputs on a mobile device to see which display custom keyboards on various platforms.</p>
+		<p>One major advantage of using these more specific input types if that on mobile devices, specialized keyboards that speed data entry are offered in place of the standard text keyboard. Try the following inputs on a mobile device to see which display custom keyboards on various platforms.
+		<iframe src="/resources/textinput/example4.html" style="width:100%;height:710px;border:0px"></iframe></p>
 		
         <h3>Textareas</h3>
         
@@ -56,7 +60,8 @@ I&#x27;m a basic textarea. If this is pre-populated with content, the height wil
 &lt;/textarea&gt;
 </code></pre>	
 
-		<p>This will produce a basic textarea with the width set to 100% of the parent container and the label stacked on a separate line. The textarea will grow to fit new lines as you type:</p>
+		<p>This will produce a basic textarea with the width set to 100% of the parent container and the label stacked on a separate line. The textarea will grow to fit new lines as you type:
+		<iframe src="/resources/textinput/example5.html" style="width:100%;height:190px;border:0px"></iframe></p>
        
 <pre><code>	
 &lt;div data-role=&quot;fieldcontain&quot;&gt;
@@ -65,7 +70,8 @@ I&#x27;m a basic textarea. If this is pre-populated with content, the height wil
 &lt;/div&gt;
 </code></pre>	
 	            
-		<p>The textarea is displayed like this and will grow to fit new lines as you type:</p>
+		<p>The textarea is displayed like this and will grow to fit new lines as you type:
+		<iframe src="/resources/textinput/example6.html" style="width:100%;height:190px;border:0px"></iframe></p>
         
         <h3>Calling the textinput plugin</h3>
 
