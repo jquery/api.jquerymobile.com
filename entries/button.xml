@@ -159,6 +159,76 @@ $('[type="submit"]').button();
 		
 		<p><strong>Swatch "c"</strong> themed buttons
 		<iframe src="/resources/button/example19.html" style="width:100%;height:190px;border:0px"></iframe></p>	
+		
+		<h2>Inline buttons</h2>
+		
+		<p>By default, all buttons in the body content are styled as block-level elements so they fill the width of the screen:
+		<iframe src="/resources/button/example20.html" style="width:100%;height:90px;border:0px"></iframe></p>
+		
+		<p>However, if you want a more compact button that is only as wide as the text and icons inside, add the <code> data-inline="true"</code> attribute to the button:
+		<iframe src="/resources/button/example21.html" style="width:100%;height:90px;border:0px"></iframe></p>
+		
+		<p>If you have multiple buttons that should sit side-by-side on the same line, add the <code> data-inline="true"</code> attribute to each button. This will style the buttons to be the width of their content and float the buttons so they sit on the same line. </p>
+			
+<pre><code>
+&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot; data-inline=&quot;true&quot;&gt;Cancel&lt;/a&gt;
+&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot; data-inline=&quot;true&quot; data-theme=&quot;b&quot;&gt;Save&lt;/a&gt;
+</code></pre>
+
+		<p>The result is this:
+		<iframe src="/resources/button/example22.html" style="width:100%;height:90px;border:0px"></iframe></p>
+			
+		<p>Adding the <code>data-mini="true"</code> to the inline buttons creates a more compact version:
+		<iframe src="/resources/button/example23.html" style="width:100%;height:90px;border:0px"></iframe></p>
+		
+		<p>If you want buttons to sit side-by-side but stretch to fill the width of the screen, you can use the content column grids to put normal full-width buttons into 2- or 3-columns.</p>	
+
+		<h3>Icon example</h3>
+		
+		<p>When an <a href="buttons-icons.html">icon</a> is added to an inline button, the button will grow wider to accommodate the icon:
+		<iframe src="/resources/button/example24.html" style="width:100%;height:90px;border:0px"></iframe></p>
+			
+		<p>A mini version of the same:
+		<iframe src="/resources/button/example25.html" style="width:100%;height:90px;border:0px"></iframe></p>
+
+		<h2>Grouped buttons</h2>
+		
+		<p>Occasionally, you may want to visually group a set of buttons to form a single block that looks contained like a navigation component. To get this effect, wrap a set of buttons in a container with the <code> data-role="controlgroup"</code> attribute - the framework will create a vertical button group, remove all margins and drop shadows between the buttons, and only round the first and last buttons of the set to create the effect that they are grouped together. </p>
+		
+<pre><code>
+&lt;div data-role=&quot;controlgroup&quot;&gt;
+&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot;&gt;Yes&lt;/a&gt;
+&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot;&gt;No&lt;/a&gt;
+&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot;&gt;Maybe&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+		<p>By default, grouped buttons are presented as a vertical list:
+		<iframe src="/resources/button/example26.html" style="width:100%;height:190px;border:0px"></iframe></p>
+		
+		<p>By adding the <code>data-type="horizontal"</code> attribute to the <code>controlgroup</code> container, you can swap to a horizontal-style group that floats the buttons side-by-side and sets the width to only be large enough to fit the content. (Be aware that these will wrap to multiple lines if the number of buttons or the overall text length is too wide for the screen.)</p>
+		
+		<p>Horizontal grouped buttons:
+		<iframe src="/resources/button/example27.html" style="width:100%;height:90px;border:0px"></iframe></p>
+		
+		<p>Horizontal grouped buttons with icons:
+		<iframe src="/resources/button/example28.html" style="width:100%;height:90px;border:0px"></iframe></p>
+		
+		<p>Mini horizontal grouped buttons by adding <code>data-mini="true"</code> to the controlgroup:
+		<iframe src="/resources/button/example29.html" style="width:100%;height:90px;border:0px"></iframe></p>
+			
+		
+		<p>Mini horizontal grouped buttons with icons:
+		<iframe src="/resources/button/example30.html" style="width:100%;height:90px;border:0px"></iframe></p>
+		
+		
+		<p>Horizontal grouped buttons, icon only:
+		<iframe src="/resources/button/example31.html" style="width:100%;height:90px;border:0px"></iframe></p>
+		
+		
+		<p>Mini horizontal grouped buttons, icon only:
+		<iframe src="/resources/button/example32.html" style="width:100%;height:90px;border:0px"></iframe></p>
+		
 	</longdesc>
 	<added>1.0</added>
 	<options>
