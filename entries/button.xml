@@ -399,11 +399,10 @@ $('[type="submit"]').button('refresh');
 		</method>
 	</methods>
 	<example>
-		<desc>A basic example of a search input field</desc>
+		<desc>A basic example of a button</desc>
 		<code><![CDATA[]]></code>
 		<html><![CDATA[	
-    	<label for="basic">Text Input:</label>
-        <input type="text" name="name" id="basic" value=""  /> ]]></html>
+    	<a href="index.html" data-role="button">A link button</a> ]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>
