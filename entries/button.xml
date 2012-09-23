@@ -315,9 +315,9 @@ $('.selector').textinput({ theme: "a" });
 	</options>
 	<events>
 		<event name="create">
-			<desc>triggered when a text input is created</desc>
+			<desc>triggered when a form button is created</desc>
 <pre><code>
-$( ".selector" ).textinput({
+$('[type="submit"]').button({
 	create: function(event, ui) { ... }
 });
 </code></pre>
@@ -325,16 +325,24 @@ $( ".selector" ).textinput({
 	</events>
 	<methods>
 		<method name="enable">
-			<desc>enable a disabled text input.
+			<desc>enable a disabled form button.
 <pre><code>
-$('.selector').textinput('enable');
+$('[type="submit"]').button('enable');
 </code></pre>
 			</desc>
 		</method>
 		<method name="disable">
-			<desc>disable a text input.
+			<desc>disable a form button.
 <pre><code>
-$('.selector').textinput('disable');
+$('[type="submit"]').button('disable');
+</code></pre>
+			</desc>
+		</method>
+		<method name="refresh">
+			<desc>update the form button.
+			<p>If you manipulate a form button via JavaScript, you must call the refresh method on it to update the visual styling.</p>
+<pre><code>
+$('[type="submit"]').button('refresh');
 </code></pre>
 			</desc>
 		</method>
