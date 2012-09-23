@@ -229,6 +229,39 @@ $('[type="submit"]').button();
 		<p>Mini horizontal grouped buttons, icon only:
 		<iframe src="/resources/button/example32.html" style="width:100%;height:90px;border:0px"></iframe></p>
 		
+		<h2>Theming buttons</h2>
+			
+		<p>jQuery Mobile has a rich theming system that gives you full control of how buttons are styled. When a link is added to a container, it is automatically assigned a theme swatch letter that matches its parent bar or content box to visually integrate the button into the parent container, like a chameleon. So a button placed inside a content container with a theme of "a" (black in the default theme) will be automatically assigned the button theme of "a" (charcoal in the default theme). Here are examples of the button theme pairings in the default theme. All buttons have the same HTML markup: 
+		<iframe src="/resources/button/example33.html" style="width:100%;height:640px;border:0px"></iframe></p>
+
+		<h2>Assigning theme swatches</h2>
+		<p>Buttons can be manually assigned any of the button color swatches from the theme to add visual contrast with the container they sit inside by adding the <code> data-theme</code> attribute on the button markup and specifying a swatch letter. </p>
+
+<pre><code>			
+&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot; data-theme=&quot;a&quot;&gt;Swatch a&lt;/a&gt;			
+</code></pre>
+				
+		<p>Here are 5 buttons with icons that have a different swatch letter assigned via the <code>data-theme</code> attribute.
+		<iframe src="/resources/button/example34.html" style="width:100%;height:90px;border:0px"></iframe></p>
+		
+		<h2>Theme variations</h2>
+		
+		<p><strong>Swatch "a"</strong> on container with themed buttons inside
+		<iframe src="/resources/button/example35.html" style="width:100%;height:90px;border:0px"></iframe></p>
+		
+		<p><strong>Swatch "b"</strong> on container with themed buttons inside
+		<iframe src="/resources/button/example36.html" style="width:100%;height:90px;border:0px"></iframe></p>
+		
+		<p><strong>Swatch "c"</strong> on container with themed buttons inside
+		<iframe src="/resources/button/example37.html" style="width:100%;height:90px;border:0px"></iframe></p>
+		
+		<p><strong>Swatch "d"</strong> on container with themed buttons inside
+		<iframe src="/resources/button/example38.html" style="width:100%;height:90px;border:0px"></iframe></p>
+		
+		<p><strong>Swatch "e"</strong> on container with themed buttons inside
+		<iframe src="/resources/button/example39.html" style="width:100%;height:90px;border:0px"></iframe></p>
+		
+		
 	</longdesc>
 	<added>1.0</added>
 	<options>
