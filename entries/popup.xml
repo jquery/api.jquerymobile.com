@@ -399,28 +399,104 @@ $( document ).on( "pageinit", function() {
 	</longdesc>
 	<added>1.2</added>
 	<options>
-		<option name="closeBtnText" default='"Close"'>
+		<option name="corners" default="true">
 			<desc>
-				<p>Customizes the text of the close button which is helpful for translating this into different languages. This is displayed as an icon-only button by default so the text isn't visible on-screen, but is read by screen readers so this is an important accessibility feature.</p>
-				<p>This option is also exposed as a data attribute: <code>data-close-btn-text</code>.</p>
-			</desc>
-			<type name="String" />
-		</option>
-		<option name="initSelector"  default='":jqmData(role=&#39;dialog&#39;)"'>
-			<desc>
-				This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as dialogs. To change which elements are initialized, bind this option to the mobileinit event:
+				<p>Sets whether to draw the popup with rounded corners.</p>
 <pre><code>
-$( document ).bind( "mobileinit", function() {
-	$.mobile.dialog.prototype.options.initSelector = ".mydialog";
+$('a').buttonMarkup({ corners: false });
+</code></pre>
+				<p>This option is also exposed as a data attribute: <code>data-corners="false"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
+		<option name="history" default="true">
+			<desc>
+				<p>Sets whether to alter the url when a popup is open to support the back button.</p>
+<pre><code>
+$( ".selector" ).popup({ history: false });
+</code></pre>
+				<p>This option is also exposed as a data attribute: <code>data-history="false"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
+		<option name="initSelector"  default='":jqmData(role=&#39;popup&#39;)"'>
+			<desc>
+				<p>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as popups. To change which elements are initialized, bind this option to the mobileinit event:</p>
+<pre><code>
+$( document ).bind( "mobileinit", function(){
+	$.mobile.popup.prototype.options.initSelector = ".mypopup";
 });</code></pre>
 			</desc>
 			<type name="CSS selector string" />
 		</option>
-		<option name="overlayTheme" default='"a"'>
+		<option name="overlayTheme" default="null">
 			<desc>
-				<p>Dialogs appear to be floating above an overlay layer. This overlay adopts the swatch A content color by default, but the data-overlay-theme attribute can be added to the page wrapper to set the overlay to any swatch letter.</p>
-				<p> Possible values: swatch letter (a-z)</p>
-				<p>This option is also exposed as a data attribute: <code>data-overlay-theme</code>.</p>
+				<p>Sets the color scheme (swatch) for the popup background, which covers the entire window. If not explicitly set, the background will be transparent.
+				</p>
+<pre><code>
+$( ".selector" ).popup({ overlayTheme: "a" });
+</code></pre>
+				<p>This option is also exposed as a data attribute: <code>data-history="false"</code>.</p></code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<option name="positionTo" default='"origin"'>
+			<desc>
+				<p>Sets the element relative to which the popup will be centered. It has the following values:
+				<table>
+						<tr><td class="enum-value"><code>"origin"</code></td><td>
+							When the popup opens, center over the coordinates passed to the <code>open()</code> call (see <a href="methods.html">methods</a> page).
+						</td></tr>
+						<tr><td class="enum-value"><code>"window"</code></td><td>
+							When the popup opens, center in the window.
+						</td></tr>
+						<tr><td class="enum-value">jQuery selector</td><td>
+							When the popup opens, create a jQuery object based on the selector, and center over it. The selector is filtered for elements that are visible with <code>":visible"</code>. If the result is empty, the popup will be centered in the window.
+						</td></tr>
+					</table>
+				</p>
+				<p>This option is also exposed as a data attribute: <code>data-position-to="window"</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<option name="shadow" default="true">
+			<desc>
+				<p>Sets whether to draw a shadow around the popup.</p>
+<pre><code>
+$( ".selector" ).popup({ shadow: false });
+</code></pre>
+				<p>This option is also exposed as a data attribute: <code>data-shadow="false"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
+		<option name="theme" default="null, inherited from parent">
+			<desc><p>Sets the color scheme (swatch) for the popup contents. Unless explicitly set to 'none', the theme for the popup will be assigned the first time the popup is shown by inheriting the page theme or, failing that, by the hard-coded value 'c'. If you set it to 'none', the popup will not have any theme at all, and will be transparent. </p>
+<pre><code>
+$( ".selector" ).popup({ theme: "a" });
+</code></pre>
+				<p>Possible values: swatch letter (a-z).</p>
+				<p>This option is also exposed as a data attribute: <code>data-theme="a"</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<option name="tolerance" default='"30,15,30,15"'>
+			<desc>
+				<p>Sets the minimum distance from the edge of the window for the corresponding edge of the popup. By default, the values above will be used for the distance from the top, right, bottom, and left edge of the window, respectively.</p>
+				<p>You can specify a value for this option in one of four ways:
+					<ol>
+						<li>Empty string, null, or some other falsey value. This will cause the popup to revert to the above default values.</li>
+						<li>A single number. This number will be used for all four edge tolerances.</li>
+						<li>Two numbers separated by a comma. The first number will be used for tolerances from the top and bottom edge of the window, and the second number will be used for tolerances from the left and right edge of the window.</li>
+						<li>Four comma-separated numbers. The first will be used for tolerance from the top edge, the second for tolerance from the right edge, the third for tolerance from the bottom edge, and the fourth for tolerance from the left edge.</li>
+					</ol>
+				</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<option name="transition" default="none">
+			<desc>
+				<p>Sets the default transition for the popup. The default value will result in no transition.</p>
+				<p>If the popup is opened from a link, and the link has the data-transition attribute set, the value specified therein will override the value of this option at the time the popup is opened from the link.</p>
 			</desc>
 			<type name="String" />
 		</option>
