@@ -501,31 +501,79 @@ $( ".selector" ).popup({ theme: "a" });
 		</option>
 	</options>
 	<events>
-		<event name="create">
-			<desc>Triggered when a dialog is created</desc>
+		<event name="popupbeforeposition">
+			<desc><p>Triggered after a popup has completed preparations for opening, but has not yet opened</p>
+<pre><code>
+$( ".selector" ).bind({
+	popupbeforeposition: function(event, ui) { ... }
+});
+</code></pre>
+				<p>This event is triggered when the popup has completed preparations for appearing on the screen. At this point the popup has not started the animations and it has not yet calculated the coordinates where it will appear on the screen. Handling this event gives an opportunity to modify the content of the popup before it appears on the screen. For example, the content can be scaled or parts of it can be hidden or removed if it is too wide or too tall.</p>
+			</desc>
+		</event>
+		<event name="popupafteropen">
+			<desc><p>Triggered after a popup has completely opened</p>
+<pre><code>
+$( ".selector" ).bind({
+	popupafteropen: function(event, ui) { ... }
+});
+</code></pre>
+				<p>This event is triggered when the popup has completely appeared on the screen, meaning that all associated animations have completed.</p>
+			</desc>
+		</event>
+		<event name="popupafterclose">
+			<desc><p>Triggered when a popup has completely closed</p>
+<pre><code>
+$( ".selector" ).bind({
+	popupafterclose: function(event, ui) { ... }
+});
+</code></pre>
+				<p>This event is triggered when the popup has completely disappeared from the screen, meaning that all associated animations have completed.</p>
+			</desc>
 		</event>
 	</events>
 	<methods>
+		<method name="open( options )">
+			<desc>display the popup using the specified options.
+<pre><code>
+$( ".selector" ).popup( "open", options );
+</code></pre>
+				<p><code>options</code> is an object literal which may have any of the following properties:</p>
+				<table>
+					<tr><td class="enum-value"><code>x</code></td><td>
+						The x-coordinate where the popup is to be displayed.
+					</td></tr>
+					<tr><td class="enum-value"><code>y</code></td><td>
+						The y-coordinate where the popup is to be displayed.
+					</td></tr>
+					<tr><td class="enum-value"><code>transition</code></td><td>
+						The transition to use during the opening sequence.
+					</td></tr>
+					<tr><td class="enum-value"><code>positionTo</code></td><td>
+						The positioning to use.
+					</td></tr>
+				</table>
+				<p>If <code>x</code> or <code>y</code> is missing, and no jQuery selector is given as the value of <code>positionTo</code>, the middle of the window will be used.</p>
+				<p><code>transition</code> can be used to override the popup's own <code>transition</code> option. This will result in the popup opening via the transition specified in the call, but the popup's <code>transition</code> option will not be updated.</p>
+				<p>Similarly, <code>data-position-to</code> can be used to override the popup's default positioning without modifying the value of the popup's <code>positionTo</code> option. The values available for <code>positionTo</code> are the same as those for the popup's <code>positionTo</code> option (see <a href="options.html">options</a> page).</p>
+			</desc>
+		</method>
 		<method name="close">
-			<desc>Closes the dialog.</desc>
+			<desc>Closes the popup.
+<pre><code>
+$( ".selector" ).popup( "close" );
+</code></pre>		
+			</desc>
 		</method>
 	</methods>
 	<example>
-		<desc>A basic example of opening a page as a dialog by adding <code>data-rel="dialog"</code> to the anchor tag.</desc>
+		<desc>A basic example of a Popup.</desc>
 		<html><![CDATA[
-		<a href="#dialogPage" data-rel="dialog">Open dialog</a>
-	</div>
-	<div data-role="footer">
-		<h2></h2>
-	</div>
-</div>
+		<a href="#popupBasic" data-rel="popup">Open Popup</a>
 
-<div data-role="page" id="dialogPage">
-	<div data-role="header">
-		<h2>Dialog</h2>
-	</div>
-	<div data-role="content">
-		<p>I am a dialog</p>]]></html>
+		<div data-role="popup" id="popupBasic">
+			<p>This is a completely basic popup, no options set.<p>
+		</div>]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>
