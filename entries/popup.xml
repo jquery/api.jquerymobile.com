@@ -538,8 +538,11 @@ $( ".selector" ).bind({
 <pre><code>
 $( ".selector" ).popup( "open", options );
 </code></pre>
+
+				<p>If <code>x</code> or <code>y</code> is missing, and no jQuery selector is given as the value of <code>positionTo</code>, the middle of the window will be used.</p>
+				<p><code>transition</code> can be used to override the popup's own <code>transition</code> option. This will result in the popup opening via the transition specified in the call, but the popup's <code>transition</code> option will not be updated.</p>
+				<p>Similarly, <code>data-position-to</code> can be used to override the popup's default positioning without modifying the value of the popup's <code>positionTo</code> option. The values available for <code>positionTo</code> are the same as those for the popup's <code>positionTo</code> option (see <a href="options.html">options</a> page).</p>						  
 			</desc>
-			<signature>
 				<argument name="options" type="Object">
 					<property name="x" default=''>
 						<desc>The x-coordinate where the popup is to be displayed.</desc>
@@ -557,13 +560,7 @@ $( ".selector" ).popup( "open", options );
 						<desc>The positioning to use.</desc>
 						<type name="String"/>
 					</property>
-					<desc>
-					<p>If <code>x</code> or <code>y</code> is missing, and no jQuery selector is given as the value of <code>positionTo</code>, the middle of the window will be used.</p>
-					<p><code>transition</code> can be used to override the popup's own <code>transition</code> option. This will result in the popup opening via the transition specified in the call, but the popup's <code>transition</code> option will not be updated.</p>
-					<p>Similarly, <code>data-position-to</code> can be used to override the popup's default positioning without modifying the value of the popup's <code>positionTo</code> option. The values available for <code>positionTo</code> are the same as those for the popup's <code>positionTo</code> option (see <a href="options.html">options</a> page).</p>			
-					</desc>  
 				</argument>
-			</signature>
 		</method>
 		<method name="close">
 			<desc>Closes the popup.
