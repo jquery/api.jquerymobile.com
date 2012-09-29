@@ -75,7 +75,7 @@ $("#mylistview").listview({
 			<h3>Search filter</h3>
 			<p>jQuery Mobile provides a very easy way to filter a list with a simple client-side search feature. To make a list filterable, simply add the <code>data-filter="true"</code> attribute to the list. The framework will then append a search box above the list and add the behavior to filter out list items that don't contain the current search string as the user types. The input's placeholder text defaults to "Filter items...". To configure the placeholder text in the search input, you can either <a href="../api/globalconfig.html">bind to the <code>mobileinit</code> event</a> and set the <code>$.mobile.listview.prototype.options.filterPlaceholder</code> option to a string of your choosing, or use the data attribute <code>data-filter-placeholder</code> on your listview. By default the search box will inherit its theme from its parent. The search box theme can be configured using the data attribute <code>data-filter-theme</code> on your listview.</p>
 
-			<a href="lists-search.html" data-role="button" data-icon="arrow-r" data-iconpos="right">Search filter example</a>
+			<p><iframe src="/resources/listview/example8.html" style="width:100%;height:1010px;border:0px"></iframe></p>
 
       <p>If you want to change the way in which list items are filtered, i.e. fuzzy search or matching from the beginning of the string, you can configure the callback used internally by defining <code>$.mobile.listview.prototype.options.filterCallback</code> during <code>mobileinit</code> or after the widget has been created with <code>$("#mylist").listview('option', 'filterCallback', yourFilterFunction)</code>. Any function defined for the callback will be provided three arguments. First, the text of the current list item, second the value being searched for, and third the list item being filtered. A truthy value will result in a hidden list item. The default callback which filters entries without the <code>searchValue</code> as a substring is described below:
       </p>
@@ -86,7 +86,15 @@ $("#mylistview").listview({
 
 			<p>To filter list items by values other than the text, add a <code>data-filtertext</code> attribute to the list item.  The value of this attribute will be passed as the first argument to the <code>filterCallback</code> function instead of the text. Alternately you can use an attribute of your choosing as defined on the list item itself.</p>
 
-			<a href="lists-search-filtertext.html" data-role="button" data-icon="arrow-r" data-iconpos="right">Hidden data filter example</a>
+			<p>By default, the listview filter simply searches against the content in each list item. If you want the filter to search against different content, add the <code>data-filtertext</code>	attribute to the item and populate it with one or many keywords and phrases that should be used to match against. Note that if this attribute is added, the contents of the list item are ignored.</p>
+			<p>This attribute is useful for dealing with allowing for ticker symbols and full company names to be searched, or for covering common spellings and abbreviations for countries.</p>
+			
+<pre><code>		
+&lt;li <strong>data-filtertext=&quot;NASDAQ:AAPL Apple Inc.</strong>&quot;&gt;&lt;a href=&quot;#&quot;&gt;Apple&lt;/a&gt;&lt;/li&gt;
+&lt;li <strong>data-filtertext=&quot;USA U.S.A. United States of America&quot;</strong>&gt;&lt;a href=&quot;#&quot;&gt;United States&lt;/a&gt;&lt;/li&gt;
+</code></pre>	
+
+			<p><iframe src="/resources/listview/example9.html" style="width:100%;height:410px;border:0px"></iframe></p>
 
 			<h3>Text formatting &amp; counts</h3>
 			<p>The framework includes text formatting conventions for common list patterns like header/descriptions, secondary information and counts through semantic HTML markup.</p>
