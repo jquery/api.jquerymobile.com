@@ -77,12 +77,14 @@ $("#mylistview").listview({
 
 			<p><iframe src="/resources/listview/example8.html" style="width:100%;height:1010px;border:0px"></iframe></p>
 
-      <p>If you want to change the way in which list items are filtered, i.e. fuzzy search or matching from the beginning of the string, you can configure the callback used internally by defining <code>$.mobile.listview.prototype.options.filterCallback</code> during <code>mobileinit</code> or after the widget has been created with <code>$("#mylist").listview('option', 'filterCallback', yourFilterFunction)</code>. Any function defined for the callback will be provided three arguments. First, the text of the current list item, second the value being searched for, and third the list item being filtered. A truthy value will result in a hidden list item. The default callback which filters entries without the <code>searchValue</code> as a substring is described below:
-      </p>
+      		<p>If you want to change the way in which list items are filtered, i.e. fuzzy search or matching from the beginning of the string, you can configure the callback used internally by defining <code>$.mobile.listview.prototype.options.filterCallback</code> during <code>mobileinit</code> or after the widget has been created with <code>$("#mylist").listview('option', 'filterCallback', yourFilterFunction)</code>. Any function defined for the callback will be provided three arguments. First, the text of the current list item, second the value being searched for, and third the list item being filtered. A truthy value will result in a hidden list item. The default callback which filters entries without the <code>searchValue</code> as a substring is described below:
+      		</p>
 
-<pre><code>function( text, searchValue, item ){
+<pre><code>
+function( text, searchValue, item ){
   return text.toString().toLowerCase().indexOf( searchValue ) === -1;
-};</code></pre>
+};
+</code></pre>
 
 			<p>To filter list items by values other than the text, add a <code>data-filtertext</code> attribute to the list item.  The value of this attribute will be passed as the first argument to the <code>filterCallback</code> function instead of the text. Alternately you can use an attribute of your choosing as defined on the list item itself.</p>
 
@@ -90,8 +92,8 @@ $("#mylistview").listview({
 			<p>This attribute is useful for dealing with allowing for ticker symbols and full company names to be searched, or for covering common spellings and abbreviations for countries.</p>
 			
 <pre><code>		
-&lt;li <strong>data-filtertext=&quot;NASDAQ:AAPL Apple Inc.</strong>&quot;&gt;&lt;a href=&quot;#&quot;&gt;Apple&lt;/a&gt;&lt;/li&gt;
-&lt;li <strong>data-filtertext=&quot;USA U.S.A. United States of America&quot;</strong>&gt;&lt;a href=&quot;#&quot;&gt;United States&lt;/a&gt;&lt;/li&gt;
+&lt;li data-filtertext=&quot;NASDAQ:AAPL Apple Inc.&quot;&gt;&lt;a href=&quot;#&quot;&gt;Apple&lt;/a&gt;&lt;/li&gt;
+&lt;li data-filtertext=&quot;USA U.S.A. United States of America&quot;&gt;&lt;a href=&quot;#&quot;&gt;United States&lt;/a&gt;&lt;/li&gt;
 </code></pre>	
 
 			<p><iframe src="/resources/listview/example9.html" style="width:100%;height:410px;border:0px"></iframe></p>
@@ -104,13 +106,15 @@ $("#mylistview").listview({
 				<li>To add text hierarchy, use headings to increase font emphasis and use paragraphs to reduce emphasis. </li>
 				<li>Supplemental information can be added to the right of each list item by wrapping content in an element with a class of <code>ui-li-aside</code></li>
 			</ul>
-			<a href="lists-count.html" data-role="button" data-icon="arrow-r" data-iconpos="right">List with count bubbles</a>
-			<a href="lists-formatting.html" data-role="button" data-icon="arrow-r" data-iconpos="right">List with text formatting</a>
-
+			
+			<p><iframe src="/resources/listview/example10.html" style="width:100%;height:240px;border:0px"></iframe></p>
+			<p><iframe src="/resources/listview/example11.html" style="width:100%;height:940px;border:0px"></iframe></p>
+			
 			<h3>Thumbnails &amp; icons</h3>
 			<p>To add thumbnails to the left of a list item, simply add an image inside a list item as the first child element. The framework will scale the image to 80 pixels square. To use standard 16x16 pixel icons in list items, add the class of <code>ui-li-icon</code> to the image element.</p>
-			<a href="lists-thumbnails.html" data-role="button" data-icon="arrow-r" data-iconpos="right">List with thumbnail images</a>
-		 	<a href="lists-icons.html" data-role="button" data-icon="arrow-r" data-iconpos="right">List with icon images</a>
+			
+			<p><iframe src="/resources/listview/example12.html" style="width:100%;height:940px;border:0px"></iframe></p>
+			<p><iframe src="/resources/listview/example13.html" style="width:100%;height:290px;border:0px"></iframe></p>			
 
 			<h3>Inset lists</h3>
 			<p>If lists are embedded in a page with other types of content, an inset list packages the list into a block that sits inside the content area with a bit of margin and rounded corners (theme controlled). By adding the <code> data-inset="true"</code> attribute to the list (ul or ol), applies the inset appearance.</p>
@@ -118,12 +122,17 @@ $("#mylistview").listview({
 			<a href="lists-inset.html" data-role="button" data-icon="arrow-r" data-iconpos="right">Inset list example</a>
 
 			<h3>Calling the listview plugin</h3>
+			
 			<p>You can directly call the listview plugin on any selector, just like any jQuery plugin:</p>
-			<code>$('#mylist').listview();</code>
+<pre><code>
+$('#mylist').listview();
+</code></pre>
 
 			<h3>Updating lists</h3>
 			<p>If you add items to a listview, you'll need to call the <code>refresh()</code> method on it to update the styles and create any nested lists that are added. For example:</p>
-			<code>$('#mylist').listview('refresh');</code>
+<pre><code>
+$('#mylist').listview('refresh');
+</code></pre>
 
 			<p>Note that the <code>refresh()</code> method only affects <strong>new nodes</strong> appended to a list. This is done for performance reasons. Any list items already enhanced will be ignored by the refresh process. This means that if you change the contents or attributes on an already enhanced list item, these won't be reflected. If you want a list item to be updated, replace it with fresh markup before calling refresh.</p>
 			

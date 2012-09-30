@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Page Title</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0-rc.2/jquery.mobile-1.2.0-rc.2.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0-rc.2/jquery.mobile-1.2.0-rc.2.min.js"></script>
+	<style>
+	html, body { padding: 0; margin: 0; }
+	html, .ui-mobile, .ui-mobile body {
+    	height: 285px;
+	}
+	.ui-mobile, .ui-mobile .ui-page {
+    	min-height: 285px;
+	}
+	.ui-content{
+		padding:10px 15px 0px 15px;
+	}
+	.ui-content .ui-listview {
+    margin: -15px -15px 0px -15px;
+}
+	
+	</style>
+</head> 
+
+<body> 
+<div data-role="page" style="max-height:290px; min-height:290px;">
+	<div data-role="content" > 
+		<ul data-role="listview">
+			<li><a href="index.html"><img src="images/gf.png" alt="France" class="ui-li-icon">France <span class="ui-li-count">4</span></a></li>
+			<li><a href="index.html"><img src="images/de.png" alt="Germany" class="ui-li-icon">Germany <span class="ui-li-count">4</span></a></li>
+			<li><a href="index.html"><img src="images/gb.png" alt="Great Britain" class="ui-li-icon">Great Britain <span class="ui-li-count">0</span></a></li>
+			<li><a href="index.html"><img src="images/fi.png" alt="Finland" class="ui-li-icon">Finland <span class="ui-li-count">12</span></a></li>		
+			<li><a href="index.html"><img src="images/sj.png" alt="Norway" class="ui-li-icon">Norway <span class="ui-li-count">328</span></a></li>
+			<li><a href="index.html"><img src="images/us.png" alt="United States" class="ui-li-icon">United States <span class="ui-li-count">62</span></a></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>
+
