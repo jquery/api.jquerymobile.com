@@ -119,7 +119,7 @@ function( text, searchValue, item ){
 			<h3>Inset lists</h3>
 			<p>If lists are embedded in a page with other types of content, an inset list packages the list into a block that sits inside the content area with a bit of margin and rounded corners (theme controlled). By adding the <code> data-inset="true"</code> attribute to the list (ul or ol), applies the inset appearance.</p>
 
-			<a href="lists-inset.html" data-role="button" data-icon="arrow-r" data-iconpos="right">Inset list example</a>
+			<p><iframe src="/resources/listview/example14.html" style="width:100%;height:2240px;border:0px"></iframe></p>			
 
 			<h3>Calling the listview plugin</h3>
 			
