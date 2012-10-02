@@ -271,34 +271,28 @@ $( document ).bind( "mobileinit", function(){
 	</options>
 	<events>
 		<event name="create">
-			<desc>triggered when a checkbox is created</desc>
+			<desc>triggered when a listview is created</desc>
 <pre><code>
-$("input[type='checkbox']").checkboxradio({
+$( ".selector" ).listview({
 	create: function(event, ui) { ... }
 });
 </code></pre>
 		</event>
 	</events>
 	<methods>
-		<method name="enable">
-			<desc>enable a disabled checkbox.
+		<method name="childPages">
+			<desc>retrieve the sub-pages.
+			<p>This method returns a jQuery object containing all the immediate child pages of a nested list.</p>
 <pre><code>
-$("input[type='checkbox']").checkboxradio('enable');
-</code></pre>
-			</desc>
-		</method>
-		<method name="disable">
-			<desc>disable a checkbox.
-<pre><code>
-$("input[type='checkbox']").checkboxradio('disable');
+$('.selector').listview('childPages');
 </code></pre>
 			</desc>
 		</method>
 		<method name="refresh">
-			<desc>update the checkbox.
-				<p>If you manipulate a checkbox via JavaScript, you must call the refresh method on it to update the visual styling. </p>
+			<desc>update the listview.
+				<p>If you manipulate a listview via JavaScript (e.g. add new LI elements), you must call the refresh method on it to update the visual styling.</p>
 <pre><code>
-$("input[type='checkbox']:first").attr("checked",true).checkboxradio("refresh");
+$('.selector').listview('refresh');
 </code></pre>
 			</desc>
 		</method>
