@@ -409,6 +409,17 @@ $('a').buttonMarkup({ corners: false });
 			</desc>
 			<type name="Boolean" />
 		</option>
+		<option name="dismissable" default="true">
+			<desc>
+				<p>Sets whether clicking outside the popup or pressing Escape while the popup is open will close the popup.</p>
+				<p>Note: When history support is turned on, pressing the browser's "Back" button will dismiss the popup even if this option is set to false.</p>
+<pre><code>
+$( ".selector" ).popup({ dismissable: false });
+</code></pre>
+				<p>This option is also exposed as a data attribute: <code>data-dismissable="false"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
 		<option name="history" default="true">
 			<desc>
 				<p>Sets whether to alter the url when a popup is open to support the back button.</p>
