@@ -213,6 +213,17 @@ $( document ).bind( "mobileinit", function(){
 			</desc>
 			<type name="String" />
 		</option>
+		<option name="icon" default='"arrow-r"'>
+			<desc>Applies an icon from the icon set to all linked list buttons. 
+<pre><code>
+$( document ).bind( "mobileinit", function(){
+	$.mobile.listview.prototype.options.icon = "star";
+});
+</code></pre>
+				<p>This option is also exposed as a data attribute: <code>data-icon="star"</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
 		<option name="initSelector" default=":jqmData(role='listview')">
 			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as listviews. 
 <pre><code>
