@@ -7,7 +7,7 @@
 		<p>To create a popup, add the <code>data-role="popup"</code> attribute to a div with the popup contents. Then create a link with the <code>href</code> set to the <code>id</code> of the popup div, and add the attribute <code>data-rel="popup"</code> to tell the framework to open the popup when the link is tapped. This is a similar markup pattern to the <a href="../dialog/">dialog</a> widget. A popup div has to be nested inside the same page as the link.</p>
 
 <pre><code>
-&lt;a href=&quot;#popupBasic&quot; <strong>data-rel=&quot;popup&quot;</strong>&gt;Open Popup&lt;/a&gt;
+&lt;a href=&quot;#popupBasic&quot; data-rel=&quot;popup&quot;&gt;Open Popup&lt;/a&gt;
 
 &lt;div data-role=&quot;popup&quot; id=&quot;popupBasic&quot;&gt;
 	&lt;p&gt;This is a completely basic popup, no options set.&lt;p&gt;
@@ -296,18 +296,19 @@ $( "#myPopupDiv" ).popup( "open" )
 </code></pre>
 
 		<h3>Closing popups</h3>
-		<p>Popups can be closed either by clicking outside the popup widget or by pressing the <code>Esc</code> key. Popups can also be closed via the <code>close</code> method:</p>
+		<p>By default popups can be closed either by clicking outside the popup widget or by pressing the <code>Esc</code> key. To prevent this, the <code>data-dismissable="false"</code> attribute can be added to the popup. Popups can also be closed via the <code>close</code> method:</p>
 			
 <pre><code>
 $( "#myPopupDiv" ).popup( "close" )
 </code></pre>
+
 			
 		<p>To add an explicit close button to a popup, add a link with the role of button into the popup container with a <code>data-rel="back"</code> attribute which will close the popup when tapped. We have created helper classes to position buttons in the upper left (<code>ui-btn-left</code>) or upper right (<code>ui-btn-right</code>) of the popup but you may need to tweak these or add custom positioning styles depending on your design. We recommend adding standard content padding to the popup to make room for the buttons (see next section).</p>
 		
 		
 <pre><code>
 &lt;div data-role=&quot;popup&quot;&gt;
-	<strong>&lt;a href=&quot;#&quot; data-rel=&quot;back&quot; data-role=&quot;button&quot; data-theme=&quot;a&quot; data-icon=&quot;delete&quot; data-iconpos=&quot;notext&quot; class=&quot;ui-btn-right&quot;&gt;Close&lt;/a&gt;</strong>
+	&lt;a href=&quot;#&quot; data-rel=&quot;back&quot; data-role=&quot;button&quot; data-theme=&quot;a&quot; data-icon=&quot;delete&quot; data-iconpos=&quot;notext&quot; class=&quot;ui-btn-right&quot;&gt;Close&lt;/a&gt;
 	...popup contents go here...
 &lt;/div&gt;
 </code></pre>
@@ -321,7 +322,7 @@ $( "#myPopupDiv" ).popup( "close" )
 		<pre><code>
 &lt;a href=&quot;#popupPadded&quot; data-rel=&quot;popup&quot; data-role=&quot;button&quot;&gt;Popup with padding&lt;/a&gt;
 
-&lt;div data-role=&quot;popup&quot; id=&quot;popupPadded&quot; <strong>class=&quot;ui-content&quot;</strong>&gt;
+&lt;div data-role=&quot;popup&quot; id=&quot;popupPadded&quot; class=&quot;ui-content&quot;&gt;
 	&lt;p&gt;This is a popup with the &lt;code&gt;ui-content&lt;/code&gt; class added to the popup container.&lt;/p&gt;
 &lt;/div&gt;
 		</code></pre>
@@ -357,7 +358,7 @@ $( "#myPopupDiv" ).popup( "close" )
 		<p>By default, popups have no transition to make them open as quickly as possible. To set the transition used for a popup, add the <code>data-transition</code> attribute to the link that references the popup. The reverse version of the transition will be used when closing the popup.</p>
 				
 <pre><code>
-&lt;a href=&quot;#transitionExample&quot; <strong>data-transition=&quot;flip&quot;</strong> data-rel=&quot;popup&quot;&gt;
+&lt;a href=&quot;#transitionExample&quot; data-transition=&quot;flip&quot; data-rel=&quot;popup&quot;&gt;
    Flip transition
 &lt;/a&gt;
 </code></pre>
@@ -375,7 +376,7 @@ $( "#myPopupDiv" ).popup( "close" )
 		<p>The <code>data-overlay-theme</code> will never be set, and the popup's background, although always present when the popup is shown, will be completely transparent, unless explicitly set using for example <code>data-overlay-theme=&quot;a&quot;</code>. In this case, the background will fade in, partially obscuring the rest of the window, to further direct attention to the popup. Here is an example of an explicitly themed popup:</p>
 
 <pre><code>
-&lt;div id=&quot;both&quot; data-role=&quot;popup&quot; <strong>data-theme=&quot;e&quot; data-overlay-theme=&quot;a&quot;</strong> class=&quot;ui-content&quot;&gt;
+&lt;div id=&quot;both&quot; data-role=&quot;popup&quot; data-theme=&quot;e&quot; data-overlay-theme=&quot;a&quot; class=&quot;ui-content&quot;&gt;
   ...Popup contents...
 &lt;/div&gt;
 </code></pre>
@@ -412,7 +413,7 @@ $('a').buttonMarkup({ corners: false });
 		<option name="dismissable" default="true">
 			<desc>
 				<p>Sets whether clicking outside the popup or pressing Escape while the popup is open will close the popup.</p>
-				<p>Note: When history support is turned on, pressing the browser's "Back" button will dismiss the popup even if this option is set to false.</p>
+				<p><em>Note:</em> When history support is turned on, pressing the browser's "Back" button will dismiss the popup even if this option is set to false.</p>
 <pre><code>
 $( ".selector" ).popup({ dismissable: false });
 </code></pre>
