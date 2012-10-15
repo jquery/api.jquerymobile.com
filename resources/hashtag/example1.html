@@ -8,6 +8,13 @@
     <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
 	<style>
+        html, body { padding: 0; margin: 0; }
+        html, .ui-mobile, .ui-mobile body {
+            height: 85px;
+        }
+        .ui-mobile, .ui-mobile .ui-page {
+            min-height: 85px;
+        }
         #nav {
           font-size: 200%;
           width:17.1875em;
@@ -40,10 +47,10 @@
 </head>
 <body>
     <p id="nav">
-        <a href="#test1">test 1</a>
-        <a href="#test2">test 2</a>
-        <a href="#test3">test 3</a>
-        <a href="#test4">test 4</a>
+        <a href="/resources/hashtag/example1.html#test1">test 1</a>
+        <a href="/resources/hashtag/example1.html#test2">test 2</a>
+        <a href="/resources/hashtag/example1.html#test3">test 3</a>
+        <a href="/resources/hashtag/example1.html#test4">test 4</a>
     </p>
     <script>
         $(function(){
