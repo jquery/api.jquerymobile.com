@@ -15,7 +15,7 @@
             </pre>  
 
         <h2>Default header features</h2>
-        <p>The <code>header</code> toolbar is themed with the "a" swatch by default (black in the default theme) but you can easily <a href="bars-themes.html">set the theme swatch color</a>.</p> 
+        <p>The <code>header</code> toolbar is themed with the "a" swatch by default (black in the default theme) but you can easily set the theme swatch color.</p> 
         <iframe src="/resources/header/example1.html" style="width:100%;height:90px;border:0px"></iframe>
 
         <h2>Adding buttons</h2>
