@@ -74,9 +74,10 @@
                 console.log( window.parent );
                 console.log( window.parent.document );
                 console.log( window.parent.document.getElementById('hashtagIframe') );
-                console.log( window.parent.document.getElementById('hashtagIframe').href );
+                console.log( window.parent.document.getElementById('hashtagIframe').src );
 
-                window.parent.document.getElementById('hashtagIframe').href = '/resources/hashtag/example1.html' + $(this).href;
+                window.parent.document.getElementById('hashtagIframe').src = "/resources/hashtag/example1.html" + $(this).href;
+                //window.parent.document.getElementById('hashtagIframe').href = '/resources/hashtag/example1.html' + $(this).href;
                 //window.parent.document.getElementById('hashtagIframe').location.href='/resources/hashtag/example1.html' + $(this).href;
             });
         }); 
