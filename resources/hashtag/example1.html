@@ -71,7 +71,7 @@
 
             // To change src attribute of parent iframe element
             $('.hashExLink').on('click', function() { 
-                window.top.document.getElementById('hashtagIframe').location.href='/resources/hashtag/example1.html' + $(this).href;
+                window.parent.document.getElementById('hashtagIframe').location.href='/resources/hashtag/example1.html' + $(this).href;
             });
         }); 
     </script>
