@@ -119,7 +119,6 @@
                     &lt;div data-role=&quot;navbar&quot; <strong>data-iconpos=&quot;bottom&quot;</strong>&gt;
                 </code></pre>
 				<iframe src="/resources/navbar/example10.html" style="width:100%;height:90px;border:0px"></iframe>
-				</p>
 			</desc>
             <type name="String" />
 		</option>
