@@ -20,7 +20,6 @@
           width:17.1875em;
           margin:0 auto;
         }
-
         #nav a {
           color: #777;
           border: 2px solid #777;
@@ -30,13 +29,11 @@
           float: left;
           margin-right: 0.3em;
         }
-
         #nav a:hover {
           color: #999;
           border-color: #999;
           background: #eee; 
         }
-
         #nav a.selected,
         #nav a.selected:hover {
           color: #0a0;
@@ -73,8 +70,8 @@
             $(window).hashchange();
 
             // To change src attribute of parent iframe element
-            $(.hashExLink).on('click', function() { 
-                Top.document.getElementById('hashtagIframe').location.href='/resources/hashtag/example1.html' + $(this).href;
+            $('.hashExLink').on('click', function() { 
+                window.top.document.getElementById('hashtagIframe').location.href='/resources/hashtag/example1.html' + $(this).href;
             });
         }); 
     </script>
