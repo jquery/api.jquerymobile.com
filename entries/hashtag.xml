@@ -14,7 +14,7 @@
 		</argument>
 	</signature>
 	<example>
-		<desc>Click, and watch as the magic happens!</desc>
+		<desc>A simple jQuery Mobile hashchange example.</desc>
 		<code><![CDATA[
 			$(function(){
 				// Bind an event to window.onhashchange that, when the hash changes, gets the
@@ -36,43 +36,9 @@
 				$(window).hashchange();
 			}); 
 		]]></code>
-		<html><![CDATA[
-			<style>
-				#nav {
-				  font-size: 200%;
-				}
-
-				#nav a {
-				  color: #777;
-				  border: 2px solid #777;
-				  background-color: #ccc;
-				  padding: 0.2em 0.6em;
-				  text-decoration: none;
-				  float: left;
-				  margin-right: 0.3em;
-				}
-
-				#nav a:hover {
-				  color: #999;
-				  border-color: #999;
-				  background: #eee; 
-				}
-
-				#nav a.selected,
-				#nav a.selected:hover {
-				  color: #0a0;
-				  border-color: #0a0;
-				  background: #afa; 
-				}		
-			</style>
-
-			<p id="nav">
-				<a href="#test1">test 1</a>
-				<a href="#test2">test 2</a>
-				<a href="#test3">test 3</a>
-				<a href="#test4">test 4</a>
-			</p>
-    	]]></html>
+		<p>Click, and watch as the magic happens!
+			<iframe src="/resources/hashtag/example1.html" style="width:100%;height:90px;border:0px"></iframe>
+		</p>
 	</example>
 	<category slug="events"/>
 </entry>
