@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
+<entry name="grid-layout" namespace="fn" type="misc" widgetnamespace="mobile">
+	<title>Grid Layout</title>
+    <desc>Multi-column layout grids</desc>
+		<longdesc>
+			<p>Using multiple column layouts isn't generally recommended on a mobile device because of the narrow screen width, but there are times where you may need to place small elements side-by-side (like buttons or navigation tabs, for example).</p>
+			<p>The jQuery Mobile framework provides a simple way to build CSS-based columns through a  block style class convention called <code>ui-grid</code>. </p>
+			<p>There are four preset layouts that can be used in any situation that requires columns:</p>
+			<ul>
+				<li><strong>two</strong>-column (using the <code>ui-grid-a</code> class)</li>
+				<li><strong>three</strong>-column (using the <code>ui-grid-b</code> class)</li>
+				<li><strong>four</strong>-column (using the <code>ui-grid-c</code> class)</li>
+				<li><strong>five</strong>-column (using the <code>ui-grid-d</code> class)</li>
+			</ul>
+			<p>Grids are 100% width, completely invisible (no borders or backgrounds) and don't have padding or margins, so they shouldn't interfere with the styles of elements placed inside them. </p>
+			<p>Within the grid container, child elements are assigned <code>ui-block-a/b/c/d/e</code> in a sequential manner which makes each "block" element float side-by-side, forming the grid. The <code>ui-block-a</code> class essentially clears the floats which will start a new line (see multiple row grids, below).</p>
+			<h2>Two column grids</h2>
+			<p>To build a two-column (50/50%) layout, start with a container with a <code>class</code> of <code>ui-grid-a</code>, and add two child containers inside it classed with <code>ui-block-a</code> for the first column and <code>ui-block-b</code> for the second:</p>
+			<pre><code>
+&lt;div class="ui-grid-a"&gt;
+	&lt;div class="ui-block-a"&gt;&lt;strong&gt;I'm Block A&lt;/strong&gt; and text inside will wrap&lt;/div&gt;
+	&lt;div class="ui-block-b"&gt;&lt;strong&gt;I'm Block B&lt;/strong&gt; and text inside will wrap&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /grid-a --&gt;
+</code></pre>
+<p>The above markup produces the following content layout:</p>
+<div class="ui-grid-a">
+			<div class="ui-block-a"><strong>I'm Block A</strong> and text inside will wrap.</div>
+			<div class="ui-block-b"><strong>I'm Block B</strong> and text inside will wrap.</div>
+		</div>
+		<p>As you see above, by default grid blocks have no visual styling; they simply present content side-by-side.</p>
+		<p>Grid classes can be applied to any container. In this next example, we add <code>ui-grid-a</code> to a <code>fieldset</code>, and apply the <code>ui-block</code> classes to the container of each of the two buttons inside to stretch them each to 50% of the screen width:</p>
+		<pre><code>
+&lt;fieldset class="ui-grid-a"&gt;
+	&lt;div class="ui-block-a"&gt;&lt;button type="submit" data-theme="c"&gt;Cancel&lt;/button&gt;&lt;/div&gt;
+	&lt;div class="ui-block-b"&gt;&lt;button type="submit" data-theme="b"&gt;Submit&lt;/button&gt;&lt;/div&gt;	   
+&lt;/fieldset&gt;
+</code></pre>
+<iframe src="/resources/grid-layout/example1.html" style="width:100%;height:90px;border:0"></iframe>
+<p>Please note that the framework adds left and right margin to buttons in a grid. For a single button you can use a container with class <code>ui-grid-solo</code> and wrap the button in a div with class <code>ui-block-a</code> like the example below. This way the button will get the same margin.</p>
+<pre><code>
+&lt;div class="ui-grid-a"&gt;
+	&lt;div class="ui-block-a"&gt;&lt;button type="button" data-theme="c"&gt;Previous&lt;/button&gt;&lt;/div&gt;
+	&lt;div class="ui-block-b"&gt;&lt;button type="button" data-theme="c"&gt;Next&lt;/button&gt;&lt;/div&gt;	   
+&lt;/div&gt;
+&lt;div class="ui-grid-solo"&gt;
+	&lt;div class="ui-block-a"&gt;&lt;button type="v" data-theme="b"&gt;More&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<iframe src="/resources/grid-layout/example2.html" style="width:100%;height:90px;border:0"></iframe>
+<p>Theme classes (not data-theme attributes) from the <a href="../api/themes.html" class="ui-link">theming system</a> can be added to an element, including grids. On the blocks below, we're adding two classes: <code>ui-bar</code> to add the default bar padding and <code>ui-bar-e</code> to apply the background gradient and font styling for the "e" toolbar theme swatch. For illustration purposes, an inline <code>style="height:120px"</code> attribute is also added to each grid to set each to a standard height. </p>
+<iframe src="/resources/grid-layout/example3.html" style="width:100%;height:90px;border:0"></iframe>
+<h2>Three-column grids</h2>
+<p>The other grid layout configuration uses <code>class=ui-grid-b</code> on the parent, and 3 child container elements, each with its respective <code>ui-block-a/b/c</code> class, to create a three-column layout (33/33/33%). Note: These blocks are also styled with theme classes so the grid layout is clearly visible.</p>
+<pre><code>
+&lt;div class="ui-grid-b"&gt;
+	&lt;div class="ui-block-a"&gt;Block A&lt;/div&gt;
+	&lt;div class="ui-block-b"&gt;Block B&lt;/div&gt;
+	&lt;div class="ui-block-c"&gt;Block C&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /grid-b --&gt;
+</code></pre>
+<p>This will produce a 33/33/33% grid for our content.</p>
+<iframe src="/resources/grid-layout/example4.html" style="width:100%;height:90px;border:0"></iframe>
+<p>And an example of a 3 column grid with buttons inside:</p>
+<iframe src="/resources/grid-layout/example5.html" style="width:100%;height:90px;border:0"></iframe>
+<h2>Four-column grids</h2>
+<p>A four-column, 25/25/25/25% grid is created by specifying <code>class=ui-grid-c</code> on the parent and adding a fourth block. Note: These blocks are also styled with theme classes so the grid layout is clearly visible.</p>
+<iframe src="/resources/grid-layout/example6.html" style="width:100%;height:90px;border:0"></iframe>
+<h2>Five-column grids</h2>
+<p>A five-column, 20/20/20/20/20% grid is created by specifying <code>class=ui-grid-d</code> on the parent and adding a fifth block. Note: These blocks are also styled with theme classes so the grid layout is clearly visible.</p>
+<iframe src="/resources/grid-layout/example7.html" style="width:100%;height:90px;border:0"></iframe>
+<h2>Multiple row grids</h2>
+<p>Grids are designed to wrap to multiple rows of items. For example, if you specify a 3-column grid (ui-grid-b) on a container that has nine child blocks, it will wrap to 3 rows of 3 items each. There is a CSS rule to clear the floats and start a new line when the <code>class=ui-block-a</code> is seen so make sure to assign block classes in a repeating sequence (a, b, c, a, b, c, etc.) that maps to the grid type:</p>
+<iframe src="/resources/grid-layout/example8.html" style="width:100%;height:90px;border:0"></iframe>
+<h2>Grids in toolbars</h2>
+<p>Grids are helpful for creating layouts within a toolbar. Here's a footer with a 4 column grid.</p>
+<iframe src="/resources/grid-layout/example9.html" style="width:100%;height:90px;border:0"></iframe>
+		</longdesc>
+	<added>1.0</added>
+	<options>
+	</options>
+	<events>
+	</events>
+	<methods>
+	</methods>
+	<example>
+		<desc>A basic example of grid layout</desc>
+		<code><![CDATA[]]></code>
+		<html><![CDATA[<fieldset class="ui-grid-a">
+		<div class="ui-block-a"><div data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="null" data-iconpos="null" data-theme="c" class="ui-btn ui-shadow ui-btn-corner-all ui-submit ui-btn-up-c" aria-disabled="false"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Cancel</span></span><button type="submit" data-theme="c" class="ui-btn-hidden" aria-disabled="false">Cancel</button></div></div>
+		<div class="ui-block-b"><div data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="null" data-iconpos="null" data-theme="b" class="ui-btn ui-btn-up-b ui-shadow ui-btn-corner-all ui-submit" aria-disabled="false"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Submit</span></span><button type="submit" data-theme="b" class="ui-btn-hidden" aria-disabled="false">Submit</button></div></div>	   
+	</fieldset>]]></html>
+	</example>
+	<category slug="misc"/>
+</entry>
