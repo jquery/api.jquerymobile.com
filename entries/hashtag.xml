@@ -36,13 +36,13 @@
 				$(window).hashchange();
 			}); 
 		]]></code>
-		<pre>
-			<code>
-				<p>Click, and watch as the magic happens!
-					<iframe src="/resources/hashtag/example1.html" style="width:100%;height:90px;border:0px"></iframe>
-				</p>
-			</code>
-		</pre>
 	</example>
+	<pre>
+		<code>
+			<p>Click, and watch as the magic happens!
+				<iframe src="/resources/hashtag/example1.html" style="width:100%;height:90px;border:0px"></iframe>
+			</p>
+		</code>
+	</pre>
 	<category slug="events"/>
 </entry>
