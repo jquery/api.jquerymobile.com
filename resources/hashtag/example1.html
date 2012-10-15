@@ -71,7 +71,12 @@
 
             // To change src attribute of parent iframe element
             $('.hashExLink').on('click', function() { 
-                window.parent.document.getElementById('hashtagIframe').location.href = '/resources/hashtag/example1.html' + $(this).href;
+                console.log( window.parent );
+                console.log( window.parent.document );
+                console.log( window.parent.document.getElementById('hashtagIframe') );
+                console.log( window.parent.document.getElementById('hashtagIframe').href );
+
+                window.parent.document.getElementById('hashtagIframe').href = '/resources/hashtag/example1.html' + $(this).href;
                 //window.parent.document.getElementById('hashtagIframe').location.href='/resources/hashtag/example1.html' + $(this).href;
             });
         }); 
