@@ -4,7 +4,6 @@
 	<title>Header Widget</title>
     <desc>The Header bar serves as the page title, is usually the first element inside each mobile page, and typically contains a page title and up to two buttons.</desc>
     <longdesc>
-        
         <h2>Header structure</h2>
         <p>The <code>header</code> is a toolbar at the top of the page that usually contains the page title text and optional buttons positioned to the left and/or right of the title for navigation or actions. Headers can optionally be positioned as <a href="bars-fixed.html">fixed</a> so they remain at the top of the screen at all times instead of scrolling with the page.</p> 
         <p>The title text is normally an H1 heading element but it's possible to use any heading level (H1-H6) to allow for semantic flexibility. For example, a page containing multiple mobile "pages" may use a H1 element on the home "page" and a H2 element on the secondary pages. All heading levels are styled identically by default to maintain visual consistency.</p> 
@@ -63,7 +62,6 @@
         <h3>Adding buttons to toolbars without heading</h3>
         <p>The heading in the header bar has some margin that will give the bar its height. If you choose not to use a heading, you will need to add an element with <code>class="ui-title"</code> so that the bar can get the height and display correctly.</p> 
 
-
             <pre><code>
                 &lt;div data-role=&quot;header&quot;&gt;
                 &lt;a href=&quot;index.html&quot; data-icon=&quot;gear&quot; class=&quot;ui-btn-right&quot;&gt;Options&lt;/a&gt;
@@ -87,7 +85,6 @@
 
         <h2>Custom header configurations</h2>
         <p>If you need to create a header that doesn't follow the default configuration, simply wrap your custom styled markup in any container, such as <code>div</code>. The plugin won't apply the automatic button logic to the wrapped content inside the header container so you can write custom styles for laying out the content in your header.</p> 
-
         <p>It's also possible to create custom bars without using the header data-role at all. For example, start with any container and add the <code>ui-bar</code> class to apply standard bar padding and add the <code>ui-bar-b</code> class to assign the bar swatch styles from your theme. (The "b" can be any swatch letter.)</p>
 
         <pre><code>
@@ -99,7 +96,6 @@
         <iframe src="/resources/header/example6.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
         <p>Note that <code>.ui-bar</code> should not be added to header or footer bars that span the full width of the page, as the additional padding will cause a full-width element to break out of its parent container. To add padding inside of a full-width toolbar, wrap the toolbar's contents in an element and apply the padding to that element instead.</p>
-
         <p>By writing some simple styles, it's easy to build message bars like this:</p>
         <!-- Yes, the inline styles aren't recommended in a real system but they are used to simply illustrate how to tweak CSS -->
         <iframe src="/resources/header/example7.html" style="width:100%;height:90px;border:0px"></iframe></p>
