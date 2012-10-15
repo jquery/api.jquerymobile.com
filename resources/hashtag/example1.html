@@ -47,10 +47,10 @@
 </head>
 <body>
     <p id="nav">
-        <a href="/resources/hashtag/example1.html#test1">test 1</a>
-        <a href="/resources/hashtag/example1.html#test2">test 2</a>
-        <a href="/resources/hashtag/example1.html#test3">test 3</a>
-        <a href="/resources/hashtag/example1.html#test4">test 4</a>
+        <a href="#test1" class="hashExLink">test 1</a>
+        <a href="#test2" class="hashExLink">test 2</a>
+        <a href="#test3" class="hashExLink">test 3</a>
+        <a href="#test4" class="hashExLink">test 4</a>
     </p>
     <script>
         $(function(){
@@ -71,6 +71,11 @@
             // Since the event is only triggered when the hash changes, we need to trigger
             // the event now, to handle the hash the page may have loaded with.
             $(window).hashchange();
+
+            // To change src attribute of parent iframe element
+            $(.hashExLink).on('click', function() { 
+                Top.document.getElementById('hashtagIframe').location.href='/resources/hashtag/example1.html' + $(this).href;
+            });
         }); 
     </script>
 </body>
