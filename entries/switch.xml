@@ -195,7 +195,7 @@ $('.selector').slider({ trackTheme: "a" });
 		</option>
 	</options>
 	<events>
-		<event name="create">
+		<event name="create" type="slidecreate">
 			<desc>triggered when a slider is created</desc>
 <pre><code>
 $( ".selector" ).slider({

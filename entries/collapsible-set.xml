@@ -147,7 +147,7 @@ $( document ).bind( "mobileinit", function(){
 		</option>
 	</options>
 	<events>
-		<event name="create">
+		<event name="create" type="collapsiblesetcreate">
 			<desc>Triggered when a collapsible set is created</desc>
 <pre><code>
 $( ".selector" ).collapsibleset({

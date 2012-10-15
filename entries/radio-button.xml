@@ -113,7 +113,7 @@ $("input[type='radio']").checkboxradio({ theme: "a" });
 		</option>
 	</options>
 	<events>
-		<event name="create">
+		<event name="create" type="checkboxradiocreate">
 			<desc>triggered when a radio button is created</desc>
 <pre><code>
 $("input[type='radio']").checkboxradio({
