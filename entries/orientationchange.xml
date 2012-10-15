@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<entry name="orientationchange" type="event" return="jQuery">
+	<title>orientationchange</title>
+	<desc>Enables bookmarkable #hash history.</desc>
+	<longdesc>
+		<p>The jQuery Mobile <code>orientationchange</code> event triggers when a device orientation changes, either by turning the device vertically or horizontally. When bound to this event the callback function has the event object. The event object contains an <code>orientation</code> property equal to either "portrait" or "landscape".</p>
+		<p>Note, we bind to the browser's resize event when <code>orientationchange</code> is not natively supported or if <code>$.mobile.orientationChangeEnabled</code> is set to false.</p>
+		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<pre>
+		<code><![CDATA[
+			$(function(){
+				// Bind an event to window.orientationchange that, when the device is turned, gets the
+				// orientation and displays it to on screen.
+				$(window).bind('orientationchange', orientationChangeHandler);
+
+				function orientationChangeHandler(event){
+					$('h1#orientation').html('This device is in ' + event.orientation + ' mode!');
+				}
+				// You can also manually force this event to fire.
+				$(window).orientationchange();
+			}); 
+		]]></code>
+	</pre>
+	<p>Visit this from your orientation-enabled device to see it in action!</p>
+		<iframe id="orientationIframe" src="/resources/orientationchange/example1.html" style="width:100%;height:90px;border:0px"></iframe>
+	</p>
+	</longdesc>
+	<added>1.0</added>
+	<signature>
+		<argument name="callback" type="Function" optional="true">
+			<desc>A function to invoke after the the orientationchange event fires.</desc>
+		</argument>
+	</signature>
+	<category slug="events"/>
+</entry>
