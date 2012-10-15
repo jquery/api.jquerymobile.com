@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 <entry name="hashtag" type="event" return="jQuery">
-	<title>.hashchange()</title>
-	<desc>Enables bookmarkable #hash history.</desc>
+	<title>.vmouseover()</title>
+	<desc>Virtualized mouseover event handler.</desc>
 	<longdesc>
-		<p>The jQuery Mobile <code>.hashchange()</code> event handler enables very basic bookmarkable #hash history by providing a callback function bound to the window.onhashchange event. The onhashchange event fires when a window's hash changes.</p>
-		<p>In browsers that support it, the native HTML5 window.onhashchange event is used. In IE6/7 (and IE8 operating in "IE7 compatibility" mode), a hidden Iframe is created to allow the back button and hash-based history to work.</p>
+		<p>The jQuery Mobile <code>.vmouseover()</code> event handler simulates the "onmouseover" event handler on mobile devices.</p>
 		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</longdesc>
 	<added>1.0</added>
 	<signature>
 		<argument name="callback" type="Function" optional="true">
-			<desc>A function to invoke after the onhashchange event is fired.</desc>
+			<desc>A function to invoke after the vmouseover event is fired.</desc>
 		</argument>
 	</signature>
-	<pre>
+	<example>
+		<desc>A simple jQuery Mobile hashchange example.</desc>
 		<code><![CDATA[
 			$(function(){
 				// Bind an event to window.onhashchange that, when the hash changes, gets the
@@ -34,9 +34,14 @@
 				// the event now, to handle the hash the page may have loaded with.
 				$(window).hashchange();
 			}); 
-		]]></code></pre>
-		<p>Click, and watch as the magic happens!
-			<iframe src="/resources/hashtag/example1.html" style="width:100%;height:90px;border:0px"></iframe>
-		</p>
+		]]></code>
+	</example>
+	<pre>
+		<code>
+			<p>Click, and watch as the magic happens!
+				<iframe src="/resources/hashtag/example1.html" style="width:100%;height:90px;border:0px"></iframe>
+			</p>
+		</code>
+	</pre>
 	<category slug="events"/>
 </entry>
