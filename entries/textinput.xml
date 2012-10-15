@@ -139,7 +139,7 @@ $('.selector').textinput({ theme: "a" });
 		</option>
 	</options>
 	<events>
-		<event name="create">
+		<event name="create" type="textinputcreate">
 			<desc>triggered when a text input is created</desc>
 <pre><code>
 $( ".selector" ).textinput({
