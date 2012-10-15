@@ -99,7 +99,7 @@ $( document ).bind( "mobileinit", function() {
 		</option>
 	</options>
 	<events>
-		<event name="create">
+		<event name="create" type="dialogcreate">
 			<desc>Triggered when a dialog is created</desc>
 		</event>
 	</events>
