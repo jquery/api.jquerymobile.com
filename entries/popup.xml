@@ -513,7 +513,7 @@ $( ".selector" ).popup({ theme: "a" });
 		</option>
 	</options>
 	<events>
-		<event name="popupbeforeposition">
+		<event name="popupbeforeposition" type="popupbeforeposition">
 			<desc><p>Triggered after a popup has completed preparations for opening, but has not yet opened</p>
 <pre><code>
 $( ".selector" ).bind({
@@ -523,7 +523,7 @@ $( ".selector" ).bind({
 				<p>This event is triggered when the popup has completed preparations for appearing on the screen. At this point the popup has not started the animations and it has not yet calculated the coordinates where it will appear on the screen. Handling this event gives an opportunity to modify the content of the popup before it appears on the screen. For example, the content can be scaled or parts of it can be hidden or removed if it is too wide or too tall.</p>
 			</desc>
 		</event>
-		<event name="popupafteropen">
+		<event name="popupafteropen" type="popupafteropen">
 			<desc><p>Triggered after a popup has completely opened</p>
 <pre><code>
 $( ".selector" ).bind({
@@ -533,7 +533,7 @@ $( ".selector" ).bind({
 				<p>This event is triggered when the popup has completely appeared on the screen, meaning that all associated animations have completed.</p>
 			</desc>
 		</event>
-		<event name="popupafterclose">
+		<event name="popupafterclose" type="popupafterclose">
 			<desc><p>Triggered when a popup has completely closed</p>
 <pre><code>
 $( ".selector" ).bind({

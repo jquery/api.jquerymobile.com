@@ -365,7 +365,7 @@ $('select').selectmenu({ theme: "a" });
 		</option>
 	</options>
     <events>
- 		<event name="create">
+ 		<event name="create" type="selectcreate">
 			<desc>triggered when a text input is created</desc>
 <pre><code>
 $( ".selector" ).selectmenu({

@@ -365,7 +365,7 @@ $('a').buttonMarkup({ theme: "a" });
 		</option>
 	</options>
 	<events>
-		<event name="create">
+		<event name="create" type="buttoncreate">
 			<desc>triggered when a form button is created</desc>
 <pre><code>
 $('[type="submit"]').button({
