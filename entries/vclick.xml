@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<entry name="vclick" type="event" return="jQuery">
+	<title>vclick</title>
+	<desc>Virtualized click event handler.</desc>
+	<longdesc>
+		<p>The jQuery Mobile <code>"vclick"</code> event handler simulates the "onclick" event handler on mobile devices.</p>
+        <p>The idea behind virtualized mouse events is to translate touch events into mouse events. Developers should be aware that these virtualized mouse events will not prevent any synthetic mouse events from being triggered inside the browser after a touch event. If a mouse-type device is used on the system, the virtualized mouse events are dispatched at the same time as the normal mouse events.</p>
+		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<pre><code><![CDATA[
+			$(document).on("vclick", "p", function(){
+		      $(this).append('<span style="color:#00F;">vmouseup fired.</span>');
+		    });
+		]]></code></pre>
+		<p>
+			<iframe src="/resources/vclick/example1.html" style="width:100%;height:90px;border:0px"></iframe>
+		</p>
+	</longdesc>
+	<added>1.0</added>
+	<methods>
+		<method name="preventDefault" optional="true">
+			<desc>
+				A function to invoke in the event binding to prevent the synthetic click event by the browser.
+			</desc>
+		</method>
+	</methods>
+	<category slug="events"/>
+</entry>

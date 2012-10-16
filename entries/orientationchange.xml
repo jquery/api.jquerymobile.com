@@ -21,7 +21,7 @@
 			}); 
 		]]></code>
 	</pre>
-	<p>Visit this from your orientation-enabled device to see it in action!</p>
+	<p>Visit this from your orientation-enabled device to see it in action!
 		<iframe id="orientationIframe" src="/resources/orientationchange/example1.html" style="width:100%;height:90px;border:0px"></iframe>
 	</p>
 	</longdesc>
