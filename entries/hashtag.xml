@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="hashtag" type="event" return="jQuery">
+<entry name="hashchange" type="event" return="jQuery">
 	<title>.hashchange()</title>
 	<desc>Enables bookmarkable #hash history.</desc>
 	<longdesc>
@@ -30,7 +30,7 @@
 		]]></code>
 	</pre>
 	<p>iFrame source: <span id="hashtagIframeLink">example1.html</span>
-		<iframe id="hashtagIframe" src="/resources/hashtag/example1.html" style="width:100%;height:90px;border:0px"></iframe>
+		<iframe id="hashtagIframe" src="/resources/hashchange/example1.html" style="width:100%;height:90px;border:0px"></iframe>
 	</p>
 	</longdesc>
 	<added>1.0</added>

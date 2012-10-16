@@ -10,6 +10,9 @@
 		      $(this).append('<span style="color:#00F;">vmouseover fired.</span>');
 		    });
 		]]></code></pre>
+		<p>
+			<iframe src="/resources/vmouseover/example1.html" style="width:100%;height:90px;border:0px"></iframe>
+		</p>
 	</longdesc>
 	<added>1.0</added>
 	<signature>
@@ -17,12 +20,5 @@
 			<desc>A function to invoke after the vmouseover event is fired.</desc>
 		</argument>
 	</signature>
-	<pre>
-		<code>
-			<p>
-				<iframe src="/resources/vmouseover/example1.html" style="width:100%;height:90px;border:0px"></iframe>
-			</p>
-		</code>
-	</pre>
 	<category slug="events"/>
 </entry>
