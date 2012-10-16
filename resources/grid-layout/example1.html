@@ -24,10 +24,12 @@
 
 <body> 
 <div data-role="page" style="max-height:90px; min-height:90px;">
-	<fieldset class="ui-grid-a">
-		<div class="ui-block-a"><div data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="null" data-iconpos="null" data-theme="c" class="ui-btn ui-shadow ui-btn-corner-all ui-submit ui-btn-up-c" aria-disabled="false"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Cancel</span></span><button type="submit" data-theme="c" class="ui-btn-hidden" aria-disabled="false">Cancel</button></div></div>
-		<div class="ui-block-b"><div data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="null" data-iconpos="null" data-theme="b" class="ui-btn ui-btn-up-b ui-shadow ui-btn-corner-all ui-submit" aria-disabled="false"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Submit</span></span><button type="submit" data-theme="b" class="ui-btn-hidden" aria-disabled="false">Submit</button></div></div>	   
-	</fieldset>
+	<div data-role="content" > 
+		<div class="ui-grid-a">
+			<div class="ui-block-a"><strong>I'm Block A</strong> and text inside will wrap.</div>
+			<div class="ui-block-b"><strong>I'm Block B</strong> and text inside will wrap.</div>
+		</div><!-- /grid-a -->
+	</div>
 </div>
 </body>
 </html>
