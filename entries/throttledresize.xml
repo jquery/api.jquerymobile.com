@@ -16,18 +16,18 @@
 		<code><![CDATA[
 			var count = 0;
 		    $(function(){
-		    	/**
-		    	 * Bind an event handler to window's throttledresize event that, when triggered, 
-		    	 * passes a reference of itself that is accessible by the callback function.
-		    	 */ 
-		        $(window).bind('throttledresize', throttledresizeHandler);
+		    	/*
+		    	  Bind an event handler to window's throttledresize event that, when triggered, 
+		    	  passes a reference of itself that is accessible by the callback function.
+		    	*/ 
+		        $(window).bind( 'throttledresize', throttledresizeHandler );
 
-		        function throttledresizeHandler(event){
-		          $('#output-text').html('Event Count: ' + ++count);
+		        function throttledresizeHandler( event ){
+		          $('#output-text').html( 'Event Count: ' + ++count );
 		        }
 
 		        // You can also manually force this event to fire.
-		        $(window).trigger('throttledresize');
+		        $(window).trigger( 'throttledresize' );
 			}); 
 		]]></code>
 	</pre>

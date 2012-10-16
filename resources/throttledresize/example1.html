@@ -47,13 +47,13 @@
     <script>
     var count = 0;
     $(function(){
-        $(window).bind('throttledresize', throttledresizeHandler);
+        $(window).bind( 'throttledresize', throttledresizeHandler );
 
         function throttledresizeHandler(event){
-          $('#output-text').html('Event Count: ' + ++count);
+          $('#output-text').html( 'Event Count: ' + ++count );
         }
 
-        $(window).trigger('throttledresize');
+        $(window).trigger( 'throttledresize' );
     });
     </script>
 </body>

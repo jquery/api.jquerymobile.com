@@ -46,10 +46,10 @@
     <h1 id="orientation">orientationchange Not Supported on this Device.</h1>
     <script>
     $(function(){
-        $(window).bind('orientationchange', orientationChangeHandler);
+        $(window).bind( 'orientationchange', orientationChangeHandler );
 
         function orientationChangeHandler(event){
-          $('h1#orientation').html('This device is in ' + event.orientation + ' mode!');
+          $('h1#orientation').html( 'This device is in ' + event.orientation + ' mode!' );
         }
 
         $(window).orientationchange();
