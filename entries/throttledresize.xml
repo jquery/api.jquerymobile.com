@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<entry name="throttledresize" type="event" return="jQuery">
+	<title>throttledresize</title>
+	<desc>Enables bookmarkable #hash history.</desc>
+	<longdesc>
+		<p>The jQuery Mobile <code>throttleresize</code> event is a special event that prevents browsers from running continuous callbacks on resize. <code>throttleresize</code> is used internally for orientationchange in browsers like Internet Explorer. <code>throttleresize</code> ensures that a held event will execute after the timeout so logic that depends on the final conditions after a resize is complete will still execute properly.</p>
+		<p>The <code>throttleresize</code> event is triggered if orientationchange is not natively supported.</p>
+		<p>This event triggers when the browser window resizes from:</p>
+			<ol>
+				<li>an orientation change (orientation-enabled device);</li> 
+				<li>changes in dimension ratio that replicates a landspace/portrait change (resizing a desktop browser).<li>
+			</ol>
+
+		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<pre>
+		<code><![CDATA[
+			var count = 0;
+		    $(function(){
+		    	/**
+		    	 * Bind an event handler to window's throttledresize event that, when triggered, 
+		    	 * passes a reference of itself that is accessible by the callback function.
+		    	 */ 
+		        $(window).bind('throttledresize', throttledresizeHandler);
+
+		        function throttledresizeHandler(event){
+		          $('#output-text').html('Event Count: ' + ++count);
+		        }
+
+		        // You can also manually force this event to fire.
+		        $(window).trigger('throttledresize');
+			}); 
+		]]></code>
+	</pre>
+	<p>Visit this from your orientation-enabled device to see it in action!</p>
+		<iframe id="throttledresizeIframe" src="/resources/throttledresize/example1.html" style="width:100%;height:90px;border:0px"></iframe>
+	</p>
+	</longdesc>
+	<added>1.0</added>
+	<signature>
+		<argument name="callback" type="Function" optional="true">
+			<desc>A function to invoke after the the throttledresize event fires.</desc>
+		</argument>
+	</signature>
+	<category slug="events"/>
+</entry>

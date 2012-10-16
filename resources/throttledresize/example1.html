@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>throttledresize demo</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css">
+    <script src="http://code.jquery.com/jquery-1.7.2.js"></script>
+    <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+  <style>
+        html, body { padding: 0; margin: 0; }
+        html, .ui-mobile, .ui-mobile body {
+            height: 85px;
+        }
+        .ui-mobile, .ui-mobile .ui-page {
+            min-height: 85px;
+        }
+        #nav {
+          font-size: 200%;
+          width:17.1875em;
+          margin:17px auto 0 auto;
+        }
+        #nav a {
+          color: #777;
+          border: 2px solid #777;
+          background-color: #ccc;
+          padding: 0.2em 0.6em;
+          text-decoration: none;
+          float: left;
+          margin-right: 0.3em;
+        }
+        #nav a:hover {
+          color: #999;
+          border-color: #999;
+          background: #eee; 
+        }
+        #nav a.selected,
+        #nav a.selected:hover {
+          color: #0a0;
+          border-color: #0a0;
+          background: #afa; 
+        }       
+    </style>
+</head>
+<body>
+    <h1 id="output-text">Event Output</h1>
+    <script>
+    var count = 0;
+    $(function(){
+        $(window).bind('throttledresize', throttledresizeHandler);
+
+        function throttledresizeHandler(event){
+          $('#output-text').html('Event Count: ' + ++count);
+        }
+
+        $(window).trigger('throttledresize');
+    });
+    </script>
+</body>
+</html>
