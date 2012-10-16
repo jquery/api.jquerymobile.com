@@ -2,104 +2,109 @@
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="header" namespace="fn" type="widget" widgetnamespace="mobile">
 	<title>Header Widget</title>
-    <desc>The Header bar serves as the page title, is usually the first element inside each mobile page, and typically contains a page title and up to two buttons.</desc>
-    <longdesc>
-        <h2>Header structure</h2>
-        <p>The <code>header</code> is a toolbar at the top of the page that usually contains the page title text and optional buttons positioned to the left and/or right of the title for navigation or actions. Headers can optionally be positioned as fixed so they remain at the top of the screen at all times instead of scrolling with the page.</p> 
-        <p>The title text is normally an H1 heading element but it's possible to use any heading level (H1-H6) to allow for semantic flexibility. For example, a page containing multiple mobile "pages" may use a H1 element on the home "page" and a H2 element on the secondary pages. All heading levels are styled identically by default to maintain visual consistency.</p> 
-         
-            <pre>
-                <span class="nt">&lt;div</span> <strong><span class="na">data-role=</span><span class="s">"header"</span></strong><span class="nt">&gt;</span> 
-                <span class="nt">&lt;h1&gt;</span>Page Title<span class="nt">&lt;/h1&gt;</span> 
-                <span class="nt">&lt;/div&gt;</span> 
-            </pre>  
+	<desc>Creates a header widget</desc>
+	<longdesc>
+		<p>The Header bar serves as the page title, is usually the first element inside each mobile page, and typically contains a page title and up to two buttons.</p>
+		<h3>Header structure</h3>
+		<p>The <code>header</code> is a toolbar at the top of the page that usually contains the page title text and optional buttons positioned to the left and/or right of the title for navigation or actions. Headers can optionally be positioned as fixed so they remain at the top of the screen at all times instead of scrolling with the page.</p> 
+		<p>The title text is normally an H1 heading element but it's possible to use any heading level (H1-H6) to allow for semantic flexibility. For example, a page containing multiple mobile "pages" may use a H1 element on the home "page" and a H2 element on the secondary pages. All heading levels are styled identically by default to maintain visual consistency.</p> 
 
-        <h2>Default header features</h2>
-        <p>The <code>header</code> toolbar is themed with the "a" swatch by default (black in the default theme) but you can easily set the theme swatch color.
-        <iframe src="/resources/header/example1.html" style="width:100%;height:90px;border:0px"></iframe></p>
+<pre><code>
+&lt;div data-role="header" &gt;
+&lt;h1&gt; Page Title &lt;/h1&gt;
+&lt;/div&gt;
+</code></pre>
 
-        <h2>Adding buttons</h2>
-        <p>In the standard header configuration, there are slots for buttons on either side of the text heading. Each button is typically an <code>anchor</code> element, but can be a <code>button</code> element as well. To save space, buttons in toolbars are set to inline styling so the button is only as wide as the text and icons it contains. </p>
+		<h3>Default header features</h3>
+		
+		<p>The <code>header</code> toolbar is themed with the "a" swatch by default (black in the default theme) but you can easily set the theme swatch color.
+		<iframe src="/resources/header/example1.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
-        <h3>Default button positioning</h3>
-        <p>The header plugin looks for immediate children of the header container, and automatically sets the first link in the left button slot and the second link in the right. In this example, the 'Cancel' button will appear in the left slot and 'Save' will appear in the right slot based on their sequence in the source order. </p> 
+		<h3>Adding buttons</h3>
+		
+		<p>In the standard header configuration, there are slots for buttons on either side of the text heading. Each button is typically an <code>anchor</code> element, but can be a <code>button</code> element as well. To save space, buttons in toolbars are set to inline styling so the button is only as wide as the text and icons it contains. </p>
 
-        <pre><code>			
-            &lt;div data-role=&quot;header&quot;&gt;
-            &lt;a href=&quot;index.html&quot; data-icon=&quot;delete&quot;&gt;Cancel&lt;/a&gt;
-            &lt;h1&gt;Edit Contact&lt;/h1&gt;
-            &lt;a href=&quot;index.html&quot; data-icon=&quot;check&quot;&gt;Save&lt;/a&gt;
-            &lt;/div&gt;
-        </code></pre>
+		<h4>Default button positioning</h4>
+		<p>The header plugin looks for immediate children of the header container, and automatically sets the first link in the left button slot and the second link in the right. In this example, the 'Cancel' button will appear in the left slot and 'Save' will appear in the right slot based on their sequence in the source order. </p> 
 
-        <iframe src="/resources/header/example2.html" style="width:100%;height:90px;border:0px"></iframe>
+<pre><code>	
+&lt;div data-role=&quot;header&quot;&gt;
+	&lt;a href=&quot;index.html&quot; data-icon=&quot;delete&quot;&gt;Cancel&lt;/a&gt;
+	&lt;h1&gt;Edit Contact&lt;/h1&gt;
+	&lt;a href=&quot;index.html&quot; data-icon=&quot;check&quot;&gt;Save&lt;/a&gt;
+	&lt;/div&gt;
+</code></pre>
 
-        <h3>Making buttons visually stand out</h3>
-        <p>Buttons automatically adopt the swatch color of the bar they sit in, so a link in a header bar with the "a" color will also be styled as "a" colored buttons. It's simple to make a button visually stand out. Here, we add the <code> data-theme</code> attribute and set the color swatch for the button to "b" to make the "Save" button pop.</p>
+		<iframe src="/resources/header/example2.html" style="width:100%;height:90px;border:0px"></iframe>
 
-        <pre><code>			
-            &lt;div data-role=&quot;header&quot;&gt;
-            &lt;a href=&quot;index.html&quot; data-icon=&quot;delete&quot;&gt;Cancel&lt;/a&gt;
-            &lt;h1&gt;Edit Contact&lt;/h1&gt;
-            &lt;a href=&quot;index.html&quot; data-icon=&quot;check&quot; data-theme=&quot;b&quot;&gt;Save&lt;/a&gt;
-            &lt;/div&gt;
-        </code></pre>
-        
-        <iframe src="/resources/header/example3.html" style="width:100%;height:90px;border:0px"></iframe>
+		<h3>Making buttons visually stand out</h3>
 
-        <h3>Controlling button position with classes</h3>
-        <p>The button position can also be controlled by adding classes to the button anchors, rather than relying on source order. This is especially useful if you only want a button in the right slot. To specify the button position, add the class of <code>ui-btn-left</code> or <code>ui-btn-right</code> to the anchor.</p> 
+		<p>Buttons automatically adopt the swatch color of the bar they sit in, so a link in a header bar with the "a" color will also be styled as "a" colored buttons. It's simple to make a button visually stand out. Here, we add the <code> data-theme</code> attribute and set the color swatch for the button to "b" to make the "Save" button pop.</p>
 
-            <pre><code>
-                &lt;div data-role=&quot;header&quot;&gt;
-                &lt;h1&gt;Page Title&lt;/h1&gt;
-                &lt;a href=&quot;index.html&quot; data-icon=&quot;gear&quot; class=&quot;ui-btn-right&quot;&gt;Options&lt;/a&gt;
-                &lt;/div&gt;
-            </code></pre> 
+<pre><code>
+&lt;div data-role=&quot;header&quot;&gt;
+	&lt;a href=&quot;index.html&quot; data-icon=&quot;delete&quot;&gt;Cancel&lt;/a&gt;
+	&lt;h1&gt;Edit Contact&lt;/h1&gt;
+	&lt;a href=&quot;index.html&quot; data-icon=&quot;check&quot; data-theme=&quot;b&quot;&gt;Save&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
 
-        <iframe src="/resources/header/example4.html" style="width:100%;height:90px;border:0px"></iframe>
+		<iframe src="/resources/header/example3.html" style="width:100%;height:90px;border:0px"></iframe>
+	
+		<h4>Controlling button position with classes</h4>
+		<p>The button position can also be controlled by adding classes to the button anchors, rather than relying on source order. This is especially useful if you only want a button in the right slot. To specify the button position, add the class of <code>ui-btn-left</code> or <code>ui-btn-right</code> to the anchor.</p> 
 
-        <h3>Adding buttons to toolbars without heading</h3>
-        <p>The heading in the header bar has some margin that will give the bar its height. If you choose not to use a heading, you will need to add an element with <code>class="ui-title"</code> so that the bar can get the height and display correctly.</p> 
+<pre><code>
+&lt;div data-role=&quot;header&quot;&gt;
+	&lt;h1&gt;Page Title&lt;/h1&gt;
+	&lt;a href=&quot;index.html&quot; data-icon=&quot;gear&quot; class=&quot;ui-btn-right&quot;&gt;Options&lt;/a&gt;
+&lt;/div&gt;
+</code></pre> 
 
-            <pre><code>
-                &lt;div data-role=&quot;header&quot;&gt;
-                &lt;a href=&quot;index.html&quot; data-icon=&quot;gear&quot; class=&quot;ui-btn-right&quot;&gt;Options&lt;/a&gt;
-                &lt;span class=&quot;ui-title&quot; /&gt;
-                &lt;/div&gt;
-            </code></pre>
+		<iframe src="/resources/header/example4.html" style="width:100%;height:90px;border:0px"></iframe>
+	
+		<h3>Adding buttons to toolbars without heading</h3>
+		<p>The heading in the header bar has some margin that will give the bar its height. If you choose not to use a heading, you will need to add an element with <code>class="ui-title"</code> so that the bar can get the height and display correctly.</p> 
 
-        <iframe src="/resources/header/example5.html" style="width:100%;height:90px;border:0px"></iframe>
+<pre><code>
+&lt;div data-role=&quot;header&quot;&gt;
+	&lt;a href=&quot;index.html&quot; data-icon=&quot;gear&quot; class=&quot;ui-btn-right&quot;&gt;Options&lt;/a&gt;
+	&lt;span class=&quot;ui-title&quot; /&gt;
+&lt;/div&gt;
+</code></pre>
 
-        <h2>Adding Back buttons</h2>
-        <p>jQuery Mobile has a feature to automatically create and append "back" buttons to any header, though it is disabled by default. This is primarily useful in chromeless installed applications, such as those running in a native app webview. The framework automatically generates a "back" button on a header when the page plugin's <code>addBackBtn</code> option is true. This can also be set via markup if the page div has a <code>data-add-back-btn="true"</code> attribute. </p> 
-        <p>If you use the attribute <code>data-rel="back"</code> on an anchor, any clicks on that anchor will mimic the back button, going back one history entry and ignoring the anchor's default href. This is particularly useful when linking back to a named page, such as a link that says "home", or when generating "back" buttons with JavaScript, such as a button to close a dialog. When using this feature in your source markup, <strong>be sure to provide a meaningful href that actually points to the URL of the referring page. This will allow the feature to work for users in C-Grade browsers.</strong></p>
-        <p>If you just want a reverse transition without actually going back in history, you should use the <code>data-direction="reverse"</code> attribute.</p>	
+		<iframe src="/resources/header/example5.html" style="width:100%;height:90px;border:0px"></iframe>
 
-        <h2>Customizing the back button text</h2>	
-        <p>If you'd like to configure the back button text, you can either use the <code>data-back-btn-text="previous"</code> attribute on your page element, or set it programmatically via the page plugin's options: <br /><code>$.mobile.page.prototype.options.backBtnText = "previous";</code></p>
+		<h3>Adding Back buttons</h3>
+		
+		<p>jQuery Mobile has a feature to automatically create and append "back" buttons to any header, though it is disabled by default. This is primarily useful in chromeless installed applications, such as those running in a native app webview. The framework automatically generates a "back" button on a header when the page plugin's <code>addBackBtn</code> option is true. This can also be set via markup if the page div has a <code>data-add-back-btn="true"</code> attribute. </p> 
+		<p>If you use the attribute <code>data-rel="back"</code> on an anchor, any clicks on that anchor will mimic the back button, going back one history entry and ignoring the anchor's default href. This is particularly useful when linking back to a named page, such as a link that says "home", or when generating "back" buttons with JavaScript, such as a button to close a dialog. When using this feature in your source markup, <strong>be sure to provide a meaningful href that actually points to the URL of the referring page. This will allow the feature to work for users in C-Grade browsers.</strong></p>
+		<p>If you just want a reverse transition without actually going back in history, you should use the <code>data-direction="reverse"</code> attribute.</p>	
 
-        <h3>Default back button style</h3>
-        <p>If you'd like to configure the back button role-theme, you can use: <br /><code>$.mobile.page.prototype.options.backBtnTheme = "a";</code><br />
-        If you're doing this programmatically, set this option inside the mobileinit event handler.</p>
+		<h3>Customizing the back button text</h3>	
+		<p>If you'd like to configure the back button text, you can either use the <code>data-back-btn-text="previous"</code> attribute on your page element, or set it programmatically via the page plugin's options: <br /><code>$.mobile.page.prototype.options.backBtnText = "previous";</code></p>
 
-        <h2>Custom header configurations</h2>
-        <p>If you need to create a header that doesn't follow the default configuration, simply wrap your custom styled markup in any container, such as <code>div</code>. The plugin won't apply the automatic button logic to the wrapped content inside the header container so you can write custom styles for laying out the content in your header.</p> 
-        <p>It's also possible to create custom bars without using the header data-role at all. For example, start with any container and add the <code>ui-bar</code> class to apply standard bar padding and add the <code>ui-bar-b</code> class to assign the bar swatch styles from your theme. (The "b" can be any swatch letter.)</p>
+		<h3>Default back button style</h3>
+		<p>If you'd like to configure the back button role-theme, you can use: <br /><code>$.mobile.page.prototype.options.backBtnTheme = "a";</code><br />
+If you're doing this programmatically, set this option inside the mobileinit event handler.</p>
 
-        <pre><code>
-            &lt;div <strong>class=&quot;ui-bar ui-bar-b&quot;</strong>&gt;
-            &lt;h3&gt;I&#x27;m just a div with bar classes and a mini inline &lt;a href=&quot;#&quot; data-role=&quot;button&quot; data-mini=&quot;true&quot;&gt;Button&lt;/a&gt;&lt;/h3&gt;
-            &lt;/div&gt;
-        </code></pre>
+		<h3>Custom header configurations</h3>
+		<p>If you need to create a header that doesn't follow the default configuration, simply wrap your custom styled markup in any container, such as <code>div</code>. The plugin won't apply the automatic button logic to the wrapped content inside the header container so you can write custom styles for laying out the content in your header.</p> 
+		<p>It's also possible to create custom bars without using the header data-role at all. For example, start with any container and add the <code>ui-bar</code> class to apply standard bar padding and add the <code>ui-bar-b</code> class to assign the bar swatch styles from your theme. (The "b" can be any swatch letter.)</p>
 
-        <iframe src="/resources/header/example6.html" style="width:100%;height:90px;border:0px"></iframe>
+<pre><code>
+&lt;div class=&quot;ui-bar ui-bar-b&quot;&gt;
+	&lt;h3&gt;I&#x27;m just a div with bar classes and a mini inline &lt;a href=&quot;#&quot; data-role=&quot;button&quot; data-mini=&quot;true&quot;&gt;Button&lt;/a&gt;&lt;/h3&gt;
+&lt;/div&gt;
+</code></pre>
 
-        <p>Note that <code>.ui-bar</code> should not be added to header or footer bars that span the full width of the page, as the additional padding will cause a full-width element to break out of its parent container. To add padding inside of a full-width toolbar, wrap the toolbar's contents in an element and apply the padding to that element instead.</p>
-        <p>By writing some simple styles, it's easy to build message bars like this:</p>
-        <!-- Yes, the inline styles aren't recommended in a real system but they are used to simply illustrate how to tweak CSS -->
-        <iframe src="/resources/header/example7.html" style="width:100%;height:90px;border:0px"></iframe>
-    </longdesc>       
+		<iframe src="/resources/header/example6.html" style="width:100%;height:90px;border:0px"></iframe>
+
+		<p>Note that <code>.ui-bar</code> should not be added to header or footer bars that span the full width of the page, as the additional padding will cause a full-width element to break out of its parent container. To add padding inside of a full-width toolbar, wrap the toolbar's contents in an element and apply the padding to that element instead.</p>
+		<p>By writing some simple styles, it's easy to build message bars like this:</p>
+		<!-- Yes, the inline styles aren't recommended in a real system but they are used to simply illustrate how to tweak CSS -->
+		<iframe src="/resources/header/example7.html" style="width:100%;height:100px;border:0px"></iframe>
+	</longdesc>
 	<added>1.0</added>
 	<example>
 		<desc>A basic example of a header</desc>
