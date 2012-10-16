@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<entry name="vmousedown" type="event" return="jQuery">
+	<title>vmousemove</title>
+	<desc>Virtualized mouseover event handler.</desc>
+	<longdesc>
+		<p>The jQuery Mobile <code>vmousemove</code> event handler simulates the "onmousemove" event handler on mobile devices.</p>
+		<p><i>The idea behind virtualized mouse events is to translate touch events into mouse events. Developers should be aware that these virtualized mouse events will not prevent any synthetic mouse events from being triggered inside the browser after a touch event. If a mouse-type device is used on the system, the virtualized mouse events are dispatched at the same time as the normal mouse events.</i></p>
+
+		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<pre>
+		<code><![CDATA[
+			$("#target").mousemove(function(event) {
+			  var msg = "Handler for .mousemove() called at ";
+			  msg += event.pageX + ", " + event.pageY;
+			  $("#log").append("<div>" + msg + "</div>");
+			});
+		]]></code>
+	</pre>
+		<p>
+			<iframe src="/resources/vmousemove/example1.html" style="width:100%;height:90px;border:0px"></iframe>
+		</p>
+	</longdesc>
+	<added>1.0</added>
+	<methods>
+		<method name="preventDefault" optional="true">
+			<desc>A function to invoke in the event binding to prevent the synthetic click event by the browser.</desc>
+		</method>
+
+	</methods>
+	<category slug="events"/>
+</entry>
