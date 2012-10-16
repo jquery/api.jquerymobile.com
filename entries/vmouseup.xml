@@ -5,6 +5,13 @@
 	<longdesc>
 		<p>The jQuery Mobile <code>"vmouseup"</code> event handler simulates the "onmouseup" event handler on mobile devices.</p>
         <p>The idea behind virtualized mouse events is to translate touch events into mouse events. Developers should be aware that these virtualized mouse events will not prevent any synthetic mouse events from being triggered inside the browser after a touch event. If a mouse-type device is used on the system, the virtualized mouse events are dispatched at the same time as the normal mouse events.</p>
+        <methods>
+			<method name="preventDefault" optional="true">
+				<desc>
+					A function to invoke in the event binding to prevent the synthetic click event by the browser.
+				</desc>
+			</method>
+		</methods>
 		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<pre><code><![CDATA[
 			$(document).on("vmouseup", "p", function(){
@@ -16,12 +23,5 @@
 		</p>
 	</longdesc>
 	<added>1.0</added>
-	<methods>
-		<method name="preventDefault" optional="true">
-			<desc>
-				A function to invoke in the event binding to prevent the synthetic click event by the browser.
-			</desc>
-		</method>
-	</methods>
 	<category slug="events"/>
 </entry>
