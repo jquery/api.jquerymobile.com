@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <entry name="vmousecancel" type="event" return="jQuery">
-	<title>.vmousecancel()</title>
+	<title>vmousecancel</title>
 	<desc>Virtualized mousecancel event handler.</desc>
 	<longdesc>
-		<p>The jQuery Mobile <code>.vmousecancel()</code> event handler is called whenever the system cancels a virtualized mouse event. This is fired when the user decides to scroll the contents of the screen.</p>
+		<p>The jQuery Mobile <code>vmousecancel</code> event handler is called whenever the system cancels a virtualized mouse event. This is fired when the user decides to scroll the contents of the screen.</p>
 		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<pre><code><![CDATA[
-			$('p').vmouseover(function(){
+			$(document).on("vmouseover", "p", function(){
 		      $(this).append('<span style="color:#00F;">vmousecancel fired.</span>');
 		    });
 		]]></code></pre>
