@@ -91,7 +91,7 @@
 			<desc><p class="ui-body ui-body-e"><strong>Deprecated</strong> in 1.2 - use <code>$.mobile.loading( 'hide' )</code> instead, see examples above</p>
 			Hide the page loading message, which is configurable via $.mobile.loadingMessage.
 				<pre><code>
-					<strong>//hide the page loader</strong>
+					//hide the page loader
 					$.mobile.hidePageLoadingMsg();
 				</code></pre>
 			</desc>
@@ -112,10 +112,10 @@
 			<desc><p class="ui-body ui-body-e"><strong>Deprecated</strong> in 1.2 - use <code>$.mobile.loading( 'show' )</code> instead, see examples above</p>
 			Show the page loading message, which is configurable via $.mobile.loadingMessage.
 			<pre><code>
-				<strong>//cue the page loader</strong>
+				//cue the page loader
 				$.mobile.showPageLoadingMsg();
 
-				<strong>//use theme swatch "b", a custom message, and no spinner</strong>
+				//use theme swatch "b", a custom message, and no spinner
 				$.mobile.showPageLoadingMsg("b", "This is only a test", true);
 			</code></pre>
 		</desc>
