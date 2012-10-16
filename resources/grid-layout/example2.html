@@ -24,13 +24,11 @@
 
 <body> 
 <div data-role="page" style="max-height:90px; min-height:90px;">
-	<div class="ui-grid-a">
-		<div class="ui-block-a"><div data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="null" data-iconpos="null" data-theme="c" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c" aria-disabled="false"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Previous</span></span><button type="button" data-theme="c" class="ui-btn-hidden" aria-disabled="false">Previous</button></div></div>
-		<div class="ui-block-b"><div data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="null" data-iconpos="null" data-theme="c" class="ui-btn ui-btn-up-c ui-shadow ui-btn-corner-all" aria-disabled="false"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Next</span></span><button type="button" data-theme="c" class="ui-btn-hidden" aria-disabled="false">Next</button></div></div>	   
-	</div>
-	<div class="ui-grid-solo">
-		<div class="ui-block-a"><div data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="null" data-iconpos="null" data-theme="b" class="ui-btn ui-btn-up-b ui-shadow ui-btn-corner-all" aria-disabled="false"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">More</span></span><button type="button" data-theme="b" class="ui-btn-hidden"
-					aria-disabled="false">More</button></div></div>
+	<div data-role="content" > 
+		<fieldset class="ui-grid-a">
+			<div class="ui-block-a"><button type="submit" data-theme="c">Cancel</button></div>
+			<div class="ui-block-b"><button type="submit" data-theme="b">Submit</button></div>	   
+		</fieldset>
 	</div>
 </div>
 </body>
