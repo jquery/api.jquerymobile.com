@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="hashchange" type="event" return="jQuery">
-	<title>.hashchange()</title>
+	<title>hashchange</title>
 	<desc>Enables bookmarkable #hash history.</desc>
 	<longdesc>
 		<p>The jQuery Mobile <code>.hashchange()</code> event handler enables very basic bookmarkable #hash history by providing a callback function bound to the window.onhashchange event. The onhashchange event fires when a window's hash changes.</p>
