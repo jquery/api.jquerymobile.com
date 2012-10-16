@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<entry name="vmousedown" type="event" return="jQuery">
+<entry name="vmousemove" type="event" return="jQuery">
 	<title>vmousemove</title>
-	<desc>Virtualized mouseover event handler.</desc>
+	<desc>Virtualized mousemove event handler.</desc>
 	<longdesc>
 		<p>The jQuery Mobile <code>vmousemove</code> event handler simulates the "onmousemove" event handler on mobile devices.</p>
 		<p><i>The idea behind virtualized mouse events is to translate touch events into mouse events. Developers should be aware that these virtualized mouse events will not prevent any synthetic mouse events from being triggered inside the browser after a touch event. If a mouse-type device is used on the system, the virtualized mouse events are dispatched at the same time as the normal mouse events.</i></p>
