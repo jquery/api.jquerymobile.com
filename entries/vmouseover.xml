@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="vmouseover" type="event" return="jQuery">
+<entry name="vmouseover" type="event">
 	<title>vmouseover</title>
 	<desc>Virtualized mouseover event handler.</desc>
 	<longdesc>
