@@ -10,9 +10,9 @@
 		<code><![CDATA[
 			<style type="text/css">
 				div.box {
-					width: 3em;
-					height: 3em;
 					background-color: #f00;
+					height: 3em;
+					width: 3em;
 				}
 				div.box.tap {
 					background-color: #f0f;
@@ -27,11 +27,11 @@
 		    
 		    $(function(){
 		    	// Bind the tapHandler callback function to the tap event on div.box
-		        $('div.box').bind('tap', tapHandler);
+		        $('div.box').bind( 'tap', tapHandler );
 
 		        // Callback function references the event target and adds the 'tap' class to it
-		        function tapHandler(event){
-        			$(event.target).addClass('tap');
+		        function tapHandler( event ){
+        			$(event.target).addClass( 'tap' );
         		}
 			});
 		]]></code>
@@ -42,7 +42,7 @@
 	<added>1.0</added>
 	<signature>
 		<argument name="callback" type="Function" optional="true">
-			<desc>A function to invoke after the the throttledresize event fires.</desc>
+			<desc>A function to invoke after the the tap event fires.</desc>
 		</argument>
 	</signature>
 	<category slug="events"/>
