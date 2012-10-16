@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>vmouseout demo</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css">
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+</head>
+<body>
+    <p>Touch here, move up and down to see what happens.</p>
+    <script>
+            $(function(){
+                $(document).on("vmouseout", "p", function(){
+              $(this).append('<span style="color:#00F;">Mouse out.</span>');
+            });
+    </script>
+</body>
+</html>
