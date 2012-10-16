@@ -9,9 +9,9 @@
 		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<pre>
 		<code><![CDATA[
-			$(function(){
-			    $(document).on("vmousedown", "p", function(){
-		      $(this).append('<span style="color:#00F;">Mouse down.</span>');
+			$( function (){
+			    $( document ).on( "vmousedown" , "p" , function(){
+		      $( this ).append( '<span style="color:#00F;">Mouse down.</span>' );
 		    });
 		]]></code>
 	</pre>
