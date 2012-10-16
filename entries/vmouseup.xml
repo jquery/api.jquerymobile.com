@@ -16,10 +16,12 @@
 		</p>
 	</longdesc>
 	<added>1.0</added>
-	<signature>
-		<argument name="preventDefault" type="Function" optional="true">
-            <desc>A function to invoke in the event binding to prevent the synthetic click event by the browser.</desc>
-        </argument>
-	</signature>
+	<methods>
+		<method name="preventDefault" optional="true">
+			<desc>
+				A function to invoke in the event binding to prevent the synthetic click event by the browser.
+			</desc>
+		</method>
+	</methods>
 	<category slug="events"/>
 </entry>
