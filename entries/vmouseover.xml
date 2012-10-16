@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<entry name="hashtag" type="event" return="jQuery">
+<entry name="vmouseover" type="event" return="jQuery">
 	<title>.vmouseover()</title>
 	<desc>Virtualized mouseover event handler.</desc>
 	<longdesc>
-		<p>The jQuery Mobile <code>.vmouseover()</code> event handler simulates the "onmouseover" event handler on mobile devices.</p>
+		<p>The jQuery Mobile <code>.vmouseover()</code> event handler simulates the "onmouseover" event handler on mobile devices. This is fired on the initial touch of the screen on the device.</p>
 		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</longdesc>
 	<added>1.0</added>
@@ -13,33 +13,17 @@
 		</argument>
 	</signature>
 	<example>
-		<desc>A simple jQuery Mobile hashchange example.</desc>
+		<desc>A simple jQuery Mobile vmouseover example.</desc>
 		<code><![CDATA[
-			$(function(){
-				// Bind an event to window.onhashchange that, when the hash changes, gets the
-				// hash and adds the class "selected" to any matching nav link.
-				$(window).hashchange( function(){
-				var hash = location.hash;
-
-				// Set the page title based on the hash.
-				document.title = 'The hash is ' + ( hash.replace( /^#/, '' ) || 'blank' ) + '.';
-
-				// Iterate over all nav links, setting the "selected" class as-appropriate.
-				$('#nav a').each(function(){
-					var that = $(this);
-					that[ that.attr( 'href' ) === hash ? 'addClass' : 'removeClass' ]( 'selected' );
-					});
-				})
-				// Since the event is only triggered when the hash changes, we need to trigger
-				// the event now, to handle the hash the page may have loaded with.
-				$(window).hashchange();
-			}); 
+			$('p').vmouseover(function(){
+		      $(this).append('<span style="color:#00F;">Mouse Over.</span>');
+		    });
 		]]></code>
 	</example>
 	<pre>
 		<code>
-			<p>Click, and watch as the magic happens!
-				<iframe src="/resources/hashtag/example1.html" style="width:100%;height:90px;border:0px"></iframe>
+			<p>
+				<iframe src="/resources/vmouseover/example1.html" style="width:100%;height:90px;border:0px"></iframe>
 			</p>
 		</code>
 	</pre>
