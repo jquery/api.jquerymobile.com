@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<entry name="tap" type="event" return="jQuery">
+	<title>tap</title>
+	<desc>Triggered after a quick, complete touch event.</desc>
+	<longdesc>
+		<p>The jQuery Mobile <code>tap</code> event triggers after a quick, complete touch event that occurs of a single target object. It is the gesture equivalent of a standard click event that is triggered on the release state of the touch gesture.</p>
+
+		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<pre>
+		<code><![CDATA[
+			<style type="text/css">
+				div.box {
+					width: 3em;
+					height: 3em;
+					background-color: #f00;
+				}
+				div.box.tap {
+					background-color: #f0f;
+				}
+			</style>
+			
+			...
+
+			<div class="box"></div>
+			
+			...
+		    
+		    $(function(){
+		    	// Bind the tapHandler callback function to the tap event on div.box
+		        $('div.box').bind('tap', tapHandler);
+
+		        // Callback function references the event target and adds the 'tap' class to it
+		        function tapHandler(event){
+        			$(event.target).addClass('tap');
+        		}
+			});
+		]]></code>
+	</pre>
+	<p>Tap the square to see the above code applied.
+		<iframe id="tapIframe" src="/resources/tap/example1.html" style="width:100%;height:90px;border:0px"></iframe></p>
+	</longdesc>
+	<added>1.0</added>
+	<signature>
+		<argument name="callback" type="Function" optional="true">
+			<desc>A function to invoke after the the throttledresize event fires.</desc>
+		</argument>
+	</signature>
+	<category slug="events"/>
+</entry>
