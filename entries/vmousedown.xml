@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <entry name="vmousedown" type="event" return="jQuery">
 	<title>vmousedown</title>
-	<desc>Virtualized mouseover event handler.</desc>
+	<desc>Virtualized mousedown event handler.</desc>
 	<longdesc>
 		<p>The jQuery Mobile <code>vmousedown</code> event handler simulates the "onmousedown" event handler on mobile devices. This event is fired on the initial touch of the screen on the device.</p>
 		<p>The idea behind virtualized mouse events is to translate touch events into mouse events. Developers should be aware that these virtualized mouse events will not prevent any synthetic mouse events from being triggered inside the browser after a touch event. If a mouse-type device is used on the system, the virtualized mouse events are dispatched at the same time as the normal mouse events.</p>
@@ -15,6 +15,9 @@
 		    });
 		]]></code>
 	</pre>
+		<p>
+			<iframe src="/resources/vmousedown/example1.html" style="width:100%;height:90px;border:0px"></iframe>
+		</p>
 	</longdesc>
 	<added>1.0</added>
 	<signature>
@@ -23,12 +26,5 @@
 		</argument>
 
 	</signature>
-	<pre>
-		<code>
-			<p>
-				<iframe src="/resources/vmousedown/example1.html" style="width:100%;height:90px;border:0px"></iframe>
-			</p>
-		</code>
-	</pre>
 	<category slug="events"/>
 </entry>
