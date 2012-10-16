@@ -4,9 +4,9 @@
 	<desc>Virtualized mouseover event handler.</desc>
 	<longdesc>
 		<p>The jQuery Mobile <code>"vmouseover"</code> event handler simulates the "onmouseover" event handler on mobile devices.</p>
-        <p>The idea behind virtualized mouse events is to translate touch events into mouse events. Developers should be aware that these virtualized mouse events will not prevent any synthetic mouse events from being triggered inside the browser after a touch event. If a mouse-type device is used on the system, the virtualized mouse events are dispatched at the same time as the normal mouse events.</p>
+        <p style="font-style:italic;">The idea behind virtualized mouse events is to translate touch events into mouse events. Developers should be aware that these virtualized mouse events will not prevent any synthetic mouse events from being triggered inside the browser after a touch event. If a mouse-type device is used on the system, the virtualized mouse events are dispatched at the same time as the normal mouse events.</p>
         <methods>
-			<method name="preventDefault" optional="true">
+			<method name="preventDefault">
 				<desc>
 					A function to invoke in the event binding to prevent the synthetic click event by the browser.
 				</desc>
