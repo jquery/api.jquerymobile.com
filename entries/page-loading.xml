@@ -34,6 +34,93 @@
 		</pre>
 	</longdesc> 
 	<added>1.0</added>
+	<options>
+		<option name="html" default="">
+			<desc>
+				If this is set to a non empty string value, it will be used to replace the entirety of the loader's inner html.
+			</desc>
+			<type name="boolean" />
+		</option>
+		<option name="text" default="loading">
+			<desc>
+				The text of the message.
+			</desc>
+			<type name="string" />
+		</option>
+		<option name="textonly" default="false">
+			<desc>
+				If true, the "spinner" image will be hidden when the message is shown.
+			</desc>
+			<type name="boolean" />
+		</option>
+		<option name="textVisible" default="false">
+			<desc>
+				If true, the text value will be used under the spinner.
+			</desc>
+			<type name="boolean" />
+		</option>
+		<option name="theme" default="a">
+			<desc>
+				The theme swatch for the message.
+				<pre><code>
+				//cue the page loader
+				$.mobile.loading( 'show' );
+
+				//use theme swatch "b", a custom message, and no spinner
+				$.mobile.loading( 'show', { theme: "b", text: "foo", textonly: true });
+				</code></pre>
+			</desc>
+			<type name="string" />
+		</option>
+	</options>
+	<events></events>
+	<methods>
+		<method name="checkLoaderPosition">
+			<desc>Check position of loader to see if it appears to be "fixed" to center.
+			</desc>
+		</method>
+		<method name="fakeFixLoader">
+			<desc>For non-fixed supporting browsers. Position at y center (if scrollTop supported), above the activeBtn (if defined), or just 100px from top.
+			</desc>
+		</method>
+		<method name="hide">
+			<desc>
+			</desc>
+		</method>
+		<method name="hidePageLoadingMsg">
+			<desc><p class="ui-body ui-body-e"><strong>Deprecated</strong> in 1.2 - use <code>$.mobile.loading( 'hide' )</code> instead, see examples above</p>
+			Hide the page loading message, which is configurable via $.mobile.loadingMessage.
+				<pre><code>
+					<strong>//hide the page loader</strong>
+					$.mobile.hidePageLoadingMsg();
+				</code></pre>
+			</desc>
+		</method>
+		<method name="loading">
+			<desc>Show or hide the page loading message, which is configurable via $.mobile.loader prototype options as described in the widget docs or can be controlled via a params object.
+			</desc>
+		</method>
+		<method name="resetHtml">
+			<desc>
+			</desc>
+		</method>
+		<method name="show">
+			<desc>
+			</desc>
+		</method>
+		<method name="showPageLoadingMsg">
+			<desc><p class="ui-body ui-body-e"><strong>Deprecated</strong> in 1.2 - use <code>$.mobile.loading( 'show' )</code> instead, see examples above</p>
+			Show the page loading message, which is configurable via $.mobile.loadingMessage.
+			<pre><code>
+				<strong>//cue the page loader</strong>
+				$.mobile.showPageLoadingMsg();
+
+				<strong>//use theme swatch "b", a custom message, and no spinner</strong>
+				$.mobile.showPageLoadingMsg("b", "This is only a test", true);
+			</code></pre>
+		</desc>
+	</method>
+</methods>
 	<example>
 		<desc>Loader Examples</desc>
 		<code><![CDATA[]]></code>
