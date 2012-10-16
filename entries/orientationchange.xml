@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <entry name="orientationchange" type="event" return="jQuery">
 	<title>orientationchange</title>
-	<desc>Enables bookmarkable #hash history.</desc>
+	<desc>Device Portrait/Landscape Orientation Event</desc>
 	<longdesc>
 		<p>The jQuery Mobile <code>orientationchange</code> event triggers when a device orientation changes, either by turning the device vertically or horizontally. When bound to this event the callback function has the event object. The event object contains an <code>orientation</code> property equal to either "portrait" or "landscape".</p>
 		<p>Note, we bind to the browser's resize event when <code>orientationchange</code> is not natively supported or if <code>$.mobile.orientationChangeEnabled</code> is set to false.</p>
