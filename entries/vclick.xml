@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="vclick" type="event" return="jQuery">
+<entry name="vclick" type="event">
 	<title>vclick</title>
 	<desc>Virtualized click event handler.</desc>
 	<longdesc>
