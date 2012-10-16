@@ -8,7 +8,7 @@
         <p style="font-style:italic;">The idea behind virtualized mouse events is to translate touch events into mouse events to compensate for the missing mouse event triggers. Developers should be aware that these virtualized mouse events will not prevent any synthetic mouse events from being triggered inside the browser after a touch event. If a mouse-type device is used on the system, the virtualized mouse events are dispatched at the same time as the normal mouse events.</p>
 		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<pre><code><![CDATA[
-			$( document ).on( "vmouseover" , "p" , function(){
+			$( document ).on( "vmouseover", "p", function(){
 		      $( this ).append( '<span style="color:#00F;">vmouseover fired.</span>' );
 		    });
 		]]></code></pre>
