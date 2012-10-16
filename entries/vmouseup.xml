@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="vmouseup" type="event" return="jQuery">
+<entry name="vmouseup" type="event">
 	<title>vmouseup</title>
 	<desc>Virtualized mouseup event handler.</desc>
 	<longdesc>
