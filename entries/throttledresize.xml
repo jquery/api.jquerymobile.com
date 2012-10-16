@@ -8,7 +8,7 @@
 		<p>This event triggers when the browser window resizes from:</p>
 			<ol>
 				<li>an orientation change (orientation-enabled device);</li> 
-				<li>changes in dimension ratio that replicates a landspace/portrait change (resizing a desktop browser).<li>
+				<li>changes in dimension ratio that replicates a landspace/portrait change (resizing a desktop browser).</li>
 			</ol>
 
 		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
