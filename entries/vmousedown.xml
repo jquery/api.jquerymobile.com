@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<entry name="vmousedown" type="event" return="jQuery">
+	<title>.vmousedown()</title>
+	<desc>Virtualized mouseover event handler.</desc>
+	<longdesc>
+		<p>The jQuery Mobile <code>.vmousedown()</code> event handler simulates the "onmousedown" event handler on mobile devices. This event is fired on the initial touch of the screen on the device.</p>
+		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<pre>
+		<code><![CDATA[
+			$(function(){
+			    $("p").vmousedown(function(){
+		      $(this).append('<span style="color:#00F;">Mouse down.</span>');
+		    });
+		]]></code>
+	</pre>
+	</longdesc>
+	<added>1.0</added>
+	<signature>
+		<argument name="callback" type="Function" optional="true">
+			<desc>A function to invoke after the vmousedown event is fired.</desc>
+		</argument>
+	</signature>
+	<pre>
+		<code>
+			<p>
+				<iframe src="/resources/vmousedown/example1.html" style="width:100%;height:90px;border:0px"></iframe>
+			</p>
+		</code>
+	</pre>
+	<category slug="events"/>
+</entry>
