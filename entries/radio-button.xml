@@ -149,7 +149,10 @@ $("input[type='radio']:first").attr("checked",true).checkboxradio("refresh");
 	<example>
 		<desc>A basic example of vertically grouped radio buttons</desc>
 		<code><![CDATA[]]></code>
-		<html><![CDATA[  
+		<html><![CDATA[<div data-role="header">
+		<h1>jQuery Mobile Example</h1>
+	</div>
+	<div data-role="content">
 		<fieldset data-role="controlgroup">
 			<legend>Choose a pet:</legend>
 			<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
@@ -163,7 +166,8 @@ $("input[type='radio']:first").attr("checked",true).checkboxradio("refresh");
 
 			<input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4" />
 			<label for="radio-choice-4">Lizard</label>
-		</fieldset> ]]></html>
+		</fieldset> 
+	</div>]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>

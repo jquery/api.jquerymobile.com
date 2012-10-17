@@ -166,10 +166,13 @@ $('.selector').textinput('disable');
 	</methods>
 	<example>
 		<desc>A basic example of a search input field</desc>
-		<code><![CDATA[]]></code>
-		<html><![CDATA[	
+		<html><![CDATA[<div data-role="header">
+		<h1>jQuery Mobile Example</h1>
+	</div>
+	<div data-role="content">
     	<label for="basic">Text Input:</label>
-        <input type="text" name="name" id="basic" value=""  /> ]]></html>
+        <input type="text" name="name" id="basic" value=""  />
+	</div>]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>

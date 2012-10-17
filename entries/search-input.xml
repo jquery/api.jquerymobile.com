@@ -127,10 +127,13 @@ $('.selector').textinput('disable');
 	</methods>
 	<example>
 		<desc>A basic example of a search input field</desc>
-		<code><![CDATA[]]></code>
-		<html><![CDATA[  
+		<html><![CDATA[<div data-role="header">
+		<h1>jQuery Mobile Example</h1>
+	</div>
+	<div data-role="content">
 		<label for="search-basic">Search Input:</label>
-		<input type="search" name="search" id="search-basic" value="" /> ]]></html>
+		<input type="search" name="search" id="search-basic" value="" />
+	</div>]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>

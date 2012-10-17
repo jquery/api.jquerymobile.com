@@ -399,10 +399,14 @@ $('[type="submit"]').button('refresh');
 		</method>
 	</methods>
 	<example>
+	<!--<height>200</height>-->
 		<desc>A basic example of a button</desc>
-		<code><![CDATA[]]></code>
-		<html><![CDATA[	
-    	<a href="index.html" data-role="button">A link button</a> ]]></html>
+		<html><![CDATA[<div data-role="header">
+		<h1>jQuery Mobile Example</h1>
+	</div>
+	<div data-role="content">
+    	<a href="index.html" data-role="button">A link button</a> 
+	</div>]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>

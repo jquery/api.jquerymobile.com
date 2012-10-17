@@ -417,15 +417,18 @@ $('select').selectmenu('refresh', true);
 	</methods>
 	<example>
         <desc>A basic example of a simple native select</desc>
-        <code><![CDATA[]]></code>
-        <html><![CDATA[  
+        <html><![CDATA[<div data-role="header">
+		<h1>jQuery Mobile Example</h1>
+	</div>
+	<div data-role="content">
 		<label for="select-choice-0" class="select">Shipping method:</label>
 		<select name="select-choice-0" id="select-choice-0">
 			<option value="standard">Standard: 7 day</option>
 			<option value="rush">Rush: 3 days</option>
 			<option value="express">Express: next day</option>
 			<option value="overnight">Overnight</option>
-		</select> ]]></html>
+		</select>
+	</div>]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>

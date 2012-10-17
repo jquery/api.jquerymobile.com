@@ -146,14 +146,20 @@ $('div').navbar({
 	</events>
 	<example>
 		<desc>A basic example of a navbar</desc>
-		<code><![CDATA[]]></code>
-		<html><![CDATA[	
-    		<div data-role="navbar">
-    			<ul>
-    				<li><a href="#" class="ui-btn-active">One</a></li>
-    				<li><a href="#">Two</a></li>
-    			</ul>
-    		</div><!-- /navbar --> ]]></html>
+	<html><![CDATA[<div data-role="header">
+		<h1>jQuery Mobile Example</h1>
+	</div>
+	<div data-role="content">
+		<p>Some Content here</p>
+	</div>
+	<div data-role="footer">	
+    	<div data-role="navbar">
+    		<ul>
+    			<li><a href="#" class="ui-btn-active">One</a></li>
+    			<li><a href="#">Two</a></li>
+    		</ul>
+    	</div><!-- /navbar --> 
+	</div>]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>

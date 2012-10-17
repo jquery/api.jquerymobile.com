@@ -310,15 +310,18 @@ $('.selector').listview('refresh');
 	</methods>
 	<example>
 		<desc>A basic example of a listview</desc>
-		<code><![CDATA[]]></code>
-		<html><![CDATA[  
+		<html><![CDATA[<div data-role="header">
+		<h1>jQuery Mobile Example</h1>
+	</div>
+	<div data-role="content">
 		<ul data-role="listview">
 			<li><a href="index.html">Acura</a></li>
 			<li><a href="index.html">Audi</a></li>
 			<li><a href="index.html">BMW</a></li>
 			<li><a href="index.html">Cadillac</a></li>
 			<li><a href="index.html">Chrysler</a></li>
-		</ul>	]]></html>
+		</ul>
+	</div>]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>
