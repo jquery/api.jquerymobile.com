@@ -192,10 +192,13 @@ $('.selector').slider('refresh');
 	</methods>
 	<example>
 		<desc>A basic example of a slider.</desc>
-		<code><![CDATA[]]></code>
-		<html><![CDATA[  
+		<html><![CDATA[<div data-role="header">
+		<h1>jQuery Mobile Example</h1>
+	</div>
+	<div data-role="content">
 		<label for="slider-0">Input slider:</label>
-		<input type="range" name="slider-0" id="slider-0" value="60" min="0" max="100" />	]]></html>
+		<input type="range" name="slider-0" id="slider-0" value="60" min="0" max="100" />
+	</div>]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>

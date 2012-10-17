@@ -57,11 +57,15 @@
 	<added>1.0</added>
 	<example>
 		<desc>A basic example of a footer</desc>
-		<code><![CDATA[]]></code>
-		<html><![CDATA[
-			<div data-role="footer">
-				<h4>Footer content</h4>
-			</div> ]]></html>
+		<html><![CDATA[<div data-role="header">
+		<h1>jQuery Mobile Example</h1>
+	</div>
+	<div data-role="content">
+		<p>Some content here</p>
+	</div>
+	<div data-role="footer">
+		<h4>Footer content</h4>
+	</div> ]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>

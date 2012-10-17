@@ -109,12 +109,16 @@
 	</methods>
 	<example>
 		<desc>A basic example of grid layout</desc>
-		<code><![CDATA[]]></code>
-		<html><![CDATA[<fieldset class="ui-grid-a">
+		<html><![CDATA[<div data-role="header">
+		<h1>jQuery Mobile Example</h1>
+	</div>
+	<div data-role="content">
+		<fieldset class="ui-grid-a">
 		<div class="ui-grid-a">
 			<div class="ui-block-a"><strong>I'm Block A</strong> and text inside will wrap.</div>
 			<div class="ui-block-b"><strong>I'm Block B</strong> and text inside will wrap.</div>
-		</div><!-- /grid-a -->]]></html>
+		</div><!-- /grid-a -->
+	</div>]]></html>
 	</example>
 	<category slug="misc"/>
 </entry>

@@ -173,8 +173,10 @@ $( "#myCollapsibleSet" ).children().trigger( "collapse" );
 	</methods>
 	<example>
 		<desc>A basic example of a collapsible set.</desc>
-		<code><![CDATA[]]></code>
-		<html><![CDATA[  
+		<html><![CDATA[<div data-role="header">
+		<h1>jQuery Mobile Example</h1>
+	</div>
+	<div data-role="content">
 		<div data-role="collapsible-set">
 			<div data-role="collapsible" data-collapsed="false">
 				<h3>Section A</h3>
@@ -184,7 +186,8 @@ $( "#myCollapsibleSet" ).children().trigger( "collapse" );
 				<h3>Section B</h3>
 				<p>I'm the collapsible set content for section B.</p>
 			</div>
-		</div>]]></html>
+		</div>
+	</div>]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>

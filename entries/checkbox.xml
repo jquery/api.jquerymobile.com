@@ -113,15 +113,18 @@ $("input[type='checkbox']:first").attr("checked",true).checkboxradio("refresh");
 	</methods>
 	<example>
 		<desc>A basic example of a checkbox in a fieldcontainer</desc>
-		<code><![CDATA[]]></code>
-		<html><![CDATA[  
+		<html><![CDATA[<div data-role="header">
+		<h1>jQuery Mobile Example</h1>
+	</div>
+	<div data-role="content">
 		<div data-role="fieldcontain">
 			<fieldset data-role="controlgroup">
 				<legend>Agree to the terms:</legend>
 				<input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" />
 				<label for="checkbox-2">I agree</label>
 			</fieldset>
-		</div>	]]></html>
+		</div>
+	</div>	]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>

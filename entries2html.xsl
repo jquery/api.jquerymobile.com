@@ -17,11 +17,7 @@
 &lt;body&gt;
 
 &lt;div data-role="page"&gt;
-	&lt;div data-role="header"&gt;
-		&lt;h1&gt;jQuery Mobile Example&lt;/h1&gt;
-	&lt;/div&gt;
-	&lt;div data-role="content"&gt;<xsl:value-of select="html/text()"/>
-	&lt;/div&gt;
+	<xsl:value-of select="html/text()"/>
 &lt;/div&gt;<xsl:if test="code">
 &lt;script&gt;<xsl:value-of select="code/text()"/>&lt;/script&gt;</xsl:if>
 

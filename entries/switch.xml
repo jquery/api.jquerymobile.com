@@ -230,13 +230,16 @@ $('.selector').slider('refresh');
 	</methods>
 	<example>
 		<desc>A basic example of a flip toggle switch.</desc>
-		<code><![CDATA[]]></code>
-		<html><![CDATA[
-		<label for="flip-0">Select slider:</label>
+		<html><![CDATA[<div data-role="header">
+		<h1>jQuery Mobile Example</h1>
+	</div>
+	<div data-role="content">
+			<label for="flip-0">Select slider:</label>
 		<select name="flip-0" id="flip-0" data-role="slider">
 			<option value="off">Off</option>
 			<option value="on">On</option>
-		</select>	]]></html>
+		</select>
+	</div>	]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>
