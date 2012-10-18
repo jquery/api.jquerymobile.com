@@ -3,7 +3,7 @@
 	<title>tap</title>
 	<desc>Triggered after a quick, complete touch event.</desc>
 	<longdesc>
-		<p>The jQuery Mobile <code>tap</code> event triggers after a quick, complete touch event that occurs of a single target object. It is the gesture equivalent of a standard click event that is triggered on the release state of the touch gesture.</p>
+		<p>The jQuery Mobile <code>tap</code> event triggers after a quick, complete touch event that occurs on a single target object. It is the gesture equivalent of a standard click event that is triggered on the release state of the touch gesture.</p>
 
 		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<pre>

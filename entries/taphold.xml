@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<entry name="tap" type="event" return="jQuery">
+	<title>taphold</title>
+	<desc>Triggered after a sustained complete touch event.</desc>
+	<longdesc>
+		<p>The jQuery Mobile <code>taphold</code> event triggers after a sustained, complete touch event (also known as a long press).</p> 
+
+		<p><code>$.event.special.tap.tapholdThreshold (default: 750) - </code> The tapholdThreshold property is how long (in milliseconds) the user must hold their tap before the taphold event fires on the target element.</p>
+
+		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<pre>
+		<code><![CDATA[
+			<style type="text/css">
+				div.box {
+					background-color: #f00;
+					height: 3em;
+					width: 3em;
+				}
+				div.box.taphold {
+					background-color: #fc0;
+				}
+			</style>
+			
+			...
+
+			<h3>Long-press the red square to change it's color:</h3>
+			<div class="box"></div>
+			
+			...
+		    
+		    $(function(){
+		    	// Bind the tapholdHandler callback function to the taphold event on div.box
+		        $('div.box').bind( 'taphold', tapholdHandler );
+
+		        // Callback function references the event target and adds the 'tap' class to it
+		        function tapholdHandler( event ){
+        			$(event.target).addClass( 'taphold' );
+        		}
+			});
+		]]></code>
+	</pre>
+	<p>Long press the square for 750 milliseconds to see the above code applied.
+		<iframe id="tapholdIframe" src="/resources/taphold/example1.html" style="width:100%;height:90px;border:0px"></iframe></p>
+	</longdesc>
+	<added>1.0</added>
+	<signature>
+		<argument name="callback" type="Function" optional="true">
+			<desc>A function to invoke after the the taphold event fires.</desc>
+		</argument>
+	</signature>
+	<category slug="events"/>
+</entry>
