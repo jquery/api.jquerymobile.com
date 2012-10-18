@@ -185,7 +185,7 @@ $('[type="submit"]').button();
 
 		<h3>Icon example</h3>
 		
-		<p>When an <a href="buttons-icons.html">icon</a> is added to an inline button, the button will grow wider to accommodate the icon:
+		<p>When an icon is added to an inline button, the button will grow wider to accommodate the icon:
 		<iframe src="/resources/button/example24.html" style="width:100%;height:90px;border:0px"></iframe></p>
 			
 		<p>A mini version of the same:
@@ -197,14 +197,14 @@ $('[type="submit"]').button();
 		
 <pre><code>
 &lt;div data-role=&quot;controlgroup&quot;&gt;
-&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot;&gt;Yes&lt;/a&gt;
-&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot;&gt;No&lt;/a&gt;
-&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot;&gt;Maybe&lt;/a&gt;
+	&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot;&gt;Yes&lt;/a&gt;
+	&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot;&gt;No&lt;/a&gt;
+	&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot;&gt;Maybe&lt;/a&gt;
 &lt;/div&gt;
 </code></pre>
 
 		<p>By default, grouped buttons are presented as a vertical list:
-		<iframe src="/resources/button/example26.html" style="width:100%;height:190px;border:0px"></iframe></p>
+		<iframe src="/resources/button/example26.html" style="width:100%;height:150px;border:0px"></iframe></p>
 		
 		<p>By adding the <code>data-type="horizontal"</code> attribute to the <code>controlgroup</code> container, you can swap to a horizontal-style group that floats the buttons side-by-side and sets the width to only be large enough to fit the content. (Be aware that these will wrap to multiple lines if the number of buttons or the overall text length is too wide for the screen.)</p>
 		
