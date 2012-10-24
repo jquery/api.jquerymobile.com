@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tap event demo</title>
+    <title>Taphold event demo</title>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css">
     <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
@@ -45,22 +45,22 @@
       height: 3em;
         background-color: #f00;
     }
-    div.box.tap {
-      background-color: #f0f;
+    div.box.taphold {
+      background-color: #fc0;
     }
     </style>
 </head>
 <body>
-  <h3>Tap the red square to change it's color:</h3>
+  <h3>Long-press the red square to change it's color:</h3>
   <div class="box"></div>
     <script>
     $(function(){
-    	$('.box').bind( 'tap', tapHandler );
-        
-        function tapHandler(event){
-        	$(event.target).addClass( 'tap' );
-        }
-    });
+            $('div.box').bind( 'taphold', tapholdHandler );
+
+            function tapholdHandler( event ){
+              $(event.target).addClass( 'taphold' );
+            }
+      });
     </script>
 </body>
 </html>
