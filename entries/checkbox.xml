@@ -38,7 +38,7 @@
 	&lt;fieldset data-role="controlgroup"&gt;
 		&lt;legend&gt;Agree to the terms:&lt;/legend&gt;
 		&lt;input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" /&gt;
-		&lt;label for="checkbox-2">I agree&lt;/label&gt;
+		&lt;label for="checkbox-2"&gt;I agree&lt;/label&gt;
 	&lt;/fieldset&gt;
 &lt;/div&gt;
 </code></pre>
