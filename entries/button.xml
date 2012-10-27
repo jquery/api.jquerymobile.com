@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="button" namespace="fn" type="widget" widgetnamespace="mobile">
+<entry name="buttonMarkup" namespace="fn" type="widget" widgetnamespace="mobile">
 	<title>Button Widget</title>
     <desc>Creates a button widget</desc>
     <longdesc>
@@ -276,7 +276,7 @@ $( document ).bind( "mobileinit", function(){
 			</desc>
 			<type name="CSS selector string" />
 		</option>
-		<option name="corners" default="true">
+		<option name="corners" default="true" example-value="false">
 			<desc>Applies the theme button border-radius if set to true.
 <pre><code>
 $('a').buttonMarkup({ corners: false });
@@ -287,7 +287,7 @@ $('a').buttonMarkup({ corners: false });
 			</desc>
             <type name="Boolean" />
 		</option>
-		<option name="icon" default="null">
+		<option name="icon" default="null" example-value='"star"'>
 			<desc>Applies an icon from the icon set.
 <pre><code>
 $('a').buttonMarkup({ icon: "star" });
