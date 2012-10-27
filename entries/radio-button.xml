@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="radio button" namespace="fn" type="widget" widgetnamespace="mobile">
+<entry name="checkboxradio" namespace="fn" type="widget" widgetnamespace="mobile">
 	<title>Radio button Widget</title>
 	<desc>Creates a radio button widget</desc>
 	<longdesc>
@@ -92,7 +92,7 @@
 	</longdesc>
 	<added>1.0</added>
 	<options>
-		<option name="mini"  default="false">
+		<option name="mini"  default="false" example-value="true">
 			<desc>Sets the size of the element to a more compact, mini version.
 <pre><code>
 $("input[type='radio']").checkboxradio({ mini: true });
