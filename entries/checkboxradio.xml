@@ -190,7 +190,7 @@ $( ".selector" ).checkboxradio( 'disable' );
 			<desc>update the checkboxradio.
 				<p>If you manipulate a checkboxradio via JavaScript, you must call the refresh method on it to update the visual styling. </p>
 <pre><code>
-$( ".selector" ).attr( "checked",true ).checkboxradio( "refresh" );
+$( ".selector" ).attr( "checked", true ).checkboxradio( "refresh" );
 </code></pre>
 			</desc>
 		</method>
