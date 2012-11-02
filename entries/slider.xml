@@ -235,9 +235,7 @@ $('input').slider();
 	<options>
 		<option name="disabled" default="false" example-value="true">
 			<desc>Sets the default state of the slider to disabled when "true".
-<pre><code>
-$('.selector').slider({ disabled: "true" });
-</code></pre>
+
 			</desc>
 			<type name="Boolean" />
 		</option>
