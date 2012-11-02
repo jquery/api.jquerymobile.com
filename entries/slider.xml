@@ -331,5 +331,18 @@ $( '.selector' ).slider( 'refresh' );
 		<input type="range" name="slider-0" id="slider-0" value="60" min="0" max="100" />
 	</div>]]></html>
 	</example>
+	<example>
+		<desc>A basic example of a flip toggle switch.</desc>
+		<html><![CDATA[<div data-role="header">
+		<h1>jQuery Mobile Example</h1>
+	</div>
+	<div data-role="content">
+			<label for="flip-0">Select slider:</label>
+		<select name="flip-0" id="flip-0" data-role="slider">
+			<option value="off">Off</option>
+			<option value="on">On</option>
+		</select>
+	</div>	]]></html>
+	</example>
 	<category slug="widgets"/>
 </entry>
