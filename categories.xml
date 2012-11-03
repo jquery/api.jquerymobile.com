@@ -6,7 +6,8 @@
 ]]></desc>
 	</category>
 	<category name="Events" slug="events">
-		<desc></desc>
+		<desc><![CDATA[
+			<p>jQuery Mobile offers several custom events that build upon native events to create useful hooks for development.</p>]]</desc>
 	</category>
 	<category name="Methods" slug="methods">
 		<desc><![CDATA[
@@ -17,7 +18,7 @@
 	</category>
 	<category name="Reference" slug="reference">
 		<desc><![CDATA[
-			<p></p>]]</desc>
+			<p>The jQuery Mobile framework uses HTML5 data- attributes to allow for markup-based initialization and configuration of widgets.</p>]]</desc>
 	</category>
 	<category name="All" slug="all"/>
 </categories>
