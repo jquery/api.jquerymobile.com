@@ -1,19 +1,23 @@
 <categories>
 	<category name="Uncategorized" slug="uncategorized"/>
 	<category name="Widgets" slug="widgets">
-		<desc></desc>
+		<desc><![CDATA[
+			<p>Widgets are feature-rich, stateful plugins that have a full life-cycle, along with methods and events. Check out the <a href="/jQuery.widget/">widget factory</a> documentation for more details.</p>
+]]></desc>
 	</category>
 	<category name="Events" slug="events">
-	<desc></desc>
+		<desc></desc>
 	</category>
 	<category name="Methods" slug="methods">
-	<desc></desc>
+		<desc><![CDATA[
+			<p>jQuery Mobile exposes several methods and properties on the $.mobile object for use in your applications.</p>]]</desc>
 	</category>
 	<category name="Miscellaneous" slug="misc">
-	<desc></desc>
+		<desc></desc>
 	</category>
 	<category name="Reference" slug="reference">
-	<desc></desc>
+		<desc><![CDATA[
+			<p></p>]]</desc>
 	</category>
 	<category name="All" slug="all"/>
 </categories>
