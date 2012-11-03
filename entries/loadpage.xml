@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<entry type="method" name="loadPage" return="jQuery">
+	<title>.loadPage()</title>
+	<desc>Load an external page, enhance its content, and insert it into the DOM.</desc>
+	<signature>
+		<argument name="url">
+			<type name="String">
+				<desc>Absolute or relative URL. ( "about/us.html" )</desc>
+			</type>
+			<type name="Object">
+				<desc>jQuery collection object. ( $( "#about" ) )</desc>
+			</type>
+		</argument>
+		<argument name="options" type="Object" optional="true">
+			<desc>Properties:</desc>
+				<property name="allowSamePageTransition" type="Boolean" default="false">
+					<desc>By default, changePage() ignores requests to change to the current active page. Setting this option to true, allows the request to execute. Developers should note that some of the page transitions assume that the fromPage and toPage of a changePage request are different, so they may not animate as expected. Developers are responsible for either providing a proper transition, or turning it off for this specific case.
+					</desc>
+				</property>
+				<property name="changeHash" type="Boolean" default="true">
+					<desc>Decides if the hash in the location bar should be updated. </desc>
+				</property>
+				<property name="data" default="undefined">
+					<desc>The data to send with an Ajax page request.</desc>
+					<type name="Object">
+						<desc></desc>
+					</type>
+					<type name="String">
+						<desc></desc>
+					</type>
+				</property>
+				<property name="loadMsgDelay" type="Number" default="50">
+					<desc>Forced delay (in ms) before the loading message is shown. This is meant to allow time for a page that has already been visited to be fetched from cache without a loading message.</desc>
+				</property>
+				<property name="pageContainer" type="jQuery collection" default="$.mobile.pageContainer">
+					<desc>Specifies the element that should contain the page.</desc>
+				</property>
+				<property name="reloadPage" type="Boolean" default="false">
+					<desc>Forces a reload of a page, even if it is already in the DOM of the page container. <br />Used only when the 'to' argument of changePage() is a URL.</desc>
+				</property>
+				<property name="role" type="String" default="undefined">
+					<desc>The data-role value to be used when displaying the page. By default this is undefined which means rely on the value of the @data-role attribute defined on the element.</desc>
+				</property>
+				<property name="showLoadMsg" type="Boolean" default="true">
+					<desc>Decides whether or not to show the loading message when loading external pages.</desc>
+				</property>
+				<property name="transition" type="String" default="$.mobile.defaultPageTransition">
+					<desc>The transition to use when showing the page. </desc>
+				</property>
+				<property name="type" type="String" default='"get"'>
+					<desc>Specifies the method (&quot;get&quot; or &quot;post&quot;) to use when making a page request. <br />Used only when the 'to' argument of changePage() is a URL.</desc>
+				</property>
+			</argument>
+	</signature>
+		<example>
+			<desc>Load the "about us" page into the DOM.</desc>
+				<html><![CDATA[
+	<div></div>
+				]]></html>
+			<code><![CDATA[
+$.mobile.loadPage( "about/us.html" );;
+]]></code>
+		</example>
+		<example>
+			<desc>Load a "search results" page, using data from a form with an id of "search".</desc>
+			<html><![CDATA[
+	<div></div>
+			]]></html>
+			<code><![CDATA[
+$.mobile.loadPage( "searchresults.php", {
+	type: "post",
+	data: $("form#search").serialize()
+});
+]]></code>
+		</example>
+	<longdesc>
+		<p>Load an external page, enhance its content, and insert it into the DOM. This method is called internally by the changePage() function when its first argument is a URL. This function does not affect the current active page so it can be used to load pages in the background. The function returns a deferred promise object that gets resolved after the page has been enhanced and inserted into the document.
+
+</p>
+	</longdesc>
+	<category slug="methods"/>
+</entry>
