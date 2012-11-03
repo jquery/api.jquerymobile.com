@@ -9,5 +9,8 @@
 	<category name="Miscellaneous" slug="misc">
 	<desc></desc>
 	</category>
+	<category name="Reference" slug="reference">
+	<desc></desc>
+	</category>
 	<category name="All" slug="all"/>
 </categories>
