@@ -4,6 +4,7 @@
 	<title>Text input Widget</title>
     <desc>Creates a text input or textarea widget</desc>
     <longdesc>
+		<h2>Text Input</h2>
 		<p>Text inputs and textareas are coded with standard HTML elements, then enhanced by jQuery Mobile to make them more attractive and useable on a mobile device. View the <a href="../../api/data-attributes.html">data- attribute reference</a> to see all the possible attributes you can add to text inputs.</p>
 			
 		<h3>Text inputs</h3>
@@ -12,7 +13,7 @@
 
 <pre><code>
 &lt;label for=&quot;basic&quot;&gt;Text Input:&lt;/label&gt;
-&lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;basic&quot; value=&quot;&quot;  /&gt;
+&lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;basic&quot; value=&quot;&quot; /&gt;
 </code></pre>
 		<p>This will produce a basic text input. The default styles set the width of the input to 100% of the parent container and stack the label on a separate line.
 		<iframe src="/resources/textinput/example1.html" style="width:100%;height:90px;border:0px"></iframe></p>
@@ -23,7 +24,7 @@
 		
 <pre><code>
 &lt;label for=&quot;basic&quot;&gt;Text Input:&lt;/label&gt;
-&lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;basic&quot; value=&quot;&quot; <strong>data-mini=&quot;true&quot;</strong> /&gt;
+&lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;basic&quot; value=&quot;&quot; data-mini=&quot;true&quot; /&gt;
 </code></pre>
 
 		<p>This will produce an input that is not as tall as the standard version and has a smaller text size.
@@ -35,7 +36,7 @@
 <pre><code>
 &lt;div data-role=&quot;fieldcontain&quot;&gt;
 	&lt;label for=&quot;name&quot;&gt;Text Input:&lt;/label&gt;
-	&lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;name&quot; value=&quot;&quot;  /&gt;
+	&lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;name&quot; value=&quot;&quot; /&gt;
 &lt;/div&gt;	
 </code></pre>	
 
@@ -77,7 +78,7 @@ I&#x27;m a basic textarea. If this is pre-populated with content, the height wil
 
 		<p>This plugin will auto initialize on any page that contains a textarea or any of the text input types listed above without any need for a <code>data-role</code> attribute in the markup. However, if needed, you can directly call the <code>textinput</code> plugin on any selector, just like any jQuery plugin:</p>
 <pre><code>
-$('input').textinput();			
+$( 'input' ).textinput();			
 </code></pre>
 				
 		<h3>Degraded input types</h3>
@@ -87,14 +88,67 @@ $('input').textinput();
 		
 		<p>You can configure which types are changed via the page plugin's <code>degradeInputs</code> option, which can be manipulated externally via <code>$.mobile.page.prototype.options.degradeInputs</code>, which has properties: color, date, datetime, "datetime-local", email, month, number, range, search, tel, time, url, and week. Be sure to configure this inside an event handler bound to the <code>mobileinit</code> event, so that it applies to the first page as well as subsequent pages that are loaded.</p>	
 
+		<h2>Search Input</h2>
+		<p>Search inputs are a new HTML type that is styled with pill-shaped corners and adds an "x" icon to clear the field once you start typing. Start with an input with a type="search" attribute in your markup.</p>
+		<p>Set the <code>for</code> attribute of the <code>label</code> to match the <code>id</code> of the <code>input</code> so they are semantically associated. It's possible to accessibly hide the label if it's not desired in the page layout, but we require that it is present in the markup for semantic and accessibility reasons.</p>
+
+<pre><code>
+&lt;label for="search-basic"&gt;Search Input:&lt;/label&gt;
+&lt;input type="search" name="search" id="search-basic" value="" /&gt;
+</code></pre>
+		<p>This will produce a basic search input. The default styles set the width of the input to 100% of the parent container and stack the label on a separate line.
+		<iframe src="/resources/search-input/example1.html" style="width:100%;height:90px;border:0px"></iframe></p>
+        
+		<h3>Mini version</h3>
+        
+		<p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a mini version.</p>
+		
+<pre><code>
+&lt;label for=&quot;search-mini&quot;&gt;Search Input:&lt;/label&gt;
+&lt;input type=&quot;search&quot; name=&quot;search-mini&quot; id=&quot;search-mini&quot; value=&quot;&quot; data-mini=&quot;true&quot;/&gt;
+</code></pre>
+
+		<p>This will produce a search input that is not as tall as the standard version and has a smaller text size.
+		<iframe src="/resources/search-input/example2.html" style="width:100%;height:90px;border:0px"></iframe></p>
+        
+		<h3>Field containers</h3>
+        
+		<p>Optionally wrap the search input in a container with the <code>data-role="fieldcontain"</code> attribute to help visually group it in a longer form.</p>
+<pre><code>
+&lt;div data-role=&quot;fieldcontain&quot;&gt;
+	&lt;label for=&quot;search-2&quot;&gt;Search Input:&lt;/label&gt;
+	&lt;input type=&quot;search&quot; name=&quot;search-2&quot; id=&quot;search-2&quot; value=&quot;&quot; /&gt;
+&lt;/div&gt;
+</code></pre>	
+
+		<p>The search input is now displayed like this:
+		<iframe src="/resources/search-input/example3.html" style="width:100%;height:90px;border:0px"></iframe>
+		</p>
+		
+		<h3>Theming</h3>
+		<p>The <code>data-theme</code> attribute can be added to the search input to set the theme to any swatch letter.
+		<iframe src="/resources/search-input/example4.html" style="width:100%;height:90px;border:0px"></iframe>
+		</p>
+		
+		<h3>Setting the clear button text</h3>
+		
+		<p>The text for the button used to clear the search input of text can be configured for all search inputs by binding to the <code>mobileinit</code> event and setting the 
+		<code>$.mobile.textinput.prototype.options.clearSearchButtonText</code> property to a string of your choosing.</p>
+			
+		<h3>Calling the textinput plugin</h3>
+
+		<p>This plugin will auto-initialize on any page that contains a text input with the <code>type="search"</code> attribute without any need for a <code>data-role</code> attribute in the markup. However, if needed, you can directly call the <code>textinput</code> plugin on a selector, just like any jQuery plugin:</p>
+		
+<pre><code>
+$( '.mySearchInput' ).textinput();			
+</code></pre>        
+
 	</longdesc>
 	<added>1.0</added>
 	<options>
-    	<option name="disabled" default="false">
+    	<option name="disabled" default="false" example-value="true">
         	<desc>Sets the default state of the text input to disabled when "true".
-<pre><code>
-$('.selector').textinput({ disabled: true });
-</code></pre>
+
 			</desc>
             <type name="Boolean" />
         </option>
@@ -109,29 +163,23 @@ $( document ).bind( "mobileinit", function(){
 			</desc>
 			<type name="CSS selector string" />
 		</option>
-		<option name="mini" default="false">
+		<option name="mini" default="false" example-value="true">
 			<desc>Sets the size of the element to a more compact, mini version. 
-<pre><code>
-$('.selector').textinput({ mini: true }); 
-</code></pre>
+
 				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
 			</desc>
             <type name="Boolean" />
 		</option>
-		<option name="preventFocusZoom" default="true on iOS platforms">
+		<option name="preventFocusZoom" default="true on iOS platforms" example-value="true">
 			<desc>This option disables page zoom temporarily when a custom input is focused, which prevents iOS devices from zooming the page into the input. By default, iOS often zooms into form controls, and the behavior is often unnecessary and intrusive in mobile-optimized layouts.
-<pre><code>
-$('input').textinput({ preventFocusZoom: true });
-</code></pre>
+
 				<p>This option is also exposed as a data attribute: <code>data-prevent-focus-zoom="true"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="theme" default="null, inherited from parent">
+		<option name="theme" default="null, inherited from parent" example-value='"a"'>
 			<desc>Sets the color scheme (swatch) for all instances of this widget. It accepts a single letter from a-z that maps to the swatches included in your theme. By default, it will inherit the same swatch color as its parent container if not explicitly set.
-<pre><code>
-$('.selector').textinput({ theme: "a" });
-</code></pre>
+
 				<p>Possible values: swatch letter (a-z).</p>
 				<p>This option is also exposed as a data attribute: <code>data-theme="a"</code>.</p>
 			</desc>
@@ -140,26 +188,27 @@ $('.selector').textinput({ theme: "a" });
 	</options>
 	<events>
 		<event name="create" type="textinputcreate">
-			<desc>triggered when a text input is created</desc>
+			<desc>triggered when a text input is created
 <pre><code>
 $( ".selector" ).textinput({
-	create: function(event, ui) { ... }
+	create: function( event, ui ) { ... }
 });
 </code></pre>
+			</desc>
 		</event>
 	</events>
 	<methods>
 		<method name="enable">
 			<desc>enable a disabled text input.
 <pre><code>
-$('.selector').textinput('enable');
+$( '.selector' ).textinput( 'enable' );
 </code></pre>
 			</desc>
 		</method>
 		<method name="disable">
 			<desc>disable a text input.
 <pre><code>
-$('.selector').textinput('disable');
+$( '.selector' ).textinput( 'disable' );
 </code></pre>
 			</desc>
 		</method>
@@ -172,6 +221,16 @@ $('.selector').textinput('disable');
 	<div data-role="content">
     	<label for="basic">Text Input:</label>
         <input type="text" name="name" id="basic" value=""  />
+	</div>]]></html>
+	</example>
+	<example>
+		<desc>A basic example of a search input field</desc>
+		<html><![CDATA[<div data-role="header">
+		<h1>jQuery Mobile Example</h1>
+	</div>
+	<div data-role="content">
+		<label for="search-basic">Search Input:</label>
+		<input type="search" name="search" id="search-basic" value="" />
 	</div>]]></html>
 	</example>
 	<category slug="widgets"/>
