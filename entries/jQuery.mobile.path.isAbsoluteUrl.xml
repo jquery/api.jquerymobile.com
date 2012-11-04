@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<entry type="method" name="jQuery.mobile.isAbsoluteUrl" return="Boolean">
+	<title>jQuery.mobile.isAbsoluteUrl()</title>
+	<desc>Utility method for determining if a URL is absolute.</desc>
+	<signature>
+		<argument name="url">
+			<type name="String" default="0">
+				<desc>A relative or absolute URL.</desc>
+			</type>
+		</argument>
+	</signature>
+		<example>
+			<desc>Various uses of jQuery.mobile.isAbsoluteUrl</desc>
+				<html><![CDATA[
+	<div></div>
+				]]></html>
+			<code><![CDATA[
+// Returns: true
+var isAbs = $.mobile.path.isAbsoluteUrl("http://foo.com/a/file.html");
+
+// Returns: false
+var isAbs = $.mobile.path.isAbsoluteUrl("//foo.com/a/file.html");
+
+// Returns: false
+var isAbs = $.mobile.path.isAbsoluteUrl("/a/file.html");
+
+// Returns: false
+var isAbs = $.mobile.path.isAbsoluteUrl("file.html");
+
+// Returns: false
+var isAbs = $.mobile.path.isAbsoluteUrl("?a=1&b=2");
+
+// Returns: false
+var isAbs = $.mobile.path.isAbsoluteUrl("#foo");
+
+]]></code>
+		</example>
+	<longdesc>
+		<p>Utility method for determining if a URL is absolute. This function returns a boolean true if the URL is absolute, false if not.</p>
+	</longdesc>
+	<category slug="methods"/>
+</entry>
