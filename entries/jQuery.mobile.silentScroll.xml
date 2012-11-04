@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<entry type="method" name="jQuery.Mobile.silentScroll" return="jQuery">
-	<title>jQuery.Mobile.silentScroll()</title>
+<entry type="method" name="jQuery.mobile.silentScroll" return="jQuery">
+	<title>jQuery.mobile.silentScroll()</title>
 	<desc>Scroll to a particular Y position without triggering scroll event listeners.</desc>
 	<signature>
 		<argument name="yPos">
