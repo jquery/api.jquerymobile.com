@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<entry type="method" name="jQuery.Mobile.changePage" return="jQuery">
-	<title>jQuery.Mobile.changePage()</title>
+<entry type="method" name="jQuery.mobile.changePage" return="jQuery">
+	<title>jQuery.mobile.changePage()</title>
 	<desc>Programmatically change from one page to another.</desc>
 	<signature>
 		<argument name="to">
