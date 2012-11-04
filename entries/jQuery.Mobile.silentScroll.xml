@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<entry type="method" name="jQuery.Mobile.silentScroll" return="jQuery">
+	<title>jQuery.Mobile.silentScroll()</title>
+	<desc>Scroll to a particular Y position without triggering scroll event listeners.</desc>
+	<signature>
+		<argument name="yPos">
+			<type name="Number" default="0">
+				<desc>Pass any number to scroll to that Y location.</desc>
+			</type>
+		</argument>
+	</signature>
+		<example>
+			<desc>scroll to Y 100px</desc>
+				<html><![CDATA[
+	<div></div>
+				]]></html>
+			<code><![CDATA[
+$.mobile.silentScroll(100);
+]]></code>
+		</example>
+	<longdesc>
+		<p>Scroll to a particular Y position without triggering scroll event listeners.</p>
+	</longdesc>
+	<category slug="methods"/>
+</entry>
