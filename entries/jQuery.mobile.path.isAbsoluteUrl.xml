@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<entry type="method" name="jQuery.mobile.isAbsoluteUrl" return="Boolean">
-	<title>jQuery.mobile.isAbsoluteUrl()</title>
+<entry type="method" name="jQuery.mobile.path.isAbsoluteUrl" return="Boolean">
+	<title>jQuery.mobile.path.isAbsoluteUrl()</title>
 	<desc>Utility method for determining if a URL is absolute.</desc>
 	<signature>
 		<argument name="url">
@@ -10,7 +10,7 @@
 		</argument>
 	</signature>
 		<example>
-			<desc>Various uses of jQuery.mobile.isAbsoluteUrl</desc>
+			<desc>Various uses of jQuery.mobile.path.isAbsoluteUrl</desc>
 				<html><![CDATA[
 	<div></div>
 				]]></html>
