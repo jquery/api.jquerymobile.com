@@ -341,7 +341,7 @@
 					<td><strong>origin</strong> - Centers the popup over the link that opens it<br />
 						jQuery selector - Centers the popup over the specified element<br />
 						window - Centers the popup in the window<br />
-						<u>Note:</u> option only available when used with popups. See also: popup <a href="../pages/popup/options.html">options</a>.</td>
+						<u>Note:</u> option only available when used with popups. See also: <a href="../popup/"> options</a>.</td>
 				</tr>
 			</table>
 			<p></p>
