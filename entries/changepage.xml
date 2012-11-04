@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
-<entry type="method" name="changePage" return="jQuery">
-	<title>.changePage()</title>
+<entry type="method" name="jQuery.Mobile.changePage" return="jQuery">
+	<title>jQuery.Mobile.changePage()</title>
 	<desc>Programmatically change from one page to another.</desc>
 	<signature>
 		<argument name="to">
 			<type name="String">
-				<desc>Absolute or relative URL. ("about/us.html")</desc>
+				<desc>Absolute or relative URL. ( "about/us.html" )</desc>
 			</type>
 			<type name="Object">
-				<desc>jQuery collection object. ($("#about"))</desc>
+				<desc>jQuery collection object. ( $( "#about" ) )</desc>
 			</type>
 		</argument>
 		<argument name="options" type="Object" optional="true">
@@ -62,7 +62,7 @@
 				]]></html>
 			<code><![CDATA[
 $.mobile.changePage( "about/us.html", { transition: "slideup"} );
-			]]></code>
+]]></code>
 		</example>
 		<example>
 			<desc>Transition to the "search results" page, using data from a form with an id of "search".</desc>
@@ -74,7 +74,7 @@ $.mobile.changePage( "searchresults.php", {
 	type: "post",
 	data: $("form#search").serialize()
 });
-			]]></code>
+]]></code>
 		</example>
 		<example>
 			<desc>Transition to the "confirm" page with a "pop" transition without tracking it in history.</desc>
@@ -87,7 +87,7 @@ $.mobile.changePage( "../alerts/confirm.html", {
 	reverse: false,
 	changeHash: false
 });
-			]]></code>
+]]></code>
 		</example>
 	<longdesc>
 		<p>Programmatically change from one page to another. This method is used internally for the page loading and transitioning that occurs as a result of clicking a link or submitting a form, when those features are enabled.</p>
