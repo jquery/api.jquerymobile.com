@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<entry type="method" name="jQuery.mobile.path.get" return="Boolean">
+	<title>jQuery.mobile.path.get()</title>
+	<desc>Utility method for determining the directory portion of an URL.</desc>
+	<signature>
+		<argument name="url">
+			<type name="String" >
+				<desc>A relative or absolute URL.</desc>
+			</type>
+		</argument>
+	</signature>
+		<example>
+			<desc>Various uses of jQuery.mobile.path.get</desc>
+				<html><![CDATA[
+	<div></div>
+				]]></html>
+			<code><![CDATA[
+// Returns: http://foo.com/a/
+var dirName = $.mobile.path.get("http://foo.com/a/file.html");
+
+// Returns: http://foo.com/a/
+var dirName = $.mobile.path.get("http://foo.com/a/");
+
+// Returns: http://foo.com/a
+var dirName = $.mobile.path.get("http://foo.com/a");
+
+// Returns: //foo.com/a/
+var dirName = $.mobile.path.get("//foo.com/a/file.html");
+
+// Returns: /a/
+var dirName = $.mobile.path.get("/a/file.html");
+
+// Returns: ""
+var dirName = $.mobile.path.get("file.html");
+
+// Returns: /
+var dirName = $.mobile.path.get("/file.html");
+
+// Returns: ?a=1&b=2
+var dirName = $.mobile.path.get("?a=1&b=2");
+
+// Returns: foo
+var dirName = $.mobile.path.get("#foo");
+
+
+]]></code>
+		</example>
+	<longdesc>
+		<p>Utility method for determining the directory portion of an URL. If the URL has no trailing slash, the last component of the URL is considered to be a file. This function returns the directory portion of a given URL.</p>
+	</longdesc>
+	<category slug="methods"/>
+</entry>
