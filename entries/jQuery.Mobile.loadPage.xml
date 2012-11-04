@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<entry type="method" name="loadPage" return="jQuery">
-	<title>.loadPage()</title>
+<entry type="method" name="jQuery.Mobile.loadPage" return="jQuery">
+	<title>jQuery.Mobile.loadPage()</title>
 	<desc>Load an external page, enhance its content, and insert it into the DOM.</desc>
 	<signature>
 		<argument name="url">
