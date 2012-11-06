@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<entry type="method" name="jQuery.mobile.path.isRelativeUrl" return="Boolean">
+	<title>jQuery.mobile.path.isRelativeUrl()</title>
+	<desc>Utility method for determining if a URL is a relative variant.</desc>
+	<signature>
+		<argument name="url">
+			<type name="String">
+				<desc>A relative or absolute URL.</desc>
+			</type>
+		</argument>
+	</signature>
+		<example>
+			<desc>Various uses of jQuery.mobile.path.isRelativeUrl</desc>
+				<html><![CDATA[
+	<div></div>
+				]]></html>
+			<code><![CDATA[
+// Returns: false
+var isRel = $.mobile.path.isRelativeUrl("http://foo.com/a/file.html");
+
+// Returns: true
+var isRel = $.mobile.path.isRelativeUrl("//foo.com/a/file.html");
+
+// Returns: true
+var isRel = $.mobile.path.isRelativeUrl("/a/file.html");
+
+// Returns: true
+var isRel = $.mobile.path.isRelativeUrl("file.html");
+
+// Returns: true
+var isRel = $.mobile.path.isRelativeUrl("?a=1&b=2");
+
+// Returns: true
+var isRel = $.mobile.path.isRelativeUrl("#foo");
+
+]]></code>
+		</example>
+	<longdesc>
+		<p>Utility method for determining if a URL is relative variant. This function returns a boolean true if the URL is relative, false if it is absolute.</p>
+	</longdesc>
+	<category slug="methods"/>
+</entry>
