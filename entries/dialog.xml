@@ -72,7 +72,7 @@
 	</longdesc>
 	<added>1.0</added>
 	<options>
-		<option name="closeBtnText" default='"Close"'>
+		<option name="closeBtnText" default='"Close"' example-value='"Fermer"'>
 			<desc>
 				<p>Customizes the text of the close button which is helpful for translating this into different languages. This is displayed as an icon-only button by default so the text isn't visible on-screen, but is read by screen readers so this is an important accessibility feature.</p>
 				<p>This option is also exposed as a data attribute: <code>data-close-btn-text</code>.</p>
@@ -89,11 +89,11 @@ $( document ).bind( "mobileinit", function() {
 			</desc>
 			<type name="CSS selector string" />
 		</option>
-		<option name="overlayTheme" default='"a"'>
+		<option name="overlayTheme" default='"a"' example-value='"e"'>
 			<desc>
 				<p>Dialogs appear to be floating above an overlay layer. This overlay adopts the swatch A content color by default, but the data-overlay-theme attribute can be added to the page wrapper to set the overlay to any swatch letter.</p>
 				<p> Possible values: swatch letter (a-z)</p>
-				<p>This option is also exposed as a data attribute: <code>data-overlay-theme</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-overlay-theme="e"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
