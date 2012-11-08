@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry type="method" name="jQuery.mobile.changePage" return="jQuery">
+<entry type="method" name="jQuery.mobile.changePage" return="Undefined">
 	<title>jQuery.mobile.changePage()</title>
 	<desc>Programmatically change from one page to another.</desc>
 	<signature>
