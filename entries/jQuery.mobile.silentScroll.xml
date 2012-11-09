@@ -12,11 +12,20 @@
 		<example>
 			<desc>scroll to Y 100px</desc>
 				<html><![CDATA[
-	<div></div>
+	<div data-role="header">
+		<h1>silentScroll() example</h1>
+	</div>
+	<div data-role="content">
+		<a href="#" onclick="$.mobile.silentScroll(50)" data-role="button">Go down 50 pixels</a>
+		<p> <br /><br />Here, we have some text so that we can have <br />
+		some vertical space in order to demonstrate <br />
+		the silentScroll() method.<br /><br /></p>	
+		<a href="#" onclick="$.mobile.silentScroll(0)" data-role="button">Back to Top</a>
+	</div>
+	<div data-role="footer">
+		<h4> </h4>
+	</div>
 				]]></html>
-			<code><![CDATA[
-$.mobile.silentScroll(100);
-]]></code>
 		</example>
 	<longdesc>
 		<p>Scroll to a particular Y position without triggering scroll event listeners.</p>
