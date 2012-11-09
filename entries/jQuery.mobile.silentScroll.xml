@@ -16,7 +16,7 @@
 		<h1>silentScroll() example</h1>
 	</div>
 	<div data-role="content">
-		<a href="#" onclick="$.mobile.silentScroll(50)" data-role="button">Go down 50 pixels</a>
+		<a href="#" onclick="$.mobile.silentScroll(100)" data-role="button">Go down 100 pixels</a>
 		<p> <br /><br />Here, we have some text so that we can have <br />
 		some vertical space in order to demonstrate <br />
 		the silentScroll() method.<br /><br /></p>	
