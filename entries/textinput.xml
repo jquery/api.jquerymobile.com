@@ -194,6 +194,12 @@ $( ".selector" ).textinput({
 	create: function( event, ui ) { ... }
 });
 </code></pre>
+				<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc></desc>
+			</argument>
 			</desc>
 		</event>
 	</events>
