@@ -101,6 +101,17 @@ $( document ).bind( "mobileinit", function() {
 	<events>
 		<event name="create" type="dialogcreate">
 			<desc>Triggered when a dialog is created</desc>
+<pre><code>			
+$( ".selector" ).dialog({
+   create: function(event, ui) { ... }
+});
+</code></pre>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc></desc>
+			</argument>
 		</event>
 	</events>
 	<methods>
