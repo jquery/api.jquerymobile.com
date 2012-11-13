@@ -294,6 +294,24 @@ $( ".selector" ).slider({
 				<desc></desc>
 			</argument>
 		</event>
+		<event name="slidestart" type="slidestart">
+			<desc>triggered when there's an initial interaction with the slider. Includes drags and taps.</desc>	
+<pre><code>
+$( ".selector" ).on( 'slidestart', function( event ) { ... });
+</code></pre>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+		</event>
+		<event name="slidestart" type="slidestart">
+			<desc>triggered at the end of an interaction with the slider. Includes drags and taps.</desc>	
+<pre><code>
+$( ".selector" ).on( 'slidestop', function( event ) { ... });
+</code></pre>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+		</event>
 	</events>
 	<methods>
 		<method name="enable">
