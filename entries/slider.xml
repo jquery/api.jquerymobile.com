@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="slider" namespace="fn" type="widget" widgetnamespace="mobile">
+<entry name="slider" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="slide">
 	<title>Slider Widget</title>
 	<desc>Creates a slider widget</desc>
 	<longdesc>
@@ -280,34 +280,21 @@ $( document ).bind( "mobileinit", function(){
 		</option>
 	</options>
 	<events>
-		<event name="create" type="slidecreate">
+		<event name="create">
 			<desc>triggered when a slider is created</desc>	
-<pre><code>
-$( ".selector" ).slider({
-	create: function(event, ui) { ... }
-});
-</code></pre>
 			<argument name="event" type="Event">
-				<desc></desc>
 			</argument>
 			<argument name="ui" type="Object">
-				<desc></desc>
 			</argument>
 		</event>
-		<event name="slidestart" type="slidestart">
+		<event name="start">
 			<desc>triggered when there's an initial interaction with the slider. Includes drags and taps.</desc>	
-<pre><code>
-$( ".selector" ).on( 'slidestart', function( event ) { ... });
-</code></pre>
 			<argument name="event" type="Event">
 				<desc></desc>
 			</argument>
 		</event>
-		<event name="slidestart" type="slidestart">
+		<event name="stop">
 			<desc>triggered at the end of an interaction with the slider. Includes drags and taps.</desc>	
-<pre><code>
-$( ".selector" ).on( 'slidestop', function( event ) { ... });
-</code></pre>
 			<argument name="event" type="Event">
 				<desc></desc>
 			</argument>
@@ -316,24 +303,15 @@ $( ".selector" ).on( 'slidestop', function( event ) { ... });
 	<methods>
 		<method name="enable">
 			<desc>enable a disabled slider.
-<pre><code>
-$( '.selector' ).slider( 'enable' );
-</code></pre>
 			</desc>
 		</method>
 		<method name="disable">
 			<desc>disable a slider.
-<pre><code>
-$( '.selector' ).slider( 'disable' );
-</code></pre>
 			</desc>
 		</method>
 		<method name="refresh">
 			<desc>update the slider.
 				<p>If you manipulate a slider via JavaScript, you must call the refresh method on it to update the visual styling.</p>
-<pre><code>
-$( '.selector' ).slider( 'refresh' );
-</code></pre>
 			</desc>
 		</method>
 	</methods>
