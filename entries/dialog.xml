@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="dialog" namespace="fn" type="widget" widgetnamespace="mobile">
+<entry name="dialog" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="dialog">
 	<title>Dialog Widget</title>
 	<desc>Opens content in an interactive overlay.</desc>
 	<longdesc>
@@ -99,13 +99,8 @@ $( document ).bind( "mobileinit", function() {
 		</option>
 	</options>
 	<events>
-		<event name="create" type="dialogcreate">
+		<event name="create">
 			<desc>Triggered when a dialog is created</desc>
-<pre><code>			
-$( ".selector" ).bind({
-   create: function(event, ui) { ... }
-});
-</code></pre>
 			<argument name="event" type="Event">
 				<desc></desc>
 			</argument>
