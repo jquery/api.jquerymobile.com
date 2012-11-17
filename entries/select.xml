@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="selectmenu" namespace="fn" type="widget" widgetnamespace="mobile">
+<entry name="selectmenu" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="select">
 	<title>Selectmenu Widget</title>
 	<desc>Creates a select menu widget</desc>
 	<longdesc>
@@ -329,13 +329,8 @@ $( document ).bind( "mobileinit", function(){
 		</option>
 	</options>
     <events>
- 		<event name="create" type="selectcreate">
+ 		<event name="create">
 			<desc>triggered when a text input is created</desc>
-<pre><code>
-$( ".selector" ).selectmenu({
-	create: function(event, ui) { ... }
-});
-</code></pre>
 			<argument name="event" type="Event">
 				<desc></desc>
 			</argument>
@@ -347,30 +342,18 @@ $( ".selector" ).selectmenu({
 	<methods>
 		<method name="close">
 			<desc>close an open select menu.
-<pre><code>
-$('select').selectmenu('close');
-</code></pre>
 			</desc>
 		</method>
 		<method name="enable">
 			<desc>enable a disabled text input.
-<pre><code>
-$('select').selectmenu('enable');
-</code></pre>
 			</desc>
 		</method>
 		<method name="disable">
 			<desc>disable a text input.
-<pre><code>
-$('select').selectmenu('disable');
-</code></pre>
 			</desc>
 		</method>
 		<method name="open">
 			<desc>open a closed select menu (custom menus only).
-<pre><code>
-$('select').selectmenu('open');
-</code></pre>
 			</desc>
 		</method>
 		<method name="refresh">
