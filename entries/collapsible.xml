@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="collapsible" namespace="fn" type="widget" widgetnamespace="mobile">
+<entry name="collapsible" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="collapsible">
 	<title>Collapsible Widget</title>
 	<desc>Creates a collapsible block of content</desc>
 	<longdesc>
@@ -100,76 +100,41 @@
   	</longdesc>
 	<added>1.0</added>
 	<options>
-		<option name="collapseCueText" default='" click to collapse contents"'>
-			<desc>This text is used to provide audible feedback for users with screen reader software. To set the value for all instances of this widget, bind this option to the mobileinit event:
-<pre><code>
-$( document ).bind( "mobileinit", function(){
-	$.mobile.collapsible.prototype.options.collapseCueText = " collapse with a click";
-});
-</code></pre>
+		<option name="collapseCueText" default='" click to collapse contents"'  example-value='" collapse with a click"'>
+			<desc>This text is used to provide audible feedback for users with screen reader software. 
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="collapsed" default="true">
-			<desc>When false, the container is initially expanded with a minus icon in the header. To set the value for all instances of this widget, bind this option to the mobileinit event:
-<pre><code>
-$( document ).bind( "mobileinit", function(){
-	$.mobile.collapsible.prototype.options.collapsed = false;
-});
-</code></pre>
+		<option name="collapsed" default="true" example-value="false">
+			<desc>When false, the container is initially expanded with a minus icon in the header. 
 				<p>This option is also exposed as a data attribute:<code>data-collapsed="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="collapsedIcon" default='"plus"'>
-			<desc>Sets the icon for the header of the collapsible container when in a collapsed state. To set the value for all instances of this widget, bind this option to the mobileinit event:
-<pre><code>
-$( document ).bind( "mobileinit", function(){
-	$.mobile.collapsible.prototype.options.collapsedIcon = "arrow-r";
-});
-</code></pre>
+		<option name="collapsedIcon" default='"plus"' example-value='"arrow-r"'>
+			<desc>Sets the icon for the header of the collapsible container when in a collapsed state. 
 				<p>This option is also exposed as a data attribute:<code>data-collapsed-icon="arrow-r"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="expandCueText" default='" click to expand contents"'>
-			<desc>This text is used to provide audible feedback for users with screen reader software. To set the value for all instances of this widget, bind this option to the mobileinit event:
-<pre><code>
-$( document ).bind( "mobileinit", function(){
-	$.mobile.collapsible.prototype.options.expandCueText = " expand with a click";
-});
-</code></pre>
+		<option name="expandCueText" default='" click to expand contents"' example-value='" expand with a click"'>
+			<desc>This text is used to provide audible feedback for users with screen reader software. 
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="expandedIcon" default='"minus"'>
-			<desc>Sets the icon for the header of the collapsible container when in an expanded state. To set the value for all instances of this widget, bind this option to the mobileinit event:
-<pre><code>
-$( document ).bind( "mobileinit", function(){
-	$.mobile.collapsible.prototype.options.expandedIcon = "arrow-d";
-});
-</code></pre>
+		<option name="expandedIcon" default='"minus"' example-value='"arrow-d"'>
+			<desc>Sets the icon for the header of the collapsible container when in an expanded state. 
 				<p>This option is also exposed as a data attribute: <code>data-expanded-icon="arrow-d"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="heading" default='"h1,h2,h3,h4,h5,h6,legend"'>
-			<desc>Within the collapsible container, the first immediate child element that matches this selector will be used as the header for the collapsible. To change the selector, bind this option to the mobileinit event:
-<pre><code>
-$( document ).bind( "mobileinit", function(){
-	$.mobile.collapsible.prototype.options.heading = ".mycollapsibleheading";
-});
-</code></pre>
+		<option name="heading" default='"h1,h2,h3,h4,h5,h6,legend"' example-value='".mycollapsibleheading"'>
+			<desc>Within the collapsible container, the first immediate child element that matches this selector will be used as the header for the collapsible.
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="iconpos" default='"left"'>
-			<desc>Positions the icon in the collapsible header. To set the value for all instances of this widget, bind this option to the mobileinit event:
-<pre><code>
-$( document ).bind( "mobileinit", function(){
-	$.mobile.collapsible.prototype.options.iconpos = "right";
-});
-</code></pre>
+		<option name="iconpos" default='"left"' example-value='"right"'>
+			<desc>Positions the icon in the collapsible header. 
 				<p>Possible values: left, right, top, bottom, none, notext.</p>
 				<p>This option is also exposed as a data attribute: <code>data-iconpos="right"</code>.</p>
 			</desc>
@@ -185,35 +150,20 @@ $( document ).bind( "mobileinit", function(){
 			</desc>
 			<type name="CSS selector string" />
 		</option>
-		<option name="inset"  default="true">
-			<desc>By setting this option to false the element will get a full width appearance without corners. If the value is false for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set. To set the value for all instances of this widget, bind this option to the mobileinit event:
-<pre><code>
-$( document ).bind( "mobileinit", function(){
-	$.mobile.collapsible.prototype.options.inset = false;
-});
-</code></pre>
+		<option name="inset"  default="true" example-value="false">
+			<desc>By setting this option to false the element will get a full width appearance without corners. If the value is false for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set. 
 				<p>This option is also exposed as a data attribute: <code>data-inset="false"</code>.</p>
  			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="mini"  default="false">
-			<desc>Sets the size of the element to a more compact, mini version. If the value is false for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set. To set the value for all instances of this widget, bind this option to the mobileinit event:
-<pre><code>
-$( document ).bind( "mobileinit", function(){
-	$.mobile.collapsible.prototype.options.mini = true;
-});
-</code></pre>
+		<option name="mini"  default="false" example-value="true">
+			<desc>Sets the size of the element to a more compact, mini version. If the value is false for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set. 
 				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="theme" default="null, inherited from parent">
-			<desc>Sets the color scheme (swatch) for the collapsible. It accepts a single letter from a-z that maps to the swatches included in your theme. To set the value for all instances of this widget, bind this option to the mobileinit event:
-<pre><code>
-$( document ).bind( "mobileinit", function(){
-	$.mobile.collapsible.prototype.options.theme = "a";
-});
-</code></pre>
+		<option name="theme" default="null, inherited from parent" example-value='"a"'>
+			<desc>Sets the color scheme (swatch) for the collapsible. It accepts a single letter from a-z that maps to the swatches included in your theme. 
 				<p>Possible values: swatch letter (a-z).</p>
 				<p>This option is also exposed as a data attribute: <code>data-theme="a"</code>.</p>
 			</desc>
@@ -221,13 +171,8 @@ $( document ).bind( "mobileinit", function(){
 		</option>
 	</options>
 	<events>
-		<event name="create" type="collapsiblecreate">	
+		<event name="create">	
 			<desc>Triggered when a collapsible is created
-<pre><code>
-$( ".selector" ).collapsible({
-	create: function(event, ui) { ... }
-});
-</code></pre>
 			</desc>
 			<argument name="event" type="Event">
 				<desc></desc>
@@ -236,13 +181,8 @@ $( ".selector" ).collapsible({
 				<desc></desc>
 			</argument>
 		</event>
-		<event name="collapse" type="collapse">
+		<event name="collapse">
 			<desc>Triggered when a collapsible is collapsed
-<pre><code>
-$( ".selector" ).collapsible({
-	collapse: function(event, ui) { ... }
-});
-</code></pre>
 			</desc>
 			<argument name="event" type="Event">
 				<desc></desc>
@@ -251,13 +191,8 @@ $( ".selector" ).collapsible({
 				<desc></desc>
 			</argument>
 		</event>
-		<event name="expand" type="expand">
+		<event name="expand">
 			<desc>Triggered when a collapsible is expanded
-<pre><code>
-$( ".selector" ).collapsible({
-	expand: function(event, ui) { ... }
-});
-</code></pre>
 			</desc>
 			<argument name="event" type="Event">
 				<desc></desc>
@@ -270,16 +205,10 @@ $( ".selector" ).collapsible({
 	<methods>
 		<method name="collapse">
 			<desc>collapse a collapsible.
-<pre><code>
-$( ".selector" ).trigger( "collapse" );	
-</code></pre>
 			</desc>
 		</method>
 		<method name="expand">
 			<desc>expand a collapsible.
-<pre><code>
-$( ".selector" ).trigger( "expand" );	
-</code></pre>
 			</desc>
 		</method>
 	</methods>
