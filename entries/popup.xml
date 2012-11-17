@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="popup" namespace="fn" type="widget" widgetnamespace="mobile">
+<entry name="popup" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="popup">
 	<title>Popup Widget</title>
 	<desc>Opens content in a Popup.</desc>
 	<longdesc>
@@ -400,33 +400,24 @@ $( document ).on( "pageinit", function() {
 	</longdesc>
 	<added>1.2</added>
 	<options>
-		<option name="corners" default="true">
+		<option name="corners" default="true" example-value="false">
 			<desc>
 				<p>Sets whether to draw the popup with rounded corners.</p>
-<pre><code>
-$('a').buttonMarkup({ corners: false });
-</code></pre>
 				<p>This option is also exposed as a data attribute: <code>data-corners="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="dismissable" default="true">
+		<option name="dismissable" default="true" example-value="false">
 			<desc>
 				<p>Sets whether clicking outside the popup or pressing Escape while the popup is open will close the popup.</p>
 				<p><em>Note:</em> When history support is turned on, pressing the browser's "Back" button will dismiss the popup even if this option is set to false.</p>
-<pre><code>
-$( ".selector" ).popup({ dismissable: false });
-</code></pre>
 				<p>This option is also exposed as a data attribute: <code>data-dismissable="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="history" default="true">
+		<option name="history" default="true" example-value="false">
 			<desc>
 				<p>Sets whether to alter the url when a popup is open to support the back button.</p>
-<pre><code>
-$( ".selector" ).popup({ history: false });
-</code></pre>
 				<p>This option is also exposed as a data attribute: <code>data-history="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
@@ -441,17 +432,14 @@ $( document ).bind( "mobileinit", function(){
 			</desc>
 			<type name="CSS selector string" />
 		</option>
-		<option name="overlayTheme" default="null">
+		<option name="overlayTheme" default="null" example-value='"a"'>
 			<desc>
 				<p>Sets the color scheme (swatch) for the popup background, which covers the entire window. If not explicitly set, the background will be transparent.</p>
-<pre><code>
-$( ".selector" ).popup({ overlayTheme: "a" });
-</code></pre>
 				<p>This option is also exposed as a data attribute: <code>data-history="false"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="positionTo" default='"origin"'>
+		<option name="positionTo" default='"origin"' example-value='"window"'>
 			<desc>
 				<p>Sets the element relative to which the popup will be centered. It has the following values:
 				<table>
@@ -470,27 +458,21 @@ $( ".selector" ).popup({ overlayTheme: "a" });
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="shadow" default="true">
+		<option name="shadow" default="true" example-value="false">
 			<desc>
 				<p>Sets whether to draw a shadow around the popup.</p>
-<pre><code>
-$( ".selector" ).popup({ shadow: false });
-</code></pre>
 				<p>This option is also exposed as a data attribute: <code>data-shadow="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="theme" default="null, inherited from parent">
+		<option name="theme" default="null, inherited from parent" example-value='"a"'>
 			<desc><p>Sets the color scheme (swatch) for the popup contents. Unless explicitly set to 'none', the theme for the popup will be assigned the first time the popup is shown by inheriting the page theme or, failing that, by the hard-coded value 'c'. If you set it to 'none', the popup will not have any theme at all, and will be transparent. </p>
-<pre><code>
-$( ".selector" ).popup({ theme: "a" });
-</code></pre>
 				<p>Possible values: swatch letter (a-z).</p>
 				<p>This option is also exposed as a data attribute: <code>data-theme="a"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="tolerance" default='"30,15,30,15"'>
+		<option name="tolerance" default='"30,15,30,15"' example-value='"0,0"'>
 			<desc>
 				<p>Sets the minimum distance from the edge of the window for the corresponding edge of the popup. By default, the values above will be used for the distance from the top, right, bottom, and left edge of the window, respectively.</p>
 				<p>You can specify a value for this option in one of four ways:
@@ -504,7 +486,7 @@ $( ".selector" ).popup({ theme: "a" });
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="transition" default="none">
+		<option name="transition" default="none" example-value='"pop"'>
 			<desc>
 				<p>Sets the default transition for the popup. The default value will result in no transition.</p>
 				<p>If the popup is opened from a link, and the link has the data-transition attribute set, the value specified therein will override the value of this option at the time the popup is opened from the link.</p>
@@ -513,43 +495,25 @@ $( ".selector" ).popup({ theme: "a" });
 		</option>
 	</options>
 	<events>
-		<event name="beforeposition" type="popupbeforeposition">
+		<event name="beforeposition">
 			<desc><p>Triggered after a popup has completed preparations for opening, but has not yet opened</p>
-<pre><code>
-$( ".selector" ).bind({
-	popupbeforeposition: function(event, ui) { ... }
-});
-</code></pre>
 				<p>This event is triggered when the popup has completed preparations for appearing on the screen. At this point the popup has not started the animations and it has not yet calculated the coordinates where it will appear on the screen. Handling this event gives an opportunity to modify the content of the popup before it appears on the screen. For example, the content can be scaled or parts of it can be hidden or removed if it is too wide or too tall.</p>
 			</desc>
 		</event>
-		<event name="afteropen" type="popupafteropen">
+		<event name="afteropen">
 			<desc><p>Triggered after a popup has completely opened</p>
-<pre><code>
-$( ".selector" ).bind({
-	popupafteropen: function(event, ui) { ... }
-});
-</code></pre>
 				<p>This event is triggered when the popup has completely appeared on the screen, meaning that all associated animations have completed.</p>
 			</desc>
 		</event>
-		<event name="afterclose" type="popupafterclose">
+		<event name="afterclose">
 			<desc><p>Triggered when a popup has completely closed</p>
-<pre><code>
-$( ".selector" ).bind({
-	popupafterclose: function(event, ui) { ... }
-});
-</code></pre>
 				<p>This event is triggered when the popup has completely disappeared from the screen, meaning that all associated animations have completed.</p>
 			</desc>
 		</event>
 	</events>
 	<methods>
-		<method name="open">
+		<method name="open" example-params="options">
 			<desc>display the popup using the specified options.
-<pre><code>
-$( ".selector" ).popup( "open", options );
-</code></pre>
 
 				<p>If <code>x</code> or <code>y</code> is missing, and no jQuery selector is given as the value of <code>positionTo</code>, the middle of the window will be used.</p>
 				<p><code>transition</code> can be used to override the popup's own <code>transition</code> option. This will result in the popup opening via the transition specified in the call, but the popup's <code>transition</code> option will not be updated.</p>
@@ -575,10 +539,7 @@ $( ".selector" ).popup( "open", options );
 				</argument>
 		</method>
 		<method name="close">
-			<desc>Closes the popup.
-<pre><code>
-$( ".selector" ).popup( "close" );
-</code></pre>		
+			<desc>Closes the popup.	
 			</desc>
 		</method>
 	</methods>
