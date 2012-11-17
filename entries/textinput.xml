@@ -159,7 +159,6 @@ $( document ).bind( "mobileinit", function(){
 	$.mobile.textinput.prototype.options.initSelector = ".myInputs";
 }); 
 </code></pre>
-				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
 			</desc>
 			<type name="CSS selector string" />
 		</option>
