@@ -357,15 +357,17 @@ $( document ).bind( "mobileinit", function(){
 			</desc>
 		</method>
 		<method name="refresh">
-			<desc>update the custom select.<p>This is used to update the custom select to reflect the native select element's value.If the number of options in the select are different than the number of items in the custom menu, it'll rebuild the custom menu. Also, if you pass a true argument you can force the rebuild to happen. </p>
-<pre><code>
-//refresh value			
-$('select').selectmenu('refresh');
-
-//refresh and force rebuild
-$('select').selectmenu('refresh', true);
-</code></pre>
+			<desc> 
 			</desc>
+			<signature>
+				<desc>update the custom select.<p>This is used to update the custom select to reflect the native select element's value. If the number of options in the select are different than the number of items in the custom menu, it'll rebuild the custom menu.</p></desc>
+			</signature>
+			<signature example-params="true">
+					<desc>update the custom select.<p>This is used to update the custom select to reflect the native select element's value. If the number of options in the select are different than the number of items in the custom menu, it'll rebuild the custom menu. If you pass a true argument you can force the rebuild to happen.</p></desc>
+				<argument name="option" type="Boolean">
+					<desc>to force a rebuild</desc>
+				</argument>
+			</signature>
 		</method>
 	</methods>
 	<example>
