@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="listview" namespace="fn" type="widget" widgetnamespace="mobile">
+<entry name="listview" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="listview">
 	<title>Listview Widget</title>
 	<desc>Creates a listview widget</desc>
 	<longdesc>
@@ -140,32 +140,20 @@ $('#mylist').listview('refresh');
 	</longdesc>
 	<added>1.0</added>
 	<options>
-		<option name="countTheme" default='"c"'>
+		<option name="countTheme" default='"c"' example-value='"a"'>
 			<desc>Sets the color scheme (swatch) for list item count bubbles. It accepts a single letter from a-z that maps to one of the swatches included in your theme.
-<pre><code>
-$( document ).bind( "mobileinit", function(){
-	$.mobile.listview.prototype.options.countTheme = "a";
-});</code></pre>
 				<p>This option is also exposed as a data attribute: <code>data-count-theme="a"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="dividerTheme" default='"b"'>
+		<option name="dividerTheme" default='"b"' example-value='"a"'>
 			<desc>Sets the color scheme (swatch) for list dividers. It accepts a single letter from a-z that maps to one of the swatches included in your theme.
-<pre><code>
-$( document ).bind( "mobileinit", function(){
-	$.mobile.listview.prototype.options.dividerTheme = "a";
-});</code></pre>
 				<p>This option is also exposed as a data attribute: <code>data-divider-theme="a"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="filter" default="false">
+		<option name="filter" default="false" example-value="true">
 			<desc>Adds a search filter bar to listviews.
-<pre><code>
-$( document ).bind( "mobileinit", function(){
-	$.mobile.listview.prototype.options.filter = true;
-});</code></pre>
 				<p>This option is also exposed as a data attribute: <code>data-filter="true"</code>.</p>
 			</desc>
 			<type name="Boolean" />
@@ -182,44 +170,26 @@ $( document ).bind( "mobileinit", function(){
 			</desc>
 			<type name="Function" />
 		</option>
-		<option name="filterPlaceholder" default='"Filter items..."'>
+		<option name="filterPlaceholder" default='"Filter items..."'  example-value='Search..."'>
 			<desc>The placeholder text used in search filter bars. 
-<pre><code>
-$( document ).bind( "mobileinit", function(){
-	$.mobile.listview.prototype.options.filterPlaceholder = "Search...";
-});</code></pre>
 				<p>This option is also exposed as a data attribute: <code>data-filter-placeholder="Search..."</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="filterTheme" default='"c"'>
+		<option name="filterTheme" default='"c"' example-value='"a"'>
 			<desc>Sets the color scheme (swatch) for the search filter bar. It accepts a single letter from a-z that maps to one of the swatches included in your theme.
-<pre><code>
-$( document ).bind( "mobileinit", function(){
-	$.mobile.listview.prototype.options.filterTheme = "a";
-});</code></pre>
 				<p>This option is also exposed as a data attribute: <code>data-filter-theme="a"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="headerTheme" default='"c"'>
+		<option name="headerTheme" default='"c"' example-value='"a"'>
 			<desc>Sets the color scheme (swatch) for headers of nested list sub pages. It accepts a single letter from a-z that maps to one of the swatches included in your theme. 
-<pre><code>
-$( document ).bind( "mobileinit", function(){
-	$.mobile.listview.prototype.options.headerTheme = "a";
-});
-</code></pre>
 				<p>This option is also exposed as a data attribute: <code>data-header-theme="a"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="icon" default='"arrow-r"'>
+		<option name="icon" default='"arrow-r"' example-value='"star"'>
 			<desc>Applies an icon from the icon set to all linked list buttons. 
-<pre><code>
-$( document ).bind( "mobileinit", function(){
-	$.mobile.listview.prototype.options.icon = "star";
-});
-</code></pre>
 				<p>This option is also exposed as a data attribute: <code>data-icon="star"</code>.</p>
 			</desc>
 			<type name="String" />
@@ -234,46 +204,26 @@ $( document ).bind( "mobileinit", function(){
 			</desc>
 			<type name="CSS selector string" />
 		</option>
-		<option name="inset" default="false">
+		<option name="inset" default="false" example-value="true">
 			<desc>Adds inset list styles. 
-<pre><code>
-$( document ).bind( "mobileinit", function(){
-	$.mobile.listview.prototype.options.inset = true;
-});
-</code></pre>
 				<p>This option is also exposed as a data attribute: <code>data-inset="true"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="splitIcon" default='"arrow-r"'>
+		<option name="splitIcon" default='"arrow-r"' example-value='"star"'>
 			<desc>Applies an icon from the icon set to all split list buttons.
-<pre><code>
-$( document ).bind( "mobileinit", function(){
-	$.mobile.listview.prototype.options.splitIcon = "star";
-});
-</code></pre>
 				<p>This option is also exposed as a data attribute: <code>data-split-icon="star"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="splitTheme" default='"b"'>
+		<option name="splitTheme" default='"b"' example-value='"a"'>
 			<desc>Sets the color scheme (swatch) for split list buttons. It accepts a single letter from a-z that maps to one of the swatches included in your theme.
-<pre><code>
-$( document ).bind( "mobileinit", function(){
-	$.mobile.listview.prototype.options.splitTheme = "a";
-});
-</code></pre>
 				<p>This option is also exposed as a data attribute: <code>data-split-theme="a"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="theme" default="null, inherited from parent">
+		<option name="theme" default="null, inherited from parent" example-value='"a"'>
 			<desc>Sets the color scheme (swatch) for this widget. It accepts a single letter from a-z that maps to one of the swatches included in your theme. By default, it will inherit the same swatch color as its parent container if not explicitly set.
-<pre><code>
-$( document ).bind( "mobileinit", function(){
-    $.mobile.listview.prototype.options.theme = "a";
-});
-</code></pre>
 				<p>Possible values: swatch letter (a-z).</p>
 				<p>This option is also exposed as a data attribute: <code>data-theme="a"</code>.</p>
 			</desc>
@@ -283,28 +233,23 @@ $( document ).bind( "mobileinit", function(){
 	<events>
 		<event name="create" type="listviewcreate">
 			<desc>triggered when a listview is created</desc>
-<pre><code>
-$( ".selector" ).listview({
-	create: function(event, ui) { ... }
-});
-</code></pre>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc></desc>
+			</argument>
 		</event>
 	</events>
 	<methods>
 		<method name="childPages">
 			<desc>retrieve the sub-pages.
 			<p>This method returns a jQuery object containing all the immediate child pages of a nested list.</p>
-<pre><code>
-$('.selector').listview('childPages');
-</code></pre>
 			</desc>
 		</method>
 		<method name="refresh">
 			<desc>update the listview.
 				<p>If you manipulate a listview via JavaScript (e.g. add new LI elements), you must call the refresh method on it to update the visual styling.</p>
-<pre><code>
-$('.selector').listview('refresh');
-</code></pre>
 			</desc>
 		</method>
 	</methods>
