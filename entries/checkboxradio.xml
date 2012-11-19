@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="checkboxradio" namespace="fn" type="widget" widgetnamespace="mobile">
+<entry name="checkboxradio" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="checkboxradio">
 	<title>Checkboxradio Widget</title>
 	<desc>Creates a checkboxradio widget</desc>
 	<longdesc>
@@ -162,36 +162,24 @@
 		</option>
 	</options>
 	<events>
-		<event name="create" type="checkboxradiocreate">
+		<event name="create">
 			<desc>triggered when a checkboxradio is created</desc>
-<pre><code>
-$( ".selector" ).checkboxradio({
-	create: function( event, ui ) { ... }
-});
-</code></pre>
 		</event>
 	</events>
 	<methods>
 		<method name="enable">
 			<desc>enable a disabled checkboxradio.
-<pre><code>
-$( ".selector" ).checkboxradio( 'enable' );
-</code></pre>
 			</desc>
 		</method>
 		<method name="disable">
 			<desc>disable a checkboxradio.
-<pre><code>
-$( ".selector" ).checkboxradio( 'disable' );
-</code></pre>
 			</desc>
 		</method>
 		<method name="refresh">
+		<example>$( ".selector" ).attr( "checked", true ).checkboxradio( "refresh" );</example>
+		 
 			<desc>update the checkboxradio.
 				<p>If you manipulate a checkboxradio via JavaScript, you must call the refresh method on it to update the visual styling. </p>
-<pre><code>
-$( ".selector" ).attr( "checked", true ).checkboxradio( "refresh" );
-</code></pre>
 			</desc>
 		</method>
 	</methods>
