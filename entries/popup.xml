@@ -517,7 +517,7 @@ $( document ).bind( "mobileinit", function(){
 			</desc>
 		</event>
 		<event name="create">
-			<desc>triggered when a slider is created</desc>	
+			<desc>triggered when a popup is created</desc>	
 			<argument name="event" type="Event">
 			</argument>
 			<argument name="ui" type="Object">
