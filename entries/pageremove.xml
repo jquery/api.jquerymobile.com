@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<entry name="pageremove" type="event" return="">
+	<title>pageremove</title>
+	<desc>Triggered just before the framework attempts to remove an external page from the DOM.</desc>
+	<longdesc>
+		<p>By default, the framework removes any non active dynamically loaded external pages from the DOM as soon as the user navigates away to a different page. The <code>pageremove</code> event is dispatched just before the framework attempts to remove the page from the DOM.</p>
+		<p>This event is triggered just before the framework attempts to remove an external page from the DOM. Event callbacks can call preventDefault on the event object to prevent the page from being removed. </p>
+
+	</longdesc>
+	<added>1.0</added>
+	<signature>
+		
+	</signature>
+	<category slug="events"/>
+</entry>
