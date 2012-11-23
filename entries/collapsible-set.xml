@@ -125,6 +125,10 @@ $( document ).bind( "mobileinit", function(){
 	<events>
 		<event name="create">
 			<desc>Triggered when a collapsible set is created</desc>
+			<argument name="event" type="Event">
+			</argument>
+			<argument name="ui" type="Object">
+			</argument>
 		</event>
 	</events>
 	<methods>
