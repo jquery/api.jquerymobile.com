@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<entry name="swipe" type="event" return="jQuery">
+	<title>swipe</title>
+	<desc>Triggered when a horizontal drag of 30px or more (and less than 75px vertically) occurs within 1 second duration.</desc>
+	<longdesc>
+		<p>Triggered when a horizontal drag of 30px or more (and less than 75px vertically) occurs within 1 second duration but these can be configured:
+			<ul>
+				<li><code>$.event.special.swipe.scrollSupressionThreshold</code> (default: 10px) – More than this horizontal displacement, and we will suppress scrolling.</li>
+				<li><code>$.event.special.swipe.durationThreshold</code> (default: 1000ms) – More time than this, and it isn't a swipe.</li>
+				<li><code>$.event.special.swipe.horizontalDistanceThreshold</code> (default: 30px) – Swipe horizontal displacement must be more than this.</li>
+				<li><code>$.event.special.swipe.verticalDistanceThreshold</code> (default: 75px) – Swipe vertical displacement must be less than this.</li>
+			</ul>
+		</p>
+
+		
+		<pre>
+		<code><![CDATA[
+			<style type="text/css">
+				div.box {
+					background-color: #f00;
+					height: 9em;
+					width: 30em;
+				}
+				div.box.swipe {
+					background-color: #f0f;
+				}
+			</style>
+			
+			...
+
+			<div class="box"></div>
+			
+			...
+		    
+		    $(function(){
+		    	// Bind the swipeHandler callback function to the swipe event on div.box
+		        $('div.box').bind( 'swipe', swipeHandler );
+
+		        // Callback function references the event target and adds the 'swipe' class to it
+		        function swipeHandler( event ){
+        			$(event.target).addClass( 'swipe' );
+        		}
+			});
+		]]></code>
+	</pre>
+	<p>Swipe the square to see the above code applied.
+		<iframe id="swipeIframe" src="/resources/swipe/example1.html" style="width:100%;height:90px;border:0px"></iframe></p>
+	</longdesc>
+	<added>1.0</added>
+	<signature>
+		<argument name="callback" type="Function" optional="true">
+			<desc>A function to invoke after the the swipe event fires.</desc>
+		</argument>
+	</signature>
+	<category slug="events"/>
+</entry>
