@@ -5,25 +5,25 @@
 	<longdesc>
 		<p>The jQuery Mobile <code>taphold</code> event triggers after a sustained, complete touch event (also known as a long press).</p> 
 
-		<p><code>$.event.special.tap.tapholdThreshold (default: 750) - </code> The tapholdThreshold property is how long (in milliseconds) the user must hold their tap before the taphold event fires on the target element.</p>
+		<p><code>$.event.special.tap.tapholdThreshold</code> (default: 750) - This value dictates how long the user must hold their tap before the taphold event is fired on the target element.</p>
 
 		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<pre>
 		<code><![CDATA[
 			<style type="text/css">
 				div.box {
-					background-color: #f00;
+					background-color: #598611;
 					height: 3em;
 					width: 3em;
 				}
 				div.box.taphold {
-					background-color: #fc0;
+					background-color: #BB6F04;
 				}
 			</style>
 			
 			...
 
-			<h3>Long-press the red square to change it's color:</h3>
+			<h3>Long-press (taphold) the green square to change its color:</h3>
 			<div class="box"></div>
 			
 			...
