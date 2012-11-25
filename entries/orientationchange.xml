@@ -1,10 +1,17 @@
 <?xml version="1.0"?>
 <entry name="orientationchange" type="event" return="jQuery">
 	<title>orientationchange</title>
-	<desc>Device Portrait/Landscape Orientation Event</desc>
+	<desc>Device portrait/landscape orientation event</desc>
 	<longdesc>
 		<p>The jQuery Mobile <code>orientationchange</code> event triggers when a device orientation changes, either by turning the device vertically or horizontally. When bound to this event the callback function has the event object. The event object contains an <code>orientation</code> property equal to either "portrait" or "landscape".</p>
 		<p>Note, we bind to the browser's resize event when <code>orientationchange</code> is not natively supported or if <code>$.mobile.orientationChangeEnabled</code> is set to false.</p>
+		
+		<div style="padding: 0.4em 15px; background: #eee; 
+    border: 1px solid #598611;">
+		<h3>orientationchange timing</h3>
+
+		<p>The timing of the <code>orientationchange</code> with relation to the change of the client height and width is different between browsers, though the current implementation will give you the correct value for <code>event.orientation</code> derived from <code>window.orientation</code>. This means that if your bindings are dependent on the height and width values you may want to disable <code>orientationChange</code> altogether with <code>$.mobile.orientationChangeEnabled = false</code> to let the fallback resize code trigger your bindings.</p></div>
+		<p></p>
 		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<pre>
 		<code><![CDATA[
