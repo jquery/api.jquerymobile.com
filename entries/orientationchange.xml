@@ -4,7 +4,7 @@
 	<desc>Device portrait/landscape orientation event</desc>
 	<longdesc>
 		<p>The jQuery Mobile <code>orientationchange</code> event triggers when a device orientation changes, either by turning the device vertically or horizontally. When bound to this event the callback function has the event object. The event object contains an <code>orientation</code> property equal to either "portrait" or "landscape".</p>
-		<p>Note, we bind to the browser's resize event when <code>orientationchange</code> is not natively supported or if <code>$.mobile.orientationChangeEnabled</code> is set to false.</p>
+		<p>Note that we bind to the browser's resize event when <code>orientationchange</code> is not natively supported or if <code>$.mobile.orientationChangeEnabled</code> is set to false.</p>
 		
 		<div style="padding: 0.4em 15px; background: #FFF3A5; ">
 		<h3>orientationchange timing</h3>
