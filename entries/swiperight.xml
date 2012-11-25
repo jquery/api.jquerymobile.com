@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<entry name="swiperight" type="event" return="jQuery">
+	<title>swiperight</title>
+	<desc>Triggered when a swipe event occurs moving in the right direction.</desc>
+	<longdesc>
+		<p>Triggered when a horizontal drag of 30px or more (and less than 75px vertically) occurs within 1 second duration in the right direction. See <a href="../swipe/">the swipe event entry</a> for more detailed information on the swipe event.
+		</p>
+
+		
+		<pre>
+		<code><![CDATA[
+			<style type="text/css">
+				div.box {
+					background-color: #598611;
+					height: 3em;
+					width: 30em;
+				}
+				div.box.swiperight {
+					background-color: #BB6F04;
+				}
+			</style>
+			
+			...
+
+			<div class="box"></div>
+			
+			...
+		    
+		    $(function(){
+		    	// Bind the swiperightHandler callback function to the swipe event on div.box
+		        $('div.box').bind( 'swiperight', swiperightHandler );
+
+		        // Callback function references the event target and adds the 'swipe' class to it
+		        function swiperightHandler( event ){
+        			$(event.target).addClass( 'swiperight' );
+        		}
+			});
+		]]></code>
+	</pre>
+	<p>Swipe the green rectangle in the right direction to see the above code applied.
+		<iframe id="swiperightIframe" src="/resources/swiperight/example1.html" style="width:100%;height:110px;border:0px"></iframe></p>
+	</longdesc>
+	<added>1.0</added>
+	<signature>
+		<argument name="callback" type="Function" optional="true">
+			<desc>A function to invoke after the the swipe event fires.</desc>
+		</argument>
+	</signature>
+	<category slug="events"/>
+</entry>
