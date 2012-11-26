@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <entry name="pagebeforechange" type="event" return="">
 	<title>pagebeforechange</title>
-	<desc>Triggered twice during the page change cyle: Once prior to any page loading or transition and again after page loading completes successfully.</desc>
+	<desc>Triggered twice during the page change cyle: First prior to any page loading or transition and next after page loading completes successfully, but before the browser history has been modified by the navigation process.</desc>
 	<longdesc>
 		<p>When received with <code>data.toPage</code> set to a string, the event indicates that navigation is about to commence. The value stored in <code>data.toPage</code> is the URL of the page that will be loaded.</p>
 		<p>When received with <code>data.toPage</code> set to a jQuery object, the event indicates that the destination page has been loaded and navigation will continue.</p>
