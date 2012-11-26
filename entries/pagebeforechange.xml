@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<entry name="pagebeforechange" type="event" return="">
+	<title>pagebeforechange</title>
+	<desc>Triggered twice during the page change cyle: Once prior to any page loading or transition and again after page loading completes successfully.</desc>
+	<longdesc>
+		<p>When received with <code>data.toPage</code> set to a string, the event indicates that navigation is about to commence. The value stored in <code>data.toPage</code> is the URL of the page that will be loaded.</p>
+		<p>When received with <code>data.toPage</code> set to a jQuery object, the event indicates that the destination page has been loaded and navigation will continue.</p>
+		<p>During the handling of this event the browser's history has not yet changed.</p>
+		<p>In addition to the <code>event</code> parameter, handlers of this event will receive a second parameter, <code>data</code>. The second parameter is an object containing the following properties:</p>
+            <ul>
+				<li><code>toPage</code> (object or string)
+					<ul>
+						<li>This property represents the page the caller wishes to make active. It can be either a jQuery collection object containing the page DOM element, or an absolute/relative url to an internal or external page. The value exactly matches the 1st arg to the changePage() call that triggered the event.</li>
+					</ul>
+				</li>
+				<li><code>options</code> (object)
+					<ul>
+						<li>This object contains the configuration options to be used for the current changePage() call.</li>
+					</ul>
+				</li>
+			</ul>
+              <p>It should be noted that callbacks can modify both the <code>toPage</code> and <code>options</code> properties to alter the behavior of the current <code>changePage()</code> call. So for example, the <code>toPage</code> can be mapped to a different url from within a callback to do a sort of redirect.</p>
+	</longdesc>
+	<added>1.0</added>
+	<signature>
+		
+	</signature>
+	<category slug="events"/>
+</entry>
