@@ -296,7 +296,7 @@ $( "#myPopupDiv" ).popup( "open" )
 </code></pre>
 
 		<h3>Closing popups</h3>
-		<p>By default popups can be closed either by clicking outside the popup widget or by pressing the <code>Esc</code> key. To prevent this, the <code>data-dismissable="false"</code> attribute can be added to the popup. Popups can also be closed via the <code>close</code> method:</p>
+		<p>By default popups can be closed either by clicking outside the popup widget or by pressing the <code>Esc</code> key. To prevent this, the <code>data-dismissible="false"</code> attribute can be added to the popup. Popups can also be closed via the <code>close</code> method:</p>
 			
 <pre><code>
 $( "#myPopupDiv" ).popup( "close" )
@@ -407,11 +407,11 @@ $( document ).on( "pageinit", function() {
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="dismissable" default="true" example-value="false">
+		<option name="dismissible" default="true" example-value="false">
 			<desc>
 				<p>Sets whether clicking outside the popup or pressing Escape while the popup is open will close the popup.</p>
 				<p><em>Note:</em> When history support is turned on, pressing the browser's "Back" button will dismiss the popup even if this option is set to false.</p>
-				<p>This option is also exposed as a data attribute: <code>data-dismissable="false"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-dismissible="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
