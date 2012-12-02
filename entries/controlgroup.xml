@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="controlgroup" namespace="fn" type="widget" widgetnamespace="mobile">
-	<title>Control group</title>
-	<desc>Groups buttons.</desc>
+<entry name="controlgroup" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="controlgroup">
+	<title>Controlgroup Widget</title>
+	<desc>Groups buttons together.</desc>
 	<longdesc>
 <p>Occasionally, you may want to visually group a set of buttons to form a single block that looks contained like a navigation component. To get this effect, wrap a set of buttons in a container with the <code> data-role="controlgroup"</code> attribute &#8212; the framework will create a vertical button group, remove all margins and drop shadows between the buttons, and only round the first and last buttons of the set to create the effect that they are grouped together. </p>
 
@@ -25,53 +25,38 @@
 	</longdesc>
 	<added>1.3</added>
 	<options>
-		<option name="corners" default="true">
+		<option name="corners" default="true" example-value="false">
 			<desc>
 				<p>Sets whether to draw the controlgroup with rounded corners.</p>
-<pre><code>
-$('.selector').controlgroup( "option", "corners", false );
-</code></pre>
 				<p>This option is also exposed as a data attribute: <code>data-corners="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="excludeInvisible" default="true">
+		<option name="excludeInvisible" default="true" example-value="false">
 			<desc>
 				<p>Sets whether to exclude invisible children in the assignment of rounded corners.</p>
-<pre><code>
-$('.selector').controlgroup( "option", "excludeInvisible", false );
-</code></pre>
 				<p>When set to <code>false</code>, all children of a controlgroup are taken into account when assigning rounded corners, including hidden children. Thus, if, for example, the controlgroup's first child is hidden, the controlgroup will, in effect, not have rounded corners on the top edge.</p>
 				<p>This option is also exposed as a data attribute: <code>data-exclude-invisible="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="mini" default="false">
+		<option name="mini" default="false" example-value="true">
 			<desc>
 				<p>If set to true, this will display a more compact version of the controlgroup that uses less vertical space. Possible values: true, false.</p>
-<pre><code>
-$( ".selector" ).controlgroup( "option", "mini", true );
-</code></pre>
 				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="shadow" default="false">
+		<option name="shadow" default="false" example-value="true">
 			<desc>
 				<p>Sets whether a drop shadow is drawn around the controlgroup.</p>
-<pre><code>
-$( ".selector" ).controlgroup( "option", "shadow", true );
-</code></pre>
 				<p>This option is also exposed as a data attribute: <code>data-shadow="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="type" default="vertical">
+		<option name="type" default="vertical" example-value='"horizontal"'>
 			<desc>
 				<p>Sets whether children should be stacked on top of each other or next to each other. If set to "horizontal", the children of the controlgroup will be stacked next to each other.</p>
-<pre><code>
-$( ".selector" ).controlgroup( "option", "type", "horizontal" );
-</code></pre>
 				<p>This option is also exposed as a data attribute: <code>data-type="horizontal"</code>.</p>
 			</desc>
 			<type name="String" />
@@ -88,14 +73,12 @@ $( document ).bind( "mobileinit", function(){
 		</option>
 	</options>
 	<events>
-		<event name="create" type="controlgroupcreate">
-			<desc><p>Triggered when a controlgroup is created.</p>
-<pre><code>
-$( ".selector" ).bind({
-	controlgroupcreate: function(event, ui) { ... }
-});
-</code></pre>
-			</desc>
+		<event name="create">
+			<desc>Triggered when a controlgroup is created.</desc>
+			<argument name="event" type="Event">
+			</argument>
+			<argument name="ui" type="Object">
+			</argument>
 		</event>
 	</events>
 	<methods>
