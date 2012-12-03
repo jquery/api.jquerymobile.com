@@ -130,7 +130,26 @@
 </methods>
 	<example>
 		<desc>Loader Examples</desc>
-		<code><![CDATA[]]></code>
+		<code><![CDATA[
+		$(document).on("click", ".show-page-loading-msg", function() {
+			var $this = $( this ),
+				theme = $this.jqmData("theme") || $.mobile.loader.prototype.options.theme,
+				msgText = $this.jqmData("msgtext") || $.mobile.loader.prototype.options.text,
+				textVisible = $this.jqmData("textvisible") || $.mobile.loader.prototype.options.textVisible,
+				textonly = !!$this.jqmData("textonly");
+				html = $this.jqmData("html") || "";
+			$.mobile.loading( 'show', {
+					text: msgText,
+					textVisible: textVisible,
+					theme: theme,
+					textonly: textonly,
+					html: html
+			});
+		})
+		.on("click", ".hide-page-loading-msg", function() {
+			$.mobile.loading( 'hide' );
+		});
+	]]></code>
 		<html><![CDATA[
 			<div data-role="controlgroup">
 					<button class="show-page-loading-msg" data-theme="a" data-textonly="false" data-textvisible="false" data-msgtext="" data-icon="arrow-r" data-iconpos="right">Default loader</button>
