@@ -129,6 +129,7 @@
 	</method>
 </methods>
 	<example>
+		<height>370</height>
 		<desc>Loader Examples</desc>
 		<code><![CDATA[
 		$(document).on("click", ".show-page-loading-msg", function() {
