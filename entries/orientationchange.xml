@@ -19,7 +19,7 @@
 				  Bind an event to window.orientationchange that, when the device is turned, 
 				  gets the orientation and displays it to on screen.
 				 */
-				$(window).bind( 'orientationchange', orientationChangeHandler );
+				$(window).on( 'orientationchange', orientationChangeHandler );
 
 				function orientationChangeHandler( event ) {
 					$('h1#orientation').html( 'This device is in ' + event.orientation + ' mode!' );

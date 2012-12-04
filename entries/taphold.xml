@@ -30,7 +30,7 @@
 		    
 		    $(function(){
 		    	// Bind the tapholdHandler callback function to the taphold event on div.box
-		        $('div.box').bind( 'taphold', tapholdHandler );
+		        $('div.box').on( 'taphold', tapholdHandler );
 
 		        // Callback function references the event target and adds the 'tap' class to it
 		        function tapholdHandler( event ){

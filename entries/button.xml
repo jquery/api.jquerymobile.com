@@ -268,7 +268,7 @@ $('[type="submit"]').button();
 		<option name="initSelector" default="button, [type='button'], [type='submit'], [type='reset']">
 			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as form buttons. To change which elements are initialized, bind this option to the mobileinit event:
 <pre><code>
-$( document ).bind( "mobileinit", function(){
+$( document ).on( "mobileinit", function(){
 	$.mobile.button.prototype.options.initSelector = ".myButtons";
 }); 
 </code></pre>

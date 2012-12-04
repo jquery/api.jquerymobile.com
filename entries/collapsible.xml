@@ -143,7 +143,7 @@
 		<option name="initSelector"  default='":jqmData(role=&#39;collapsible&#39;)"'>
 			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as collapsibles. To change which elements are initialized, bind this option to the mobileinit event:
 <pre><code>
-$( document ).bind( "mobileinit", function(){
+$( document ).on( "mobileinit", function(){
 	$.mobile.collapsible.prototype.options.initSelector = ".mycollapsible";
 });
 </code></pre>

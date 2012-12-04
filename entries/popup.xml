@@ -426,7 +426,7 @@ $( document ).on( "pageinit", function() {
 			<desc>
 				<p>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as popups. To change which elements are initialized, bind this option to the mobileinit event:</p>
 <pre><code>
-$( document ).bind( "mobileinit", function(){
+$( document ).on( "mobileinit", function(){
 	$.mobile.popup.prototype.options.initSelector = ".mypopup";
 });</code></pre>
 			</desc>

@@ -248,7 +248,7 @@ $('input').slider();
 		<option name="initSelector"  default='"input[type=&#39;range&#39;], :jqmData(type=&#39;range&#39;), :jqmData(role=&#39;slider&#39;)"'>
 			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as sliders. To change which elements are initialized, bind this option to the mobileinit event:
 <pre><code>
-$( document ).bind( "mobileinit", function(){
+$( document ).on( "mobileinit", function(){
   $.mobile.slider.prototype.options.initSelector = ".myslider";
 });
 </code></pre>
