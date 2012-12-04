@@ -36,39 +36,23 @@
 	<added>1.2</added>
 	<options>
 		<option name="html" default="" example-value='"&lt;span class=&quot;ui-icon ui-icon-loading&quot;&gt;&lt;img src=&quot;jquery-logo.png&quot; /&gt;&lt;h2&gt;is loading for you ...&lt;/h2&gt;&lt;/span&gt;"'>
-			<desc>
-				<p>If this is set to a non empty string value, it will be used to replace the entirety of the loader's inner html.</p>
-				<p>This option is also exposed as a data attribute: <code>data-html="&lt;img src='jquery-logo.png' /&gt;&lt;h2&gt;is loading for you ...&lt;/h2&gt;"</code>.</p>
-			</desc>
+			<desc>If this is set to a non empty string value, it will be used to replace the entirety of the loader's inner html.</desc>
 			<type name="boolean" />
 		</option>
 		<option name="text" default="loading" example-value='"Loading Page..."'>
-			<desc>
-				<p>Sets the text of the message.</p>
-				<p>This option is also exposed as a data attribute: <code>data-msgtext="Loading Page..."</code>.</p>
-			</desc>
+			<desc>Sets the text of the message.</desc>
 			<type name="string" />
 		</option>
 		<option name="textonly" default="false" example-value="true">
-			<desc>
-				<p>If true, the "spinner" image will be hidden when the message is shown.</p>
-				<p>This option is also exposed as a data attribute: <code>data-textonly="true"</code>.</p>
-			</desc>
+			<desc>If true, the "spinner" image will be hidden when the message is shown.</desc>
 			<type name="boolean" />
 		</option>
 		<option name="textVisible" default="false" example-value="true">
-			<desc>
-				<p>If true, the text value will be used under the spinner.</p>
-				<p>This option is also exposed as a data attribute: <code>data-textvisible="false"</code>.</p>
-			</desc>
+			<desc>If true, the text value will be used under the spinner.</desc>
 			<type name="boolean" />
 		</option>
 		<option name="theme" default="a"  example-value='"b"'>
-			<desc>
-				<desc>Sets the color scheme (swatch) for the loading message. It accepts a single letter from a-z that maps to the swatches included in your theme. 
-				<p>This option is also exposed as a data attribute: <code>data-theme="b"</code>.</p>
-			</desc>
-			</desc>
+			<desc>Sets the color scheme (swatch) for the loading message. It accepts a single letter from a-z that maps to the swatches included in your theme.</desc>
 			<type name="string" />
 		</option>
 	</options>
