@@ -155,7 +155,7 @@
 	
 
 <pre><code>
-$(document).bind('mobileinit',function(){
+$(document).on('mobileinit',function(){
 	$.mobile.selectmenu.prototype.options.nativeMenu = false;
 });
 </code></pre>
@@ -268,7 +268,7 @@ $('select').selectmenu();
 		<option name="initSelector" default="select:not(:jqmData(role='slider'))">
 			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as select menus. To change which elements are initialized, bind this option to the mobileinit event:
 <pre><code>
-$( document ).bind( "mobileinit", function(){
+$( document ).on( "mobileinit", function(){
 	$.mobile.selectmenu.prototype.options.initSelector = ".myselect";
 });
 </code></pre>

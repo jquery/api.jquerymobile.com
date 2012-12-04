@@ -155,7 +155,7 @@ $( '.mySearchInput' ).textinput();
 		<option name="initSelector" default="input[type='text'], input[type='search'], :jqmData(type='search'), input[type='number'], :jqmData(type='number'), input[type='password'], input[type='email'], input[type='url'], input[type='tel'], textarea, input:not([type])">
 			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as textinputs. To change which elements are initialized, bind this option to the mobileinit event:
 <pre><code>
-$( document ).bind( "mobileinit", function(){
+$( document ).on( "mobileinit", function(){
 	$.mobile.textinput.prototype.options.initSelector = ".myInputs";
 }); 
 </code></pre>

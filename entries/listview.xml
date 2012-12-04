@@ -161,7 +161,7 @@ $('#mylist').listview('refresh');
 		<option name="filterCallback" default="n/a">
 			<desc>The function to determine which rows to hide when the search filter textbox changes. The function accepts two arguments -- the text of the list item (or data-filtertext value if present), and the search string. Return true to hide the item, false to leave it visible.
 <pre><code>
-$( document ).bind( "mobileinit", function(){
+$( document ).on( "mobileinit", function(){
 	$.mobile.listview.prototype.options.filterCallback = function( text, searchValue ) {
 		// only show items that *begin* with the search string
 		return text.toLowerCase().substring( 0, searchValue.length ) !== searchValue;
@@ -197,7 +197,7 @@ $( document ).bind( "mobileinit", function(){
 		<option name="initSelector" default=":jqmData(role='listview')">
 			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as listviews. 
 <pre><code>
-$( document ).bind( "mobileinit", function(){
+$( document ).on( "mobileinit", function(){
 	$.mobile.listview.prototype.options.initSelector = ".mylistview";
 });
 </code></pre>
