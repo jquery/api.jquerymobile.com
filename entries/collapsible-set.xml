@@ -79,6 +79,12 @@ $( "#myCollapsibleSet" ).children().trigger( "collapse" );
 			</desc>
 			<type name="String" />
 		</option>
+		<option name="corners" default="true" example-value="false">
+			<desc>Applies the theme border-radius to the first and last collapsible if set to true. 
+				<p>This option is also exposed as a data attribute:<code>data-corners="false"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
 		<option name="expandedIcon" default='"minus"' example-value='"arrow-d"'>
 			<desc>Sets the icon for the header of the collapsible container when in an expanded state. 
 				<p>This option is also exposed as a data attribute: <code>data-expanded-icon="arrow-d"</code>.</p>

@@ -117,6 +117,12 @@
 			</desc>
 			<type name="String" />
 		</option>
+		<option name="corners" default="true" example-value="false">
+			<desc>Applies the theme border-radius if set to true.  
+				<p>This option is also exposed as a data attribute:<code>data-corners="false"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
 		<option name="expandCueText" default='" click to expand contents"' example-value='" expand with a click"'>
 			<desc>This text is used to provide audible feedback for users with screen reader software. 
 			</desc>
