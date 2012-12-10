@@ -76,7 +76,7 @@
 	<options>
 		<option name="classes.table" default='"ui-table"' >
 			<desc>Class assigned to the table.
-			<p>This option is also exposed as a data attribute:<code>data-role="table"</code>.</p></desc>
+			<p>The classes option is only configurable via JavaScript because it expects an object literal value.</p></desc>
 			<type name="String" />
 		</option>
 		<option name="initSelector"  default='":jqmData(role=&#39;table&#39;)"'>
