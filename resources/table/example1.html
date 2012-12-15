@@ -5,16 +5,16 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-	<script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 	<style>
 	html, body { padding: 0; margin: 0; }
 	html, .ui-mobile, .ui-mobile body {
-    	height: 535px;
+    	height: 735px;
 	}
 	.ui-mobile, .ui-mobile .ui-page {
-    	min-height: 535px;
+    	min-height: 735px;
 	}
 	.ui-content{
 		padding:10px 15px 0px 15px;
@@ -23,16 +23,16 @@
 </head> 
 
 <body> 
-<div data-role="page" style="max-height:540px; min-height:540px;">
-	<div data-role="content" > 
-		<table data-role="table" id="table-column-toggle" data-mode="columntoggle" class="ui-responsive table-stroke">
+<div data-role="page" style="max-height:740px; min-height:740px;">
+	<div data-role="content"> 
+		<table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive table-stroke">
 			<thead>
 				<tr>
-					<th data-priority="2">Rank</th>
-					<th>Movie Title</th>
-					<th data-priority="3">Year</th>
-					<th data-priority="1"><abbr title="Rotten Tomato Rating">Rating</abbr></th>
-					<th data-priority="5">Reviews</th>
+					<th data-priority="1">Rank</th>
+					<th data-priority="persist">Movie Title</th>
+					<th data-priority="2">Year</th>
+					<th data-priority="3"><abbr title="Rotten Tomato Rating">Rating</abbr></th>
+					<th data-priority="4">Reviews</th>
 				</tr>
 			</thead>
 			<tbody>

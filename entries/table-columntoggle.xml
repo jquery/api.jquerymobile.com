@@ -150,19 +150,27 @@
 			<type name="String" />
 		</option>
 		<option name="classes.columnToggleTable" default='"ui-table-columntoggle"'>
-			<desc>Class assigned to the table.</desc>
+			<desc>Class assigned to the table. 
+				<p>Note: The reflow mode has one option, classes, which is only configurable via JavaScript because it expects an object literal value. The classes option has two properties that define the structural classnames that the plugin uses.</p>
+			</desc>
 			<type name="String" />
 		</option>
 		<option name="classes.columnBtn" default='"ui-table-columntoggle-btn"'>
-			<desc>Class assigned to the column toggle button.</desc>
+			<desc>Class assigned to the column toggle button.
+				<p>Note: The reflow mode has one option, classes, which is only configurable via JavaScript because it expects an object literal value. The classes option has two properties that define the structural classnames that the plugin uses.</p>
+			</desc>
 			<type name="String" />
 		</option>
 		<option name="classes.popup" default='"ui-table-columntoggle-popup"'>
-			<desc>    Class assigned to the column chooser popup.</desc>
+			<desc>Class assigned to the column chooser popup.
+				<p>Note: The reflow mode has one option, classes, which is only configurable via JavaScript because it expects an object literal value. The classes option has two properties that define the structural classnames that the plugin uses.</p>
+			</desc>
 			<type name="String" />
 		</option>
 		<option name="classes.priorityPrefix" default='"ui-table-priority-"'>
-			<desc>Class prefix added to each cell in a column. This string is appended to the priority value set on the headers.</desc>
+			<desc>Class prefix added to each cell in a column. This string is appended to the priority value set on the headers.
+				<p>Note: The reflow mode has one option, classes, which is only configurable via JavaScript because it expects an object literal value. The classes option has two properties that define the structural classnames that the plugin uses.</p>
+			</desc>
 			<type name="String" />
 		</option>
 	</options>
@@ -185,7 +193,7 @@
 		</method>
 	</methods>
 	<example>
-		<desc>A basic example of a collapsible content block.</desc>
+		<desc>A basic example of a responsive table in column toggle mode.</desc>
 		<html><![CDATA[<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
