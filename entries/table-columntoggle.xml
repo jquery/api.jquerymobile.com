@@ -134,7 +134,7 @@
   	</longdesc>
 	<added>1.3</added>
 	<options>
-		<option name="columnBtnTheme" default="null" example-value="b">
+		<option name="columnBtnTheme" default="null" example-value='"b"'>
 			<desc>Sets the theme for the column chooser button. Set to any valid swatch letter in your theme.
 			<p>This option is also exposed as a data attribute:<code>data-column-btn-theme="b"</code>.</p></desc>
 			<type name="String" />
@@ -144,7 +144,7 @@
 			<p>This option is also exposed as a data attribute:<code>data-column-btn-text="Show columns"</code>.</p></desc>
 			<type name="String" />
 		</option>
-		<option name="columnPopupTheme" default="null" example-value="a">
+		<option name="columnPopupTheme" default="null" example-value='"a"'>
 			<desc>Sets the theme for the column chooser popup checkboxes. Set to any valid swatch letter in your theme.
 			<p>This option is also exposed as a data attribute:<code>data-popup-theme="a"</code>.</p></desc>
 			<type name="String" />
