@@ -105,7 +105,7 @@ $( document ).on( "mobileinit", function(){
 	<methods>
 	</methods>
 	<example>
-		<desc>A basic example of a collapsible content block.</desc>
+		<desc>A basic example of a reponsive table.</desc>
 		<html><![CDATA[<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
