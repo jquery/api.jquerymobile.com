@@ -216,7 +216,7 @@ $( document ).on( "mobileinit", function(){
 		<br /><br />
 		<p>And we're adding more text here so that you can really see the fixed toobars in action.</p>
 		<br /><br />
-		<p>If you tap the screen while in the middle of the page (i.e. neither at the top or bottom of the page, the visibility of the toolbars will toggle</p>
+		<p>If you tap the screen while in the middle of the page (i.e. neither at the top nor the bottom of the page, the visibility of the toolbars will toggle</p>
 		<p></p>
 					      
 	</div>
