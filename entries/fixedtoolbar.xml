@@ -121,7 +121,7 @@
 		<option name="tapToggle" default="true" example-value="false">
 			<desc>Enable or disable the user's ability to toggle toolbar visibility with a tap on the screen (or a click, for mouse users).
 				<p>This option is also exposed as a data attribute: <code>data-tap-toggle="false"</code>.</p>
-				<div style="padding: 0.4em 15px; background: #FFF3A5; "><b>Note:</b>This behavior was formerly configurable as follows, but as of version 1.1 this syntax is no longer supported: <br /><code>$.mobile.fixedToolbars.setTouchToggleEnabled(false);</code></div>
+				<div style="padding: 0.4em 15px; background: #FFF3A5; "><b>Note:</b> This behavior was formerly configurable as follows, but as of version 1.1 this syntax is no longer supported: <br /><code>$.mobile.fixedToolbars.setTouchToggleEnabled(false);</code></div>
 			</desc>
 			<type name="Boolean" />
 		</option>
