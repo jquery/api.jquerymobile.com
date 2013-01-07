@@ -512,12 +512,14 @@ $( document ).on( "mobileinit", function(){
 		<event name="beforeposition">
 			<argument name="event" type="Event">
 			</argument>
-			<desc><p>Triggered after a popup has completed preparations for opening, but has not yet opened</p>
-				<p>This event is triggered when the popup has completed preparations for appearing on the screen. At this point the popup has not started the animations and it has not yet calculated the coordinates where it will appear on the screen. Handling this event gives an opportunity to modify the content of the popup before it appears on the screen. For example, the content can be scaled or parts of it can be hidden or removed if it is too wide or too tall.</p>
+			<argument name="options" type="Object">
+			</argument>
+			<desc><p>Triggered before a popup computes the coordinates where it will appear</p>
+				<p>This event is triggered when the popup has completed preparations for appearing on the screen, when the document is resized and the popup needs to move to another location, or when the <code>reposition()</code> method is called. At this point the popup has not yet started the opening animations and it has not yet calculated the coordinates where it will appear on the screen. Handling this event gives an opportunity to modify the content of the popup before it appears on the screen. For example, the content can be scaled or parts of it can be hidden or removed if it is too wide or too tall. You can also modify the <code>options</code> parameter to affect the popup's placement.</p>
 			</desc>
 		</event>
 		<event name="create">
-			<desc>triggered when a popup is created</desc>	
+			<desc>triggered when a popup is created</desc>
 			<argument name="event" type="Event">
 			</argument>
 			<argument name="ui" type="Object">
@@ -551,8 +553,25 @@ $( document ).on( "mobileinit", function(){
 					</property>
 				</argument>
 		</method>
+		<method name="reposition" example-params="options">
+			<desc>Change the on-screen position of the popup. See the <code>open()</code> method for a description of the keys recognized from the <code>options</code> object.</desc>
+				<argument name="options" type="Object">
+					<property name="x" default=''>
+						<desc>The x-coordinate where the popup is to be displayed.</desc>
+						<type name="Integer"/>
+					</property>
+					<property name="y" default=''>
+						<desc>The y-coordinate where the popup is to be displayed.</desc>
+						<type name="Integer"/>
+					</property>
+					<property name="positionTo" default='"origin"'>
+						<desc>The positioning to use.</desc>
+						<type name="String"/>
+					</property>
+				</argument>
+		</method>
 		<method name="close">
-			<desc>Closes the popup.	
+			<desc>Closes the popup.
 			</desc>
 		</method>
 	</methods>
