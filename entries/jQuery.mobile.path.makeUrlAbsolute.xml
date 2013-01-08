@@ -17,24 +17,52 @@
 		<example>
 			<desc>Various uses of jQuery.mobile.path.isRelativeUrl</desc>
 				<html><![CDATA[
-	<div></div>
+<style>
+	#myResult{
+		border: 1px solid;
+		border-color: #108040;
+		padding: 10px;
+		}
+</style>
+<div data-role="content">
+		<input type="button" value="choice 1" id="button1" onClick="showMyResult(1);"  data-inline="true" />
+		<input type="button" value="choice 2" id="button2" onClick="showMyResult(2);"  data-inline="true" />
+		<input type="button" value="choice 3" id="button3" onClick="showMyResult(3);"  data-inline="true" />
+		<input type="button" value="choice 4" id="button4" onClick="showMyResult(4);"  data-inline="true" />
+		<input type="button" value="choice 5" id="button5" onClick="showMyResult(5);"  data-inline="true" />
+		<div id="myResult">The result will be displayed here</div>
+	</div></div>
+
 				]]></html>
 			<code><![CDATA[
-// Returns: http://foo.com/a/b/c/file.html
-var absUrl = $.mobile.path.makeUrlAbsolute("file.html", "http://foo.com/a/b/c/test.html");
+function showMyResult(mychoice){
 
-// Returns: http://foo.com/a/foo/file.html
-var absUrl = $.mobile.path.makeUrlAbsolute("../../foo/file.html", "http://foo.com/a/b/c/test.html");
-
-// Returns: http://foo.com/bar/file.html
-var absUrl = $.mobile.path.makeUrlAbsolute("//foo.com/bar/file.html", "http://foo.com/a/b/c/test.html");
-
-// Returns: http://foo.com/a/b/c/test.html?a=1&b=2
-var absUrl = $.mobile.path.makeUrlAbsolute("?a=1&b=2", "http://foo.com/a/b/c/test.html");
-
-// Returns: http://foo.com/a/b/c/test.html#bar
-var absUrl = $.mobile.path.makeUrlAbsolute("#bar", "http://foo.com/a/b/c/test.html");
-
+    switch(mychoice)
+    {
+		case 1:
+			// Returns: http://foo.com/a/b/c/file.html
+			var absUrl = $.mobile.path.makeUrlAbsolute("file.html", "http://foo.com/a/b/c/test.html");
+        	break;
+		case 2:
+			// Returns: http://foo.com/a/foo/file.html
+			var absUrl = $.mobile.path.makeUrlAbsolute("../../foo/file.html", "http://foo.com/a/b/c/test.html");
+			break;
+		case 3:
+			// Returns: http://foo.com/bar/file.html
+			var absUrl = $.mobile.path.makeUrlAbsolute("//foo.com/bar/file.html", "http://foo.com/a/b/c/test.html");
+			break;
+		case 4:
+			// Returns: http://foo.com/a/b/c/test.html?a=1&b=2
+			var absUrl = $.mobile.path.makeUrlAbsolute("?a=1&b=2", "http://foo.com/a/b/c/test.html");
+			break;
+		case 5:
+			// Returns: http://foo.com/a/b/c/test.html#bar
+			var absUrl = $.mobile.path.makeUrlAbsolute("#bar", "http://foo.com/a/b/c/test.html");
+			break;
+    }
+    document.getElementById('myResult').innerHTML = absUrl;
+    
+  }
 ]]></code>
 		</example>
 	<longdesc>
