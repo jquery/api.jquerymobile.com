@@ -31,9 +31,7 @@
 		<input type="button" value="choice 4" id="button4" onClick="showMyResult(4);"  data-inline="true" />
 		<input type="button" value="choice 5" id="button5" onClick="showMyResult(5);"  data-inline="true" />
 		<div id="myResult">The result will be displayed here</div>
-	</div></div>
-
-				]]></html>
+</div>]]></html>
 			<code><![CDATA[
 function showMyResult(mychoice){
 
@@ -42,7 +40,7 @@ function showMyResult(mychoice){
 		case 1:
 			// Returns: http://foo.com/a/b/c/file.html
 			var absUrl = $.mobile.path.makeUrlAbsolute("file.html", "http://foo.com/a/b/c/test.html");
-        	break;
+			break;
 		case 2:
 			// Returns: http://foo.com/a/foo/file.html
 			var absUrl = $.mobile.path.makeUrlAbsolute("../../foo/file.html", "http://foo.com/a/b/c/test.html");
