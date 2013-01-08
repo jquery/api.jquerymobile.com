@@ -8,7 +8,7 @@
 				<desc>A relative URL.</desc>
 			</type>
 		</argument>
-		<argument name="relUrl">
+		<argument name="absUrl">
 			<type name="String">
 				<desc>An absolute URL to resolve against.</desc>
 			</type>
