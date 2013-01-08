@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<entry type="method" name="jQuery.mobile.path.makeUrlAbsolute" return="String">
+	<title>jQuery.mobile.path.makeUrlAbsolute()</title>
+	<desc>Utility method for converting a relative URL to an absolute URL.</desc>
+	<signature>
+		<argument name="relUrl">
+			<type name="String">
+				<desc>A relative URL.</desc>
+			</type>
+		</argument>
+		<argument name="relUrl">
+			<type name="String">
+				<desc>An absolute URL to resolve against.</desc>
+			</type>
+		</argument>
+	</signature>
+		<example>
+			<desc>Various uses of jQuery.mobile.path.isRelativeUrl</desc>
+				<html><![CDATA[
+	<div></div>
+				]]></html>
+			<code><![CDATA[
+// Returns: http://foo.com/a/b/c/file.html
+var absUrl = $.mobile.path.makeUrlAbsolute("file.html", "http://foo.com/a/b/c/test.html");
+
+// Returns: http://foo.com/a/foo/file.html
+var absUrl = $.mobile.path.makeUrlAbsolute("../../foo/file.html", "http://foo.com/a/b/c/test.html");
+
+// Returns: http://foo.com/bar/file.html
+var absUrl = $.mobile.path.makeUrlAbsolute("//foo.com/bar/file.html", "http://foo.com/a/b/c/test.html");
+
+// Returns: http://foo.com/a/b/c/test.html?a=1&b=2
+var absUrl = $.mobile.path.makeUrlAbsolute("?a=1&b=2", "http://foo.com/a/b/c/test.html");
+
+// Returns: http://foo.com/a/b/c/test.html#bar
+var absUrl = $.mobile.path.makeUrlAbsolute("#bar", "http://foo.com/a/b/c/test.html");
+
+]]></code>
+		</example>
+	<longdesc>
+		<p>This function returns a string that is an absolute version of the relative URL passed in.</p>
+	</longdesc>
+	<category slug="methods"/>
+</entry>
