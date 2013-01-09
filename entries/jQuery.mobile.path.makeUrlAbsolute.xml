@@ -15,7 +15,7 @@
 		</argument>
 	</signature>
 		<example>
-			<desc>Various uses of jQuery.mobile.path.isRelativeUrl</desc>
+			<desc>Various uses of jQuery.mobile.path.makeUrlAbsolute</desc>
 				<css><![CDATA[
 	#myResult{
 		border: 1px solid;
@@ -24,14 +24,15 @@
 		}
 ]]></css>		
 				<html><![CDATA[
-<div data-role="content">
+	<div data-role="content">
+		<p>The absoulte URL used is http://foo.com/a/b/c/test.html</p>
 		<input type="button" value="file.html" id="button1" class="myButton" data-inline="true">
 		<input type="button" value="../../foo/file.html" id="button2" class="myButton" data-inline="true">
 		<input type="button" value="//foo.com/bar/file.html" id="button3" class="myButton" data-inline="true">
 		<input type="button" value="?a=1&b=2" id="button4" class="myButton" data-inline="true">
 		<input type="button" value="#bar" id="button5" class="myButton" data-inline="true">
 		<div id="myResult">The result will be displayed here</div>
-</div>]]></html>
+	</div>]]></html>
 			<code><![CDATA[
 $(document).ready(function() {
   
