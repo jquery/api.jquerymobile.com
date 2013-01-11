@@ -23,7 +23,7 @@
 // Starting at http://example.com/
 
 // Alter the URL: http://example.com/ => http://example.com/#foo
-$.mobile.navigate( "#foo", { info: "bar" });
+$.mobile.navigate( "#foo", { info: "info about the #foo hash" });
 
 // Alter the URL: http://example.com/#foo => http://example.com/#bar
 $.mobile.navigate( "#bar" );
@@ -37,7 +37,7 @@ $( window ).on( "navigate", function( event, data ){
 window.history.back();
 
 // From the `navigate` binding on the window, console output:
-// => "bar"
+// => "info about the #foo hash"
 ]]></code>
 		</example>
 		<example>
