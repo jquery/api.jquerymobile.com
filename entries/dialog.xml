@@ -23,8 +23,13 @@
 
 		<h3>Closing dialogs</h3>
 
-		<p>When any link is clicked within in a dialog, the framework will automatically close the dialog and transition to the requested page, just as if the dialog were a normal page. To create a "cancel" button in a dialog, just link to the page that triggered the dialog to open and add the <code>data-rel="back"</code> attribute to your link. This pattern of linking to the previous page is also usable in non-JS devices as well.
-		</p>
+		<p>When any link is clicked within a dialog, the framework will automatically close the dialog and transition to the requested page, just as if the dialog were a normal page. Nevertheless, dialogs can also be chained, as explained below under <b>"Chaining Dialogs"</b>. Similarly, a link that opens a popup will also leave the dialog in place.</p>
+		
+		<p>If the dialog has a header the framework will add a close button at the left side of the header. You can change the position by adding <code>data-close-btn="right"</code> to the dialog container. If you don't want a close button in the header or add a custom close button, you can use <code>data-close-btn="none"</code>.</p>
+		
+		<iframe src="/resources/dialog/example6.html" style="width:100%;height:420px;border:0px"></iframe>
+		
+		<p>To create a "cancel" button in a dialog, just link to the page that triggered the dialog to open and add the <code>data-rel="back"</code> attribute to your link. This pattern of linking to the previous page is also usable in non-JS devices as well.</p>
 
 		<p>For JavaScript-generated links, you can simply set the href attribute to "#" and use the <code>data-rel="back"</code> attribute. You can also call the dialog's <code>close()</code> method to programmatically close dialogs, for example: <code>$('.ui-dialog').dialog('close'). </code></p>
 
@@ -45,6 +50,10 @@
 		<p>Dialogs can be styled with different theme swatches, just like any page by adding <code>data-theme</code> attributes to the header, content, or footer containers.</p>
 
 		<iframe src="/resources/dialog/example3.html" style="width:100%;height:420px;border:0px"></iframe>
+		
+		<p>By default dialogs have rounded corners. The option corners can be set to false by adding <code>data-corners="false"</code> to the dialog container:</p>
+		
+		<iframe src="/resources/dialog/example7.html" style="width:100%;height:420px;border:0px"></iframe>
 
 		<p>Dialogs appear to be floating above an overlay layer. This overlay adopts the swatch 'a' content color by default, but the <code>data-overlay-theme</code> attribute can be added to the page wrapper to set the overlay to any swatch letter. </p>
 
@@ -72,12 +81,25 @@
 	</longdesc>
 	<added>1.0</added>
 	<options>
+		<option name="closeBtn" default='"left"' example-value='"none"'>
+			<desc>
+				<p>Sets the position of the dialog close button in the header (left or right) or prevents the framework from adding a close button (none).</p>
+				<p>This option is also exposed as a data attribute: <code>data-close-btn</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
 		<option name="closeBtnText" default='"Close"' example-value='"Fermer"'>
 			<desc>
 				<p>Customizes the text of the close button which is helpful for translating this into different languages. This is displayed as an icon-only button by default so the text isn't visible on-screen, but is read by screen readers so this is an important accessibility feature.</p>
 				<p>This option is also exposed as a data attribute: <code>data-close-btn-text</code>.</p>
 			</desc>
 			<type name="String" />
+		</option>
+		<option name="corners" default="true" example-value="false">
+			<desc>Sets whether to draw the dialo with rounded corners..  
+				<p>This option is also exposed as a data attribute:<code>data-corners="false"</code>.</p>
+			</desc>
+			<type name="Boolean" />
 		</option>
 		<option name="initSelector"  default='":jqmData(role=&#39;dialog&#39;)"'>
 			<desc>
