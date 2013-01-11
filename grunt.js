@@ -34,7 +34,16 @@ grunt.initConfig({
 	},
 	wordpress: grunt.utils._.extend({
 		dir: "dist/wordpress"
-	}, grunt.file.readJSON( "config.json" ) )
+	}, grunt.file.readJSON( "config.json" ) ),
+	watch: {
+		scripts: {
+			files: 'entries/*.xml',
+			tasks: ['build'],
+			options: {
+				interrupt: true
+			}
+		}
+	}
 });
 
 grunt.registerTask( "default", "build-wordpress" );
