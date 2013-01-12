@@ -25,10 +25,10 @@
 		<input type="button" value="http://foo.com/a" id="button3" class="myButton" data-inline="true" />
 		<input type="button" value="//foo.com/a/file.html" id="button4" class="myButton" data-inline="true" />
 		<input type="button" value="/a/file.html" id="button5" class="myButton" data-inline="true" />
-		<input type="button" value="file.html" id="button4" class="myButton" data-inline="true" />
-		<input type="button" value="/file.html" id="button4" class="myButton" data-inline="true" />
-		<input type="button" value="?a=1&b=2" id="button5" class="myButton" data-inline="true" />
-		<input type="button" value="#foo" id="button6" class="myButton" data-inline="true" />
+		<input type="button" value="file.html" id="button6" class="myButton" data-inline="true" />
+		<input type="button" value="/file.html" id="button7" class="myButton" data-inline="true" />
+		<input type="button" value="?a=1&b=2" id="button8" class="myButton" data-inline="true" />
+		<input type="button" value="#foo" id="button9" class="myButton" data-inline="true" />
 		<div id="myResult">The result will be displayed here</div>
 	</div>]]></html>
 			<code><![CDATA[
