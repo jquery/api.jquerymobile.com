@@ -303,7 +303,7 @@ $( document ).on( "mobileinit", function(){
 		</method>
 	</methods>
 	<example>
-		<desc>A basic example of a collapsible content block.</desc>
+		<desc>A basic example of a panel.</desc>
 		<css><![CDATA[.panel-content { padding:15px; }]]></css>
 		
 		<html><![CDATA[<div data-role="header">
