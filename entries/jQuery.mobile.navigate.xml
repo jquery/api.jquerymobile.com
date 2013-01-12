@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<entry type="method" name="jQuery.mobile.navigate" return="Undefined">
+	<title>jQuery.mobile.navigate()</title>
+	<desc>Alter the url and track history. Works for browsers with and without the new history API.</desc>
+	<longdesc>
+		<p>The <code>$.mobile.navigate</code> method provides a uniform history manipulation API for browsers that support the new history API and those that don't (hashchange). It works in concert with the navigate event by storing and retrieving arbitrary data in association with a URL (much like <code>popState</code> and <code>replaceState</code>). When the user returns to a URL set by the navigate method the navigate event is triggered with the associated data.</p>
+	</longdesc>
+	<signature>
+		<argument name="url">
+			<type name="String">
+				<desc>Absolute URL, relative URL, or hash fragment. ( "http://example.com/about/us.html", "about/us.html", "#foo" )</desc>
+			</type>
+		</argument>
+		<argument name="data" optional="true">
+			<type name="Object">
+				<desc>Arbitrary data to be included with navigate events when returning to the URL</desc>
+			</type>
+		</argument>
+	</signature>
+	<example>
+		<desc>Change the hash fragment twice then log the data provided with the navigate event when the browser moves backward through history.</desc>
+		<code><![CDATA[
+// Starting at http://example.com/
+
+// Alter the URL: http://example.com/ => http://example.com/#foo
+$.mobile.navigate( "#foo", { info: "info about the #foo hash" });
+
+// Alter the URL: http://example.com/#foo => http://example.com/#bar
+$.mobile.navigate( "#bar" );
+
+// Bind to the navigate event
+$( window ).on( "navigate", function( event, data ){
+	console.log( data.state.info );
+	console.log( data.state.direction )
+	console.log( data.state.url )
+	console.log( data.state.hash )
+});
+
+// Alter the URL: http://example.com/#bar => http://example.com/#foo
+window.history.back();
+
+// From the `navigate` binding on the window, console output:
+// => "info about the #foo hash"
+// => "back"
+// => "http://example.com/#bar
+// => "#bar"
+]]></code>
+	</example>
+	<example>
+		<desc>Hijack a link click to use the navigate method and then load content.</desc>
+		<code><![CDATA[
+// Starting at http://example.com/
+
+// Define a click binding for all anchors in the page
+$( "a" ).on( "click", function( event ){
+
+	// Prevent the usual navigation behavior
+	event.preventDefault();
+
+	// Alter the url according to the anchor's href attribute, and
+	// store the data-foo attribute information with the url
+	$.mobile.navigate( this.attr( "href" ), { foo: this.attr("data-foo") });
+
+	// Hypothetical content alteration based on the url. E.g, make
+	// an ajax request for JSON data and render a template into the page.
+	alterContent( this.attr("href") );
+});
+]]></code>
+	</example>
+	<category slug="methods"/>
+	<added>1.3</added>
+</entry>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<entry name="navigate" type="event" return="">
+	<title>navigate</title>
+	<desc>A wrapper event for both hashchange and popstate</desc>
+	<longdesc>
+		<p>The navigate event is a wrapper around both the <code>hashchange</code> and <code>popstate</code> events. In addition to providing a single event for all browsers it also provides a data object in both cases allowing for the unification of handlers. This feature is used by the <code>$.mobile.navigate</code> method to include directionality and URL information.</p>
+	</longdesc>
+	<example>
+		<desc>Change the hash fragment twice then log the data provided with the navigate event when the browser moves backward through history. NOTE: The state will not be provided by default in browsers that only support hashchange. For that functionality please see the navigate method docs.</desc>
+		<code><![CDATA[
+// Bind to the navigate event
+$( window ).on( "navigate", function( event, data ){
+	console.log( data.state );
+});
+
+// Trigger a navigate event by pushing state
+window.history.pushState( { foo: "bar" }, "Title", "http://example.com/#foo" );
+
+// From the `navigate` binding on the window, console output:
+// => {}
+
+// Trigger a navigate event by pushing state
+window.history.pushState( {}, "Title", "http://example.com/#bar" );
+
+// From the `navigate` binding on the window, console output:
+// => {}
+
+// Trigger a navigate event by moving backward through history
+window.history.back();
+
+// From the `navigate` binding on the window, console output:
+// => { foo: "bar" }
+]]></code>
+	</example>
+
+	<added>1.3</added>
+	<category slug="events"/>
+</entry>
