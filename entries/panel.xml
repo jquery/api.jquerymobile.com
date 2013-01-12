@@ -304,15 +304,26 @@ $( document ).on( "mobileinit", function(){
 	</methods>
 	<example>
 		<desc>A basic example of a collapsible content block.</desc>
+		<css><![CDATA[.panel-content { padding:15px; }]]></css>
+		
 		<html><![CDATA[<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
 	<div data-role="content">
-		<div data-role="collapsible">
-			<h3>I'm a header</h3>
-			<p>I'm the collapsible content. By default I'm closed, but you can click the header to open me.</p>
-		</div>
-	</div>]]></html>
+		<a href="#defaultpanel" data-role="button" data-inline="true" data-icon="bars">Default panel</a>
+	</div>
+	
+	<!-- defaultpanel  -->
+		<div data-role="panel" id="defaultpanel" data-theme="b">
+				
+			<div class="panel-content">
+				<h3>Default panel options</h3>
+				<p>This panel has all the default options: positioned on the left with the reveal display mode. The panel markup is <em>before</em> the header, content and footer in the source order.</p>
+				<p>To close, click off the panel, swipe left or right, hit the Esc key, or use the button below:</p>
+				<a href="#demo-links" data-rel="close" data-role="button" data-theme="c" data-icon="delete" data-inline="true">Close panel</a>
+			</div><!-- /content wrapper for padding -->
+            				
+		</div><!-- /defaultpanel -->]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>
