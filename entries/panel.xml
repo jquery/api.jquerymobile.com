@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="panel" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="panel">
 	<title>Panel Widget</title>
-	<desc>Creates a panel</desc>
+	<desc>Creates a panel widget</desc>
 	<longdesc>
 		<p>Panels are designed to be as flexible as possible to make it easy to create menus, collapsible columns, drawers, inspectors panes and more. 
 		<iframe src="/resources/panel/example1.html" style="width:100%;height:440px;border:0px"></iframe>
@@ -160,7 +160,7 @@ $( "#idofpanel" )
 				
 
   	</longdesc>
-	<added>1.0</added>
+	<added>1.3</added>
 	<options>
 		<option name="animate" default="true" example-value="false">
 			<desc>Sets whether the panel will animate when opening and closing. If set to false, the panel will just appear and disappear without animation. This is recommended for fastest performance. 
