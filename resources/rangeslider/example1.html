@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Page Title</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
+	<style>
+	html, body { padding: 0; margin: 0; }
+	html, .ui-mobile, .ui-mobile body {
+    	height: 85px;
+	}
+	.ui-mobile, .ui-mobile .ui-page {
+    	min-height: 85px;
+	}
+	.ui-content{
+		padding:10px 15px 0px 15px;
+	}
+	</style>
+</head> 
+
+<body> 
+	<div data-role="rangeslider">
+		<label for="range-1a">Rangeslider:</label>
+		<input name="range-1a" id="range-1a" min="0" max="100" value="0" type="range">
+		<label for="range-1b">Rangeslider:</label>
+		<input name="range-1b" id="range-1b" min="0" max="100" value="100" type="range">
+	</div>
+</body>
+</html>
