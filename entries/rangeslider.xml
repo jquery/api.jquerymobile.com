@@ -4,7 +4,6 @@
 	<title>Rangeslider Widget</title>
 	<desc>Creates a rangeslider widget</desc>
 	<longdesc>
-		<h2>Rangeslider</h2>
 		<p>The rangeslider widget can be considered as a double handle slider. To add a rangeslider widget to your page, use two standard inputs with the <code>type="range"</code> attribute, and put them inside a <code>&lt;div&gt;</code> container. The input values are used to configure the starting position of the handles and the values are populated in the corresponding text inputs (the first one at the beginning of the rangeslider, and the second one at the end). Specify <code>min</code> and <code>max</code> attribute values to set the rangeslider's range. If you want to constrain inputs to specific increments, add the <code>step</code> attribute. Set the <code>value</code> attribute to each input to define their initial value. The framework will parse these attributes to configure the rangeslider widget.</p>
 		<p>As you drag the rangeslider's handles, the framework will update the native input values (and vice-versa) so they are always in sync; this ensures that the values are submitted with the form.</p>
 		<p>Set the <code>for</code> attribute of the <code>labels</code> to match the <code>ids</code> of the <code>inputs</code> so they are semantically associated. It's possible to accessibly hide the labels if they're not desired in the page layout, but we require that it is present in the markup for semantic and accessibility reasons.</p>
@@ -114,6 +113,7 @@
 $('input').rangeslider();
 </code></pre>
 		
+	
 	</longdesc>
 	<added>1.3</added>
 	<options>
@@ -171,14 +171,8 @@ $( document ).on( "mobileinit", function(){
 			<argument name="ui" type="Object">
 			</argument>
 		</event>
-		<event name="start">
-			<desc>triggered when there's an initial interaction with the rangeslider. Includes drags and taps.</desc>	
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
-		</event>
-		<event name="stop">
-			<desc>triggered at the end of an interaction with the rangeslider. Includes drags and taps.</desc>	
+		<event name="nomalize">
+			<desc>triggered when the input values are normalized (generally happens when you try to drag one handle past the other).</desc>	
 			<argument name="event" type="Event">
 				<desc></desc>
 			</argument>
