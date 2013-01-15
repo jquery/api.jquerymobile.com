@@ -41,21 +41,21 @@
 
 			<p>The <strong>position</strong> of the panel on the screen is set by the <code>data-position</code> attribute. The defaults to <code>left</code>, meaning it will appear from the left edge of the screen. Specify <code>data-position="right"</code> for it to appear from the right edge instead.</p>
 
-			<p>The <strong>display mode</strong> of the panel is set by the <code>data-display</code> attribute. The defaults to <code>overlay</code>, meaning the panel will appear on top of the page contents. Specify <code>data-display="reveal"</code> for the panel to sit under the page and reveal as the page slides away. A third mode, <code>data-display="push"</code> animates both the panel and page at the same time.</p>
+			<p>The <strong>display mode</strong> of the panel is set by the <code>data-display</code> attribute. The defaults to <code>reveal</code>, meaning the panel will sit under the page and reveal as the page slides away. Specify <code>data-display="overlay"</code> for the panel to appear on top of the page contents. A third mode, <code>data-display="push"</code> animates both the panel and page at the same time.</p>
 
-			<p>The overlay style panel will always be the smoothest and most reliable display mode, especially if combined with fixed toolbars so we recommend you use that mode if possible.</p>
+		
 				
 			<p>Here is an example of a panel with a custom position and display option set:</p>
 
 <pre><code>
-&lt;div data-role=&quot;panel&quot; id=&quot;mypanel&quot; data-position=&quot;right&quot; data-display=&quot;reveal&quot;&gt;
+&lt;div data-role=&quot;panel&quot; id=&quot;mypanel&quot; data-position=&quot;right&quot; data-display=&quot;push&quot;&gt;
 	&lt;!-- panel content goes here --&gt;
 &lt;/div&gt;
 </code></pre>
 
 			<h3>Opening a panel</h3>
 				
-			<p>A panel's visibility is toggled by a link somewhere on the page or by calling the panel's <code>open</code> method directly. The defaults place the panel on the left and will open over the page (overlay display mode). Open a panel programmatically like this:</p>
+			<p>A panel's visibility is toggled by a link somewhere on the page or by calling the panel's <code>open</code> method directly. The defaults place the panel on the left and it will be revealed. Open a panel programmatically like this:</p>
 
 <pre><code>$( "#idofpanel" ).panel( "open" , optionsHash );</code></pre>
 
@@ -119,7 +119,7 @@ $( "#idofpanel" )
 
 			<h3>Styling panels</h3>
 
-			<p>By default, panels have very simple styles to let you customize them as needed. Panels are essentially just simple blocks with no padding or margins that sit on either side of the page content. </p>
+			<p>By default, panels have very simple styles to let you customize them as needed. Panels are essentially just simple blocks with no margins that sit on either side of the page content. The framework wraps the panel content in a <code>div</code> with class <code>ui-pannel-inner</code> which has a padding of 15 pixels. If needed you can override this with custom CSS or use option <code>classes.panelInner</code> to set a different class name for the <code>div</code></p>
 
 			<p>Panels have a fixed width of 17em (272 pixels) which is narrow enough to still show some of the page contents when open to make clicking out to close easy, and still looks good on wider tablet or desktop screens. The styles to set widths on panels are fairly complex but these can be overridden with CSS as needed.</p>
 
@@ -140,15 +140,19 @@ $( "#idofpanel" )
 <pre><code>
 /* wrap push on wide viewports once open */
 @media (min-width: 35em){
-	.ui-panel-content-wrap.ui-panel-content-wrap-open-complete.ui-panel-content-wrap-display-push,
-	.ui-panel-content-wrap.ui-panel-content-wrap-open-complete.ui-panel-content-wrap-display-reveal {
+	.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-open.ui-panel-content-fixed-toolbar-display-push,
+	.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-open.ui-panel-content-fixed-toolbar-display-reveal,
+	.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-open.ui-panel-content-wrap-display-push,
+	.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-open.ui-panel-content-wrap-display-reveal {
 		margin-right: 17em;
 	}
- 	.ui-panel-content-wrap.ui-panel-content-wrap-open-complete.ui-panel-content-wrap-display-push.ui-panel-content-wrap-position-right,
-	.ui-panel-content-wrap.ui-panel-content-wrap-open-complete.ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-position-right {
+	.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-open.ui-panel-content-wrap-display-push.ui-panel-content-fixed-toolbar-position-right,
+	.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-open.ui-panel-content-wrap-display-reveal.ui-panel-content-fixed-toolbar-position-right,
+	.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-open.ui-panel-content-wrap-display-push.ui-panel-content-wrap-position-right,
+	.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-open.ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-position-right {
 		margin: 0 0 0 17em;
 	}
-	.ui-panel-dismiss-display-push {
+	.ui-responsive-panel .ui-panel-dismiss-display-push {
 		display: none;
 	}
 }
@@ -196,9 +200,9 @@ $( document ).on( "mobileinit", function(){
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="positionFixed" default="true" example-value="false">
-			<desc>Sets whether the panel has fixed positioning so the contents are in view even if the page is scrolled down. This also allows the page to scroll while the panel stays fixed. If set to true, the fixed positioning is only applied if a feature test passes and will fallback to static positioning so the panel will scroll with the document. We recommend disabling this feature when panels are used withing Android apps because of poor performance and display issues.
-				<p>This option is also exposed as a data attribute:<code>data-position-fixed=false</code> on the panel.</p>
+		<option name="positionFixed" default="false" example-value="true">
+			<desc>Sets whether the panel has fixed positioning so the contents are in view even if the page is scrolled down. This also allows the page to scroll while the panel stays fixed. We recommend not to enable this feature when panels are used withing Android apps because of poor performance and display issues.
+				<p>This option is also exposed as a data attribute:<code>data-position-fixed=true</code> on the panel.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
@@ -227,8 +231,12 @@ $( document ).on( "mobileinit", function(){
 			<desc>Class added to the panel when closed.</desc>
 			<type name="String" />
 		</option>
-		<option name="classes.panelUnfixed" default='"ui-panel-unfixed"'>
-			<desc>Class added to the panel when fixed positioning is not applied.</desc>
+		<option name="classes.panelFixed" default='"ui-panel-fixed"'>
+			<desc>Class added to the panel when fixed positioning is applied.</desc>
+			<type name="String" />
+		</option>
+		<option name="classes.panelInner" default='"ui-panel-inner"'>
+			<desc>Class added to the panel contents wrapper div.</desc>
 			<type name="String" />
 		</option>
 		<option name="classes.modal" default='"ui-panel-dismiss"'>
@@ -239,8 +247,12 @@ $( document ).on( "mobileinit", function(){
 			<desc>Class added to the invisible overlay over the page when the panel is open. Used to dismiss the panel.</desc>
 			<type name="String" />
 		</option>
-		<option name="classes.openComplete" default='"ui-panel-open-complete"'>
-			<desc>Class added to the page when the panel animation is complete.</desc>
+		<option name="classes.pagePanel" default='"ui-page-panel"'>
+			<desc>Class added to the page container when a panel widget is present.</desc>
+			<type name="String" />
+		</option>
+		<option name="classes.pagePanelOpen" default='"ui-page-panel-open"'>
+			<desc>Class added to the page when a panel is open.</desc>
 			<type name="String" />
 		</option>
 		<option name="classes.contentWrap" default='"ui-panel-content-wrap"'>
@@ -251,24 +263,24 @@ $( document ).on( "mobileinit", function(){
 			<desc>Class added to the wrapper injected around the page contents (header, content, footer) when the panel is opening. Used for targeting hardware acceleration only during transitions.</desc>
 			<type name="String" />
 		</option>
-		<option name="classes.wrapOpenComplete" default='"ui-panel-content-wrap-open-complete"'>
-			<desc>Class added to the page contents wrapper after the open animation is complete.</desc>
-			<type name="String" />
-		</option>
-		<option name="classes.wrapOpenClosed" default='"ui-panel-content-wrap-closed"'>
+		<option name="classes.contentWrapClosed" default='"ui-panel-content-wrap-closed"'>
 			<desc>Class added to the page contents wrapper after the close animation is complete.</desc>
 			<type name="String" />
 		</option>
-		<option name="classes.pageBlock" default='"ui-panel-page-block"'>
+		<option name="classes.contentFixedToolbar" default='"ui-panel-fixed-toolbar-wrap"'>
 			<desc>Class added to the page container to suppress scrolling horizontally</desc>
 			<type name="String" />
 		</option>
-		<option name="classes.pagePanel" default='"ui-page-panel"'>
-			<desc>Class added to the page container when a panel widget is present.</desc>
+		<option name="classes.contentFixedToolbarOpen" default='"ui-panel-content-fixed-toolbar-open"'>
+			<desc>Class added to fixed toolbars when the panel is opening.</desc>
 			<type name="String" />
 		</option>
-		<option name="classes.cssTransform3d" default='"ui-panel-3dtransforms"'>
-			<desc>Class added to the page container when the 3D transform feature test is true.</desc>
+		<option name="classes.contentFixedToolbarClosed" default='"ui-panel-content-fixed-toolbar-closed"'>
+			<desc>Class added to fixed toolbars after the close animation is complete.</desc>
+			<type name="String" />
+		</option>
+		<option name="classes.animate" default='"ui-panel-animate"'>
+			<desc>Class added to the panel, page contents wrapper and fixed toolbars when option animate is true and the 3D transform feature test returns <code>true</code>.</desc>
 			<type name="String" />
 		</option>
 	</options>
