@@ -7,7 +7,7 @@
 			
 		<h3>Responsive grids</h3>
 		
-		<p>When using <a href="content-grids.html">layout grids</a> for building full-level layouts, it may make sense to apply responsive web design (RWD) principles to ensure that the layout adapts to a wide range screen widths.</p>
+		<p>When using <a href="../grid-layout/">layout grids</a> for building full-level layouts, it may make sense to apply responsive web design (RWD) principles to ensure that the layout adapts to a wide range screen widths.</p>
 		<p>The simplest form of responsive behavior swaps from a stacked layout on narrow screens like a smartphone to the multi-column grid layouts at wider screens. This can be done by targeting styles to specific screen widths by using CSS media queries.</p>
 		
 		<h3>Making the grids responsive</h3>
@@ -139,6 +139,7 @@
 			<div class="ui-block-b"><div class="ui-body ui-body-d">Block B</div></div>
 			<div class="ui-block-c"><div class="ui-body ui-body-d">Block C</div></div>
 		</div>]]></html>
+		
 	</example>
 	<category slug="misc"/>
 </entry>
