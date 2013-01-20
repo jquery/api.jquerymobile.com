@@ -110,6 +110,7 @@
 	<methods>
 	</methods>
 	<example>
+		<height>320</height>
 		<desc>A basic example of responsive grids</desc>
 		<css><![CDATA[
 		@media all and (max-width: 35em) {
