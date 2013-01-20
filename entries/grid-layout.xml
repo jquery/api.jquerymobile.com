@@ -16,7 +16,7 @@
 			<p>Grids are 100% width, completely invisible (no borders or backgrounds) and don't have padding or margins, so they shouldn't interfere with the styles of elements placed inside them. </p>
 			<p>Within the grid container, child elements are assigned <code>ui-block-a/b/c/d/e</code> in a sequential manner which makes each "block" element float side-by-side, forming the grid. The <code>ui-block-a</code> class essentially clears the floats which will start a new line (see multiple row grids, below).</p>
 
-			<h2>Two column grids</h2>
+			<h3>Two column grids</h3>
 
 			<p>To build a two-column (50/50%) layout, start with a container with a <code>class</code> of <code>ui-grid-a</code>, and add two child containers inside it classed with <code>ui-block-a</code> for the first column and <code>ui-block-b</code> for the second:</p>
 
@@ -110,7 +110,7 @@
 	<example>
 		<desc>A basic example of grid layout</desc>
 		<html><![CDATA[<div data-role="header">
-		<h1>jQuery Mobile Example</h1>
+		<h1>Grid Layout Example</h1>
 	</div>
 	<div data-role="content">
 		<fieldset class="ui-grid-a">
