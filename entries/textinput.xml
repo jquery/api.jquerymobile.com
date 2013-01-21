@@ -30,7 +30,20 @@
 		<p>This will produce an input that is not as tall as the standard version and has a smaller text size.
 		<iframe src="/resources/textinput/example2.html" style="width:100%;height:90px;border:0px"></iframe></p>
         
-		<h3>Field containers</h3>
+		<h3>Clear button option</h3>
+
+		<p>To add a clear button to any input (like the search input), add the <code>data-clear-btn="true"</code> attribute. The text for this clear button can be customized via the <code>data-clear-btn-text="clear input"</code> attribute. Search buttons have the clear button by default and cannot be controlled by this option. Note that this is available for all the input types below except for <code>textareas</code>.</p>
+
+<pre><code>	
+&lt;label for=&quot;clear-demo&quot;&gt;Text Input:&lt;/label&gt;
+&lt;input type=&quot;text&quot; name=&quot;clear&quot; id=&quot;clear-demo&quot; value=&quot;&quot; data-clear-btn=&quot;true&quot; /&gt;
+</code></pre>
+
+			<p>This markup creates a text input with a clear button that becomes visible as soon as a character has been entered.
+			<iframe src="/resources/textinput/example7.html" style="width:100%;height:90px;border:0px"></iframe></p>
+			
+			
+			<h3>Field containers</h3>
         
 		<p>Optionally wrap the text input in a container with the <code> data-role="fieldcontain"</code> attribute to help visually group it in a longer form.</p>
 <pre><code>
@@ -146,9 +159,20 @@ $( '.mySearchInput' ).textinput();
 	</longdesc>
 	<added>1.0</added>
 	<options>
-    	<option name="disabled" default="false" example-value="true">
+    	<option name="clearBtn" default="false" example-value="true">
+        	<desc>Adds a clear button to the input (not available for textareas).
+				<p>This option is also exposed as a data attribute: <code>data-clear-btn="true"</code>.</p>
+			</desc>
+            <type name="Boolean" />
+        </option>
+		<option name="clearBtnText" default='"clear text"' example-value='"Clear value"'>
+        	<desc>The text description for the optional clear button, useful for assistive technologies like screen readers.
+				<p>This option is also exposed as a data attribute: <code>data-clear-btn-text="Clear input"</code>.</p>
+			</desc>
+            <type name="String" />
+        </option>
+		<option name="disabled" default="false" example-value="true">
         	<desc>Sets the default state of the text input to disabled when "true".
-
 			</desc>
             <type name="Boolean" />
         </option>
@@ -164,7 +188,6 @@ $( document ).on( "mobileinit", function(){
 		</option>
 		<option name="mini" default="false" example-value="true">
 			<desc>Sets the size of the element to a more compact, mini version. 
-
 				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
 			</desc>
             <type name="Boolean" />
