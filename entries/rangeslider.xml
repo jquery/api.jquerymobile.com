@@ -171,7 +171,7 @@ $( document ).on( "mobileinit", function(){
 			<argument name="ui" type="Object">
 			</argument>
 		</event>
-		<event name="nomalize">
+		<event name="normalize">
 			<desc>triggered when the input values are normalized (generally happens when you try to drag one handle past the other).</desc>	
 			<argument name="event" type="Event">
 				<desc></desc>
