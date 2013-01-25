@@ -70,16 +70,6 @@
 
 			<p>When using markup to control panels, you can only have a single panel open at once. Clicking a link to open a panel while one is already open will auto-close the first. This is done to keep the markup-only configuration simple.</p>
 
-			<p>That said, it's possible to open multiple panels at once programmatically:</p>
-			
-<pre><code>
-$( "#idofpanel" )
-.panel( "open" , optionsHash )
-.then( function( options ){
-	$( "#idofpanel2" ).panel( "open" , options );
-});
-</code></pre>
-
 			<h3>Closing a panel</h3>
 				
 			<p>Clicking the link that opened the panel, swiping left or right, or tapping the Esc key will close the panel. To turn off the swipt o close behavior, add the <code>data-swipe-close="false"</code> attribute to the panel.</p>
