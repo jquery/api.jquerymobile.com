@@ -121,6 +121,23 @@ function( text, searchValue, item ){
 
 			<p><iframe src="/resources/listview/example14.html" style="width:100%;height:2240px;border:0px"></iframe></p>			
 
+			<h3>Filter reveal</h3>
+			
+			<p>The filter reveal feature makes is easy to build a simple autocomplete with local data. When a filterable list has the <code>data-filter-reveal="true"</code> attribute, it will auto-hide all the list items when the search field is blank. The <code>data-filter-placeholder</code> attribute can be added to specify the placeholder text for the filter. If you need to search against a long list of values, we provide a way to create a filter with a <a href="listview-filter-autocomplete.html" data-ajax="false">remote data source</a>.</p>
+			
+			<p><iframe src="/resources/listview/example15.html" style="width:100%;height:240px;border:0px"></iframe></p>
+			
+			<h3>Remote autocomplete with listview filter</h3>
+
+			<p>To use the listview filter as an autocomplete that taps into remote data sources, you can use the <code>listviewbeforefilter</code> event to dynamically populate a listview as a user types a search query. This is useful when you have a very large data set like cities, zip codes, or products that can't be loaded up-front locally. Use the view source button to see the JavaScript that powers this demo.</p>
+			<p>If you have a small list of items, you can use the listview <a href="listview-filter-reveal.html">filter reveal option</a> to make an autocomplete with local listview data.</p>
+			<p><iframe src="/resources/listview/example16.html" style="width:100%;height:2240px;border:0px"></iframe></p>
+			
+			
+			<h3>Cities worldwide</h3>
+            
+			<p>After you enter <strong>at least three characters</strong> the autocomplete function will show all possible matches.</p> 
+
 			<h3>Calling the listview plugin</h3>
 			
 			<p>You can directly call the listview plugin on any selector, just like any jQuery plugin:</p>

@@ -1,0 +1,69 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Page Title</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0-beta.1/jquery.mobile-1.3.0-beta.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.0-beta.1/jquery.mobile-1.3.0-beta.1.min.js"></script>
+    <script>
+		$( document ).on( "pageinit", "#myPage", function() {
+			$( "#autocomplete" ).on( "listviewbeforefilter", function ( e, data ) {
+				var $ul = $( this ),
+					$input = $( data.input ),
+					value = $input.val(),
+					html = "";
+				$ul.html( "" );
+				if ( value && value.length > 2 ) {
+					$ul.html( "<li><div class='ui-loader'><span class='ui-icon ui-icon-loading'></span></div></li>" );
+					$ul.listview( "refresh" );
+					$.ajax({
+						url: "http://gd.geobytes.com/AutoCompleteCity",
+						dataType: "jsonp",
+						crossDomain: true,
+						data: {
+							q: $input.val()
+						}
+					})
+					.then( function ( response ) {
+						$.each( response, function ( i, val ) {
+							html += "<li>" + val + "</li>";
+						});
+						$ul.html( html );
+						$ul.listview( "refresh" );
+						$ul.trigger( "updatelayout");
+					});
+				}
+			});
+		});
+    </script>
+	<style>
+	html, body { padding: 0; margin: 0; }
+	html, .ui-mobile, .ui-mobile body {
+    	height: 2235px;
+	}
+	.ui-mobile, .ui-mobile .ui-page {
+    	min-height: 2235px;
+	}
+	.ui-content{
+		padding:10px 15px 0px 15px;
+	}
+	.ui-listview-filter-inset {
+			margin-top: 0;
+		}
+	</style>
+</head> 
+
+<body> 
+<div data-role="page" style="max-height:2240px; min-height:2240px;">
+	<div data-role="content" > 
+    	<div data-demo-html="true" data-demo-js="true" data-demo-css="true">
+			<ul id="autocomplete" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Find a city..." data-filter-theme="d"></ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
