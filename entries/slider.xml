@@ -331,7 +331,7 @@ $( document ).on( "mobileinit", function(){
 		<h1>jQuery Mobile Example</h1>
 	</div>
 	<div data-role="content">
-			<label for="flip-0">Select slider:</label>
+		<label for="flip-0">Select slider:</label>
 		<select name="flip-0" id="flip-0" data-role="slider">
 			<option value="off">Off</option>
 			<option value="on">On</option>
