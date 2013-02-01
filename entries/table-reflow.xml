@@ -16,7 +16,7 @@
 
     <h3>How reflow mode works</h3>
 	
-		<p>The plugin works by parsing the values (or <code>abbr title</code>) of the first row of header (<code>TH</code>) elements found in the table. For example, in the table above, the third table header is parsed to grab the contents ("Year"):</p>
+		<p>The plugin works by parsing the values (or <code>abbr title</code>) of the first row of header (<code>th</code>) elements found in the table. For example, in the table above, the third table header is parsed to grab the contents ("Year"):</p>
 
 		<pre><code>&lt;th&gt;Year&lt;/th&gt;</code></pre>
 
@@ -28,6 +28,8 @@
 		<pre><code>&lt;td&gt;&lt;b class=&quot;ui-table-cell-label&quot;&gt;Year&lt;/b&gt;1941&lt;/td&gt;</code></pre>
 		
 		<p>With our mobile-first approach, the base styles for a reflow table stacks each row and presents each cell in the label/data style format. This is done by hiding the table header rows, making each table cell <code>display:block</code> so they are stacked. The the label element injected into each cell is styled as <code>display:inline-block</code> with a <code>min-width:30%</code> rule to place the labels on the same line as the content at a consistent width to form a two column presentation.</p>
+		
+		<p>It is important to note that you are required to wrap your table headers in a <code>&lt;thead&gt; ... &lt;/thead&gt;</code> block, and the table body in a <code>&lt;tbody&gt; ... &lt;/tbody&gt;</code> block, as shown in the <a href="#entry-examples">full demo Example</a>.</p>
 
 		<h3>Making the table responsive</h3>
 		
