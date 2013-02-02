@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<entry name="pageinit" type="event" return="">
+	<title>pageinit</title>
+	<desc>Triggered on the page being initialized, after initialization occurs. </desc>
+	<longdesc>
+		<p>We recommend binding to this event instead of DOM ready() because this will work regardless of whether the page is loaded directly or if the content is pulled into another page as part of the Ajax navigation system.</p>
+<pre><code>
+$( '#aboutPage' ).live( 'pageinit',function(event){
+  alert( 'This page was just enhanced by jQuery Mobile!' );
+});
+</code></pre>
+	</longdesc>
+	<added>1.0</added>
+	<signature>
+		
+	</signature>
+	<category slug="events"/>
+</entry>
