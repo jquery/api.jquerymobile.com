@@ -15,7 +15,7 @@
 				</li>
 				<li><code>options</code> (object)
 					<ul>
-						<li>This object contains the configuration options to be used for the current changePage() call.</li>
+						<li>This object contains the configuration options to be used for the current <code>changePage()</code> call.</li>
 					</ul>
 				</li>
 			</ul>
