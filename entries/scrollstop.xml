@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<entry name="scrollstop" type="event" return="">
+	<title>scrollstop</title>
+	<desc>Triggers when a scroll finishes. </desc>
+	<longdesc>
+		
+	</longdesc>
+	<added>1.0</added>
+	<signature>
+		
+	</signature>
+	<category slug="events"/>
+</entry>
