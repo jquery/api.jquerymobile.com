@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<entry name="scrollstart" type="event" return="">
+	<title>scrollstart</title>
+	<desc>Triggers when a scroll begins. </desc>
+	<longdesc>
+		<p>Note that iOS devices freeze DOM manipulation during scroll, queuing them to apply when the scroll finishes. We're currently investigating ways to allow DOM manipulations to apply before a scroll starts.</p>
+	</longdesc>
+	<added>1.0</added>
+	<signature>
+		
+	</signature>
+	<category slug="events"/>
+</entry>
