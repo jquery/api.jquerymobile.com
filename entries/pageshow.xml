@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<entry name="pageshow" type="event" return="">
+	<title>pageshow</title>
+	<desc>Triggered on the "toPage" after the transition animation has completed. </desc>
+	<longdesc>
+		<p>Callbacks for this event will receive a data object as their 2nd arg. This data object has the following properties on it: </p>
+		<ul>
+			<li><code>prevPage</code> (object)
+				<ul>
+					<li>A jQuery collection object that contains the page DOM element that we just transitioned away from. Note that this collection is empty when the first page is transitioned in during application startup.</li>
+				</ul>
+			</li>
+		</ul>
+		<p>You can access the <code>prevPage</code> or <code>nextPage</code> properties via the second argument of a bound callback function. For example: </p>
+<pre><code>
+$( 'div' ).live( 'pageshow',function(event, ui){
+  alert( 'This page was just hidden: '+ ui.prevPage);
+});
+
+$( 'div' ).live( 'pagehide',function(event, ui){
+  alert( 'This page was just shown: '+ ui.nextPage);
+});
+</code></pre>
+		<p>Also, for these handlers to be invoked during the initial page load, you must bind them before jQuery Mobile executes.  This can be done in the <code>mobileinit</code> handler, as described on the global config page.</p>
+	</longdesc>
+	<added>1.0</added>
+	<signature>
+		
+	</signature>
+	<category slug="events"/>
+</entry>

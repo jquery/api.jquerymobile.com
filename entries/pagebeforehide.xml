@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<entry name="pagebeforehide" type="event" return="">
+	<title>pagebeforehide</title>
+	<desc>Triggered on the "fromPage" we are transitioning away from, before the actual transition animation is kicked off.</desc>
+	<longdesc>
+		<p>Callbacks for this event will receive a data object as their 2nd arg. This data object has the following properties on it: </p>
+		<ul>
+			<li><code>nextPage</code> (object)
+				<ul>
+					<li>A jQuery collection object that contains the page DOM element that we are transitioning to.</li>
+				</ul>
+			</li>
+		</ul>
+		<p>Note that this event will not be dispatched during the transition of the first page at application startup since there is no previously active page.</p>
+
+	</longdesc>
+	<added>1.0</added>
+	<signature>
+		
+	</signature>
+	<category slug="events"/>
+</entry>
