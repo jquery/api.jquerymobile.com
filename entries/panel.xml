@@ -111,13 +111,15 @@ $( "#mypanel" ).trigger( "updatelayout" );
 
 			<p>The framework has a feature test to detect if the required CSS properties are supported and will fall back to a simple hide/show if not available. After thorough testing, we decided to not animate panels on less capable platforms because the choppier animations weren't a better experience than a simple hide/show.</p>
 
-			<p>The <code>animate</code> option allows you to turn off panel animations for all devices. To turn off animations via markup, add the  <code>data-animate="false"</code> attribute to the panel container.</p>
+			<p>The <code>animate</code> option allows you to turn off panel animations for all devices. To turn off animations via markup, add the <code>data-animate="false"</code> attribute to the panel container.</p>
+			
+			<p>The use of hardware acceleration is triggered during initialization of the page to prevent blinks when opening a panel. Because this increases memory use you have to be aware of performance issues if you use scripts to dynamically inject or manipulate the content of a page with an animated panel on it.</p> 
 
 			<h3>Panel positioning</h3>
 
 			<p>The panel will be displayed with the <code>position:absolute</code> CSS property, meaning it will scroll with the page. When a panel is a opened the framework checks to see if the bottom of the panel contents is in view and, if not, scrolls to the top of the page.</p>
 
-            <p>You can set a panel to <code>position:fixed</code>, so its contents will appear no matter how far down the page you're scrolled, by adding the <code>data-position-fixed="true"</code> attribute to the panel. The framework also checks to see if the panel contents will fit within the viewport before applying the fixed positioning because this property would prevent the panel contents from scrolling and using <code>overflow</code> is not well supported enough to use at this time. If the panel contents are too long to fit within the viewport, the framework will simply display the panel without absolute positioning.</p>
+            <p>You can set a panel to <code>position:fixed</code>, so its contents will appear no matter how far down the page you're scrolled, by adding the <code>data-position-fixed="true"</code> attribute to the panel. The framework also checks to see if the panel contents will fit within the viewport before applying the fixed positioning because this property would prevent the panel contents from scrolling and using <code>overflow</code> is not well supported enough to use at this time. If the panel contents are too long to fit within the viewport, the framework will simply display the panel without fixed positioning.</p>
 
 			<p>In general, we recommend that you place the buttons that open the panel at the very top of the screen which is the most common UI pattern for panels.  This will avoid the need to scroll and also makes the transitions a bit smoother.</p>
 	
@@ -128,11 +130,13 @@ $( "#mypanel" ).trigger( "updatelayout" );
 			<p>By default, panels have very simple styles to let you customize them as needed. Panels are essentially just simple blocks with no margins that sit on either side of the page content. The framework wraps the panel content in a <code>div</code> with class <code>ui-pannel-inner</code> which has a padding of 15 pixels. If needed you can override this with custom CSS or use option <code>classes.panelInner</code> to set a different class name for the <code>div</code></p>
             
 			<p>Panels have a fixed width of 17em (272 pixels) which is narrow enough to still show some of the page contents when open to make clicking out to close easy, and still looks good on wider tablet or desktop screens. The styles to set widths on panels are fairly complex but these can be overridden with CSS as needed.</p>
-
-			<p>Other than the theme background, width and 100% height styles, panels have very little styling on their own. The default theme for panels is "c". You can set a different theme for the panel by adding a <code>data-theme</code> to the panel container, or set <code>data-theme="none"</code> and add your own classes to style it as needed.</p>
 			
 			<p>Note that adding padding, borders, or margins directly to the panel container will alter the overall dimensions and could cause the positioning and animation to be affected. To avoid this, apply styles to the panel content wrapper (<code>.ui-pannel-inner</code>).</p>
 
+			<p>Other than the theme background, width and 100% height styles, panels have very little styling on their own. The default theme for panels is "c". You can set a different theme for the panel by adding a <code>data-theme</code> to the panel container, or set <code>data-theme="none"</code> and add your own classes to style it as needed.</p>
+			
+			<p>The framework applies the theme that is used for the page to the content wrapper. Before opening a panel that has display mode reveal or push, the page theme will be set to the same theme that is used for the panel. This is done to mask that most mobile browsers haven't finished painting the panel background when the animation to open it has already started. If you use a background image for a page, you have to set it for the <code>ui-body-*</code> class of the theme that you use for the page so it will be used as background of the content wrapper.</p>
+			
 			<h3>Making the panel responsive</h3>
 
 			<p>When the push or reveal display is used, a panel pushes the page aside when it opens. Since some of the page is pushed offscreen, the panel is modal and must be closed to interact with the page content again. On larger screens, you may want to have the panel work more like a collapsible column that can be opened and used alongside the page to take better use of the screen real estate. </p>
@@ -298,8 +302,48 @@ $( document ).on( "mobileinit", function(){
 		</option>
 	</options>
 	<events>
+		<event name="beforeclose">	
+			<desc>Triggered at the start of the process of closing a panel
+			</desc>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc></desc>
+			</argument>
+		</event>
+		<event name="beforeopen">	
+			<desc>Triggered at the start of the process of opening a panel
+			</desc>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc></desc>
+			</argument>
+		</event>
 		<event name="create">	
 			<desc>Triggered when a panel is created
+			</desc>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc></desc>
+			</argument>
+		</event>
+		<event name="close">	
+			<desc>Triggered when the process (and animation) of closing a panel is finished
+			</desc>
+			<argument name="event" type="Event">
+				<desc></desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc></desc>
+			</argument>
+		</event>
+		<event name="open">	
+			<desc>Triggered when the process (and animation) of opening a panel is finished
 			</desc>
 			<argument name="event" type="Event">
 				<desc></desc>
