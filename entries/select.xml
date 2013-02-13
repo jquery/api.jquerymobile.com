@@ -6,7 +6,7 @@
 	<longdesc>
 		<p>The select menu is based on a native select element, which is hidden from view and replaced with a custom-styled select button that matches the look and feel of the jQuery Mobile framework. The select menu is ARIA-enabled and keyboard accessible on the desktop as well.</p>
 		<p>By default, the framework leverages the native OS options menu to use with the custom button. When the button is clicked, the native OS menu will open. When a value is selected and the menu closes, the custom button's text is updated to match the selected value. Please note that the framework also offers the possibility of having custom (non-native) select menus.</p>
-		<p>To add a select menu to your page, start with a standard <code>select</code> element populated with a set of <code>option</code> elements. Set the <code>for</code> attribute of the <code>label</code> to match the <code>id</code> of the <code>select</code> so they are semantically associated. It's possible to <a href="../docs-forms.html">accessibly hide the label</a> if it's not desired in the page layout, but we require that it is present in the markup for semantic and accessibility reasons.</p>
+		<p>To add a select menu to your page, start with a standard <code>select</code> element populated with a set of <code>option</code> elements. Set the <code>for</code> attribute of the <code>label</code> to match the <code>id</code> of the <code>select</code> so they are semantically associated. It's possible to accessibly hide the label if it's not desired in the page layout, but we require that it is present in the markup for semantic and accessibility reasons.</p>
 			
 		<p>The framework will find all <code>select</code> elements and automatically enhance them into select menus, no need to apply a <code>data-role</code> attribute. To prevent the automatic enhancement of a select, add  <code>data-role="none"</code> attribute to the <code>select</code>.</p>
 			
@@ -25,7 +25,7 @@
         
 		<h3>Mini version</h3>
         
-		<p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a <a href="../forms-all-mini.html">mini version</a>. </p>
+		<p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a mini version. </p>
 
 <pre><code>	
 &lt;label for=&quot;select-choice-min&quot; class=&quot;select&quot;&gt;Shipping method:&lt;/label&gt;
