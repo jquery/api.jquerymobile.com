@@ -65,21 +65,14 @@
 	<example>
 		<desc>A basic example of a page.</desc>
 		<html><![CDATA[<div data-role="header">
-		<h1>jQuery Mobile Example</h1>
+		<h1>Page header (optional): Example page</h1>
 	</div>
 	<div data-role="content">
-		<div data-role="page" id="page">
-			<div data-role="header">
-				<h1>Example page</h1>
-			</div>
-			<div data-role="content">
-				<h2>Example page content</h2>
-				<p>Content for the page goes here.</p>
-			</div>
-			<div data-role="footer">
-				<h1>Page footer</h1>
-			</div>
-		</div>
+		<h2>Page content</h2>
+		<p>Page content goes here.</p>
+	</div>
+	<div data-role="footer">
+		<h1>Page footer (optional)</h1>
 	</div>]]></html>
 	</example>
 	<category slug="widgets"/>
