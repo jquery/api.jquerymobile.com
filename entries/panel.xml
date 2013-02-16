@@ -104,7 +104,6 @@ $( "#mypanel" ).trigger( "updatelayout" );
 &lt;a href=&quot;#my-header&quot; data-rel=&quot;close&quot;&gt;Close panel&lt;/a&gt;
 </code></pre>
 
-			
 			<h3>Panel animations</h3>
 
 			<p>Panels will animate if the browser supports 3D transforms, the same criteria for CSS animation support we use for page transitions. Panel animations use <code>translateX</code> CSS transforms to ensure they are hardware accelerated and smooth.</p>
@@ -113,7 +112,7 @@ $( "#mypanel" ).trigger( "updatelayout" );
 
 			<p>The <code>animate</code> option allows you to turn off panel animations for all devices. To turn off animations via markup, add the <code>data-animate="false"</code> attribute to the panel container.</p>
 			
-			<p>The use of hardware acceleration is triggered during initialization of the page to prevent blinks when opening a panel. Because this increases memory use you have to be aware of performance issues if you use scripts to dynamically inject or manipulate the content of a page with an animated panel on it.</p> 
+			<p>The use of hardware acceleration is triggered during initialization of the page to prevent blinks when opening a panel. Because this increases memory use you have to be aware of performance issues if you use long lists or scripts to dynamically inject content on a page with an animated panel.</p> 
 
 			<h3>Panel positioning</h3>
 
@@ -123,7 +122,7 @@ $( "#mypanel" ).trigger( "updatelayout" );
 
 			<p>In general, we recommend that you place the buttons that open the panel at the very top of the screen which is the most common UI pattern for panels.  This will avoid the need to scroll and also makes the transitions a bit smoother.</p>
 	
-			<p>Note that there are issues with fixed positioning within Android WebView applications (not the browser) that can cause layout issues, especially when hardware acceleration isn't enabled. We recommend not to use the fixed position panel option if deploying to an Android app. Also, although the framework supports the combination of panels and fixed toolbars, fixed toolbars don't transition together with the page content.</p>
+			<p>Note that there are issues with fixed positioning within Android WebView applications (not the browser) that can cause layout issues, especially when hardware acceleration isn't enabled. We recommend not to use the fixed position panel option if deploying to an Android app. Also, if have a fixed on a page with fixed toolbars, the toolbars might not transition together with the page content.</p>
 
 			<h3>Styling panels</h3>
 
