@@ -10,8 +10,8 @@
 		<p>The title text is normally an H1 heading element but it's possible to use any heading level (H1-H6) to allow for semantic flexibility. For example, a page containing multiple mobile "pages" may use a H1 element on the home "page" and a H2 element on the secondary pages. All heading levels are styled identically by default to maintain visual consistency.</p> 
 
 <pre><code>
-&lt;div data-role="header" &gt;
-&lt;h1&gt; Page Title &lt;/h1&gt;
+&lt;div data-role="header"&gt;
+	&lt;h1&gt; Page Title &lt;/h1&gt;
 &lt;/div&gt;
 </code></pre>
 
@@ -32,7 +32,7 @@
 	&lt;a href=&quot;index.html&quot; data-icon=&quot;delete&quot;&gt;Cancel&lt;/a&gt;
 	&lt;h1&gt;Edit Contact&lt;/h1&gt;
 	&lt;a href=&quot;index.html&quot; data-icon=&quot;check&quot;&gt;Save&lt;/a&gt;
-	&lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
 
 		<iframe src="/resources/header/example2.html" style="width:100%;height:90px;border:0px"></iframe>
