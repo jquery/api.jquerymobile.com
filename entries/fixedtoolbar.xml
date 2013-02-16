@@ -10,14 +10,14 @@
 		
 		<p>Fixed header markup example:</p>
 		<pre><code>	
-&lt;div data-role=&quot;header&quot; <strong>data-position=&quot;fixed&quot;</strong>&gt;
+&lt;div data-role=&quot;header&quot; data-position=&quot;fixed&quot;&gt;
 	&lt;h1&gt;Fixed Header&lt;/h1&gt;
 &lt;/div&gt;
 		</code></pre>
 		
 		<p>Fixed footer markup example:</p>
 		<pre><code>	
-&lt;div data-role=&quot;footer&quot; <strong>data-position=&quot;fixed&quot;</strong>&gt;
+&lt;div data-role=&quot;footer&quot; data-position=&quot;fixed&quot;&gt;
 	&lt;h1&gt;Fixed Footer&lt;/h1&gt;
 &lt;/div&gt;
 		</code></pre>
@@ -72,16 +72,6 @@
 		</ul>
 			
 		<p>While we will continue to try to find ways to mitigate these bugs as best we can, we currently advise against implementing fixed toolbars containing complicated user styles and form elements without extensive testing in all versions of Android's native browser.</p>
-		
-		<p>The following pages are designed to test fixed toolbars and form elements: 
-					<a href="bars-fixed-forms-a.html">demo app</a>,
-					<a href="bars-fixed-forms-b.html">text inputs</a>, 
-					<a href="bars-fixed-forms-c.html">search inputs</a>, 
-					<a href="bars-fixed-forms-d.html">radio toggles</a>, 
-					<a href="bars-fixed-forms-e.html">checkbox toggles</a>,
-					<a href="bars-fixed-forms-f.html">slider</a>, 
-					<a href="bars-fixed-forms-g.html">select</a>, and  
-					<a href="bars-fixed-forms-h.html">buttons</a>.</p>
 		
 		
 <div class="ui-body ui-body-e">		
