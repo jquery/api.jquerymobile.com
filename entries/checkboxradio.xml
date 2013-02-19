@@ -194,11 +194,13 @@
 	</div>
 	<div data-role="content">
 		<div data-role="fieldcontain">
-			<fieldset data-role="controlgroup">
-				<legend>Agree to the terms:</legend>
-				<input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" />
-				<label for="checkbox-2">I agree</label>
-			</fieldset>
+			<form>
+				<fieldset data-role="controlgroup">
+					<legend>Agree to the terms:</legend>
+					<input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" />
+					<label for="checkbox-2">I agree</label>
+				</fieldset>
+			</form>	
 		</div>
 	</div>	]]></html>
 	</example>
@@ -209,20 +211,22 @@
 		<h1>jQuery Mobile Example</h1>
 	</div>
 	<div data-role="content">
-		<fieldset data-role="controlgroup">
-			<legend>Choose a pet:</legend>
-			<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
-			<label for="radio-choice-1">Cat</label>
+		<form>
+			<fieldset data-role="controlgroup">
+				<legend>Choose a pet:</legend>
+				<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
+				<label for="radio-choice-1">Cat</label>
 
-			<input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2" />
-			<label for="radio-choice-2">Dog</label>
+				<input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2" />
+				<label for="radio-choice-2">Dog</label>
 
-			<input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3" />
-			<label for="radio-choice-3">Hamster</label>
+				<input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3" />
+				<label for="radio-choice-3">Hamster</label>
 
-			<input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4" />
-			<label for="radio-choice-4">Lizard</label>
-		</fieldset> 
+				<input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4" />
+				<label for="radio-choice-4">Lizard</label>
+			</fieldset> 
+		</form>
 	</div>]]></html>
 	</example>
 	<category slug="widgets"/>
