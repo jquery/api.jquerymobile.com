@@ -78,7 +78,7 @@ $( "#mylistview" ).listview({
 
 			<p><iframe src="/resources/listview/example8.html" style="width:100%;height:1010px;border:0px"></iframe></p>
 
-      		<p>If you want to change the way in which list items are filtered, i.e. fuzzy search or matching from the beginning of the string, you can configure the callback used internally by defining <code>$.mobile.listview.prototype.options.filterCallback</code> during <code>mobileinit</code> or after the widget has been created with <code>$( "#mylist" ).listview( 'option', 'filterCallback', yourFilterFunction)</code>. Any function defined for the callback will be provided three arguments. First, the text of the current list item, second the value being searched for, and third the list item being filtered. A truthy value will result in a hidden list item. The default callback which filters entries without the <code>searchValue</code> as a substring is described below:
+      		<p>If you want to change the way in which list items are filtered, i.e. fuzzy search or matching from the beginning of the string, you can configure the callback used internally by defining <code>$.mobile.listview.prototype.options.filterCallback</code> during <code>mobileinit</code> or after the widget has been created with <code>$( "#mylist" ).listview( "option", "filterCallback", yourFilterFunction)</code>. Any function defined for the callback will be provided three arguments. First, the text of the current list item, second the value being searched for, and third the list item being filtered. A truthy value will result in a hidden list item. The default callback which filters entries without the <code>searchValue</code> as a substring is described below:
       		</p>
 
 <pre><code>
