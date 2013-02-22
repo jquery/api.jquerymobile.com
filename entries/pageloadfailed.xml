@@ -25,7 +25,7 @@
             		<ul>
 						<li>Callbacks that call <code>preventDefault()</code> on the event, *MUST* call <code>resolve()</code> or <code>reject()</code> on this object so that <code>changePage()</code> requests resume processing. Deferred object observers expect the deferred object to be resolved like this:
 <pre><code>
-$( document ).on( &quot;pageloadfailed&quot;, function( event, data ){
+$( document ).on( &quot;pageloadfailed&quot;, function( event, data ) {
 
 	// Let the framework know we're going to handle things.
 
@@ -43,7 +43,7 @@ $( document ).on( &quot;pageloadfailed&quot;, function( event, data ){
 </code></pre>
                     <p>or rejected like this:</p>
 <pre><code>
-$( document ).on( &quot;pageloadfailed&quot;, function( event, data ){
+$( document ).on( &quot;pageloadfailed&quot;, function( event, data ) {
 
 	// Let the framework know we're going to handle things.
 

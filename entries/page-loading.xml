@@ -11,7 +11,7 @@
 
 		<pre>
 			<code>
-				$( document ).on( 'mobileinit', function(){
+				$( document ).on( "mobileinit", function() {
 				$.mobile.loader.prototype.options.text = "loading";
 				$.mobile.loader.prototype.options.textVisible = false;
 				$.mobile.loader.prototype.options.theme = "a";
@@ -24,10 +24,10 @@
 
 		<pre>
 			<code>
-				$.mobile.loading( 'show', {
-				text: 'foo',
+				$.mobile.loading( "show", {
+				text: "foo",
 				textVisible: true,
-				theme: 'z',
+				theme: "z",
 				html: ""
 				});
 			</code>
@@ -79,7 +79,7 @@
 			</desc>
 		</method>
 		<method name="hidePageLoadingMsg">
-			<desc><p class="ui-body ui-body-e"><strong>Deprecated</strong> in 1.2 - use <code>$.mobile.loading( 'hide' )</code> instead, see examples above</p>
+			<desc><p class="ui-body ui-body-e"><strong>Deprecated</strong> in 1.2 - use <code>$.mobile.loading( "hide" )</code> instead, see examples above</p>
 			Hide the page loading message, which is configurable via $.mobile.loadingMessage.
 				<pre><code>
 					//hide the page loader
@@ -100,14 +100,14 @@
 			</desc>
 		</method>
 		<method name="showPageLoadingMsg">
-			<desc><p class="ui-body ui-body-e"><strong>Deprecated</strong> in 1.2 - use <code>$.mobile.loading( 'show' )</code> instead, see examples above</p>
+			<desc><p class="ui-body ui-body-e"><strong>Deprecated</strong> in 1.2 - use <code>$.mobile.loading( "show" )</code> instead, see examples above</p>
 			Show the page loading message, which is configurable via $.mobile.loadingMessage.
 			<pre><code>
 				//cue the page loader
 				$.mobile.showPageLoadingMsg();
 
 				//use theme swatch "b", a custom message, and no spinner
-				$.mobile.showPageLoadingMsg("b", "This is only a test", true);
+				$.mobile.showPageLoadingMsg( "b", "This is only a test", true );
 			</code></pre>
 		</desc>
 	</method>
@@ -116,13 +116,13 @@
 		<height>370</height>
 		<desc>Loader Examples</desc>
 		<code><![CDATA[
-		$(document).on("click", ".show-page-loading-msg", function() {
+		$(document).on( "click", ".show-page-loading-msg", function() {
 			var $this = $( this ),
-				theme = $this.jqmData("theme") || $.mobile.loader.prototype.options.theme,
-				msgText = $this.jqmData("msgtext") || $.mobile.loader.prototype.options.text,
-				textVisible = $this.jqmData("textvisible") || $.mobile.loader.prototype.options.textVisible,
-				textonly = !!$this.jqmData("textonly");
-				html = $this.jqmData("html") || "";
+				theme = $this.jqmData( "theme" ) || $.mobile.loader.prototype.options.theme,
+				msgText = $this.jqmData( "msgtext" ) || $.mobile.loader.prototype.options.text,
+				textVisible = $this.jqmData( "textvisible" ) || $.mobile.loader.prototype.options.textVisible,
+				textonly = !!$this.jqmData( "textonly" );
+				html = $this.jqmData( "html" ) || "";
 			$.mobile.loading( 'show', {
 					text: msgText,
 					textVisible: textVisible,
@@ -131,8 +131,8 @@
 					html: html
 			});
 		})
-		.on("click", ".hide-page-loading-msg", function() {
-			$.mobile.loading( 'hide' );
+		.on( "click", ".hide-page-loading-msg", function() {
+			$.mobile.loading( "hide" );
 		});
 	]]></code>
 		<html><![CDATA[

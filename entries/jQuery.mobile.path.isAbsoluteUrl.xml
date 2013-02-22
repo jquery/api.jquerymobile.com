@@ -31,11 +31,11 @@
 			<code><![CDATA[
 $(document).ready(function() {
   
-   $('.myButton').on('click', function(){
+   $( ".myButton" ).on( "click", function() {
     
-      var isAbs = $.mobile.path.isAbsoluteUrl( $(this).attr("value") );
+      var isAbs = $.mobile.path.isAbsoluteUrl( $( this ).attr( "value" ) );
         
-    $('#myResult').html( String(isAbs) );
+    $( "#myResult" ).html( String( isAbs ) );
  }) 
 });
 ]]></code>

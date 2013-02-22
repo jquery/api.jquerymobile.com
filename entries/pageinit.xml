@@ -5,8 +5,8 @@
 	<longdesc>
 		<p>We recommend binding to this event instead of DOM ready() because this will work regardless of whether the page is loaded directly or if the content is pulled into another page as part of the Ajax navigation system.</p>
 <pre><code>
-$( '#aboutPage' ).on( 'pageinit',function(event){
-  alert( 'This page was just enhanced by jQuery Mobile!' );
+$( "#aboutPage" ).on( "pageinit", function( event ) {
+  alert( "This page was just enhanced by jQuery Mobile!" );
 });
 </code></pre>
 	</longdesc>

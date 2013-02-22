@@ -91,7 +91,7 @@ I&#x27;m a basic textarea. If this is pre-populated with content, the height wil
 
 		<p>This plugin will auto initialize on any page that contains a textarea or any of the text input types listed above without any need for a <code>data-role</code> attribute in the markup. However, if needed, you can directly call the <code>textinput</code> plugin on any selector, just like any jQuery plugin:</p>
 <pre><code>
-$( 'input' ).textinput();			
+$( "input" ).textinput();			
 </code></pre>
 				
 		<h3>Degraded input types</h3>
@@ -153,7 +153,7 @@ $( 'input' ).textinput();
 		<p>This plugin will auto-initialize on any page that contains a text input with the <code>type="search"</code> attribute without any need for a <code>data-role</code> attribute in the markup. However, if needed, you can directly call the <code>textinput</code> plugin on a selector, just like any jQuery plugin:</p>
 		
 <pre><code>
-$( '.mySearchInput' ).textinput();			
+$( ".mySearchInput" ).textinput();			
 </code></pre>        
 
 	</longdesc>
@@ -179,7 +179,7 @@ $( '.mySearchInput' ).textinput();
 		<option name="initSelector" default="input[type='text'], input[type='search'], :jqmData(type='search'), input[type='number'], :jqmData(type='number'), input[type='password'], input[type='email'], input[type='url'], input[type='tel'], textarea, input:not([type])">
 			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as textinputs. To change which elements are initialized, bind this option to the mobileinit event:
 <pre><code>
-$( document ).on( "mobileinit", function(){
+$( document ).on( "mobileinit", function() {
 	$.mobile.textinput.prototype.options.initSelector = ".myInputs";
 }); 
 </code></pre>

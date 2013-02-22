@@ -10,8 +10,8 @@
 		<pre>
 		<code><![CDATA[
 			$( function () {
-			    $( document ).on( "vmouseout", "p", function(){
-		      $( this ).append ( '<span style="color:#00F;">Mouse out.</span>' );
+			    $( document ).on( "vmouseout", "p", function() {
+		      $( this ).append ( "<span style='color:#00F;'>Mouse out.</span>" );
 		    });
 		]]></code>
 	</pre>

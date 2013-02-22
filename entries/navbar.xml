@@ -138,7 +138,7 @@
 		<event name="create">
 			<desc>triggered when a navbar is created</desc>
 <pre><code>
-$('div').navbar({
+$( "div" ).navbar({
 	create: function(event, ui) { ... }
 });
 </code></pre>

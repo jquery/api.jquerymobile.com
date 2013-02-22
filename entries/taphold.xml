@@ -28,13 +28,13 @@
 			
 			...
 		    
-		    $(function(){
+		    $(function() {
 		    	// Bind the tapholdHandler callback function to the taphold event on div.box
-		        $('div.box').on( 'taphold', tapholdHandler );
+		        $( "div.box" ).on( 'taphold', tapholdHandler );
 
 		        // Callback function references the event target and adds the 'tap' class to it
-		        function tapholdHandler( event ){
-        			$(event.target).addClass( 'taphold' );
+		        function tapholdHandler( event ) {
+        			$(event.target).addClass( "taphold" );
         		}
 			});
 		]]></code>
