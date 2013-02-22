@@ -58,7 +58,7 @@
 	<div></div>
 				]]></html>
 			<code><![CDATA[
-$.mobile.loadPage( "about/us.html" );;
+$.mobile.loadPage( "about/us.html" );
 ]]></code>
 		</example>
 		<example>
