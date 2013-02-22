@@ -40,7 +40,7 @@ $(document).ready(function() {
     
       var absUrl = $.mobile.path.makeUrlAbsolute( $( this ).attr( "value" ), "http://foo.com/a/b/c/test.html" );
         
-    $( "#myResult" ).html(absUrl);
+    $( "#myResult" ).html( absUrl );
  }) 
 });
 ]]></code>
