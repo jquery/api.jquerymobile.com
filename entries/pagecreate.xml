@@ -5,7 +5,7 @@
 	<longdesc>
 		<p>This event is most useful for user's wishing to create their own custom widgets for child markup enhancement as the jquery mobile widgets do.</p>
 <pre><code>
-$( '#aboutPage' ).live( 'pagecreate',function(event){
+$( '#aboutPage' ).on( 'pagecreate',function(event){
   ( ":jqmData(role='sweet-plugin')" ).sweetPlugin();
 });</code></pre>
 	</longdesc>

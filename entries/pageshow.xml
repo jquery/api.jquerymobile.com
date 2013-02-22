@@ -13,11 +13,11 @@
 		</ul>
 		<p>You can access the <code>prevPage</code> or <code>nextPage</code> properties via the second argument of a bound callback function. For example: </p>
 <pre><code>
-$( 'div' ).live( 'pageshow',function(event, ui){
+$( 'div' ).on( 'pageshow',function(event, ui){
   alert( 'This page was just hidden: '+ ui.prevPage);
 });
 
-$( 'div' ).live( 'pagehide',function(event, ui){
+$( 'div' ).on( 'pagehide',function(event, ui){
   alert( 'This page was just shown: '+ ui.nextPage);
 });
 </code></pre>
