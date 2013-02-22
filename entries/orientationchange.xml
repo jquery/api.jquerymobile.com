@@ -14,7 +14,7 @@
 		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<pre>
 		<code><![CDATA[
-			$(function(){
+			$(function() {
 				/* 
 				  Bind an event to window.orientationchange that, when the device is turned, 
 				  gets the orientation and displays it to on screen.
@@ -22,7 +22,7 @@
 				$(window).on( 'orientationchange', orientationChangeHandler );
 
 				function orientationChangeHandler( event ) {
-					$('h1#orientation').html( 'This device is in ' + event.orientation + ' mode!' );
+					$( "h1#orientation" ).html( "This device is in " + event.orientation + " mode!" );
 				}
 				// You can also manually force this event to fire.
 				$(window).orientationchange();

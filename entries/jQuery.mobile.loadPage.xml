@@ -69,7 +69,7 @@ $.mobile.loadPage( "about/us.html" );
 			<code><![CDATA[
 $.mobile.loadPage( "searchresults.php", {
 	type: "post",
-	data: $("form#search").serialize()
+	data: $( "form#search" ).serialize()
 });
 ]]></code>
 		</example>

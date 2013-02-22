@@ -82,7 +82,7 @@
 		<option name="initSelector"  default='":jqmData(role=&#39;table&#39;)"'>
 			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as tables. To change which elements are initialized, bind this option to the mobileinit event:
 <pre><code>
-$( document ).on( "mobileinit", function(){
+$( document ).on( "mobileinit", function() {
 	$.mobile.table.prototype.options.initSelector = ".mytable";
 });
 </code></pre>

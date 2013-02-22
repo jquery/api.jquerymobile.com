@@ -54,7 +54,7 @@
 			<p>By default, the text used to create dividers is the uppercased first letter of the item's text. Alternatively you can specify divider text by setting the <code>autodividersSelector</code> option on the listview programmatically. For example, to add a custom selector to the element with <code>id="mylistview"</code>:</p>
 
 <pre><code>
-$("#mylistview").listview({
+$( "#mylistview" ).listview({
   autodividers: true,
 
   // the selector function is passed a &lt;li&gt; element from the listview;
@@ -78,11 +78,11 @@ $("#mylistview").listview({
 
 			<p><iframe src="/resources/listview/example8.html" style="width:100%;height:1010px;border:0px"></iframe></p>
 
-      		<p>If you want to change the way in which list items are filtered, i.e. fuzzy search or matching from the beginning of the string, you can configure the callback used internally by defining <code>$.mobile.listview.prototype.options.filterCallback</code> during <code>mobileinit</code> or after the widget has been created with <code>$("#mylist").listview('option', 'filterCallback', yourFilterFunction)</code>. Any function defined for the callback will be provided three arguments. First, the text of the current list item, second the value being searched for, and third the list item being filtered. A truthy value will result in a hidden list item. The default callback which filters entries without the <code>searchValue</code> as a substring is described below:
+      		<p>If you want to change the way in which list items are filtered, i.e. fuzzy search or matching from the beginning of the string, you can configure the callback used internally by defining <code>$.mobile.listview.prototype.options.filterCallback</code> during <code>mobileinit</code> or after the widget has been created with <code>$( "#mylist" ).listview( 'option', 'filterCallback', yourFilterFunction)</code>. Any function defined for the callback will be provided three arguments. First, the text of the current list item, second the value being searched for, and third the list item being filtered. A truthy value will result in a hidden list item. The default callback which filters entries without the <code>searchValue</code> as a substring is described below:
       		</p>
 
 <pre><code>
-function( text, searchValue, item ){
+function( text, searchValue, item ) {
   return text.toString().toLowerCase().indexOf( searchValue ) === -1;
 };
 </code></pre>
@@ -145,13 +145,13 @@ function( text, searchValue, item ){
 			
 			<p>You can directly call the listview plugin on any selector, just like any jQuery plugin:</p>
 <pre><code>
-$('#mylist').listview();
+$( "#mylist" ).listview();
 </code></pre>
 
 			<h3>Updating lists</h3>
 			<p>If you add items to a listview, you'll need to call the <code>refresh()</code> method on it to update the styles and create any nested lists that are added. For example:</p>
 <pre><code>
-$('#mylist').listview('refresh');
+$( "#mylist" ).listview( "refresh" );
 </code></pre>
 
 			<p>Note that the <code>refresh()</code> method only affects <strong>new nodes</strong> appended to a list. This is done for performance reasons. Any list items already enhanced will be ignored by the refresh process. This means that if you change the contents or attributes on an already enhanced list item, these won't be reflected. If you want a list item to be updated, replace it with fresh markup before calling refresh.</p>
@@ -181,7 +181,7 @@ $('#mylist').listview('refresh');
 		<option name="filterCallback" default="n/a">
 			<desc>The function to determine which rows to hide when the search filter textbox changes. The function accepts two arguments -- the text of the list item (or data-filtertext value if present), and the search string. Return true to hide the item, false to leave it visible.
 <pre><code>
-$( document ).on( "mobileinit", function(){
+$( document ).on( "mobileinit", function() {
 	$.mobile.listview.prototype.options.filterCallback = function( text, searchValue ) {
 		// only show items that *begin* with the search string
 		return text.toLowerCase().substring( 0, searchValue.length ) !== searchValue;
@@ -219,7 +219,7 @@ $( document ).on( "mobileinit", function(){
 		<option name="initSelector" default=":jqmData(role='listview')">
 			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as listviews. 
 <pre><code>
-$( document ).on( "mobileinit", function(){
+$( document ).on( "mobileinit", function() {
 	$.mobile.listview.prototype.options.initSelector = ".mylistview";
 });
 </code></pre>

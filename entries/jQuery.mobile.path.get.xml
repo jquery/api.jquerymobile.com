@@ -34,11 +34,11 @@
 			<code><![CDATA[
 $(document).ready(function() {
   
-   $('.myButton').on('click', function(){
+   $( ".myButton" ).on( "click", function() {
     
-      var dirName = $.mobile.path.get( $(this).attr("value") );
+      var dirName = $.mobile.path.get( $( this ).attr( "value" ) );
         
-    $('#myResult').html( String(dirName) );
+    $( "#myResult" ).html( String( dirName ) );
  }) 
 });
 ]]></code>

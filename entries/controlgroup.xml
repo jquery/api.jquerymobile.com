@@ -65,7 +65,7 @@
 			<desc>
 				<p>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as controlgroups. To change which elements are initialized, bind this option to the mobileinit event:</p>
 <pre><code>
-$( document ).on( "mobileinit", function(){
+$( document ).on( "mobileinit", function() {
 	$.mobile.controlgroup.prototype.options.initSelector = ".mycontrolgroup";
 });</code></pre>
 			</desc>

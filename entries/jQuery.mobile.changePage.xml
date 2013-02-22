@@ -61,7 +61,7 @@
 	<div></div>
 				]]></html>
 			<code><![CDATA[
-$.mobile.changePage( "about/us.html", { transition: "slideup"} );
+$.mobile.changePage( "about/us.html", { transition: "slideup" });
 ]]></code>
 		</example>
 		<example>
@@ -72,7 +72,7 @@ $.mobile.changePage( "about/us.html", { transition: "slideup"} );
 			<code><![CDATA[
 $.mobile.changePage( "searchresults.php", {
 	type: "post",
-	data: $("form#search").serialize()
+	data: $( "form#search" ).serialize()
 });
 ]]></code>
 		</example>

@@ -36,11 +36,11 @@
 			<code><![CDATA[
 $(document).ready(function() {
   
-   $('.myButton').on('click', function(){
+   $( ".myButton" ).on( "click", function() {
     
-      var absUrl = $.mobile.path.makeUrlAbsolute( $(this).attr("value"), "http://foo.com/a/b/c/test.html" );
+      var absUrl = $.mobile.path.makeUrlAbsolute( $( this ).attr( "value" ), "http://foo.com/a/b/c/test.html" );
         
-    $('#myResult').html(absUrl);
+    $( "#myResult" ).html(absUrl);
  }) 
 });
 ]]></code>

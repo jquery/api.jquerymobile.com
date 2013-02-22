@@ -29,7 +29,7 @@ $.mobile.navigate( "#foo", { info: "info about the #foo hash" });
 $.mobile.navigate( "#bar" );
 
 // Bind to the navigate event
-$( window ).on( "navigate", function( event, data ){
+$( window ).on( "navigate", function( event, data ) {
 	console.log( data.state.info );
 	console.log( data.state.direction )
 	console.log( data.state.url )
@@ -52,18 +52,18 @@ window.history.back();
 // Starting at http://example.com/
 
 // Define a click binding for all anchors in the page
-$( "a" ).on( "click", function( event ){
+$( "a" ).on( "click", function( event ) {
 
 	// Prevent the usual navigation behavior
 	event.preventDefault();
 
 	// Alter the url according to the anchor's href attribute, and
 	// store the data-foo attribute information with the url
-	$.mobile.navigate( this.attr( "href" ), { foo: this.attr("data-foo") });
+	$.mobile.navigate( this.attr( "href" ), { foo: this.attr( "data-foo" ) });
 
 	// Hypothetical content alteration based on the url. E.g, make
 	// an ajax request for JSON data and render a template into the page.
-	alterContent( this.attr("href") );
+	alterContent( this.attr( "href" ) );
 });
 ]]></code>
 	</example>

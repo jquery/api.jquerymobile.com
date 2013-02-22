@@ -26,13 +26,13 @@
 			
 			...
 		    
-		    $(function(){
+		    $(function() {
 		    	// Bind the swiperightHandler callback function to the swipe event on div.box
-		        $('div.box').on( 'swiperight', swiperightHandler );
+		        $( "div.box" ).on( 'swiperight', swiperightHandler );
 
 		        // Callback function references the event target and adds the 'swipe' class to it
-		        function swiperightHandler( event ){
-        			$(event.target).addClass( 'swiperight' );
+		        function swiperightHandler( event ) {
+        			$(event.target).addClass( "swiperight" );
         		}
 			});
 		]]></code>
