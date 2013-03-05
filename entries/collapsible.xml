@@ -209,14 +209,6 @@ $( document ).on( "mobileinit", function() {
 		</event>
 	</events>
 	<methods>
-		<method name="collapse">
-			<desc>collapse a collapsible.
-			</desc>
-		</method>
-		<method name="expand">
-			<desc>expand a collapsible.
-			</desc>
-		</method>
 	</methods>
 	<example>
 		<desc>A basic example of a collapsible content block.</desc>
