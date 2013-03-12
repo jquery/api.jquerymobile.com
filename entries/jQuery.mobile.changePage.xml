@@ -18,7 +18,7 @@
 					</desc>
 				</property>
 				<property name="changeHash" type="Boolean" default="true">
-					<desc>Decides if the hash in the location bar should be updated. </desc>
+					<desc>Decides if the hash in the location bar should be updated. This has the effect of creating a new browser history entry. It also means that, if set to <strong>false</strong>, the incoming page will replace the current page in the browser history, so the page from which the user is navigating away will not be reachable via the browser's "Back" button.</desc>
 				</property>
 				<property name="data" default="undefined">
 					<desc>The data to send with an Ajax page request.<br />Used only when the 'to' argument of changePage() is a URL.</desc>
