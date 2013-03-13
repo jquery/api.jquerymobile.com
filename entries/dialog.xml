@@ -11,6 +11,15 @@
 
 		<iframe src="/resources/dialog/example1.html" style="width:100%;height:420px;border:0px"></iframe>
 
+		<p>You can open a dialog programmatically by calling the <a href="/jQuery.mobile.changePage/"><strong>$.mobile.changePage</strong></a> method:</p>
+<pre><code>
+// Dialog loaded via AJAX
+$.mobile.changePage( "path/to/dialog.html", { role: "dialog" } );
+
+// Dialog present in a multipage document
+$.mobile.changePage( "#myDialog", { role: "dialog" } );
+</code></pre>
+
 		<h3>Transitions</h3>
 
 		<p>By default, the dialog will open with a 'pop' transition. Like all pages, you can specify any page transition you want on the dialog by adding the <code>data-transition</code> attribute to the link. To make it feel more dialog-like, we recommend specifying a transition of "pop", "slidedown" or "flip".<br />Possible values include: fade, <b>pop</b>, <b>flip</b>, turn, flow, slidefade, slide, slideup, slidedown, none. </p>
