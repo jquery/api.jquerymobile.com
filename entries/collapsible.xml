@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="collapsible" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="collapsible">
+<?xml-stylesheet type="text/xsl" href="../entries2html.xsl"  ?>
+<entry name="collapsible" namespace="fn" type="widget" widgetnamespace="mobile" >
 	<title>Collapsible Widget</title>
 	<desc>Creates a collapsible block of content</desc>
 	<longdesc>
@@ -177,7 +177,7 @@ $( document ).on( "mobileinit", function() {
 		</option>
 	</options>
 	<events>
-		<event name="create">	
+		<event name="create" type="collapsiblecreate">	
 			<desc>Triggered when a collapsible is created
 			</desc>
 			<argument name="event" type="Event">

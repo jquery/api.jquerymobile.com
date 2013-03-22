@@ -86,7 +86,7 @@
 		<p>The icon position is set <em>on the navbar container</em> instead of for individual links within for visual consistency. For example, to place the icons below the labels, add the <code> data-iconpos="bottom"</code> attribute to the navbar container.</p>
 
 <pre><code>
-&lt;div data-role=&quot;navbar&quot; <strong>data-iconpos=&quot;bottom&quot;</strong>&gt;
+&lt;div data-role=&quot;navbar&quot; data-iconpos=&quot;bottom&quot;&gt;
 </code></pre>
 
 		<p>This will result in a bottom icon alignment:
@@ -128,7 +128,7 @@
 			<desc>Positions the icon in the button. Possible values: left, right, top, bottom, none, notext. The notext value will display an icon-only button with no text feedback.
 
 <pre><code>
-&lt;div data-role=&quot;navbar&quot; <strong>data-iconpos=&quot;bottom&quot;</strong>&gt;
+&lt;div data-role=&quot;navbar&quot; data-iconpos=&quot;bottom&quot;&gt;
 </code></pre>
 			</desc>
 		<type name="String" />
