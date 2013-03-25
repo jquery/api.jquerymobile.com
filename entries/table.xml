@@ -19,13 +19,13 @@
 			<h3>General table markup guidelines</h3>
 
 				<p>Here is the basic table markup you should use for both table modes:</p>
-<pre><code>&lt;table <strong>data-role=&quot;table&quot; id=&quot;my-table&quot; data-mode=&quot;reflow&quot;</strong>&gt;
+<pre><code>&lt;table data-role=&quot;table&quot; id=&quot;my-table&quot; data-mode=&quot;reflow&quot;&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;Rank&lt;/th&gt;
       &lt;th&gt;Movie Title&lt;/th&gt;
       &lt;th&gt;Year&lt;/th&gt;
-      &lt;th&gt;<strong>&lt;abbr title=&quot;Rotten Tomato Rating&quot;&gt;Rating&lt;/abbr&gt;</strong>&lt;/th&gt;
+      &lt;th&gt;&lt;abbr title=&quot;Rotten Tomato Rating&quot;&gt;Rating&lt;/abbr&gt;&lt;/th&gt;
       &lt;th&gt;Reviews&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
