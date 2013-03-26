@@ -8,15 +8,9 @@
 		<h2>Data attribute reference</h2>
 			<p>The jQuery Mobile framework uses HTML5 <code>data-</code> attributes to allow for markup-based initialization and configuration of widgets. These attributes are completely optional; calling plugins manually and passing options directly is also supported. To avoid naming conflicts with other plugins or frameworks that also use <code>data-</code> attributes, set a custom namespace by modifying the <a href="globalconfig.html"><code>ns</code> global option</a>.</p>
 
-				<style>
-					table { width:100%; border-bottom:1px solid #ccc; }
-					th { text-align:left; width: 170px; }
-					th, td { vertical-align:top; border-top:1px solid #ccc; padding: 6px 10px 4px 0; }
-				</style>
-
 			<h2><a href="../button/">Button</a></h2>
 			<p>Links with <code>data-role="button"</code>. Input-based buttons, links in toolbars and button elements are auto-enhanced, no <code>data-role</code> required.</p>
-			<table>
+			<table class="column-headers">
 				<tr>
 					<th>data-corners</th>
 					<td><strong>true</strong> | false</td>
@@ -54,7 +48,7 @@
 
 			<h2><a href="../checkboxradio/">Checkbox</a></h2>
 			<p>Pairs of labels and inputs with <code>type="checkbox"</code> are auto-enhanced, no <code>data-role</code> required</p>
-			<table>
+			<table class="column-headers">
 				<tr>
 					<th>data-mini</th>
 					<td>true | <strong>false</strong> - Compact sized version</td>
@@ -72,7 +66,7 @@
 
 			<h2><a href="../collapsible/">Collapsible</a></h2>
 			<p>A heading and content wrapped in a container with the <code>data-role="collapsible"</code></p>
-			<table>
+			<table class="column-headers">
 				<tr>
 					<th>data-collapsed</th>
 					<td><strong>true</strong> | false</td>
@@ -110,7 +104,7 @@
 
 			<h2><a href="../collapsible-set/">Collapsible set</a></h2>
 			<p>A number of collapsibles wrapped in a container with the <code>data-role="collapsible-set"</code></p>
-			<table>
+			<table class="column-headers">
 				<tr>
 					<th>data-collapsed-icon</th>
 					<td>home | delete | <strong>plus</strong> | arrow-u | arrow-d | check | gear | grid | star | custom | arrow-r | arrow-l | minus | refresh | forward | back | alert | info | search</td>
@@ -144,7 +138,7 @@
 
 			<h2><a href="../page-sections/">Content</a></h2>
 			<p>Container with <code>data-role="content"</code></p>
-			<table>
+			<table class="column-headers">
 				<tr>
 					<th>data-theme</th>
 					<td>swatch letter (a-z)</td>
@@ -154,7 +148,7 @@
 
 			<h2><a href="../controlgroup/">Controlgroup</a></h2>
 			<p>DIV or FIELDSET container with <code>data-role="controlgroup"</code>. Visually integrate multiple button-styled inputs of a single type (<a href="../forms/checkboxes/">checkboxes</a>, <a href="../buttons/buttons-types.html">link-based buttons</a>, <a href="../forms/radiobuttons/">radio buttons</a>, <a href="../forms/selects/">selects</a>) into a group. For grouping form checkboxes and radio buttons, the <code>fieldset</code> container is recommended inside a div container with the <code>data-role="fieldcontain"</code>, to improve label styling.</p>
-			<table>
+			<table class="column-headers">
 				<tr>
 					<th>data-mini</th>
 					<td>true | <strong>false</strong> - Compact sized version for all items in the controlgroup</td>
@@ -168,7 +162,7 @@
 
 			<h2><a href="../dialog/">Dialog</a></h2>
 			<p>Container with <code>data-role="dialog"</code> or linked to with <code>data-rel="dialog"</code> on the anchor.</p>
-			<table>
+			<table class="column-headers">
 				<tr>
 					<th>data-close-btn</th>
 					<td><strong>left</strong> | right | none</td>
@@ -202,7 +196,7 @@
 
 			<h2><a href="../globalconfig/">Enhancement</a></h2>
 			<p>Container with <code>data-enhance="false"</code> or <code>data-ajax="false"</code></p>
-			<table>
+			<table class="column-headers">
 				<tr>
 					<th>data-enhance</th>
 					<td><strong>true</strong> | false</td>
@@ -221,7 +215,7 @@
 
 			<h2><a href="../page-sections/">Fixed Toolbar</a></h2>
 			<p>Container with <code>data-role="header"</code> or <code>data-role="footer"</code> plus the attribute <code>data-position="fixed"</code></p>
-			<table>
+			<table class="column-headers">
 				<tr>
 					<th>data-disable-page-zoom</th>
 					<td><strong>true</strong> | false - User-scaling-ability for pages with fixed toolbars</td>
@@ -251,7 +245,7 @@
 
 			<h2><a href="../slider/">Flip toggle switch</a></h2>
 			<p>Select with <code>data-role="slider"</code> and two <code style="font-weight:normal;">option</code> element</p>
-			<table>
+			<table class="column-headers">
 				<tr>
 					<th>data-mini</th>
 					<td>true | <strong>false</strong> - Compact sized version</td>
@@ -273,7 +267,7 @@
 
 			<h2><a href="../page-sections/">Footer</a></h2>
 			<p>Container with <code>data-role="footer"</code></p>
-			<table>
+			<table class="column-headers">
 				<tr>
 					<th>data-id</th>
 					<td>string - Unique ID. Required for persistent footers</td>
@@ -295,7 +289,7 @@
 
 			<h2><a href="../page-sections/">Header</a></h2>
 			<p>Container with <code>data-role="header"</code></p>
-			<table>
+			<table class="column-headers">
 				<tr>
 					<th>data-id</th>
 					<td>string - Unique ID. Required for persistent headers</td>
@@ -317,7 +311,7 @@
 
 			<h2><a href="../link/">Link</a></h2>
 			<p>Links, including those with a <code>data-role="button"</code>, and form submit buttons share these attributes</p>
-			<table>
+			<table class="column-headers">
 				<tr>
 					<th>data-ajax</th>
 					<td><strong>true</strong> | false</td>
@@ -357,7 +351,7 @@
 
 			<h2><a href="../listview/">Listview</a></h2>
 			<p><code style="font-weight:normal;">OL</code> or <code style="font-weight:normal;">UL</code> with <code>data-role="listview"</code></p>
-			<table>
+			<table class="column-headers">
 				<tr>
 					<th>data-autodividers</th>
 					<td>true | <strong>false</strong></td>
@@ -411,7 +405,7 @@
 
 			<h2><a href="../listview/">Listview item</a></h2>
 			<p><code style="font-weight:normal;">LI</code> within a listview</p>
-			<table>
+			<table class="column-headers">
 				<tr>
 					<th>data-filtertext</th>
 					<td>string - Filter by this value instead of inner text</td>
@@ -433,7 +427,7 @@
 
 			<h2><a href="../toolbars/docs-navbar.html">Navbar</a></h2>
 			<p>A number of <code style="font-weight:normal;">LI</code>s wrapped in a container with <code>data-role="navbar"</code></p>
-			<table>
+			<table class="column-headers">
 				<tr>
 					<th>data-iconpos</th>
 					<td>left | right | <strong>top</strong> | bottom |  notext</td>
@@ -441,10 +435,10 @@
 			</table>
 			<p>To add icons to the navbar items, the <code>data-icon</code> attribute is used, specifying a standard mobile icon for each item.</p>
 			<p>Navbars inherit the theme-swatch from their parent container. Setting the <code>data-theme</code> attribute to a navbar is not supported. The <code>data-theme</code> attribute can be set individually to the links inside a navbar.</p>
-			
+
 			<h2><a href="../page-sections/">Page</a></h2>
 			<p>Container with <code>data-role="page"</code></p>
-			<table>
+			<table class="column-headers">
 				<tr>
 					<th>data-add-back-btn</th>
 					<td>true | <strong>false</strong> - Auto add back button, header only</td>
@@ -490,7 +484,7 @@
 
 			<h2><a href="../popup/">Popup</a></h2>
 			<p>Container with <code>data-role="popup"</code></p>
-			<table>
+			<table class="column-headers">
 				<tr>
 					<th>data-corners</th>
 					<td><strong>true</strong> | false</td>
@@ -518,7 +512,7 @@
 				</tr>
 			</table>
 			<p>Anchor with a <code>data-rel="popup"</code> opens the popup</p>
-			<table>
+			<table class="column-headers">
 				<tr>
 					<th>data-position-to</th>
 					<td><strong>origin</strong> - Centers the popup over the link that opens it<br />
@@ -538,7 +532,7 @@
 
 			<h2><a href="../checkboxradio/">Radio button</a></h2>
 			<p>Pairs of labels and inputs with <code>type="radio"</code> are auto-enhanced, no <code>data-role</code> required</p>
-			<table>
+			<table class="column-headers">
 				<tr>
 					<th>data-mini</th>
 					<td>true | <strong>false</strong> - Compact sized version</td>
@@ -556,7 +550,7 @@
 
 			<h2><a href="../select/">Select</a></h2>
 			<p>All <code>select</code> form elements are auto-enhanced, no <code>data-role</code> required</p>
-			<table>
+			<table class="column-headers">
 				<tr>
 					<th>data-divider-theme</th>
 					<td>swatch letter (a-z) - Default "b" - Only applicable if <code>optgroup</code> support is used in non-native selects</td>
@@ -602,7 +596,7 @@
 
 			<h2><a href="../forms/slider/">Slider</a></h2>
 			<p>Inputs with <code>type="range"</code> are auto-enhanced, no <code>data-role</code> required</p>
-			<table>
+			<table class="column-headers">
 				<tr>
 					<th>data-highlight</th>
 					<td>true | <strong>false</strong> - Adds an active state fill on track to handle</td>
@@ -628,7 +622,7 @@
 
 			<h2><a href="../textinput/">Text input &amp; Textarea</a></h2>
 			<p>Input <code>type="text|number|search|etc."</code> or <code>textarea</code> elements are auto-enhanced, no <code>data-role</code> required</p>
-			<table>
+			<table class="column-headers">
 				<tr>
 					<th>data-clear-btn</th>
 					<td>true | <strong>false</strong> - Adds a clear button</td>
@@ -650,5 +644,3 @@
 					<td>swatch letter (a-z) - Added to the form element</td>
 				</tr>
 			</table>
-
-	
