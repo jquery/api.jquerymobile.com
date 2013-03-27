@@ -1,43 +1,39 @@
 <?xml version="1.0"?>
-<entry name="orientationchange" type="event" return="jQuery">
-	<title>orientationchange</title>
+<entry name="orientationchange" type="event" example-selector="window">
+	<title>orientationchange event</title>
 	<desc>Device portrait/landscape orientation event</desc>
 	<longdesc>
-		<p>The jQuery Mobile <code>orientationchange</code> event triggers when a device orientation changes, either by turning the device vertically or horizontally. When bound to this event the callback function has the event object. The event object contains an <code>orientation</code> property equal to either "portrait" or "landscape".</p>
-		<p>Note that we bind to the browser's resize event when <code>orientationchange</code> is not natively supported or if <code>$.mobile.orientationChangeEnabled</code> is set to false.</p>
-		
-		<div style="padding: 0.4em 15px; background: #FFF3A5; ">
-		<h3>orientationchange timing</h3>
+		<p>The jQuery Mobile <code>orientationchange</code> event triggers when a device orientation changes, either by turning the device vertically or horizontally. When bound to this event the callback function has the event object. The event object contains an <code>orientation</code> property equal to either <code>"portrait"</code> or <code>"landscape"</code>.</p>
+		<p>Note that we bind to the browser's resize event when <code>orientationchange</code> is not natively supported or if <code>$.mobile.orientationChangeEnabled</code> is set to <code>false</code>.</p>
 
-		<p>The timing of the <code>orientationchange</code> with relation to the change of the client height and width is different between browsers, though the current implementation will give you the correct value for <code>event.orientation</code> derived from <code>window.orientation</code>. This means that if your bindings are dependent on the height and width values you may want to disable <code>orientationChange</code> altogether with <code>$.mobile.orientationChangeEnabled = false</code> to let the fallback resize code trigger your bindings.</p></div>
-		<p></p>
-		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<pre>
-		<code><![CDATA[
-			$(function() {
-				/* 
-				  Bind an event to window.orientationchange that, when the device is turned, 
-				  gets the orientation and displays it to on screen.
-				 */
-				$(window).on( 'orientationchange', orientationChangeHandler );
+		<div style="padding: 0.5em 1em; margin: 1em; background: #FFF3A5;">
+			<h3>orientationchange timing</h3>
 
-				function orientationChangeHandler( event ) {
-					$( "h1#orientation" ).html( "This device is in " + event.orientation + " mode!" );
-				}
-				// You can also manually force this event to fire.
-				$(window).orientationchange();
-			}); 
-		]]></code>
-	</pre>
-	<p>Visit this from your orientation-enabled device to see it in action!
-		<iframe id="orientationIframe" src="/resources/orientationchange/example1.html" style="width:100%;height:90px;border:0px"></iframe>
-	</p>
+			<p>The timing of the <code>orientationchange</code> event with relation to the change of the client height and width is different between browsers, though the current implementation will give you the correct value for <code>event.orientation</code> derived from <code>window.orientation</code>. This means that if your bindings are dependent on the height and width values you may want to disable <code>orientationChange</code> altogether with <code>$.mobile.orientationChangeEnabled = false</code> to let the fallback resize code trigger your bindings.</p>
+		</div>
 	</longdesc>
 	<added>1.0</added>
 	<signature>
-		<argument name="callback" type="Function" optional="true">
-			<desc>A function to invoke after the the orientationchange event fires.</desc>
-		</argument>
+		<property name="orientation" type="String">
+			<desc>The new orientation of the device. Possible values are <code>"portrait"</code> and <code>"landscape"</code>.</desc>
+		</property>
 	</signature>
+	<example>
+		<height>90</height>
+		<desc>Visit this from your orientation-enabled device to see it in action!</desc>
+		<code><![CDATA[
+// Bind an event to window.orientationchange that, when the device is turned,
+// gets the orientation and displays it to on screen.
+$( window ).on( "orientationchange", function( event ) {
+	$( "#orientation" ).text( "This device is in " + event.orientation + " mode!" );
+});
+
+// You can also manually force this event to fire.
+$( window ).orientationchange();
+]]></code>
+		<html><![CDATA[
+<h1 id="orientation">orientationchange Not Supported on this Device.</h1>
+]]></html>
+	</example>
 	<category slug="events"/>
 </entry>
