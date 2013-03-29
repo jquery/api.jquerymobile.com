@@ -95,7 +95,7 @@
 
 		<p>To create a grouped set of select inputs, first add <code>select</code> and a corresponding <code>label</code>. Set the <code>for</code> attribute of the <code>label</code> to match the <code>id</code> of the <code>select</code> so they are semantically associated.</p>
 
-		<p>Because the <code>label</code> element will be associated with each individual select input, we recommend wrapping the selects in a <code>fieldset</code> element that has a <code>legend</code> which acts as the combined label for the grouped inputs.</p>
+		<p>Because the <code>label</code> element will be associated with each individual select input and will be hidden for styling purposes, we recommend wrapping the selects in a <code>fieldset</code> element that has a <code>legend</code> which acts as the combined label for the grouped inputs.</p>
 
 		<p>Lastly, one needs to wrap the <code>fieldset</code> in a <code>div</code> with <code> data-role="controlgroup"</code> attribute, so it can be styled as a group.</p>
 			
