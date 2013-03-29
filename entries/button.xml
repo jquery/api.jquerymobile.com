@@ -184,6 +184,9 @@ $( "[type="submit"]" ).button();
 		<p>
 		<iframe src="/resources/button/example27.html" style="width:100%;height:550px;border:0px"></iframe></p>
 		
+        <h4>Labels</h4>
+		<p>Because the <code>label</code> element will be associated with each individual <code>input</code> or <code>button</code> and will be hidden for styling purposes, we recommend wrapping the buttons in a <code>fieldset</code> element that has a <code>legend</code> which acts as the combined label for the group. Using the <code>label</code> as a wrapper around an input prevents the framework from hidding it, so you have to use the <code>for</code> attribute to associate the <code>label</code> with the input.</p>
+		
 		<h2>Theming buttons</h2>
 			
 		<p>jQuery Mobile has a rich theming system that gives you full control of how buttons are styled. When a link is added to a container, it is automatically assigned a theme swatch letter that matches its parent bar or content box to visually integrate the button into the parent container, like a chameleon. So a button placed inside a content container with a theme of "a" (black in the default theme) will be automatically assigned the button theme of "a" (charcoal in the default theme). Here are examples of the button theme pairings in the default theme. All buttons have the same HTML markup: 
