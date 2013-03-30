@@ -185,7 +185,7 @@ $( "[type="submit"]" ).button();
 		<iframe src="/resources/button/example27.html" style="width:100%;height:550px;border:0px"></iframe></p>
 		
         <h4>Labels</h4>
-		<p>Because the <code>label</code> element will be associated with each individual <code>input</code> or <code>button</code> and will be hidden for styling purposes, we recommend wrapping the buttons in a <code>fieldset</code> element that has a <code>legend</code> which acts as the combined label for the group. Using the <code>label</code> as a wrapper around an input prevents the framework from hidding it, so you have to use the <code>for</code> attribute to associate the <code>label</code> with the input.</p>
+		<p>Because the <code>label</code> element will be associated with each individual <code>input</code> or <code>button</code> and will be hidden for styling purposes, we recommend wrapping the buttons in a <code>fieldset</code> element that has a <code>legend</code> which acts as the combined label for the group. Using the <code>label</code> as a wrapper around an input prevents the framework from hiding it, so you have to use the <code>for</code> attribute to associate the <code>label</code> with the input.</p>
 		
 		<h2>Theming buttons</h2>
 			
