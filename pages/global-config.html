@@ -81,6 +81,9 @@ $(document).on("mobileinit", function(){
 	<dt><code>defaultPageTransition</code> <em>string</em>, default: 'fade'</dt>
 	<dd>Set the default transition for page changes that use Ajax. Note: default changed from 'slide' to 'fade' in 1.1. Set to 'none' for no transitions.</dd>
 	<br />
+	<dt><code>dynamicBaseEnabled</code> <em>boolean</em>, default: true</dt>
+	<dd>When this property is set to <code>false</code> the base tag value in browsers that support a dynamic base tag and URL prefixes in browsers that don't <em>won't</em> be updated to reflect where the page was loaded from. This means that resource references that are relative to the page on which they are defined may break. This option is available for web frameworks that operate under a universal base tag value where all links and assets are relative to a signal base.</dd>
+	<br />
 	<dt><code>getMaxScrollForTransition</code> <em>integer</em>, default: 3</dt>
 	<dd>Set a scroll position breakpoint for transitions. If the scroll position is greater than the window height multiplied by the value that has been set, transition "none" will be used.</dd>
     <br />
@@ -149,7 +152,7 @@ $(document).on("mobileinit", function(){
 	Enable smoother page transitions and true fixed toolbars in devices that support both the <code>overflow:</code> and <code>overflow-scrolling: touch; </code> CSS properties.
 	<div style="padding: 0.5em 1em; margin: 1em; background: #FFF3A5;"><strong>Deprecated</strong> in 1.1.0</div>
 	</dd>
-    
+
 	<dt><code>transitionFallbacks.[transition]</code> <em>string</em>, default: "fade"</dt>
 	<dd>Set the fallback transition for browsers that don't support 3D transforms for a specific transition type.</dd>
 
