@@ -9,10 +9,13 @@ $( "#aboutPage" ).on( "pageinit", function( event ) {
   alert( "This page was just enhanced by jQuery Mobile!" );
 });
 </code></pre>
+
+		<div style="padding: 0.4em 15px; background: #FFF3A5; "><b>Note:</b> This event has been deprecated in 1.4.0 in favor of <code>pagecreate</code>. Simply replace <code>pageinit</code> in the above example.</div>
 	</longdesc>
 	<added>1.0</added>
 	<signature>
-		
+
 	</signature>
 	<category slug="events"/>
+	<deprecated>1.4</deprecated>
 </entry>
