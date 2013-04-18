@@ -58,9 +58,6 @@ function( start, stop ) {
 	</longdesc>
 	<added>1.0</added>
 	<signature>
-		<argument name="callback" type="Function" optional="true">
-			<desc>A function to invoke after the the swipe event fires.</desc>
-		</argument>
 	</signature>
 	<example>
 		<height>120</height>
