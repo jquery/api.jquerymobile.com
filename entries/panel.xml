@@ -195,7 +195,7 @@ $( "#mypanel" ).trigger( "updatelayout" );
 			<type name="Boolean" />
 		</option>
 		<option name="display" default='"reveal"'  example-value='"overlay"'>
-			<desc>The relationship of the panel to the page contents. Can either push the page over ("reveal"), re-flow the content to fit the panel content as a column ("push"), or sit over the content ("push"). 
+			<desc>The relationship of the panel to the page contents. Can either push the page over ("reveal"), re-flow the content to fit the panel content as a column ("push"), or sit over the content ("overlay"). 
 				<p>This option is also exposed as a data attribute:<code>data-display="push"</code> on the link that opens the panel.</p>
 			</desc>
 			<type name="String" />
