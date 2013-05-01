@@ -104,14 +104,14 @@
 		<option name="fullscreen" default="false" example-value="true">
 			<desc>Fullscreen fixed toolbars sit on top of the content at all times when they are visible, and unlike regular fixed toolbars, fullscreen toolbars do not fall back to static positioning when toggled, instead they disappear from the screen entirely. Fullscreen toolbars are ideal for more immersive interfaces, like a photo viewer that is meant to fill the entire screen with the photo itself and no distractions.
 				<p>This option is also exposed as a data attribute: <code>data-fullscreen="true"</code>.</p>
-				<div style="padding: 0.4em 15px; background: #FFF3A5; "><b>Note:</b> While the data attribute syntax for this option has not changed, it is now only supported on the toolbar element itself, and not the page element. </div>
+				<div class="warning"><b>Note:</b> While the data attribute syntax for this option has not changed, it is now only supported on the toolbar element itself, and not the page element.</div>
 			</desc>
 			<type name="Boolean" />
 		</option>
 		<option name="tapToggle" default="true" example-value="false">
 			<desc>Enable or disable the user's ability to toggle toolbar visibility with a tap on the screen (or a click, for mouse users).
 				<p>This option is also exposed as a data attribute: <code>data-tap-toggle="false"</code>.</p>
-				<div style="padding: 0.4em 15px; background: #FFF3A5; "><b>Note:</b> This behavior was formerly configurable as follows, but as of version 1.1 this syntax is no longer supported: <br /><code>$.mobile.fixedToolbars.setTouchToggleEnabled(false);</code></div>
+				<div class="warning"><b>Note:</b> This behavior was formerly configurable as follows, but as of version 1.1 this syntax is no longer supported: <br /><code>$.mobile.fixedToolbars.setTouchToggleEnabled(false);</code></div>
 			</desc>
 			<type name="Boolean" />
 		</option>
@@ -171,7 +171,7 @@ $( document ).on( "mobileinit", function() {
 	<methods>
 		<method name="show">
 			<desc>show the toolbar
-				<p><div style="padding: 0.4em 15px; background: #FFF3A5; "><b>Note:</b> Prior to version 1.1, the following syntax was used to show the toolbars, but it is no longer supported:<br />
+				<p><div class="warning"><b>Note:</b> Prior to version 1.1, the following syntax was used to show the toolbars, but it is no longer supported:<br />
 <code>$.mobile.fixedToolbars.show(true);</code></div></p>
 			</desc>
 		</method>
