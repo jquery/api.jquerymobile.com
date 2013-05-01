@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<entry type="method" name="jQuery.mobile.path.parseUrl" return="Object">
+	<title>jQuery.mobile.path.parseUrl()</title>
+	<desc>Utility method for parsing a URL and its relative variants into an object that makes accessing the components of the URL easy.</desc>
+	<signature>
+		<argument name="Url">
+			<type name="String">
+				<desc>A relative or absolute URL.</desc>
+			</type>
+		</argument>
+	</signature>
+		<example>
+			<height>370</height>
+			<desc>Various uses of jQuery.mobile.path.parseUrl</desc>
+				<css><![CDATA[
+	#myResult{
+		border: 1px solid;
+		border-color: #108040;
+		padding: 10px;
+		}
+]]></css>		
+				<html><![CDATA[
+	<div data-role="content">
+		<p>The URL used is http://jblas:password@mycompany.com:8080/mail/inbox?msg=1234&type=unread#msg-content</p>
+		<input type="button" value="obj.href" id="button1" class="myButton" data-inline="true">
+		<input type="button" value="obj.hrefNoHash" id="button2" class="myButton" data-inline="true">
+		<input type="button" value="obj.hrefNoSearch" id="button3" class="myButton" data-inline="true">
+		<input type="button" value="obj.domain" id="button4" class="myButton" data-inline="true">
+		<input type="button" value="obj.protocol" id="button5" class="myButton" data-inline="true">
+		<input type="button" value="obj.authority" id="button6" class="myButton" data-inline="true">
+		<input type="button" value="obj.username" id="button7" class="myButton" data-inline="true">
+		<input type="button" value="obj.password" id="button8" class="myButton" data-inline="true">
+		<input type="button" value="obj.host" id="button9" class="myButton" data-inline="true">
+		<input type="button" value="obj.hostname" id="button10" class="myButton" data-inline="true">
+		<input type="button" value="obj.port" id="button11" class="myButton" data-inline="true">
+		<input type="button" value="obj.pathname" id="button12" class="myButton" data-inline="true">
+		<input type="button" value="obj.directory" id="button13" class="myButton" data-inline="true">
+		<input type="button" value="obj.filename" id="button14" class="myButton" data-inline="true">
+		<input type="button" value="obj.search" id="button15" class="myButton" data-inline="true">
+		<input type="button" value="obj.hash" id="button16" class="myButton" data-inline="true">
+		<div id="myResult">The result will be displayed here</div>
+	</div>]]></html>
+			<code><![CDATA[
+$(document).ready(function() {
+  
+   $( ".myButton" ).on( "click", function() {
+    	// Parsing the Url below results an object that is returned with the
+		// following properties:
+		//
+		//  obj.href:         http://jblas:password@mycompany.com:8080/mail/inbox?msg=1234&amp;type=unread#msg-content
+		//  obj.hrefNoHash:   http://jblas:password@mycompany.com:8080/mail/inbox?msg=1234&amp;type=unread
+		//  obj.hrefNoSearch: http://jblas:password@mycompany.com:8080/mail/inbox
+		//  obj.domain:       http://jblas:password@mycompany.com:8080
+		//  obj.protocol:     http:
+		//  obj.authority:    jblas:password@mycompany.com:8080
+		//  obj.username:     jblas
+		//  obj.password:     password
+		//  obj.host:         mycompany.com:8080
+		//  obj.hostname:     mycompany.com
+		//  obj.port:         8080
+		//  obj.pathname:     /mail/inbox
+		//  obj.directory:    /mail/
+		//  obj.filename:     inbox
+		//  obj.search:       ?msg=1234&amp;type=unread
+		//  obj.hash:         #msg-content</strong>
+
+		var obj = $.mobile.path.parseUrl("http://jblas:password@mycompany.com:8080/mail/inbox?msg=1234&type=unread#msg-content");
+		var myChoice = eval( this.value );
+        
+    $( "#myResult" ).html( myChoice );
+ }) 
+});
+]]></code>
+		</example>
+	<longdesc>
+		<p>Utility method for parsing a URL and its relative variants into an object that makes accessing the components of the URL easy. When parsing relative variants, the resulting object will contain empty string values for missing components (like protocol, host, etc). Also, when parsing URLs that have no authority, such as tel: urls, the pathname property of the object will contain the data after the protocol/scheme colon.</p>
+		<p>This function returns an object that contains the various components of the URL as strings. The properties on the object mimic the browser's location object:
+			<dl>
+				<dt><code>hash</code></dt>
+				<dd>The fragment component of the URL, including the leading '#' character.</dd>
+				<dt><code>host</code></dt>
+				<dd>The host and port number of the URL.</dd>
+				<dt><code>hostname</code></dt>
+				<dd>The name of the host within the URL.</dd>
+				<dt><code>href</code></dt>
+				<dd>The original URL that was parsed.</dd>
+				<dt><code>pathname</code></dt>
+				<dd>The path of the file or directory referenced by the URL.</dd>
+				<dt><code>port</code></dt>
+				<dd>The port specified within the URL. Most URLs rely on the default port for the protocol used, so this may be an empty string most of the time.</dd>
+				<dt><code>protocol</code></dt>
+				<dd>The protocol for the URL including the trailing ':' character.</dd>
+				<dt><code>search</code></dt>
+				<dd>The query component of the URL including the leading '?' character.</dd>
+			</dl>
+			<p>But it also contains additional properties that provide access to additional components as well as some common forms of the URL developers access:</p>
+			<dl>
+				<dt><code>authority</code></dt>
+				<dd>The username, password, and host components of the URL</dd>
+				<dt><code>directory</code></dt>
+				<dd>The directory component of the pathname, minus any filename.</dd>
+				<dt><code>domain</code></dt>
+				<dd>The protocol and authority components of the URL.</dd>
+				<dt><code>filename</code></dt>
+				<dd>The filename within the pathname component, minus the directory.</dd>
+				<dt><code>hrefNoHash</code></dt>
+				<dd>The original URL minus the fragment (hash) components.</dd>
+				<dt><code>hrefNoSearch</code></dt>
+				<dd>The original URL minus the query (search) and fragment (hash) components.</dd>
+				<dt><code>password</code></dt>
+				<dd>The password contained within the authority component.</dd>
+				<dt><code>username</code></dt>
+				<dd>The username contained within the authority component.</dd>
+			</dl></p>
+	</longdesc>
+	<category slug="methods"/>
+</entry>
