@@ -90,7 +90,7 @@ $( "#mypanel" ).trigger( "updatelayout" );
 
 			<h3>Closing a panel</h3>
 				
-			<p>Clicking the link that opened the panel, swiping left or right, or tapping the Esc key will close the panel. To turn off the swipt o close behavior, add the <code>data-swipe-close="false"</code> attribute to the panel.</p>
+			<p>Clicking the link that opened the panel, swiping left or right, or tapping the Esc key will close the panel. To turn off the 'swipe to close' behavior, add the <code>data-swipe-close="false"</code> attribute to the panel.</p>
 
 			<p>By default, panels can also be closed clicking outside the panel onto the page contents. To prevent this behavior, add the <code>data-dismissible="false"</code> attribute to the panel. It's possible to have the panel and page sit side-by-side at wider screen widths and prevent the click-out-to-close behavior only above a certain screen width by applying a media query. See the responsive section below for details. </p>
 
