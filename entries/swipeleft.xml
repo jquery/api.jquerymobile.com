@@ -61,7 +61,7 @@ $(function(){
 		background-color: #108040;
 	}
 	div.box.swipeleft {
-		background-color: #B24926;
+		background-color: #7ACEF4;
 	}
 ]]></css>
 <html><![CDATA[
