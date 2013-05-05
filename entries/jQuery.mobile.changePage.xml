@@ -70,9 +70,10 @@ $.mobile.changePage( "../resources/us.html", { transition: "slideup", changeHash
 			<html><![CDATA[
 	<div>
 		<form id="search">
-			<p>Please enter the name of your favorite mobile framework:<br />
+			<p>Please fill in the form below:<br /><br />
 			<label for="choice">Favorite framework:</label>
 			<input type="text" name="choice" id="choice" value="jQuery Mobile" />
+			</p>
 		</form>
 	</div>
 			]]></html>
