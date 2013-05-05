@@ -61,18 +61,26 @@
 	<div></div>
 				]]></html>
 			<code><![CDATA[
-$.mobile.changePage( "about/us.html", { transition: "slideup" });
+//Adding the changeHash: false to avoid an issue with the iframe
+$.mobile.changePage( "../resources/us.html", { transition: "slideup", changeHash: false });
 ]]></code>
 		</example>
 		<example>
 			<desc>Transition to the "search results" page, using data from a form with an id of "search".</desc>
 			<html><![CDATA[
-	<div></div>
+	<div>
+		<form id="search">
+			<p>Please enter the name of your favorite mobile framework:<br />
+			<label for="choice">Favorite framework:</label>
+			<input type="text" name="choice" id="choice" value="jQuery Mobile" />
+		</form>
+	</div>
 			]]></html>
 			<code><![CDATA[
-$.mobile.changePage( "searchresults.php", {
+$.mobile.changePage( "../resources/results.php", {
 	type: "post",
-	data: $( "form#search" ).serialize()
+	data: $( "form#search" ).serialize(),
+	changeHash: false
 });
 ]]></code>
 		</example>
@@ -82,7 +90,7 @@ $.mobile.changePage( "searchresults.php", {
 	<div></div>
 			]]></html>
 			<code><![CDATA[
-$.mobile.changePage( "../alerts/confirm.html", {
+$.mobile.changePage( "../resources/confirm.html", {
 	transition: "pop",
 	reverse: false,
 	changeHash: false
