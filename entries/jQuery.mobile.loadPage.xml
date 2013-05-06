@@ -68,7 +68,6 @@
 	</div>
 	]]></html>
 			<code><![CDATA[
-//$( document ).on( "pageinit", "#page1", function() {
 	$( "#domcheck" ).on( "click", function() {
 		var check = $( "#aboutUs" ).length === 1;
 		$( "#result" ).text( check );
@@ -76,7 +75,6 @@
 	$( "#loadpage" ).on( "click", function() {
 		$.mobile.loadPage( "../resources/us.html" );
 	});
-//});
 ]]></code>
 		</example>
 		<example>
