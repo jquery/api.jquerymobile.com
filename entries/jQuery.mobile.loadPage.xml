@@ -73,7 +73,7 @@
 		$( "#result" ).text( check );
 	});
 	$( "#loadpage" ).on( "click", function() {
-		$.mobile.loadPage( "../resources/us.html" );
+		$.mobile.loadPage( "../resources/us.html" , true );
 	});
 ]]></code>
 		</example>
