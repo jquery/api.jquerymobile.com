@@ -55,19 +55,44 @@
 		<example>
 			<desc>Load the "about us" page into the DOM.</desc>
 				<html><![CDATA[
-	<div></div>
-				]]></html>
+	<div data-role="header">
+      <h1>loadPage() demo</h1>
+    </div><!-- /header -->
+    
+	<div data-role="content">
+      
+		<p>First check if the 'About us' page is in the DOM, Load the page in the DOM and check again</p>    
+		<input type="button" id="domcheck" data-inline="true" value="Is 'About us' in the DOM?"/>
+		<input type="button" id="loadpage" data-inline="true" value="Load the 'About us' page"/><br />
+		<div id="myResult">'About Us' is in the DOM: <span id="result">The result will be displayed here</span></div>      
+	</div>
+	]]></html>
 			<code><![CDATA[
-$.mobile.loadPage( "about/us.html" );
+$( document ).on( "pageinit", "#page1", function() {
+	$( "#domcheck" ).on( "click", function() {
+		var check = $( "#aboutUs" ).length === 1;
+		$( "#result" ).text( check );
+	});
+	$( "#loadpage" ).on( "click", function() {
+		$.mobile.loadPage( "../resources/us.html" );
+	});
+});
 ]]></code>
 		</example>
 		<example>
 			<desc>Load a "search results" page, using data from a form with an id of "search".</desc>
 			<html><![CDATA[
-	<div></div>
+	<div>
+		<form id="search">
+			<p>Please fill in the form below:<br /><br />
+			<label for="choice">Favorite framework:</label>
+			<input type="text" name="choice" id="choice" value="jQuery Mobile" />
+			</p>
+		</form>
+	</div>
 			]]></html>
 			<code><![CDATA[
-$.mobile.loadPage( "searchresults.php", {
+$.mobile.loadPage( "../resources/results.php", {
 	type: "post",
 	data: $( "form#search" ).serialize()
 });
