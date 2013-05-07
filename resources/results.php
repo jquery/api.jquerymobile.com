@@ -11,7 +11,7 @@
 </head> 
 
 <body> 
-<div data-role="page" style="max-height:90px; min-height:90px;">
+<div data-role="page" id="formResults" style="max-height:90px; min-height:90px;">
 	<div data-role="header">
 		<h1>Confirm</h1>
 	</div>
