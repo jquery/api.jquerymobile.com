@@ -85,12 +85,14 @@
 			<p>Please fill in the form below:<br /><br />
 			<label for="choice">Favorite framework:</label>
 			<input type="text" name="choice" id="choice" value="jQuery Mobile" />
+			
+			<a href="#formResults" data-role="button" data-inline="true" data-rel="dialog">Show Results</a>
 			</p>
 		</form>
 	</div>
 			]]></html>
 			<code><![CDATA[
-$.mobile.loadPage( "../resources/results.php", {
+$.mobile.loadPage( "../resources/results.php", true, {
 	type: "post",
 	data: $( "form#search" ).serialize()
 });
