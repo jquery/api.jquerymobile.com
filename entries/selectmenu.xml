@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="selectmenu" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="selectmenu">
+<entry name="selectmenu" namespace="fn" type="widget" widgetnamespace="mobile" >
 	<title>Selectmenu Widget</title>
 	<desc>Creates a select menu widget</desc>
 	<longdesc>
