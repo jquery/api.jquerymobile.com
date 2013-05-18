@@ -494,10 +494,18 @@
 		<th>data-dismissible</th>
 		<td><strong>true</strong> | false - If set to false prevents popup closing by clicking outside of the popup or pressing the Escape key</td>
 	</tr>
+	<tr>
+		<th>data-history</th>
+		<td><strong>true</strong> | false - Sets whether the popup creates a browser history item when it opens. If set to false, it will not create a history item, and will thus not be closeable via the browser's "Back" button.</td>
+	</tr>
 
 	<tr>
 		<th>data-overlay-theme</th>
 		<td>swatch letter (a-z) - Default "null" (transparent background)</td>
+	</tr>
+	<tr>
+		<th>data-position-to</th>
+		<td><strong>origin</strong> | window | selector - "origin" indicates that the popup is to be centered over the link that opens it. "window" indicates that it is to be centered in the browser window. If you give a jQuery selector, it will be centered over the first element returned by the selector, if that element is visible. Otherwise, it will be centered in the browser window.</td>
 	</tr>
 	<tr>
 		<th>data-shadow</th>
@@ -509,7 +517,11 @@
 	</tr>
 	<tr>
 		<th>data-tolerance</th>
-		<td><strong>30, 15, 30, 15</strong> - Distance from the edges of the window (top, right, bottom, left)</td>
+		<td><strong>30,15,30,15</strong> - Distance from the edges of the window (top, right, bottom, left)</td>
+	</tr>
+	<tr>
+		<th>data-transition</th>
+		<td><strong>none</strong> | transition - The transition to use when making the popup appear/disappear.</td>
 	</tr>
 </table>
 <p>Anchor with a <code>data-rel="popup"</code> opens the popup</p>
