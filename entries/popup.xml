@@ -435,7 +435,7 @@ $( document ).on( "mobileinit", function() {
 		<option name="overlayTheme" default="null" example-value='"a"'>
 			<desc>
 				<p>Sets the color scheme (swatch) for the popup background, which covers the entire window. If not explicitly set, the background will be transparent.</p>
-				<p>This option is also exposed as a data attribute: <code>data-history="false"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-overlay-theme="a"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
