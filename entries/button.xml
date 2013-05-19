@@ -43,7 +43,7 @@
 		<p>For ease of styling, the framework automatically converts any <code>button</code> or <code>input</code> element with a <code>type</code> of <code>submit</code>, <code>reset</code>, or <code>button</code> into a custom styled button - there is no need to add the <code> data-role="button"</code> attribute. However, if needed, you can directly call the button plugin on any selector, just like any jQuery plugin:</p>
 
 <pre><code>
-$( "[type="submit"]" ).button();
+$( "[type='submit']" ).button();
 </code></pre>	
 
 		<p><strong>Button</strong> based button:</p>
@@ -89,8 +89,7 @@ $( "[type="submit"]" ).button();
 
 			<h3>Icon set</h3>
 			
-			<p>The following <code> data-icon</code> attributes can be referenced to create the icons shown below:
-			<iframe src="/resources/button/example10.html" style="width:100%;height:1840px;border:0px"></iframe></p>
+			<p>The full list of <code> data-icon</code> attributes can found on the <a href="mobileicons/">icons reference page</a></p>.
 			
 			<h3>Icon positioning</h3>
 			<p>By default, all icons in buttons are placed to the left of the button text. 
@@ -135,13 +134,7 @@ $( "[type="submit"]" ).button();
 	...more HD icon rules go here...
 }
 </code></pre>			
-		 	
-		<h3>Icons and themes</h3>
-		<p>The semi-transparent black circle behind the white icon ensures good contrast on any background color so it works well with the jQuery Mobile theming system. Here are examples of the same icons sitting on top of a range of different color swatches with themed buttons.</p>
-		
-		<p>
-		<iframe src="/resources/button/example17.html" style="width:100%;height:450px;border:0px"></iframe></p>
-		
+		 			
 		<h2>Inline buttons</h2>
 		
 		<p>By default, all buttons in the body content are styled as block-level elements so they fill the width of the screen:
