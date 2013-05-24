@@ -10,7 +10,7 @@
 	&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
 	&lt;title&gt;<xsl:value-of select="//entry/@name"/> demo&lt;/title&gt;
 	&lt;link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css"&gt;
-	&lt;script src="http://code.jquery.com/jquery-1.10.1.min.js"&gt;&lt;/script&gt;
+	&lt;script src="http://code.jquery.com/jquery-1.10.0.min.js"&gt;&lt;/script&gt;
 	&lt;script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"&gt;&lt;/script&gt;<xsl:if test="css">
 	&lt;style&gt;<xsl:value-of select="css/text()"/>	&lt;/style&gt;</xsl:if>
 &lt;/head&gt;
