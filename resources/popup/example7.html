@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
 	<style>
 	html, body { padding: 0; margin: 0; }
@@ -27,7 +27,7 @@
 	<div data-role="content" > 
 		<a href="#popupCloseRight" data-rel="popup" data-role="button" data-inline="true">Popup with close button right</a>
 		<a href="#popupCloseLeft" data-rel="popup" data-role="button" data-inline="true">Popup with close button left</a>
-        <a href="#popupUndismissable" data-rel="popup" data-role="button" data-inline="true">Undismissable Popup</a>
+        <a href="#popupUndismissible" data-rel="popup" data-role="button" data-inline="true">Undismissible Popup</a>
 		
 		<div data-role="popup" id="popupCloseRight" class="ui-content" style="max-width:280px">
 			<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
@@ -39,9 +39,9 @@
 			<p>I have a close button at the top left corner with simple HTML markup.</p>
 		</div>
         
-        <div data-role="popup" id="popupUndismissable" class="ui-content" style="max-width:280px" data-dismissable="false">
+        <div data-role="popup" id="popupUndismissible" class="ui-content" style="max-width:280px" data-dismissible="false">
 			<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-left">Close</a>
-			<p>I have the <code>data-dismissable</code> attribute set to <code>false</code>. I'm not closeable by clicking outside of me.</p>
+			<p>I have the <code>data-dismissible</code> attribute set to <code>false</code>. I'm not closeable by clicking outside of me.</p>
 		</div>
 	</div>
 </div>
