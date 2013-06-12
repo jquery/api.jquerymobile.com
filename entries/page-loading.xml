@@ -35,9 +35,9 @@
 	</longdesc> 
 	<added>1.2</added>
 	<options>
-		<option name="html" default="" example-value='"&lt;span class=&quot;ui-icon ui-icon-loading&quot;&gt;&lt;img src=&quot;jquery-logo.png&quot; /&gt;&lt;h2&gt;is loading for you ...&lt;/h2&gt;&lt;/span&gt;"'>
+		<option name="html" default='""' example-value='"&lt;span class=&quot;ui-icon ui-icon-loading&quot;&gt;&lt;img src=&quot;jquery-logo.png&quot; /&gt;&lt;h2&gt;is loading for you ...&lt;/h2&gt;&lt;/span&gt;"'>
 			<desc>If this is set to a non empty string value, it will be used to replace the entirety of the loader's inner html.</desc>
-			<type name="boolean" />
+			<type name="string" />
 		</option>
 		<option name="text" default="loading" example-value='"Loading Page..."'>
 			<desc>Sets the text of the message.</desc>
