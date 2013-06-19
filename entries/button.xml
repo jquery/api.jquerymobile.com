@@ -89,7 +89,7 @@ $( "[type='submit']" ).button();
 
 			<h3>Icon set</h3>
 			
-			<p>The full list of <code> data-icon</code> attributes can found on the <a href="mobileicons/">icons reference page</a></p>.
+			<p>The full list of <code> data-icon</code> attributes can found on the <a href="../icons/">icons reference page</a></p>.
 			
 			<h3>Icon positioning</h3>
 			<p>By default, all icons in buttons are placed to the left of the button text. 
