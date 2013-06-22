@@ -46,12 +46,48 @@
 		<iframe src="/resources/checkbox/example3.html" style="width:100%;height:100px;border:0px"></iframe>
 
 		<h3>Vertically grouped checkboxes</h3>
-
-		<p>Checkboxes can also be used for grouped button sets where more than one button can be selected at once, such as the bold, italic and underline button group seen in word processors. To make a horizontal button set, add the <code>data-type="horizontal"</code> to the <code>fieldset</code>. 
-		<iframe src="/resources/checkbox/example4.html" style="width:100%;height:220px;border:0px"></iframe></p>
-
+		
+		<p>Typically, there are multiple checkboxes listed under a question title. To visually integrate multiple checkboxes into a grouped button set, the framework will automatically remove all margins between buttons and round only the top and bottom corners of the set if there is a <code>data-role="controlgroup"</code> attribute on the <code>fieldset</code>.</p>
+		
 <pre><code>
-&lt;fieldset data-role="controlgroup" data-type="horizontal" &gt;
+&lt;div data-role="fieldcontain"&gt;
+	&lt;fieldset data-role="controlgroup"&gt;
+		&lt;legend&gt;Choose as many snacks as you'd like:&lt;/legend&gt;
+			&lt;input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="custom" /&gt;
+			&lt;label for="checkbox-1a"&gt;Cheetos&lt;/label&gt;
+    	            
+			&lt;input type="checkbox" name="checkbox-2a" id="checkbox-2a" class="custom" /&gt;
+			&lt;label for="checkbox-2a"&gt;Doritos&lt;/label&gt;
+			
+			&lt;input type="checkbox" name="checkbox-3a" id="checkbox-3a" class="custom" /&gt;
+			&lt;label for="checkbox-3a"&gt;Fritos&lt;/label&gt;
+	
+			&lt;input type="checkbox" name="checkbox-4a" id="checkbox-4a" class="custom" /&gt;
+			&lt;label for="checkbox-4a"&gt;Sun Chips&lt;/label&gt;
+		&lt;/fieldset&gt;
+&lt;/div&gt;
+</code></pre>
+
+		<iframe src="/resources/checkbox/example4.html" style="width:100%;height:220px;border:0px"></iframe>
+		
+		<h3>Horizontal toggle sets</h3>
+		
+		<p>Checkboxes can also be used for grouped button sets where more than one button can be selected at once, such as the bold, italic and underline button group seen in word processors. To make a horizontal button set, add the <code>data-type="horizontal"</code> to the <code>fieldset</code>. </p>
+		
+<pre><code>
+&lt;div data-role="fieldcontain"&gt;
+	&lt;fieldset data-role="controlgroup" data-type="horizontal"&gt;
+		&lt;legend&gt;Font styling:&lt;/legend&gt;
+		&lt;input type="checkbox" name="checkbox-6" id="checkbox-6" class="custom" /&gt;
+		&lt;label for="checkbox-6"&gt;b&lt;/label&gt;
+	
+		&lt;input type="checkbox" name="checkbox-7" id="checkbox-7" class="custom" /&gt;
+		&lt;label for="checkbox-7"&gt;&lt;em&gt;i&lt;/em&gt;&lt;/label&gt;
+
+		&lt;input type="checkbox" name="checkbox-8" id="checkbox-8" class="custom" /&gt;
+		&lt;label for="checkbox-8"&gt;u&lt;/label&gt;    
+	&lt;/fieldset&gt;
+&lt;/div&gt;
 </code></pre>
 
 		<p>The framework will float the labels so they sit side-by-side on a line, hide the checkbox icons and only round the left and right edges of the group.<iframe src="/resources/checkbox/example5.html" style="width:100%;height:100px;border:0px"></iframe></p>
