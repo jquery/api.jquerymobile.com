@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<entry type="method" name="jqmHijackable" return="Object">
+	<title>jqmHijackable()</title>
+	<desc>For users that wish to respect <code>data-ajax=false</code> parent elements during custom form and link binding jQuery Mobile provides the <code>$.fn.jqmHijackable</code> filter method.</desc>
+	<signature>
+	</signature>
+	<longdesc>
+		<p>For users that wish to respect <code>data-ajax=false</code> parent elements during custom form and link binding jQuery Mobile provides the <code>$.fn.jqmHijackable</code> filter method.
+		</p>
+		<dd>
+			<dl>
+				<dt>Settings:</dt>
+				<dd>If, and only if, <code>$.mobile.ignoreContentEnabled</code> is set to true, this method will traverse the parent nodes for each DOM element in the jQuery object and where it finds a <code>data-ajax=false</code> parent, the child form or link will be removed from the set.</dd>
+				<dt>Warning:</dt>
+				<dd><div class="warning">The operation of traversing all parent elements can be expensive for even small jQuery object sets.</div></dd>
+			</dl>
+		</dd>
+	</longdesc>
+	<category slug="methods"/>
+</entry>
