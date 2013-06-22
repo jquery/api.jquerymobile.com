@@ -10,7 +10,7 @@
 		<dd>
 			<dl>
 				<dt>Arguments:</dt>
-				<dd>See <a href="http://api.jquery.com/jQuery.removeData/">jQuery's data</a> method</dd>
+				<dd>See <a href="http://api.jquery.com/jQuery.removeData/">jQuery's removeData</a> method</dd>
 			</dl>
 		</dd>
 	</longdesc>
