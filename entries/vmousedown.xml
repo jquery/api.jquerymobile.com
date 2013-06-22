@@ -3,21 +3,28 @@
 	<title>vmousedown</title>
 	<desc>Virtualized mousedown event handler.</desc>
 	<longdesc>
+		<p>We provide a set of "virtual" mouse events that attempt to abstract away mouse and touch events. This allows the developer to register listeners for the basic mouse events, such as mousedown, mousemove, mouseup, and click, and the plugin will take care of registering the correct listeners behind the scenes to invoke the listener at the fastest possible time for that device. In touch environments, the plugin retains the order of event firing that is seen in traditional mouse environments, so for example, vmouseup is always dispatched before vmousedown, and vmousedown before vclick, etc. The virtual mouse events also normalize how coordinate information is extracted from the event, so in touch based environments, coordinates are available from the pageX, pageY, screenX, screenY, clientX, and clientY properties, directly on the event object.</p>
 		<p>The jQuery Mobile <code>vmousedown</code> event handler simulates the "onmousedown" event handler on mobile devices.</p>
-		<p><em>The idea behind virtualized mouse events is to translate touch events into mouse events to compensate for the missing mouse event triggers. Developers should be aware that these virtualized mouse events will not prevent any synthetic mouse events from being triggered inside the browser after a touch event. If a mouse-type device is used on the system, the virtualized mouse events are dispatched at the same time as the normal mouse events.</em></p>
-
+		
 		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<pre>
-		<code><![CDATA[
-			$( function () {
-			    $( document ).on( "vmousedown", "p", function() {
-		      $( this ).append( "<span style='color:#00F;'>Mouse down.</span>" );
-		    });
-		]]></code>
-	</pre>
+		
+<pre><code><![CDATA[
+$( function () {
+	$( document ).on( "vmousedown", "p", function() {
+	$( this ).append( "<span style='color:#00F;'>Mouse down.</span>" );
+});
+]]></code></pre>
+
 		<p>
 			<iframe src="/resources/vmousedown/example1.html" style="width:100%;height:90px;border:0px"></iframe>
 		</p>
+	<dd><p>The virtual mouse events can also be configured:</p>
+			<ul>
+				<li><code>$.vmouse.moveDistanceThreshold</code> (default: 10px) – More than this, then it is a scroll event. The vmousecancel event is called and the TouchMove event is cancelled.</li>
+				<li><code>$.vmouse.clickDistanceThreshold</code> (default: 10px) – If a vclick event was already captured and is in the block list, then vclicks less than this distance are ignored.</li>
+				<li><code>$.vmouse.resetTimerDuration</code> (default: 1500ms) – More time than this, then it is not a touch event. Scroll, TouchMove and TouchEnd events use this. The block list is cleared.</li>
+			</ul>
+		</dd>
 	</longdesc>
 	<added>1.0</added>
 	<signature>
