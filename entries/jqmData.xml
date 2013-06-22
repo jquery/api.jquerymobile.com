@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<entry type="method" name="jqmData" return="Object">
+	<title>jqmData()</title>
+	<desc>Store arbitrary data associated with the specified element. Returns the value that was set.</desc>
+	<signature>
+	</signature>
+	<longdesc>
+		<p>When working with jQuery Mobile, jqmData should be used in place of jQuery core's <code>data</code> method (note that this includes <code>$.fn.data</code>, <code>$.fn.removeData</code>, and the <code>$.data</code>, <code>$.removeData</code>, and <code>$.hasData</code> utilities), as they automatically incorporate getting and setting of namespaced data attributes (even if no namespace is currently in use).
+		</p>
+		<dd>
+			<dl>
+				<dt>Arguments:</dt>
+				<dd>See <a href="http://api.jquery.com/jQuery.data/">jQuery's data</a> method<br />
+				<b>Note:</b><br />
+				Calling <code>jqmData()</code> with no argument will return <code>undefined</code>. This behavior is subject to change in future versions.</dd>
+				<dt>Also:</dt>
+				<dd><p>When finding elements by their jQuery Mobile data attribute, please use the custom selector <code>:jqmData()</code>. It automatically incorporates namespaced data attributes into the lookup when they are in use. For example, instead of calling <code>$("div[data-role='page']")</code>, you should use <code>$("div:jqmData(role='page')")</code>, which internally maps to <code>$("div[data-"+ $.mobile.ns +"role='page']")</code> without forcing you to concatenate a namespace into your selectors manually.</p>
+<p>One exception to this rule is selecting on namespaced data attributes with URL values, e.g the <code>:jqmData(url)</code> that jQuery Mobile uses to track where a page came from. This is because the selector requires a closing parentheses but the parentheses is also valid URL character.</p></dd>
+			</dl>
+		</dd>
+	</longdesc>
+	<category slug="methods"/>
+</entry>
