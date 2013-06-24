@@ -6,15 +6,15 @@
 		<added>1.0</added>
 	</signature>
 	<example>
-			<desc>Example of the activePage property</desc>
-			<css><![CDATA[
+		<desc>Example of the activePage property</desc>
+		<css><![CDATA[
 	#myResult {
 		border: 1px solid;
 		border-color: #108040;
 		padding: 10px;
 	}
 ]]></css>		
-			<html><![CDATA[	<div data-role="header">
+		<html><![CDATA[	<div data-role="header">
 			<h1>Page 1</h1>
 		</div>
 		<div data-role="content">
@@ -33,7 +33,7 @@
 			<input type="button" value="Which Page is this?" class="myButton" data-inline="true"/> <br>
 			<div class="myResult">The result will be displayed here</div>
 		</div>]]></html>
-			<code><![CDATA[
+		<code><![CDATA[
 	$(function() {
 		$( ".myButton" ).on( "click", function() {
 			var whichPageId = $.mobile.activePage.attr( "id" );
@@ -41,6 +41,6 @@
 		});
 	});
 	]]></code>
-		</example>
+	</example>
 	<category slug="properties"/>
 </entry>
