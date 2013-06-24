@@ -33,7 +33,7 @@
 		<input type="button" value="Which Page is this?" class="myButton" data-inline="true"/> <br>
 		<div class="myResult">The result will be displayed here</div>
 	</div>]]></html>
-	<code><![CDATA[
+		<code><![CDATA[
 $(function() {
 	$( ".myButton" ).on( "click", function() {
 		var whichPageId = $.mobile.activePage.attr( "id" );
