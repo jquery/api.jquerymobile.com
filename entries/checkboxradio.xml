@@ -225,7 +225,9 @@
 	</methods>
 	<example>
 		<desc>A basic example of a checkbox in a fieldcontainer</desc>
-		<html><![CDATA[<div data-role="header">
+		<html><![CDATA[
+<div data-role="page" id="page1">
+	<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
 	<div data-role="content">
@@ -238,12 +240,16 @@
 				</fieldset>
 			</form>	
 		</div>
-	</div>	]]></html>
+	</div>	
+</div>
+]]></html>
 	</example>
 	<example>
+		<height>300</height>
 		<desc>A basic example of vertically grouped radio buttons</desc>
-		<code><![CDATA[]]></code>
-		<html><![CDATA[<div data-role="header">
+		<html><![CDATA[
+<div data-role="page" id="page1">
+	<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
 	<div data-role="content">
@@ -263,7 +269,9 @@
 				<label for="radio-choice-4">Lizard</label>
 			</fieldset> 
 		</form>
-	</div>]]></html>
+	</div>
+</div>
+]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>
