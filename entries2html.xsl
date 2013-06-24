@@ -16,8 +16,7 @@
 &lt;/head&gt;
 &lt;body&gt;
 
-&lt;div data-role="page" id="page1"&gt;
-	<xsl:value-of select="html/text()"/>
+&lt;div data-role="page" id="page1"&gt;	<xsl:value-of select="html/text()"/>
 &lt;/div&gt;
 <xsl:if test="code">
 &lt;script&gt;<xsl:value-of select="code/text()"/>&lt;/script&gt;
