@@ -64,8 +64,8 @@
 
 		<h3>Expanding or collapsing items in a set</h3>
 		
-		<p>To expand or collapse items in a set, call the respective methods on individual collapsibles. The selector for the collapse method can include multiple items in a set:
-</p>
+		<p>To expand or collapse items in a set, call the respective methods on individual collapsibles. The selector for the collapse method can include multiple items in a set:</p>
+		
 <pre><code>
 $( "#myCollapsibleSet" ).children().trigger( "collapse" );
 </code></pre>
@@ -138,17 +138,17 @@ $( document ).on( "mobileinit", function() {
 		</event>
 	</events>
 	<methods>
-		
 		<method name="refresh">
 			<desc>Updates the collapsible set.
 				<p>If you manipulate a collapsible set via JavaScript (e.g. add new collapsible containers), you must call the refresh method on it to update the visual styling.</p>
-			
 			</desc>
 		</method>
 	</methods>
 	<example>
 		<desc>A basic example of a collapsible set.</desc>
-		<html><![CDATA[<div data-role="header">
+		<html><![CDATA[
+<div data-role="page" id="page1">
+	<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
 	<div data-role="content">
@@ -162,7 +162,9 @@ $( document ).on( "mobileinit", function() {
 				<p>I'm the collapsible set content for section B.</p>
 			</div>
 		</div>
-	</div>]]></html>
+	</div>
+</div>
+]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>

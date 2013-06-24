@@ -147,11 +147,13 @@ $( document ).on( "mobileinit", function() {
 	</methods>
 	<example>
 		<desc>A basic example of opening a page as a dialog by adding <code>data-rel="dialog"</code> to the anchor tag.</desc>
-		<html><![CDATA[<div data-role="header">
+		<html><![CDATA[
+<div data-role="page" id="page1">
+	<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
 	<div data-role="content">
-		<a href="#dialogPage" data-rel="dialog">Open dialog</a>
+		<a href="#dialogPage" data-rel="dialog" data-role="button">Open dialog</a>
 	</div>
 	<div data-role="footer">
 		<h2></h2>
@@ -164,7 +166,9 @@ $( document ).on( "mobileinit", function() {
 	</div>
 	<div data-role="content">
 		<p>I am a dialog</p>
-	</div>]]></html>
+	</div>
+</div>
+]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>
