@@ -37,9 +37,9 @@
 	<![CDATA[$(function() {
 		$( ".myButton" ).on( "click", function() {
 			var whichPageId = $.mobile.activePage.attr( "id" );
-				$( ".myResult" ).html( "This is " + whichPageId );
-			});
+			$( ".myResult" ).html( "This is " + whichPageId );
 		});
+	});
 	]]></code>
 		</example>
 	<category slug="properties"/>
