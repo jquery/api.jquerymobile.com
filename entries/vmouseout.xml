@@ -10,7 +10,7 @@
 
 <pre><code><![CDATA[
 $( document ).on( "vmouseout", "p", function() {
-	$( this ).append ( "<span style='color:#00F;'>Mouse out.</span>" );
+	$( this ).append ( "<span style='color:#108040;'> vmouseout fired...</span>" );
 });
 ]]></code></pre>
 
@@ -31,7 +31,7 @@ $( document ).on( "vmouseout", "p", function() {
 		<argument name="preventDefault" type="Function" optional="true">
 			<desc>A function to invoke in the event binding to prevent the synthetic click event by the browser.</desc>
 		</argument>
-
+		
 	</signature>
 	<category slug="events"/>
 </entry>
