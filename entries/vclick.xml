@@ -10,7 +10,7 @@
 		
 <pre><code><![CDATA[
 $( document ).on( "vclick", "p", function() {
-	$( this ).append( "<span style='color:#00F;'>vmouseup fired.</span>" );
+	$( this ).append( "<span style='color:#108040;'> vclick fired... </span>" );
 	});
 ]]></code></pre>
 
