@@ -15,6 +15,7 @@
 	}
 ]]></css>		
 		<html><![CDATA[
+<div data-role="page" id="page1">
 	<div data-role="header">
 		<h1>Page 1</h1>
 	</div>
@@ -33,7 +34,8 @@
 		<a href="#page1" data-role="button" data-inline="true">Go to Page 1</a>
 		<input type="button" value="Which Page is this?" class="myButton" data-inline="true"/> <br>
 		<div class="myResult">The result will be displayed here</div>
-	</div>]]></html>
+	</div>
+</div>]]></html>
 		<code><![CDATA[
 $(function() {
 	$( ".myButton" ).on( "click", function() {
