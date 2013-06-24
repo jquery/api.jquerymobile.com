@@ -337,12 +337,16 @@ $( "[type='submit']" ).button( "refresh" );
 	<example>
 	<!--<height>200</height>-->
 		<desc>A basic example of a button</desc>
-		<html><![CDATA[<div data-role="header">
+		<html><![CDATA[
+<div data-role="page" id="page1">
+	<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
 	<div data-role="content">
-    	<a href="index.html" data-role="button">A link button</a> 
-	</div>]]></html>
+		<a href="index.html" data-role="button">A link button</a> 
+	</div>
+</div>
+]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>
