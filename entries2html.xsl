@@ -15,10 +15,9 @@
 	&lt;style&gt;<xsl:value-of select="css/text()"/>	&lt;/style&gt;</xsl:if>
 &lt;/head&gt;
 &lt;body&gt;
-
-&lt;div data-role="page" id="page1"&gt;	<xsl:value-of select="html/text()"/>
-&lt;/div&gt;
+<xsl:value-of select="html/text()"/>
 <xsl:if test="code">
+
 &lt;script&gt;<xsl:value-of select="code/text()"/>&lt;/script&gt;
 </xsl:if>
 &lt;/body&gt;
