@@ -13,8 +13,7 @@
 	
 		<pre><code>&lt;table data-role=&quot;table&quot; id=&quot;my-table&quot;&gt;</code></pre>
 
-
-    <h3>How reflow mode works</h3>
+		<h3>How reflow mode works</h3>
 	
 		<p>The plugin works by parsing the values (or <code>abbr title</code>) of the first row of header (<code>th</code>) elements found in the table. For example, in the table above, the third table header is parsed to grab the contents ("Year"):</p>
 
@@ -72,7 +71,6 @@
 		
 		<pre><code>&lt;table data-role=&quot;table&quot; class=&quot;ui-responsive&quot;&gt;</code></pre>
 		
-		
 		<h3>Working with grouped column headers</h3>
 		
 		<p>It's fairly common to need to logically group multiple columns together under a heading group for financial or scientific data. The framework can support the most simple version of this by allowing for two rows of table headers (<code>TH</code>), with the first row containing simple <code>colspan</code> attributes to group the columns below. In this configuration, the framework will add a  class to the label of the first cell in each group to allow you to style these differently and provide aditional visual hierarchy. </p>
@@ -120,8 +118,11 @@ $( document ).on( "mobileinit", function() {
 		</method>
 	</methods>
 	<example>
+		<height>550</height>
 		<desc>A basic example of a responsive table in reflow mode.</desc>
-		<html><![CDATA[<div data-role="header">
+		<html><![CDATA[
+<div data-role="page" id="page1">
+	<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
 	<div data-role="content">
@@ -209,7 +210,9 @@ $( document ).on( "mobileinit", function() {
 			</tbody>
 		</table>
 
-	</div>]]></html>
+	</div>
+</div>
+]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>

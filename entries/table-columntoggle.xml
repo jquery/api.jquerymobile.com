@@ -201,8 +201,11 @@
 		</method>
 	</methods>
 	<example>
+		<height>550</height>
 		<desc>A basic example of a responsive table in column toggle mode.</desc>
-		<html><![CDATA[<div data-role="header">
+		<html><![CDATA[
+<div data-role="page" id="page1">
+	<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
 	<div data-role="content">
@@ -290,7 +293,9 @@
 			</tbody>
 		</table>
 		
-	</div>]]></html>
+	</div>
+</div>
+]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>

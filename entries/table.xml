@@ -5,20 +5,19 @@
 	<desc>Creates a responsive table</desc>
 	<longdesc>
 		<h2>Responsive tables</h2>
-				<p>One of the biggest challenges in responsive web design (RWD) is presenting tabular data. Large tables with lots of columns don't fit on smaller screens and there isn't a simple way to re-format the table content with CSS and media queries for an acceptable presentation. To address this, the framework offers two different options for presenting tables responsively. Each has benefits and tradeoffs, the right choice will depend on the data being presented.</p>
+		<p>One of the biggest challenges in responsive web design (RWD) is presenting tabular data. Large tables with lots of columns don't fit on smaller screens and there isn't a simple way to re-format the table content with CSS and media queries for an acceptable presentation. To address this, the framework offers two different options for presenting tables responsively. Each has benefits and tradeoffs, the right choice will depend on the data being presented.</p>
 
-				<p><a href="table-reflow">Reflow mode</a> - Re-formats the table columns at narrow widths so each row of data is presented as a formatted block of label/data pairs. This is ideal for tables with product or contact information with more complex or lengthy data formatting that doesn't need comparison across rows of data.</p>
+		<p><a href="table-reflow">Reflow mode</a> - Re-formats the table columns at narrow widths so each row of data is presented as a formatted block of label/data pairs. This is ideal for tables with product or contact information with more complex or lengthy data formatting that doesn't need comparison across rows of data.</p>
 
-				<p><a href="table-columntoggle">Column toggle mode</a> - Selectively hides columns at narrower widths as a sensible default but also offers a menu to let users manually control which columns they want to see. This mode is better for financial data tables that have compact values and need to maintain comparisons across columns and rows of data. It can also be used for building things like product comparison tables.</p>
+		<p><a href="table-columntoggle">Column toggle mode</a> - Selectively hides columns at narrower widths as a sensible default but also offers a menu to let users manually control which columns they want to see. This mode is better for financial data tables that have compact values and need to maintain comparisons across columns and rows of data. It can also be used for building things like product comparison tables.</p>
 
+		<p>The responsive table feature is built with a core table plugin (<code>table.js</code>)  that initializes when the <code>data-role="table"</code> attribute is added to the markup. This plugin is very lightweight and adds <code>ui-table</code> class, parses the table headers and generates information on the columns of data, and fires a <code>tablecreate</code> event. Both the table modes, <a href="table-reflow">reflow</a> and <a href="table-columntoggle">column toggle</a>, are written as extensions to the table widget that hook in via the <code>create</code> event to add the additional behaviors that make the tables responsive. Reflow is the default mode so if the extension is present, it will be applied automatically if the <code>data-role="table"</code> attribute is on the table.</p>
+		<p>If only one mode is used on a project, the download builder tool can be used to package only the table plugin and the single extension to save code weight.</p>
 
-				<p>The responsive table feature is built with a core table plugin (<code>table.js</code>)  that initializes when the <code>data-role="table"</code> attribute is added to the markup. This plugin is very lightweight and adds <code>ui-table</code> class, parses the table headers and generates information on the columns of data, and fires a <code>tablecreate</code> event. Both the table modes, <a href="table-reflow">reflow</a> and <a href="table-columntoggle">column toggle</a>, are written as extensions to the table widget that hook in via the <code>create</code> event to add the additional behaviors that make the tables responsive. Reflow is the default mode so if the extension is present, it will be applied automatically if the <code>data-role="table"</code> attribute is on the table.</p>
-				<p>If only one mode is used on a project, the download builder tool can be used to package only the table plugin and the single extension to save code weight.</p>
+		<h3>General table markup guidelines</h3>
 
-
-			<h3>General table markup guidelines</h3>
-
-				<p>Here is the basic table markup you should use for both table modes:</p>
+		<p>Here is the basic table markup you should use for both table modes:</p>
+		
 <pre><code>&lt;table data-role=&quot;table&quot; id=&quot;my-table&quot; data-mode=&quot;reflow&quot;&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -53,13 +52,13 @@
 			<li>To display longer table header text in the column chooser or reflow labels, wrap the text in the <code>TH</code> with a <code>abbr</code> element and set the <code>title</code>. This string will be used in place.</li>
 		</ul>
 	
-			<h3>Styling and theming tables</h3>
+		<h3>Styling and theming tables</h3>
 			
-			<p>The responsive table plugin is as minimally styled as possible to give you a clean slate for your designs. The plugin focuses primarily on the difficult scripting elements: generating the labels for the reflow table and creating the button and column chooser popup. Out of the box, the table just has a few basic style rules to add a bit of padding and set the vertical alignment of cells to be top left for visual consistency. </p>
-			<p>The table will adapt to whatever content block it sits on, but there isn't an explicit theming attribute for this widget. We did this because it's simple enough to add theme classes like <code>ui-body-a</code> to individual cells if a more heavily themed look is wanted.</p>
+		<p>The responsive table plugin is as minimally styled as possible to give you a clean slate for your designs. The plugin focuses primarily on the difficult scripting elements: generating the labels for the reflow table and creating the button and column chooser popup. Out of the box, the table just has a few basic style rules to add a bit of padding and set the vertical alignment of cells to be top left for visual consistency. </p>
+		<p>The table will adapt to whatever content block it sits on, but there isn't an explicit theming attribute for this widget. We did this because it's simple enough to add theme classes like <code>ui-body-a</code> to individual cells if a more heavily themed look is wanted.</p>
 			
-			<h3>Row strokes</h3>
-			<p>To add horizontal lines between each row, add a custom style to your stylesheet that adds a border to the table headers and cells. In this example, RGBA is used to set a color (black) at an opacity of 5% so this will work on any background color:</p>
+		<h3>Row strokes</h3>
+		<p>To add horizontal lines between each row, add a custom style to your stylesheet that adds a border to the table headers and cells. In this example, RGBA is used to set a color (black) at an opacity of 5% so this will work on any background color:</p>
 			
 <pre><code>.table-stroke thead th {
   border-bottom: 1px solid rgba(0, 0, 0, .1);
@@ -69,7 +68,7 @@
   border-bottom: 1px solid rgba(0, 0, 0, .05);
 }
 </code></pre>
-			<p>This standard table stroke style can be also applied by adding <code>table-stroke</code> <code>class</code> to the <code>table</code> element. If you prefer a custom stroke style, use the example above as a starting point. Note that adding styles that set a color for the stroke will override a theme class so do not use these together.</p>
+		<p>This standard table stroke style can be also applied by adding <code>table-stroke</code> <code>class</code> to the <code>table</code> element. If you prefer a custom stroke style, use the example above as a starting point. Note that adding styles that set a color for the stroke will override a theme class so do not use these together.</p>
 			
   	</longdesc>
 	<added>1.3</added>
@@ -105,32 +104,37 @@ $( document ).on( "mobileinit", function() {
 	<methods>
 	</methods>
 	<example>
+		<height>350</height>
 		<desc>A basic example of a reponsive table.</desc>
-		<html><![CDATA[<div data-role="header">
+		<html><![CDATA[
+<div data-role="page" id="page1">
+	<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
 	<div data-role="content">
 		<table data-role="table" id="my-table" data-mode="reflow">
-  			<thead>
-    			<tr>
-      				<th>Rank</th>
-      				<th>Movie Title</th>
-      				<th>Year</th>
-      				<th><abbr title="Rotten Tomato Rating">Rating</abbr></th>
-      				<th>Reviews</th>
-    			</tr>
+			<thead>
+				<tr>
+					<th>Rank</th>
+					<th>Movie Title</th>
+					<th>Year</th>
+					<th><abbr title="Rotten Tomato Rating">Rating</abbr></th>
+					<th>Reviews</th>
+				</tr>
 			</thead>
-  			<tbody>
-    			<tr>
-      				<th>1</th>
-      				<td><a href="foo.com" data-rel="external">Citizen Kane</a></td>
-      				<td>1941</td>
-      				<td>100%</td>
-      				<td>74</td>
-    			</tr>
-    		</tbody>
+			<tbody>
+				<tr>
+					<th>1</th>
+					<td><a href="foo.com" data-rel="external">Citizen Kane</a></td>
+					<td>1941</td>
+					<td>100%</td>
+					<td>74</td>
+				</tr>
+			</tbody>
 		</table>
-	</div>]]></html>
+	</div>
+</div>
+]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>

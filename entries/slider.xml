@@ -327,7 +327,9 @@ $( document ).on( "mobileinit", function() {
 	</example>
 	<example>
 		<desc>A basic example of a flip toggle switch.</desc>
-		<html><![CDATA[<div data-role="header">
+		<html><![CDATA[
+<div data-role="page" id="page1">
+	<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
 	<div data-role="content">
@@ -336,7 +338,9 @@ $( document ).on( "mobileinit", function() {
 			<option value="off">Off</option>
 			<option value="on">On</option>
 		</select>
-	</div>	]]></html>
+	</div>
+</div>
+]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>
