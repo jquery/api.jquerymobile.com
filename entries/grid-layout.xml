@@ -109,16 +109,21 @@
 	</methods>
 	<example>
 		<desc>A basic example of grid layout</desc>
-		<html><![CDATA[<div data-role="header">
+		<html><![CDATA[
+<div data-role="page" id="page1">
+	<div data-role="header">
 		<h1>Grid Layout Example</h1>
 	</div>
 	<div data-role="content">
-		<fieldset class="ui-grid-a">
 		<div class="ui-grid-a">
-			<div class="ui-block-a"><strong>I'm Block A</strong> and text inside will wrap.</div>
-			<div class="ui-block-b"><strong>I'm Block B</strong> and text inside will wrap.</div>
-		</div><!-- /grid-a -->
-	</div>]]></html>
+			<div class="ui-grid-a">
+				<div class="ui-block-a"><strong>I'm Block A</strong> and text inside will wrap.</div>
+				<div class="ui-block-b"><strong>I'm Block B</strong> and text inside will wrap.</div>
+			</div><!-- /grid-a -->
+		</div>
+	</div>
+</div>
+]]></html>
 	</example>
 	<category slug="misc"/>
 </entry>
