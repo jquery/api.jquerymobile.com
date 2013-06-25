@@ -35,7 +35,8 @@
 		<input type="button" value="Which Page is this?" class="myButton" data-inline="true"/> <br>
 		<div class="myResult">The result will be displayed here</div>
 	</div>
-</div>]]></html>
+</div>
+]]></html>
 		<code><![CDATA[
 $(function() {
 	$( ".myButton" ).on( "click", function() {

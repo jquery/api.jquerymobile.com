@@ -108,12 +108,16 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 	<added>1.0</added>
 	<example>
 		<desc>A basic example of a header</desc>
-		<html><![CDATA[<div data-role="header">
+		<html><![CDATA[
+<div data-role="page" id="page1">
+	<div data-role="header">
 		<h1>Page Title</h1>
 	</div>
 	<div data-role="content">
 		<p>Some content here</p>
-	</div> ]]></html>
+	</div>
+</div>
+]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>

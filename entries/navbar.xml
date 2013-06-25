@@ -38,28 +38,18 @@
         <p>Adding a fourth more item will automatically make each button 1/4 the width of the browser window:
 		<iframe src="/resources/navbar/example3.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
-    	
-
         <p>The navbar maxes out with 5 items, each 1/5 the width of the browser window:
 		<iframe src="/resources/navbar/example4.html" style="width:100%;height:90px;border:0px"></iframe></p>
-
-    	
 
         <p>If more than 5 items are added, the navbar will simply wrap to multiple lines:
 		<iframe src="/resources/navbar/example5.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
-    	
-
         <p>Navbars with 1 item will simply render as 100%.
 		<iframe src="/resources/navbar/example6.html" style="width:100%;height:90px;border:0px"></iframe></p>
-
-    	
 
         <h3>Navbars in headers</h3>
         <p>If you want to add a navbar to the top of the page, you can still have a page title and buttons. Just add the navbar container inside the header block, right after the title and buttons in the source order.
 		<iframe src="/resources/navbar/example7.html" style="width:100%;height:90px;border:0px"></iframe></p>
-
-    	
 
 		<h3>Navbars in footers</h3>
         <p>If you want to add a navbar to the bottom of the page so it acts more like a tab bar, simply wrap the navbar in a container with a <code>data-role="footer"</code></p>
@@ -92,20 +82,13 @@
 		<p>This will result in a bottom icon alignment:
 		<iframe src="/resources/navbar/example10.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
-		
-
 		<p>The icon position can be set to <code>data-iconpos="left"</code>:
 		<iframe src="/resources/navbar/example11.html" style="width:100%;height:90px;border:0px"></iframe></p>
-
-    	
 
 		<p>Or the icon position can be set to <code>data-iconpos="right"</code>:
 		<iframe src="/resources/navbar/example12.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
-    	
-
 		<h3>Using 3rd party icon sets</h3>
-		
 		<p>You can add any of the popular icon libraries like Glyphish to achieve the iOS style tab that has large icons stacked on top of text labels. All that is required is a bit of custom styles to link to the icons and position them in the navbar. Here is an example using Glyphish icons and custom styles (view page source for styles) in our navbar:</p>
 
 		<iframe src="/resources/navbar/example13.html" style="width:100%;height:90px;border:0px"></iframe>
@@ -146,20 +129,24 @@ $( "div" ).navbar({
 	</events>
 	<example>
 		<desc>A basic example of a navbar</desc>
-	<html><![CDATA[<div data-role="header">
+		<html><![CDATA[
+<div data-role="page" id="page1">
+	<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
 	<div data-role="content">
 		<p>Some Content here</p>
 	</div>
 	<div data-role="footer">	
-    	<div data-role="navbar">
-    		<ul>
-    			<li><a href="#" class="ui-btn-active">One</a></li>
-    			<li><a href="#">Two</a></li>
-    		</ul>
-    	</div><!-- /navbar --> 
-	</div>]]></html>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#" class="ui-btn-active">One</a></li>
+				<li><a href="#">Two</a></li>
+			</ul>
+		</div><!-- /navbar --> 
+	</div>
+</div>
+]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>

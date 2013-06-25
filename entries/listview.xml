@@ -16,9 +16,9 @@
 &lt;/ul&gt;
 </code></pre>
 
-		<p><iframe src="/resources/listview/example1.html" style="width:100%;height:940px;border:0px"></iframe></p>
+			<p><iframe src="/resources/listview/example1.html" style="width:100%;height:940px;border:0px"></iframe></p>
 
-				<p><strong>Style note on non-inset lists</strong>: all standard, non-inset lists have a -15px margin to negate the 15px of padding on the content area to make lists extend to the edges of the screen. If you add other widgets above or below a list, the negative margin may make these elements overlap so you'll need to add additional spacing in your custom CSS.</p>
+			<p><strong>Style note on non-inset lists</strong>: all standard, non-inset lists have a -15px margin to negate the 15px of padding on the content area to make lists extend to the edges of the screen. If you add other widgets above or below a list, the negative margin may make these elements overlap so you'll need to add additional spacing in your custom CSS.</p>
 			
 			<h3>Nested lists</h3>
 			<p>By nesting child <code>ul</code> or <code>ol</code> inside list items, you can create nested lists. When a list item with a child list is clicked, the framework will show a new page populated with the title of the parent in the header and the list of child elements. These dynamic nested lists are styled with the "b" theme swatch (blue in the default theme) to indicate that you are in a secondary level of navigation. Lists can be nested multiple levels deep and all pages and linking will be automatically handled by the framework. Note that the page of each nested listview is created when the parent page loads and for each nested page the page-events will trigger. Please also note that the title of subpages will contain the text of the first element in the parent list item including its elements. So make sure to use a single element for the list item caption and put other elements like count bubbles behind that caption as shown in the demo below.</p>
@@ -136,13 +136,10 @@ function( text, searchValue, item ) {
 			
 			<p><iframe src="/resources/listview/example16.html" style="width:100%;height:1040px;border:0px"></iframe></p>
 			
-			
 			<h3>Cities worldwide</h3>
-            
 			<p>After you enter <strong>at least three characters</strong> the autocomplete function will show all possible matches.</p> 
 
 			<h3>Calling the listview plugin</h3>
-			
 			<p>You can directly call the listview plugin on any selector, just like any jQuery plugin:</p>
 <pre><code>
 $( "#mylist" ).listview();
@@ -277,8 +274,11 @@ $( document ).on( "mobileinit", function() {
 		</method>
 	</methods>
 	<example>
+		<height>260</height>
 		<desc>A basic example of a listview</desc>
-		<html><![CDATA[<div data-role="header">
+		<html><![CDATA[
+<div data-role="page" id="page1">
+	<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
 	<div data-role="content">
@@ -289,7 +289,9 @@ $( document ).on( "mobileinit", function() {
 			<li><a href="index.html">Cadillac</a></li>
 			<li><a href="index.html">Chrysler</a></li>
 		</ul>
-	</div>]]></html>
+	</div>
+<div>
+]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>
