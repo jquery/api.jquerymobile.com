@@ -1,80 +1,81 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>hashtag demo</title>
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css">
-    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
-	<style>
-        html, body { padding: 0; margin: 0; }
-        html, .ui-mobile, .ui-mobile body {
-            height: 85px;
-        }
-        .ui-mobile, .ui-mobile .ui-page {
-            min-height: 85px;
-        }
-        #nav {
-          font-size: 200%;
-          width:17.1875em;
-          margin:17px auto 0 auto;
-        }
-        #nav a {
-          color: #777;
-          border: 2px solid #777;
-          background-color: #ccc;
-          padding: 0.2em 0.6em;
-          text-decoration: none;
-          float: left;
-          margin-right: 0.3em;
-        }
-        #nav a:hover {
-          color: #999;
-          border-color: #999;
-          background: #eee; 
-        }
-        #nav a.selected,
-        #nav a.selected:hover {
-          color: #0a0;
-          border-color: #0a0;
-          background: #afa; 
-        }       
-    </style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>hashtag demo</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>	<style>
+	html, body { 
+		padding: 0; margin: 0; 
+	}
+	html, .ui-mobile, .ui-mobile body {
+		height: 85px;
+	}
+	.ui-mobile, .ui-mobile .ui-page {
+		min-height: 85px;
+	}
+	#nav {
+		font-size: 200%;
+		width:17.1875em;
+		margin:17px auto 0 auto;
+	}
+	#nav a {
+		color: #777;
+		border: 2px solid #777;
+		background-color: #ccc;
+		padding: 0.2em 0.6em;
+		text-decoration: none;
+		float: left;
+		margin-right: 0.3em;
+	}
+	#nav a:hover {
+		color: #999;
+		border-color: #999;
+		background: #eee; 
+	}
+	#nav a.selected,
+	#nav a.selected:hover {
+		color: #0a0;
+		border-color: #0a0;
+		background: #afa; 
+	}       
+	</style>
 </head>
 <body>
-    <p id="nav">
-        <a href="#test1" class="hashExLink">test 1</a>
-        <a href="#test2" class="hashExLink">test 2</a>
-        <a href="#test3" class="hashExLink">test 3</a>
-        <a href="#test4" class="hashExLink">test 4</a>
-    </p>
-    <script>
-        $(function(){
-            // Bind an event to window.onhashchange that, when the hash changes, gets the
-            // hash and adds the class "selected" to any matching nav link.
-            $(window).hashchange( function(){
-            var hash = location.hash;
+	<p id="nav">
+		<a href="#test1" class="hashExLink">test 1</a>
+		<a href="#test2" class="hashExLink">test 2</a>
+		<a href="#test3" class="hashExLink">test 3</a>
+		<a href="#test4" class="hashExLink">test 4</a>
+	</p>
+	<script>
+		$(function(){
+			// Bind an event to window.onhashchange that, when the hash changes, gets the
+			// hash and adds the class "selected" to any matching nav link.
+			$( window ).hashchange(function(){
+			var hash = location.hash;
 
-            // Set the page title based on the hash.
-            document.title = 'The hash is ' + ( hash.replace( /^#/, '' ) || 'blank' ) + '.';
+			// Set the page title based on the hash.
+			document.title = "The hash is " + ( hash.replace( /^#/, "" ) || "blank" ) + ".";
 
-            // Iterate over all nav links, setting the "selected" class as-appropriate.
-            $('#nav a').each(function(){
-                var that = $(this);
-                that[ that.attr( 'href' ) === hash ? 'addClass' : 'removeClass' ]( 'selected' );
-                });
-            })
-            // Since the event is only triggered when the hash changes, we need to trigger
-            // the event now, to handle the hash the page may have loaded with.
-            $(window).hashchange();
+			// Iterate over all nav links, setting the "selected" class as-appropriate.
+			$( "#nav a" ).each(function(){
+				var that = $( this );
+				that[ that.attr( "href" ) === hash ? "addClass" : "removeClass" ]( "selected" );
+				});
+			})
+			// Since the event is only triggered when the hash changes, we need to trigger
+			// the event now, to handle the hash the page may have loaded with.
+			$( window ).hashchange();
 
-            // To change src attribute of parent iframe element
-            $('.hashExLink').on('click', function() { 
-                window.parent.document.getElementById( "hashtagIframe" ).src = "/resources/hashchange/example1.html" + $(this).attr( "href" );
-                window.parent.document.getElementById( "hashtagIframeLink" ).innerHTML = "example1.html" + $(this).attr( "href" );
-            });
-        }); 
+			// To change src attribute of parent iframe element
+			$( ".hashExLink" ).on( "click", function() { 
+				window.parent.document.getElementById( "hashtagIframe" ).src = "/resources/hashchange/example1.html" + $( this ).attr( "href" );
+				window.parent.document.getElementById( "hashtagIframeLink" ).innerHTML = "example1.html" + $( this ).attr( "href" );
+			});
+		}); 
     </script>
 </body>
 </html>
