@@ -13,12 +13,12 @@
 		<desc>A simple example of the capturing and acting upon a swipeleft event</desc>
 <code><![CDATA[
 $(function(){
-    // Bind the swipeleftHandler callback function to the swipe event on div.box
-	$('div.box').on( 'swipeleft', swipeleftHandler );
-        
+	// Bind the swipeleftHandler callback function to the swipe event on div.box
+	$( "div.box" ).on( "swipeleft", swipeleftHandler );
+
 	// Callback function references the event target and adds the 'swipeleft' class to it
-	function swipeleftHandler(event){
-		$(event.target).addClass( 'swipeleft' );
+	function swipeleftHandler( event ){
+		$( event.target ).addClass( "swipeleft" );
 	}
 });
 ]]></code>
@@ -65,8 +65,8 @@ $(function(){
 	}
 ]]></css>
 <html><![CDATA[
-	<h3>Swipe the green rectangle in the left direction to change its color:</h3>
-	<div class="box"></div>
+<h3>Swipe the green rectangle in the left direction to change its color:</h3>
+<div class="box"></div>
 ]]></html>
 	</example>	
 	<category slug="events"/>
