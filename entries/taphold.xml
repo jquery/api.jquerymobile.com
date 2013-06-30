@@ -23,7 +23,7 @@ $(function(){
 	$( "div.box" ).bind( "taphold", tapholdHandler );
 
 	function tapholdHandler( event ){
-		$(event.target).addClass( "taphold" );
+		$( event.target ).addClass( "taphold" );
 	}
 });
 ]]></code>
