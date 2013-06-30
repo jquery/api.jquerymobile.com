@@ -13,54 +13,60 @@
 		</argument>
 		<argument name="options" type="Object" optional="true">
 			<desc>Properties:</desc>
-				<property name="allowSamePageTransition" type="Boolean" default="false">
-					<desc>By default, changePage() ignores requests to change to the current active page. Setting this option to true, allows the request to execute. Developers should note that some of the page transitions assume that the fromPage and toPage of a changePage request are different, so they may not animate as expected. Developers are responsible for either providing a proper transition, or turning it off for this specific case.
-					</desc>
-				</property>
-				<property name="changeHash" type="Boolean" default="true">
-					<desc>Decides if the hash in the location bar should be updated. This has the effect of creating a new browser history entry. It also means that, if set to <strong>false</strong>, the incoming page will replace the current page in the browser history, so the page from which the user is navigating away will not be reachable via the browser's "Back" button.</desc>
-				</property>
-				<property name="data" default="undefined">
-					<desc>The data to send with an Ajax page request.<br />Used only when the 'to' argument of changePage() is a URL.</desc>
-					<type name="Object">
-						<desc></desc>
-					</type>
-					<type name="String">
-						<desc></desc>
-					</type>
-				</property>
-				<property name="dataUrl" type="String" default="undefined">
-					<desc>The URL to use when updating the browser location upon changePage completion. If not specified, the value of the data-url attribute of the page element is used.</desc>
-				</property>
-				<property name="pageContainer" type="jQuery collection" default="$.mobile.pageContainer">
-					<desc>Specifies the element that should contain the page.</desc>
-				</property>
-				<property name="reloadPage" type="Boolean" default="false">
-					<desc>Forces a reload of a page, even if it is already in the DOM of the page container. <br />Used only when the 'to' argument of changePage() is a URL.</desc>
-				</property>
-				<property name="reverse" type="Boolean" default="false">
-					<desc>Decides what direction the transition will run when showing the page.</desc>
-				</property>
-				<property name="role" type="String" default="undefined">
-					<desc>The data-role value to be used when displaying the page. By default this is undefined which means rely on the value of the @data-role attribute defined on the element.</desc>
-				</property>
-				<property name="showLoadMsg" type="Boolean" default="true">
-					<desc>Decides whether or not to show the loading message when loading external pages.</desc>
-				</property>
-				<property name="transition" type="String" default="$.mobile.defaultPageTransition">
-					<desc>The transition to use when showing the page. </desc>
-				</property>
-				<property name="type" type="String" default='"get"'>
-					<desc>Specifies the method (&quot;get&quot; or &quot;post&quot;) to use when making a page request. <br />Used only when the 'to' argument of changePage() is a URL.</desc>
-				</property>
-			</argument>
+			<property name="allowSamePageTransition" type="Boolean" default="false">
+				<desc>By default, changePage() ignores requests to change to the current active page. Setting this option to true, allows the request to execute. Developers should note that some of the page transitions assume that the fromPage and toPage of a changePage request are different, so they may not animate as expected. Developers are responsible for either providing a proper transition, or turning it off for this specific case.
+				</desc>
+			</property>
+			<property name="changeHash" type="Boolean" default="true">
+				<desc>Decides if the hash in the location bar should be updated. This has the effect of creating a new browser history entry. It also means that, if set to <strong>false</strong>, the incoming page will replace the current page in the browser history, so the page from which the user is navigating away will not be reachable via the browser's "Back" button.</desc>
+			</property>
+			<property name="data" default="undefined">
+				<desc>The data to send with an Ajax page request.<br />Used only when the 'to' argument of changePage() is a URL.</desc>
+				<type name="Object">
+					<desc></desc>
+				</type>
+				<type name="String">
+					<desc></desc>
+				</type>
+			</property>
+			<property name="dataUrl" type="String" default="undefined">
+				<desc>The URL to use when updating the browser location upon changePage completion. If not specified, the value of the data-url attribute of the page element is used.</desc>
+			</property>
+			<property name="pageContainer" type="jQuery collection" default="$.mobile.pageContainer">
+				<desc>Specifies the element that should contain the page.</desc>
+			</property>
+			<property name="reloadPage" type="Boolean" default="false">
+				<desc>Forces a reload of a page, even if it is already in the DOM of the page container. <br />Used only when the 'to' argument of changePage() is a URL.</desc>
+			</property>
+			<property name="reverse" type="Boolean" default="false">
+				<desc>Decides what direction the transition will run when showing the page.</desc>
+			</property>
+			<property name="role" type="String" default="undefined">
+				<desc>The data-role value to be used when displaying the page. By default this is undefined which means rely on the value of the @data-role attribute defined on the element.</desc>
+			</property>
+			<property name="showLoadMsg" type="Boolean" default="true">
+				<desc>Decides whether or not to show the loading message when loading external pages.</desc>
+			</property>
+			<property name="transition" type="String" default="$.mobile.defaultPageTransition">
+				<desc>The transition to use when showing the page. </desc>
+			</property>
+			<property name="type" type="String" default='"get"'>
+				<desc>Specifies the method (&quot;get&quot; or &quot;post&quot;) to use when making a page request. <br />Used only when the 'to' argument of changePage() is a URL.</desc>
+			</property>
+		</argument>
 	</signature>
-		<example>
-			<desc>Transition to the "about us" page with a slideup transition.</desc>
-				<html><![CDATA[
-	<div></div>
-				]]></html>
-			<code><![CDATA[
+	<example>
+		<desc>Transition to the "about us" page with a slideup transition.</desc>
+		<html><![CDATA[
+<div data-role="page" id="page1">
+	<div data-role="header">
+		<h1>Page 1</h1>
+	</div>
+	<div data-role="content">
+	</div>
+</div>
+]]></html>
+		<code><![CDATA[
 //Adding the changeHash: false to avoid an issue with the iframe
 $.mobile.changePage( "../resources/us.html", { transition: "slideup", changeHash: false });
 ]]></code>
@@ -68,7 +74,11 @@ $.mobile.changePage( "../resources/us.html", { transition: "slideup", changeHash
 		<example>
 			<desc>Transition to the "search results" page, using data from a form with an id of "search".</desc>
 			<html><![CDATA[
-	<div>
+<div data-role="page" id="page1">
+	<div data-role="header">
+		<h1>Page 1</h1>
+	</div>
+	<div data-role="content">
 		<form id="search">
 			<p>Please fill in the form below:<br /><br />
 			<label for="choice">Favorite framework:</label>
@@ -76,28 +86,35 @@ $.mobile.changePage( "../resources/us.html", { transition: "slideup", changeHash
 			</p>
 		</form>
 	</div>
-			]]></html>
-			<code><![CDATA[
+</div>
+]]></html>
+		<code><![CDATA[
 $.mobile.changePage( "../resources/results.php", {
 	type: "post",
 	data: $( "form#search" ).serialize(),
 	changeHash: false
 });
 ]]></code>
-		</example>
-		<example>
-			<desc>Transition to the "confirm" page with a "pop" transition without tracking it in history.</desc>
-			<html><![CDATA[
-	<div></div>
-			]]></html>
-			<code><![CDATA[
+	</example>
+	<example>
+		<desc>Transition to the "confirm" page with a "pop" transition without tracking it in history.</desc>
+		<html><![CDATA[
+<div data-role="page" id="page1">
+	<div data-role="header">
+		<h1>Page 1</h1>
+	</div>
+	<div data-role="content">
+	</div>
+</div>
+]]></html>
+		<code><![CDATA[
 $.mobile.changePage( "../resources/confirm.html", {
 	transition: "pop",
 	reverse: false,
 	changeHash: false
 });
 ]]></code>
-		</example>
+	</example>
 	<longdesc>
 		<p>Programmatically change from one page to another. This method is used internally for the page loading and transitioning that occurs as a result of clicking a link or submitting a form, when those features are enabled.</p>
 	</longdesc>
