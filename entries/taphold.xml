@@ -7,40 +7,7 @@
 
 		<p><code>$.event.special.tap.tapholdThreshold</code> (default: 750) - This value dictates how long the user must hold their tap before the taphold event is fired on the target element.</p>
 
-		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<pre>
-		<code><![CDATA[
-			<style type="text/css">
-				div.box {
-					background-color: #598611;
-					height: 3em;
-					width: 3em;
-				}
-				div.box.taphold {
-					background-color: #BB6F04;
-				}
-			</style>
-			
-			...
-
-			<h3>Long-press (taphold) the green square to change its color:</h3>
-			<div class="box"></div>
-			
-			...
-		    
-		    $(function() {
-		    	// Bind the tapholdHandler callback function to the taphold event on div.box
-		        $( "div.box" ).on( 'taphold', tapholdHandler );
-
-		        // Callback function references the event target and adds the 'tap' class to it
-		        function tapholdHandler( event ) {
-        			$(event.target).addClass( "taphold" );
-        		}
-			});
-		]]></code>
-	</pre>
-	<p>Long press the square for 750 milliseconds to see the above code applied.
-		<iframe id="tapholdIframe" src="/resources/taphold/example1.html" style="width:100%;height:90px;border:0px"></iframe></p>
+		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>	
 	</longdesc>
 	<added>1.0</added>
 	<signature>
@@ -48,5 +15,64 @@
 			<desc>A function to invoke after the the taphold event fires.</desc>
 		</argument>
 	</signature>
+	<example>
+		<height>120</height>
+		<desc>A simple example of the capturing and acting upon a taphold event</desc>
+<code><![CDATA[
+$(function(){
+	$( "div.box" ).bind( "taphold", tapholdHandler );
+
+	function tapholdHandler( event ){
+		$(event.target).addClass( "taphold" );
+	}
+});
+]]></code>
+<css><![CDATA[
+	html, body { padding: 0; margin: 0; }
+	html, .ui-mobile, .ui-mobile body {
+		height: 85px;
+	}
+	.ui-mobile, .ui-mobile .ui-page {
+		min-height: 85px;
+	}
+	#nav {
+		font-size: 200%;
+		width:17.1875em;
+		margin:17px auto 0 auto;
+	}
+	#nav a {
+		color: #777;
+		border: 2px solid #777;
+		background-color: #ccc;
+		padding: 0.2em 0.6em;
+		text-decoration: none;
+		float: left;
+		margin-right: 0.3em;
+	}
+	#nav a:hover {
+		color: #999;
+		border-color: #999;
+		background: #eee; 
+	}
+	#nav a.selected,
+	#nav a.selected:hover {
+		color: #0a0;
+		border-color: #0a0;
+		background: #afa; 
+	}
+	div.box {
+		width: 3em;
+		height: 3em;
+		background-color: #108040;
+	}
+	div.box.taphold {
+		background-color: #7ACEF4;
+	}
+]]></css>
+<html><![CDATA[
+<h3>Long press the square for 750 milliseconds to see the above code applied:</h3>
+<div class="box"></div>
+]]></html>
+	</example>
 	<category slug="events"/>
 </entry>
