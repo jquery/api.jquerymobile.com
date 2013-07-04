@@ -221,7 +221,7 @@ $( document ).on( "mobileinit", function() {
 			<type name="String" />
 		</option>
 		<option name="positionFixed" default="false" example-value="true">
-			<desc>Sets whether the panel has fixed positioning so the contents are in view even if the page is scrolled down. This also allows the page to scroll while the panel stays fixed. We recommend not to enable this feature when panels are used withing Android apps because of poor performance and display issues.
+			<desc>Sets whether the panel has fixed positioning so the contents are in view even if the page is scrolled down. This also allows the page to scroll while the panel stays fixed. We recommend not to enable this feature when panels are used within Android apps because of poor performance and display issues.
 				<p>This option is also exposed as a data attribute:<code>data-position-fixed=true</code> on the panel.</p>
 			</desc>
 			<type name="Boolean" />
