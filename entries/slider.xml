@@ -25,7 +25,7 @@
 
 <pre><code>
 &lt;label for="slider-1"&gt;Input slider:&lt;/label&gt;
-&lt;input type="range" name="slider-1" id="slider-1" value="60" min="0" max="100" step="50" /&gt;
+&lt;input type="range" name="slider-1" id="slider-1" value="60" min="0" max="100" /&gt;
 </code></pre>
 
 		<p>This will produce an input that snaps to increments of 50. If a value is added to the input that isn't valid with the step increment, the value will be reset on blur to the closest step.
