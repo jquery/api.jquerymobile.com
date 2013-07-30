@@ -12,6 +12,7 @@
 		<example>
 			<desc>scroll to Y 100px</desc>
 				<html><![CDATA[
+<div data-role="page">
 	<div data-role="header">
 		<h1>silentScroll() example</h1>
 	</div>
@@ -25,6 +26,7 @@
 	<div data-role="footer">
 		<h4> </h4>
 	</div>
+</div>
 				]]></html>
 		</example>
 	<longdesc>
