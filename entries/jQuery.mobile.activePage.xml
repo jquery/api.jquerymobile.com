@@ -13,7 +13,7 @@
 		border-color: #108040;
 		padding: 10px;
 	}
-]]></css>		
+]]></css>
 		<html><![CDATA[
 <div data-role="page" id="page1">
 	<div data-role="header">
@@ -25,7 +25,7 @@
 		<div class="myResult">The result will be displayed here</div>
 	</div>
 </div>
-	
+
 <div data-role="page" id="page2">
 	<div data-role="header">
 		<h1>Page 2</h1>
