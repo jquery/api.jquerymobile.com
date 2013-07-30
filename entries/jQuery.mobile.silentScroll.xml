@@ -18,16 +18,16 @@
 	</div>
 	<div data-role="content">
 		<a href="#" onclick="$.mobile.silentScroll(100)" data-role="button">Go down 100 pixels</a>
-		<p> <br /><br />Here, we have some text so that we can have <br />
-		some vertical space in order to demonstrate <br />
-		the silentScroll() method.<br /><br /></p>	
+		<p> <br><br>Here, we have some text so that we can have <br>
+		some vertical space in order to demonstrate <br>
+		the silentScroll() method.<br><br></p>
 		<a href="#" onclick="$.mobile.silentScroll(0)" data-role="button">Back to Top</a>
 	</div>
 	<div data-role="footer">
 		<h4> </h4>
 	</div>
 </div>
-				]]></html>
+]]></html>
 		</example>
 	<longdesc>
 		<p>Scroll to a particular Y position without triggering scroll event listeners.</p>
