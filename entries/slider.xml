@@ -133,7 +133,7 @@ $( "input" ).slider();
 		<p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a mini version. </p>
 
 <pre><code>
-&lt;label for="flip-mini"&gt;Select slider:&lt;/label&gt;
+&lt;label for="flip-mini"&gt;Flip switch:&lt;/label&gt;
 &lt;select name="flip-mini" id="flip-mini" data-role="slider" data-mini="true"&gt;
 	&lt;option value="off"&gt;Off&lt;/option&gt;
 	&lt;option value="on"&gt;On&lt;/option&gt;
@@ -149,7 +149,7 @@ $( "input" ).slider();
 
 <pre><code>
 &lt;div data-role="fieldcontain"&gt;
-	&lt;label for="flip-2"&gt;Select slider:&lt;/label&gt;
+	&lt;label for="flip-2"&gt;Flip switch:&lt;/label&gt;
 	&lt;select name="flip-2" id="flip-2" data-role="slider" data-mini="true"&gt;
 		&lt;option value="off"&gt;Off&lt;/option&gt;
 		&lt;option value="on"&gt;On&lt;/option&gt;
