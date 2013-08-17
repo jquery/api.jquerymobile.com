@@ -66,7 +66,7 @@ function( start, stop ) {
 $(function(){
 	// Bind the swipeleftHandler callback function to the swipe event on div.box
     $('div.box').on( 'swipe', swipeHandler );
-        
+
 	// Callback function references the event target and adds the 'swipe' class to it
 	function swipeHandler(event){
 		$(event.target).addClass( 'swipe' );
@@ -98,13 +98,13 @@ $(function(){
 	#nav a:hover {
 		color: #999;
 		border-color: #999;
-		background: #eee; 
+		background: #eee;
 	}
 	#nav a.selected,
 	#nav a.selected:hover {
 		color: #0a0;
 		border-color: #0a0;
-		background: #afa; 
+		background: #afa;
 	}
 	div.box {
 		width: 30em;
@@ -119,6 +119,6 @@ $(function(){
 	<h3>Swipe the green rectangle to change its color:</h3>
 	<div class="box"></div>
 ]]></html>
-	</example>	
+	</example>
 	<category slug="events"/>
 </entry>

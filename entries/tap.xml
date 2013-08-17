@@ -18,13 +18,13 @@
 					background-color: #BB6F04;
 				}
 			</style>
-			
+
 			...
 
 			<div class="box"></div>
-			
+
 			...
-		    
+
 		    $(function() {
 		    	// Bind the tapHandler callback function to the tap event on div.box
 		        $( "div.box" ).on( 'tap', tapHandler );

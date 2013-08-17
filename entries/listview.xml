@@ -19,7 +19,7 @@
 		<p><iframe src="/resources/listview/example1.html" style="width:100%;height:940px;border:0px"></iframe></p>
 
 				<p><strong>Style note on non-inset lists</strong>: all standard, non-inset lists have a -15px margin to negate the 15px of padding on the content area to make lists extend to the edges of the screen. If you add other widgets above or below a list, the negative margin may make these elements overlap so you'll need to add additional spacing in your custom CSS.</p>
-			
+
 			<h3>Nested lists</h3>
 			<p>By nesting child <code>ul</code> or <code>ol</code> inside list items, you can create nested lists. When a list item with a child list is clicked, the framework will show a new page populated with the title of the parent in the header and the list of child elements. These dynamic nested lists are styled with the "b" theme swatch (blue in the default theme) to indicate that you are in a secondary level of navigation. Lists can be nested multiple levels deep and all pages and linking will be automatically handled by the framework. Note that the page of each nested listview is created when the parent page loads and for each nested page the page-events will trigger. Please also note that the title of subpages will contain the text of the first element in the parent list item including its elements. So make sure to use a single element for the list item caption and put other elements like count bubbles behind that caption as shown in the demo below.</p>
 			<p>To set the swatch color of the child listviews, set the <code>data-theme</code> attribute on each list inside.</p>
@@ -68,7 +68,7 @@ $( "#mylistview" ).listview({
 </code></pre>
 
 			<p>Note that if you are using formatted list items that contain a floating element (for example <code>ui-li-aside</code>), this element precedes its siblings regardless of the order in your HTML markup. This results in the first character of the floating element being used as divider text. Therefore it is recommended to specify the divider text in this case.</p>
-			
+
 			<p>If new list items are added to the list or removed from it, the dividers are <em>not</em> automatically updated: you should call <code>refresh()</code> on the listview to redraw the autodividers.</p>
 
 			<p><iframe src="/resources/listview/example7.html" style="width:100%;height:1410px;border:0px"></iframe></p>
@@ -91,11 +91,11 @@ function( text, searchValue, item ) {
 
 			<p>By default, the listview filter simply searches against the content in each list item. If you want the filter to search against different content, add the <code>data-filtertext</code>	attribute to the item and populate it with one or many keywords and phrases that should be used to match against. Note that if this attribute is added, the contents of the list item are ignored.</p>
 			<p>This attribute is useful for dealing with allowing for ticker symbols and full company names to be searched, or for covering common spellings and abbreviations for countries.</p>
-			
-<pre><code>		
+
+<pre><code>
 &lt;li data-filtertext=&quot;NASDAQ:AAPL Apple Inc.&quot;&gt;&lt;a href=&quot;#&quot;&gt;Apple&lt;/a&gt;&lt;/li&gt;
 &lt;li data-filtertext=&quot;USA U.S.A. United States of America&quot;&gt;&lt;a href=&quot;#&quot;&gt;United States&lt;/a&gt;&lt;/li&gt;
-</code></pre>	
+</code></pre>
 
 			<p><iframe src="/resources/listview/example9.html" style="width:100%;height:410px;border:0px"></iframe></p>
 
@@ -107,42 +107,42 @@ function( text, searchValue, item ) {
 				<li>To add text hierarchy, use headings to increase font emphasis and use paragraphs to reduce emphasis. </li>
 				<li>Supplemental information can be added to the right of each list item by wrapping content in an element with a class of <code>ui-li-aside</code></li>
 			</ul>
-			
+
 			<p><iframe src="/resources/listview/example10.html" style="width:100%;height:240px;border:0px"></iframe></p>
 			<p><iframe src="/resources/listview/example11.html" style="width:100%;height:940px;border:0px"></iframe></p>
-			
+
 			<h3>Thumbnails &amp; icons</h3>
 			<p>To add thumbnails to the left of a list item, simply add an image inside a list item as the first child element. The framework will scale the image to 80 pixels square. To use standard 16x16 pixel icons in list items, add the class of <code>ui-li-icon</code> to the image element.</p>
-			
+
 			<p><iframe src="/resources/listview/example12.html" style="width:100%;height:940px;border:0px"></iframe></p>
-			<p><iframe src="/resources/listview/example13.html" style="width:100%;height:290px;border:0px"></iframe></p>			
+			<p><iframe src="/resources/listview/example13.html" style="width:100%;height:290px;border:0px"></iframe></p>
 
 			<h3>Inset lists</h3>
 			<p>If lists are embedded in a page with other types of content, an inset list packages the list into a block that sits inside the content area with a bit of margin and rounded corners (theme controlled). By adding the <code> data-inset="true"</code> attribute to the list (ul or ol), applies the inset appearance.</p>
 
-			<p><iframe src="/resources/listview/example14.html" style="width:100%;height:2240px;border:0px"></iframe></p>			
+			<p><iframe src="/resources/listview/example14.html" style="width:100%;height:2240px;border:0px"></iframe></p>
 
 			<h3>Filter reveal</h3>
-			
+
 			<p>The filter reveal feature makes is easy to build a simple autocomplete with local data. When a filterable list has the <code>data-filter-reveal="true"</code> attribute, it will auto-hide all the list items when the search field is blank. The <code>data-filter-placeholder</code> attribute can be added to specify the placeholder text for the filter. If you need to search against a long list of values, we provide a way to create a filter with a remote data source.</p>
-			
+
 			<p><iframe src="/resources/listview/example15.html" style="width:100%;height:240px;border:0px"></iframe></p>
-			
+
 			<h3>Remote autocomplete with listview filter</h3>
 
 			<p>To use the listview filter as an autocomplete that taps into remote data sources, you can use the <code>listviewbeforefilter</code> event to dynamically populate a listview as a user types a search query. This is useful when you have a very large data set like cities, zip codes, or products that can't be loaded up-front locally. Use the view source button to see the JavaScript that powers this demo.</p>
-			
+
 			<p>If you have a small list of items, you can use the listview filter reveal option to make an autocomplete with local listview data.</p>
-			
+
 			<p><iframe src="/resources/listview/example16.html" style="width:100%;height:1040px;border:0px"></iframe></p>
-			
-			
+
+
 			<h3>Cities worldwide</h3>
-            
-			<p>After you enter <strong>at least three characters</strong> the autocomplete function will show all possible matches.</p> 
+
+			<p>After you enter <strong>at least three characters</strong> the autocomplete function will show all possible matches.</p>
 
 			<h3>Calling the listview plugin</h3>
-			
+
 			<p>You can directly call the listview plugin on any selector, just like any jQuery plugin:</p>
 <pre><code>
 $( "#mylist" ).listview();
@@ -155,7 +155,7 @@ $( "#mylist" ).listview( "refresh" );
 </code></pre>
 
 			<p>Note that the <code>refresh()</code> method only affects <strong>new nodes</strong> appended to a list. This is done for performance reasons. Any list items already enhanced will be ignored by the refresh process. This means that if you change the contents or attributes on an already enhanced list item, these won't be reflected. If you want a list item to be updated, replace it with fresh markup before calling refresh.</p>
-			
+
 			<p>If you initially want to hide a list item you can do this by adding a class of <strong><code>ui-screen-hidden</code></strong> to the li element. Using this class ensures the corner styling is applied correctly as well as border-bottom on the last visible item.</p>
 	</longdesc>
 	<added>1.0</added>
@@ -191,7 +191,7 @@ $( document ).on( "mobileinit", function() {
 			<type name="Function" />
 		</option>
 		<option name="filterPlaceholder" default='"Filter items..."'  example-value='Search..."'>
-			<desc>The placeholder text used in search filter bars. 
+			<desc>The placeholder text used in search filter bars.
 				<p>This option is also exposed as a data attribute: <code>data-filter-placeholder="Search..."</code>.</p>
 			</desc>
 			<type name="String" />
@@ -203,21 +203,21 @@ $( document ).on( "mobileinit", function() {
 			<type name="String" />
 		</option>
 		<option name="headerTheme" default='"c"' example-value='"a"'>
-			<desc>Sets the color scheme (swatch) for headers of nested list sub pages. It accepts a single letter from a-z that maps to one of the swatches included in your theme. 
+			<desc>Sets the color scheme (swatch) for headers of nested list sub pages. It accepts a single letter from a-z that maps to one of the swatches included in your theme.
 				<p>This option is also exposed as a data attribute: <code>data-header-theme="a"</code>.</p>
 			</desc>
 			<deprecated>1.3</deprecated>
 			<type name="String" />
-			
+
 		</option>
 		<option name="icon" default='"arrow-r"' example-value='"star"'>
-			<desc>Applies an icon from the icon set to all linked list buttons. 
+			<desc>Applies an icon from the icon set to all linked list buttons.
 				<p>This option is also exposed as a data attribute: <code>data-icon="star"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
 		<option name="initSelector" default=":jqmData(role='listview')">
-			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as listviews. 
+			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as listviews.
 <pre><code>
 $( document ).on( "mobileinit", function() {
 	$.mobile.listview.prototype.options.initSelector = ".mylistview";
@@ -227,7 +227,7 @@ $( document ).on( "mobileinit", function() {
 			<type name="CSS selector string" />
 		</option>
 		<option name="inset" default="false" example-value="true">
-			<desc>Adds inset list styles. 
+			<desc>Adds inset list styles.
 				<p>This option is also exposed as a data attribute: <code>data-inset="true"</code>.</p>
 			</desc>
 			<type name="Boolean" />

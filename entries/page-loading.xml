@@ -32,7 +32,7 @@
 				});
 			</code>
 		</pre>
-	</longdesc> 
+	</longdesc>
 	<added>1.2</added>
 	<options>
 		<option name="html" default="" example-value='"&lt;span class=&quot;ui-icon ui-icon-loading&quot;&gt;&lt;img src=&quot;jquery-logo.png&quot; /&gt;&lt;h2&gt;is loading for you ...&lt;/h2&gt;&lt;/span&gt;"'>

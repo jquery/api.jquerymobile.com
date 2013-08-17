@@ -4,28 +4,28 @@
 	<title>Responsive Grid</title>
     <desc>Reponsive layout grids</desc>
 		<longdesc>
-			
+
 		<h3>Responsive grids</h3>
-		
+
 		<p>When using <a href="../grid-layout/">layout grids</a> for building full-level layouts, it may make sense to apply responsive web design (RWD) principles to ensure that the layout adapts to a wide range screen widths.</p>
 		<p>The simplest form of responsive behavior swaps from a stacked layout on narrow screens like a smartphone to the multi-column grid layouts at wider screens. This can be done by targeting styles to specific screen widths by using CSS media queries.</p>
-		
+
 		<h3>Making the grids responsive</h3>
-		
+
 		<p>By default, the grid classes will result in a multi column layout across all screen widths. The styles to make the grids responsive are added by applying a media query with rules to switch to the stacked style presentation below a specific screen width.</p>
-		
+
 		<p>We normally recommend starting with mobile-first approach for media queries: starting with the styles that apply to the smallest screen sizes in the core widget styles, then progressively layering breakpoints up to larger screens by using <code>min-width</code> media queries.</p>
 		<p>However, in the case of grids we can use a <code>max-width</code> media query to only apply the stacked grid styles <em>below</em> a width breakpoint. This allows us to leverage all the default grid styles but just tweak them at narrow widths.</p>
-		
+
 
 		<p>Without the custom styles, our grid will be a 3 column layout across all screen widths:</p>
-			
+
 		<iframe src="/resources/responsive-grid/example1.html" style="width:100%;height:112px;border:0"></iframe>
 
 		<p>In our custom styles, we want this grid to stack at narrow widths, then switch to a standard 3 column layout. At very wide screen widths, we want first column to take up 50% of the width, like this:</p>
-		
+
 		<iframe src="/resources/responsive-grid/example2.html" style="width:100%;height:112px;border:0"></iframe>
-			
+
 		<p>To make this responsive, start by adding the <code>my-breakpoint</code> class to the grid container that references the custom breakpoint in your custom stylesheet:</p>
 
 <pre><code>
@@ -35,72 +35,72 @@
 	&lt;div class=&quot;ui-block-c&quot;&gt;Block C&lt;/div&gt;
 &lt;/div&gt;&lt;!-- /grid-b --&gt;
 </code></pre>
-	
+
 		<h4>Adding the stack breakpoint at narrow widths</h4>
-	
+
 		<p>This class is used to scope the styles within the custom media query so they will only apply when this class is added to the grid container. The media query wraps the conditional styles we only want applied below 50em. </p>
 		<p>In your media queries, use em units instead of pixels to ensure that the media query will take font size into account in addition to just screen width. To calculate a screen widths in ems, divide the target width in pixels by 16 which is the default font size of the body.</p>
-	
+
 <pre><code>
 @media all and (max-width: 50em) {
-	.my-breakpoint .ui-block-a, 
-	.my-breakpoint .ui-block-b, 
+	.my-breakpoint .ui-block-a,
+	.my-breakpoint .ui-block-b,
 	.my-breakpoint .ui-block-c,
 	.my-breakpoint .ui-block-d,
-	.my-breakpoint .ui-block-e { 
-		width: 100%; 
-		float:none; 
+	.my-breakpoint .ui-block-e {
+		width: 100%;
+		float:none;
 	}
 }
 </code></pre>
 
 		<p>Within this media query, we set the width to 100% and negate the float property to make the grid blocks stack below 50em screen widths. These rules are applied to every <a href="content-grids.html">grid type</a> by stacking up selectors for all the grid classes from <code>ui-block-a</code> to <code>ui-block-e</code> on the styles.</p>
-	
-	
+
+
 		<p>That is all it takes to make grids responsive and it's easy to add additional styling rules to each breakpoint to change it up even more. We encourage you to create as many custom breakpoints as you need based on your unique content and layout needs.</p>
-	
+
 		<h4>Adding a widescreen breakpoint to adjust ratios</h4>
 
 		<p>Building on the example above, we can add an additional breakpoint to shift the widths to make the first column 50% width and the other two 25% above 75em (1,200 pixels) by layering an additional <code>min-width</code> media query to tweak widths in our custom style like this:</p>
-	
+
 <pre><code>
 @media all and (min-width: 75em) {
 	.my-breakpoint.ui-grid-b .ui-block-a { width: 49.95%; }
-	.my-breakpoint.ui-grid-b .ui-block-b, 
+	.my-breakpoint.ui-grid-b .ui-block-b,
 	.my-breakpoint.ui-grid-b .ui-block-c { width: 24.925%; }
 	.my-breakpoint.ui-grid-b .ui-block-a { clear: left; }
 	}
-}	
+}
 </code></pre>
-	
+
 		<p>Note the slightly narrower widths set to work around rounding issues across platforms. </p>
-	
+
 		<h3>Applying a preset breakpoint</h3>
-		
+
 		<p>Even though we strongly encourage you to write custom breakpoints yourself, the framework includes a single pre-configured breakpoint that targets the stacked style to smaller phones and swaps to the multi-column presentation on larger phones, tablet and desktop devices. </p>
 		<p>To use this preset breakpoint, add the <code>ui-responsive</code> class to the grid container to apply the stacked presentation <em>below</em> 560px (35em). If this breakpoint doesn't work for your content, we encourage you to write a custom breakpoint as described above.</p>
 
 		<pre><code>&lt;div class=&quot;ui-grid-b ui-responsive&quot;&gt;</code></pre>
-	
+
 		<p>These are standard grids that are made responsive by <code>ui-responsive</code> class to the grid container:</p>
 
 
 		<h4>Grid A (50/50)</h4>
-		
+
 		<iframe src="/resources/responsive-grid/example3.html" style="width:100%;height:132px;border:0"></iframe>
 
 		<h4>Grid B (33/33/33)</h4>
-		
+
 		<iframe src="/resources/responsive-grid/example4.html" style="width:100%;height:152px;border:0"></iframe>
-		
+
 		<h4>Grid C (25/25/25/25)</h4>
-		
+
 		<iframe src="/resources/responsive-grid/example5.html" style="width:100%;height:172px;border:0"></iframe>
-		
+
 		<h4>Grid D (20/20/20/20/20)</h4>
 
 		<iframe src="/resources/responsive-grid/example6.html" style="width:100%;height:192px;border:0"></iframe>
-			
+
 		</longdesc>
 	<added>1.3</added>
 	<options>
@@ -114,19 +114,19 @@
 		<desc>A basic example of responsive grids</desc>
 		<css><![CDATA[
 		@media all and (max-width: 35em) {
-		.my-breakpoint .ui-block-a, 
-		.my-breakpoint .ui-block-b, 
+		.my-breakpoint .ui-block-a,
+		.my-breakpoint .ui-block-b,
 		.my-breakpoint .ui-block-c,
 		.my-breakpoint .ui-block-d,
-		.my-breakpoint .ui-block-e { 
-			width: 100%; 
-			float:none; 
+		.my-breakpoint .ui-block-e {
+			width: 100%;
+			float:none;
 		}
 	}
-	
+
 	@media all and (min-width: 45em) {
 		.my-breakpoint.ui-grid-b .ui-block-a { width: 49.95%; }
-		.my-breakpoint.ui-grid-b .ui-block-b, 
+		.my-breakpoint.ui-grid-b .ui-block-b,
 		.my-breakpoint.ui-grid-b .ui-block-c { width: 24.925%; }
 	}
 ]]></css>
@@ -139,7 +139,7 @@
 			<div class="ui-block-b"><div class="ui-body ui-body-d">Block B</div></div>
 			<div class="ui-block-c"><div class="ui-body ui-body-d">Block C</div></div>
 		</div>]]></html>
-		
+
 	</example>
 	<category slug="misc"/>
 </entry>

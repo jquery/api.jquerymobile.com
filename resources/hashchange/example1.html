@@ -32,14 +32,14 @@
         #nav a:hover {
           color: #999;
           border-color: #999;
-          background: #eee; 
+          background: #eee;
         }
         #nav a.selected,
         #nav a.selected:hover {
           color: #0a0;
           border-color: #0a0;
-          background: #afa; 
-        }       
+          background: #afa;
+        }
     </style>
 </head>
 <body>
@@ -70,11 +70,11 @@
             $(window).hashchange();
 
             // To change src attribute of parent iframe element
-            $('.hashExLink').on('click', function() { 
+            $('.hashExLink').on('click', function() {
                 window.parent.document.getElementById( "hashtagIframe" ).src = "/resources/hashchange/example1.html" + $(this).attr( "href" );
                 window.parent.document.getElementById( "hashtagIframeLink" ).innerHTML = "example1.html" + $(this).attr( "href" );
             });
-        }); 
+        });
     </script>
 </body>
 </html>

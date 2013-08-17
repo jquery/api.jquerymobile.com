@@ -21,7 +21,7 @@
 
 		<p>The default rangeslider with these settings is displayed like this:
 		<iframe src="/resources/rangeslider/example1.html" style="width:100%;height:90px;border:0px"></iframe></p>
-		
+
 		<h3>Step increment</h3>
 		<p>To force the range to snap to a specific increment, add the <code>step</code> attribute to the input. By default, the step is 1, but in this example, the step is 0.1 and the maximum value is 10.</p>
 		<p>In this example, the acceptable range is 0-100.</p>
@@ -41,7 +41,7 @@
 		<h3>Fill highlight</h3>
 
 		<p>By default, there is a highlight fill on the track between the two slider handles. To remove it, add the <code>data-highlight="false"</code> attribute to the input. The fill uses active state swatch. </p>
-		
+
 <pre><code>
 &lt;div data-role="rangeslider" data-highlight="false"&gt;
 	&lt;label for="range-2a"&gt;Rangeslider (default is "true"):&lt;/label&gt;
@@ -52,7 +52,7 @@
 </code></pre>
 
 		<iframe src="/resources/rangeslider/example3.html" style="width:100%;height:90px;border:0px"></iframe>
-		
+
 		<h3>Theming the slider</h3>
 
 		<p>To set the theme swatch for the rangeslider, add a <code>data-theme</code> attribute to the <code>inputs</code> which will apply the theme to the inputs, handles and track. The track swatch can be set separately by adding the <code>data-track-theme</code> attribute to apply the down state version of the selected button swatch.</p>
@@ -68,7 +68,7 @@
 
 		<p>This will produce a themed rangeslider:
 		<iframe src="/resources/rangeslider/example4.html" style="width:100%;height:90px;border:0px"></iframe></p>
-		
+
 		<h3>Mini version</h3>
 
 		<p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a mini version. </p>
@@ -102,7 +102,7 @@
 
 		<p>The rangeslider is now displayed like this:
 		<iframe src="/resources/rangeslider/example6.html" style="width:100%;height:90px;border:0px"></iframe></p>
-		
+
 		<p>Sliders also respond to key commands. Right Arrow, Up Arrow and Page Up keys increase the value; Left Arrow, Down Arrow and Page Down keys decrease it. To move the slider to its minimum or maximum value, use the Home or End key, respectively.</p>
 
 		<h3>Calling the rangeslider plugin</h3>
@@ -112,8 +112,8 @@
 <pre><code>
 $( "input" ).rangeslider();
 </code></pre>
-		
-	
+
+
 	</longdesc>
 	<added>1.3</added>
 	<options>
@@ -124,7 +124,7 @@ $( "input" ).rangeslider();
 			<type name="Boolean" />
 		</option>
 		<option name="highlight" default="true" example-value="false">
-			<desc>Sets an active state fill on the track between the two rangeslider handles when set to "true".		
+			<desc>Sets an active state fill on the track between the two rangeslider handles when set to "true".
 
 			</desc>
 			<type name="Boolean" />
@@ -165,14 +165,14 @@ $( document ).on( "mobileinit", function() {
 	</options>
 	<events>
 		<event name="create">
-			<desc>triggered when a rangeslider is created</desc>	
+			<desc>triggered when a rangeslider is created</desc>
 			<argument name="event" type="Event">
 			</argument>
 			<argument name="ui" type="Object">
 			</argument>
 		</event>
 		<event name="normalize">
-			<desc>triggered when the input values are normalized (generally happens when you try to drag one handle past the other).</desc>	
+			<desc>triggered when the input values are normalized (generally happens when you try to drag one handle past the other).</desc>
 			<argument name="event" type="Event">
 				<desc></desc>
 			</argument>

@@ -65,11 +65,11 @@ $( document ).on( &quot;pagebeforeload&quot;, function( event, data ) {
 						<li>This object contains the options that were passed into $.mobile.loadPage().</li>
 					</ul>
 				</li>
-			</ul>	
+			</ul>
 	</longdesc>
 	<added>1.0</added>
 	<signature>
-		
+
 	</signature>
 	<category slug="events"/>
 </entry>

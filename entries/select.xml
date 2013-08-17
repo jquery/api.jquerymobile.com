@@ -7,9 +7,9 @@
 		<p>The select menu is based on a native select element, which is hidden from view and replaced with a custom-styled select button that matches the look and feel of the jQuery Mobile framework. The select menu is ARIA-enabled and keyboard accessible on the desktop as well.</p>
 		<p>By default, the framework leverages the native OS options menu to use with the custom button. When the button is clicked, the native OS menu will open. When a value is selected and the menu closes, the custom button's text is updated to match the selected value. Please note that the framework also offers the possibility of having custom (non-native) select menus.</p>
 		<p>To add a select menu to your page, start with a standard <code>select</code> element populated with a set of <code>option</code> elements. Set the <code>for</code> attribute of the <code>label</code> to match the <code>id</code> of the <code>select</code> so they are semantically associated. It's possible to accessibly hide the label if it's not desired in the page layout, but we require that it is present in the markup for semantic and accessibility reasons.</p>
-			
+
 		<p>The framework will find all <code>select</code> elements and automatically enhance them into select menus, no need to apply a <code>data-role</code> attribute. To prevent the automatic enhancement of a select, add  <code>data-role="none"</code> attribute to the <code>select</code>.</p>
-			
+
 <pre><code>
 &lt;label for=&quot;select-choice-0&quot; class=&quot;select&quot;&gt;Shipping method:&lt;/label&gt;
 &lt;select name=&quot;select-choice-0&quot; id=&quot;select-choice-0&quot;&gt;
@@ -22,28 +22,28 @@
 
 		<p>This will produce a basic select menu. The default styles set the width of the input to 100% of the parent container and stacks the label on a separate line.
 		<iframe src="/resources/select/example1.html" style="width:100%;height:190px;border:0px"></iframe></p>
-        
+
 		<h3>Mini version</h3>
-        
+
 		<p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a mini version. </p>
 
-<pre><code>	
+<pre><code>
 &lt;label for=&quot;select-choice-min&quot; class=&quot;select&quot;&gt;Shipping method:&lt;/label&gt;
 &lt;select name=&quot;select-choice-min&quot; id=&quot;select-choice-min&quot; data-mini=&quot;true&quot;&gt;
 	&lt;option value=&quot;standard&quot;&gt;Standard: 7 day&lt;/option&gt;
 	&lt;option value=&quot;rush&quot;&gt;Rush: 3 days&lt;/option&gt;
 	&lt;option value=&quot;express&quot;&gt;Express: next day&lt;/option&gt;
 	&lt;option value=&quot;overnight&quot;&gt;Overnight&lt;/option&gt;
-&lt;/select&gt; 
+&lt;/select&gt;
 </code></pre>
-			
+
 		<p>This will produce a select that a not as tall as the standard version and has a smaller text size.
 		<iframe src="/resources/select/example2.html" style="width:100%;height:190px;border:0px"></iframe></p>
-        
+
 		<h3>Field containers</h3>
-        
+
 		<p>Optionally wrap the selects in a container with the <code>data-role="fieldcontain"</code> attribute to help visually group it in a longer form.</p>
-		
+
 <pre><code>
 &lt;div data-role=&quot;fieldcontain&quot;&gt;
 	&lt;label for=&quot;select-choice-1&quot; class=&quot;select&quot;&gt;Shipping method:&lt;/label&gt;
@@ -55,10 +55,10 @@
 	&lt;/select&gt;
 &lt;/div&gt;
 </code></pre>
-		
+
 		<p>The select input is now displayed like this:
 		<iframe src="/resources/select/example3.html" style="width:100%;height:190px;border:0px"></iframe></p>
-		
+
 		<p>An example of a select with a long list of options:
 		<iframe src="/resources/select/example4.html" style="width:100%;height:590px;border:0px"></iframe></p>
 
@@ -98,8 +98,8 @@
 		<p>Because the <code>label</code> element will be associated with each individual select input and will be hidden for styling purposes, we recommend wrapping the selects in a <code>fieldset</code> element that has a <code>legend</code> which acts as the combined label for the grouped inputs.</p>
 
 		<p>Lastly, one needs to wrap the <code>fieldset</code> in a <code>div</code> with <code> data-role="controlgroup"</code> attribute, so it can be styled as a group.</p>
-			
-<pre><code>	
+
+<pre><code>
 &lt;div data-role=&quot;fieldcontain&quot;&gt;
 	&lt;fieldset data-role=&quot;controlgroup&quot;&gt;
 		&lt;legend&gt;Date of Birth:&lt;/legend&gt;
@@ -122,12 +122,12 @@
 		&lt;select name="select-choice-year" id="select-choice-year"&gt;
 			&lt;option&gt;Year&lt;/option&gt;
 			&lt;option value="2011"&gt;2011&lt;/option&gt;
-			&lt;!-- etc. --&gt;	
+			&lt;!-- etc. --&gt;
 		&lt;/select&gt;
 	&lt;/fieldset&gt;
 &lt;/div&gt;
 </code></pre>
-		
+
 		<iframe src="/resources/select/example6.html" style="width:100%;height:390px;border:0px"></iframe>
 
 		<h3>Horizontally grouped select inputs</h3>
@@ -137,9 +137,9 @@
 &lt;fieldset data-role="controlgroup" data-type="horizontal"&gt;
 </code>
 		<iframe src="/resources/select/example7.html" style="width:100%;height:190px;border:0px"></iframe>
-		
+
 		<h3>Theming selects</h3>
-		
+
 		<p>You can specify any jQuery Mobile button <code>data-</code> attribute on a select element, too. In this example, we're setting the theme, icon and inline properties:
 		<iframe src="/resources/select/example8.html" style="width:100%;height:190px;border:0px"></iframe>
 		</p>
@@ -150,9 +150,9 @@
 		<p>You can optionally use custom-styled select menus instead of the native OS menu. The custom menu supports disabled options and multiple selection (whereas native mobile OS support for both is inconsistent), adds an elegant way to handle placeholder values, and restores missing functionality on certain platforms such as <code>optgroup</code> support on Android (all explained below).  In addition, the framework applies the custom button's theme to the menu to better match the look and feel and provide visual consistency across platforms. Lastly, custom menus often look better on desktop browsers because native desktop menus are smaller than their mobile counterparts and tend to look disproportionate.</p>
 
 		<p>Keep in mind that there is overhead involved in parsing the native select to build a custom menu. If there are a lot of selects on a page, or a select has a long list of options, this can impact the performance of the page, so we recommend using custom menus sparingly. </p>
-	
+
 		<p>To use custom menus on a specific <code>select</code>, just add the <code>data-native-menu="false"</code> attribute. Alternately, this can also programmatically set the select menu's <code>nativeMenu</code> configuration option to <code>false</code> in a callback bound to the <code>mobileinit</code> event to achieve the same effect. This will globally make all selects use the custom menu by default. The following must be included in the page after jQuery is loaded but before jQuery Mobile is loaded.</p>
-	
+
 
 <pre><code>
 $(document).on( "mobileinit", function() {
@@ -163,16 +163,16 @@ $(document).on( "mobileinit", function() {
 
 		<p>When the <code>select</code> has a small number of options that will fit on the device's screen, the menu will appear as a small overlay with a pop transition:
 		<iframe src="/resources/select/example9.html" style="width:100%;height:270px;border:0px"></iframe></p>
-			
+
 		<p>When it has too many options to show on the device's screen, the framework will automatically create a new &quot;page&quot; populated with a standard <a href="listview">listview</a> for the options. This allows us to use the native scrolling included on the device for moving through a long list. The text inside the <code>label</code> is used as the title for this page.
 		<iframe src="/resources/select/example10.html" style="width:100%;height:590px;border:0px"></iframe></p>
-			
+
 		<h3>Disabled options</h3>
-		
+
 		<p>jQuery Mobile will automatically disable and style option tags with the <code>disabled</code> attribute.  In the demo below, the second option &quot;Rush: 3 days&quot; has been set to disabled.
-		
+
 		<iframe src="/resources/select/example11.html" style="width:100%;height:270px;border:0px"></iframe></p>
-		
+
 		<h3>Placeholder options</h3>
 		<p>It's common for developers to include a &quot;null&quot; option in their select element to force a user to choose an option. If a placeholder option is present in your markup, jQuery Mobile will hide them in the overlay menu, showing only valid choices to the user, and display the placeholder text inside the menu as a header.  A placeholder option is added when the framework finds:</p>
 		<ul>
@@ -190,8 +190,8 @@ $.mobile.selectmenu.prototype.options.hidePlaceholderMenuItems = false;
 		<p>Examples of various placeholder options:
 		<iframe src="/resources/select/example12.html" style="width:100%;height:390px;border:0px"></iframe></p>
 
-		<h3>Multiple selects</h3>	
-		
+		<h3>Multiple selects</h3>
+
 		<p>If the <code>multiple</code> attribute is present in your markup, jQuery Mobile will enhance the element with a few extra considerations:</p>
 
 		<ul>
@@ -205,18 +205,18 @@ $.mobile.selectmenu.prototype.options.hidePlaceholderMenuItems = false;
 		</ul>
 
 		<iframe src="/resources/select/example13.html" style="width:100%;height:310px;border:0px"></iframe>
-			
+
 		<p>When a select is large enough to where the menu will open in a new page, the placeholder text is displayed in the button when no items are selected, and the <code>label</code> text is displayed in the menu's header.  This differs from smaller overlay menus where the placeholder text is displayed in both the button and the header, and from full-page single selects where the placeholder text is not used at all.
-		
+
 		<iframe src="/resources/select/example14.html" style="width:100%;height:590px;border:0px"></iframe></p>
 
 		<h3>Optgroup support</h3>
-		
+
 		<p>If a select menu contains <code>optgroup</code> elements, jQuery Mobile will create a divider &amp; group items based on the <code>label</code> attribute's text:
 		<iframe src="/resources/select/example15.html" style="width:100%;height:500px;border:0px"></iframe></p>
 
 		<h3>Theming selects</h3>
-		
+
 		<p>You can specify any jQuery Mobile button <code>data-</code> attribute on a select element, too. In this example, we're setting the theme, icon and inline properties:
 		<iframe src="/resources/select/example16.html" style="width:100%;height:310px;border:0px"></iframe></p>
 
@@ -225,18 +225,18 @@ $.mobile.selectmenu.prototype.options.hidePlaceholderMenuItems = false;
  		<p><iframe src="/resources/select/example18.html" style="width:100%;height:590px;border:0px"></iframe></p>
 
 		<h3>Calling the select menu plugin</h3>
-		
+
 		<p>The select menu plugin will auto initialize on any page that contains a select menu, without any need for a <code>data-role</code> attribute in the markup. However, you can directly call the select menu plugin on any selector, just like any normal jQuery plugin:</p>
 
 <pre><code>
-$( "select" ).selectmenu();			
+$( "select" ).selectmenu();
 </code></pre>
-	
+
 	</longdesc>
 	<added>1.0</added>
 	<options>
 		<option name="corners" default="true" example-value="false">
-			<desc>Applies the theme button border-radius to the select button if set to true. 
+			<desc>Applies the theme button border-radius to the select button if set to true.
 
 			<p>This option is also exposed as a data attribute: <code>data-corners="false"</code>.</p>
 			</desc>
@@ -272,27 +272,27 @@ $( document ).on( "mobileinit", function() {
 	$.mobile.selectmenu.prototype.options.initSelector = ".myselect";
 });
 </code></pre>
-                
+
 				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
 			</desc>
 			<type name="CSS selector string" />
 		</option>
 		<option name="inline" default="null (false)" example-value="true">
-			<desc>If set to true, this will make the select button act like an inline button so the width is determined by the button's text. By default, this is null (false) so the select button is full width, regardless of the feedback content. Possible values: true, false. 
+			<desc>If set to true, this will make the select button act like an inline button so the width is determined by the button's text. By default, this is null (false) so the select button is full width, regardless of the feedback content. Possible values: true, false.
 
 				<p>This option is also exposed as a data attribute: <code>data-inline="true"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
 		<option name="mini" default="false" example-value="true">
-			<desc>Sets the size of the element to a more compact, mini version. 
-               
+			<desc>Sets the size of the element to a more compact, mini version.
+
 				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
 		<option name="nativeMenu" default="true" example-value="false">
-			<desc>When set to true, clicking the custom-styled select menu will open the native select menu which is best for performance. If set to false, the custom select menu style will be used instead of the native menu. 
+			<desc>When set to true, clicking the custom-styled select menu will open the native select menu which is best for performance. If set to false, the custom select menu style will be used instead of the native menu.
 
 				<p>This option is also exposed as a data attribute: <code>data-native-menu="false"</code>.</p>
 			</desc>
@@ -306,7 +306,7 @@ $( document ).on( "mobileinit", function() {
 			<type name="Boolean" />
 		</option>
 		<option name="shadow" default="true" example-value="false">
-			<desc>Applies the drop shadow style to the select button if set to true. 
+			<desc>Applies the drop shadow style to the select button if set to true.
 
 				<p>This option is also exposed as a data attribute: <code>data-shadow="false"</code>.</p>
 			</desc>
@@ -357,7 +357,7 @@ $( document ).on( "mobileinit", function() {
 			</desc>
 		</method>
 		<method name="refresh">
-			<desc> 
+			<desc>
 			</desc>
 			<signature>
 				<desc>update the custom select.<p>This is used to update the custom select to reflect the native select element's value. If the number of options in the select are different than the number of items in the custom menu, it'll rebuild the custom menu.</p></desc>

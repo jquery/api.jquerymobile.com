@@ -38,34 +38,34 @@
         <p>Adding a fourth more item will automatically make each button 1/4 the width of the browser window:
 		<iframe src="/resources/navbar/example3.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
-    	
+
 
         <p>The navbar maxes out with 5 items, each 1/5 the width of the browser window:
 		<iframe src="/resources/navbar/example4.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
-    	
+
 
         <p>If more than 5 items are added, the navbar will simply wrap to multiple lines:
 		<iframe src="/resources/navbar/example5.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
-    	
+
 
         <p>Navbars with 1 item will simply render as 100%.
 		<iframe src="/resources/navbar/example6.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
-    	
+
 
         <h3>Navbars in headers</h3>
         <p>If you want to add a navbar to the top of the page, you can still have a page title and buttons. Just add the navbar container inside the header block, right after the title and buttons in the source order.
 		<iframe src="/resources/navbar/example7.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
-    	
+
 
 		<h3>Navbars in footers</h3>
         <p>If you want to add a navbar to the bottom of the page so it acts more like a tab bar, simply wrap the navbar in a container with a <code>data-role="footer"</code></p>
-		
+
 <pre><code>
-&lt;div data-role=&quot;footer&quot;&gt;		
+&lt;div data-role=&quot;footer&quot;&gt;
 	&lt;div data-role=&quot;navbar&quot;&gt;
 		&lt;ul&gt;
 			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
@@ -92,20 +92,20 @@
 		<p>This will result in a bottom icon alignment:
 		<iframe src="/resources/navbar/example10.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
-		
+
 
 		<p>The icon position can be set to <code>data-iconpos="left"</code>:
 		<iframe src="/resources/navbar/example11.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
-    	
+
 
 		<p>Or the icon position can be set to <code>data-iconpos="right"</code>:
 		<iframe src="/resources/navbar/example12.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
-    	
+
 
 		<h3>Using 3rd party icon sets</h3>
-		
+
 		<p>You can add any of the popular icon libraries like Glyphish to achieve the iOS style tab that has large icons stacked on top of text labels. All that is required is a bit of custom styles to link to the icons and position them in the navbar. Here is an example using Glyphish icons and custom styles (view page source for styles) in our navbar:</p>
 
 		<iframe src="/resources/navbar/example13.html" style="width:100%;height:90px;border:0px"></iframe>
@@ -113,7 +113,7 @@
 		<p>Icons by Joseph Wain / glyphish.com. Licensed under the Creative Commons Attribution 3.0 United States License.</p>
 
         <h3>Theming navbars</h3>
-		
+
 		<p>Navbars inherit the theme swatch from their parent container, just like buttons. If a navbar is placed in the header or footer toolbar, it will inherit the default toolbar swatch "a" for bars unless you set this in the markup. </p>
 		<p>Here are a few examples of navbars in various container swatches that automatically inherit their parent's swatch letter. Note that in these examples, instead of using a <code>data-theme</code> attribute, we're manually adding the swatch classes to apply the body swatch (<code>ui-body-a</code>) and the class to add the standard body padding (ui-body), but the inheritance works the same way:</p>
 
@@ -152,13 +152,13 @@ $( "div" ).navbar({
 	<div data-role="content">
 		<p>Some Content here</p>
 	</div>
-	<div data-role="footer">	
+	<div data-role="footer">
     	<div data-role="navbar">
     		<ul>
     			<li><a href="#" class="ui-btn-active">One</a></li>
     			<li><a href="#">Two</a></li>
     		</ul>
-    	</div><!-- /navbar --> 
+    	</div><!-- /navbar -->
 	</div>]]></html>
 	</example>
 	<category slug="widgets"/>

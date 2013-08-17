@@ -18,7 +18,7 @@
 		<iframe src="/resources/popup/example1.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
 		<p>The popup consists of two elements: the screen, which is a transparent or translucent element that covers the entire document, and the container, which is the popup itself. If your original element had an <code>id</code> attribute, the screen and the container will each receive an <code>id</code> attribute based on it. The screen's <code>id</code> will be suffixed with "-screen", and the container's <code>id</code> will be suffixed with "-popup" (in the above example, <code>id="popupBasic-screen"</code> and <code>id="popupBasic-popup"</code>, respectively).</p>
-		
+
 		<p>The framework adds a small amount of margin to text elements, but it's really just a container with <strong>rounded corners</strong> and a <strong>shadow</strong> which serves as a blank slate for your designs (even these features can be disabled via options).</p>
 
 		<p>This simple styling makes it easy to add in widgets to create a variety of different interactions. Here are a few real-world examples that combine the various settings and styles you can achieve out of the box with popups:
@@ -26,14 +26,14 @@
 		</p>
 
 		<h2>Scaling images: Lightbox examples</h2>
-			
+
 		<p>The framework CSS contains rules that make images that are immediate children of the popup scale to fit the screen. Because of the absolute positioning of the popup container and screen, the height is not adjusted to screen height on all browsers. You can prevent vertical scrolling with a simple script that sets the <code>max-height</code> of the image.</p>
-			
-		<p>In the two examples below the divs with <code>data-role="popup"</code> have a class of <code>photopopup</code>. 
+
+		<p>In the two examples below the divs with <code>data-role="popup"</code> have a class of <code>photopopup</code>.
 		<iframe src="/resources/popup/example3.html" style="width:100%;height:590px;border:0px"></iframe>
 		</p>
-		
-		<p>The handler is bound to the <code>popupbeforeposition</code> event, which ensures the image is not only scaled before it is shown but also when the window is resized (e.g. orientation change). In this code example the height is reduced by 60 to take a top and bottom tolerance of 30 pixels into account.</p> 
+
+		<p>The handler is bound to the <code>popupbeforeposition</code> event, which ensures the image is not only scaled before it is shown but also when the window is resized (e.g. orientation change). In this code example the height is reduced by 60 to take a top and bottom tolerance of 30 pixels into account.</p>
 
 <pre><code>
 $( document ).on( "pageinit", function() {
@@ -45,23 +45,23 @@ $( document ).on( "pageinit", function() {
     });
 });
 </code></pre>
-		
+
 		<h2>Working with iframes in popups</h2>
-			
+
 		<p>You may need to embed an iframe into a popup to use a 3rd party widget. Here, we'll walk through a few real-world examples of working with iframes: videos and maps.</p>
 
 		<h3>Video example</h3>
-		
+
 		<p>Here is an example of a 3rd party video player embedded in a popup:
 		<iframe src="/resources/popup/example4.html" style="width:100%;height:390px;border:0px"></iframe></p>
-			
+
 		<p>The markup is an iframe inside a popup container. The popup will have a 15 pixels padding because of class <code>ui-content</code> and a one pixel border because the framework will add class <code>ui-body-d</code> to the popup.</p>
-			
+
 <pre><code>
 &lt;div data-role="popup" id="popupVideo" data-overlay-theme="a" data-theme="d" data-tolerance="15,15" class="ui-content"&gt;
 
     &lt;iframe src="http://player.vimeo.com/video/41135183" width="497" height="298" seamless&gt;&lt;/iframe&gt;
-	 
+
 &lt;/div&gt;
 </code></pre>
 
@@ -100,18 +100,18 @@ function scale( width, height, padding, border ) {
 };]]>
 </code></pre>
 				<p><strong>Note:</strong> This function is not part of the framework. Copy the code into your script to use it.</p>
-			</div>		
-			
+			</div>
+
 			<p>When the popup is closed the width and height should be set back to 0. You can do this by binding to the <code>popupafterclose</code> event.</p>
-			
+
 			<p>This is the complete script and the link to open the video popup:</p>
-			
+
 <pre><code>
 $( document ).on( "pageinit", function() {
     $( "#popupVideo iframe" )
         .attr( "width", 0 )
         .attr( "height", 0 );
-		  
+
     $( "#popupVideo" ).on({
         popupbeforeposition: function() {
             var size = scale( 497, 298, 15, 1 ),
@@ -125,26 +125,26 @@ $( document ).on( "pageinit", function() {
         popupafterclose: function() {
             $( "#popupVideo iframe" )
                 .attr( "width", 0 )
-                .attr( "height", 0 );    
+                .attr( "height", 0 );
         }
     });
 });
 </code></pre>
-			
+
             <p>Note that the video will still be playing in the iframe when the popup is closed. If available you can use the 3rd party API to stop the video on the <code>popupafterclose</code> event. Another way is to create the iframe when the popup is opened and destroy it when the popup is closed, but this would drop support for browsers that have JavaScript disabled.</p>
-		
+
 			<h3>Map example</h3>
 			<p>In the second example, an iframe is used to display <strong>Google Maps API</strong>. Using an iframe prevents issues with the controls of the map.
 			<iframe src="/resources/popup/example5.html" style="width:100%;height:390px;border:0px"></iframe></p>
-			
+
 			<p>This is the markup of the popup including a right close button:</p>
 <pre><code>
 &lt;div data-role="popup" id="popupMap" data-overlay-theme="a" data-theme="a" data-corners="false" data-tolerance="15,15"&gt;
 
     &lt;a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close&lt;/a&gt;
-	 
+
     &lt;iframe src="map.html" width="480" height="320" seamless&gt;&lt;/iframe&gt;
-	 
+
 &lt;/div&gt;
 </code></pre>
 
@@ -180,33 +180,33 @@ $( document ).on( "pageinit", function() {
             padding: 0;
             height: 100%;
         }
-        #map_canvas { 
+        #map_canvas {
             height: 100%;
-        }    
+        }
     &lt;/style&gt;
 &lt;/head&gt;
 &lt;body onload="initialize()"&gt;
 
     &lt;div id="map_canvas"&gt;&lt;/div&gt;
-    
+
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
 			</div>
-				
+
 			<p>Setting the size of the iframe is done exactly the same as for the video example, with one exception. You should also set the width and height of the div that contains the map to prevent the page to break on platforms like Android 2.3. In this example the ID of this div is <code>#map_canvas</code>.</p>
-			
+
 			<p>This is the complete script and the link to open the map popup:</p>
-			
+
 <pre><code>
 $( document ).on( "pageinit", function() {
     $( "#popupMap iframe" )
         .attr( "width", 0 )
         .attr( "height", 0 );
-		  
+
     $( "#popupMap iframe" ).contents().find( "#map_canvas" )
         .css( { "width" : 0, "height" : 0 } );
-	 	     
+
     $( "#popupMap" ).on({
         popupbeforeposition: function() {
             var size = scale( 480, 320, 0, 1 ),
@@ -216,7 +216,7 @@ $( document ).on( "pageinit", function() {
             $( "#popupMap iframe" )
                 .attr( "width", w )
                 .attr( "height", h );
-					 
+
             $( "#popupMap iframe" ).contents().find( "#map_canvas" )
                 .css( { "width": w, "height" : h } );
         },
@@ -224,29 +224,29 @@ $( document ).on( "pageinit", function() {
             $( "#popupMap iframe" )
                 .attr( "width", 0 )
                 .attr( "height", 0 );
-					 
+
             $( "#popupMap iframe" ).contents().find( "#map_canvas" )
                 .css( { "width": 0, "height" : 0 } );
         }
     });
 });
-</code></pre>			
-			
+</code></pre>
+
 			<h2>Overlay panels</h2>
-			
+
 			<p>Taking customization further, here is an example of a popup that has been customized to look like a vertical panel with three mini buttons:
 			<iframe src="/resources/popup/example6.html" style="width:100%;height:390px;border:0px"></iframe></p>
-			
+
 			<p>Here is the HTML markup for the button and panel:</p>
 <pre><code>
 &lt;a href="#popupPanel" data-rel="popup" data-transition="slide" data-position-to="window" data-role="button"&gt;Open panel&lt;/a&gt;
-			
+
 &lt;div data-role="popup" id="popupPanel" data-corners="false" data-theme="none" data-shadow="false" data-tolerance="0,0"&gt;
 
     &lt;button data-theme="a" data-icon="back" data-mini="true"&gt;Back&lt;/button&gt;
     &lt;button data-theme="a" data-icon="grid" data-mini="true"&gt;Menu&lt;/button&gt;
     &lt;button data-theme="a" data-icon="search" data-mini="true"&gt;Search&lt;/button&gt;
-	 
+
 &lt;/div&gt;
 </code></pre>
 
@@ -282,43 +282,43 @@ $( "#popupPanel" ).on({
 		<h3>Calling the popup plugin</h3>
 
 		<p>This plugin will autoinitialize on any page that contains a div with the attribute <code>data-role="popup"</code>. However, if needed you can directly call the <code>popup</code> plugin on any selector, just like any jQuery plugin and programmatically work with the popup options, methods, and events API:</p>
-		
+
 <pre><code>
 $( "#myPopupDiv" ).popup();
 </code></pre>
 
 		<h3>Opening popups</h3>
-		
+
 		<p>Using the markup-based configuration, when a link with the <code>data-rel="popup"</code> is tapped, the corresponding popup container with the id referenced in the <code>href</code> of the link will be shown. To open a popup programmatically, call popup with the <code>open</code> method on the popup container:</p>
-		
+
 <pre><code>
 $( "#myPopupDiv" ).popup( "open" )
 </code></pre>
 
 		<h3>Closing popups</h3>
 		<p>By default popups can be closed either by clicking outside the popup widget or by pressing the <code>Esc</code> key. To prevent this, the <code>data-dismissible="false"</code> attribute can be added to the popup. Popups can also be closed via the <code>close</code> method:</p>
-			
+
 <pre><code>
 $( "#myPopupDiv" ).popup( "close" )
 </code></pre>
 
-			
+
 		<p>To add an explicit close button to a popup, add a link with the role of button into the popup container with a <code>data-rel="back"</code> attribute which will close the popup when tapped. We have created helper classes to position buttons in the upper left (<code>ui-btn-left</code>) or upper right (<code>ui-btn-right</code>) of the popup but you may need to tweak these or add custom positioning styles depending on your design. We recommend adding standard content padding to the popup to make room for the buttons (see next section).</p>
-		
-		
+
+
 <pre><code>
 &lt;div data-role=&quot;popup&quot;&gt;
 	&lt;a href=&quot;#&quot; data-rel=&quot;back&quot; data-role=&quot;button&quot; data-theme=&quot;a&quot; data-icon=&quot;delete&quot; data-iconpos=&quot;notext&quot; class=&quot;ui-btn-right&quot;&gt;Close&lt;/a&gt;
 	...popup contents go here...
 &lt;/div&gt;
 </code></pre>
-			
+
 		<p><iframe src="/resources/popup/example7.html" style="width:100%;height:390px;border:0px"></iframe></p>
-			
+
 		<h3>Adding padding</h3>
-		
+
 		<p>For popups with formatted text, padding is needed. We recommend adding the <code>ui-content</code> class to the popup container which adds the standard 15px of padding, just like the page content container. Write your own styles to create a more customized design if needed.</p>
-		
+
 		<pre><code>
 &lt;a href=&quot;#popupPadded&quot; data-rel=&quot;popup&quot; data-role=&quot;button&quot;&gt;Popup with padding&lt;/a&gt;
 
@@ -326,22 +326,22 @@ $( "#myPopupDiv" ).popup( "close" )
 	&lt;p&gt;This is a popup with the &lt;code&gt;ui-content&lt;/code&gt; class added to the popup container.&lt;/p&gt;
 &lt;/div&gt;
 		</code></pre>
-		
+
 		<p>This will result in the following popup with content padding:
 		<iframe src="/resources/popup/example8.html" style="width:100%;height:190px;border:0px"></iframe></p>
-		
+
 		<p>When padding is added, we apply a few style rules to negate the top margin for the first heading or paragraph in the popup and do the same for the last element's bottom margin. This keep the popups from having too much vertical space when the content padding and element margins combine.</p>
-	
-		
+
+
 		<h3>Positioning options</h3>
 		<p>By default, popups open centered vertically and horizontally over the thing you clicked (the origin) which is good for popups used as tooltips or menus. The framework also applies some basic collision detection rules to ensure that the popup will appear on-screen so the ultimate position may not always be centered over the origin.</p>
-		<p>For situations like a dialog or lightbox where the popup should appear centered within the window instead of over the origin, add the <code>data-position-to</code> attribute to the <strong>link</strong> and specify a value of <code>window</code>. </p>	
+		<p>For situations like a dialog or lightbox where the popup should appear centered within the window instead of over the origin, add the <code>data-position-to</code> attribute to the <strong>link</strong> and specify a value of <code>window</code>. </p>
 		<p>It's also possible to specify any valid selector as the value of <code>position-to</code> in addition to <code>origin</code> and <code>window</code>. For example, if you add <code>data-position-to="#myElement"</code> the popup will be positioned over the element with the id <code>myElement</code>.	</p>
 
 
 		<p>A few examples:
 		<iframe src="/resources/popup/example9.html" style="width:100%;height:390px;border:0px"></iframe></p>
-		
+
 		<p>The popup's placement constraints, which may cause the popup not to appear centered as desired, are as follow:</p>
 		<ol>
 			<li>The width of the popup will be limited using CSS <code>max-width</code> to the width of the window minus a tolerance of 15px on either side.</li>
@@ -349,28 +349,28 @@ $( "#myPopupDiv" ).popup( "close" )
 			<li>The top coordinate of the popup will never be negative. This ensures that the top of the popup will not be cut off.</li>
 			<li>If centering the popup over an element would cause the overall height of the document to increase, the popup is shifted upwards at most until its top coordinate becomes 0.</li>
 		</ol>
-        
+
         <p>Also note that a popup is currently always placed at the center of the window after an orientation change or window resize event.</p>
 
 		<p>See methods for information about setting the popup position programmatically, including the option to specify <strong>x and y coordinates</strong>.</p>
 
 		<h3>Setting transitions</h3>
 		<p>By default, popups have no transition to make them open as quickly as possible. To set the transition used for a popup, add the <code>data-transition</code> attribute to the link that references the popup. The reverse version of the transition will be used when closing the popup.</p>
-				
+
 <pre><code>
 &lt;a href=&quot;#transitionExample&quot; data-transition=&quot;flip&quot; data-rel=&quot;popup&quot;&gt;
    Flip transition
 &lt;/a&gt;
 </code></pre>
-				
+
 		<p>For performance reasons on mobile devices, we recommend using simpler transitions like pop, fade or none for smooth and fast popup animations, especially with larger or complex widgets within a popup. To view all transition types, you must be on a browser that supports 3D transforms. By default, devices that lack 3D support (such as Android 2.x) will fallback to "fade" for all transition types. See the transitions page for detailed information on the transition system.
 		<iframe src="/resources/popup/example10.html" style="width:100%;height:390px;border:0px"></iframe></p>
-		
+
 		<p>When you launch the popup from any of the buttons, the <code>data-transition</code> set on the button will be used. However, if you launch the popup programmatically, such as via <code>$( "#transitionExample" ).popup( "open" )</code>, the <code>data-transition</code> attribute specified in the definition of the popup will be used if present.</p>
-		
+
 
 		<h3>Theming the popup and overlay</h3>
-		
+
 		<p>The <code>popup</code> plugin provides two theme-related options: <code>data-theme</code> and <code>data-overlay-theme</code>. The <code>data-theme</code> option refers to the theme of the popup itself, whereas <code>data-overlay-theme</code> refers to the theme of the popup's background, which covers the entire window behind the popup.</p>
 		<p><code>data-theme</code> will be inherited from the page, and will always have a valid value when the popup opens, unless you explicitly specify <code>data-theme=&quot;none&quot;</code>, in which case the popup will have a transparent background.</p>
 		<p>The <code>data-overlay-theme</code> will never be set, and the popup's background, although always present when the popup is shown, will be completely transparent, unless explicitly set using for example <code>data-overlay-theme=&quot;a&quot;</code>. In this case, the background will fade in, partially obscuring the rest of the window, to further direct attention to the popup. Here is an example of an explicitly themed popup:</p>
@@ -380,9 +380,9 @@ $( "#myPopupDiv" ).popup( "close" )
   ...Popup contents...
 &lt;/div&gt;
 </code></pre>
-		
+
 		<iframe src="/resources/popup/example11.html" style="width:100%;height:390px;border:0px"></iframe>
-		
+
 		<h3>Note: Chaining of popups not allowed</h3>
 		<p>The framework does not currently support chaining of popups so it's not possible to embed a link from one popup to another popup. All links with a <code>data-rel="popup"</code> inside a popup will not do anything at all.</p>
 		<p>This also means that custom select menus will not work inside popups, because they are themselves implemented using popups. If you place a select menu inside a popup, it will be rendered as a native select menu, even if you specify <code>data-native-menu="false"</code>.</p>
@@ -540,7 +540,7 @@ $( document ).on( "mobileinit", function() {
 
 				<p>If <code>x</code> or <code>y</code> is missing, and no jQuery selector is given as the value of <code>positionTo</code>, the middle of the window will be used.</p>
 				<p><code>transition</code> can be used to override the popup's own <code>transition</code> option. This will result in the popup opening via the transition specified in the call, but the popup's <code>transition</code> option will not be updated.</p>
-				<p>Similarly, <code>data-position-to</code> can be used to override the popup's default positioning without modifying the value of the popup's <code>positionTo</code> option. The values available for <code>positionTo</code> are the same as those for the popup's <a href="#option-positionTo"><code>positionTo</code> option</a>.</p>						  
+				<p>Similarly, <code>data-position-to</code> can be used to override the popup's default positioning without modifying the value of the popup's <code>positionTo</code> option. The values available for <code>positionTo</code> are the same as those for the popup's <a href="#option-positionTo"><code>positionTo</code> option</a>.</p>
 			</desc>
 				<argument name="options" type="Object">
 					<property name="x" default=''>

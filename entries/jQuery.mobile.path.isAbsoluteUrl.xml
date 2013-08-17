@@ -17,7 +17,7 @@
 		border-color: #108040;
 		padding: 10px;
 		}
-]]></css>		
+]]></css>
 				<html><![CDATA[
 	<div data-role="content">
 		<input type="button" value="http://foo.com/a/file.html" id="button1" class="myButton" data-inline="true" />
@@ -30,13 +30,13 @@
 	</div>]]></html>
 			<code><![CDATA[
 $(document).ready(function() {
-  
+
    $( ".myButton" ).on( "click", function() {
-    
+
       var isAbs = $.mobile.path.isAbsoluteUrl( $( this ).attr( "value" ) );
-        
+
     $( "#myResult" ).html( String( isAbs ) );
- }) 
+ })
 });
 ]]></code>
 		</example>

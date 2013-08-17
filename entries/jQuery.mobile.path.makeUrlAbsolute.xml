@@ -22,7 +22,7 @@
 		border-color: #108040;
 		padding: 10px;
 		}
-]]></css>		
+]]></css>
 				<html><![CDATA[
 	<div data-role="content">
 		<p>The absoulte URL used is http://foo.com/a/b/c/test.html</p>
@@ -35,13 +35,13 @@
 	</div>]]></html>
 			<code><![CDATA[
 $(document).ready(function() {
-  
+
    $( ".myButton" ).on( "click", function() {
-    
+
       var absUrl = $.mobile.path.makeUrlAbsolute( $( this ).attr( "value" ), "http://foo.com/a/b/c/test.html" );
-        
+
     $( "#myResult" ).html( absUrl );
- }) 
+ })
 });
 ]]></code>
 		</example>

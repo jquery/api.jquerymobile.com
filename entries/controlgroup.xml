@@ -21,10 +21,10 @@
 
 		<p>Horizontal grouped buttons:
 		<iframe src="/resources/controlgroup/example2.html" style="width:100%;height:150px;border:0px"></iframe></p>
-		
+
         <h4>Labels</h4>
 		<p>If you use a controlgroup for <code>input</code>, <code>button</code> or <code>select</code> buttons we recommend wrapping them in a <code>fieldset</code> element that has a <code>legend</code> which acts as the combined label for the group. The <code>label</code> elements of each individual button in the group will be hidden for styling purposes, and are only accessible by screen readers. Using the <code>label</code> as a wrapper around the form element prevents the framework from hiding it, so you have to use the <code>for</code> attribute to associate the <code>label</code> with the input.</p>
-		
+
 	</longdesc>
 	<added>1.3</added>
 	<options>
