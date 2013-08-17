@@ -6,7 +6,7 @@
 	<longdesc>
 		<h2>Simple navbar</h2>
 		<p>jQuery Mobile has a very basic navbar widget that is useful for providing up to 5 buttons with optional icons in a bar, typically within a header or footer. There is also a persistent navbar variation that works more like a tab bar that stays fixed as you navigate across pages.</p>
-		<p>A navbar is coded as an unordered list of links wrapped in a container element that has the <code> data-role="navbar"</code> attribute. This is an example of a two-button navbar:</p>
+		<p>A navbar is coded as an unordered list of links wrapped in a container element that has the <code>data-role="navbar"</code> attribute. This is an example of a two-button navbar:</p>
 
 <pre><code>
 &lt;div data-role=&quot;navbar&quot;&gt;
@@ -79,11 +79,11 @@
 		<iframe src="/resources/navbar/example8.html" style="width:100%;height:90px;border:0px"></iframe>
 
 		<h3>Icons in navbars</h3>
-		<p>Icons can be added to navbar items by adding the <code> data-icon</code> attribute specifying a standard mobile icon to each anchor. By default, icons are added above the text (<code>data-iconpos="top"</code>). The following examples add icons to a navbar in a footer.</p>
+		<p>Icons can be added to navbar items by adding the <code>data-icon</code> attribute specifying a standard mobile icon to each anchor. By default, icons are added above the text (<code>data-iconpos="top"</code>). The following examples add icons to a navbar in a footer.</p>
 
 		<iframe src="/resources/navbar/example9.html" style="width:100%;height:90px;border:0px"></iframe>
 
-		<p>The icon position is set <em>on the navbar container</em> instead of for individual links within for visual consistency. For example, to place the icons below the labels, add the <code> data-iconpos="bottom"</code> attribute to the navbar container.</p>
+		<p>The icon position is set <em>on the navbar container</em> instead of for individual links within for visual consistency. For example, to place the icons below the labels, add the <code>data-iconpos="bottom"</code> attribute to the navbar container.</p>
 
 <pre><code>
 &lt;div data-role=&quot;navbar&quot; data-iconpos=&quot;bottom&quot;&gt;

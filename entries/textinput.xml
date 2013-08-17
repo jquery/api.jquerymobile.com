@@ -45,7 +45,7 @@
 
 			<h3>Field containers</h3>
 
-		<p>Optionally wrap the text input in a container with the <code> data-role="fieldcontain"</code> attribute to help visually group it in a longer form.</p>
+		<p>Optionally wrap the text input in a container with the <code>data-role="fieldcontain"</code> attribute to help visually group it in a longer form.</p>
 <pre><code>
 &lt;div data-role=&quot;fieldcontain&quot;&gt;
 	&lt;label for=&quot;name&quot;&gt;Text Input:&lt;/label&gt;
@@ -65,7 +65,7 @@
         <h2>Textareas</h2>
 
 		<p>For multi-line text inputs, use a <code>textarea</code> element. The framework will auto-grow the height of the textarea to avoid the need for an internal scrollbar. </p>
-		<p>Set the <code>for</code> attribute of the <code>label</code> to match the <code>id</code> of the <code>textarea</code> so they are semantically associated, and wrap them in a <code>div</code> with the <code> data-role="fieldcontain"</code> attribute to group them.</p>
+		<p>Set the <code>for</code> attribute of the <code>label</code> to match the <code>id</code> of the <code>textarea</code> so they are semantically associated, and wrap them in a <code>div</code> with the <code>data-role="fieldcontain"</code> attribute to group them.</p>
 
 <pre><code>
 &lt;label for=&quot;textarea-a&quot;&gt;Textarea:&lt;/label&gt;
