@@ -4,6 +4,7 @@
 	<title>Button Widget</title>
     <desc>Creates a button widget</desc>
     <longdesc>
+		<h2>Buttons</h2>
 		<p>Buttons are coded with standard HTML anchor and input elements, then enhanced by jQuery Mobile to make them more attractive and useable on a mobile device.  Use anchor links (<code>a</code> elements) to mark up navigation buttons, and <code>input</code> or <code>button</code> elements for form submission.</p>
 
 		<h3>Styling links as buttons</h3>
@@ -25,6 +26,22 @@
 		<p>Produces this disabled <strong>link-based</strong> button:
 		<iframe src="/resources/button/example2.html" style="width:100%;height:90px;border:0px"></iframe>
 		</p>
+
+		<h3>Inline buttons</h3>
+
+		<p>By default, all buttons in the body content are styled as block-level elements so they fill the width of the screen:
+		<iframe src="/resources/button/example20.html" style="width:100%;height:250px;border:0px"></iframe></p>
+
+		<p>If you have multiple buttons that should sit side-by-side on the same line, add the <code>data-inline="true"</code> attribute to each button. This will style the buttons to be the width of their content and float the buttons so they sit on the same line.</p>
+
+<pre><code>
+&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot; data-inline=&quot;true&quot;&gt;Cancel&lt;/a&gt;
+&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot; data-inline=&quot;true&quot; data-theme=&quot;b&quot;&gt;Save&lt;/a&gt;
+</code></pre>
+
+		<iframe src="/resources/button/example22.html" style="width:100%;height:220px;border:0px"></iframe>
+
+		<p>If you want buttons to sit side-by-side but stretch to fill the width of the screen, you can use the content column grids to put normal full-width buttons into 2- or 3-columns.</p>
 
 		<h3>Mini version</h3>
 
@@ -75,7 +92,7 @@ $( "[type='submit']" ).button();
 
 		<iframe src="/resources/button/example7.html" style="width:100%;height:90px;border:0px"></iframe>
 
-        <h2>Adding Icons to Buttons</h2>
+    <h2>Adding Icons to Buttons</h2>
 		<p>The jQuery Mobile framework includes a selected set of icons most often needed for mobile apps. To minimize download size, jQuery Mobile includes a single white icon sprite, and automatically adds a semi-transparent black circle behind the icon to ensure that it has good contrast on any background color.</p>
 
 			<p>An icon can be added to a button by adding a <code>data-icon</code> attribute on the anchor specifying the icon to display. For example:</p>
@@ -141,22 +158,6 @@ $( "[type='submit']" ).button();
 		<p>
 		<iframe src="/resources/button/example17.html" style="width:100%;height:450px;border:0px"></iframe></p>
 
-		<h2>Inline buttons</h2>
-
-		<p>By default, all buttons in the body content are styled as block-level elements so they fill the width of the screen:
-		<iframe src="/resources/button/example20.html" style="width:100%;height:250px;border:0px"></iframe></p>
-
-		<p>If you have multiple buttons that should sit side-by-side on the same line, add the <code>data-inline="true"</code> attribute to each button. This will style the buttons to be the width of their content and float the buttons so they sit on the same line.</p>
-
-<pre><code>
-&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot; data-inline=&quot;true&quot;&gt;Cancel&lt;/a&gt;
-&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot; data-inline=&quot;true&quot; data-theme=&quot;b&quot;&gt;Save&lt;/a&gt;
-</code></pre>
-
-		<iframe src="/resources/button/example22.html" style="width:100%;height:220px;border:0px"></iframe>
-
-		<p>If you want buttons to sit side-by-side but stretch to fill the width of the screen, you can use the content column grids to put normal full-width buttons into 2- or 3-columns.</p>
-
 		<h3>Icon example</h3>
 
 		<iframe src="/resources/button/example24.html" style="width:100%;height:220px;border:0px"></iframe>
@@ -181,7 +182,7 @@ $( "[type='submit']" ).button();
 		<p>
 		<iframe src="/resources/button/example27.html" style="width:100%;height:550px;border:0px"></iframe></p>
 
-        <h4>Labels</h4>
+        <h3>Labels</h3>
 		<p>Because the <code>label</code> element will be associated with each individual <code>input</code> or <code>button</code> and will be hidden for styling purposes, we recommend wrapping the buttons in a <code>fieldset</code> element that has a <code>legend</code> which acts as the combined label for the group. Using the <code>label</code> as a wrapper around an input prevents the framework from hiding it, so you have to use the <code>for</code> attribute to associate the <code>label</code> with the input.</p>
 
 		<h2>Theming buttons</h2>
@@ -189,7 +190,7 @@ $( "[type='submit']" ).button();
 		<p>jQuery Mobile has a rich theming system that gives you full control of how buttons are styled. When a link is added to a container, it is automatically assigned a theme swatch letter that matches its parent bar or content box to visually integrate the button into the parent container, like a chameleon. So a button placed inside a content container with a theme of "a" will be automatically assigned the button theme of "a". Here are examples of the button theme pairings in the default theme. All buttons have the same HTML markup:
 		<iframe src="/resources/button/example33.html" style="width:100%;height:640px;border:0px"></iframe></p>
 
-		<h2>Assigning theme swatches</h2>
+		<h3>Assigning theme swatches</h3>
 		<p>Buttons can be manually assigned any of the button color swatches from the theme to add visual contrast with the container they sit inside by adding the <code>data-theme</code> attribute on the button markup and specifying a swatch letter.</p>
 
 <pre><code>
@@ -199,7 +200,7 @@ $( "[type='submit']" ).button();
 		<p>Here are 5 buttons with icons that have a different swatch letter assigned via the <code>data-theme</code> attribute.
 		<iframe src="/resources/button/example34.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
-		<h2>Theme variations</h2>
+		<h3>Theme variations</h3>
 
 		<p><iframe src="/resources/button/example35.html" style="width:100%;height:630px;border:0px"></iframe></p>
 
