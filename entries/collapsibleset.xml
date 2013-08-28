@@ -40,19 +40,19 @@
 
 		<h3>Custom icons</h3>
 
-		<p>The icon displayed when a collapsible is shown or hidden can be overridden by using the <code>data-collapsed-icon</code> and <code>data-expanded-icon</code> attributes. Both the <code>collapsibleset</code> widget and the <code>collapsible</code> widget accepts these attributes. When you set one or both of these attributes on the <code>collapsibleset</code> widget all <code>collapsible</code> widgets that are part of the <code>collapsibleset</code> display the icon specified by the chosen value. You can override the icon displayed by individual <code>collapsible</code> widgets by setting one or both of these attributes on the <code>collapsible</code> widget itself.</p>
+		<p>The icon displayed when a collapsible is shown or hidden can be overridden by using the <code>data-collapsed-icon</code> and <code>data-expanded-icon</code> attributes. Both the <code>collapsibleset</code> widget and the <code>collapsible</code> widget accepts these attributes. When you set one or both of these attributes on the <code>collapsibleset</code> widget all <code>collapsible</code> widgets that are part of the <code>collapsibleset</code> display the icon specified by the chosen value. You can override the icon displayed by individual <code>collapsible</code> widgets by setting one or both of these attributes on the <code>collapsible</code> widget itself.
 		<iframe src="/resources/collapsibleset/example4.html" style="width:100%;height:240px;border:0px"></iframe></p>
 
 		<h3>Icon positioning</h3>
 
-		<p>Collapsible headings’ default icon positioning can be overridden by using the <code>data-iconpos</code> attribute, either at the <code>collapsibleset</code> level or on an individual collapsible basis.
+		<p>The default icon positioning for collapsible headings can be overridden by using the <code>data-iconpos</code> attribute. You can set the attribute either on the <code>collapsibleset</code> to affect all collapsibles in the set, or on an individual <code>collapsible</code> widget to affect only the one widget.
 		<iframe src="/resources/collapsibleset/example5.html" style="width:100%;height:310px;border:0px"></iframe></p>
 
 		<h3>Theming collapsible content</h3>
 
 		<p>The standard <code>data-theme</code> attribute can be used to set the color of each collapsible in a set. To provide a clearer visual grouping of the content with the headers, add the <code>data-content-theme</code> attribute with a swatch letter. This adds a themed background color and border to the content block. For consistent theming, add these attributes to the parent collapsible set.
 
-<pre><code>&lt;div data-role=&quot;collapsibleset&quot; data-theme=&quot;c&quot; data-content-theme=&quot;d&quot;&gt;
+<pre><code>&lt;div data-role=&quot;collapsibleset&quot; data-theme=&quot;a&quot; data-content-theme=&quot;b&quot;&gt;
 </code></pre>
 
 		<iframe src="/resources/collapsibleset/example6.html" style="width:100%;height:240px;border:0px"></iframe></p>
@@ -61,14 +61,6 @@
 
 		<p>To have individual sections in a group styled differently, add <code>data-theme</code> and <code>data-content-theme</code> attributes to specific collapsibles.
 		<iframe src="/resources/collapsibleset/example7.html" style="width:100%;height:240px;border:0px"></iframe></p>
-
-		<h3>Expanding or collapsing items in a set</h3>
-
-		<p>To expand or collapse items in a set, call the respective methods on individual collapsibles. The selector for the collapse method can include multiple items in a set:
-</p>
-<pre><code>
-$( "#myCollapsibleSet" ).children().trigger( "collapse" );
-</code></pre>
 
 	</longdesc>
 	<added>1.0</added>
@@ -85,6 +77,13 @@ $( "#myCollapsibleSet" ).children().trigger( "collapse" );
 			</desc>
 			<type name="Boolean" />
 		</option>
+		<option name="enhanced" default="false" example-value="true">
+			<desc>
+				Indicates that all markup necessary to create the <code>collapsibleset</code> widget has been provided as part of the original markup.
+				<p>This option is also exposed as a data attribute: <code>data-enhanced="false"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
 		<option name="expandedIcon" default='"minus"' example-value='"arrow-d"'>
 			<desc>Sets the icon for the header of the collapsible container when in an expanded state.
 				<p>This option is also exposed as a data attribute: <code>data-expanded-icon="arrow-d"</code>.</p>
@@ -98,25 +97,15 @@ $( "#myCollapsibleSet" ).children().trigger( "collapse" );
 			</desc>
 	    	<type name="String" />
 		</option>
-	    <option name="initSelector"  default='":jqmData(role=&#39;collapsibleset&#39;)"'>
-			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as collapsibles. To change which elements are initialized, bind this option to the mobileinit event:
-<pre><code>
-$( document ).on( "mobileinit", function() {
-    $.mobile.collapsibleset.prototype.options.initSelector = ".mycollapsibleset";
-});
-</code></pre>
-			</desc>
-			<type name="CSS selector string" />
-		</option>
 		<option name="inset"  default="true" example-value="false">
 			<desc>By setting this option to false the collapsibles will get a full width appearance without corners. If the value is false for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.
-				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-inset="true"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="mini"  default="false" example-value="true">
+		<option name="mini" default="false" example-value="true">
 			<desc>Sets the size of the element to a more compact, mini version. If the value is false for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.
-				<p>This option is also exposed as a data attribute: <code>data-inset="false"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-mini="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
@@ -141,7 +130,7 @@ $( document ).on( "mobileinit", function() {
 
 		<method name="refresh">
 			<desc>Updates the collapsible set.
-				<p>If you manipulate a collapsible set via JavaScript (e.g. add new collapsible containers), you must call the refresh method on it to update the visual styling.</p>
+				<p>If you manipulate a collapsible set via JavaScript (e.g. by adding new collapsibles, removing old ones, or showing/hiding existing ones), you must call the refresh method on it to update the visual styling. This method will instantiate collapsibles on child elements which are marked <code>data-role="collapsible"</code>, so there is no need to manually call <code>.collapsible()</code>.</p>
 
 			</desc>
 		</method>
