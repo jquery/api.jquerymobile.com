@@ -4,6 +4,7 @@
 	<title>Collapsible set Widget</title>
 	<desc>Creates a collapsible set of collapsible blocks of content</desc>
 	<longdesc>
+		<h2>Collapsible sets</h2>
 		<p>Collapsible sets start with the exact same markup as individual collapsibles.
 		By adding a parent wrapper with a <code>data-role="collapsibleset"</code> attribute around a number of collapsibles, the framework will style these to looks like a visually grouped widget and make it behave like an accordion so only one section can be open at a time.</p>
 		<p>By default, all the sections will be collapsed. To set a section to be open when the page loads, add the <code>data-collapsed="false"</code> attribute to the heading of the section you want expanded.</p>
@@ -61,6 +62,34 @@
 
 		<p>To have individual sections in a group styled differently, add <code>data-theme</code> and <code>data-content-theme</code> attributes to specific collapsibles.
 		<iframe src="/resources/collapsibleset/example7.html" style="width:100%;height:240px;border:0px"></iframe></p>
+
+		<h2>Providing pre-rendered markup</h2>
+		<p>You can improve the load time for your page by providing the markup that the <code>collapsibleset</code> widget would normally create during its initialization.</p>
+		<p>The collapsible set widget does not require that the collapsibles it contains also be pre-rendered.</p>
+		<p>When you provide such pre-rendered markup you must also set all the classes that the framework would normally set, and you must also set all data-attributes whose values differ from the default to indicate that the pre-rendered markup reflects the non-default value of the corresponding widget option.</p>
+		<p>In the example below, pre-rendered markup for a collapsible set is provided. The attribute <code>data-corners="false"</code> is explicitly specified, since the absence of the <code>ui-corner-all</code> class on the container element indicates that the "corners" widget option is to be false. One of the child collapsibles is provided as-is, while the other is pre-rendered.</p>
+
+<pre><code>
+&lt;div data-role="collapsibleset" class="ui-collapsible-set" data-corners="false"&gt;
+	&lt;div data-role="collapsible"&gt;
+		&lt;h2&gt;Child collapsible&lt;/h2&gt;
+		&lt;p&gt;This is the collapsible content.&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div data-role="collapsible" data-enhanced="true" class="ui-collapsible ui-collapsible-inset ui-corner-all" data-collapsed="false" data-corners="true"&gt;
+		&lt;h2 class="ui-collapsible-heading"&gt;
+			&lt;a href="#" class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-icon-minus"&gt;
+				Pre-rendered child collapsible
+				&lt;span class="ui-collapsible-heading-status"&gt;click to collapse contents&lt;/span&gt;
+			&lt;/a&gt;
+		&lt;/h2&gt;
+		&lt;div class="ui-collapsible-content" aria-hidden="false"&gt;
+			&lt;p&gt;This is the collapsible content.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+	<iframe src="/resources/collapsibleset/example8.html" style="width:100%;height:240px;border:0px"></iframe>
 
 	</longdesc>
 	<added>1.0</added>
