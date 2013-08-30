@@ -4,7 +4,8 @@
 	<title>Collapsible Widget</title>
 	<desc>Creates a collapsible block of content</desc>
 	<longdesc>
-		<p>To create a collapsible block of content, create a container and add the data-role="collapsible" attribute. Using data-content-theme attribute allows you to set a theme for the content of the collapsible.</p>
+		<h2>Collapsible content</h2>
+		<p>To create a collapsible block of content, create a container and add the <code>data-role="collapsible"</code> attribute. Using the <code>data-content-theme</code> attribute allows you to set a theme for the content of the collapsible.</p>
 		<p>Directly inside this container, add any header (H1-H6) or legend element. The framework will style the header to look like a clickable button and add a "+" icon to the left to indicate it's expandable.</p>
 		<p>After the header, add any HTML markup you want to be collapsible. The framework will wrap this markup in a container that will be hidden/shown when the heading is clicked.</p>
 		<p>By default, the content will be collapsed.</p>
@@ -18,9 +19,9 @@
 		<iframe src="/resources/collapsible/example1.html" style="width:100%;height:140px;border:0px"></iframe>
 		</p>
 
-		<h3>Expanding collapsibles on load</h3>
+		<h3>Initially expanded collapsibles</h3>
 
-		<p>To expand the content when the page loads, add the <code>data-collapsed="false"</code> attribute to the wrapper.</p>
+		<p>When you add the <code>data-collapsed="false"</code> attribute to the wrapper the collapsible will initially be expanded.</p>
 
 <pre><code>
 &lt;div data-role=&quot;collapsible&quot; data-collapsed=&quot;false&quot;&gt;
@@ -53,24 +54,24 @@
 
 		<h3>Custom icons</h3>
 
-		<p>Collapsible headings’ default icons can be overridden by using the <code>data-collapsed-icon</code> and <code>data-expanded-icon</code> attributes. In the below case, <code>data-collapsed-icon="arrow-r"</code> and <code>data-expanded-icon="arrow-d"</code>.
+		<p>The default icon of collapsible headings can be overridden by using the <code>data-collapsed-icon</code> and <code>data-expanded-icon</code> attributes. The example below uses <code>data-collapsed-icon="arrow-r"</code> and <code>data-expanded-icon="arrow-d"</code>.
 		<iframe src="/resources/collapsible/example5.html" style="width:100%;height:140px;border:0px"></iframe></p>
 
 		<h3>Icon positioning</h3>
 
-		<p>Collapsible headings’ default icon positioning can be overridden by using the <code>data-iconpos</code> attribute. In the below case, <code>data-iconpos="right"</code>.
+		<p>The default icon positioning of collapsible headings can be overridden by using the <code>data-iconpos</code> attribute. The example below uses <code>data-iconpos="right"</code>.
 		<iframe src="/resources/collapsible/example6.html" style="width:100%;height:140px;border:0px"></iframe></p>
 
 		<h3>Theming collapsible content</h3>
 
-		<p>Collapsible content is minimally styled - we add only a bit of margin between the bar and content, and the header adopts the default theme styles of the container it sits within.</p>
+		<p>Collapsible content is minimally styled - we add only a bit of margin between the bar and content, and the header adopts the default theme styles of the container within which it sits.</p>
 
-		<p>To provide a stronger visual connection between the collapsible header and content, add the <code>data-content-theme</code> attribute to the wrapper and specify a theme swatch letter. This will apply the swatch's border and <em>flat</em> background color (not the gradient) to the content block and changes the corner rounding to square off the bottom of the header and round the bottom of the content block instead to visually group these elements.</p>
+		<p>To provide a stronger visual connection between the collapsible header and content, add the <code>data-content-theme</code> attribute to the wrapper and specify a theme swatch letter. This applies the border and background color of the swatch to the content block and changes the corner rounding to square off the bottom of the header and round the bottom of the content block instead to visually group these elements.</p>
 
 <pre><code>
-&lt;div data-role=&quot;collapsible&quot; data-content-theme=&quot;c&quot;&gt;
+&lt;div data-role=&quot;collapsible&quot; data-content-theme=&quot;a&quot;&gt;
 	&lt;h3&gt;Header&lt;/h3&gt;
-	&lt;p&gt;I&#x27;m the collapsible content with a themed content block set to "c".&lt;/p&gt;
+	&lt;p&gt;I&#x27;m the collapsible content with a themed content block set to "a".&lt;/p&gt;
 &lt;/div&gt;
 </code></pre>
 
@@ -95,13 +96,37 @@
 
 		<h3>Collapsible sets (accordions)</h3>
 
-		<p>It's possible to combine multiple collapsibles into a grouped set that acts like an <a href="/collapsible-set/">accordion widget</a>.</p>
+		<p>It's possible to combine multiple collapsibles into a grouped set that acts like an <a href="/collapsibleset/">accordion widget</a>.</p>
+
+		<h2>Providing pre-rendered markup</h2>
+		<p>You can improve the load time for your page by providing the markup that the collapsible widget would normally create during its initialization.</p>
+		<p>The collapsible widget creates an anchor from the heading element and wraps the rest of the children of the outermost widget in a <code>div</code> that will serve as the container for the collapsible content.</p>
+		<p>When you provide such pre-rendered markup you must also set all the classes that the framework would normally set, and you must also set all data-attributes whose values differ from the default to indicate that the pre-rendered markup reflects the non-default value of the corresponding widget option.</p>
+		<p>In the example below, pre-rendered markup for a collapsible is provided. The attribute <code>data-collapsed-icon="arrow-r"</code> is explicitly specified, since the use of the<code>ui-icon-arrow-r</code> class on the anchor element indicates that the value of the "collapsedIcon" widget option is to be "arrow-r".</p>
+
+<pre><code>
+&lt;div data-role="collapsible" data-enhanced="true" class="ui-collapsible ui-collapsible-inset ui-corner-all ui-collapsible-collapsed" data-collapsed-icon="arrow-r"&gt;
+	&lt;h2 class="ui-collapsible-heading ui-collapsible-heading-collapsed"&gt;
+		&lt;a href="#" class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-icon-arrow-d"&gt;
+			Pre-rendered collapsible
+			&lt;span class="ui-collapsible-heading-status"&gt; click to expand contents&lt;/span&gt;
+		&lt;/a&gt;
+	&lt;/h2&gt;
+	&lt;div class="ui-collapsible-content ui-collapsible-content-collapsed" aria-hidden="true"&gt;
+		&lt;p&gt;This is the collapsible-content&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<iframe src="/resources/collapsible/example10.html" style="width:100%;height:200px;border:0px"></iframe>
 
   	</longdesc>
 	<added>1.0</added>
 	<options>
-		<option name="collapseCueText" default='" click to collapse contents"'  example-value='" collapse with a click"'>
+		<option name="collapseCueText" default='" click to collapse contents"'  example-value='"collapse with a click"'>
 			<desc>This text is used to provide audible feedback for users with screen reader software.
+				<p>If the value is unset for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.</p>
+				<p>This option is also exposed as a data attribute:<code>data-collapse-cue-text=" collapses with a click"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
@@ -113,63 +138,68 @@
 		</option>
 		<option name="collapsedIcon" default='"plus"' example-value='"arrow-r"'>
 			<desc>Sets the icon for the header of the collapsible container when in a collapsed state.
+				<p>If the value is unset for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.</p>
 				<p>This option is also exposed as a data attribute:<code>data-collapsed-icon="arrow-r"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
 		<option name="corners" default="true" example-value="false">
 			<desc>Applies the theme border-radius if set to true.
+				<p>If the value is unset for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.</p>
 				<p>This option is also exposed as a data attribute:<code>data-corners="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
+		<option name="enhanced" default="false" example-value="true">
+			<desc>Indicates that the markup necessary for a collapsible widget has been provided as part of the original markup.
+				<p>This option is also exposed as a data attribute:<code>data-enhanced="true"</code>.</p>
+			</desc>
+		</option>
 		<option name="expandCueText" default='" click to expand contents"' example-value='" expand with a click"'>
 			<desc>This text is used to provide audible feedback for users with screen reader software.
+				<p>If the value is unset for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.</p>
+				<p>This option is also exposed as a data attribute:<code>data-expand-cue-text=" expand by clicking"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
 		<option name="expandedIcon" default='"minus"' example-value='"arrow-d"'>
 			<desc>Sets the icon for the header of the collapsible container when in an expanded state.
+				<p>If the value is unset for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.</p>
 				<p>This option is also exposed as a data attribute: <code>data-expanded-icon="arrow-d"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
 		<option name="heading" default='"h1,h2,h3,h4,h5,h6,legend"' example-value='".mycollapsibleheading"'>
 			<desc>Within the collapsible container, the first immediate child element that matches this selector will be used as the header for the collapsible.
+				<p>This option is also exposed as a data attribute: <code>data-heading=".mycollapsibleheading"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
 		<option name="iconpos" default='"left"' example-value='"right"'>
 			<desc>Positions the icon in the collapsible header.
+				<p>If the value is unset for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.</p>
 				<p>Possible values: left, right, top, bottom, none, notext.</p>
 				<p>This option is also exposed as a data attribute: <code>data-iconpos="right"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="initSelector"  default='":jqmData(role=&#39;collapsible&#39;)"'>
-			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as collapsibles. To change which elements are initialized, bind this option to the mobileinit event:
-<pre><code>
-$( document ).on( "mobileinit", function() {
-	$.mobile.collapsible.prototype.options.initSelector = ".mycollapsible";
-});
-</code></pre>
-			</desc>
-			<type name="CSS selector string" />
-		</option>
 		<option name="inset"  default="true" example-value="false">
-			<desc>By setting this option to false the element will get a full width appearance without corners. If the value is false for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.
+			<desc>By setting this option to false the element will get a full width appearance without corners.
+				<p>If the value is unset for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.</p>
 				<p>This option is also exposed as a data attribute: <code>data-inset="false"</code>.</p>
  			</desc>
 			<type name="Boolean" />
 		</option>
 		<option name="mini"  default="false" example-value="true">
-			<desc>Sets the size of the element to a more compact, mini version. If the value is false for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.
+			<desc>Sets the size of the element to a more compact, mini version.
+				<p>If the value is unset for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.</p>
 				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
 		<option name="theme" default="null, inherited from parent" example-value='"a"'>
 			<desc>Sets the color scheme (swatch) for the collapsible. It accepts a single letter from a-z that maps to the swatches included in your theme.
+				<p>If the value is unset for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.</p>
 				<p>Possible values: swatch letter (a-z).</p>
 				<p>This option is also exposed as a data attribute: <code>data-theme="a"</code>.</p>
 			</desc>
@@ -177,7 +207,7 @@ $( document ).on( "mobileinit", function() {
 		</option>
 	</options>
 	<events>
-		<event name="create" type="collapsiblecreate">
+		<event name="create" type="create">
 			<desc>Triggered when a collapsible is created
 			</desc>
 			<argument name="event" type="Event">

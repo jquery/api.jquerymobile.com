@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0-alpha.2/jquery.mobile-1.4.0-alpha.2.min.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.0-alpha.2/jquery.mobile-1.4.0-alpha.2.min.js"></script>
+	<style>
+	html, body { padding: 0; margin: 0; }
+	.ui-content{
+		padding:10px 15px 0px 15px;
+	}
+	</style>
+</head>
+
+<body>
+<div data-role="page">
+	<div data-role="content">
+		<div data-role="collapsible" data-enhanced="true" class="ui-collapsible ui-collapsible-inset ui-corner-all ui-collapsible-collapsed" data-collapsed-icon="arrow-r">
+			<h2 class="ui-collapsible-heading ui-collapsible-heading-collapsed">
+				<a href="#" class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-icon-arrow-r">
+					Pre-rendered collapsible
+					<span class="ui-collapsible-heading-status"> click to expand contents</span>
+				</a>
+			</h2>
+			<div class="ui-collapsible-content ui-collapsible-content-collapsed" aria-hidden="true">
+				<p>This is the collapsible-content</p>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
