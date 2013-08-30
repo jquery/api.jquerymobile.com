@@ -229,6 +229,11 @@ $( document ).on( "mobileinit", function() {
 			<desc>disable a text input.
 			</desc>
 		</method>
+		<method name="refresh">
+			<desc>Refresh a text input.
+				<p>This method is provided by the autogrow extension, and it sets the height of the <code>textarea</code> element based on its contents. You should call this method when the <code>textarea</code> element becomes visible to make sure that its initial height matches its contents.</p>
+			</desc>
+		</method>
 	</methods>
 	<example>
 		<desc>A basic example of a search input field</desc>
