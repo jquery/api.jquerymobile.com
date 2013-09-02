@@ -106,6 +106,7 @@
 			</desc>
 			<type name="Boolean" />
 		</option>
+		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="enhanced" default="false" example-value="true">
 			<desc>
 				Indicates that all markup necessary to create the <code>collapsibleset</code> widget has been provided as part of the original markup.
@@ -147,16 +148,13 @@
 		</option>
 	</options>
 	<events>
-		<event name="create">
-			<desc>Triggered when a collapsible set is created</desc>
-			<argument name="event" type="Event">
-			</argument>
-			<argument name="ui" type="Object">
-			</argument>
-		</event>
+		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</events>
 	<methods>
-
+		<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="refresh">
 			<desc>Updates the collapsible set.
 				<p>If you manipulate a collapsible set via JavaScript (e.g. by adding new collapsibles, removing old ones, or showing/hiding existing ones), you must call the refresh method on it to update the visual styling. This method will instantiate collapsibles on child elements which are marked <code>data-role="collapsible"</code>, so there is no need to manually call <code>.collapsible()</code>.</p>

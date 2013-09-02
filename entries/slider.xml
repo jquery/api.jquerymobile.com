@@ -233,12 +233,7 @@ $( "input" ).slider();
 	</longdesc>
 	<added>1.0</added>
 	<options>
-		<option name="disabled" default="false" example-value="true">
-			<desc>Sets the default state of the slider to disabled when "true".
-
-			</desc>
-			<type name="Boolean" />
-		</option>
+		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="highlight" default="false" example-value="true">
 			<desc>Sets an active state fill on the track from the left edge to the slider handle when set to "true".
 
@@ -280,13 +275,7 @@ $( document ).on( "mobileinit", function() {
 		</option>
 	</options>
 	<events>
-		<event name="create">
-			<desc>triggered when a slider is created</desc>
-			<argument name="event" type="Event">
-			</argument>
-			<argument name="ui" type="Object">
-			</argument>
-		</event>
+		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<event name="start">
 			<desc>triggered when there's an initial interaction with the slider. Includes drags and taps.</desc>
 			<argument name="event" type="Event">
@@ -301,14 +290,10 @@ $( document ).on( "mobileinit", function() {
 		</event>
 	</events>
 	<methods>
-		<method name="enable">
-			<desc>enable a disabled slider.
-			</desc>
-		</method>
-		<method name="disable">
-			<desc>disable a slider.
-			</desc>
-		</method>
+		<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="refresh">
 			<desc>update the slider.
 				<p>If you manipulate a slider via JavaScript, you must call the refresh method on it to update the visual styling.</p>

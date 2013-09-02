@@ -169,11 +169,7 @@ $( ".mySearchInput" ).textinput();
 			</desc>
             <type name="String" />
         </option>
-		<option name="disabled" default="false" example-value="true">
-        	<desc>Sets the default state of the text input to disabled when "true".
-			</desc>
-            <type name="Boolean" />
-        </option>
+		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="initSelector" default="input[type='text'], input[type='search'], :jqmData(type='search'), input[type='number'], :jqmData(type='number'), input[type='password'], input[type='email'], input[type='url'], input[type='tel'], textarea, input:not([type])">
 			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as textinputs. To change which elements are initialized, bind this option to the mobileinit event:
 <pre><code><![CDATA[
@@ -207,26 +203,13 @@ $( document ).on( "mobileinit", function() {
 		</option>
 	</options>
 	<events>
-		<event name="create">
-			<desc>triggered when a text input is created
-				<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
-			<argument name="ui" type="Object">
-				<desc></desc>
-			</argument>
-			</desc>
-		</event>
+		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</events>
 	<methods>
-		<method name="enable">
-			<desc>enable a disabled text input.
-			</desc>
-		</method>
-		<method name="disable">
-			<desc>disable a text input.
-			</desc>
-		</method>
+		<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="refresh">
 			<desc>Refresh a text input.
 				<p>This method is provided by the autogrow extension, and it sets the height of the <code>textarea</code> element based on its contents. You should call this method when the <code>textarea</code> element becomes visible to make sure that its initial height matches its contents.</p>
