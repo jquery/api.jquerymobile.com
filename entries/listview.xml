@@ -157,72 +157,17 @@ $( "#mylist" ).listview( "refresh" );
 	</longdesc>
 	<added>1.0</added>
 	<options>
-		<option name="countTheme" default='"c"' example-value='"a"'>
-			<desc>Sets the color scheme (swatch) for list item count bubbles. It accepts a single letter from a-z that maps to one of the swatches included in your theme.
-				<p>This option is also exposed as a data attribute: <code>data-count-theme="a"</code>.</p>
-			</desc>
-			<type name="String" />
-		</option>
-		<option name="dividerTheme" default='"b"' example-value='"a"'>
+		<option name="dividerTheme" default='null, inherited from parent' example-value='"b"'>
 			<desc>Sets the color scheme (swatch) for list dividers. It accepts a single letter from a-z that maps to one of the swatches included in your theme.
-				<p>This option is also exposed as a data attribute: <code>data-divider-theme="a"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-divider-theme="b"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="filter" default="false" example-value="true">
-			<desc>Adds a search filter bar to listviews.
-				<p>This option is also exposed as a data attribute: <code>data-filter="true"</code>.</p>
-			</desc>
-			<type name="Boolean" />
-		</option>
-		<option name="filterCallback" default="n/a">
-			<desc>The function to determine which rows to hide when the search filter textbox changes. The function accepts two arguments -- the text of the list item (or data-filtertext value if present), and the search string. Return true to hide the item, false to leave it visible.
-<pre><code><![CDATA[
-$( document ).on( "mobileinit", function() {
-	$.mobile.listview.prototype.options.filterCallback = function( text, searchValue ) {
-		// only show items that *begin* with the search string
-		return text.toLowerCase().substring( 0, searchValue.length ) !== searchValue;
-	};
-});
-]]></code></pre>
-			</desc>
-			<type name="Function" />
-		</option>
-		<option name="filterPlaceholder" default='"Filter items..."'  example-value='Search..."'>
-			<desc>The placeholder text used in search filter bars.
-				<p>This option is also exposed as a data attribute: <code>data-filter-placeholder="Search..."</code>.</p>
-			</desc>
-			<type name="String" />
-		</option>
-		<option name="filterTheme" default='"c"' example-value='"a"'>
-			<desc>Sets the color scheme (swatch) for the search filter bar. It accepts a single letter from a-z that maps to one of the swatches included in your theme.
-				<p>This option is also exposed as a data attribute: <code>data-filter-theme="a"</code>.</p>
-			</desc>
-			<type name="String" />
-		</option>
-		<option name="headerTheme" default='"c"' example-value='"a"'>
-			<desc>Sets the color scheme (swatch) for headers of nested list sub pages. It accepts a single letter from a-z that maps to one of the swatches included in your theme.
-				<p>This option is also exposed as a data attribute: <code>data-header-theme="a"</code>.</p>
-			</desc>
-			<deprecated>1.3</deprecated>
-			<type name="String" />
-
-		</option>
-		<option name="icon" default='"arrow-r"' example-value='"star"'>
+		<option name="icon" default='"carat-r"' example-value='"star"'>
 			<desc>Applies an icon from the icon set to all linked list buttons.
 				<p>This option is also exposed as a data attribute: <code>data-icon="star"</code>.</p>
 			</desc>
 			<type name="String" />
-		</option>
-		<option name="initSelector" default=":jqmData(role='listview')">
-			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as listviews.
-<pre><code><![CDATA[
-$( document ).on( "mobileinit", function() {
-	$.mobile.listview.prototype.options.initSelector = ".mylistview";
-});
-]]></code></pre>
-			</desc>
-			<type name="CSS selector string" />
 		</option>
 		<option name="inset" default="false" example-value="true">
 			<desc>Adds inset list styles.
@@ -230,22 +175,22 @@ $( document ).on( "mobileinit", function() {
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="splitIcon" default='"arrow-r"' example-value='"star"'>
+		<option name="splitIcon" default='"carat-r"' example-value='"star"'>
 			<desc>Applies an icon from the icon set to all split list buttons.
 				<p>This option is also exposed as a data attribute: <code>data-split-icon="star"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="splitTheme" default='"b"' example-value='"a"'>
+		<option name="splitTheme" default='null, inherited from parent' example-value='"b"'>
 			<desc>Sets the color scheme (swatch) for split list buttons. It accepts a single letter from a-z that maps to one of the swatches included in your theme.
-				<p>This option is also exposed as a data attribute: <code>data-split-theme="a"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-split-theme="b"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="theme" default="null, inherited from parent" example-value='"a"'>
+		<option name="theme" default="null, inherited from parent" example-value='"b"'>
 			<desc>Sets the color scheme (swatch) for this widget. It accepts a single letter from a-z that maps to one of the swatches included in your theme. By default, it will inherit the same swatch color as its parent container if not explicitly set.
 				<p>Possible values: swatch letter (a-z).</p>
-				<p>This option is also exposed as a data attribute: <code>data-theme="a"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-theme="b"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>

@@ -69,9 +69,9 @@
 		<p>To provide a stronger visual connection between the collapsible header and content, add the <code>data-content-theme</code> attribute to the wrapper and specify a theme swatch letter. This applies the border and background color of the swatch to the content block and changes the corner rounding to square off the bottom of the header and round the bottom of the content block instead to visually group these elements.</p>
 
 <pre><code><![CDATA[
-<div data-role="collapsible" data-content-theme="a">
+<div data-role="collapsible" data-content-theme="b">
 	<h3>Header</h3>
-	<p>I'm the collapsible content with a themed content block set to "a".</p>
+	<p>I'm the collapsible content with a themed content block set to "b".</p>
 </div>
 ]]></code></pre>
 
@@ -82,9 +82,9 @@
 		<p>To set the theme on a collapsible header button, add the <code>data-theme</code> attribute to the wrapper and specify a swatch letter. Note that you can mix and match swatch letters between the header and content with these theme attributes.</p>
 
 <pre><code><![CDATA[
-<div data-role="collapsible" data-theme="a" data-content-theme="a">
-	<h3>Header swatch A</h3>
-	<p>I'm the collapsible content with a themed content block set to "a".</p>
+<div data-role="collapsible" data-theme="b" data-content-theme="b">
+	<h3>Header swatch B</h3>
+	<p>I'm the collapsible content with a themed content block set to "b".</p>
 </div>
 ]]></code></pre>
 
@@ -204,11 +204,11 @@
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="theme" default="null, inherited from parent" example-value='"a"'>
+		<option name="theme" default="null, inherited from parent" example-value='"b"'>
 			<desc>Sets the color scheme (swatch) for the collapsible. It accepts a single letter from a-z that maps to the swatches included in your theme.
 				<p>If the value is unset for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.</p>
 				<p>Possible values: swatch letter (a-z).</p>
-				<p>This option is also exposed as a data attribute: <code>data-theme="a"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-theme="b"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>

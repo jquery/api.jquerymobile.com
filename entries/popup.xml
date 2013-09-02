@@ -55,10 +55,10 @@ $( document ).on( "pageinit", function() {
 		<p>Here is an example of a 3rd party video player embedded in a popup:
 		<iframe src="/resources/popup/example4.html" style="width:100%;height:390px;border:0px"></iframe></p>
 
-		<p>The markup is an iframe inside a popup container. The popup will have a 15 pixels padding because of class <code>ui-content</code> and a one pixel border because the framework will add class <code>ui-body-d</code> to the popup.</p>
+		<p>The markup is an iframe inside a popup container. The popup will have a 15 pixels padding because of class <code>ui-content</code> and a one pixel border because the framework will add class <code>ui-body-a</code> to the popup.</p>
 
 <pre><code><![CDATA[
-<div data-role="popup" id="popupVideo" data-overlay-theme="a" data-theme="d" data-tolerance="15,15" class="ui-content">
+<div data-role="popup" id="popupVideo" data-overlay-theme="b" data-theme="a" data-tolerance="15,15" class="ui-content">
 
     <iframe src="http://player.vimeo.com/video/41135183" width="497" height="298" seamless></iframe>
 
@@ -69,9 +69,9 @@ $( document ).on( "pageinit", function() {
 
 		<p>Next, bind to the <code>popupbeforeposition</code> event to set the desired size of the iframe when the popup is shown or when the window is resized (e.g. orientation change). For the iframe examples on this page a custom function <code>scale()</code> is used to scale down the iframe to fit smaller screens. Expand the section below to view the code of this function.</p>
 
-		<div data-role="collapsible" data-content-theme="d">
-		<h3><code>scale()</code></h3>
-		<p>The window width and height are decreased by 30 to take the tolerance of 15 pixels at each side into account.</p>
+		<div data-role="collapsible" data-content-theme="a">
+			<h3><code>scale()</code></h3>
+			<p>The window width and height are decreased by 30 to take the tolerance of 15 pixels at each side into account.</p>
 
 <pre><code><![CDATA[
 function scale( width, height, padding, border ) {
@@ -100,7 +100,7 @@ function scale( width, height, padding, border ) {
     };
 };
 ]]></code></pre>
-		<p><strong>Note:</strong> This function is not part of the framework. Copy the code into your script to use it.</p>
+			<p><strong>Note:</strong> This function is not part of the framework. Copy the code into your script to use it.</p>
 		</div>
 
 		<p>When the popup is closed the width and height should be set back to 0. You can do this by binding to the <code>popupafterclose</code> event.</p>
@@ -141,9 +141,9 @@ $( document ).on( "pageinit", function() {
 		<p>This is the markup of the popup including a right close button:</p>
 
 <pre><code><![CDATA[
-<div data-role="popup" id="popupMap" data-overlay-theme="a" data-theme="a" data-corners="false" data-tolerance="15,15">
+<div data-role="popup" id="popupMap" data-overlay-theme="b" data-theme="b" data-corners="false" data-tolerance="15,15">
 
-    <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+    <a href="#" data-rel="back" data-role="button" data-theme="b" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
 
     <iframe src="map.html" width="480" height="320" seamless></iframe>
 
@@ -152,7 +152,7 @@ $( document ).on( "pageinit", function() {
 
 		<p>Expand the section below to view the source of the iframe.</p>
 
-		<div data-role="collapsible" data-content-theme="d">
+		<div data-role="collapsible" data-content-theme="a">
 			<h3><code>map.html</code></h3>
 <pre><code><![CDATA[
 <!DOCTYPE html>
@@ -196,7 +196,7 @@ $( document ).on( "pageinit", function() {
 ]]></code></pre>
 		</div>
 
-		<p>Setting the size of the iframe is done exactly the same as for the video example, with one exception. You should also set the width and height of the div that contains the map to prevent the page to break on platforms like Android 2.3. In this example the ID of this div is <code>#map_canvas</code>.</p>
+		<p>Setting the size of the iframe is done exactly the same as for the video example, with one exception. You should also set the width and height of the div that contains the map to prevent the page from breaking on platforms like Android 2.3. In this example the ID of this div is <code>#map_canvas</code>.</p>
 
 		<p>This is the complete script and the link to open the map popup:</p>
 
@@ -231,56 +231,6 @@ $( document ).on( "pageinit", function() {
                 .css( { "width": 0, "height" : 0 } );
         }
     });
-});
-]]></code></pre>
-
-		<h2>Overlay panels</h2>
-
-		<p>Taking customization further, here is an example of a popup that has been customized to look like a vertical panel with three mini buttons:
-		<iframe src="/resources/popup/example6.html" style="width:100%;height:390px;border:0px"></iframe></p>
-
-		<p>Here is the HTML markup for the button and panel:</p>
-
-<pre><code><![CDATA[
-<a href="#popupPanel" data-rel="popup" data-transition="slide" data-position-to="window" data-role="button">Open panel</a>
-
-<div data-role="popup" id="popupPanel" data-corners="false" data-theme="none" data-shadow="false" data-tolerance="0,0">
-
-    <button data-theme="a" data-icon="back" data-mini="true">Back</button>
-    <button data-theme="a" data-icon="grid" data-mini="true">Menu</button>
-    <button data-theme="a" data-icon="search" data-mini="true">Search</button>
-
-</div>
-]]></code></pre>
-
-		<p>To style the panel, and attach it to the right edge, the following CSS is used. Note that <code>#popupPanel-popup</code> is the ID of the container div generated by the framework.</p>
-
-<pre><code><![CDATA[
-#popupPanel-popup {
-    right: 0 !important;
-    left: auto !important;
-}
-#popupPanel {
-    width: 200px;
-    border: 1px solid #000;
-    border-right: none;
-    background: rgba(0,0,0,.5);
-    margin: -1px 0;
-}
-#popupPanel .ui-btn {
-    margin: 2em 15px;
-}
-]]></code></pre>
-
-		<p>Because the popup container is positioned absolute, you can't make the panel full height with <code>height:100%;</code>. This small script sets the height of the popup to the actual screen height.</p>
-
-<pre><code><![CDATA[
-$( "#popupPanel" ).on({
-    popupbeforeposition: function() {
-        var h = $( window ).height();
-
-        $( "#popupPanel" ).css( "height", h );
-    }
 });
 ]]></code></pre>
 
@@ -373,7 +323,7 @@ $( "#myPopupDiv" ).popup( "close" )
 		<p>The <code>data-overlay-theme</code> will never be set, and the popup's background, although always present when the popup is shown, will be completely transparent, unless explicitly set using for example <code>data-overlay-theme=&quot;a&quot;</code>. In this case, the background will fade in, partially obscuring the rest of the window, to further direct attention to the popup. Here is an example of an explicitly themed popup:</p>
 
 <pre><code><![CDATA[
-<div id="both" data-role="popup" data-theme="e" data-overlay-theme="a" class="ui-content">
+<div id="both" data-role="popup" data-theme="b" data-overlay-theme="a" class="ui-content">
   ...Popup contents...
 </div>
 ]]></code></pre>
@@ -459,21 +409,10 @@ $( document ).on( "pageinit", function() {
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="initSelector"  default='":jqmData(role=&#39;popup&#39;)"'>
-			<desc>
-				<p>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as popups. To change which elements are initialized, bind this option to the mobileinit event:</p>
-<pre><code><![CDATA[
-$( document ).on( "mobileinit", function() {
-	$.mobile.popup.prototype.options.initSelector = ".mypopup";
-});
-]]></code></pre>
-			</desc>
-			<type name="CSS selector string" />
-		</option>
-		<option name="overlayTheme" default="null" example-value='"a"'>
+		<option name="overlayTheme" default="null" example-value='"b"'>
 			<desc>
 				<p>Sets the color scheme (swatch) for the popup background, which covers the entire window. If not explicitly set, the background will be transparent.</p>
-				<p>This option is also exposed as a data attribute: <code>data-overlay-theme="a"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-overlay-theme="b"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
@@ -503,10 +442,10 @@ $( document ).on( "mobileinit", function() {
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="theme" default="null, inherited from parent" example-value='"a"'>
+		<option name="theme" default="null, inherited from parent" example-value='"b"'>
 			<desc><p>Sets the color scheme (swatch) for the popup contents. Unless explicitly set to 'none', the theme for the popup will be assigned the first time the popup is shown by inheriting the page theme or, failing that, by the hard-coded value 'c'. If you set it to 'none', the popup will not have any theme at all, and will be transparent. </p>
 				<p>Possible values: swatch letter (a-z).</p>
-				<p>This option is also exposed as a data attribute: <code>data-theme="a"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-theme="b"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
@@ -515,7 +454,7 @@ $( document ).on( "mobileinit", function() {
 				<p>Sets the minimum distance from the edge of the window for the corresponding edge of the popup. By default, the values above will be used for the distance from the top, right, bottom, and left edge of the window, respectively.</p>
 				<p>You can specify a value for this option in one of four ways:
 					<ol>
-						<li>Empty string, null, or some other falsey value. This will cause the popup to revert to the above default values.</li>
+						<li>Empty string, null, or some other falsy value. This will cause the popup to revert to the above default values.</li>
 						<li>A single number. This number will be used for all four edge tolerances.</li>
 						<li>Two numbers separated by a comma. The first number will be used for tolerances from the top and bottom edge of the window, and the second number will be used for tolerances from the left and right edge of the window.</li>
 						<li>Four comma-separated numbers. The first will be used for tolerance from the top edge, the second for tolerance from the right edge, the third for tolerance from the bottom edge, and the fourth for tolerance from the left edge.</li>

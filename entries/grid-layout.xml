@@ -35,7 +35,7 @@
 
 <pre><code><![CDATA[
 <fieldset class="ui-grid-a">
-	<div class="ui-block-a"><button type="submit" data-theme="c">Cancel</button></div>
+	<div class="ui-block-a"><button type="submit" data-theme="a">Cancel</button></div>
 	<div class="ui-block-b"><button type="submit" data-theme="b">Submit</button></div>
 </fieldset>
 ]]></code></pre>
@@ -45,8 +45,8 @@
 
 <pre><code><![CDATA[
 <div class="ui-grid-a">
-	<div class="ui-block-a"><button type="button" data-theme="c">Previous</button></div>
-	<div class="ui-block-b"><button type="button" data-theme="c">Next</button></div>
+	<div class="ui-block-a"><button type="button" data-theme="a">Previous</button></div>
+	<div class="ui-block-b"><button type="button" data-theme="a">Next</button></div>
 </div>
 <div class="ui-grid-solo">
 	<div class="ui-block-a"><button type="button" data-theme="b">More</button></div>

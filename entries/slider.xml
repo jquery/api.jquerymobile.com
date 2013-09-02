@@ -85,7 +85,7 @@ $( "input" ).slider();
 <pre><code><![CDATA[
 <div data-role="fieldcontain">
 	<label for="slider-3">Input slider:</label>
-	<input type="range" name="slider-3" id="slider-3" value="25" min="0" max="100" data-theme="a" data-track-theme="b">
+	<input type="range" name="slider-3" id="slider-3" value="25" min="0" max="100" data-theme="b" data-track-theme="a">
 </div>
 ]]></code></pre>
 
@@ -167,16 +167,16 @@ $( "input" ).slider();
 <pre><code><![CDATA[
 <div data-role="fieldcontain">
 	<label for="flip-3">Flip switch:</label>
-	<select name="flip-3" id="flip-3" data-role="slider" data-theme="a">
+	<select name="flip-3" id="flip-3" data-role="slider" data-theme="b">
 		<option value="no">No</option>
 		<option value="yes">Yes</option>
 	</select>
 </div>
 ]]></code></pre>
 
-		<p>This results in a switch with the swatch "a" colors for the handle. Note that the lefthand "on" state gets the active state color.
+		<p>This results in a switch with the swatch "b" colors for the handle. Note that the lefthand "on" state gets the active state color.
 		<iframe src="/resources/switch/example5.html" style="width:100%;height:90px;border:0px"></iframe></p>
-		<p>Here is a swatch "e" variation:
+		<p>Here is a swatch "a" variation:
 		<iframe src="/resources/switch/example6.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
 		<p>It is also possible to theme the track of the flip switch by adding the <code>data-track-theme</code> attribute and specifying the chosen swatch letter on the <code>select</code>.</p>
@@ -185,7 +185,7 @@ $( "input" ).slider();
 <pre><code><![CDATA[
 <div data-role="fieldcontain">
 	<label for="flip-5">Flip switch:</label>
-	<select name="flip-5" id="flip-5" data-role="slider" data-theme="c" data-track-theme="a">
+	<select name="flip-5" id="flip-5" data-role="slider" data-theme="a" data-track-theme="b">
 		<option value="no">No</option>
 		<option value="yes">Yes</option>
 	</select>
@@ -223,7 +223,7 @@ $( "input" ).slider();
 <pre><code><![CDATA[
 <div data-role="fieldcontain">
 	<label for="flip-5">Flip switch:</label>
-	<select name="flip-5" id="flip-5" data-role="slider" data-theme="c" data-track-theme="a">
+	<select name="flip-5" id="flip-5" data-role="slider" data-theme="a" data-track-theme="b">
 		<option value="no">No</option>
 		<option value="yes">Yes</option>
 	</select>

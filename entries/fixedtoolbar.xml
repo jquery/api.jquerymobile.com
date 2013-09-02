@@ -194,7 +194,7 @@ $( document ).on( "mobileinit", function() {
 		<desc>A basic example of a page with fixed toolbars.</desc>
 		<html><![CDATA[
 <div data-role="page" id="page1">
-	<div data-role="header" data-position="fixed" data-theme="a">
+	<div data-role="header" data-position="fixed" data-theme="b">
 		<h1>Fixed Header</h1>
 	</div>
 	<div data-role="content" >
@@ -207,7 +207,7 @@ $( document ).on( "mobileinit", function() {
 		<p>If you tap the screen while in the middle of the page (i.e. neither at the top nor the bottom of the page, the visibility of the toolbars will toggle</p>
 		<p></p>
 	</div>
-    <div data-role="footer" data-theme="a" data-position="fixed">
+    <div data-role="footer" data-theme="b" data-position="fixed">
 		<h1>Fixed Footer</h1>
 	</div>
 </div>

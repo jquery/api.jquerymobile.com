@@ -121,11 +121,11 @@ $( document ).on( "mobileinit", function() {
 			</desc>
 			<type name="CSS selector string" />
 		</option>
-		<option name="overlayTheme" default='"a"' example-value='"e"'>
+		<option name="overlayTheme" default='"a"' example-value='"b"'>
 			<desc>
 				<p>Dialogs appear to be floating above an overlay layer. This overlay adopts the swatch A content color by default, but the data-overlay-theme attribute can be added to the page wrapper to set the overlay to any swatch letter.</p>
 				<p> Possible values: swatch letter (a-z)</p>
-				<p>This option is also exposed as a data attribute: <code>data-overlay-theme="e"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-overlay-theme="b"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>

@@ -27,10 +27,10 @@
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="theme" default="c" example-value='"a"'>
+		<option name="theme" default="a" example-value='"b"'>
 			<desc>
 				<p>Sets the swatch that will be used to draw the page.</p>
-				<p>This option is also exposed as a data attribute: <code>data-theme="a"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-theme="b"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
