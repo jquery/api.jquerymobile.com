@@ -150,6 +150,7 @@
 			</desc>
 			<type name="Boolean" />
 		</option>
+		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="enhanced" default="false" example-value="true">
 			<desc>Indicates that the markup necessary for a collapsible widget has been provided as part of the original markup.
 				<p>This option is also exposed as a data attribute:<code>data-enhanced="true"</code>.</p>
@@ -207,16 +208,7 @@
 		</option>
 	</options>
 	<events>
-		<event name="create" type="create">
-			<desc>Triggered when a collapsible is created
-			</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
-			<argument name="ui" type="Object">
-				<desc></desc>
-			</argument>
-		</event>
+		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<event name="collapse">
 			<desc>Triggered when a collapsible is collapsed
 			</desc>
@@ -239,6 +231,10 @@
 		</event>
 	</events>
 	<methods>
+		<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
 	<example>
 		<desc>A basic example of a collapsible content block.</desc>

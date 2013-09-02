@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<option name="disabled" default="false" example-value="true">
+	<desc>
+		Disables the <placeholder name="name"/> if set to <code>true</code>.
+		<p>This option is also exposed as a data attribute: <code>data-disabled="true"</code>.</p>
+	</desc>
+	<type name="Boolean" />
+</option>

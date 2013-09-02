@@ -233,6 +233,7 @@ $( "a" ).buttonMarkup({ corners: false });
 			</desc>
 			<type name="Boolean" />
 		</option>
+		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="enhanced" default="false" example-value="true">
 			<desc>Indicates that the markup necessary for a button widget has been provided as part of the original markup.</desc>
 <pre><code>
@@ -327,29 +328,13 @@ $( "a" ).buttonMarkup({ theme: "b" });
 		</option>
 	</options>
 	<events>
-		<event name="create">
-			<desc>triggered when a form button is created</desc>
-			<argument name="event" type="Event">
-			</argument>
-			<argument name="ui" type="Object">
-			</argument>
-		</event>
+		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</events>
 	<methods>
-		<method name="enable">
-			<desc>enable a disabled form button.
-<pre><code>
-$( "[type='submit']" ).button( "enable" );
-</code></pre>
-			</desc>
-		</method>
-		<method name="disable">
-			<desc>disable a form button.
-<pre><code>
-$( "[type='submit']" ).button( "disable" );
-</code></pre>
-			</desc>
-		</method>
+		<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="refresh">
 			<desc>update the form button.
 			<p>If you manipulate a form button via JavaScript, you must call the refresh method on it to update the visual styling.</p>

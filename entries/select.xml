@@ -242,6 +242,7 @@ $( "select" ).selectmenu();
 			</desc>
 			<type name="Boolean" />
 		</option>
+		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="icon" default='"arrow-down"' example-value='"star"'>
 			<desc>Replaces the default icon "arrow-down" with an icon from the icon set. Setting this attribute to "false" suppresses the icon.
 
@@ -329,33 +330,21 @@ $( document ).on( "mobileinit", function() {
 		</option>
 	</options>
     <events>
- 		<event name="create">
-			<desc>triggered when a text input is created</desc>
-			<argument name="event" type="Event">
-				<desc></desc>
-			</argument>
-			<argument name="ui" type="Object">
-				<desc></desc>
-			</argument>
-		</event>
+		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</events>
 	<methods>
 		<method name="close">
 			<desc>close an open select menu.
 			</desc>
 		</method>
-		<method name="enable">
-			<desc>enable a disabled text input.
-			</desc>
-		</method>
-		<method name="disable">
-			<desc>disable a text input.
-			</desc>
-		</method>
+		<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="open">
 			<desc>open a closed select menu (custom menus only).
 			</desc>
 		</method>
+		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="refresh">
 			<desc>
 			</desc>

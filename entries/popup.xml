@@ -368,6 +368,7 @@ $( document ).on( "pageinit", function() {
 			</desc>
 			<type name="Boolean" />
 		</option>
+		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="dismissible" default="true" example-value="false">
 			<desc>
 				<p>Sets whether clicking outside the popup or pressing Escape while the popup is open will close the popup.</p>
@@ -469,21 +470,22 @@ $( document ).on( "pageinit", function() {
 				<p>This event is triggered when the popup has completed preparations for appearing on the screen, when the document is resized and the popup needs to move to another location, or when the <code>reposition()</code> method is called. At this point the popup has not yet started the opening animations and it has not yet calculated the coordinates where it will appear on the screen. Handling this event gives an opportunity to modify the content of the popup before it appears on the screen. For example, the content can be scaled or parts of it can be hidden or removed if it is too wide or too tall. You can also modify the <code>options</code> parameter to affect the popup's placement. The properties inside the <code>options</code> object available for modification are the same as those used by the <code>reposition</code> method.</p>
 			</desc>
 		</event>
-		<event name="create">
-			<desc>triggered when a popup is created</desc>
-			<argument name="event" type="Event">
-			</argument>
-			<argument name="ui" type="Object">
-			</argument>
-		</event>
+		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</events>
 	<methods>
+		<method name="close">
+			<desc>Closes the popup.
+			</desc>
+		</method>
+		<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="open" example-params="options">
 			<desc>display the popup using the specified options.
 
-				<p>If <code>x</code> or <code>y</code> is missing, and no jQuery selector is given as the value of <code>positionTo</code>, the middle of the window will be used.</p>
-				<p><code>transition</code> can be used to override the popup's own <code>transition</code> option. This will result in the popup opening via the transition specified in the call, but the popup's <code>transition</code> option will not be updated.</p>
-				<p>Similarly, <code>data-position-to</code> can be used to override the popup's default positioning without modifying the value of the popup's <code>positionTo</code> option. The values available for <code>positionTo</code> are the same as those for the popup's <a href="#option-positionTo"><code>positionTo</code> option</a>.</p>
+				<p>If the <code>x</code> or <code>y</code> option is missing, and no jQuery selector is given as the value of the <code>positionTo</code> option, the middle of the window will be used.</p>
+				<p>The <code>transition</code> option can be used to override the popup's own <code>transition</code> option. This will result in the popup opening via the transition specified in the call, but the popup's <code>transition</code> option will not be updated.</p>
+				<p>Similarly, the <code>positionTo</code> option can be used to override the popup's default positioning without modifying the value of the popup's <code>positionTo</code> option. The values available for <code>positionTo</code> are the same as those for the popup's <a href="#option-positionTo"><code>positionTo</code> option</a>.</p>
 			</desc>
 				<argument name="options" type="Object">
 					<property name="x" default=''>
@@ -494,16 +496,17 @@ $( document ).on( "pageinit", function() {
 						<desc>The y-coordinate where the popup is to be displayed.</desc>
 						<type name="String"/>
 					</property>
-					<property name="transition" default='"none"'>
+					<property name="transition" default=''>
 						<desc>The transition to use during the opening sequence.</desc>
 						<type name="String"/>
 					</property>
-					<property name="positionTo" default='"origin"'>
+					<property name="positionTo" default=''>
 						<desc>The positioning to use.</desc>
 						<type name="String"/>
 					</property>
 				</argument>
 		</method>
+		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="reposition" example-params="options">
 			<desc>Change the on-screen position of the popup. See the <code>open()</code> method for a description of the keys recognized from the <code>options</code> object.</desc>
 				<argument name="options" type="Object">
@@ -520,10 +523,6 @@ $( document ).on( "pageinit", function() {
 						<type name="String"/>
 					</property>
 				</argument>
-		</method>
-		<method name="close">
-			<desc>Closes the popup.
-			</desc>
 		</method>
 	</methods>
 	<example>
