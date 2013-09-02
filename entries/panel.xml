@@ -132,7 +132,7 @@ $( "#mypanel" ).trigger( "updatelayout" );
 
 			<p>Note that adding padding, borders, or margins directly to the panel container will alter the overall dimensions and could cause the positioning and animation to be affected. To avoid this, apply styles to the panel content wrapper (<code>.ui-pannel-inner</code>).</p>
 
-			<p>Other than the theme background, width and 100% height styles, panels have very little styling on their own. The default theme for panels is "c". You can set a different theme for the panel by adding a <code>data-theme</code> to the panel container, or set <code>data-theme="none"</code> and add your own classes to style it as needed.</p>
+			<p>Other than the theme background, width and 100% height styles, panels have very little styling on their own. The default theme for panels is "a". You can set a different theme for the panel by adding a <code>data-theme</code> to the panel container, or set <code>data-theme="none"</code> and add your own classes to style it as needed.</p>
 
 			<p>The framework applies the theme that is used for the page to the content wrapper. Before opening a panel that has display mode reveal or push, the page theme will be set to the same theme that is used for the panel. This is done to mask that most mobile browsers haven't finished painting the panel background when the animation to open it has already started. If you use a background image for a page, you have to set it for the <code>ui-body-*</code> class of the theme that you use for the page so it will be used as background of the content wrapper.</p>
 
@@ -232,10 +232,10 @@ $( document ).on( "mobileinit", function() {
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="theme" default='"c"' example-value='"a"'>
+		<option name="theme" default='"a"' example-value='"b"'>
 			<desc>Sets the color scheme (swatch) for the panel. It accepts a single letter from a-z that maps to the swatches included in your theme.
 				<p>Possible values: swatch letter (a-z).</p>
-				<p>This option is also exposed as a data attribute: <code>data-theme="a"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-theme="b"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
@@ -388,7 +388,7 @@ $( document ).on( "mobileinit", function() {
 				<h3>Default panel options</h3>
 				<p>This panel has all the default options: positioned on the left with the reveal display mode. The panel markup is <em>before</em> the header, content and footer in the source order.</p>
 				<p>To close, click off the panel, swipe left or right, hit the Esc key, or use the button below:</p>
-				<a href="#demo-links" data-rel="close" data-role="button" data-theme="c" data-icon="delete" data-inline="true">Close panel</a>
+				<a href="#demo-links" data-rel="close" data-role="button" data-theme="a" data-icon="delete" data-inline="true">Close panel</a>
 			</div><!-- /content wrapper for padding -->
 
 		</div><!-- /defaultpanel -->]]></html>

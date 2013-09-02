@@ -35,7 +35,7 @@
 
 <pre><code>
 &lt;fieldset class="ui-grid-a"&gt;
-	&lt;div class="ui-block-a"&gt;&lt;button type="submit" data-theme="c"&gt;Cancel&lt;/button&gt;&lt;/div&gt;
+	&lt;div class="ui-block-a"&gt;&lt;button type="submit" data-theme="a"&gt;Cancel&lt;/button&gt;&lt;/div&gt;
 	&lt;div class="ui-block-b"&gt;&lt;button type="submit" data-theme="b"&gt;Submit&lt;/button&gt;&lt;/div&gt;
 &lt;/fieldset&gt;
 </code></pre>
@@ -45,8 +45,8 @@
 
 <pre><code>
 &lt;div class="ui-grid-a"&gt;
-	&lt;div class="ui-block-a"&gt;&lt;button type="button" data-theme="c"&gt;Previous&lt;/button&gt;&lt;/div&gt;
-	&lt;div class="ui-block-b"&gt;&lt;button type="button" data-theme="c"&gt;Next&lt;/button&gt;&lt;/div&gt;
+	&lt;div class="ui-block-a"&gt;&lt;button type="button" data-theme="a"&gt;Previous&lt;/button&gt;&lt;/div&gt;
+	&lt;div class="ui-block-b"&gt;&lt;button type="button" data-theme="a"&gt;Next&lt;/button&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="ui-grid-solo"&gt;
 	&lt;div class="ui-block-a"&gt;&lt;button type="v" data-theme="b"&gt;More&lt;/button&gt;&lt;/div&gt;

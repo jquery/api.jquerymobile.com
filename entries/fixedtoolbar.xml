@@ -195,7 +195,7 @@ $( document ).on( "mobileinit", function() {
 	</methods>
 	<example>
 		<desc>A basic example of a page with fixed toolbars.</desc>
-		<html><![CDATA[<div data-role="header" <div data-role="header" data-position="fixed" data-theme="a">
+		<html><![CDATA[<div data-role="header" <div data-role="header" data-position="fixed" data-theme="b">
 		<h1>Fixed Header</h1>
 	</div>
 	<div data-role="content" >
@@ -210,7 +210,7 @@ $( document ).on( "mobileinit", function() {
 		<p></p>
 
 	</div>
-    <div data-role="footer" data-theme="a" data-position="fixed">
+    <div data-role="footer" data-theme="b" data-position="fixed">
 		<h1>Fixed Footer</h1>
 	</div>]]></html>
 	</example>

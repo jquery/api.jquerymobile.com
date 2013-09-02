@@ -85,7 +85,7 @@ $( "input" ).slider();
 <pre><code>
 &lt;div data-role="fieldcontain"&gt;
 	&lt;label for="slider-3"&gt;Input slider:&lt;/label&gt;
-	&lt;input type="range" name="slider-3" id="slider-3" value="25" min="0" max="100" data-theme="a" data-track-theme="b" /&gt;
+	&lt;input type="range" name="slider-3" id="slider-3" value="25" min="0" max="100" data-theme="b" data-track-theme="a" /&gt;
 &lt;/div&gt;
 </code></pre>
 
@@ -167,16 +167,16 @@ $( "input" ).slider();
 <pre><code>
 &lt;div data-role=&quot;fieldcontain&quot;&gt;
 	&lt;label for=&quot;flip-3&quot;&gt;Flip switch:&lt;/label&gt;
-	&lt;select name=&quot;flip-3&quot; id=&quot;flip-3&quot; data-role=&quot;slider&quot; data-theme=&quot;a&quot;&gt;
+	&lt;select name=&quot;flip-3&quot; id=&quot;flip-3&quot; data-role=&quot;slider&quot; data-theme=&quot;b&quot;&gt;
 		&lt;option value=&quot;no&quot;&gt;No&lt;/option&gt;
 		&lt;option value=&quot;yes&quot;&gt;Yes&lt;/option&gt;
 	&lt;/select&gt;
 &lt;/div&gt;
 </code></pre>
 
-		<p>This results in a switch with the swatch "a" colors for the handle. Note that the lefthand "on" state gets the active state color.
+		<p>This results in a switch with the swatch "b" colors for the handle. Note that the lefthand "on" state gets the active state color.
 		<iframe src="/resources/switch/example5.html" style="width:100%;height:90px;border:0px"></iframe></p>
-		<p>Here is a swatch "e" variation:
+		<p>Here is a swatch "a" variation:
 		<iframe src="/resources/switch/example6.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
 		<p>It is also possible to theme the track of the flip switch by adding the <code>data-track-theme</code> attribute and specifying the chosen swatch letter on the <code>select</code>.</p>
@@ -185,7 +185,7 @@ $( "input" ).slider();
 <pre><code>
 &lt;div data-role="fieldcontain"&gt;
 	&lt;label for="flip-5"&gt;Flip switch:&lt;/label&gt;
-	&lt;select name="flip-5" id="flip-5" data-role="slider" data-theme="c" data-track-theme="a"&gt;
+	&lt;select name="flip-5" id="flip-5" data-role="slider" data-theme="a" data-track-theme="b"&gt;
 		&lt;option value="no"&gt;No&lt;/option&gt;
 		&lt;option value="yes"&gt;Yes&lt;/option&gt;
 	&lt;/select&gt;
@@ -223,7 +223,7 @@ $( "input" ).slider();
 <pre><code>
 &lt;div data-role="fieldcontain"&gt;
 	&lt;label for="flip-5"&gt;Flip switch:&lt;/label&gt;
-	&lt;select name="flip-5" id="flip-5" data-role="slider" data-theme="c" data-track-theme="a"&gt;
+	&lt;select name="flip-5" id="flip-5" data-role="slider" data-theme="a" data-track-theme="b"&gt;
 		&lt;option value="no"&gt;No&lt;/option&gt;
 		&lt;option value="yes"&gt;Yes&lt;/option&gt;
 	&lt;/select&gt;
