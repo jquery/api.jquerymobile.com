@@ -133,24 +133,15 @@ $( "[type='submit']" ).button();
 			<iframe src="/resources/button/example16.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
 			<h3>Custom Icons</h3>
-			<p>To use custom icons, specify a <code>data-icon</code> value that has a unique name like <code>myapp-email</code> and the button plugin will generate a class by prefixing <code>ui-icon-</code> to the <code>data-icon</code> value and apply it to the button: <code>ui-icon-myapp-email</code>. </p>
-			<p>You can then write a CSS rule in your stylesheet that targets the <code>ui-icon-myapp-email</code> class to specify the icon background source. To maintain visual consistency with the rest of the icons, create a white icon 18x18 pixels saved as a PNG-8 with alpha transparency.</p>
-			<p>In this example, we're just pointing to a standalone icon image, but you could just as easily use an icon sprite and specify the positioning instead, just like the icon sprite we use in the framework.</p>
+			<p>To use custom icons, specify a <code>data-icon</code> value that has a unique name like <code>myapp-email</code> and the button plugin will generate a class by prefixing <code>ui-icon-</code> to the <code>data-icon</code> value and apply it to the button: <code>ui-icon-myapp-email</code>.</p>
+			<p>You can then write a CSS rule in your stylesheet that targets the <code>ui-icon-myapp-email:after</code> class to specify the icon background source. The framework contains an inline (data URI) SVG test and adds class <code>ui-nosvg</code> to the <code>html</code> element if this is not supported. If you are using SVG icons you can use this class to provide a fallback to external PNG icons.</p>
 
 <pre><code><![CDATA[
-.ui-icon-myapp-email {
-	background-image: url( "app-icon-email.png" );
+.ui-icon-myapp-email:after {
+	background-image: url('data:image/svg+xml;...');
 }
-]]></code></pre>
-
-			<p>This will create the standard resolution icon, but many devices now have very high resolution displays, like the retina display on the iPhone 4. To add a HD icon, create an icon that is 36x36 pixels (exactly double the 18 pixel size), and add second a rule that uses the <code>-webkit-min-device-pixel-ratio: 2</code> media query to target a rule only to high resolution displays. Specify the background image for the HD icon file and set the background size to 18x18 pixels which will fit the 36 pixel icon into the same 18 pixel space. The media query block can wrap multiple icon rules:</p>
-<pre><code><![CDATA[
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-	.ui-icon-myapp-email {
-		background-image: url( "app-icon-email-highres.png" );
-		background-size: 18px 18px;
-	}
-	...more HD icon rules go here...
+.ui-nosvg .ui-icon-myapp-email:after {
+	background-image: url( "app-icon-email.png" );
 }
 ]]></code></pre>
 
