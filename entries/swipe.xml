@@ -64,7 +64,7 @@ function( start, stop ) {
 		<desc>A simple example of the capturing and acting upon a swipe event</desc>
 <code><![CDATA[
 $(function(){
-	// Bind the swipeleftHandler callback function to the swipe event on div.box
+	// Bind the swipeHandler callback function to the swipe event on div.box
 	$( "div.box" ).on( "swipe", swipeHandler );
 
 	// Callback function references the event target and adds the 'swipe' class to it
