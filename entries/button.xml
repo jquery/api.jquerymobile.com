@@ -69,22 +69,22 @@ $( "[type='submit']" ).button();
 		</option>
 		<option name="icon" default="null" example-value='"star"'>
 			<desc>Applies an icon from the icon set.
-				<p><a href="/buttonMarkup/">.buttonMarkup()</a> contains a reference of all the icons available in the default theme.</p>
+				<p>The <a href="/buttonMarkup/">.buttonMarkup()</a> documentation contains a reference of all the icons available in the default theme.</p>
 				<p>This option is also exposed as a data attribute: <code>data-icon="star"</code>.</p>
 			</desc>
   		<type name="String" />
 		</option>
 		<option name="iconpos" default='"left"'>
 			<desc>Positions the icon in the button. Possible values: left, right, top, bottom, none, notext. The notext value will display an icon-only button with no text feedback.
-				<p>This option is also exposed as a data attribute: <code>data-iconpos="left"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-iconpos="right"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="iconshadow" default="true">
+		<option name="iconshadow" default="false">
 			<desc>
 				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0.</strong>
 				<p>Applies the theme shadow to the button's icon if set to true.</p>
-				<p>This option is also exposed as a data attribute: <code>data-iconshadow="false"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-iconshadow="true"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
@@ -113,7 +113,7 @@ $( "[type='submit']" ).button();
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="wrapperClass" default='""'>
+		<option name="wrapperClass" default="null">
 			<desc>Allows you to specify CSS classes to be set on the button's wrapper element.
 				<p>This option is also exposed as a data attribute: <code>data-wrapper-class="custom-class"</code>.</p>
 			</desc>
