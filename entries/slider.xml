@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="slider" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="slide">
+<entry name="slider" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="slide" init-selector="input[type='range'], :jqmData(type='range'), :jqmData(role='slider')">
 	<title>Slider Widget</title>
 	<desc>Creates a slider widget</desc>
 	<longdesc>
@@ -240,16 +240,7 @@ $( "input" ).slider();
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="initSelector"  default='"input[type=&#39;range&#39;], :jqmData(type=&#39;range&#39;), :jqmData(role=&#39;slider&#39;)"'>
-			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as sliders. To change which elements are initialized, bind this option to the mobileinit event:
-<pre><code><![CDATA[
-$( document ).on( "mobileinit", function() {
-  $.mobile.slider.prototype.options.initSelector = ".myslider";
-});
-]]></code></pre>
-			</desc>
-			<type name="CSS selector string" />
-		</option>
+		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="mini"  default="false" example-value="true">
 			<desc>Sets the size of the element to a more compact, mini version. This option is also exposed as a data attribute: data-mini="true"
 

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="table" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="table">
+<entry name="table" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="table" init-selector=":jqmData(role=&#39;table&#39;)">
 	<title>Table Widget</title>
 	<desc>Creates a responsive table</desc>
 	<longdesc>
@@ -80,16 +80,7 @@
 			<p>The classes option is only configurable via JavaScript because it expects an object literal value.</p></desc>
 			<type name="String" />
 		</option>
-		<option name="initSelector"  default='":jqmData(role=&#39;table&#39;)"'>
-			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as tables. To change which elements are initialized, bind this option to the mobileinit event:
-<pre><code><![CDATA[
-$( document ).on( "mobileinit", function() {
-	$.mobile.table.prototype.options.initSelector = ".mytable";
-});
-]]></code></pre>
-			</desc>
-			<type name="CSS selector string" />
-		</option>
+		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</options>
 	<events>
 		<event name="create">

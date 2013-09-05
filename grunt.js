@@ -38,7 +38,7 @@ grunt.initConfig({
 	watch: {
 		scripts: {
 			files: 'entries/*.xml',
-			tasks: ['build'],
+			tasks: ['wordpress-deploy'],
 			options: {
 				interrupt: true
 			}

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="fixedtoolbar" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="fixedtoolbar">
+<entry name="fixedtoolbar" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="fixedtoolbar" init-selector="">
 	<title>Fixedtoolbar Widget</title>
 	<desc>Creates a fixedtoolbar</desc>
 	<longdesc>

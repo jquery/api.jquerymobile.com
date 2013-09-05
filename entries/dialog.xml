@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="dialog" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="dialog">
+<entry name="dialog" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="dialog" init-selector=":jqmData(role=&#39;dialog&#39;)">
 	<title>Dialog Widget</title>
 	<desc>Opens content in an interactive overlay.</desc>
 	<longdesc>
@@ -110,17 +110,7 @@ $.mobile.changePage( "#myDialog", { role: "dialog" } );
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="initSelector"  default='":jqmData(role=&#39;dialog&#39;)"'>
-			<desc>
-				This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as dialogs. To change which elements are initialized, bind this option to the mobileinit event:
-<pre><code><![CDATA[
-$( document ).on( "mobileinit", function() {
-	$.mobile.dialog.prototype.options.initSelector = ".mydialog";
-});
-]]></code></pre>
-			</desc>
-			<type name="CSS selector string" />
-		</option>
+		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="overlayTheme" default='"a"' example-value='"b"'>
 			<desc>
 				<p>Dialogs appear to be floating above an overlay layer. This overlay adopts the swatch A content color by default, but the data-overlay-theme attribute can be added to the page wrapper to set the overlay to any swatch letter.</p>

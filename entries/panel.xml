@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="panel" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="panel">
+<entry name="panel" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="panel" init-selector=":jqmData(role=&#39;panel&#39;)">
 	<title>Panel Widget</title>
 	<desc>Creates a panel widget</desc>
 	<longdesc>
@@ -189,23 +189,14 @@ $( "#idofpanel" ).panel( "close" );
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="display" default='"reveal"'  example-value='"overlay"'>
+		<option name="display" default='"reveal"' example-value='"overlay"'>
 			<desc>The relationship of the panel to the page contents. Can either push the page over ("reveal"), re-flow the content to fit the panel content as a column ("push"), or sit over the content ("overlay").
 				<p>This option is also exposed as a data attribute:<code>data-display="push"</code> on the link that opens the panel.</p>
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="initSelector"  default='":jqmData(role=&#39;panel&#39;)"'>
-			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as panels. To change which elements are initialized, bind this option to the mobileinit event:
-<pre><code><![CDATA[
-$( document ).on( "mobileinit", function() {
-	$.mobile.panel.prototype.options.initSelector = ".mypanel";
-});
-]]></code></pre>
-			</desc>
-			<type name="CSS selector string" />
-		</option>
-		<option name="position" default='"left"'  example-value='"right"'>
+		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<option name="position" default='"left"' example-value='"right"'>
 			<desc>The side of the screen the panel appears on. Values can be "left" or "right".
 				<p>This option is also exposed as a data attribute:<code>data-position="right"</code> on the link that opens the panel.</p>
 			</desc>
