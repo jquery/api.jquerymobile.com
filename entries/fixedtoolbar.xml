@@ -63,7 +63,7 @@
 		<h3>Known issues in Android 2.2/2.3</h3>	
 		<p>Android 2.2/2.3's implementation of <code>position: fixed;</code> can, in conjunction with seemingly unrelated styles and markup patterns, cause a number of strange issues, particularly in the case of <code>position: absolute</code> elements inside of <code>position: fixed</code> elements. While we've done our best to work around a number of these unique bugs within the scope of the library, custom styles may cause a number of issues.</p>
 		<ul>
-			<li>Form elements elsewhere on the page—select menus in particular—can fail to respond to user interaction when an <em>empty</em> absolute positioned element is placed within a fixed position element. In rare cases—and specific to Android 2.2—this can cause <em>entire pages</em> to fail to respond to user interaction. This can seemingly be solved by adding any character to the absolute positioned element, including a non-breaking space, and in some cases even whitespace.</li>
+			<li>Form elements elsewhere on the page - select menus in particular - can fail to respond to user interaction when an <em>empty</em> absolute positioned element is placed within a fixed position element. In rare cases—and specific to Android 2.2—this can cause <em>entire pages</em> to fail to respond to user interaction. This can seemingly be solved by adding any character to the absolute positioned element, including a non-breaking space, and in some cases even whitespace.</li>
 			<li>The above-described issue can also be triggered by an absolute positioned image inside of a fixed position element, but <em>only</em> when that image is using something <em>other than its inherent dimensions</em>. If a height or width is specified on the image using CSS, or the image src is invalid (thus having no inherent height and width), this issue can occur. If an image that is inherently, say, 50x50 pixels is placed in a fixed element and left at its inherent dimensions, this issue does not seem to occur.</li>
 			<li>When a <code>position: fixed</code> element appears anywhere on a page, most 2D CSS transforms will fail. Oddly, only <code>translate</code> transforms seem unaffected by this. Even more oddly, this issue is solved by setting a CSS <code>opacity</code> of .9 or below on the parent of the fixed element.</li>
 			<li>Combinations of <code>position: fixed</code> and overflow properties are best avoided, as both have been known to cause unpredictable issues in older versions of Android OS.</li>
@@ -143,7 +143,7 @@ $( document ).on( "mobileinit", function() {
 			<type name="Function" />
 		</option>
 		<option name="initSelector"  default='":jqmData(position=&#39;fixed&#39;)"'>
-			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as collapsibles. To change which elements are initialized, bind this option to the mobileinit event:
+			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as fixed toolbars. To change which elements are initialized, bind this option to the mobileinit event:
 <pre><code>
 $( document ).on( "mobileinit", function() {
 	$.mobile.fixedtoolbar.prototype.options.initSelector = ".myselector";
