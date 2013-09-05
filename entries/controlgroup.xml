@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="controlgroup" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="controlgroup">
+<entry name="controlgroup" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="controlgroup" init-selector=":jqmData(role=&#39;controlgroup&#39;)">
 	<title>Controlgroup Widget</title>
 	<desc>Groups buttons together.</desc>
 	<longdesc>
@@ -44,6 +44,7 @@
 			</desc>
 			<type name="Boolean" />
 		</option>
+		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="mini" default="false" example-value="true">
 			<desc>
 				<p>If set to true, this will display a more compact version of the controlgroup that uses less vertical space. Possible values: true, false.</p>
@@ -64,16 +65,6 @@
 				<p>This option is also exposed as a data attribute: <code>data-type="horizontal"</code>.</p>
 			</desc>
 			<type name="String" />
-		</option>
-		<option name="initSelector"  default='":jqmData(role=&#39;controlgroup&#39;)"'>
-			<desc>
-				<p>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as controlgroups. To change which elements are initialized, bind this option to the mobileinit event:</p>
-<pre><code>
-$( document ).on( "mobileinit", function() {
-	$.mobile.controlgroup.prototype.options.initSelector = ".mycontrolgroup";
-});</code></pre>
-			</desc>
-			<type name="jQuery selector string" />
 		</option>
 	</options>
 	<events>

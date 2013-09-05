@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="page" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="page">
+<entry name="page" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="page" init-selector=":jqmData(role=&#39;page&#39;)">
 	<title>Page Widget</title>
 	<desc>Primary unit of content.</desc>
 	<longdesc>
@@ -20,6 +20,7 @@
 			</desc>
 			<type name="Boolean" />
 		</option>
+		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="keepNativeDefault" default=":jqmData(role='none'), :jqmData(role='nojs')" example-value='".do-not-enhance"'>
 			<desc>
 				<p>The value of this option is a selector that will be used to prevent elements matching it from being enhanced.</p>

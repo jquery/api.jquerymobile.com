@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="popup" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="popup">
+<entry name="popup" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="popup" init-selector=":jqmData(role=&#39;popup&#39;)">
 	<title>Popup Widget</title>
 	<desc>Opens content in a Popup.</desc>
 	<longdesc>
@@ -384,6 +384,7 @@ $( document ).on( "pageinit", function() {
 			</desc>
 			<type name="Boolean" />
 		</option>
+		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="overlayTheme" default="null" example-value='"b"'>
 			<desc>
 				<p>Sets the color scheme (swatch) for the popup background, which covers the entire window. If not explicitly set, the background will be transparent.</p>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="collapsible" namespace="fn" type="widget" widgetnamespace="mobile" >
+<entry name="collapsible" namespace="fn" type="widget" widgetnamespace="mobile" init-selector=":jqmData(role=&#39;collapsible&#39;)">
 	<title>Collapsible Widget</title>
 	<desc>Creates a collapsible block of content</desc>
 	<longdesc>
@@ -184,6 +184,7 @@
 			</desc>
 			<type name="String" />
 		</option>
+		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="inset"  default="true" example-value="false">
 			<desc>By setting this option to false the element will get a full width appearance without corners.
 				<p>If the value is unset for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.</p>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="selectmenu" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="select">
+<entry name="selectmenu" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="select" init-selector="select:not( :jqmData(role='slider')):not( :jqmData(role='flipswitch') )">
 	<title>Selectmenu Widget</title>
 	<desc>Creates a select menu widget</desc>
 	<longdesc>
@@ -266,18 +266,7 @@ $( "select" ).selectmenu();
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="initSelector" default="select:not(:jqmData(role='slider'))">
-			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as select menus. To change which elements are initialized, bind this option to the mobileinit event:
-<pre><code>
-$( document ).on( "mobileinit", function() {
-	$.mobile.selectmenu.prototype.options.initSelector = ".myselect";
-});
-</code></pre>
-
-				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
-			</desc>
-			<type name="CSS selector string" />
-		</option>
+		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="inline" default="null (false)" example-value="true">
 			<desc>If set to true, this will make the select button act like an inline button so the width is determined by the button's text. By default, this is null (false) so the select button is full width, regardless of the feedback content. Possible values: true, false.
 

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="listview" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="listview">
+<entry name="listview" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="listview" init-selector=":jqmData(role=&#39;listview&#39;)">
 	<title>Listview Widget</title>
 	<desc>Creates a listview widget</desc>
 	<longdesc>
@@ -172,6 +172,7 @@ $( "#mylist" ).listview( "refresh" );
 			</desc>
 			<type name="String" />
 		</option>
+		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="inset" default="false" example-value="true">
 			<desc>Adds inset list styles.
 				<p>This option is also exposed as a data attribute: <code>data-inset="true"</code>.</p>
