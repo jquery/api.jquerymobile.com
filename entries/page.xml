@@ -28,9 +28,10 @@
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="theme" default="a" example-value='"b"'>
+		<option name="theme" default='"a"' example-value='"b"'>
 			<desc>
-				<p>Sets the swatch that will be used to draw the page.</p>
+				Sets the color scheme (swatch) for the <placeholder name="name" /> widget. It accepts a single letter from a-z that maps to the swatches included in your theme.
+				<p>Possible values: swatch letter (a-z).</p>
 				<p>This option is also exposed as a data attribute: <code>data-theme="b"</code>.</p>
 			</desc>
 			<type name="String" />

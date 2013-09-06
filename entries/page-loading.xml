@@ -51,9 +51,13 @@
 			<desc>If true, the text value will be used under the spinner.</desc>
 			<type name="boolean" />
 		</option>
-		<option name="theme" default="b" example-value='"a"'>
-			<desc>Sets the color scheme (swatch) for the loading message. It accepts a single letter from a-z that maps to the swatches included in your theme.</desc>
-			<type name="string" />
+		<option name="theme" default='"b"' example-value='"a"'>
+			<desc>
+				Sets the color scheme (swatch) for the loading message. It accepts a single letter from a-z that maps to the swatches included in your theme.
+				<p>Possible values: swatch letter (a-z).</p>
+				<p>This option is also exposed as a data attribute: <code>data-theme="b"</code>.</p>
+			</desc>
+			<type name="String" />
 		</option>
 	</options>
 	<events>

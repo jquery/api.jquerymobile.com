@@ -444,8 +444,8 @@ $( document ).on( "pageinit", function() {
 			<type name="Boolean" />
 		</option>
 		<option name="theme" default="null, inherited from parent" example-value='"b"'>
-			<desc><p>Sets the color scheme (swatch) for the popup contents. Unless explicitly set to 'none', the theme for the popup will be assigned the first time the popup is shown by inheriting the page theme or, failing that, by the hard-coded value 'c'. If you set it to 'none', the popup will not have any theme at all, and will be transparent. </p>
-				<p>Possible values: swatch letter (a-z).</p>
+			<desc>Sets the color scheme (swatch) for the popup contents. Unless explicitly set to 'none', the theme for the popup will be assigned the first time the popup is shown by inheriting the page theme or, failing that, by the hard-coded value 'a'. If you set it to 'none', the popup will not have any theme at all, and will be transparent.
+				<p>Possible values: swatch letter (a-z), or "none".</p>
 				<p>This option is also exposed as a data attribute: <code>data-theme="b"</code>.</p>
 			</desc>
 			<type name="String" />

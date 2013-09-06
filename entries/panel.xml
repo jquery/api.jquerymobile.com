@@ -224,7 +224,8 @@ $( "#mypanel" ).trigger( "updatelayout" );
 			<type name="Boolean" />
 		</option>
 		<option name="theme" default='"a"' example-value='"b"'>
-			<desc>Sets the color scheme (swatch) for the panel. It accepts a single letter from a-z that maps to the swatches included in your theme.
+			<desc>
+				Sets the color scheme (swatch) for the <placeholder name="name" /> widget. It accepts a single letter from a-z that maps to the swatches included in your theme.
 				<p>Possible values: swatch letter (a-z).</p>
 				<p>This option is also exposed as a data attribute: <code>data-theme="b"</code>.</p>
 			</desc>
