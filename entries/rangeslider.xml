@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="rangeslider" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="rangeslider">
+<entry name="rangeslider" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="rangeslider" init-selector=":jqmData(role=&#39;rangeslider&#39;)">
 	<title>Rangeslider Widget</title>
 	<desc>Creates a rangeslider widget</desc>
 	<longdesc>
-		<p>The rangeslider widget can be considered as a double handle slider. To add a rangeslider widget to your page, use two standard inputs with the <code>type="range"</code> attribute, and put them inside a <code>&lt;div&gt;</code> container. The input values are used to configure the starting position of the handles and the values are populated in the corresponding text inputs (the first one at the beginning of the rangeslider, and the second one at the end). Specify <code>min</code> and <code>max</code> attribute values to set the rangeslider's range. If you want to constrain inputs to specific increments, add the <code>step</code> attribute. Set the <code>value</code> attribute to each input to define their initial value. The framework will parse these attributes to configure the rangeslider widget.</p>
+		<p>The rangeslider widget can be considered as a double handle slider. To add a rangeslider widget to your page, use two standard inputs with the <code>type="range"</code> attribute, and put them inside a <code>&lt;div&gt;</code> container. The input values are used to configure the starting position of the handles and the values are populated in the corresponding text inputs (the first one at the beginning of the rangeslider, and the second one at the end). Specify <code>min</code> and <code>max</code> attribute values to set the rangeslider's range. If you want to constrain inputs to specific increments, add the <code>step</code> attribute. Set the <code>value</code> attribute on each input to define their initial value. The framework will parse these attributes to configure the rangeslider widget.</p>
 		<p>As you drag the rangeslider's handles, the framework will update the native input values (and vice-versa) so they are always in sync; this ensures that the values are submitted with the form.</p>
-		<p>Set the <code>for</code> attribute of the <code>labels</code> to match the <code>ids</code> of the <code>inputs</code> so they are semantically associated. It's possible to accessibly hide the labels if they're not desired in the page layout, but we require that it is present in the markup for semantic and accessibility reasons.</p>
-		<p>The framework will find all <code>input</code> elements with a <code>type="range"</code> and automatically enhance them into a slider with an accompanying input without any need to apply a <code>data-role</code> attribute. To prevent the automatic enhancement of this input into a slider, add <code>data-role="none"</code> attribute to the input and wrap them in a <code>div</code> with the <code>data-role="fieldcontain"</code> attribute to group them. </p>
+		<p>Set the <code>for</code> attribute of the <code>labels</code> to match the <code>ids</code> of the <code>inputs</code> so they are semantically associated. It's possible to accessibly hide the labels if they're not desired in the page layout, but we require that they are present in the markup for semantic and accessibility reasons.</p>
+		<p>The framework will find all <code>input</code> elements with a <code>type="range"</code> and automatically enhance them into a slider with an accompanying input without any need to apply a <code>data-role</code> attribute. To prevent the automatic enhancement of this input into a slider, add the <code>data-role="none"</code> attribute to the inputs and wrap them in a <code>div</code> with the <code>data-role="fieldcontain"</code> attribute to group them.</p>
 		<p>In this example, the acceptable range is 0-100.</p>
 
 <pre><code>
@@ -40,7 +40,7 @@
 
 		<h3>Fill highlight</h3>
 
-		<p>By default, there is a highlight fill on the track between the two slider handles. To remove it, add the <code>data-highlight="false"</code> attribute to the input. The fill uses active state swatch. </p>
+		<p>By default, there is a highlight fill on the track between the two slider handles. To remove it, add the <code>data-highlight="false"</code> attribute to the input. The fill uses the active state swatch. </p>
 
 <pre><code>
 &lt;div data-role="rangeslider" data-highlight="false"&gt;
@@ -107,12 +107,11 @@
 
 		<h3>Calling the rangeslider plugin</h3>
 
-		<p>This plugin will auto initialize on any page that contains a text input with the <code>type="range"</code> attribute. However, if needed you can directly call the rangeslider plugin on any selector, just like any jQuery plugin:</p>
+		<p>This plugin will auto initialize on any page that contains a <code>div</code> with the <code>data-role="rangeslider"</code> attribute. However, if needed you can directly call the rangeslider plugin on any selector, just like any jQuery plugin:</p>
 
 <pre><code>
-$( "input" ).rangeslider();
+$( "div#range-slider" ).rangeslider();
 </code></pre>
-
 
 	</longdesc>
 	<added>1.3</added>
@@ -120,23 +119,13 @@ $( "input" ).rangeslider();
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="highlight" default="true" example-value="false">
 			<desc>Sets an active state fill on the track between the two rangeslider handles when set to "true".
-
+				<p>This option is also exposed as a data attribute: <code>data-highlight="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="initSelector"  default='"input[type=&#39;rangeslider&#39;], :jqmData(type=&#39;range&#39;), :jqmData(role=&#39;slider&#39;)"'>
-			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as rangesliders. To change which elements are initialized, bind this option to the mobileinit event:
-<pre><code>
-$( document ).on( "mobileinit", function() {
-  $.mobile.rangeslider.prototype.options.initSelector = ".myrangeslider";
-});
-</code></pre>
-			</desc>
-			<type name="CSS selector string" />
-		</option>
+		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="mini"  default="false" example-value="true">
-			<desc>Sets the size of the element to a more compact, mini version. This option is also exposed as a data attribute: data-mini="true"
-
+			<desc>Sets the size of the element to a more compact, mini version.
 				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
 			</desc>
 			<type name="Boolean" />
