@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
+<entry name="filterable" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="filterable" init-selector=":jqmData(filter=&#39;true&#39;)">
+	<title>Filterable Content</title>
+	<desc>Makes the children of an element filterable.</desc>
+	<longdesc>
+		<h2>Filterable Content</h2>
+		<p>The <placeholder name="name"/> widget allows you to filter the children of an element. The filtering is accomplished by applying the class <code>ui-screen-hidden</code> to those children for which a filter callback function provided via the widget's <code>filterCallback</code> option returns <code>true</code>.</p>
+		<h3>Backwards compatibility</h3>
+		<strong>The <placeholder name="name"/> widget features provided for backwards compatibility are deprecated as of 1.4.0 and will be removed in 1.5.0.</strong>
+		<p>The filterable widget is a generalization of the <code>listview</code> widget's filter extension that was available in jQuery Mobile 1.3. It retains API compatibility with the <code>listview</code> filter. Its behavior is also made backwards compatible by the following <strong>deprecated</strong> features:</p>
+		<ul>
+			<li>If no source is provided for the <placeholder name="name"/>, it will generate a text input and place it before the element.</li>
+			<li>It provides the <code>filterPlaceholder</code> option which sets the <code>placeholder</code> attribute on the generated text input.</li>
+			<li>It provides the <code>filterTheme</code> option which sets the <code>theme</code> option on the generated text input.</li>
+			<li>If a <a href="/collapsibleset/">collapsibleset</a>, <a href="/select/">selectmenu</a>, <a href="/controlgroup/">controlgroup</a>, or <a href="/listview/">listview</a> widget is instantiated on the element whose children are to be filtered, it synchronizes those widget options with the generated text input that the text input widget also provides (options such as "corners" or "mini").</li>
+			<li>It provides special handling for listviews:
+				<ul>
+					<li>When filtering listview items, the default filter callback will not hide list items marked as dividers, however,</li>
+					<li>When filtering listview items, the widget enables the listview widget's <code>hidedividers</code> option, which causes the new listview hidedividers extension to automatically hide dividers for categories wherein all items are hidden.</li>
+				</ul>
+				Together, these two behaviors reproduce the jQuery Mobile 1.3 behavior of the listview filter.
+			</li>
+		</ul>
+
+		<h3>Setup</h3>
+		<p>To render the children of an element filterable, perform the following steps:
+			<ol>
+				<li>Create an element that will serve as the source for the <placeholder name="name"/>. It can be any element that emits a <code>change</code> signal and has a value that can be accessed via the jQuery <a href="http://api.jquery.com/val/">.val()</a> plugin. This is usually a text input. The <placeholder name="name"/> widget reacts to the <code>change</code> signal by reading the value of the input after a short delay and iterating over all the children to determine whether they should be shown or hidden according to the filter callback provided.</li>
+				<li>Add the attribute <code>data-filter="true"</code> to the element whose children will be filtered.</li>
+				<li>Add the attribute <code>data-input</code> to the element whose children will be filtered. The value of the attribute is a string containing a jQuery selector that will return the element to be used as the source for the <placeholder name="name"/>.</li>
+				<li>Add the child elements that will be filtered. You may add or remove child elements at any time, however, when you add or remove child elements you should call the <code>refresh</code> method on the <placeholder name="name"/> widget, to ensure that the new children are shown or hidden in accordance with the latest input provided by the user.
+				<p>
+				Child elements may have the <code>data-filtertext</code> attribute set. In that case, the default filter callback will hide a given child element only if the value of the <code>data-filtertext</code> attribute does not contain the string provided by the user. If the <code>data-filtertext</code> attribute is absent, the child will be hidden if its text content does not contain the string provided by the user.
+				</p></li>
+			</ol>
+		The example below illustrates a simple <placeholder name="name"/> widget setup.</p>
+<pre><code>
+&lt;form&gt;
+	&lt;input type="text" data-type="search" id="filterable-input"&gt;&lt;/input&gt;
+&lt;/form&gt;
+&lt;form data-role="controlgroup" data-filter="true" data-input="#filterable-input"&gt;
+	&lt;label for="pizza"&gt;
+		Pizza
+		&lt;input type="checkbox" id="pizza"&gt;&lt;/input&gt;
+	&lt;/label&gt;
+	&lt;label for="goulash"&gt;
+		Goulash
+		&lt;input type="checkbox" id="goulash"&gt;&lt;/input&gt;
+	&lt;/label&gt;
+	&lt;label for="falafel"&gt;
+		Falafel
+		&lt;input type="checkbox" id="falafel"&gt;&lt;/input&gt;
+	&lt;/label&gt;
+	&lt;label for="spring-rolls"&gt;
+		Spring Rolls
+		&lt;input type="checkbox" id="spring-rolls"&gt;&lt;/input&gt;
+	&lt;/label&gt;
+&lt;/form&gt;
+</code></pre>
+		<iframe src="/resources/filterable/example1.html" style="width:100%;height:300px;border:0px"></iframe>
+
+		<h3>"Reveal" mode</h3>
+		<p>The normal initial state of a <placeholder name="name"/> widget is that all the children are shown. In contrast, a <placeholder name="name"/> in "reveal" mode initially hides all its children. Once the user starts filtering, however, the <placeholder name="name"/> widget will display only those children that contain the text entered by the user, whether the <placeholder name="name"/> widget is in "reveal" mode or not.</p>
+		<p>You can turn on "reveal" mode by adding the attribute <code>data-filter-reveal="true"</code> to the element whose children will be filtered.</p>
+		<p>The example below illustrates the behavior of a <placeholder name="name"/> widget in "reveal" mode:</p>
+<pre><code>
+&lt;form&gt;
+	&lt;input type="text" data-type="search" id="filterable-input"&gt;&lt;/input&gt;
+&lt;/form&gt;
+&lt;form data-role="controlgroup" data-filter-reveal="true" data-filter="true" data-input="#filterable-input"&gt;
+	&lt;label for="pizza"&gt;
+		Pizza
+		&lt;input type="checkbox" id="pizza"&gt;&lt;/input&gt;
+	&lt;/label&gt;
+	&lt;label for="goulash"&gt;
+		Goulash
+		&lt;input type="checkbox" id="goulash"&gt;&lt;/input&gt;
+	&lt;/label&gt;
+	&lt;label for="falafel"&gt;
+		Falafel
+		&lt;input type="checkbox" id="falafel"&gt;&lt;/input&gt;
+	&lt;/label&gt;
+	&lt;label for="spring-rolls"&gt;
+		Spring Rolls
+		&lt;input type="checkbox" id="spring-rolls"&gt;&lt;/input&gt;
+	&lt;/label&gt;
+&lt;/form&gt;
+</code></pre>
+		<iframe src="/resources/filterable/example2.html" style="width:100%;height:300px;border:0px"></iframe>
+		<h3>Custom filters</h3>
+		<p>The <placeholder name="name"/> widget's <code>filterCallback</code> option allows you to set a custom callback. In the example below items are filtered by their ordinal, which can be specified using page printing conventions such as "1,2" or "4-9", or both ("1,2,4-9,12").</p>
+<pre><code>
+$.mobile.filterable.prototype.options.filterCallback = function( index, searchValue ) {
+	var idx;
+
+	if ( searchValue ) {
+		searchValue = searchValue.split( "," );
+		searchValue = $.map( searchValue, function( element ) {
+			var ar = element.split( "-" );
+				return ar.length === 1 ? parseInt( element ) :
+					[ [ parseInt( ar[ 0 ] ), parseInt( ar[ 1 ] ) ] ];
+		});
+		for ( idx = 0 ; idx &lt; searchValue.length ; idx++ ) {
+			if ( ( $.type( searchValue[ idx ] ) === "number" &amp;&amp;
+					index === searchValue[ idx ] ) ||
+				( $.type( searchValue[ idx ] ) === "array" &amp;&amp;
+					index &gt;= searchValue[ idx ][ 0 ] &amp;&amp;
+					index &lt;= searchValue[ idx ][ 1 ] ) ) {
+				return false;
+			}
+		}
+	}
+
+	return !!searchValue;
+};
+</code></pre>
+		<iframe src="/resources/filterable/example3.html" style="width:100%;height:300px;border:0px"></iframe>
+
+		<h2>Providing pre-rendered markup</h2>
+		<p>You can improve the load time for your page by providing the markup that the button widget would normally create during its initialization.</p>
+		<p>The <placeholder name="name"/> widget runs the filter on its children upon instantiation to ensure that the initial list of displayed children satisfies the initial value of the input source. By setting the attribute <code>data-enhanced="true"</code>, you instruct the <placeholder name="name"/> widget that no initial filtering is to be performed. This means that you must apply the class <code>ui-screen-hidden</code> to any children which must initially be hidden due to the initial value of the search input.</p>
+		<p>When you provide such pre-rendered markup you must also set all the classes that the framework would normally set, and you must also set all data-attributes whose values differ from the default to indicate that the pre-rendered markup reflects the non-default value of the corresponding widget option.</p>
+		<p><strong>Note:</strong> If the element whose children are to be filtered is enhanced by another widget as well, such as for example a <a href="/listview/">listview</a> or a <a href="/controlgroup/">controlgroup</a> then you are required to provide pre-rendered markup for the other widget as well, because the attribute <code>data-enhanced="true"</code> will influence the initialization behavior of the other widget as well.</p>
+		<p>In the example below, pre-rendered markup for a <placeholder name="name"/> is provided. The attribute <code>data-filter-reveal="true"</code> is explicitly specified, since the presence of the <code>ui-screen-hidden</code> class on all the children indicates that they are initially hidden. The controlgroup widget containing the children is also pre-rendered, because the <code>data-enhanced="true"</code> attribute applies to the <a href="/controlgroup/">controlgroup</a> widget as much as it does to the <placeholder name="name"/> widget.</p>
+<pre><code>
+&lt;form&gt;
+	&lt;input id="pre-rendered-filterable" data-type="search"&gt;&lt;/input&gt;
+&lt;/form&gt;
+&lt;div
+	class="ui-controlgroup ui-controlgroup-vertical ui-corner-all"
+	data-role="controlgroup"
+	data-filter="true"
+	data-input="#pre-rendered-filterable"
+	data-filter-reveal="true"
+	data-enhanced="true"&gt;
+	&lt;div class="ui-controlgroup-controls"&gt;
+		&lt;a href="index.html" class="ui-screen-hidden" data-role="button"&gt;General&lt;/a&gt;
+		&lt;a href="settings.html" class="ui-screen-hidden" data-role="button"&gt;Settings&lt;/a&gt;
+		&lt;a href="advanced.html" class="ui-screen-hidden" data-role="button"&gt;Advanced&lt;/a&gt;
+		&lt;a href="notifications.html" class="ui-screen-hidden" data-role="button"&gt;Notifications&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+		<iframe src="/resources/filterable/example4.html" style="width:100%;height:300px;border:0px"></iframe>
+
+	</longdesc>
+	<added>1.4</added>
+	<options>
+		<option name="children" default='"> li, > option, > optgroup option, > tbody tr, > .ui-controlgroup-controls > .ui-btn, > .ui-controlgroup-controls > .ui-checkbox, > .ui-controlgroup-controls > .ui-radio"' example-value='".my-children"'>
+			<desc>Provides the list of children which will be processed during filtering. If no children result from examination of the value of this option, then the children of the element from which this <placeholder name="name"/> widget is constructed will be used.
+				<p>This option is also exposed as a data attribute: <code>data-children=".my-children"</code>.</p>
+			</desc>
+			<type name="String">
+				<desc>A jQuery selector that will be used to select from the children of the element.</desc>
+			</type>
+			<type name="jQuery">
+				<desc>A jQuery object containing the list of elements to filter.</desc>
+			</type>
+			<type name="Function">
+				<desc>A function that returns a jQuery object containing the list of elements to filter. It will be called with no arguments whenever filtering needs to be performed.</desc>
+			</type>
+			<type name="Element">
+				<desc>A DOM element. This is a trivial application of the filter.</desc>
+			</type>
+		</option>
+		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-option-enhanced.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<option name="filterCallback" default="default callback">
+			<desc>
+				A function that will be called to determine whether an element in the list of children is considered to be filtered. It must return <code>true</code> if the element is to be filtered, and it must return <code>false</code> if the element is to be shown. The function is called once for each of the DOM elements and its context is set to the DOM element for which a decision is needed. Thus, the keyword <code>this</code> refers to the DOM element for which it must be decided whether it should be shown.
+			<p>The default value of this attribute is a function that will examine each child for the presence of the <code>data-filtertext</code> attribute. If such an attribute is found, the function returns <code>true</code> if the string contained in the function's <code>searchValue</code> parameter cannot be found inside the value of the <code>data-filtertext</code> attribute. If no such attribute is found, the text content of the child is searched for the presence of the value of the function's <code>searchValue</code> parameter, and the function returns <code>true</code> if the search fails.</p>
+			<p>For backwards compatibility with the jQuery Mobile 1.3 listview filter extension, the function provided as the default value of this attribute will never hide listview dividers, however, <strong>this behavior is deprecated as of jQuery Mobile 1.4.0 and will be removed in jQuery Mobile 1.5.0.</strong></p>
+			</desc>
+			<type name="Function">
+				<argument name="index" type="Number"/>
+				<argument name="searchValue" type="String"/>
+			</type>
+		</option>
+		<option name="filterPlaceholder" default='"Filter items..."' example-value='"Refine options..."' deprecated="1.4.0">
+			<desc>
+				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0.</strong>
+				<p>A string that will be used as the value of the <code>placeholder</code> attribute for the generated text input.</p>
+				<p>This option is also exposed as a data attribute: <code>data-filter-placeholder="Refine options..."</code>.</p>
+			</desc>
+			<type name="String"/>
+		</option>
+		<option name="filterReveal" default="false" example-value="true">
+			<desc>When set to <code>true</code> all children are hidden whenever the search string is empty.
+				<p>This option is also exposed as a data attribute: <code>data-filter-reveal="true"</code>.</p>
+			</desc>
+			<type name="Boolean"/>
+		</option>
+		<option name="filterTheme" default="null, inherited from parent" example-value="b" deprecated="1.4.0">
+			<desc>
+				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0.</strong>
+				<p>Sets the color scheme (swatch) for the generated text input. It accepts a single letter from a-z that maps to the swatches included in your theme.</p>
+				<p>Possible values: swatch letter (a-z).</p>
+				<p>If a <a href="/collapsibleset/">collapsibleset</a>, <a href="/select/">selectmenu</a>, <a href="/controlgroup/">controlgroup</a>, or <a href="/listview/">listview</a> widget is instantiated on the element and its options are being synchronized with the options of the generated text input, then the value of this option, if set, takes precedence overe the value of the <code>theme</code> option retrieved from the the widget.</p>
+				<p>This option is also exposed as a data attribute: <code>data-filter-theme="b"</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<option name="input" default="null" example-value='"#input-for-filterable"'>
+			<desc>Provides the element that will serve as the input source for search strings.
+				<p>This option is also exposed as a data attribute: <code>data-input="#input-for-filterable"</code>.</p>
+			</desc>
+			<type name="String">
+				<desc>A jQuery selector that will be used to retrieve the element that will serve as the input source.</desc>
+			</type>
+			<type name="jQuery">
+				<desc>A jQuery object containing the element that will serve as the input source.</desc>
+			</type>
+			<type name="Element">
+				<desc>The element that will serve as the input source.</desc>
+			</type>
+		</option>
+	</options>
+	<events>
+		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+	</events>
+	<methods>
+		<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<method name="refresh">
+			<desc>Updates the <placeholder name="name"/> widget.
+				<p>If you manipulate a <placeholder name="name"/> widget via JavaScript (e.g. by adding new children or removing old ones), you must call the <code>refresh()</code> method on it to update the visual styling.</p>
+			</desc>
+		</method>
+	</methods>
+	<example>
+		<desc>A basic example of a Popup.</desc>
+		<html><![CDATA[<div data-role="header">
+		<h1>jQuery Mobile Example</h1>
+	</div>
+	<div data-role="content">
+		<a href="#popupBasic" data-rel="popup">Open Popup</a>
+
+		<div data-role="popup" id="popupBasic">
+			<p>This is a completely basic popup, no options set.<p>
+		</div>
+	</div>]]></html>
+	</example>
+	<category slug="widgets"/>
+</entry>
