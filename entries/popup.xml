@@ -384,7 +384,12 @@ $( document ).on( "pageinit", function() {
 				<p>This option is also exposed as a data attribute: <code>data-arrow="t,b"</code>.</p>
 				<p>The following values are valid: <code>true</code>, <code>false</code>, or a string containing a comma-separated list of the letters "l", "t", "r", and "b". The list may be empty, in which case it corresponds to a value of <code>false</code>. The value <code>true</code> corresponds to the list <code>"l,t,r,b"</code>. This list indicates along which edges the code should attempt to place the arrow. The code tries to place the arrow along each edge given in the list in the left-to-right order given in the list until one such placement would result in the arrow pointing exactly at the desired coordinates. If no arrows can be displayed the popup is positioned as though the value of this option were <code>false</code>.</p>
 			</desc>
-			<type name="String" />
+			<type name="String">
+				<desc>A comma-separated list of the letters "l", "t", "r", and "b".</desc>
+			</type>
+			<type name="Boolean">
+				<desc>A value of <code>true</code> is equivalent to a value of "t,r,b,l", whereas <code>false</code> indicates that no arrow is to be shown.</desc>
+			</type>
 		</option>
 		<option name="corners" default="true" example-value="false">
 			<desc>
