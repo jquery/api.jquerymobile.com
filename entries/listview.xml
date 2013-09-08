@@ -20,12 +20,6 @@
 
 			<p><strong>Style note on non-inset lists</strong>: all standard, non-inset lists have a -1em (16px) margin to negate the 1em padding on the content area to make lists extend to the edges of the screen. If you add other widgets above or below a list, the negative margin may make these elements overlap so you'll need to add additional spacing in your custom CSS.</p>
 
-			<h3>Nested lists</h3>
-			<p>By nesting child <code>ul</code> or <code>ol</code> inside list items, you can create nested lists. When a list item with a child list is clicked, the framework will show a new page populated with the title of the parent in the header and the list of child elements. These dynamic nested lists are styled with the "b" theme swatch (blue in the default theme) to indicate that you are in a secondary level of navigation. Lists can be nested multiple levels deep and all pages and linking will be automatically handled by the framework. Note that the page of each nested listview is created when the parent page loads and for each nested page the page-events will trigger. Please also note that the title of subpages will contain the text of the first element in the parent list item including its elements. So make sure to use a single element for the list item caption and put other elements like count bubbles behind that caption as shown in the demo below.</p>
-			<p>To set the swatch color of the child listviews, set the <code>data-theme</code> attribute on each list inside.</p>
-			<div class="warning"><b>Note:</b> Nested lists are deprecated in version 1.3.0</div>
-			<p><iframe src="/resources/listview/example2.html" style="width:100%;height:640px;border:0px"></iframe></p>
-
 			<h3>Numbered lists</h3>
 			<p>Lists can also be created from ordered lists (<code>ol</code>) which is useful when presenting items that are in a sequence such as search results or a movie queue. When the enhanced markup is applied to the listview, jQuery Mobile will try to first use CSS to add numbers to the list and, if not supported, will fall back to injecting numbers with JavaScript.</p>
 
@@ -146,7 +140,7 @@ $( "#mylist" ).listview();
 ]]></code></pre>
 
 			<h3>Updating lists</h3>
-			<p>If you add items to a listview, you'll need to call the <code>refresh()</code> method on it to update the styles and create any nested lists that are added. For example:</p>
+			<p>If you add items to a listview, you'll need to call the <code>refresh()</code> method on it to update the styles. For example:</p>
 <pre><code><![CDATA[
 $( "#mylist" ).listview( "refresh" );
 ]]></code></pre>
@@ -202,12 +196,6 @@ $( "#mylist" ).listview( "refresh" );
 		</event>
 	</events>
 	<methods>
-		<method name="childPages">
-			<desc>retrieve the sub-pages.
-			<p>This method returns a jQuery object containing all the immediate child pages of a nested list.</p>
-			</desc>
-			<deprecated>1.3</deprecated>
-		</method>
 		<method name="refresh">
 			<desc>update the listview.
 				<p>If you manipulate a listview via JavaScript (e.g. add new LI elements), you must call the refresh method on it to update the visual styling.</p>
