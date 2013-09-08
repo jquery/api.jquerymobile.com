@@ -364,7 +364,7 @@ $( "#mypanel" ).trigger( "updatelayout" );
 	</methods>
 	<example>
 		<desc>A basic example of a panel.</desc>
-		<css><![CDATA[.panel-content { padding:15px; }]]></css>
+		<css><![CDATA[.panel-content { padding:1em; }]]></css>
 
 		<html><![CDATA[<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
