@@ -158,11 +158,7 @@
 			<type name="Boolean" />
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="enhanced" default="false" example-value="true">
-			<desc>Indicates that the markup necessary for a collapsible widget has been provided as part of the original markup.
-				<p>This option is also exposed as a data attribute:<code>data-enhanced="true"</code>.</p>
-			</desc>
-		</option>
+		<xi:include href="../includes/widget-option-enhanced.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="expandCueText" default='" click to expand contents"' example-value='" expand with a click"'>
 			<desc>This text is used to provide audible feedback for users with screen reader software.
 				<p>If the value is unset for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.</p>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<option name="enhanced" default="false" example-value="true">
+	<desc>Indicates that the markup necessary for a <placeholder name="name"/> widget has been provided as part of the original markup.
+		<p>This option is also exposed as a data attribute: <code>data-enhanced="true"</code>.</p>
+	</desc>
+	<type name="Boolean"/>
+</option>
