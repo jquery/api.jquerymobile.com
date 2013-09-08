@@ -121,14 +121,14 @@
 			</desc>
 	    	<type name="String" />
 		</option>
-		<option name="initSelector" default="null">
+		<option name="initSelector" default="null" deprecated="1.4.0">
 			<desc>
 				<p>The default <code>initSelector</code> for the <placeholder name="name" /> widget is:</p>
 		<pre><code>
 		"<placeholder name="init-selector"/>"
 		</code></pre>
 				<p><strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0.</strong></p>
-				<p><strong>The old value of the <placeholder name="name" /> widget's placeholder (<code>":jqmData(role='collapsible-set')"</code>) is deprecated.</strong></p>
+				<p><strong>The old value of the <placeholder name="name" /> widget's <code>initSelector</code> option (<code>":jqmData(role='collapsible-set')"</code>) is deprecated.</strong> As of jQuery Mobile 1.5.0, only widgets that have the attribute <code>data-role="collapsibleset"</code> will be enhanced as <placeholder name="name"/> widgets.</p>
 				<p>As of jQuery Mobile 1.4.0, the <code>initSelector</code> is no longer a widget option. Instead, it is declared directly on the widget prototype. Thus, you may specify a custom value by handling the <code>mobileinit</code> event and overwriting the <code>initSelector</code> on the prototype:</p>
 		<pre><code>
 		$( document ).on( "mobileinit", function() {
