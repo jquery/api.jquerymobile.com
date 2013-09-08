@@ -358,7 +358,7 @@ $( "#idofpanel" ).panel( "close" );
 		<desc>A basic example of a panel.</desc>
 		<css><![CDATA[
 	.panel-content {
-		padding:15px;
+		padding: 1em;
 	}
 ]]></css>
 		<html><![CDATA[

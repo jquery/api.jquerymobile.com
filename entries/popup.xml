@@ -267,7 +267,8 @@ $( "#myPopupDiv" ).popup( "close" )
 		<p><iframe src="/resources/popup/example7.html" style="width:100%;height:390px;border:0px"></iframe></p>
 
 		<h3>Adding padding</h3>
-		<p>For popups with formatted text, padding is needed. We recommend adding the <code>ui-content</code> class to the popup container which adds the standard 15px of padding, just like the page content container. Write your own styles to create a more customized design if needed.</p>
+
+		<p>For popups with formatted text, padding is needed. We recommend adding the <code>ui-content</code> class to the popup container which adds the standard 1em (16px) of padding, just like the page content container. Write your own styles to create a more customized design if needed.</p>
 
 <pre><code><![CDATA[
 <a href="#popupPadded" data-rel="popup" data-role="button">Popup with padding</a>
