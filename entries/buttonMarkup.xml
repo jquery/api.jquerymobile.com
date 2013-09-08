@@ -205,7 +205,7 @@ $( "button#myButton" )
 				</desc>
 				<type name="String" />
 			</property>
-			<property name="iconshadow" default="false">
+			<property name="iconshadow" default="false" deprecated="1.4.0">
 				<desc>
 					<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0.</strong>
 					<p>Adds the class <code>ui-shadow-icon</code> to each of the set of matched elements when set to <code>true</code> and the button-styled element has an icon.</p>

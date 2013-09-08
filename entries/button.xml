@@ -75,7 +75,7 @@ $( "[type='submit']" ).button();
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="iconshadow" default="false">
+		<option name="iconshadow" default="false" deprecated="1.4.0">
 			<desc>
 				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0.</strong>
 				<p>Applies the theme shadow to the <placeholder name="name"/>'s icon if set to true.</p>
