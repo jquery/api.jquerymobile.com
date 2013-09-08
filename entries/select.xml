@@ -259,9 +259,10 @@ $( "select" ).selectmenu();
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="iconshadow" default="true" example-value="false">
-			<desc>Applies the theme shadow to the select button if set to true.
-
+		<option name="iconshadow" default="true" example-value="false" deprecated="1.4.0">
+			<desc>
+				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0.</strong>
+				<p>Applies the theme shadow to the select button's icon if set to true.</p>
 				<p>This option is also exposed as a data attribute: <code>data-iconshadow="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
