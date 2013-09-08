@@ -61,12 +61,7 @@ $( "[type='submit']" ).button();
 			<type name="Boolean" />
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="enhanced" default="false" example-value="true">
-			<desc>Indicates that the markup necessary for a <placeholder name="name"/> widget has been provided as part of the original markup.
-				<p>This option is also exposed as a data attribute: <code>data-enhanced="true"</code>.</p>
-			</desc>
-			<type name="Boolean" />
-		</option>
+		<xi:include href="../includes/widget-option-enhanced.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="icon" default="null" example-value='"star"'>
 			<desc>Applies an icon from the icon set.
 				<p>The <a href="/buttonMarkup/">.buttonMarkup()</a> documentation contains a reference of all the icons available in the default theme.</p>

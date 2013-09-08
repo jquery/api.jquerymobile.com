@@ -107,13 +107,7 @@
 			<type name="Boolean" />
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="enhanced" default="false" example-value="true">
-			<desc>
-				Indicates that all markup necessary to create the <code>collapsibleset</code> widget has been provided as part of the original markup.
-				<p>This option is also exposed as a data attribute: <code>data-enhanced="false"</code>.</p>
-			</desc>
-			<type name="Boolean" />
-		</option>
+		<xi:include href="../includes/widget-option-enhanced.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="expandedIcon" default='"minus"' example-value='"arrow-d"'>
 			<desc>Sets the icon for the header of the collapsible container when in an expanded state.
 				<p>This option is also exposed as a data attribute: <code>data-expanded-icon="arrow-d"</code>.</p>

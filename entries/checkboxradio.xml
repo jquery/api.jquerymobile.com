@@ -162,11 +162,7 @@
 	<added>1.0</added>
 	<options>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="enhanced" default="false" example-value="true">
-			<desc>Indicates that the markup necessary for a checkboxradio widget has been provided as part of the original markup.
-				<p>This option is also exposed as a data attribute: <code>data-enhanced="true"</code>.</p>
-			</desc>
-		</option>
+		<xi:include href="../includes/widget-option-enhanced.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="iconpos" default='"left"' example-value='"right"'>
 			<desc>Allows you to specify on which side of the checkbox or radio button the checkmark/radio icon will appear.
 				<p>This option is also exposed as a data attribute: <code>data-iconpos="right"</code>.</p>
