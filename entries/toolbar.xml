@@ -27,7 +27,7 @@
 
 		<p><strong>The behavior whereby anchor elements are automatically enhanced as buttons is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Thereafter you must set the attribute <code>data-role="button"</code> on those anchors you wish the framework to enhance as buttons.</strong></p>
 
-		<p>In the standard header configuration, there are slots for buttons on either side of the text heading. Each button is typically an <code>a</code> (anchor) element, but can be a <code>button</code> element as well. To save space, buttons in <placeholder name="name"/> widgets are set to inline styling so the button is only as wide as the text and icons it contains. </p>
+		<p>In the standard header configuration, there are slots for buttons on either side of the text heading. Each button is typically an <code>a</code> (anchor) element or a <code>button</code> element that has the attribute <code>data-role="button"</code> set. To save space, buttons in <placeholder name="name"/> widgets are set to inline styling so the button is only as wide as the text and icons it contains. </p>
 
 		<h4>Default button positioning</h4>
 		<p>The <placeholder name="name"/> plugin looks for immediate children of the header container, and automatically sets the first link in the left button slot and the second link in the right. In this example, the 'Cancel' button will appear in the left slot and 'Save' will appear in the right slot based on their sequence in the source order. </p>
@@ -112,7 +112,7 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 		<iframe src="/resources/toolbar/example7.html" style="width:100%;height:100px;border:0px"></iframe>
 
 		<h2>Footers</h2>
-		The Footer bar is usually the last element inside each mobile page, and tends to be more freeform than the header in terms of content and functionality, but typically contains a combination of text and buttons.
+		The footer bar is usually the last element inside each mobile page, and tends to be more freeform than the header in terms of content and functionality, but typically contains a combination of text and buttons.
 
 		<h3>Footer bar structure</h3>
 		<p>The <code>footer</code> bar has the same basic structure as the header except it uses the <code>data-role</code> attribute value of <code>footer</code>.</p>
