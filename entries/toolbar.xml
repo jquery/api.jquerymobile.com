@@ -1,0 +1,427 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
+<entry name="toolbar" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="toolbar" init-selector=":jqmData(role=&#39;footer&#39;), :jqmData(role=&#39;header&#39;)">
+	<title>Toolbars</title>
+	<desc>Adds toolbars to the top and/or bottom of the page.</desc>
+	<longdesc>
+		<h2>Toolbars</h2>
+		<p>Headers and footers are elements that precede resp. succeed the page content. The <placeholder name="name"/> widget allows you to create headers and footers.</p>
+		<h2>Headers</h2>
+		<p>The header bar serves as the page title, is usually the first element inside each mobile page, and typically contains a page title and up to two buttons.</p>
+		<h3>Header structure</h3>
+		<p>The header is a <placeholder name="name"/> at the top of the page that usually contains the page title text and optional buttons positioned to the left and/or right of the title for navigation or actions. Headers can optionally be positioned as fixed so they remain at the top of the screen at all times instead of scrolling with the page.</p>
+		<p>The title text is normally an H1 heading element but it's possible to use any heading level (H1-H6) to allow for semantic flexibility. For example, a page containing multiple mobile "pages" may use a H1 element on the home "page" and a H2 element on the secondary pages. All heading levels are styled identically by default to maintain visual consistency.</p>
+
+<pre><code><![CDATA[
+<div data-role="header">
+	<h1> Page Title </h1>
+</div>
+]]></code></pre>
+		<iframe src="/resources/toolbar/example1.html" style="width:100%;height:90px;border:0px"></iframe>
+
+		<h3>Default header features</h3>
+
+		<p>The header <placeholder name="name"/> inherits its theme swatch from the page by default but you can easily set the theme swatch color by adding the <code>data-theme</code> attribute to the header. For example, <code>data-theme="b"</code>.</p>
+
+		<h3>Adding buttons</h3>
+
+		<p><strong>The behavior whereby anchor elements are automatically enhanced as buttons is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Thereafter you must set the attribute <code>data-role="button"</code> on those anchors you wish the framework to enhance as buttons.</strong></p>
+
+		<p>In the standard header configuration, there are slots for buttons on either side of the text heading. Each button is typically an <code>a</code> (anchor) element or a <code>button</code> element that has the attribute <code>data-role="button"</code> set. To save space, buttons in <placeholder name="name"/> widgets are set to inline styling so the button is only as wide as the text and icons it contains. </p>
+
+		<h4>Default button positioning</h4>
+		<p>The <placeholder name="name"/> plugin looks for immediate children of the header container, and automatically sets the first link in the left button slot and the second link in the right. In this example, the 'Cancel' button will appear in the left slot and 'Save' will appear in the right slot based on their sequence in the source order. </p>
+
+<pre><code><![CDATA[
+<div data-role="header">
+	<a href="index.html" data-icon="delete">Cancel</a>
+	<h1>Edit Contact</h1>
+	<a href="index.html" data-icon="check">Save</a>
+</div>
+]]></code></pre>
+
+		<iframe src="/resources/toolbar/example2.html" style="width:100%;height:90px;border:0px"></iframe>
+
+		<h3>Making buttons visually stand out</h3>
+
+		<p>Buttons automatically adopt the swatch color of the bar they sit in, so a link in a header bar with the "a" color will also be styled as "a" colored buttons. It's simple to make a button visually stand out. Here, we add the <code>data-theme</code> attribute and set the color swatch for the button to "b" to make the "Save" button stand out.</p>
+
+<pre><code><![CDATA[
+<div data-role="header">
+	<a href="index.html" data-icon="delete">Cancel</a>
+	<h1>Edit Contact</h1>
+	<a href="index.html" data-icon="check" data-theme="b">Save</a>
+</div>
+]]></code></pre>
+
+		<iframe src="/resources/toolbar/example3.html" style="width:100%;height:90px;border:0px"></iframe>
+
+		<h4>Controlling button position with classes</h4>
+		<p>The button position can also be controlled by adding classes to the button anchors, rather than relying on source order. This is especially useful if you only want a button in the right slot. To specify the button position, add the class of <code>ui-btn-left</code> or <code>ui-btn-right</code> to the anchor.</p>
+
+<pre><code><![CDATA[
+<div data-role="header">
+	<h1>Page Title</h1>
+	<a href="index.html" data-icon="gear" class="ui-btn-right">Options</a>
+</div>
+]]></code></pre>
+
+		<iframe src="/resources/toolbar/example4.html" style="width:100%;height:90px;border:0px"></iframe>
+
+		<h3>Adding buttons to <placeholder name="name"/> widgets without heading</h3>
+		<p>The heading in the header bar has some margin that will give the bar its height. If you choose not to use a heading, you will need to add an element with <code>class="ui-title"</code> so that the bar can get the height and display correctly.</p>
+
+<pre><code><![CDATA[
+<div data-role="header">
+	<a href="index.html" data-icon="gear" class="ui-btn-right">Options</a>
+	<span class="ui-title" />
+</div>
+]]></code></pre>
+
+		<iframe src="/resources/toolbar/example5.html" style="width:100%;height:90px;border:0px"></iframe>
+
+		<h3>Adding Back buttons</h3>
+
+		<strong>The options <code>addBackBtn</code>, <code>backBtnTheme</code>, and <code>backBtnText</code> have moved from the <a href="/page/">page</a> widget to the <placeholder name="name"/> widget as of jQuery Mobile 1.4.0.</strong>
+		<p>jQuery Mobile has a feature to automatically create and append "back" buttons to any header, though it is disabled by default. This is primarily useful in chromeless installed applications, such as those running in a native app webview. The framework automatically generates a "back" button on a header when the <placeholder name="name"/> plugin's <code>addBackBtn</code> option is true. This can also be set via markup if the header div has a <code>data-add-back-btn="true"</code> attribute.</p>
+		<p>If you use the attribute <code>data-rel="back"</code> on an anchor, any clicks on that anchor will mimic the back button, going back one history entry and ignoring the anchor's default href. This is particularly useful when linking back to a named page, such as a link that says "home", or when generating "back" buttons with JavaScript, such as a button to close a dialog. When using this feature in your source markup, <strong>be sure to provide a meaningful href that actually points to the URL of the referring page. This will allow the feature to work for users in C-Grade browsers.</strong></p>
+		<p>If you just want a reverse transition without actually going back in history, you should use the <code>data-direction="reverse"</code> attribute.</p>
+
+		<h3>Customizing the back button text</h3>
+		<p>If you'd like to configure the back button text, you can either use the <code>data-back-btn-text="previous"</code> attribute on your <placeholder name="name"/> element, or set it programmatically via the <placeholder name="name"/> plugin's options: <br /><code>$.mobile.<placeholder name="name"/>.prototype.options.backBtnText = "previous";</code></p>
+
+		<h3>Default back button style</h3>
+		<p>If you'd like to configure the back button role-theme, you can use: <br /><code>$.mobile.<placeholder name="name"/>.prototype.options.backBtnTheme = "a";</code><br />
+If you're doing this programmatically, set this option inside the mobileinit event handler.</p>
+
+		<h3>Custom header configurations</h3>
+		<p>If you need to create a header that doesn't follow the default configuration, simply wrap your custom styled markup in any container, such as <code>div</code>. The plugin won't apply the automatic button logic to the wrapped content inside the header container so you can write custom styles for laying out the content in your header.</p>
+		<p>It's also possible to create custom bars without using the header data-role at all. For example, start with any container and add the <code>ui-bar</code> class to apply standard bar padding and add the <code>ui-bar-b</code> class to assign the bar swatch styles from your theme. (The "b" can be any swatch letter.)</p>
+
+<pre><code><![CDATA[
+<div class="ui-bar ui-bar-b">
+	<h3>I'm just a div with bar classes and a mini inline <a href="#" data-role="button" data-mini="true">Button</a></h3>
+</div>
+]]></code></pre>
+
+		<iframe src="/resources/toolbar/example6.html" style="width:100%;height:90px;border:0px"></iframe>
+
+		<p>Note that <code>.ui-bar</code> should not be added to header or footer bars that span the full width of the page, as the additional padding will cause a full-width element to break out of its parent container. To add padding inside of a full-width <placeholder name="name"/>, wrap its contents in an element and apply the padding to that element instead.</p>
+		<p>By writing some simple styles, it's easy to build message bars like this:</p>
+		<!-- Yes, the inline styles aren't recommended in a real system but they are used to simply illustrate how to tweak CSS -->
+		<iframe src="/resources/toolbar/example7.html" style="width:100%;height:100px;border:0px"></iframe>
+
+		<h2>Footers</h2>
+		The footer bar is usually the last element inside each mobile page, and tends to be more freeform than the header in terms of content and functionality, but typically contains a combination of text and buttons.
+
+		<h3>Footer bar structure</h3>
+		<p>The <code>footer</code> bar has the same basic structure as the header except it uses the <code>data-role</code> attribute value of <code>footer</code>.</p>
+
+<pre><code><![CDATA[
+<div data-role="footer">
+	<h4>Footer content</h4>
+</div>
+]]></code></pre>
+		<iframe src="/resources/toolbar/example8.html" style="width:100%;height:90px;border:0px"></iframe>
+
+		<p>The footer <placeholder name="name"/> inherits its theme swatch from the <a href="/page/">page</a> by default but you can easily set the theme swatch color by adding the <code>data-theme</code> attribute to the header. For example, <code>data-theme="b"</code>.</p>
+
+		<p>The page footer is very similar to the header in terms of options and configuration. The primary difference is that the footer is designed to be less structured than the header to allow more flexibility, so the framework doesn't automatically reserve slots for buttons to the left or right as it does in headers.</p>
+		<p>Since footers do not have the same prescriptive markup conventions as headers, we recommend using layout grids or writing custom styles to achieve the design you want.</p>
+
+		<h3>Adding buttons</h3>
+		<p><strong>The behavior whereby anchor elements are automatically enhanced as buttons is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Thereafter you must set the attribute <code>data-role="button"</code> on those anchors you wish the framework to enhance as buttons.</strong></p>
+
+		<p>Any link or valid button markup with a <code>data-role="button"</code> attribute added to the footer will automatically be turned into a button. To save space, buttons in <placeholder name="name"/> widgets are automatically set to inline styling so the button is only as wide as the text and icons it contains.</p>
+		<p>By default, <placeholder name="name"/> widgets don't have any padding to accommodate nav bars and other widgets. To include padding on the bar, add a <code>class="ui-bar"</code> to the footer.</p>
+
+<pre><code><![CDATA[
+<div data-role="footer" class="ui-bar">
+	<a href="index.html" data-role="button" data-icon="plus">Add</a>
+	<a href="index.html" data-role="button" data-icon="arrow-u">Up</a>
+	<a href="index.html" data-role="button" data-icon="arrow-d">Down</a>
+</div>
+]]></code></pre>
+
+		<p>This creates this <placeholder name="name"/> with buttons sitting in a row
+		<iframe src="/resources/toolbar/example9.html" style="width:100%;height:90px;border:0px"></iframe></p>
+
+		<p>Note that <code>.ui-bar</code> should not be added to header or footer bars that span the full width of the page, as the additional padding will cause a full-width element to break out of its parent container. To add padding inside of a full-width <placeholder name="name"/>, wrap the contents of the <placeholder name="name"/> widget in an element and apply the padding to that element.</p>
+
+		<p>To group buttons together into a button set, wrap the links in a wrapper with <code><![CDATA[data-role="controlgroup"]]></code> and <code><![CDATA[data-type="horizontal"]]></code> attributes.</p>
+
+		<code><![CDATA[<div data-role="controlgroup" data-type="horizontal">]]></code>
+
+		<p>This creates a grouped set of buttons:
+		<iframe src="/resources/toolbar/example10.html" style="width:100%;height:90px;border:0px"></iframe></p>
+
+		<h3>Adding form elements</h3>
+		<p>Form elements and other content can also be added to toolbars. Here is an example of a select menu inside a footer bar. We recommend using mini-sized form elements in toolbars by adding the <code>data-mini="true"</code> attribute:
+		<iframe src="/resources/toolbar/example11.html" style="width:100%;height:90px;border:0px"></iframe></p>
+
+		<h3>Fixed &amp; Persistent footers</h3>
+		<p>In situations where the footer is a global navigation element, you may want it to appear fixed so it doesn't scroll out of view. It's also possible to make a fixed toolbar persistent so it appears to not move between page transitions. This can be accomplished by using the persistent footer feature included in jQuery Mobile.</p>
+		<p>To make a footer persistent between transitions, add the <code>data-id</code> attribute to the footer of all relevant pages and use the same <code>id</code> value for each. For example, by adding <code>data-id="myfooter"</code> to the current page and the target page, the framework will keep the footer anchors in the same spot during the page animation. <strong>This effect will only work correctly if the header and footer toolbars are set to <code>data-position="fixed"</code> so they are in view during the transition.</strong></p>
+
+		<h2>Fixed toolbars</h2>
+		<p>In browsers that support CSS <code>position: fixed</code> (most desktop browsers, iOS5+, Android 2.2+, BlackBerry 6, and others), <placeholder name="name"/> widgets that use the "fixedtoolbar" plugin will be fixed to the top or bottom of the viewport, while the page content scrolls freely in between. In browsers that don't support fixed positioning, the toolbars will remain positioned in flow, at the top or bottom of the page. </p>
+
+		<p>To enable this behavior on a header or footer, add the <code>data-position="fixed"</code> attribute to a jQuery Mobile <placeholder name="name"/> element.</p>
+
+		<p>Fixed header markup example:</p>
+<pre><code><![CDATA[
+<div data-role="header" data-position="fixed">
+	<h1>Fixed Header</h1>
+</div>
+]]></code></pre>
+
+		<p>Fixed footer markup example:</p>
+<pre><code><![CDATA[
+<div data-role="footer" data-position="fixed">
+	<h1>Fixed Footer</h1>
+</div>
+]]></code></pre>
+
+		<iframe src="/resources/toolbar/example12.html" style="width:100%;height:420px;border:0px"></iframe>
+
+		<p><strong>Note:</strong> When you dynamically inject a fixed toolbar into the active page, you must afterwards call <code>$.mobile.resetActivePageHeight();</code> to ensure that the page height remains correct. An <a href="#example-2">example</a> illustrates this.</p>
+
+		<h3>Fullscreen Toolbars</h3>
+
+		<p>Fullscreen fixed toolbars sit on top of the content at all times when they are visible, and unlike regular fixed toolbars, fullscreen toolbars do not fall back to static positioning when toggled. Instead they disappear from the screen entirely. Fullscreen toolbars are ideal for more immersive interfaces, like a photo viewer that is meant to fill the entire screen with the photo itself and no distractions.</p>
+
+		<p>To enable this option on a fixed header or footer, add the <code>data-fullscreen</code> attribute to the element.</p>
+
+<pre><code><![CDATA[
+<div data-role="header" data-position="fixed" data-fullscreen="true">
+	<h1>Fixed Header!</h1>
+</div>
+]]></code></pre>
+		<iframe src="/resources/toolbar/example13.html" style="width:100%;height:420px;border:0px"></iframe>
+
+		<h3>Forms in toolbars</h3>
+
+		<p>While all form elements are now tested to work correctly within <em>static</em> toolbars as of jQuery Mobile 1.1, we recommend extensive testing when using form elements within <em>fixed</em> toolbars or within any <code>position: fixed</code> elements. This can potentially trigger a number of unpredictable issues in various mobile browsers, Android 2.2/2.3 in particular (detailed in <b>Known issues in Android 2.2/2.3</b>, below).</p>
+
+		<h3>Changes in jQuery Mobile 1.1</h3>
+
+		<p>Prior to version 1.1, jQuery Mobile used dynamically re-positioned toolbars for the fixed header effect because very few mobile browsers supported the <code>position:fixed</code> CSS property, and simulating fixed support through the use of "fake" JavaScript overflow-scrolling behavior would have reduced our browser support reach, in addition to feeling unnatural on certain platforms. This behavior was not ideal, and jQuery Mobile 1.1 took a new approach to fixed toolbars that allows much broader support. The framework now offers true fixed toolbars on many popular platforms, while gracefully degrading non-supporting platforms to static positioning.</p>
+
+		<h3>Polyfilling older platforms</h3>
+		<p>The fixed toolbar plugin degrades gracefully on platforms that do not support CSS <code>position:fixed</code> properly, such as iOS4.3. If you still need to support fixed toolbars on that platform (with the show/hide behavior) included in previous releases, Filament Group has developed a polyfill that you can use.</p>
+
+		<ul>
+			<li><a href="https://github.com/filamentgroup/jQuery-Mobile-FixedToolbar-Legacy-Polyfill">Github code repository with CSS, and JavaScript required for the fixed toolbars polyfill</a></li>
+			<li><a href="http://filamentgroup.github.com/jQuery-Mobile-FixedToolbar-Legacy-Polyfill/">Preview URL using the code in the repo above</a></li>
+		</ul>
+
+		<p>Just include the CSS and JS files after your references to jQuery Mobile and Fixed toolbars will work similarly to jQuery Mobile 1.0 on iOS4.3, with the inclusion of the new API for the 1.1 fixedtoolbar plugin.</p>
+
+		<p>If you have any improvements to suggest, fork the <a href="https://github.com/filamentgroup/jQuery-Mobile-FixedToolbar-Legacy-Polyfill">gist</a> on github and let us know!</p>
+
+		<h3>Known issue with form controls inside fixed toolbars, and programmatic scroll</h3>
+		<p>An obscure issue exists in iOS5 and some Android platforms where form controls placed inside fixed-positioned containers can lose their hit area when the window is programatically scrolled (using <code>window.scrollTo</code> for example). This is not an issue specific to jQuery Mobile, but because of it, we recommend not programatically scrolling a document when using form controls inside jQuery Mobile fixed toolbars. <a href="https://github.com/scottjehl/Device-Bugs/issues/1">This ticket</a> from the <a href="https://github.com/scottjehl/Device-Bugs/">Device Bugs project</a> tracker explains this problem in more detail.</p>
+
+		<h3>Known issues in Android 2.2/2.3</h3>
+		<p>Android 2.2/2.3's implementation of <code>position: fixed;</code> can, in conjunction with seemingly unrelated styles and markup patterns, cause a number of strange issues, particularly in the case of <code>position: absolute</code> elements inside of <code>position: fixed</code> elements. While we've done our best to work around a number of these unique bugs within the scope of the library, custom styles may cause a number of issues.</p>
+		<ul>
+			<li>Form elements elsewhere on the page - select menus in particular - can fail to respond to user interaction when an <em>empty</em> absolute positioned element is placed within a fixed position element. In rare cases—and specific to Android 2.2—this can cause <em>entire pages</em> to fail to respond to user interaction. This can seemingly be solved by adding any character to the absolute positioned element, including a non-breaking space, and in some cases even whitespace.</li>
+			<li>The above-described issue can also be triggered by an absolute positioned image inside of a fixed position element, but <em>only</em> when that image is using something <em>other than its inherent dimensions</em>. If a height or width is specified on the image using CSS, or the image src is invalid (thus having no inherent height and width), this issue can occur. If an image that is inherently, say, 50x50 pixels is placed in a fixed element and left at its inherent dimensions, this issue does not seem to occur.</li>
+			<li>When a <code>position: fixed</code> element appears anywhere on a page, most 2D CSS transforms will fail. Oddly, only <code>translate</code> transforms seem unaffected by this. Even more oddly, this issue is solved by setting a CSS <code>opacity</code> of .9 or below on the parent of the fixed element.</li>
+			<li>Combinations of <code>position: fixed</code> and overflow properties are best avoided, as both have been known to cause unpredictable issues in older versions of Android OS.</li>
+			<li>Any element that triggers the on-screen keyboard, when placed inside a <code>position: fixed</code> element, will fail to respond to user input when using anything other than the default keyboard. This includes Swype, XT9 or, it seems, any input method apart from the standard non-predictive keyboard.</li>
+		</ul>
+
+		<p>While we will continue to try to find ways to mitigate these bugs as best we can, we currently advise against implementing fixed toolbars containing complicated user styles and form elements without extensive testing in all versions of Android's native browser.</p>
+
+		<div class="warning">
+			<h2>No longer supported: touchOverflowEnabled</h2>
+			<p>Prior to jQuery Mobile 1.1, true fixed toolbar support was contingent on native browser support for the CSS property <code>overflow-scrolling: touch</code>, which is currently only supported in iOS5. As of version 1.1, jQuery Mobile no longer uses this CSS property at all. We've removed all internal usage of this property in the framework, but we've left it defined globally on the $.mobile object to reduce the risk that its removal will cause trouble with existing applications. This property is flagged for removal, so please update your code to no longer use it. The support test for this property, however, remains defined under <code>$.support</code> and we have no plans to remove that test at this time. </p>
+		</div>
+
+	</longdesc>
+	<added>1.4</added>
+	<options>
+		<option name="addBackBtn" default="false" example-value="true">
+			<desc>Whether to automatically add a button to the header that will take the user to the previous page.
+				<p>This option only affects header <placeholder name="name"/> widgets.</p>
+				<p>This option is also exposed as a data attribute: <code>data-add-back-btn="true"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
+		<option name="backBtnText" default='"Back"' example-value='"Previous"'>
+			<desc>The text to be shown on the back button.
+				<p>This option only affects header <placeholder name="name"/> widgets.</p>
+				<p>This option is also exposed as a data attribute: <code>data-back-btn-text="Previous"</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<option name="backBtnTheme" default="null, inherited from parent" example-value='"b"'>
+			<desc>Sets the color theme swatch for the back button. It accepts a single letter from a-z that maps to the swatches included in your theme.
+				<p>Possible values: swatch letter (a-z).</p>
+				<p>This option is also exposed as a data attribute: <code>data-back-btn-theme="b"</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<option name="disablePageZoom" default="true" example-value="false">
+			<desc>This option is provided by the <code>fixedToolbar</code> extension.
+			<p>Sets whether to disable page zoom whenever the page containing the fixed <placeholder name="name"/> is shown.</p>
+				<p>This option is also exposed as a data attribute: <code>data-disable-page-zoom="false"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
+		<option name="fullscreen" default="false" example-value="true">
+			<desc>This option is provided by the <code>fixedToolbar</code> extension.
+				<p>Sets whether the toolbar should be hidden entirely when the page is tapped.</p>
+				<p>This option is also exposed as a data attribute: <code>data-fullscreen="true"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
+		<option name="hideDuringFocus" default='"input, textarea, select"' example-value='"button"'>
+			<desc>This option is provided by the <code>fixedToolbar</code> extension.
+				<p>The value of this option is a CSS selector for those elements that, when focused, should cause the fixed <placeholder name="name"/> to be hidden and conversely, to be shown upon loss of focus.</p>
+				<p>This option is also exposed as a data attribute: <code>data-hide-during-focus="button"</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<option name="position" default="null" example-value='"fixed"'>
+			<desc>This option is provided by the <code>fixedToolbar</code> extension.
+				<p>Causes the toolbar to float above the content via CSS <code>position: fixed</code> when set to "fixed".</p>
+				<p>This option is also exposed as a data attribute: <code>data-position="fixed"</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<option name="supportBlacklist" default="default blacklist">
+			<desc>This option is provided by the <code>fixedToolbar</code> extension.
+			<p>The value of this option is a function that will return <code>true</code> on platforms where <placeholder name="name"/> widgets should not be displayed as fixed.</p>
+			<p>The default value of this option is a function that returns <code>true</code> whenever the value of <code>$.support.fixedPosition</code> is <code>false</code>.</p>
+			</desc>
+			<type name="Function" />
+		</option>
+		<option name="tapToggle" default="true" example-value="false">
+			<desc>This option is provided by the <code>fixedToolbar</code> extension.
+				<p>Sets whether the fixed toolbar's visibility can be toggled by tapping on the page.</p>
+				<p>This option is also exposed as a data attribute: <code>data-tap-toggle="false"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
+		<option name="tapToggleBlacklist" default='"a, button, input, select, textarea, .ui-header-fixed, .ui-footer-fixed, .ui-flipswitch, .ui-popup, .ui-panel, .ui-panel-dismiss-open"' example-value='".do-not-toggle-fixed-toolbar"'>
+			<desc>This option is provided by the <code>fixedToolbar</code> extension.
+				<p>When the user taps on the page and the <code>tapToggle</code> option is set on the fixed <placeholder name="name"/> widget, the element on which the user has tapped is examined before the visibility of the <placeholder name="name"/> is toggled. If the element on which the user has tapped matches the selector provided as the value of this option, then the <placeholder name="name"/> is not toggled.</p>
+				<p>This option is also exposed as a data attribute: <code>data-tap-toggle-blacklist=".do-not-toggle-fixed-toolbar"</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<xi:include href="../includes/widget-option-theme.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<option name="trackPersistentToolbars" default="true" example-value="false">
+			<desc>This option is provided by the <code>fixedToolbar</code> extension.
+				<p>Whether to persist the <placeholder name="name"/> across pages.</p>
+				<p>This option is also exposed as a data attribute: <code>data-track-persistent-toolbars="false"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
+		<option name="transition" default='"slide"' example-value='"fade"'>
+			<desc>This option is provided by the <code>fixedToolbar</code> extension.
+				<p>The transition to apply when showing/hiding the fixed <placeholder name="name"/>.</p>
+				<p>The following values are recognized:</p>
+					<table>
+						<tr><td class="enum-value">"none"</td><td>The fixed <placeholder name="name"/> appears and disappears abruptly, without any transition.</td></tr>
+						<tr><td class="enum-value">"slide"</td><td>The fixed <placeholdern name="name"/> slides in and out when it is toggled. "slideup" is used for headers, and "slidedown" is used for footers.</td></tr>
+						<tr><td class="enum-value">"fade"</td><td>The fixed <placeholdern name="name"/> fades in and out when it is toggled.</td></tr>
+					</table>
+			</desc>
+			<type name="String" />
+		</option>
+		<option name="updatePagePadding" default="true" example-value="false">
+			<desc>This option is provided by the <code>fixedToolbar</code> extension.
+				<p>Whether to set the page content div's top and bottom padding to the height of the <placeholder name="name"/>.</p>
+				<p>This opstion is also exposed as a data attribute: <code>data-update-page-padding="false"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
+		<option name="visibleOnPageShow" default="true" example-value="false">
+			<desc>This option is provided by the <code>fixedToolbar</code> extension.
+				<p>Whether the <placeholder name="name"/> is shown along with the page.</p>
+				<p>This opstion is also exposed as a data attribute: <code>data-visible-on-page-show="false"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
+	</options>
+	<events>
+		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+	</events>
+	<methods>
+		<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<method name="refresh">
+			<desc>Update the <placeholder name="name"/>.
+				<p>If you manipulate a <placeholder name="name"/> via JavaScript, you must call the <code>refresh</code> method on it to update the visual styling.</p>
+			</desc>
+		</method>
+		<method name="updatePagePadding">
+			<desc>
+				Sets the top and bottom padding for the content element of the page to the height of the <placeholder name="name"/>.
+			</desc>
+			<arguments>
+				<argument name="tbPage">
+					Optional: The page containing the <placeholder name="name"/> as a jQuery object.
+					<type name="jQuery" />
+				</argument>
+			</arguments>
+		</method>
+	</methods>
+	<example>
+		<desc>A basic example of a header</desc>
+		<html><![CDATA[<div data-role="header">
+		<h1>Page Title</h1>
+	</div>
+	<div data-role="content">
+		<p>Some content here</p>
+	</div> ]]></html>
+	</example>
+	<example>
+		<desc>A basic example of a page with fixed toolbars.</desc>
+		<html><![CDATA[<div data-role="header" <div data-role="header" data-position="fixed" data-theme="b">
+		<h1>Fixed Header</h1>
+	</div>
+	<div data-role="content" >
+
+		<p>This page demonstrates the "fixed" toolbar mode. </p>
+		<br /><br />
+		<p>To enable this toolbar feature type, you apply the <code>data-position="fixed"</code> attribute to both the header and footer <code>div</code> elements.</p>
+		<br /><br />
+		<p>And we're adding more text here so that you can really see the fixed toobars in action.</p>
+		<br /><br />
+		<p>If you tap the screen while in the middle of the page (i.e. neither at the top nor the bottom of the page, the visibility of the toolbars will toggle</p>
+		<p></p>
+
+	</div>
+    <div data-role="footer" data-theme="b" data-position="fixed">
+		<h1>Fixed Footer</h1>
+	</div>]]></html>
+	</example>
+	<example>
+		<desc>Injecting a fixed toolbar</desc>
+		<html><![CDATA[
+	<div data-role="content">
+		<p>This page demonstrates how to correctly inject fixed toolbars.</p>
+		<a href="#" id="inject-toolbar" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Inject Header</a>
+	</div>
+		]]></html>
+		<code><![CDATA[
+$.mobile.document.on( "click", "#inject-toolbar", function() {
+	$( "<div data-role='header'><h1>Dynamic Fixed Toolbar Header</h1></div>")
+		.appendTo( $( "#inject-toolbar" ).closest( ".ui-page" ) )
+		.toolbar({ position: "fixed" });
+
+	// This second step ensures that the insertion of the new toolbar does not
+	// affect page height
+	$.mobile.resetActivePageHeight();
+});
+]]></code>
+	</example>
+	<category slug="widgets"/>
+</entry>
