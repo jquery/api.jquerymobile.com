@@ -90,12 +90,7 @@ $( "[type='submit']" ).button();
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="mini" default="null (false)">
-			<desc>If set to <code>true<code>, this will display a more compact version of the <placeholder name="name"/> that uses less vertical height. Possible values: true, false.
-				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
-			</desc>
-			<type name="Boolean" />
-		</option>
+		<xi:include href="../includes/widget-option-mini.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="shadow" default="true">
 			<desc>Applies the drop shadow style to the <placeholder name="name"/> if set to true.
 				<p>This option is also exposed as a data attribute: <code>data-shadow="false"</code>.</p>
