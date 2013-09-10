@@ -241,8 +241,111 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 	</longdesc>
 	<added>1.4</added>
 	<options>
+		<option name="addBackBtn" default="false" example-value="true">
+			<desc>Whether to automatically add a button to the header that will take the user to the previous page.
+				<p>This option only affects header <placeholder name="name"/> widgets.</p>
+				<p>This option is also exposed as a data attribute: <code>data-add-back-btn="true"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
+		<option name="backBtnText" default='"Back"' example-value='"Previous"'>
+			<desc>The text to be shown on the back button.
+				<p>This option only affects header <placeholder name="name"/> widgets.</p>
+				<p>This option is also exposed as a data attribute: <code>data-back-btn-text="Previous"</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<option name="backBtnTheme" default="null, inherited from parent" example-value='"b"'>
+			<desc>Sets the color theme swatch for the back button. It accepts a single letter from a-z that maps to the swatches included in your theme.
+				<p>Possible values: swatch letter (a-z).</p>
+				<p>This option is also exposed as a data attribute: <code>data-back-btn-theme="b"</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/widget-option-enhanced.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<option name="disablePageZoom" default="true" example-value="false">
+			<desc>This option is provided by the <code>fixedToolbar</code> extension.
+			<p>Sets whether to disable page zoom whenever the page containing the fixed <placeholder name="name"/> is shown.</p>
+				<p>This option is also exposed as a data attribute: <code>data-disable-page-zoom="false"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
+		<option name="fullscreen" default="false" example-value="true">
+			<desc>This option is provided by the <code>fixedToolbar</code> extension.
+				<p>Sets whether the toolbar should be hidden entirely when the page is tapped.</p>
+				<p>This option is also exposed as a data attribute: <code>data-fullscreen="true"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
+		<option name="hideDuringFocus" default='"input, textarea, select"' example-value='"button"'>
+			<desc>This option is provided by the <code>fixedToolbar</code> extension.
+				<p>The value of this option is a CSS selector for those elements that, when focused, should cause the fixed <placeholder name="name"/> to be hidden and conversely, to be shown upon loss of focus.</p>
+				<p>This option is also exposed as a data attribute: <code>data-hide-during-focus="button"</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<option name="position" default="null" example-value='"fixed"'>
+			<desc>This option is provided by the <code>fixedToolbar</code> extension.
+				<p>Causes the toolbar to float above the content via CSS <code>position: fixed</code> when set to "fixed".</p>
+				<p>This option is also exposed as a data attribute: <code>data-position="fixed"</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<option name="supportBlacklist" default="default blacklist">
+			<desc>This option is provided by the <code>fixedToolbar</code> extension.
+			<p>The value of this option is a function that will return <code>true</code> on platforms where <placeholder name="name"/> widgets should not be displayed as fixed.</p>
+			<p>The default value of this option is a function that returns <code>true</code> whenever the value of <code>$.support.fixedPosition</code> is <code>false</code>.</p>
+			</desc>
+			<type name="Function" />
+		</option>
+		<option name="tapToggle" default="true" example-value="false">
+			<desc>This option is provided by the <code>fixedToolbar</code> extension.
+				<p>Sets whether the fixed toolbar's visibility can be toggled by tapping on the page.</p>
+				<p>This option is also exposed as a data attribute: <code>data-tap-toggle="false"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
+		<option name="tapToggleBlacklist" default='"a, button, input, select, textarea, .ui-header-fixed, .ui-footer-fixed, .ui-flipswitch, .ui-popup, .ui-panel, .ui-panel-dismiss-open"' example-value='".do-not-toggle-fixed-toolbar"'>
+			<desc>This option is provided by the <code>fixedToolbar</code> extension.
+				<p>When the user taps on the page and the <code>tapToggle</code> option is set on the fixed <placeholder name="name"/> widget, the element on which the user has tapped is examined before the visibility of the <placeholder name="name"/> is toggled. If the element on which the user has tapped matches the selector provided as the value of this option, then the <placeholder name="name"/> is not toggled.</p>
+				<p>This option is also exposed as a data attribute: <code>data-tap-toggle-blacklist=".do-not-toggle-fixed-toolbar"</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<xi:include href="../includes/widget-option-theme.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<option name="trackPersistentToolbars" default="true" example-value="false">
+			<desc>This option is provided by the <code>fixedToolbar</code> extension.
+				<p>Whether to persist the <placeholder name="name"/> across pages.</p>
+				<p>This option is also exposed as a data attribute: <code>data-track-persistent-toolbars="false"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
+		<option name="transition" default='"slide"' example-value='"fade"'>
+			<desc>This option is provided by the <code>fixedToolbar</code> extension.
+				<p>The transition to apply when showing/hiding the fixed <placeholder name="name"/>.</p>
+				<p>The following values are recognized:</p>
+					<table>
+						<tr><td class="enum-value">"none"</td><td>The fixed <placeholder name="name"/> appears and disappears abruptly, without any transition.</td></tr>
+						<tr><td class="enum-value">"slide"</td><td>The fixed <placeholdern name="name"/> slides in and out when it is toggled. "slideup" is used for headers, and "slidedown" is used for footers.</td></tr>
+						<tr><td class="enum-value">"fade"</td><td>The fixed <placeholdern name="name"/> fades in and out when it is toggled.</td></tr>
+					</table>
+			</desc>
+			<type name="String" />
+		</option>
+		<option name="updatePagePadding" default="true" example-value="false">
+			<desc>This option is provided by the <code>fixedToolbar</code> extension.
+				<p>Whether to set the page content div's top and bottom padding to the height of the <placeholder name="name"/>.</p>
+				<p>This opstion is also exposed as a data attribute: <code>data-update-page-padding="false"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
+		<option name="visibleOnPageShow" default="true" example-value="false">
+			<desc>This option is provided by the <code>fixedToolbar</code> extension.
+				<p>Whether the <placeholder name="name"/> is shown along with the page.</p>
+				<p>This opstion is also exposed as a data attribute: <code>data-visible-on-page-show="false"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
 	</options>
 	<events>
 		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
