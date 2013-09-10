@@ -212,19 +212,8 @@ $( ".mySearchInput" ).textinput();
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-enhanced.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="mini" default="null (false)" example-value="true">
-			<desc>If set to <code>true</code>, this will display a more compact version of the <placeholder name="name"/> that uses less vertical height.
-				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
-			</desc>
-			<type name="Boolean" />
-		</option>
 		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="mini" default="false" example-value="true">
-			<desc>Sets the size of the element to a more compact, mini version.
-				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
-			</desc>
-            <type name="Boolean" />
-		</option>
+		<xi:include href="../includes/widget-option-mini.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="preventFocusZoom" default="true on iOS platforms" example-value="true">
 			<desc>Attempts to prevent the device from focusing in on the input element when the element receives the focus.
 				<p>This option is also exposed as a data attribute: <code>data-prevent-focus-zoom="true"</code>.</p>

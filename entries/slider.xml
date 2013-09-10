@@ -241,13 +241,7 @@ $( "input" ).slider();
 			<type name="Boolean" />
 		</option>
 		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="mini"  default="false" example-value="true">
-			<desc>Sets the size of the element to a more compact, mini version. This option is also exposed as a data attribute: data-mini="true"
-
-				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
-			</desc>
-			<type name="Boolean" />
-		</option>
+		<xi:include href="../includes/widget-option-mini.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-theme.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="trackTheme" default="null, inherited from parent" example-value='"a"'>
 			<desc>Sets the color scheme (swatch) for the slider's track, specifically. It accepts a single letter from a-z that maps to the swatches included in your theme.

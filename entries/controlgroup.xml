@@ -45,13 +45,7 @@
 			<type name="Boolean" />
 		</option>
 		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="mini" default="false" example-value="true">
-			<desc>
-				<p>If set to true, this will display a more compact version of the controlgroup that uses less vertical space. Possible values: true, false.</p>
-				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
-			</desc>
-			<type name="Boolean" />
-		</option>
+		<xi:include href="../includes/widget-option-mini.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="shadow" default="false" example-value="true">
 			<desc>
 				<p>Sets whether a drop shadow is drawn around the controlgroup.</p>

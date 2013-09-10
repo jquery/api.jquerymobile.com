@@ -269,12 +269,7 @@ $( "select" ).selectmenu();
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="mini" default="false" example-value="true">
-			<desc>Sets the size of the element to a more compact, mini version.
-				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
-			</desc>
-			<type name="Boolean" />
-		</option>
+		<xi:include href="../includes/widget-option-mini.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="nativeMenu" default="true" example-value="false">
 			<desc>When set to true, clicking the custom-styled select menu will open the native select menu which is best for performance. If set to false, the custom select menu style will be used instead of the native menu.
 				<p>This option is also exposed as a data attribute: <code>data-native-menu="false"</code>.</p>
