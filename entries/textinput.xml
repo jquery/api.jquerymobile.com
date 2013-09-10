@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="textinput" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="textinput">
+<entry name="textinput" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="textinput" init-selector='"input[type='text'], input[type='search'], :jqmData(type='search'), input[type='number'], :jqmData(type='number'), input[type='password'], input[type='email'], input[type='url'], input[type='tel'], textarea, input[type='time'], input[type='date'], input[type='month'], input[type='week'], input[type='datetime'], input[type='datetime-local'], input[type='color'], input:not([type]), input[type='file']"'>
 	<title>Textinput Widget</title>
     <desc>Creates a textinput widget for textinput, textarea or search input</desc>
     <longdesc>
 		<h2>Text Input</h2>
 
-		<p>Text inputs and textareas are coded with standard HTML elements, then enhanced by jQuery Mobile to make them more attractive and useable on a mobile device. View the <a href="../data-attribute/">data- attribute reference</a> to see all the possible attributes you can add to text inputs.</p>
+		<p>Text inputs and textareas are coded with standard HTML elements, then enhanced by jQuery Mobile to make them more attractive and useable on a mobile device.</p>
 
 		<p>To collect standard alphanumeric text, use an <code>input</code> with a <code>type="text"</code> attribute. Set the <code>for</code> attribute of the <code>label</code> to match the <code>id</code> of the <code>input</code> so they are semantically associated. It's possible to accessibly hide the label if it's not desired in the page layout, but we require that it is present in the markup for semantic and accessibility reasons.</p>
 
@@ -30,8 +30,8 @@
 		<iframe src="/resources/textinput/example2.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
 		<h3>Clear button option</h3>
-
-		<p>To add a clear button to any input (like the search input), add the <code>data-clear-btn="true"</code> attribute. The text for this clear button can be customized via the <code>data-clear-btn-text="clear input"</code> attribute. Search buttons have the clear button by default and cannot be controlled by this option. Note that this is available for all the input types below except for <code>textareas</code>.</p>
+		<p>The <code>clearButton</code> extension provides the <code>clearBtn</code> option.</p>
+		<p>To add a clear button to any input (like the search input), add the <code>data-clear-btn="true"</code> attribute. The text for this clear button can be customized via the <code>data-clear-btn-text="clear input"</code> attribute. Search buttons have the clear button by default and cannot be controlled by this option. Note that this is available for all the input types below except for those coded via <code>textarea</code> elements.</p>
 
 <pre><code><![CDATA[
 <label for="clear-demo">Text Input:</label>
@@ -62,7 +62,7 @@
 
         <h2>Textareas</h2>
 
-		<p>For multi-line text inputs, use a <code>textarea</code> element. The framework will auto-grow the height of the textarea to avoid the need for an internal scrollbar. </p>
+		<p>For multi-line text inputs, use a <code>textarea</code> element. The <code>autogrow</code> extension provides functionality for auto-growing the height of the textarea to avoid the need for an internal scrollbar. </p>
 		<p>Set the <code>for</code> attribute of the <code>label</code> to match the <code>id</code> of the <code>textarea</code> so they are semantically associated, and wrap them in a <code>div</code> with the <code>data-role="fieldcontain"</code> attribute to group them.</p>
 
 <pre><code><![CDATA[
@@ -94,13 +94,15 @@ $( "input" ).textinput();
 
 		<h3>Degraded input types</h3>
 
-		<p>jQuery Mobile degrades several HTML5 input types back to type=text or type=number after adding enhanced controls. For example, inputs with a type of range are enhanced with a custom slider control, and their type is set to number to offer a usable form input alongside that slider. Inputs with a type of search are degraded back to type=text after we add our own themeable search input styling.</p>
-		<p>The page plugin contains a list of input types that are set to either true which means they'll degrade to type=text, false which means they'll be left alone, or a string such as "number", which means they'll be converted to that type (such as the case of type=range).</p>
+		<strong>The location of the map of input type degradations in the page plugin is deprecated as of 1.4.0. As of 1.5.0 the input type degradation functionality will be implemented by the <code>degradeInputs</code> module.</strong>
 
-		<p>You can configure which types are changed via the page plugin's <code>degradeInputs</code> option, which can be manipulated externally via <code>$.mobile.page.prototype.options.degradeInputs</code>, which has properties: color, date, datetime, "datetime-local", email, month, number, range, search, tel, time, url, and week. Be sure to configure this inside an event handler bound to the <code>mobileinit</code> event, so that it applies to the first page as well as subsequent pages that are loaded.</p>
+		<p>jQuery Mobile degrades several HTML5 input types back to type=text or type=number after adding enhanced controls. For example, inputs with a type of range are enhanced with a custom slider control, and their type is set to number to offer a usable form input alongside that slider. Inputs with a type of search are degraded back to type=text after we add our own themable search input styling.</p>
+		<p>The <code>degradeInputs</code> module contains a list of input types that are set to either true which means they'll degrade to type=text, false which means they'll be left alone, or a string such as "number", which means they'll be converted to that type (such as the case of type=range).</p>
+
+		<p>You can configure which types are changed via <code>$.mobile.degradeInputs</code>, which has properties: color, date, datetime, "datetime-local", email, month, number, range, search, tel, time, url, and week. Be sure to configure this inside an event handler bound to the <code>mobileinit</code> event, so that it applies to the first page as well as subsequent pages that are loaded.</p>
 
 		<h2>Search Input</h2>
-		<p>Search inputs are a new HTML type that is styled with pill-shaped corners and adds an "x" icon to clear the field once you start typing. Start with an input with a type="search" attribute in your markup.</p>
+		<p>Search inputs are a new HTML type styled with pill-shaped corners and an "x" icon to clear the field once you start typing. Start with an input with a type="search" attribute in your markup.</p>
 		<p>Set the <code>for</code> attribute of the <code>label</code> to match the <code>id</code> of the <code>input</code> so they are semantically associated. It's possible to accessibly hide the label if it's not desired in the page layout, but we require that it is present in the markup for semantic and accessibility reasons.</p>
 
 <pre><code><![CDATA[
@@ -144,7 +146,8 @@ $( "input" ).textinput();
 		<h3>Setting the clear button text</h3>
 
 		<p>The text for the button used to clear the search input of text can be configured for all search inputs by binding to the <code>mobileinit</code> event and setting the
-		<code>$.mobile.textinput.prototype.options.clearSearchButtonText</code> property to a string of your choosing.</p>
+		<code>$.mobile.textinput.prototype.options.clearBtnText</code> property to a string of your choosing.</p>
+		<p>This option is provided by the <code>clearButton</code> extension.</p>
 
 		<h3>Calling the textinput plugin</h3>
 
@@ -154,32 +157,68 @@ $( "input" ).textinput();
 $( ".mySearchInput" ).textinput();
 ]]></code></pre>
 
+		<h2>Providing pre-rendered markup</h2>
+		<p>You can improve the load time for your page by providing the markup that the <placeholder name="name"/> widget would normally create during its initialization.</p>
+		<p>The <placeholder name="name"/> widget wraps <code>input</code>-based widgets in  <code>div</code> used for creating the style. <code>textarea</code> elements are not wrapped in such a <code>div</code>.</p>
+		<p>When you provide such pre-rendered markup you must also set all the classes that the framework would normally set, and you must also set all data-attributes whose values differ from the default to indicate that the pre-rendered markup reflects the non-default value of the corresponding widget option.</p>
+		<p>In the example below, we add the attribute <code>data-corners="false"</code> to the input, because the class <code>ui-corner-all</code> is absent from the wrapper, indicating that the value of the "corners" option should be false.</p>
+<pre><code><![CDATA[
+<div class="ui-input-text ui-body-inherit ui-shadow-inset">
+	<input type="text" data-enhanced="true" data-corners="false" name="pre-rendered-text-field" id="pre-rendered-text-field"></input>
+</div>
+]]></code></pre>
+			<iframe src="/resources/textinput/example8.html" style="width:100%;height:90px;border:0px"></iframe>
+
 	</longdesc>
 	<added>1.0</added>
 	<options>
-    	<option name="clearBtn" default="false" example-value="true">
-        	<desc>Adds a clear button to the input (not available for textareas).
+		<option name="autogrow" default="true" example-value="false">
+			<desc>This option is provided by the <code>autogrow</code> extension.
+				<p>Whether to update the size of the <code>textarea</code> element upon first appearance, as well as upon a change in the content of the element.</p>
+				<p>This option applies only to <placeholder name="name"/> widgets based on <code>textarea</code> elements.</p>
+				<p>This option is also exposed as a data attribute: <code>data-autogrow="false"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
+		<option name="keyupTimeoutBuffer" default="100" example-value="150">
+			<desc>This option is provided by the <code>autogrow</code> extension.
+				<p>The amount of time (in milliseconds) to wait between the occurence of a keystroke and the resizing of the <code>textarea</code> element. If another keystroke occurs within this time, the resizing is postponed by another period of time of the same length.</p>
+				<p>This option applies only to <placeholder name="name"/> widgets based on <code>textarea</code> elements.</p>
+				<p>This option is also exposed as a data attribute: <code>data-keyup-timeout-buffer="150"</code>.</p>
+			</desc>
+			<type name="Number" />
+		</option>
+		<option name="clearBtn" default="false" example-value="true">
+			<desc>This option is provided by the <code>clearButton</code> extension.
+				<p>Adds a clear button to the input when set to <code>true</code>.</p>
+				<p>This option applies only to <placeholder name="name"/> widgets based on <code>input</code> elements.</p>
 				<p>This option is also exposed as a data attribute: <code>data-clear-btn="true"</code>.</p>
 			</desc>
-            <type name="Boolean" />
-        </option>
-		<option name="clearBtnText" default='"clear text"' example-value='"Clear value"'>
-        	<desc>The text description for the optional clear button, useful for assistive technologies like screen readers.
-				<p>This option is also exposed as a data attribute: <code>data-clear-btn-text="Clear input"</code>.</p>
-			</desc>
-            <type name="String" />
-        </option>
-		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="initSelector" default="input[type='text'], input[type='search'], :jqmData(type='search'), input[type='number'], :jqmData(type='number'), input[type='password'], input[type='email'], input[type='url'], input[type='tel'], textarea, input:not([type])">
-			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as textinputs. To change which elements are initialized, bind this option to the mobileinit event:
-<pre><code><![CDATA[
-$( document ).on( "mobileinit", function() {
-	$.mobile.textinput.prototype.options.initSelector = ".myInputs";
-});
-]]></code></pre>
-			</desc>
-			<type name="CSS selector string" />
+			<type name="Boolean" />
 		</option>
+		<option name="clearBtnText" default='"Clear text"' example-value='"Clear value"'>
+			<desc>This option is provided by the <code>clearButton</code> extension.
+				<p>The text description for the optional clear button, useful for assistive technologies like screen readers.</p>
+				<p>This option applies only to <placeholder name="name"/> widgets based on <code>input</code> elements.</p>
+				<p>This option is also exposed as a data attribute: <code>data-clear-btn-text="Clear value"</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<option name="corners" default="true" example-value="false">
+			<desc>Applies the theme border radius if set to <code>true</code> by adding the class <code>ui-corner-all</code> to the <placeholder name="name"/> widget's outermost element.
+				<p>This option is also exposed as a data attribute: <code>data-corners="false"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
+		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-option-enhanced.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<option name="mini" default="null (false)" example-value="true">
+			<desc>If set to <code>true</code>, this will display a more compact version of the <placeholder name="name"/> that uses less vertical height.
+				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
+		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="mini" default="false" example-value="true">
 			<desc>Sets the size of the element to a more compact, mini version.
 				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
@@ -187,13 +226,18 @@ $( document ).on( "mobileinit", function() {
             <type name="Boolean" />
 		</option>
 		<option name="preventFocusZoom" default="true on iOS platforms" example-value="true">
-			<desc>This option disables page zoom temporarily when a custom input is focused, which prevents iOS devices from zooming the page into the input. By default, iOS often zooms into form controls, and the behavior is often unnecessary and intrusive in mobile-optimized layouts.
-
+			<desc>Attempts to prevent the device from focusing in on the input element when the element receives the focus.
 				<p>This option is also exposed as a data attribute: <code>data-prevent-focus-zoom="true"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
+		<xi:include href="../includes/widget-option-theme.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<option name="wrapperClass" default='""' example-value='"custom-class"'>
+			<desc>The value of this option is a string containing a space-separated list of classes to be applied to the outermost element of the <placeholder name="name"/> widget.
+				<p>This option is also exposed as a data attribute: <code>data-wrapper-class="true"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
-		<xi:include href="../includes/widget-option-theme.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</options>
 	<events>
 		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
