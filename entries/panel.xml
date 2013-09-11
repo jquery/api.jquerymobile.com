@@ -9,7 +9,7 @@
 		</p>
 		<h3>Where panel markup goes in a page</h3>
 
-		<p>A panel must be a sibling to the header, content and footer elements inside a jQuery Mobile page. You can add the panel markup either <em>before</em> or <em>after</em> these elements, but not in between. A panel cannot be placed outside a page, but this constraint will be removed in a future version.</p>
+		<p>A panel must be a sibling to the header, content, and footer elements inside a jQuery Mobile page. You can add the panel markup either <em>before</em> or <em>after</em> these elements, but not in between.</p>
 
 		<p>Here is an example of the panel before the header, content and footer in the source order:</p>
 
@@ -86,7 +86,7 @@ $( "#idofpanel" ).panel( "open" , optionsHash );
 		<h3>Closing a panel</h3>
 		<p>Clicking the link that opened the panel, swiping left or right, or tapping the Esc key will close the panel. To turn off the swipe-to-close behavior, add the <code>data-swipe-close="false"</code> attribute to the panel.</p>
 
-		<p>By default, panels can also be closed by clicking outside the panel onto the page contents. To prevent this behavior, add the <code>data-dismissible="false"</code> attribute to the panel. It's possible to have the panel and page sit side-by-side at wider screen widths and prevent the click-out-to-close behavior only above a certain screen width by applying a media query. See the responsive section below for details. </p>
+		<p>By default, panels can also be closed by clicking outside the panel onto the page contents. To prevent this behavior, add the <code>data-dismissible="false"</code> attribute to the panel. It's possible to have the panel and page sit side-by-side at wider screen widths and prevent the click-out-to-close behavior only above a certain screen width by applying a media query. See the responsive section below for details.</p>
 
 		<p>A panel can also be closed by calling the panel's <code>close</code> method directly.</p>
 
@@ -120,7 +120,7 @@ $( "#idofpanel" ).panel( "close" );
 
 		<h3>Styling panels</h3>
 
-		<p>By default, panels have very simple styles to let you customize them as needed. Panels are essentially just simple blocks with no margins that sit on either side of the page content. The framework wraps the panel content in a <code>div</code> with class <code>ui-pannel-inner</code> which has a padding of 15 pixels. If needed you can override this with custom CSS or use option <code>classes.panelInner</code> to set a different class name for the <code>div</code></p>
+		<p>By default, panels have very simple styles to let you customize them as needed. Panels are essentially just simple blocks with no margins that sit on either side of the page content. The framework wraps the panel content in a <code>div</code> with class <code>ui-pannel-inner</code> which has a padding of 15 pixels. If needed you can override this with custom CSS or use option <code>classes.panelInner</code> to set a different class name for the <code>div</code>.</p>
 
 		<p>Panels have a fixed width of 17em (272 pixels) which is narrow enough to still show some of the page contents when open to make clicking out to close easy, and still looks good on wider tablet or desktop screens. The styles to set widths on panels are fairly complex but these can be overridden with CSS as needed.</p>
 
@@ -183,63 +183,32 @@ $( "#idofpanel" ).panel( "close" );
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="dismissible" default="true" example-value="false">
-			<desc>Sets whether the panel can be closed by clicking outside onto the page.
-				<p>This option is also exposed as a data attribute:<code>data-dismissible="false"</code> on the link that opens the panel.</p>
-			</desc>
-			<type name="Boolean" />
-		</option>
-		<option name="display" default='"reveal"' example-value='"overlay"'>
-			<desc>The relationship of the panel to the page contents. Can either push the page over ("reveal"), re-flow the content to fit the panel content as a column ("push"), or sit over the content ("overlay").
-				<p>This option is also exposed as a data attribute:<code>data-display="push"</code> on the link that opens the panel.</p>
-			</desc>
+		<option name="classes.animate" default='"ui-panel-animate"'>
+			<desc>Class added to the panel, page contents wrapper and fixed toolbars when option animate is true and the 3D transform feature test returns <code>true</code>.</desc>
 			<type name="String" />
 		</option>
-		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="position" default='"left"' example-value='"right"'>
-			<desc>The side of the screen the panel appears on. Values can be "left" or "right".
-				<p>This option is also exposed as a data attribute:<code>data-position="right"</code> on the link that opens the panel.</p>
-			</desc>
+		<option name="classes.contentFixedToolbar" default='"ui-panel-fixed-toolbar-wrap"'>
+			<desc>Class added to the page container to suppress scrolling horizontally</desc>
 			<type name="String" />
 		</option>
-		<option name="positionFixed" default="false" example-value="true">
-			<desc>Sets whether the panel has fixed positioning so the contents are in view even if the page is scrolled down. This also allows the page to scroll while the panel stays fixed. We recommend not to enable this feature when panels are used within Android apps because of poor performance and display issues.
-				<p>This option is also exposed as a data attribute:<code>data-position-fixed=true</code> on the panel.</p>
-			</desc>
-			<type name="Boolean" />
-		</option>
-		<option name="swipeClose" default="true" example-value="false">
-			<desc>Sets whether the panel can be closed by swiping left or right over the panel.
-				<p>This option is also exposed as a data attribute:<code>data-swipe-close=false</code> on the panel.</p>
-			</desc>
-			<type name="Boolean" />
-		</option>
-		<option name="theme" default='"a"' example-value='"b"'>
-			<desc>
-				Sets the color scheme (swatch) for the <placeholder name="name" /> widget. It accepts a single letter from a-z that maps to the swatches included in your theme.
-				<p>Possible values: swatch letter (a-z).</p>
-				<p>This option is also exposed as a data attribute: <code>data-theme="b"</code>.</p>
-			</desc>
+		<option name="classes.contentFixedToolbarClosed" default='"ui-panel-content-fixed-toolbar-closed"'>
+			<desc>Class added to fixed toolbars after the close animation is complete.</desc>
 			<type name="String" />
 		</option>
-		<option name="classes.panel" default='"ui-panel"'>
-			<desc>Class added to the panel.</desc>
+		<option name="classes.contentFixedToolbarOpen" default='"ui-panel-content-fixed-toolbar-open"'>
+			<desc>Class added to fixed toolbars when the panel is opening.</desc>
 			<type name="String" />
 		</option>
-		<option name="classes.panelOpen" default='"ui-panel-open"'>
-			<desc>Class added to the panel when opening. Used for targeting hardware acceleration only during transitions.</desc>
+		<option name="classes.contentWrap" default='"ui-panel-content-wrap"'>
+			<desc>Class added to the wrapper injected around the page contents (header, content, footer), needed for positioning of the panel.</desc>
 			<type name="String" />
 		</option>
-		<option name="classes.panelClosed" default='"ui-panel-closed"'>
-			<desc>Class added to the panel when closed.</desc>
+		<option name="classes.contentWrapClosed" default='"ui-panel-content-wrap-closed"'>
+			<desc>Class added to the page contents wrapper after the close animation is complete.</desc>
 			<type name="String" />
 		</option>
-		<option name="classes.panelFixed" default='"ui-panel-fixed"'>
-			<desc>Class added to the panel when fixed positioning is applied.</desc>
-			<type name="String" />
-		</option>
-		<option name="classes.panelInner" default='"ui-panel-inner"'>
-			<desc>Class added to the panel contents wrapper div.</desc>
+		<option name="classes.contentWrapOpen" default='"ui-panel-content-wrap-open"'>
+			<desc>Class added to the wrapper injected around the page contents (header, content, footer) when the panel is opening. Used for targeting hardware acceleration only during transitions.</desc>
 			<type name="String" />
 		</option>
 		<option name="classes.modal" default='"ui-panel-dismiss"'>
@@ -258,32 +227,69 @@ $( "#idofpanel" ).panel( "close" );
 			<desc>Class added to the page when a panel is open.</desc>
 			<type name="String" />
 		</option>
-		<option name="classes.contentWrap" default='"ui-panel-content-wrap"'>
-			<desc>Class added to the wrapper injected around the page contents (header, content, footer), needed for positioning of the panel.</desc>
+		<option name="classes.panel" default='"ui-panel"'>
+			<desc>Class added to the panel.</desc>
 			<type name="String" />
 		</option>
-		<option name="classes.contentWrapOpen" default='"ui-panel-content-wrap-open"'>
-			<desc>Class added to the wrapper injected around the page contents (header, content, footer) when the panel is opening. Used for targeting hardware acceleration only during transitions.</desc>
+		<option name="classes.panelClosed" default='"ui-panel-closed"'>
+			<desc>Class added to the panel when closed.</desc>
 			<type name="String" />
 		</option>
-		<option name="classes.contentWrapClosed" default='"ui-panel-content-wrap-closed"'>
-			<desc>Class added to the page contents wrapper after the close animation is complete.</desc>
+		<option name="classes.panelFixed" default='"ui-panel-fixed"'>
+			<desc>Class added to the panel when fixed positioning is applied.</desc>
 			<type name="String" />
 		</option>
-		<option name="classes.contentFixedToolbar" default='"ui-panel-fixed-toolbar-wrap"'>
-			<desc>Class added to the page container to suppress scrolling horizontally</desc>
+		<option name="classes.panelInner" default='"ui-panel-inner"'>
+			<desc>Class added to the panel contents wrapper div.</desc>
 			<type name="String" />
 		</option>
-		<option name="classes.contentFixedToolbarOpen" default='"ui-panel-content-fixed-toolbar-open"'>
-			<desc>Class added to fixed toolbars when the panel is opening.</desc>
+		<option name="classes.panelOpen" default='"ui-panel-open"'>
+			<desc>Class added to the panel when opening. Used for targeting hardware acceleration only during transitions.</desc>
 			<type name="String" />
 		</option>
-		<option name="classes.contentFixedToolbarClosed" default='"ui-panel-content-fixed-toolbar-closed"'>
-			<desc>Class added to fixed toolbars after the close animation is complete.</desc>
+		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<option name="dismissible" default="true" example-value="false">
+			<desc>Sets whether the panel can be closed by clicking outside onto the page.
+				<p>This option is also exposed as a data attribute:<code>data-dismissible="false"</code> on the link that opens the panel.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
+		<option name="display" default='"reveal"'  example-value='"overlay"'>
+			<desc>The relationship of the panel to the page contents. This option accepts one of three values:
+				<table>
+					<tr><td class="enum-value">"reveal"</td><td>Push the page over</td></tr>
+					<tr><td class="enum-value">"push"</td><td>Re-flow the content to fit the panel content as a column</td></tr>
+					<tr><td class="enum-value">"overlay"</td><td>Sit over the content</td></tr>
+				</table>
+				<p>This option is also exposed as a data attribute:<code>data-display="push"</code> on the link that opens the panel.</p>
+			</desc>
 			<type name="String" />
 		</option>
-		<option name="classes.animate" default='"ui-panel-animate"'>
-			<desc>Class added to the panel, page contents wrapper and fixed toolbars when option animate is true and the 3D transform feature test returns <code>true</code>.</desc>
+		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<option name="position" default='"left"'  example-value='"right"'>
+			<desc>The side of the screen the panel appears on. Values can be "left" or "right".
+				<p>This option is also exposed as a data attribute:<code>data-position="right"</code> on the link that opens the panel.</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<option name="positionFixed" default="false" example-value="true">
+			<desc>Sets whether the panel has fixed positioning so the contents are in view even if the page is scrolled down. This also allows the page to scroll while the panel stays fixed. We recommend not to enable this feature when panels are used withing Android apps because of poor performance and display issues.
+				<p>This option is also exposed as a data attribute:<code>data-position-fixed=true</code> on the panel.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
+		<option name="swipeClose" default="true" example-value="false">
+			<desc>Sets whether the panel can be closed by swiping left or right over the panel.
+				<p>This option is also exposed as a data attribute:<code>data-swipe-close=false</code> on the panel.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
+		<option name="theme" default='null, inherited from parent' example-value='"b"'>
+			<desc>
+				Sets the color scheme (swatch) for the <placeholder name="name" /> widget. It accepts a single letter from a-z that maps to the swatches included in your theme.
+				<p>Possible values: swatch letter (a-z).</p>
+				<p>This option is also exposed as a data attribute: <code>data-theme="b"</code>.</p>
+			</desc>
 			<type name="String" />
 		</option>
 	</options>
