@@ -191,6 +191,71 @@ $( "#mypanel" ).trigger( "updatelayout" );
 			</desc>
 			<type name="Boolean" />
 		</option>
+		<option name="classes.animate" default='"ui-panel-animate"'>
+			<desc>Class added to the panel, page contents wrapper and fixed toolbars when option animate is true and the 3D transform feature test returns <code>true</code>.</desc>
+			<type name="String" />
+		</option>
+		<option name="classes.contentFixedToolbar" default='"ui-panel-fixed-toolbar-wrap"'>
+			<desc>Class added to the page container to suppress scrolling horizontally</desc>
+			<type name="String" />
+		</option>
+		<option name="classes.contentFixedToolbarClosed" default='"ui-panel-content-fixed-toolbar-closed"'>
+			<desc>Class added to fixed toolbars after the close animation is complete.</desc>
+			<type name="String" />
+		</option>
+		<option name="classes.contentFixedToolbarOpen" default='"ui-panel-content-fixed-toolbar-open"'>
+			<desc>Class added to fixed toolbars when the panel is opening.</desc>
+			<type name="String" />
+		</option>
+		<option name="classes.contentWrap" default='"ui-panel-content-wrap"'>
+			<desc>Class added to the wrapper injected around the page contents (header, content, footer), needed for positioning of the panel.</desc>
+			<type name="String" />
+		</option>
+		<option name="classes.contentWrapClosed" default='"ui-panel-content-wrap-closed"'>
+			<desc>Class added to the page contents wrapper after the close animation is complete.</desc>
+			<type name="String" />
+		</option>
+		<option name="classes.contentWrapOpen" default='"ui-panel-content-wrap-open"'>
+			<desc>Class added to the wrapper injected around the page contents (header, content, footer) when the panel is opening. Used for targeting hardware acceleration only during transitions.</desc>
+			<type name="String" />
+		</option>
+		<option name="classes.modal" default='"ui-panel-dismiss"'>
+			<desc>Class added to the overlay on the page to dismiss the panel when hidden.</desc>
+			<type name="String" />
+		</option>
+		<option name="classes.modalOpen" default='"ui-panel-dismiss-open"'>
+			<desc>Class added to the invisible overlay over the page when the panel is open. Used to dismiss the panel.</desc>
+			<type name="String" />
+		</option>
+		<option name="classes.pagePanel" default='"ui-page-panel"'>
+			<desc>Class added to the page container when a panel widget is present.</desc>
+			<type name="String" />
+		</option>
+		<option name="classes.pagePanelOpen" default='"ui-page-panel-open"'>
+			<desc>Class added to the page when a panel is open.</desc>
+			<type name="String" />
+		</option>
+		<option name="classes.panel" default='"ui-panel"'>
+			<desc>Class added to the panel.</desc>
+			<type name="String" />
+		</option>
+		<option name="classes.panelClosed" default='"ui-panel-closed"'>
+			<desc>Class added to the panel when closed.</desc>
+			<type name="String" />
+		</option>
+		<option name="classes.panelFixed" default='"ui-panel-fixed"'>
+			<desc>Class added to the panel when fixed positioning is applied.</desc>
+			<type name="String" />
+		</option>
+		<option name="classes.panelInner" default='"ui-panel-inner"'>
+			<desc>Class added to the panel contents wrapper div.</desc>
+			<type name="String" />
+		</option>
+		<option name="classes.panelOpen" default='"ui-panel-open"'>
+			<desc>Class added to the panel when opening. Used for targeting hardware acceleration only during transitions.</desc>
+			<type name="String" />
+		</option>
+		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="dismissible" default="true" example-value="false">
 			<desc>Sets whether the panel can be closed by clicking outside onto the page.
 				<p>This option is also exposed as a data attribute:<code>data-dismissible="false"</code> on the link that opens the panel.</p>
@@ -233,70 +298,6 @@ $( "#mypanel" ).trigger( "updatelayout" );
 				<p>Possible values: swatch letter (a-z).</p>
 				<p>This option is also exposed as a data attribute: <code>data-theme="b"</code>.</p>
 			</desc>
-			<type name="String" />
-		</option>
-		<option name="classes.panel" default='"ui-panel"'>
-			<desc>Class added to the panel.</desc>
-			<type name="String" />
-		</option>
-		<option name="classes.panelOpen" default='"ui-panel-open"'>
-			<desc>Class added to the panel when opening. Used for targeting hardware acceleration only during transitions.</desc>
-			<type name="String" />
-		</option>
-		<option name="classes.panelClosed" default='"ui-panel-closed"'>
-			<desc>Class added to the panel when closed.</desc>
-			<type name="String" />
-		</option>
-		<option name="classes.panelFixed" default='"ui-panel-fixed"'>
-			<desc>Class added to the panel when fixed positioning is applied.</desc>
-			<type name="String" />
-		</option>
-		<option name="classes.panelInner" default='"ui-panel-inner"'>
-			<desc>Class added to the panel contents wrapper div.</desc>
-			<type name="String" />
-		</option>
-		<option name="classes.modal" default='"ui-panel-dismiss"'>
-			<desc>Class added to the overlay on the page to dismiss the panel when hidden.</desc>
-			<type name="String" />
-		</option>
-		<option name="classes.modalOpen" default='"ui-panel-dismiss-open"'>
-			<desc>Class added to the invisible overlay over the page when the panel is open. Used to dismiss the panel.</desc>
-			<type name="String" />
-		</option>
-		<option name="classes.pagePanel" default='"ui-page-panel"'>
-			<desc>Class added to the page container when a panel widget is present.</desc>
-			<type name="String" />
-		</option>
-		<option name="classes.pagePanelOpen" default='"ui-page-panel-open"'>
-			<desc>Class added to the page when a panel is open.</desc>
-			<type name="String" />
-		</option>
-		<option name="classes.contentWrap" default='"ui-panel-content-wrap"'>
-			<desc>Class added to the wrapper injected around the page contents (header, content, footer), needed for positioning of the panel.</desc>
-			<type name="String" />
-		</option>
-		<option name="classes.contentWrapOpen" default='"ui-panel-content-wrap-open"'>
-			<desc>Class added to the wrapper injected around the page contents (header, content, footer) when the panel is opening. Used for targeting hardware acceleration only during transitions.</desc>
-			<type name="String" />
-		</option>
-		<option name="classes.contentWrapClosed" default='"ui-panel-content-wrap-closed"'>
-			<desc>Class added to the page contents wrapper after the close animation is complete.</desc>
-			<type name="String" />
-		</option>
-		<option name="classes.contentFixedToolbar" default='"ui-panel-fixed-toolbar-wrap"'>
-			<desc>Class added to the page container to suppress scrolling horizontally</desc>
-			<type name="String" />
-		</option>
-		<option name="classes.contentFixedToolbarOpen" default='"ui-panel-content-fixed-toolbar-open"'>
-			<desc>Class added to fixed toolbars when the panel is opening.</desc>
-			<type name="String" />
-		</option>
-		<option name="classes.contentFixedToolbarClosed" default='"ui-panel-content-fixed-toolbar-closed"'>
-			<desc>Class added to fixed toolbars after the close animation is complete.</desc>
-			<type name="String" />
-		</option>
-		<option name="classes.animate" default='"ui-panel-animate"'>
-			<desc>Class added to the panel, page contents wrapper and fixed toolbars when option animate is true and the 3D transform feature test returns <code>true</code>.</desc>
 			<type name="String" />
 		</option>
 	</options>
