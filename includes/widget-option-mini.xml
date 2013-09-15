@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <option name="mini" default="null (false)">
-	<desc>If set to <code>true<code>, this will display a more compact version of the <placeholder name="name"/> that uses less vertical height by applying the <code>ui-mini</code> class to the outermost element of the <placeholder name="name"/> widget.
+	<desc>If set to <code>true</code>, this will display a more compact version of the <placeholder name="name"/> that uses less vertical height by applying the <code>ui-mini</code> class to the outermost element of the <placeholder name="name"/> widget.
 		<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
 	</desc>
 <type name="Boolean" />

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="textinput" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="textinput" init-selector='"input[type='text'], input[type='search'], :jqmData(type='search'), input[type='number'], :jqmData(type='number'), input[type='password'], input[type='email'], input[type='url'], input[type='tel'], textarea, input[type='time'], input[type='date'], input[type='month'], input[type='week'], input[type='datetime'], input[type='datetime-local'], input[type='color'], input:not([type]), input[type='file']"'>
+<entry name="textinput" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="textinput" init-selector='"input[type=&#39;text&#39;], input[type=&#39;search&#39;], :jqmData(type=&#39;search&#39;), input[type=&#39;number&#39;], :jqmData(type=&#39;number&#39;), input[type=&#39;password&#39;], input[type=&#39;email&#39;], input[type=&#39;url&#39;], input[type=&#39;tel&#39;], textarea, input[type=&#39;time&#39;], input[type=&#39;date&#39;], input[type=&#39;month&#39;], input[type=&#39;week&#39;], input[type=&#39;datetime&#39;], input[type=&#39;datetime-local&#39;], input[type=&#39;color&#39;], input:not([type]), input[type=&#39;file&#39;]"'>
 	<title>Textinput Widget</title>
     <desc>Creates a textinput widget for textinput, textarea or search input</desc>
     <longdesc>
