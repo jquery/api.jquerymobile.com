@@ -8,12 +8,12 @@
 		<p>Directly inside this container, add any header (H1-H6) or legend element. The framework will style the header to look like a clickable button and add a "+" icon to the left to indicate it's expandable.</p>
 		<p>After the header, add any HTML markup you want to be collapsible. The framework will wrap this markup in a container that will be hidden/shown when the heading is clicked.</p>
 		<p>By default, the content will be collapsed.</p>
-<pre><code>
-&lt;div data-role=&quot;collapsible&quot;&gt;
-	&lt;h3&gt;I&#x27;m a header&lt;/h3&gt;
-	&lt;p&gt;I&#x27;m the collapsible content. By default I'm closed, but you can click the header to open me.&lt;/p&gt;
-&lt;/div&gt;
-	</code></pre>
+<pre><code><![CDATA[
+<div data-role="collapsible">
+	<h3>I'm a header</h3>
+	<p>I'm the collapsible content. By default I'm closed, but you can click the header to open me.</p>
+</div>
+]]></code></pre>
 		<p>This code will create a collapsible widget like this:
 		<iframe src="/resources/collapsible/example1.html" style="width:100%;height:140px;border:0px"></iframe>
 		</p>
@@ -22,9 +22,9 @@
 
 		<p>To expand the content when the page loads, add the <code>data-collapsed="false"</code> attribute to the wrapper.</p>
 
-<pre><code>
-&lt;div data-role=&quot;collapsible&quot; data-collapsed=&quot;false&quot;&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="collapsible" data-collapsed="false">
+]]></code></pre>
 
 		<p>This code will create a collapsible widget like this:
 		<iframe src="/resources/collapsible/example2.html" style="width:100%;height:140px;border:0px"></iframe></p>
@@ -33,9 +33,9 @@
 
 		<p>By default collapsibles have an inset appearance. To make them full width without corner styling add the <code>data-inset="false"</code> attribute to the element.</p>
 
-<pre><code>
-&lt;div data-role=&quot;collapsible&quot; data-inset=&quot;false&quot;&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="collapsible" data-inset="false">
+]]></code></pre>
 
 		<p>This code will create a non-inset collapsible:
 		<iframe src="/resources/collapsible/example3.html" style="width:100%;height:140px;border:0px"></iframe></p>
@@ -44,9 +44,9 @@
 
 		<p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a <a href="../forms/forms-all-mini.html">mini version</a>.</p>
 
-<pre><code>
-&lt;div data-role=&quot;collapsible&quot; data-mini=&quot;true&quot;&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="collapsible" data-mini="true">
+]]></code></pre>
 
 		<p>This code will create a mini collapsible widget:
 		<iframe src="/resources/collapsible/example4.html" style="width:100%;height:140px;border:0px"></iframe></p>
@@ -67,12 +67,12 @@
 
 		<p>To provide a stronger visual connection between the collapsible header and content, add the <code>data-content-theme</code> attribute to the wrapper and specify a theme swatch letter. This will apply the swatch's border and <em>flat</em> background color (not the gradient) to the content block and changes the corner rounding to square off the bottom of the header and round the bottom of the content block instead to visually group these elements.</p>
 
-<pre><code>
-&lt;div data-role=&quot;collapsible&quot; data-content-theme=&quot;c&quot;&gt;
-	&lt;h3&gt;Header&lt;/h3&gt;
-	&lt;p&gt;I&#x27;m the collapsible content with a themed content block set to "c".&lt;/p&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="collapsible" data-content-theme="c">
+	<h3>Header</h3>
+	<p>I'm the collapsible content with a themed content block set to "c".</p>
+</div>
+]]></code></pre>
 
 		<iframe src="/resources/collapsible/example7.html" style="width:100%;height:140px;border:0px"></iframe>
 
@@ -80,11 +80,12 @@
 
 		<p>To set the theme on a collapsible header button, add the <code>data-theme</code> attribute to the wrapper and specify a swatch letter. Note that you can mix and match swatch letters between the header and content with these theme attributes.</p>
 
-<pre><code>&lt;div data-role=&quot;collapsible&quot; data-theme=&quot;a&quot; data-content-theme=&quot;a&quot;&gt;
-	&lt;h3&gt;Header swatch A&lt;/h3&gt;
-	&lt;p&gt;I&#x27;m the collapsible content with a themed content block set to "a".&lt;/p&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="collapsible" data-theme="a" data-content-theme="a">
+	<h3>Header swatch A</h3>
+	<p>I'm the collapsible content with a themed content block set to "a".</p>
+</div>
+]]></code></pre>
 
 		<iframe src="/resources/collapsible/example8.html" style="width:100%;height:260px;border:0px"></iframe>
 
@@ -116,7 +117,13 @@
 			<desc>Sets the icon for the header of the collapsible container when in a collapsed state.
 				<p>This option is also exposed as a data attribute: <code>data-collapsed-icon="arrow-r"</code>.</p>
 			</desc>
-			<type name="String" />
+			<type name="String">
+				<desc>The name of the icon you wish to use.</desc>
+			</type>
+			<type name="Boolean">
+				<desc>In addition to an icon name, you can also set this option to <code>false</code>. In that case, the collapsible will not have an icon in either the expanded or collapsed state. Add <code>data-collapsed-icon="false"</code> to the <placeholder name="name"/> widget to set the option to <code>false</code> via the data attribute.
+				</desc>
+			</type>
 		</option>
 		<option name="corners" default="true" example-value="false">
 			<desc>Applies the theme border-radius if set to true.
@@ -150,11 +157,11 @@
 		</option>
 		<option name="initSelector"  default='":jqmData(role=&#39;collapsible&#39;)"'>
 			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as collapsibles. To change which elements are initialized, bind this option to the mobileinit event:
-<pre><code>
+<pre><code><![CDATA[
 $( document ).on( "mobileinit", function() {
 	$.mobile.collapsible.prototype.options.initSelector = ".mycollapsible";
 });
-</code></pre>
+]]></code></pre>
 			</desc>
 			<type name="CSS selector string" />
 		</option>
