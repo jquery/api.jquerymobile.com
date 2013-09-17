@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="loading" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="loading">
-	<title>Page Loading Widget</title>
+	<title>Loader Widget</title>
 	<desc>Handles the task of displaying the loading dialog when jQuery Mobile pulls in content via Ajax. </desc>
 	<longdesc>
-		<h2>The Page Loading Widget</h2>
-		<p>The page loading widget handles the task of displaying the loading dialog when jQuery Mobile pulls in content via Ajax. The page loading dialog was previously configured globally with three settings <code>$.mobile.loadingMessage</code>, <code>$.mobile.loadingMessageTextVisible</code>, and <code>$.mobile.loadingMessageTheme</code> which are now deprecated. In addition to the methods for showing and hiding, <code>$.mobile.showPageLoadingMsg</code> and <code>$.mobile.hidePageLoadingMsg</code> are also deprecated.</p>
-		<p>The page loading widget handles the task of displaying the loading dialog when jQuery Mobile pulls in content via Ajax. It can also be displayed manually for custom loading actions using the <code>$.mobile.loading</code> helper method (See the global method docs).</p>
+		<h2>The Loader Widget</h2>
+		<p>The loader widget handles the task of displaying the loading dialog when jQuery Mobile pulls in content via Ajax. The loader dialog was previously configured globally with three settings <code>$.mobile.loadingMessage</code>, <code>$.mobile.loadingMessageTextVisible</code>, and <code>$.mobile.loadingMessageTheme</code> which are now deprecated. In addition to the methods for showing and hiding, <code>$.mobile.showPageLoadingMsg</code> and <code>$.mobile.hidePageLoadingMsg</code> are also deprecated.</p>
+		<p>The loader widget handles the task of displaying the loading dialog when jQuery Mobile pulls in content via Ajax. It can also be displayed manually for custom loading actions using the <code>$.mobile.loading</code> helper method (See the global method docs).</p>
 		<p>To configure the loading dialog globally the following settings can be defined on its prototype during the <code>mobileinit</code> event.</p> Below are the defaults:
 
 		<pre><code>
@@ -28,7 +28,7 @@ $.mobile.loading( "show", {
 	html: ""
 });
 		</code></pre>
-	</longdesc> 
+	</longdesc>
 	<added>1.2</added>
 	<options>
 		<option name="html" default='""' example-value='"&lt;span class=&quot;ui-icon ui-icon-loading&quot;&gt;&lt;img src=&quot;jquery-logo.png&quot; /&gt;&lt;h2&gt;is loading for you ...&lt;/h2&gt;&lt;/span&gt;"'>
@@ -54,7 +54,7 @@ $.mobile.loading( "show", {
 	</options>
 	<events>
 		<event name="create">
-			<desc>Triggered when a page loading widget is created.</desc>
+			<desc>Triggered when a loader widget is created.</desc>
 			<argument name="event" type="Event">
 			</argument>
 			<argument name="ui" type="Object">
@@ -71,12 +71,12 @@ $.mobile.loading( "show", {
 			</desc>
 		</method>
 		<method name="hide">
-			<desc>Hide the page loading widget
+			<desc>Hide the loader widget
 			</desc>
 		</method>
 		<method name="hidePageLoadingMsg">
 			<desc><p class="ui-body ui-body-e"><strong>Deprecated</strong> in 1.2 - use <code>$.mobile.loading( "hide" )</code> instead, see examples above</p>
-			Hide the page loading message, which is configurable via $.mobile.loadingMessage.
+			Hide the loader message, which is configurable via $.mobile.loadingMessage.
 				<pre><code>
 					//hide the page loader
 					$.mobile.hidePageLoadingMsg();
@@ -84,7 +84,7 @@ $.mobile.loading( "show", {
 			</desc>
 		</method>
 		<method name="loading">
-			<desc>Show or hide the page loading message, which is configurable via <code>$.mobile.loader</code> prototype options as described in the widget docs or can be controlled via a params object.
+			<desc>Show or hide the loader message, which is configurable via <code>$.mobile.loader</code> prototype options as described in the widget docs or can be controlled via a params object.
 			</desc>
 		</method>
 		<method name="resetHtml">
@@ -97,7 +97,7 @@ $.mobile.loading( "show", {
 		</method>
 		<method name="showPageLoadingMsg">
 			<desc><p class="ui-body ui-body-e"><strong>Deprecated</strong> in 1.2 - use <code>$.mobile.loading( "show" )</code> instead, see examples above</p>
-			Show the page loading message, which is configurable via $.mobile.loadingMessage.
+			Show the loader message, which is configurable via $.mobile.loadingMessage.
 			<pre><code>
 //cue the page loader
 $.mobile.showPageLoadingMsg();
@@ -124,7 +124,7 @@ $.mobile.showPageLoadingMsg( "b", "This is only a test", true );
 			<button class="show-page-loading-msg" data-theme="e" data-textonly="false" data-textvisible="true" data-msgtext="Loading theme e" data-icon="arrow-r" data-iconpos="right">Theme e</button>
 			<button class="show-page-loading-msg" data-theme="a" data-textonly="true" data-textvisible="true" data-msgtext="Custom Loader" data-icon="arrow-r" data-html="<span class='ui-bar ui-overlay-c ui-corner-all'><img src='../_assets/images/jquery-logo.png' /><h2>is loading for you ...</h2></span>" data-iconpos="right">Custom HTML</button>
 			<button class="hide-page-loading-msg" data-icon="delete" data-iconpos="right">Hide</button>
-		</div> 
+		</div>
 	</div>
 </div>
 ]]></html>
