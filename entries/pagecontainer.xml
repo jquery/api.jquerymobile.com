@@ -139,6 +139,21 @@ $( document ).on( &quot;pagecontainerbeforeload&quot;, function( event, data ) {
 				</property>
 			</argument>
 		</event>
+		<event name="changefailed">
+			<desc>Triggered when the changePage() request fails to load the page.</desc>
+			<argument name="event" type="Event" />
+			<argument name="ui" type="Object">
+				<property name="toPage">
+					<desc>This property represents the page the caller wishes to make active. It may be either a jQuery collection object containing the page DOM element, or an absolute/relative url to an internal or external page, in which case the value exactly matches the first argument to the <code>changePage()</code> call that triggered the event.</desc>
+					<type name="jQuery" />
+					<type name="String" />
+				</property>
+				<property name="options">
+					<desc>The configuration options to be used for the current <code>changePage()</code> call.</desc>
+					<type name="Object" />
+				</property>
+			</argument>
+		</event>
 		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude" />
 		<event name="load">
 			<desc>Triggered after the page is successfully loaded and inserted into the DOM.</desc>
