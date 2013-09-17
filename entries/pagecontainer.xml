@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
+<entry name="pagecontainer" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="pagecontainer">
+	<title>Page Container Widget</title>
+	<desc>Manages a collection of pages.</desc>
+	<longdesc>
+		<h2>Smooth Navigation Between Pages</h2>
+		<strong>Note: The page container widget is designed to be a singleton instantiated by the framework on the <code>body</code> element. This limitation will be removed in future versions of jQuery Mobile.</strong>
+		<p>jQuery Mobile's central abstraction is the use of multiple pages inside a single HTML document. The children of the <code>body</code> are all <code>div</code> elements that have been enhanced into <a href="/page/">page</a> widgets. These are jQuery Mobile pages.</p>
+		<p>Only one page is visible at a time. Upon navigation, the originally visible page is hidden, and another page is shown. Moving from one page to another usually happens smoothly, via a transition. This is not possible when navigating between HTML documents via HTTP, because the browser discards all state associated with the source page when navigating to the target page, making it impossible to perform this task via a smooth transition effect such as a fade or a slide.</p>
+		<h3>Multipage Documents</h3>
+		<p>In its simplest form, the HTML document retrieved by the browser has a <code>body</code> consisting of several <code>div</code> elements which are enhanced using the <code>page</code> widget. Each such page has an <code>id</code> attribute to distinguish it from other pages.</p>
+		<p>The pages can be interlinked using anchors. When the user clicks such an anchor, a new history entry is created, and the page to which the anchor refers is displayed by means of a smooth transition from the previous page. The example below illustrates a multipage setup. <strong>Note:</strong> If the example below animates using a fade transition instead of the slide transition requested in the anchor, it is because your browser does not support CSS 3D transforms.</p>
+<pre><code>
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;Multipage example&lt;/title&gt;
+	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;
+	&lt;link rel=&quot;stylesheet&quot; href=&quot;http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css&quot; /&gt;
+	&lt;script src=&quot;http://code.jquery.com/jquery-1.10.1.min.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div data-role=&quot;page&quot; id=&quot;page1&quot;&gt;
+		&lt;div data-role=&quot;header&quot;&gt;
+			&lt;h1&gt;Page 1&lt;/h1&gt;
+		&lt;/div&gt;
+		&lt;div data-role=&quot;content&quot;&gt;
+			&lt;a href=&quot;#page2&quot; data-transition=&quot;slide&quot; class=&quot;ui-btn ui-corner-all ui-btn-inline&quot;&gt;Go To Page 2&lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div data-role=&quot;page&quot; id=&quot;page2&quot;&gt;
+		&lt;div data-role=&quot;header&quot;&gt;
+			&lt;h1&gt;Page 2&lt;/h1&gt;
+		&lt;/div&gt;
+		&lt;div data-role=&quot;content&quot;&gt;
+			&lt;a href=&quot;#page1&quot; data-rel=&quot;back&quot; data-transition=&quot;slide&quot; class=&quot;ui-btn ui-corner-all ui-btn-inline&quot;&gt;Go Back To Page 1&lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+		<iframe src="/resources/pagecontainer/example1.html" style="width:100%;height:200px;border:0px;"></iframe>
+
+		<h3>HTTP-analogous navigation via AJAX</h3>
+		<p>jQuery Mobile allows you to replace the browser's standard HTTP navigation with AJAX-based navigation. jQuery Mobile overrides the browser's default link handling behavior. It intercepts clicks on anchors containing links to other documents and upon each such click it checks whether the document can be retrieved via AJAX. A link has to meet the following criteria in order for the documentto which it links to be retrieved via AJAX:
+			<ol>
+				<li>The global configuration option <code>$.mobile.linkBindingEnabled</code> must be <code>true</code>.</li>
+				<li>The click event's default must not be prevented and it must be a left-click.</li>
+				<li>The link must not have any of the following attributes:
+					<ul>
+						<li><code>data-rel="back"</code></li>
+						<li><code>data-rel="external</code></li>
+						<li><code>data-ajax="false"</code></li>
+						<li><code>target</code> (must not be present)</li>
+					</ul>
+				</li>
+				<li>The global configuration option <code>$.mobile.ajaxEnabled</code> must be <code>true</code>.</li>
+				<li>The link must be to the same domain or it must be to a permitted cross-domain-request destination.</li>
+			</ol>
+		</p>
+		<p>If these criteria are met jQuery Mobile retrieves the document via AJAX. It is important to realize that, while the document is retrieved in its entirety, only the first jQuery Mobile page is displayed. The header and the rest of the body is discarded. Thus, it is not possible to retrieve a multi-page document via AJAX, nor is it possible to execute scripts located in the header.</p>
+
+		<p>After AJAX retrieval, jQuery Mobile displays the page via a transition. The transition can be specified on the link that opens the page using the <code>data-transition</code> attribute. If no transition is specified, then <code>$.mobile.defaultPageTransition</code> is used or, if the incoming page is a dialog, then <code>$.mobile.defaultDialogTransition</code> is used. <strong>Note: The dialog widget is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0.</strong></p>
+		<p>If the browser supports the <code>replaceState</code> API the location bar is updated such that it displays the URL of the document that was retrieved via AJAX. This latter step has the following implication for site/application design: Since the user can copy the URL of a page other than the start page, the application must be designed such that it can start from any of its pages. The best way to achieve this is to include jQuery Mobile and your application code in the header for all the pages of the site/application, and ensure initial state consistency during the <code>pagecreate</code> event.</p>
+	</longdesc>
+	<added>1.4</added>
+	<options>
+		<option name="theme" default="a" example-value='"b"'>
+			<desc>
+				Sets the color scheme (swatch) for the <placeholder name="name" /> widget. It accepts a single letter from a-z that maps to the swatches included in your theme.
+				<p>Possible values: swatch letter (a-z).</p>
+				<p>This option is also exposed as a data attribute: <code>data-theme="b"</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
+	</options>
+	<events>
+		<event name="beforeload">
+			<desc>Triggered before any load request is made.
+				<p>Callbacks bound to this event can call <code>preventDefault()</code> on the event to indicate that they are handling the load request. Callbacks that do this <strong>MUST</strong> make sure they call <code>resolve()</code> or <code>reject()</code> on the deferred object reference contained in the object passed to the callback via its <code>ui</code> parameter.</p>
+			</desc>
+			<argument name="event" type="Event" />
+			<argument name="ui" type="Object">
+				<property name="url">
+					<desc>The absolute or relative URL that was passed into <a href="#method-load">load()</a> by the caller.</desc>
+					<type name="String"/>
+				</property>
+				<property name="absUrl">
+					<desc>The absolute version of the url. If url was relative, it is resolved against the url used to load the current active page.</desc>
+					<type name="String"/>
+				</property>
+				<property name="dataUrl">
+					<desc>The filtered version of absUrl to be used when identifying the page and updating the browser location when the page is made active.</desc>
+					<type name="String"/>
+				</property>
+				<property name="deferred">
+					<desc>Deferred to be resolved or rejected upon completion of content load. Callbacks that call <code>preventDefault()</code> on the event <strong>MUST</strong> call <code>resolve()</code> or <code>reject()</code> on this object so that <code>changePage()</code> requests resume processing. Deferred object observers expect the deferred object to be resolved like this:
+<pre><code>
+$( document ).on( &quot;pagecontainerbeforeload&quot;, function( event, data ) {
+
+	// Let the framework know we're going to handle the load.
+
+	event.preventDefault();
+
+	// ... load the document then insert it into the DOM ...
+	// at some point, either in this callback, or through
+	// some other async means, call resolve, passing in
+	// the following args, plus a jQuery collection object
+	// containing the DOM element for the page.
+
+	data.deferred.resolve( data.absUrl, data.options, page );
+
+});
+</code></pre>
+					<p>or rejected like this:</p>
+<pre><code>
+$( document ).on( &quot;pagecontainerbeforeload&quot;, function( event, data ) {
+
+	// Let the framework know we're going to handle the load.
+
+	event.preventDefault();
+
+	// ... load the document then insert it into the DOM ...
+	// at some point, if the load fails, either in this
+	// callback, or through some other async means, call
+	// reject like this:
+
+	data.deferred.reject( data.absUrl, data.options );
+
+});</code></pre>
+					</desc>
+					<type name="Deferred"/>
+				</property>
+				<property name="options">
+					<desc>This object contains the options that were passed into <a href="#method-load">load()</a>.</desc>
+					<type name="Object"/>
+				</property>
+			</argument>
+		</event>
+		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude" />
+		<event name="load">
+			<desc>Triggered after the page is successfully loaded and inserted into the DOM.</desc>
+			<argument name="event" type="Event" />
+			<argument name="ui" type="Object">
+				<property name="url">
+					<desc>The absolute or relative URL that was passed into <a href="#method-load">load()</a> by the caller.</desc>
+					<type name="String" />
+				</property>
+				<property name="absUrl">
+					<desc>The absolute version of the url. If url was relative, it is resolved against the url used to load the current active page.</desc>
+					<type name="String" />
+				</property>
+				<property name="dataUrl">
+					<desc>The filtered version of absUrl to be used when identifying the page and updating the browser location when the page is made active.</desc>
+					<type name="String" />
+				</property>
+				<property name="options">
+					<desc>This object contains the options that were passed into <a href="#method-load">load()</a>.</desc>
+					<type name="Object" />
+				</property>
+				<property name="xhr">
+					<desc>The jQuery XMLHttpRequest object used when attempting to load the page. This is what gets passed as the 3rd argument to the framework's <code>$.ajax()</code> success callback.</desc>
+					<type name="XMLHttpRequest" />
+				</property>
+				<property name="textStatus">
+					<desc>According to the jQuery Core <a href="http://api.jquery.com/jQuery.ajax/">documentation</a>, this will be a string describing the status. This is what gets passed as the 2nd argument to the framework's <code>$.ajax()</code> error callback. It may also be <code>null</code>.</desc>
+					<type name="String" />
+				</property>
+			</argument>
+		</event>
+	</events>
+	<methods>
+	</methods>
+	<category slug="widgets"/>
+</entry>
