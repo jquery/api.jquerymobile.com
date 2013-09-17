@@ -1,87 +1,10 @@
 <?xml version="1.0"?>
-<entry name="pageloadfailed" type="event" return="">
+<entry name="pageloadfailed" type="event" return="" deprecated="1.4.0">
 	<title>pageloadfailed</title>
 	<desc>Triggered if the page load request failed.</desc>
 	<longdesc>
-		<p>By default, after dispatching this event, the framework will display a page failed message and call reject() on the deferred object contained within the event's data object. Callbacks can prevent this default behavior from executing by calling <code>preventDefault()</code> on the event.</p>
-		<p>The data object, passed as the 2nd arg to the callback function contains the following properties:</p>
-            <ul>
-            	<li><code>url</code> (string)
-					<ul>
-           	    		<li>The absolute or relative URL that was passed into <code>$.mobile.loadPage()</code> by the caller.</li>
-          	    	</ul>
-            	</li>
-            	<li><code>absUrl</code> (string)
-            		<ul>
-            	    	<li>The absolute version of the url. If url was relative, it is resolved against the url used to load the current active page.</li>
-          	    	</ul>
-            	</li>
-            	<li><code>dataUrl</code> (string)
-					<ul>
-						<li>The filtered version of absUrl to be used when identifying the page and updating the browser location when the page is made active.</li>
-					</ul>
-				</li>
-				<li><code>deferred</code> (object)
-            		<ul>
-						<li>Callbacks that call <code>preventDefault()</code> on the event, *MUST* call <code>resolve()</code> or <code>reject()</code> on this object so that <code>changePage()</code> requests resume processing. Deferred object observers expect the deferred object to be resolved like this:
-<pre><code>
-$( document ).on( &quot;pageloadfailed&quot;, function( event, data ) {
-
-	// Let the framework know we're going to handle things.
-
-	event.preventDefault();
-
-	// ... attempt to load some other page ...
-	// at some point, either in this callback, or through
-	// some other async means, call resolve, passing in
-	// the following args, plus a jQuery collection object
-	// containing the DOM element for the page.
-
-	data.deferred.resolve( data.absUrl, data.options, page );
-
-});
-</code></pre>
-                    <p>or rejected like this:</p>
-<pre><code>
-$( document ).on( &quot;pageloadfailed&quot;, function( event, data ) {
-
-	// Let the framework know we're going to handle things.
-
-	event.preventDefault();
-
-	// ... attempt to load some other page ...
-	// at some point, if the load fails, either in this
-	// callback, or through some other async means, call
-	// reject like this:
-
-	data.deferred.reject( data.absUrl, data.options );
-
-});
-</code></pre>
-						</li>
-					</ul>
-            	</li>
-            	<li><code>options</code> (object)
-            		<ul>
-            			<li>This object contains the options that were passed into <code>$.mobile.loadPage()</code>.</li>
-          	    	</ul>
-            	</li>
-            	<li><code>xhr</code> (object)
-            		<ul>
-            			<li>The jQuery XMLHttpRequest object used when attempting to load the page. This is what gets passed as the first argument to the framework's <code>$.ajax()</code> error callback.</li>
-          	    	</ul>
-            	</li>
-            	<li><code>textStatus</code> (null or string)
-            		<ul>
-            			<li>According to the jQuery Core <a href="http://api.jquery.com/jQuery.ajax/">documentation</a>, possible values for this property, aside from null, are &quot;timeout&quot;, &quot;error&quot;, &quot;abort&quot;, and &quot;parsererror&quot;. This is what gets passed as the 2nd argument to the framework's <code>$.ajax()</code> error callback.</li>
-          	    	</ul>
-            	</li>
-            	<li><code>errorThrown</code> (null, string, object)
-            		<ul>
-            			<li>According to the jQuery Core <a href="http://api.jquery.com/jQuery.ajax/">documentation</a>, this property may be an exception object if one occurred, or if an HTTP error occurred this will be set to the textual portion of the HTTP status. This is what gets passed as the 3rd argument to the framework's <code>$.ajax()</code> error callback.</li>
-          	    	</ul>
-            	</li>
-           	 </ul>
+		<strong>Note: The triggering of this event is deprecated as of jQuery Mobile 1.4.0. It will no longer be triggered in 1.5.0.</strong>
+		<p>The replacement for <placeholder name="name"/> is <a href="/pagecontainer/#event-load">pagecontainerloadfailed</a>. In jQuery Mobile 1.4.0, the two events are identical except for their name.</p>
 	</longdesc>
 	<added>1.0</added>
 	<signature>
