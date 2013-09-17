@@ -141,7 +141,13 @@
 				<p>If the value is unset for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.</p>
 				<p>This option is also exposed as a data attribute:<code>data-collapsed-icon="arrow-r"</code>.</p>
 			</desc>
-			<type name="String" />
+			<type name="String">
+				<desc>The name of the icon you wish to use.</desc>
+			</type>
+			<type name="Boolean">
+				<desc>In addition to an icon name, you can also set this option to <code>false</code>. In that case, the collapsible will not have an icon in either the expanded or collapsed state. Add <code>data-collapsed-icon="false"</code> to the <placeholder name="name"/> widget to set the option to <code>false</code> via the data attribute.
+				</desc>
+			</type>
 		</option>
 		<option name="corners" default="true" example-value="false">
 			<desc>Applies the theme border-radius if set to true.
