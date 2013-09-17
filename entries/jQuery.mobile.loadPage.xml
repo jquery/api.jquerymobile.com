@@ -58,13 +58,13 @@
 	<div data-role="header">
       <h1>loadPage() demo</h1>
     </div><!-- /header -->
-    
+
 	<div data-role="content">
-      
-		<p>First check if the 'About us' page is in the DOM, Load the page in the DOM and check again</p>    
+
+		<p>First check if the 'About us' page is in the DOM, Load the page in the DOM and check again</p>
 		<input type="button" id="domcheck" data-inline="true" value="Is 'About us' in the DOM?"/>
 		<input type="button" id="loadpage" data-inline="true" value="Load the 'About us' page"/><br />
-		<div id="myResult">'About Us' is in the DOM: <span id="result">The result will be displayed here</span></div>      
+		<div id="myResult">'About Us' is in the DOM: <span id="result">The result will be displayed here</span></div>
 	</div>
 	]]></html>
 			<code><![CDATA[
@@ -73,7 +73,7 @@
 		$( "#result" ).text( check );
 	});
 	$( "#loadpage" ).on( "click", function() {
-		$.mobile.loadPage( "../resources/us.html" , true );
+		$.mobile.loadPage( "../resources/us.html");
 	});
 ]]></code>
 		</example>
@@ -85,7 +85,7 @@
 			<p>Please fill in the form below:<br /><br />
 			<label for="choice">Favorite framework:</label>
 			<input type="text" name="choice" id="choice" value="jQuery Mobile" />
-			
+
 			<a href="#formResults" data-role="button" data-inline="true" data-rel="dialog">Show Results</a>
 			</p>
 		</form>
