@@ -155,6 +155,29 @@ $( document ).on( &quot;pagecontainerbeforeload&quot;, function( event, data ) {
 			</argument>
 		</event>
 		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude" />
+		<event name="hide">
+			<desc>Triggered on the "fromPage" after the transition animation has completed.
+				<p>Note that this event will not be dispatched during the transition of the first page at application startup since there is no previously active page.</p>
+				<p>You can access the <code>prevPage</code> or <code>nextPage</code> properties via the second argument of a bound callback function. For example:</p>
+<pre><code>
+$( "div" ).on( "pageshow", function( event, ui ) {
+  alert( "This page was just hidden: " + ui.prevPage );
+});
+
+$( "div" ).on( "pagehide", function( event, ui ) {
+  alert( "This page was just shown: " + ui.nextPage );
+});
+</code></pre>
+				<p>For these handlers to be invoked during the initial page load, you must bind them before jQuery Mobile executes. This can be done in the <code>mobileinit</code> handler, as described on the global config page.</p>
+			</desc>
+			<argument name="event" type="Event" />
+			<argument name="ui" type="Object">
+				<property name="nextPage">
+					<desc>A jQuery collection object that contains the page DOM element to which we just transitioned.</desc>
+					<type name="jQuery" />
+				</property>
+			</argument>
+		</event>
 		<event name="load">
 			<desc>Triggered after the page is successfully loaded and inserted into the DOM.</desc>
 			<argument name="event" type="Event" />

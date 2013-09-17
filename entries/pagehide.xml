@@ -1,29 +1,10 @@
 <?xml version="1.0"?>
-<entry name="pagehide" type="event" return="">
+<entry name="pagehide" type="event" return="" deprecated="1.4.0">
 	<title>pagehide</title>
 	<desc>Triggered on the "fromPage" after the transition animation has completed.</desc>
 	<longdesc>
-		<p>Callbacks for this event will receive a data object as their 2nd arg. This data object has the following properties on it: </p>
-		<ul>
-			<li><code>nextPage</code> (object)
-				<ul>
-					<li>A jQuery collection object that contains the page DOM element that we just transitioned to.</li>
-				</ul>
-			</li>
-		</ul>
-		<p>Note that this event will not be dispatched during the transition of the first page at application startup since there is no previously active page.</p>
-		<p>You can access the <code>prevPage</code> or <code>nextPage</code> properties via the second argument of a bound callback function. For example: </p>
-<pre><code>
-$( "div" ).on( "pageshow", function( event, ui ) {
-  alert( "This page was just hidden: " + ui.prevPage );
-});
-
-$( "div" ).on( "pagehide", function( event, ui ) {
-  alert( "This page was just shown: " + ui.nextPage );
-});
-</code></pre>
-		<p>Also, for these handlers to be invoked during the initial page load, you must bind them before jQuery Mobile executes.  This can be done in the <code>mobileinit</code> handler, as described on the global config page.</p>
-
+		<strong>Note: The triggering of this event is deprecated as of jQuery Mobile 1.4.0. It will no longer be triggered in 1.5.0.</strong>
+		<p>The replacement for <placeholder name="name"/> is <a href="/pagecontainer/#event-hide">pagecontainerhide</a>. In jQuery Mobile 1.4.0, the two events are identical except for their name.</p>
 	</longdesc>
 	<added>1.0</added>
 	<signature>
