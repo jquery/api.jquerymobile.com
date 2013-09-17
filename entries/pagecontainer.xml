@@ -1,0 +1,450 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
+<entry name="pagecontainer" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="pagecontainer">
+	<title>Page Container Widget</title>
+	<desc>Manages a collection of pages.</desc>
+	<longdesc>
+		<h2>Smooth Navigation Between Pages</h2>
+		<strong>Note: The page container widget is designed to be a singleton instantiated by the framework on the <code>body</code> element. This limitation will be removed in future versions of jQuery Mobile.</strong>
+		<p>jQuery Mobile's central abstraction is the use of multiple pages inside a single HTML document. The children of the <code>body</code> are all <code>div</code> elements that have been enhanced into <a href="/page/">page</a> widgets. These are jQuery Mobile pages.</p>
+		<p>Only one page is visible at a time. Upon navigation, the currently visible page is hidden, and another page is shown. Moving from one page to another is accomplished via a transition. This is not possible when navigating between HTML documents via HTTP, because the browser discards all state associated with the source page when navigating to the target page, making it impossible to perform this task via a smooth transition effect such as a fade or a slide.</p>
+		<h3>Multipage Documents</h3>
+		<p>In its simplest form, the HTML document retrieved by the browser has a <code>body</code> consisting of several <code>div</code> elements which are enhanced using the <code>page</code> widget. Each such page has an <code>id</code> attribute to distinguish it from other pages.</p>
+		<p>The pages can be interlinked using anchors. When the user clicks such an anchor, a new history entry is created, and the page to which the anchor refers is displayed by means of a smooth transition from the previous page. The example below illustrates a multipage setup. <strong>Note:</strong> If the example below animates using a fade transition instead of the slide transition requested in the anchor, it is because your browser does not support CSS 3D transforms.</p>
+<pre><code><![CDATA[
+<!doctype html>
+<html>
+<head>
+	<title>Multipage example</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="page1">
+		<div data-role="header">
+			<h1>Page 1</h1>
+		</div>
+		<div data-role="content">
+			<a href="#page2" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline">Go To Page 2</a>
+		</div>
+	</div>
+	<div data-role="page" id="page2">
+		<div data-role="header">
+			<h1>Page 2</h1>
+		</div>
+		<div data-role="content">
+			<a href="#page1" data-rel="back" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline">Go Back To Page 1</a>
+		</div>
+	</div>
+</body>
+</html>
+]]></code></pre>
+		<iframe src="/resources/pagecontainer/example1.html" style="width:100%;height:200px;border:0px;"></iframe>
+
+		<h3>HTTP-analogous navigation via AJAX</h3>
+		<p>jQuery Mobile allows you to replace the browser's standard HTTP navigation with AJAX-based navigation. It overrides the browser's default link handling behavior. It intercepts clicks on anchors containing links to other documents and upon each such click it checks whether the document can be retrieved via AJAX. A link has to meet the following criteria in order for the document to which it links to be retrieved via AJAX:
+			<ol>
+				<li>The global configuration option <code>$.mobile.linkBindingEnabled</code> must be <code>true</code>.</li>
+				<li>The click event's default must not be prevented and it must be a left-click.</li>
+				<li>The link must not have any of the following attributes:
+					<ul>
+						<li><code>data-rel="back"</code></li>
+						<li><code>data-rel="external</code></li>
+						<li><code>data-ajax="false"</code></li>
+						<li>The <code>target</code> attribute must not be present</li>
+					</ul>
+				</li>
+				<li>The global configuration option <code>$.mobile.ajaxEnabled</code> must be <code>true</code>.</li>
+				<li>The link must be to the same domain or it must be to a permitted cross-domain-request destination.</li>
+			</ol>
+		</p>
+		<p>If these criteria are met jQuery Mobile retrieves the document via AJAX. It is important to realize that, while the document is retrieved in its entirety, only the first jQuery Mobile page is displayed. The header and the rest of the body are discarded. Thus, it is not possible to retrieve a multi-page document via AJAX, nor is it possible to execute scripts located in the header.</p>
+
+		<p>After AJAX retrieval, jQuery Mobile displays the page via a transition. The transition can be specified on the link that opens the page using the <code>data-transition</code> attribute. If no transition is specified, then <code>$.mobile.defaultPageTransition</code> is used or, if the incoming page is a dialog, then <code>$.mobile.defaultDialogTransition</code> is used. <strong>Note: The dialog widget is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0.</strong></p>
+		<p>If the browser supports the <code>replaceState</code> API the location bar is updated such that it displays the URL of the document that was retrieved via AJAX. This latter step has the following implication for site/application design: Since the user can copy the URL of a page other than the start page, the application must be designed such that it can start from any of its pages. The best way to achieve this is to include jQuery Mobile and your application code in the header for all the pages of the site/application, and ensure initial state consistency during the <code>pagecreate</code> event.</p>
+	</longdesc>
+
+	<added>1.4</added>
+
+	<options>
+		<option name="theme" default="a" example-value='"b"'>
+			<desc>
+				Sets the color scheme (swatch) for the <placeholder name="name" /> widget. It accepts a single letter from a-z that maps to the swatches included in your theme.
+				<p>Possible values: swatch letter (a-z).</p>
+				<p>This option is also exposed as a data attribute: <code>data-theme="b"</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
+	</options>
+
+	<events>
+		<event name="beforeload">
+			<desc>Triggered before any load request is made.
+				<p>Callbacks bound to this event can call <code>preventDefault()</code> on the event to indicate that they are handling the load request. Callbacks that do this <strong>MUST</strong> make sure they call <code>resolve()</code> or <code>reject()</code> on the deferred object reference contained in the object passed to the callback via its <code>ui</code> parameter.</p>
+			</desc>
+			<argument name="event" type="Event" />
+			<argument name="ui" type="Object">
+				<property name="url">
+					<desc>The absolute or relative URL that was passed into <a href="#method-load">load()</a> by the caller.</desc>
+					<type name="String"/>
+				</property>
+				<property name="absUrl">
+					<desc>The absolute version of the url. If url was relative, it is resolved against the url used to load the current active page.</desc>
+					<type name="String"/>
+				</property>
+				<property name="dataUrl">
+					<desc>The filtered version of absUrl to be used when identifying the page and updating the browser location when the page is made active.</desc>
+					<type name="String"/>
+				</property>
+				<property name="deferred">
+					<desc>Deferred to be resolved or rejected upon completion of content load. Callbacks that call <code>preventDefault()</code> on the event <strong>MUST</strong> call <code>resolve()</code> or <code>reject()</code> on this object so that <code>change()</code> requests resume processing. Deferred object observers expect the deferred object to be resolved like this:
+<pre><code><![CDATA[
+$( document ).on( "pagecontainerbeforeload", function( event, data ) {
+
+	// Let the framework know we're going to handle the load.
+
+	event.preventDefault();
+
+	// ... load the document then insert it into the DOM ...
+	// at some point, either in this callback, or through
+	// some other async means, call resolve, passing in
+	// the following args, plus a jQuery collection object
+	// containing the DOM element for the page.
+
+	data.deferred.resolve( data.absUrl, data.options, page );
+
+});
+]]></code></pre>
+					<p>or rejected like this:</p>
+<pre><code><![CDATA[
+$( document ).on( "pagecontainerbeforeload", function( event, data ) {
+
+	// Let the framework know we're going to handle the load.
+
+	event.preventDefault();
+
+	// ... load the document then insert it into the DOM ...
+	// at some point, if the load fails, either in this
+	// callback, or through some other async means, call
+	// reject like this:
+
+	data.deferred.reject( data.absUrl, data.options );
+
+});
+]]></code></pre>
+					</desc>
+					<type name="Deferred"/>
+				</property>
+				<property name="options">
+					<desc>This object contains the options that were passed into <a href="#method-load">load()</a>.</desc>
+					<type name="Object"/>
+				</property>
+			</argument>
+		</event>
+		<event name="beforetransition">
+			<desc>Triggered before the transition between two pages starts.</desc>
+			<argument name="event" type="Event"/>
+			<argument name="ui" type="Object">
+				<property name="absUrl">
+					<desc>The absolute version of the url. If url was relative, it is resolved against the url used to load the current active page.</desc>
+					<type name="String" />
+				</property>
+				<property name="options">
+					<desc>The configuration options to be used for the current <code>change()</code> call.</desc>
+					<type name="Object" />
+				</property>
+				<property name="originalHref">
+					<desc>The href from the link that started the page change process.</desc>
+					<type name="String" />
+				</property>
+				<property name="toPage">
+					<desc>This property represents the page to which the caller wishes to transition. It is a jQuery collection object containing the page DOM element.</desc>
+					<type name="jQuery" />
+				</property>
+			</argument>
+		</event>
+		<event name="changefailed">
+			<desc>Triggered when the <code>change()</code> request fails to load the page.</desc>
+			<argument name="event" type="Event" />
+			<argument name="ui" type="Object">
+				<property name="toPage">
+					<desc>This property represents the page the caller wishes to make active. It may be either a jQuery collection object containing the page DOM element, or an absolute/relative url to an internal or external page, in which case the value exactly matches the first argument to the <code>change()</code> call that triggered the event.</desc>
+					<type name="jQuery" />
+					<type name="String" />
+				</property>
+				<property name="options">
+					<desc>The configuration options to be used for the current <code>change()</code> call.</desc>
+					<type name="Object" />
+				</property>
+			</argument>
+		</event>
+		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude" />
+		<event name="hide">
+			<desc>Triggered after the transition animation has completed. <strong>Note:</strong> Unlike the deprecated <code>pagehide</code> event, this event is not triggered on the "fromPage" but the <placeholder name="name"/> widget's element.
+				<p>Note that this event will not be dispatched during the transition of the first page at application startup since there is no previously active page.</p>
+				<p>You can access the <code>nextPage</code> properties via the second argument of a bound callback function. For example:</p>
+<pre><code><![CDATA[
+$( ":mobile-pagecontainer" ).on( "pagecontainerhide", function( event, ui ) {
+  alert( "This page was just shown: " + ui.nextPage );
+});
+]]></code></pre>
+				<p>For these handlers to be invoked during the initial page load, you must bind them before jQuery Mobile executes. This can be done in the <code>mobileinit</code> handler, as described on the global config page.</p>
+			</desc>
+			<argument name="event" type="Event" />
+			<argument name="ui" type="Object">
+				<property name="nextPage">
+					<desc>A jQuery collection object that contains the page DOM element to which we just transitioned.</desc>
+					<type name="jQuery" />
+				</property>
+			</argument>
+		</event>
+		<event name="load">
+			<desc>Triggered after the page is successfully loaded and inserted into the DOM.</desc>
+			<argument name="event" type="Event" />
+			<argument name="ui" type="Object">
+				<property name="url">
+					<desc>The absolute or relative URL that was passed into <a href="#method-load">load()</a> by the caller.</desc>
+					<type name="String" />
+				</property>
+				<property name="absUrl">
+					<desc>The absolute version of the url. If url was relative, it is resolved against the url used to load the current active page.</desc>
+					<type name="String" />
+				</property>
+				<property name="dataUrl">
+					<desc>The filtered version of absUrl to be used when identifying the page and updating the browser location when the page is made active.</desc>
+					<type name="String" />
+				</property>
+				<property name="options">
+					<desc>This object contains the options that were passed into <a href="#method-load">load()</a>.</desc>
+					<type name="Object" />
+				</property>
+				<property name="xhr">
+					<desc>The jQuery XMLHttpRequest object used when attempting to load the page. This is what gets passed as the 3rd argument to the framework's <code>$.ajax()</code> success callback.</desc>
+					<type name="XMLHttpRequest" />
+				</property>
+				<property name="textStatus">
+					<desc>According to the jQuery Core <a href="http://api.jquery.com/jQuery.ajax/">documentation</a>, this will be a string describing the status. This is what gets passed as the 2nd argument to the framework's <code>$.ajax()</code> error callback. It may also be <code>null</code>.</desc>
+					<type name="String" />
+				</property>
+			</argument>
+		</event>
+		<event name="loadfailed">
+			<desc>Triggered if the page load request failed.
+			<p>By default, after dispatching this event, the framework will display a page failed message and call reject() on the deferred object contained within the event's <code>ui</code> parameter. Callbacks can prevent this default behavior from executing by calling <code>preventDefault()</code> on the event.</p>
+			</desc>
+			<argument name="event" type="Event" />
+			<argument name="ui" type="Object">
+				<property name="url">
+					<desc>The absolute or relative URL that was passed into <a href="#method-load">load()</a> by the caller.</desc>
+					<type name="String"/>
+				</property>
+				<property name="absUrl">
+					<desc>The absolute version of the url. If url was relative, it is resolved against the url used to load the current active page.</desc>
+					<type name="String"/>
+				</property>
+				<property name="dataUrl">
+					<desc>The filtered version of absUrl to be used when identifying the page and updating the browser location when the page is made active.</desc>
+					<type name="String"/>
+				</property>
+				<property name="deferred">
+					<desc>Callbacks that call <code>preventDefault()</code> on the event, <strong>MUST</strong> call <code>resolve()</code> or <code>reject()</code> on this object so that <code>change()</code> requests resume processing. Deferred object observers expect the deferred object to be resolved like this:
+<pre><code><![CDATA[
+$( document ).on( "pageloadfailed", function( event, data ) {
+
+	// Let the framework know we're going to handle things.
+
+	event.preventDefault();
+
+	// ... attempt to load some other page ...
+	// at some point, either in this callback, or through
+	// some other async means, call resolve, passing in
+	// the following args, plus a jQuery collection object
+	// containing the DOM element for the page.
+
+	data.deferred.resolve( data.absUrl, data.options, page );
+
+});
+]]></code></pre>
+						<p>or rejected like this:</p>
+<pre><code><![CDATA[
+$( document ).on( "pageloadfailed", function( event, data ) {
+
+	// Let the framework know we're going to handle things.
+
+	event.preventDefault();
+
+	// ... attempt to load some other page ...
+	// at some point, if the load fails, either in this
+	// callback, or through some other async means, call
+	// reject like this:
+
+	data.deferred.reject( data.absUrl, data.options );
+
+});
+]]></code></pre>
+					</desc>
+					<type name="Deferred"/>
+				</property>
+				<property name="options">
+					<desc>This object contains the options that were passed into <a href="#method-load">load()</a>.</desc>
+					<type name="Object"/>
+				</property>
+				<property name="xhr">
+					<desc>The jQuery XMLHttpRequest object used when attempting to load the page. This is what gets passed as the first argument to the framework's <code>$.ajax()</code> error callback.</desc>
+					<type name="XMLHttpRequest"/>
+				</property>
+				<property name="textStatus"> (null or string)
+					<desc>According to the jQuery Core <a href="http://api.jquery.com/jQuery.ajax/">documentation</a>, possible values for this property, aside from <code>null</code>, are &quot;timeout&quot;, &quot;error&quot;, &quot;abort&quot;, and &quot;parsererror&quot;. This is what gets passed as the 2nd argument to the framework's <code>$.ajax()</code> error callback.</desc>
+					<type name="String"/>
+				</property>
+				<property name="errorThrown">
+					<desc>According to the jQuery Core <a href="http://api.jquery.com/jQuery.ajax/">documentation</a>, this property may be an exception object if one occurred, or if an HTTP error occurred this will be set to the textual portion of the HTTP status. Otherwise it will be <code>null</code>. This is what gets passed as the 3rd argument to the framework's <code>$.ajax()</code> error callback.</desc>
+					<type name="String"/>
+					<type name="Object"/>
+				</property>
+			</argument>
+		</event>
+		<event name="show">
+			<desc>Triggered after the transition animation has completed.<strong>Note:</strong> Unlike the deprecated <code>pageshow</code> event, this event is not triggered on the "toPage" but the <placeholder name="name"/> widget's element.
+				<p>You can access the <code>prevPage</code> properties via the second argument of a bound callback function. For example: </p>
+<pre><code><![CDATA[
+$( ":mobile-pagecontainer" ).on( "pagecontainershow", function( event, ui ) {
+  alert( "This page was just hidden: " + ui.prevPage );
+});
+]]></code></pre>
+				<p>For these handlers to be invoked during the initial page load, you must bind them before jQuery Mobile executes. This can be done in the <code>mobileinit</code> handler, as described on the global config page.</p>
+			</desc>
+			<argument name="event" type="Event"/>
+			<argument name="ui" type="Object">
+				<property name="prevPage">
+					<desc>A jQuery collection object that contains the page DOM element that we just transitioned away from. Note that this collection is empty when the first page is transitioned in during application startup.</desc>
+					<type name="jQuery"/>
+				</property>
+			</argument>
+		</event>
+		<event name="transition">
+			<desc>Triggered after the page change transition completes.</desc>
+			<argument name="event" type="Event"/>
+			<argument name="ui" type="Object">
+				<property name="absUrl">
+					<desc>The absolute version of the url of the destination page. If url was relative, it is resolved against the url used to load the current active page.</desc>
+					<type name="String"/>
+				</property>
+				<property name="options">
+					<desc>This object contains the options that were passed into <a href="#method-load">load()</a>.</desc>
+					<type name="Object"/>
+				</property>
+				<property name="originalHref">
+					<desc>The href from the link that started the page change process.</desc>
+					<type name="String" />
+				</property>
+				<property name="toPage">
+					<desc>This property represents the page to which the caller has transitioned. It is a jQuery collection object containing the page DOM element.</desc>
+					<type name="jQuery" />
+				</property>
+			</argument>
+		</event>
+	</events>
+
+	<methods>
+		<method name="change">
+			<example>$( ":mobile-pagecontainer" ).pagecontainer( "change", "confirm.html", { role: "dialog" } );</example>
+			<desc>Programmatically change from one page to another.</desc>
+			<argument name="to">
+				<desc>The URL to which to navigate. This can be specified either as a string, or as a jQuery collection object containing the page DOM element.</desc>
+				<type name="String"/>
+				<type name="jQuery"/>
+			</argument>
+			<argument name="options" type="Object">
+				<property name="allowSamePageTransition" type="Boolean" default="false">
+					<desc>By default, <code>change()</code> ignores requests to change to the current active page. Setting this option to <code>true</code> allows the request to execute. Developers should note that some of the page transitions assume that the fromPage and toPage of a <code>change()</code> request are different, so they may not animate as expected. Developers are responsible for either providing a proper transition, or turning it off for this specific case.
+					</desc>
+				</property>
+				<property name="changeHash" default="true" type="Boolean">
+					<desc>Whether to create a new browser history entry as part of the navigation sequence. Possible values:
+						<table>
+							<tr><td class="enum-value">true</td><td>The <placeholder name="name"/> will create a browser history entry as part of moving to the desired page. Thus, the user can use the browser's "Back" and "Forward" buttons to navigate between the source page and the destination page.</td></tr>
+							<tr><td class="enum-value">false</td><td>The <placeholder name="name"/> will navigate to the desired page without creating a new browser history entry. The desired page replaces the current page, and the browser's "Back" and "Forward" buttons cannot be used to navigate between the source page and the destination page.</td></tr>
+						</table>
+					</desc>
+				</property>
+				<property name="dataUrl" type="String" default="undefined">
+					<desc>The URL to use when updating the browser location upon <code>change()</code> completion. If not specified, the value of the data-url attribute of the page element is used.</desc>
+				</property>
+				<property name="loadMsgDelay" default="50" type="Number">
+					<desc>The number of milliseconds by which to delay the appearance of the loading message. If the load completes within this time, no loading message is displayed.</desc>
+				</property>
+				<property name="reloadPage" default="false" type="Boolean" deprecated="1.4.0">
+					<desc><strong>Note: This property is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Use property <code>reload</code> instead.</strong>
+						<p>Whether to force a reload of the page even when it is already in the DOM. Used only when the 'url' argument is a URL.</p>
+					</desc>
+				</property>
+				<property name="reload" default="false" type="Boolean">
+					<desc>Whether to force a reload of the page even when it is already in the DOM. Used only when the 'url' argument is a URL.</desc>
+				</property>
+				<property name="reverse" default="false" type="Boolean">
+					<desc>Whether the transition shall be applied in reverse. By setting this value to <code>true</code> you can simulate returning to a previous page, even when the actual navigation sequence is in a forward direction.</desc>
+				</property>
+				<property name="role" type="String" default="undefined">
+					<desc>The data-role value to be used when displaying the page. By default this is <code>undefined</code> which means rely on the value of the @data-role attribute defined on the element.</desc>
+				</property>
+				<property name="showLoadMsg" default="true" type="Boolean">
+					<desc>Whether to display a message indicating that the page is loading.</desc>
+				</property>
+				<property name="transition" type="String" default="undefined">
+					<desc>The transition that should be used for the page change. If the value is <code>undefined</code>, the value of <code>$.mobile.defaultPageTransition</code> (currently <code>"fade"</code>) will be used for pages, and <code>$.mobile.defaultDialogTransition</code> (currently <code>"pop"</code>) will be used for dialogs.
+						<p>Default value: <code>undefined</code></p>
+					</desc>
+				</property>
+				<property name="type" default='"get"' type="String">
+					<desc>The type of HTTP request to use ("get", "post", etc.). Used only when the 'to' argument is a URL.</desc>
+				</property>
+			</argument>
+		</method>
+		<method name="load" return="Promise">
+			<example>$( ":mobile-pagecontainer" ).pagecontainer( "load", "confirm.html", { role: "dialog" } );</example>
+			<desc>Load an external page, enhance its content, and insert it into the DOM.</desc>
+			<argument name="url">
+				<desc>The URL from which to load the page. This can be an absolute or a relative URL (e.g. "about/us.html"). You can also specify a jQuery collection object.</desc>
+				<type name="String" />
+				<type name="jQuery" />
+			</argument>
+			<argument name="options" type="Object">
+				<desc>A hash containing options that affect the behavior of the method.</desc>
+				<property name="type" default='"get"' type="String">
+					<desc>The type of HTTP request to use ("get", "post", etc.).
+					</desc>
+				</property>
+				<property name="data" default="undefined">
+					<desc>The data to send with an AJAX page request.</desc>
+					<type name="Object">
+						<desc></desc>
+					</type>
+					<type name="String">
+						<desc></desc>
+					</type>
+				</property>
+				<property name="reloadPage" default="false" type="Boolean" deprecated="1.4.0">
+					<desc><strong>Note: This property is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Use property <code>reload</code> instead.</strong>
+						<p>Whether to force a reload of the page even when it is already in the DOM. Used only when the 'url' argument is a URL.</p>
+					</desc>
+				</property>
+				<property name="reload" default="false" type="Boolean">
+					<desc>Whether to force a reload of the page even when it is already in the DOM. Used only when the 'url' argument is a URL.</desc>
+				</property>
+				<property name="role" type="String" default="undefined">
+					<desc>The data-role value to be used when displaying the page. By default this is <code>undefined</code> which means rely on the value of the @data-role attribute defined on the element.</desc>
+				</property>
+				<property name="showLoadMsg" default="true" type="Boolean">
+					<desc>Whether to display a message indicating that the page is loading.</desc>
+				</property>
+				<property name="loadMsgDelay" default="50" type="Number">
+					<desc>The number of milliseconds by which to delay the appearance of the loading message. If the load completes within this time, no loading message is displayed.</desc>
+				</property>
+			</argument>
+		</method>
+	</methods>
+	<category slug="widgets"/>
+</entry>

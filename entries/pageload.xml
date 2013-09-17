@@ -1,41 +1,10 @@
 <?xml version="1.0"?>
-<entry name="pageload" type="event" return="">
+<entry name="pageload" type="event" return="" deprecated="1.4.0">
 	<title>pageload</title>
 	<desc>Triggered after the page is successfully loaded and inserted into the DOM.</desc>
 	<longdesc>
-		<p>Callbacks bound to this event will be passed a data object as its 2nd arg. This object contains the following information:</p>
-            <ul>
-            	<li><code>url</code> (string)
-					<ul>
-           	    		<li>The absolute or relative URL that was passed into <code>$.mobile.loadPage()</code> by the caller.</li>
-          	    	</ul>
-            	</li>
-            	<li><code>absUrl</code> (string)
-            		<ul>
-            	    	<li>The absolute version of the url. If url was relative, it is resolved against the url used to load the current active page.</li>
-          	    	</ul>
-            	</li>
-            	<li><code>dataUrl</code> (string)
-					<ul>
-						<li>The filtered version of absUrl to be used when identifying the page and updating the browser location when the page is made active.</li>
-					</ul>
-				</li>
-				<li><code>options</code> (object)
-					<ul>
-						<li>This object contains the options that were passed into <code>$.mobile.loadPage()</code>.</li>
-					</ul>
-            	</li>
-            	<li><code>xhr</code> (object)
-					<ul>
-						<li>The jQuery XMLHttpRequest object used when attempting to load the page. This is what gets passed as the 3rd argument to the framework's <code>$.ajax()</code> success callback.</li>
-					</ul>
-            	</li>
-            	<li><code>textStatus</code> (null or string)
-					<ul>
-						<li>According to the jQuery Core <a href="//api.jquery.com/jQuery.ajax/">documentation</a>, this will be a string describing the status. This is what gets passed as the 2nd argument to the framework's <code>$.ajax()</code> error callback.</li>
-					</ul>
-            	</li>
-           	 </ul>
+		<strong>Note: The triggering of this event is deprecated as of jQuery Mobile 1.4.0. It will no longer be triggered in 1.5.0.</strong>
+		<p>The replacement for <placeholder name="name"/> is <a href="/pagecontainer/#event-load">pagecontainerload</a>. In jQuery Mobile 1.4.0, the two events are identical except for their name.</p>
 	</longdesc>
 	<added>1.0</added>
 	<signature>

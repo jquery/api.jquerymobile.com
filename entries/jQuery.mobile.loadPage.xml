@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
-<entry type="method" name="jQuery.mobile.loadPage" return="Promise">
+<entry type="method" name="jQuery.mobile.loadPage" return="Promise" deprecated="1.4.0">
 	<title>jQuery.mobile.loadPage()</title>
-	<desc>Load an external page, enhance its content, and insert it into the DOM.</desc>
+	<desc>Load an external page, enhance its content, and insert it into the DOM.
+		<p><strong>Note: <placeholder name="name"/> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Use the <a href="/pagecontainer/">pagecontainer</a> widget's <a href="/pagecontainer/#method-load">load()</a> method instead.</strong></p>
+	</desc>
 	<signature>
 		<argument name="url">
 			<type name="String">
