@@ -139,6 +139,28 @@ $( document ).on( &quot;pagecontainerbeforeload&quot;, function( event, data ) {
 				</property>
 			</argument>
 		</event>
+		<event name="beforetransition">
+			<desc>Triggered before the transition between two pages starts.</desc>
+			<argument name="event" type="Event"/>
+			<argument name="ui" type="Object">
+				<property name="absUrl">
+					<desc>The absolute version of the url. If url was relative, it is resolved against the url used to load the current active page.</desc>
+					<type name="String" />
+				</property>
+				<property name="options">
+					<desc>The configuration options to be used for the current <code>changePage()</code> call.</desc>
+					<type name="Object" />
+				</property>
+				<property name="originalHref">
+					<desc>The href from the link that started the page change process.</desc>
+					<type name="String" />
+				</property>
+				<property name="toPage">
+					<desc>This property represents the page to which the caller wishes to transition. It is a jQuery collection object containing the page DOM element.</desc>
+					<type name="jQuery" />
+				</property>
+			</argument>
+		</event>
 		<event name="changefailed">
 			<desc>Triggered when the changePage() request fails to load the page.</desc>
 			<argument name="event" type="Event" />
@@ -295,6 +317,28 @@ $( ":mobile-pagecontainer" ).on( "pagecontainershow", function( event, ui ) {
 				<property name="prevPage">
 					<desc>A jQuery collection object that contains the page DOM element that we just transitioned away from. Note that this collection is empty when the first page is transitioned in during application startup.</desc>
 					<type name="jQuery"/>
+				</property>
+			</argument>
+		</event>
+		<event name="transition">
+			<desc>Triggered after the page change transition completes.</desc>
+			<argument name="event" type="Event"/>
+			<argument name="ui" type="Object">
+				<property name="absUrl">
+					<desc>The absolute version of the url of the destination page. If url was relative, it is resolved against the url used to load the current active page.</desc>
+					<type name="String"/>
+				</property>
+				<property name="options">
+					<desc>This object contains the options that were passed into <a href="#method-load">load()</a>.</desc>
+					<type name="Object"/>
+				</property>
+				<property name="originalHref">
+					<desc>The href from the link that started the page change process.</desc>
+					<type name="String" />
+				</property>
+				<property name="toPage">
+					<desc>This property represents the page to which the caller has transitioned. It is a jQuery collection object containing the page DOM element.</desc>
+					<type name="jQuery" />
 				</property>
 			</argument>
 		</event>
