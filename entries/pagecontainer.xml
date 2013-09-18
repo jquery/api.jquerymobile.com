@@ -156,15 +156,11 @@ $( document ).on( &quot;pagecontainerbeforeload&quot;, function( event, data ) {
 		</event>
 		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude" />
 		<event name="hide">
-			<desc>Triggered on the "fromPage" after the transition animation has completed.
+			<desc>Triggered after the transition animation has completed. <strong>Note:</strong> Unlike the deprecated <code>pagehide</code> event, this event is not triggered on the "fromPage" but the <placeholder name="name"/> widget's element.
 				<p>Note that this event will not be dispatched during the transition of the first page at application startup since there is no previously active page.</p>
-				<p>You can access the <code>prevPage</code> or <code>nextPage</code> properties via the second argument of a bound callback function. For example:</p>
+				<p>You can access the <code>nextPage</code> properties via the second argument of a bound callback function. For example:</p>
 <pre><code>
-$( "div" ).on( "pageshow", function( event, ui ) {
-  alert( "This page was just hidden: " + ui.prevPage );
-});
-
-$( "div" ).on( "pagehide", function( event, ui ) {
+$( ":mobile-pagecontainer" ).on( "pagecontainerhide", function( event, ui ) {
   alert( "This page was just shown: " + ui.nextPage );
 });
 </code></pre>
@@ -281,6 +277,24 @@ $( document ).on( &quot;pageloadfailed&quot;, function( event, data ) {
 					<desc>According to the jQuery Core <a href="http://api.jquery.com/jQuery.ajax/">documentation</a>, this property may be an exception object if one occurred, or if an HTTP error occurred this will be set to the textual portion of the HTTP status. Otherwise it will be <code>null</code>. This is what gets passed as the 3rd argument to the framework's <code>$.ajax()</code> error callback.</desc>
 					<type name="String"/>
 					<type name="Object"/>
+				</property>
+			</argument>
+		</event>
+		<event name="show">
+			<desc>Triggered after the transition animation has completed.<strong>Note:</strong> Unlike the deprecated <code>pageshow</code> event, this event is not triggered on the "toPage" but the <placeholder name="name"/> widget's element.
+				<p>You can access the <code>prevPage</code> properties via the second argument of a bound callback function. For example: </p>
+<pre><code>
+$( ":mobile-pagecontainer" ).on( "pagecontainershow", function( event, ui ) {
+  alert( "This page was just hidden: " + ui.prevPage );
+});
+</code></pre>
+				<p>For these handlers to be invoked during the initial page load, you must bind them before jQuery Mobile executes. This can be done in the <code>mobileinit</code> handler, as described on the global config page.</p>
+			</desc>
+			<argument name="event" type="Event"/>
+			<argument name="ui" type="Object">
+				<property name="prevPage">
+					<desc>A jQuery collection object that contains the page DOM element that we just transitioned away from. Note that this collection is empty when the first page is transitioned in during application startup.</desc>
+					<type name="jQuery"/>
 				</property>
 			</argument>
 		</event>
