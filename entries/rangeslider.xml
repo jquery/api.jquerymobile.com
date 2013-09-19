@@ -1,9 +1,11 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="rangeslider" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="rangeslider" init-selector=":jqmData(role=&#39;rangeslider&#39;)">
+<entry name="rangeslider" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="rangeslider" init-selector=":jqmData(role=&#39;rangeslider&#39;)" deprecated="1.4.0">
 	<title>Rangeslider Widget</title>
 	<desc>Creates a rangeslider widget</desc>
 	<longdesc>
+		<h2>Range Slider</h2>
+		<strong>Note: The <placeholder name="name"/> widget is deprecated as of jQuery Mobile 1.4.0.</strong>
 		<p>The rangeslider widget can be considered as a double handle slider. To add a rangeslider widget to your page, use two standard inputs with the <code>type="range"</code> attribute, and put them inside a <code>&lt;div&gt;</code> container. The input values are used to configure the starting position of the handles and the values are populated in the corresponding text inputs (the first one at the beginning of the rangeslider, and the second one at the end). Specify <code>min</code> and <code>max</code> attribute values to set the rangeslider's range. If you want to constrain inputs to specific increments, add the <code>step</code> attribute. Set the <code>value</code> attribute on each input to define their initial value. The framework will parse these attributes to configure the rangeslider widget.</p>
 		<p>As you drag the rangeslider's handles, the framework will update the native input values (and vice-versa) so they are always in sync; this ensures that the values are submitted with the form.</p>
 		<p>Set the <code>for</code> attribute of the <code>labels</code> to match the <code>ids</code> of the <code>inputs</code> so they are semantically associated. It's possible to accessibly hide the labels if they're not desired in the page layout, but we require that they are present in the markup for semantic and accessibility reasons.</p>
