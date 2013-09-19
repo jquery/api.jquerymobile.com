@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="buttonMarkup" type="method" return="jQuery">
+<entry name="buttonMarkup" type="method" return="jQuery" deprecated="1.4.0">
 	<title>.buttonMarkup()</title>
 	<desc>Adds button styling to an element</desc>
 	<longdesc>
+		<strong>Note: .buttonMarkup() is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. You can now assign the full range of button style options to your <code>button</code> or <code>a</code> elements by simply adding classes.</strong>
 		<h2>Button markup</h2>
 		<p>You can use <code>.buttonMarkup()</code> to style any element as a button that is attractive and useable on a mobile device. It is a convenience function that allows you to manipulate the classes related to button styling. For each element in the set of matched elements this function converts the <code>options</code> parameter to a list of classes to be applied to the element, while respecting the element's existing classes that are not related to button styling. You may also set the parameter <code>overwriteClasses</code> to <code>true</code> for performance reasons. When <code>overwriteClasses</code> is set to <code>true</code> the function discards existing classes and applies the classes corresponding to the options provided.</p>
 
