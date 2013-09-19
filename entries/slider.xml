@@ -1,10 +1,11 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="slider" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="slide" init-selector="input[type='range'], :jqmData(type='range'), :jqmData(role='slider')">
+<entry name="slider" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="slide" init-selector="input[type='range'], :jqmData(type='range'), :jqmData(role='slider')" deprecated="1.4.0">
 	<title>Slider Widget</title>
 	<desc>Creates a slider widget</desc>
 	<longdesc>
 		<h2>Slider</h2>
+		<strong>Note: The <placeholder name="name"/> widget is deprecated as of jQuery Mobile 1.4.0.</strong>
 		<p>To add a slider widget to your page, use a standard input with the <code>type="range"</code> attribute. The input's value is used to configure the starting position of the handle and the value is populated in the text input. Specify <code>min</code> and <code>max</code> attribute values to set the slider's range. If you want to constrain input to specific increments, add the <code>step</code> attribute. Set the <code>value</code> attribute to define the initial value. The framework will parse these attributes to configure the slider widget.</p>
 		<p>As you drag the slider's handle, the framework will update the native input's value (and vice-versa) so they are always in sync; this ensures that the value is submitted with the form.</p>
 		<p>Set the <code>for</code> attribute of the <code>label</code> to match the <code>id</code> of the <code>input</code> so they are semantically associated. It's possible to accessibly hide the label if it's not desired in the page layout, but we require that it is present in the markup for semantic and accessibility reasons.</p>
