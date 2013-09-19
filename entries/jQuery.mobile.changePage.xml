@@ -1,7 +1,10 @@
 <?xml version="1.0"?>
-<entry type="method" name="jQuery.mobile.changePage" return="Undefined">
+<entry type="method" name="jQuery.mobile.changePage" return="Undefined" deprecated="1.4.0">
 	<title>jQuery.mobile.changePage()</title>
-	<desc>Programmatically change from one page to another.</desc>
+	<desc>
+		<strong>Note: <placeholder name="name"/> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Use the <a href="/pagecontainer/">pagecontainer</a> widget's <a href="/pagecontainer/#method-change">change()</a> method instead.</strong>
+		<p>Programmatically change from one page to another.</p>
+	</desc>
 	<signature>
 		<argument name="to">
 			<type name="String">
