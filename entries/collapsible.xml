@@ -17,7 +17,7 @@
 		<p>This code will create a collapsible widget like this:
 		<iframe src="/resources/collapsible/example1.html" style="width:100%;height:140px;border:0px"></iframe>
 		</p>
-	
+
 		<h3>Expanding collapsibles on load</h3>
 
 		<p>To expand the content when the page loads, add the <code>data-collapsed="false"</code> attribute to the wrapper.</p>
@@ -28,7 +28,7 @@
 
 		<p>This code will create a collapsible widget like this:
 		<iframe src="/resources/collapsible/example2.html" style="width:100%;height:140px;border:0px"></iframe></p>
-	
+
 		<h3>Non-inset collapsibles</h3>
 
 		<p>By default collapsibles have an inset appearance. To make them full width without corner styling add the <code>data-inset="false"</code> attribute to the element.</p>
@@ -39,7 +39,7 @@
 
 		<p>This code will create a non-inset collapsible:
 		<iframe src="/resources/collapsible/example3.html" style="width:100%;height:140px;border:0px"></iframe></p>
-	
+
 		<h3>Mini collapsibles</h3>
 
 		<p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a <a href="../forms/forms-all-mini.html">mini version</a>.</p>
@@ -47,26 +47,26 @@
 <pre><code>
 &lt;div data-role=&quot;collapsible&quot; data-mini=&quot;true&quot;&gt;
 </code></pre>
-    
+
 		<p>This code will create a mini collapsible widget:
 		<iframe src="/resources/collapsible/example4.html" style="width:100%;height:140px;border:0px"></iframe></p>
-	
+
 		<h3>Custom icons</h3>
 
 		<p>Collapsible headings’ default icons can be overridden by using the <code>data-collapsed-icon</code> and <code>data-expanded-icon</code> attributes. In the below case, <code>data-collapsed-icon="arrow-r"</code> and <code>data-expanded-icon="arrow-d"</code>.
 		<iframe src="/resources/collapsible/example5.html" style="width:100%;height:140px;border:0px"></iframe></p>
-	
+
 		<h3>Icon positioning</h3>
 
 		<p>Collapsible headings’ default icon positioning can be overridden by using the <code>data-iconpos</code> attribute. In the below case, <code>data-iconpos="right"</code>.
 		<iframe src="/resources/collapsible/example6.html" style="width:100%;height:140px;border:0px"></iframe></p>
-	
+
 		<h3>Theming collapsible content</h3>
 
 		<p>Collapsible content is minimally styled - we add only a bit of margin between the bar and content, and the header adopts the default theme styles of the container it sits within.</p>
-		
+
 		<p>To provide a stronger visual connection between the collapsible header and content, add the <code>data-content-theme</code> attribute to the wrapper and specify a theme swatch letter. This will apply the swatch's border and <em>flat</em> background color (not the gradient) to the content block and changes the corner rounding to square off the bottom of the header and round the bottom of the content block instead to visually group these elements.</p>
-		
+
 <pre><code>
 &lt;div data-role=&quot;collapsible&quot; data-content-theme=&quot;c&quot;&gt;
 	&lt;h3&gt;Header&lt;/h3&gt;
@@ -92,7 +92,7 @@
 
 		<p>Collapsibles can be nested inside each other if needed. In this example, we're setting the content theme to provide clearer visual connection between the levels.
 		<iframe src="/resources/collapsible/example9.html" style="width:100%;height:540px;border:0px"></iframe></p>
-		
+
 		<h3>Collapsible sets (accordions)</h3>
 
 		<p>It's possible to combine multiple collapsibles into a grouped set that acts like an <a href="/collapsible-set/">accordion widget</a>.</p>
@@ -101,35 +101,37 @@
 	<added>1.0</added>
 	<options>
 		<option name="collapseCueText" default='" click to collapse contents"'  example-value='" collapse with a click"'>
-			<desc>This text is used to provide audible feedback for users with screen reader software. 
+			<desc>This text is used to provide audible feedback for users with screen reader software.
+				<p>This option is also exposed as a data attribute: <code>data-collapse-cue-text=" collapse with a click"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
 		<option name="collapsed" default="true" example-value="false">
-			<desc>When false, the container is initially expanded with a minus icon in the header. 
+			<desc>When false, the container is initially expanded with a minus icon in the header.
 				<p>This option is also exposed as a data attribute:<code>data-collapsed="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
 		<option name="collapsedIcon" default='"plus"' example-value='"arrow-r"'>
-			<desc>Sets the icon for the header of the collapsible container when in a collapsed state. 
+			<desc>Sets the icon for the header of the collapsible container when in a collapsed state.
 				<p>This option is also exposed as a data attribute:<code>data-collapsed-icon="arrow-r"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
 		<option name="corners" default="true" example-value="false">
-			<desc>Applies the theme border-radius if set to true.  
+			<desc>Applies the theme border-radius if set to true.
 				<p>This option is also exposed as a data attribute:<code>data-corners="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
 		<option name="expandCueText" default='" click to expand contents"' example-value='" expand with a click"'>
-			<desc>This text is used to provide audible feedback for users with screen reader software. 
+			<desc>This text is used to provide audible feedback for users with screen reader software.
+				<p>This option is also exposed as a data attribute: <code>data-expand-cue-text=" expand with a click"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
 		<option name="expandedIcon" default='"minus"' example-value='"arrow-d"'>
-			<desc>Sets the icon for the header of the collapsible container when in an expanded state. 
+			<desc>Sets the icon for the header of the collapsible container when in an expanded state.
 				<p>This option is also exposed as a data attribute: <code>data-expanded-icon="arrow-d"</code>.</p>
 			</desc>
 			<type name="String" />
@@ -140,7 +142,7 @@
 			<type name="String" />
 		</option>
 		<option name="iconpos" default='"left"' example-value='"right"'>
-			<desc>Positions the icon in the collapsible header. 
+			<desc>Positions the icon in the collapsible header.
 				<p>Possible values: left, right, top, bottom, none, notext.</p>
 				<p>This option is also exposed as a data attribute: <code>data-iconpos="right"</code>.</p>
 			</desc>
@@ -157,19 +159,19 @@ $( document ).on( "mobileinit", function() {
 			<type name="CSS selector string" />
 		</option>
 		<option name="inset"  default="true" example-value="false">
-			<desc>By setting this option to false the element will get a full width appearance without corners. If the value is false for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set. 
+			<desc>By setting this option to false the element will get a full width appearance without corners. If the value is false for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.
 				<p>This option is also exposed as a data attribute: <code>data-inset="false"</code>.</p>
  			</desc>
 			<type name="Boolean" />
 		</option>
 		<option name="mini"  default="false" example-value="true">
-			<desc>Sets the size of the element to a more compact, mini version. If the value is false for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set. 
+			<desc>Sets the size of the element to a more compact, mini version. If the value is false for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.
 				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
 		<option name="theme" default="null, inherited from parent" example-value='"a"'>
-			<desc>Sets the color scheme (swatch) for the collapsible. It accepts a single letter from a-z that maps to the swatches included in your theme. 
+			<desc>Sets the color scheme (swatch) for the collapsible. It accepts a single letter from a-z that maps to the swatches included in your theme.
 				<p>Possible values: swatch letter (a-z).</p>
 				<p>This option is also exposed as a data attribute: <code>data-theme="a"</code>.</p>
 			</desc>
@@ -177,7 +179,7 @@ $( document ).on( "mobileinit", function() {
 		</option>
 	</options>
 	<events>
-		<event name="create" type="collapsiblecreate">	
+		<event name="create" type="collapsiblecreate">
 			<desc>Triggered when a collapsible is created
 			</desc>
 			<argument name="event" type="Event">
