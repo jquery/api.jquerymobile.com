@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
+<entry name="classes">
+	<title>Classes</title>
+	<desc>CSS classes for common styles</desc>
+	<longdesc>
+		<h2>Style Classes</h2>
+		<p>jQuery Mobile uses the following style classes:
+			<table>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-corner-all</div></td>
+					<td>Adds rounded corners to the element.</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-shadow</div></td>
+					<td>Adds an item shadow around the element.</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-overlay-shadow</div></td>
+					<td>Adds an overlay shadow around the element. The intended effect is for the element to appear to float above other elements.</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-mini</div></td>
+					<td>Reduces the font size and scales down paddings proportionally to produce a miniature version of the element for use in toolbars and tight spaces.</td>
+				</tr>
+			</table>
+			These classes can be applied any of the framework's widgets.</p>
+		<h3>Widget-specific classes</h3>
+		<table>
+			<tr>
+				<td class="enum-value"><div style="white-space: nowrap;">ui-collapsible-inset</div></td>
+				<td>The <a href="/collapsible/">collapsible</a> widget can have horizontal margins, borders, and rounded corners when this class is applied.</td>
+			</tr>
+			<tr>
+				<td class="enum-value"><div style="white-space: nowrap;">ui-listview-inset</div></td>
+				<td>The <a href="/listview/">listview</a> widget can have horizontal margins, borders, and rounded corners when this class is applied.</td>
+			</tr>
+		</table>
+		<h3>Button-specific classes</h3>
+		<p>In addition to the style classes, you can add the following classes to <code>a</code> (anchor) and <code>button</code> elements to render them touch-friendly:
+			<table>
+				<tr><th colspan="2">Basic options</th></tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-btn</div></td>
+					<td>You must add this class to indicate that the element is to be styled as a button. This is a prerequisite for adding any other button-related classes.</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-btn-inline</div></td>
+					<td>Displays the button inline. This means that it will only consume as much space as is needed for the label. This allows you to place buttons side by side, flowing with the text.</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-shadow-icon</div></td>
+					<td>Draws a shadow around the icon. <strong>Note: This class is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0.</strong></td>
+				</tr>
+				<tr><th colspan="2">Icon positioning</th></tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-btn-icon-top</div></td>
+					<td>The icon appears above the text</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-btn-icon-right</div></td>
+					<td>The icon appears to the right of the text</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-btn-icon-bottom</div></td>
+					<td>The icon appears below the text</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-btn-icon-left</div></td>
+					<td>The icon appears to the left of the text</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-btn-icon-notext</div></td>
+					<td>The button text is suppressed, and only the icon is shown. The result is a circular button the size of the icon.</td>
+				</tr>
+				<tr><th colspan="2">Icons</th></tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-alert</div></td>
+					<td>An exclamation mark inside a triangle.</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-arrow-l</div></td>
+					<td>An arrow pointing left (&#8592;).</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-arrow-r</div></td>
+					<td>An arrow pointing right (&#8594;).</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-arrow-u</div></td>
+					<td>An arrow pointing up (&#8593;).</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-arrow-d</div></td>
+					<td>An arrow pointing down (&#8595;).</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-back</div></td>
+					<td>A curved arrow arcing counterclockwise upwards.</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-bars</div></td>
+					<td>Three horizontal bars one above the other.</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-check</div></td>
+					<td>A checkmark (&#10003;).</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-delete</div></td>
+					<td>A diagonal cross similar to (&#10005;).</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-edit</div></td>
+					<td>A pencil - similar to (&#9998;) but pointing to the lower left.</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-forward</div></td>
+					<td>A curved arrow arcing clockwise upwards.</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-gear</div></td>
+					<td>A gear (&#9881;).</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-grid</div></td>
+					<td>A 3&#10005;3 grid.</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-home</div></td>
+					<td>A house similar to (&#8962;).</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-minus</div></td>
+					<td>A "minus" sign (-).</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-plus</div></td>
+					<td>A "plus" sign (+).</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-refresh</div></td>
+					<td>A circular arrow similar to (&#10227;).</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-search</div></td>
+					<td>A magnifying glass.</td>
+				</tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-star</div></td>
+					<td>A star similar to (&#10029;).</td>
+				</tr>
+				<tr><th colspan="2">Theme</th></tr>
+				<tr>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-btn-[a-z]</div></td>
+					<td>Sets the color scheme (swatch) for the button. Use a single letter from a-z that maps to the swatches included in your theme. For example: <code>ui-btn-b</code></td>
+				</tr>
+			</table>
+		</p>
+	</longdesc>
+	<category slug="css-framework"/>
+</entry>
