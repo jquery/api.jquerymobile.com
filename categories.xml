@@ -13,6 +13,11 @@
 		<desc><![CDATA[
 			<p>jQuery Mobile exposes several methods on the $.mobile object for use in your applications.</p>]]></desc>
 	</category>
+	<category name="CSS Framework" slug="css-framework">
+		<desc><![CDATA[
+			<p>jQuery Mobile offers CSS-based enhancements for common user interface elements.</p>]]>
+		</desc>
+	</category>
 	<category name="Miscellaneous" slug="misc">
 		<desc></desc>
 	</category>
