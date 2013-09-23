@@ -28,9 +28,10 @@
 	</longdesc>
 	<added>1.3</added>
 	<options>
-		<option name="corners" default="true" example-value="false">
+		<option name="corners" default="true" example-value="false" deprecated="1.4.0">
 			<desc>
-				<p>Sets whether to draw the controlgroup with rounded corners.</p>
+				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0. Add class <code>ui-corner-all</code> to the element to have rounded corners.</strong>
+				<p>Applies the theme button border-radius if set to true.</p>
 				<p>This option is also exposed as a data attribute: <code>data-corners="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
@@ -45,13 +46,29 @@
 			<type name="Boolean" />
 		</option>
 		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/widget-option-mini.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<option name="mini" default="null (false)" deprecated="1.4.0" example-value="true">
+			<desc>
+				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0. Add class <code>ui-mini</code> to the element to make the button smaller.</strong>
+				<p>If set to <code>true</code>, this will display a more compact version of the <placeholder name="name"/> that uses less vertical height by applying the <code>ui-mini</code> class to the outermost element of the <placeholder name="name"/> widget.</p>
+				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
 		<option name="shadow" default="false" example-value="true">
 			<desc>
 				<p>Sets whether a drop shadow is drawn around the controlgroup.</p>
 				<p>This option is also exposed as a data attribute: <code>data-shadow="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
+		</option>
+		<option name="theme" default="null, inherited from parent" example-value='"b"' deprecated="1.4.0">
+			<desc>
+				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0. Add class <code>ui-group-theme-[a-z]</code> to the element to specify the theme.</strong>
+				<p>Sets the color scheme (swatch) for the <placeholder name="name" /> widget. It accepts a single letter from a-z that maps to the swatches included in your theme.</p>
+				<p>Possible values: swatch letter (a-z).</p>
+				<p>This option is also exposed as a data attribute: <code>data-theme="b"</code>.</p>
+			</desc>
+			<type name="String" />
 		</option>
 		<option name="type" default="vertical" example-value='"horizontal"'>
 			<desc>
