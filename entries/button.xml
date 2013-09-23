@@ -108,7 +108,7 @@ $( "[type='submit']" ).button();
 		</option>
 		<option name="shadow" default="true" deprecated="1.4.0" example-value="false">
 			<desc>
-				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0. Add class <code>ui-shadow</code> to the <a href="#option-wrapperClass">wrapperClass</a> option to specify icon position: <code>data-wrapper-class="ui-shadow"</code>.</strong>
+				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0. Add class <code>ui-shadow</code> to the <a href="#option-wrapperClass">wrapperClass</a> option to set the shadow: <code>data-wrapper-class="ui-shadow"</code>.</strong>
 				<p>Applies the drop shadow style to the <placeholder name="name"/> if set to true.</p>
 				<p>This option is also exposed as a data attribute: <code>data-shadow="false"</code>.</p>
 			</desc>
