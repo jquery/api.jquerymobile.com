@@ -29,11 +29,11 @@
 		<table>
 			<tr>
 				<td class="enum-value"><div style="white-space: nowrap;">ui-collapsible-inset</div></td>
-				<td>The <a href="/collapsible/">collapsible</a> widget can have horizontal margins, borders, and rounded corners when this class is applied.</td>
+				<td>The <a href="/collapsible/">collapsible</a> widget has horizontal margins, borders, and rounded corners when this class is applied.</td>
 			</tr>
 			<tr>
 				<td class="enum-value"><div style="white-space: nowrap;">ui-listview-inset</div></td>
-				<td>The <a href="/listview/">listview</a> widget can have horizontal margins, borders, and rounded corners when this class is applied.</td>
+				<td>The <a href="/listview/">listview</a> widget has horizontal margins, borders, and rounded corners when this class is applied.</td>
 			</tr>
 		</table>
 		<h3>Button-specific classes</h3>
