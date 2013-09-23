@@ -36,9 +36,10 @@
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="theme" default='"a"' example-value='"b"'>
+		<option name="theme" default="a" example-value='"b"' deprecated="1.4.0">
 			<desc>
-				Sets the color scheme (swatch) for the <placeholder name="name" /> widget. It accepts a single letter from a-z that maps to the swatches included in your theme.
+				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0. Add class <code>ui-body-[a-z]</code> to the element to specify the theme.</strong>
+				<p>Sets the color scheme (swatch) for the <placeholder name="name" /> widget. It accepts a single letter from a-z that maps to the swatches included in your theme.</p>
 				<p>Possible values: swatch letter (a-z).</p>
 				<p>This option is also exposed as a data attribute: <code>data-theme="b"</code>.</p>
 			</desc>
