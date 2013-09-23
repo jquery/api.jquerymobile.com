@@ -391,9 +391,10 @@ $( document ).on( "pageinit", function() {
 				<desc>A value of <code>true</code> is equivalent to a value of "t,r,b,l", whereas <code>false</code> indicates that no arrow is to be shown.</desc>
 			</type>
 		</option>
-		<option name="corners" default="true" example-value="false">
+		<option name="corners" default="true" example-value="false" deprecated="1.4.0">
 			<desc>
-				<p>Sets whether to draw the popup with rounded corners.</p>
+				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0. Add class <code>ui-corner-all</code> to the <a href="#option-wrapperClass">wrapperClass</a> option to have rounded corners: <code>data-wrapper-class="ui-corner-all"</code>.</strong>
+				<p>Applies the theme border-radius if set to true.</p>
 				<p>This option is also exposed as a data attribute: <code>data-corners="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
@@ -441,16 +442,19 @@ $( document ).on( "pageinit", function() {
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="shadow" default="true" example-value="false">
+		<option name="shadow" default="true" deprecated="1.4.0" example-value="false">
 			<desc>
-				<p>Sets whether to draw a shadow around the popup.</p>
+				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0. Add class <code>ui-overlay-shadow</code> to the <a href="#option-wrapperClass">wrapperClass</a> option to set the shadow: <code>data-wrapper-class="ui-overlay-shadow"</code>.</strong>
+				<p>Applies the drop shadow style to the <placeholder name="name"/> if set to true.</p>
 				<p>This option is also exposed as a data attribute: <code>data-shadow="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="theme" default="null, inherited from parent" example-value='"b"'>
-			<desc>Sets the color scheme (swatch) for the popup contents. Unless explicitly set to 'none', the theme for the popup will be assigned the first time the popup is shown by inheriting the page theme or, failing that, by the hard-coded value 'a'. If you set it to 'none', the popup will not have any theme at all, and will be transparent.
-				<p>Possible values: swatch letter (a-z), or "none".</p>
+		<option name="theme" default="null, inherited from parent" example-value='"b"' deprecated="1.4.0">
+			<desc>
+				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0. Add class <code>ui-body-[a-z]</code> to the <a href="#option-wrapperClass">wrapperClass</a> option to specify the theme: <code>data-wrapper-class="ui-body-b"</code>.</strong>
+				<p>Sets the color scheme (swatch) for the <placeholder name="name" /> widget. It accepts a single letter from a-z that maps to the swatches included in your theme.</p>
+				<p>Possible values: swatch letter (a-z).</p>
 				<p>This option is also exposed as a data attribute: <code>data-theme="b"</code>.</p>
 			</desc>
 			<type name="String" />
