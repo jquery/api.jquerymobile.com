@@ -194,10 +194,8 @@ $( ".mySearchInput" ).textinput();
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="corners" default="true" example-value="false" deprecated="1.4.0">
-			<desc>
-				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0. Add class <code>ui-corner-all</code> to the <a href="#option-wrapperClass">wrapperClass</a> option to have rounded corners: <code>data-wrapper-class="ui-corner-all"</code>.</strong>
-				<p>Applies the theme border-radius if set to true.</p>
+		<option name="corners" default="true" example-value="false">
+			<desc>Applies the theme border radius if set to <code>true</code> by adding the class <code>ui-corner-all</code> to the <placeholder name="name"/> widget's outermost element.
 				<p>This option is also exposed as a data attribute: <code>data-corners="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
@@ -205,29 +203,14 @@ $( ".mySearchInput" ).textinput();
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-enhanced.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="mini" default="null (false)" deprecated="1.4.0" example-value="true">
-			<desc>
-				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0. Add class <code>ui-mini</code> to the <a href="#option-wrapperClass">wrapperClass</a> option to make the <placeholder name="name"/> smaller: <code>data-wrapper-class="ui-mini"</code>.</strong>
-				<p>If set to <code>true</code>, this will display a more compact version of the <placeholder name="name"/> that uses less vertical height by applying the <code>ui-mini</code> class to the outermost element of the <placeholder name="name"/> widget.</p>
-				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
-			</desc>
-			<type name="Boolean" />
-		</option>
+		<xi:include href="../includes/widget-option-mini.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="preventFocusZoom" default="true on iOS platforms" example-value="true">
 			<desc>Attempts to prevent the device from focusing in on the input element when the element receives the focus.
 				<p>This option is also exposed as a data attribute: <code>data-prevent-focus-zoom="true"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="theme" default="null, inherited from parent" example-value='"b"' deprecated="1.4.0">
-			<desc>
-				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0. Add class <code>ui-btn-[a-z]</code> to the <a href="#option-wrapperClass">wrapperClass</a> option to specify the theme: <code>data-wrapper-class="ui-btn-b"</code>.</strong>
-				<p>Sets the color scheme (swatch) for the <placeholder name="name" /> widget. It accepts a single letter from a-z that maps to the swatches included in your theme.</p>
-				<p>Possible values: swatch letter (a-z).</p>
-				<p>This option is also exposed as a data attribute: <code>data-theme="b"</code>.</p>
-			</desc>
-			<type name="String" />
-		</option>
+		<xi:include href="../includes/widget-option-theme.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="wrapperClass" default='""' example-value='"custom-class"'>
 			<desc>The value of this option is a string containing a space-separated list of classes to be applied to the outermost element of the <placeholder name="name"/> widget.
 				<p>This option is also exposed as a data attribute: <code>data-wrapper-class="true"</code>.</p>

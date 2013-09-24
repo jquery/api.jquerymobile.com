@@ -312,15 +312,7 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="theme" default="null, inherited from parent" example-value='"b"' deprecated="1.4.0">
-			<desc>
-				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0. Add class <code>ui-bar-[a-z]</code> to the element to specify the theme.</strong>
-				<p>Sets the color scheme (swatch) for the <placeholder name="name" /> widget. It accepts a single letter from a-z that maps to the swatches included in your theme.</p>
-				<p>Possible values: swatch letter (a-z).</p>
-				<p>This option is also exposed as a data attribute: <code>data-theme="b"</code>.</p>
-			</desc>
-			<type name="String" />
-		</option>
+		<xi:include href="../includes/widget-option-theme.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="trackPersistentToolbars" default="true" example-value="false">
 			<desc>This option is provided by the <code>fixedToolbar</code> extension.
 				<p>Whether to persist the <placeholder name="name"/> across pages.</p>
