@@ -8,9 +8,9 @@
 
 <pre><code>
 &lt;div data-role=&quot;controlgroup&quot;&gt;
-  &lt;a href=&quot;#&quot; data-role=&quot;button&quot;&gt;Yes&lt;/a&gt;
-  &lt;a href=&quot;#&quot; data-role=&quot;button&quot;&gt;No&lt;/a&gt;
-  &lt;a href=&quot;#&quot; data-role=&quot;button&quot;&gt;Maybe&lt;/a&gt;
+  &lt;a href=&quot;#&quot; role=&quot;button&quot; class=&quot;ui-btn ui-corner-all&quot;&gt;Yes&lt;/a&gt;
+  &lt;a href=&quot;#&quot; role=&quot;button&quot; class=&quot;ui-btn ui-corner-all&quot;&gt;No&lt;/a&gt;
+  &lt;a href=&quot;#&quot; role=&quot;button&quot; class=&quot;ui-btn ui-corner-all&quot;&gt;Maybe&lt;/a&gt;
 &lt;/div&gt;
 </code></pre>
 
