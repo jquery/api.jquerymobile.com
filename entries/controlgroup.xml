@@ -8,9 +8,9 @@
 
 <pre><code><![CDATA[
 <div data-role="controlgroup">
-  <a href="#" data-role="button">Yes</a>
-  <a href="#" data-role="button">No</a>
-  <a href="#" data-role="button">Maybe</a>
+  <a href="#" class="ui-btn ui-corner-all">Yes</a>
+  <a href="#" class="ui-btn ui-corner-all">No</a>
+  <a href="#" class="ui-btn ui-corner-all">Maybe</a>
 </div>
 ]]></code></pre>
 
@@ -83,9 +83,9 @@ $( ".selector" ).controlgroup( "container" );
 <div data-role="page" id="page1">
 	<div data-role="content">
 		<div data-role="controlgroup">
-			<a href="#" data-role="button">Yes</a>
-			<a href="#" data-role="button">No</a>
-			<a href="#" data-role="button">Maybe</a>
+			<a href="#" class="ui-btn ui-corner-all">Yes</a>
+			<a href="#" class="ui-btn ui-corner-all">No</a>
+			<a href="#" class="ui-btn ui-corner-all">Maybe</a>
 		</div>
 	</div>
 </div>
