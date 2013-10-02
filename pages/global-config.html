@@ -74,7 +74,8 @@ $( document ).on( "mobileinit", function() {
 	<dd>When the DOM is ready, the framework should automatically call <code>$.mobile.initializePage</code>. If false, the page will not initialize and will be visually hidden until <code>$.mobile.initializePage</code> is manually called.</dd>
 	<br />
 	<dt id="buttonMarkup.hoverDelay"><code>buttonMarkup.hoverDelay</code> <em>integer</em>, default: 200</dt>
-	<dd>Set the delay for touch devices to add the hover and down classes on touch interactions for buttons throughout the framework. Reducing the delay here results in a more responsive feeling ui, but will often result in the downstate being applied during page scrolling.</dd>
+	<dd>Set the delay for touch devices to add the hover and down classes on touch interactions for buttons throughout the framework. Reducing the delay here results in a more responsive feeling ui, but will often result in the downstate being applied during page scrolling.
+	<div class="warning"><strong>Deprecated</strong> in 1.4 - use <code>$.mobile.hoverDelay</code> instead.</dd>
 	<br />
 	<dt id="defaultDialogTransition"><code>defaultDialogTransition</code> <em>string</em>, default: 'pop'</dt>
 	<dd>Set the default transition for dialog changes that use Ajax. Set to 'none' for no transitions.</dd>
@@ -100,24 +101,6 @@ $( document ).on( "mobileinit", function() {
 	<dt id="linkBindingEnabled"><code>linkBindingEnabled</code> <em>boolean</em>, default: true</dt>
 	<dd>jQuery Mobile will automatically bind the clicks on anchor tags in your document. Setting this option to false will prevent all anchor click handling <em>including</em> the addition of active button state and alternate link bluring. This should only be used when attempting to delegate the click management to another library or custom code.</dd>
 	<br />
-	<dt id="loadingMessage"><code>loadingMessage</code> <em>string</em>, default: "loading"</dt>
-	<dd>
-    Set the text that appears when a page is loading. If set to false, the message will not appear at all.
-    <div class="warning"><strong>Deprecated</strong> in 1.2 - use <code>$.mobile.loader.prototype.options.text</code> instead. See the <a href="page-loading">loader docs</a> for more.</div>
-  </dd>
-
-	<dt id="loadingMessageTextVisible"><code>loadingMessageTextVisible</code> <em>boolean</em>, default: false</dt>
-	<dd>
-    Whether the text should be visible when a loading message is shown. The text is always visible for loading errors.
-    <div class="warning"><strong>Deprecated</strong> in 1.2 - use <code>$.mobile.loader.prototype.options.textVisible</code> instead. See the <a href="page-loading">loader docs</a> for more.</div>
-  </dd>
-
-	<dt id="loadingMessageTheme"><code>loadingMessageTheme</code> <em>string</em>, default: "a"</dt>
-	<dd>
-    The theme that the loading message box uses when text is visible.
-    <div class="warning"><strong>Deprecated</strong> in 1.2 - use <code>$.mobile.loader.prototype.options.theme</code> instead. See the <a href="page-loading">loader docs</a> for more.</div>
-	</dd>
-
 	<dt id="maxTransitionWidth"><code>maxTransitionWidth</code> <em>integer, boolean</em>, default: false</dt>
 	<dd>Set a max width for transitions. The option accepts any number representing a pixel width and its default value <code>false</code>. If a number value is set, transition "none" will be used if the window is wider than the specified value.</dd>
     <br />
