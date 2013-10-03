@@ -21,6 +21,7 @@
 </code></pre>
 			<iframe src="/resources/buttonMarkup/example49.html" style="width:100%;height:90px;border:0px"></iframe>
 			</li>
+			<li>We do not recommend mixing styling based on data attributes and class-based styling during the deprecation period.</li>
 		</ul>
 		<h2>Button markup</h2>
 		<p>You can use <code>.buttonMarkup()</code> to style any element as a button that is attractive and useable on a mobile device. It is a convenience function that allows you to manipulate the classes related to button styling. For each element in the set of matched elements this function converts the <code>options</code> parameter to a list of classes to be applied to the element, while respecting the element's existing classes that are not related to button styling. You may also set the parameter <code>overwriteClasses</code> to <code>true</code> for performance reasons. When <code>overwriteClasses</code> is set to <code>true</code> the function discards existing classes and applies the classes corresponding to the options provided.</p>
