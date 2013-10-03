@@ -151,7 +151,7 @@
 
 <pre><code>
 &lt;div class="ui-checkbox"&gt;
-	&lt;label for="my-checkbox" class="ui-btn ui-btn-inherit ui-btn-icon-left ui-icon-checkbox-off ui-checkbox-off"&gt;My Checkbox&lt;/label&gt;
+	&lt;label for="my-checkbox" class="ui-btn ui-btn-inherit ui-btn-icon-left ui-checkbox-off"&gt;My Checkbox&lt;/label&gt;
 	&lt;input type="checkbox" id="my-checkbox" data-corners="false" data-enhanced="true"&gt;&lt;/input&gt;
 &lt;/div&gt;
 </code></pre>
