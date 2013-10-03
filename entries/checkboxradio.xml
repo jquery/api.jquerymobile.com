@@ -187,7 +187,7 @@
 
 <pre><code><![CDATA[
 <div class="ui-checkbox">
-	<label for="my-checkbox" class="ui-btn ui-btn-inherit ui-btn-icon-left ui-icon-checkbox-off ui-checkbox-off">My Checkbox</label>
+	<label for="my-checkbox" class="ui-btn ui-btn-inherit ui-btn-icon-left ui-checkbox-off">My Checkbox</label>
 	<input type="checkbox" id="my-checkbox" data-corners="false" data-enhanced="true"></input>
 </div>
 ]]></code></pre>
