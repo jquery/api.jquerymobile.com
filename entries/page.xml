@@ -8,8 +8,6 @@
 
 		<p>The goal of this model is to allow developers to create websites using best practices &#8212; where ordinary links will "just work" without any special configuration &#8212; while creating a rich, native-like experience that can't be achieved with standard HTTP requests.</p>
 
-		<p><strong>Caveat:</strong> Documents containing multiple pages cause Internet Explorer 7 to exhibit incorrect behavior when its "Back" button is pressed. In particular, if the user navigates between several of the pages internal to the document that has been loaded and then clicks the "Back" button to return to the start page, there will be occasions when clicking the "Back" button does not cause a return to the previous page. However, clicking the "Back" button enough times will eventually return the user through the performed navigation sequence back to the start page.</p>
-		<p>Thus, if Internet Explorer 7 represents a significant proportion of the targeted user base, we recommended that pages be organized as individual HTML documents containing single page widgets, rather than as a single HTML document containing multiple internal pages.</p>
 	</longdesc>
 	<added>1.0</added>
 	<options>
