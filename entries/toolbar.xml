@@ -21,7 +21,7 @@
 
 		<h3>Default header features</h3>
 
-		<p>The header <placeholder name="name"/> inherits its theme swatch from the page by default but you can easily set the theme swatch color by adding the <code>data-theme</code> attribute to the header. For example, <code>data-theme="b"</code>.</p>
+		<p>The header <placeholder name="name"/> inherits its theme swatch from the page by default but you can easily set the theme swatch color by adding the <code>data-theme</code> attribute to the header. For example, <code>data-theme="b"</code>. When you use external headers you must set a theme, because there is no parent page from which it can inherit a theme.</p>
 
 		<h3>Adding buttons</h3>
 
@@ -125,7 +125,7 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 </code></pre>
 		<iframe src="/resources/toolbar/example8.html" style="width:100%;height:90px;border:0px"></iframe>
 
-		<p>The footer <placeholder name="name"/> inherits its theme swatch from the <a href="/page/">page</a> by default but you can easily set the theme swatch color by adding the <code>data-theme</code> attribute to the header. For example, <code>data-theme="b"</code>.</p>
+		<p>The footer <placeholder name="name"/> inherits its theme swatch from the <a href="/page/">page</a> by default but you can easily set the theme swatch color by adding the <code>data-theme</code> attribute to the header. For example, <code>data-theme="b"</code>. When you use external headers you must set a theme, because there is no parent page from which it can inherit a theme.</p>
 
 		<p>The page footer is very similar to the header in terms of options and configuration. The primary difference is that the footer is designed to be less structured than the header to allow more flexibility, so the framework doesn't automatically reserve slots for buttons to the left or right as it does in headers.</p>
 		<p>Since footers do not have the same prescriptive markup conventions as headers, we recommend using layout grids or writing custom styles to achieve the design you want.</p>
