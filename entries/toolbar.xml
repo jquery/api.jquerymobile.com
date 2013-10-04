@@ -25,7 +25,7 @@
 
 		<h3>Adding buttons</h3>
 
-		<p><strong>The behavior whereby anchor elements are automatically enhanced as buttons is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Thereafter you must set the attribute <code>data-role="button"</code> on those anchors you wish the framework to enhance as buttons.</strong></p>
+		<p><strong>The behavior whereby anchor elements are automatically enhanced as buttons is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Thereafter you must add button classes if you wish to style them as buttons.</strong></p>
 
 		<p>In the standard header configuration, there are slots for buttons on either side of the text heading. Each button is typically an <code>a</code> (anchor) element or a <code>button</code> element that has the attribute <code>data-role="button"</code> set. To save space, buttons in <placeholder name="name"/> widgets are set to inline styling so the button is only as wide as the text and icons it contains. </p>
 
