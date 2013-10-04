@@ -30,6 +30,7 @@
 		<p>In the standard header configuration, there are slots for buttons on either side of the text heading. Each button is typically an <code>a</code> (anchor) element or a <code>button</code> element that has the attribute <code>data-role="button"</code> set. To save space, buttons in <placeholder name="name"/> widgets are set to inline styling so the button is only as wide as the text and icons it contains. </p>
 
 		<h4>Default button positioning</h4>
+		<p><strong>The behavior whereby the first two buttons automatically get the <code>ui-btn-left</code> and <code>ui-btn-right</code> classes is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Thereafter you must add those classes in your markup if you wish to position the buttons left and/or right.</strong></p>
 		<p>The <placeholder name="name"/> plugin looks for immediate children of the header container, and automatically sets the first link in the left button slot and the second link in the right. In this example, the 'Cancel' button will appear in the left slot and 'Save' will appear in the right slot based on their sequence in the source order. </p>
 
 <pre><code>
