@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="toolbar" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="toolbar" init-selector=":jqmData(role=&#39;footer&#39;), :jqmData(role=&#39;header&#39;)">
-	<title>Toolbars</title>
+	<title>Toolbar Widget</title>
 	<desc>Adds toolbars to the top and/or bottom of the page.</desc>
 	<longdesc>
 		<h2>Toolbars</h2>
