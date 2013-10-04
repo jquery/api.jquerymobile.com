@@ -185,6 +185,8 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 
 		<iframe src="/resources/toolbar/example12.html" style="width:100%;height:420px;border:0px"></iframe>
 
+		<p><strong>Note:</strong> When you dynamically inject a fixed toolbar into the active page, you must afterwards call <code>$.mobile.resetActivePageHeight();</code> to ensure that the page height remains correct. An <a href="#example-2">example</a> illustrates this.</p>
+
 		<h3>Fullscreen Toolbars</h3>
 
 		<p>Fullscreen fixed toolbars sit on top of the content at all times when they are visible, and unlike regular fixed toolbars, fullscreen toolbars do not fall back to static positioning when toggled. Instead they disappear from the screen entirely. Fullscreen toolbars are ideal for more immersive interfaces, like a photo viewer that is meant to fill the entire screen with the photo itself and no distractions.</p>
@@ -401,6 +403,26 @@ If you're doing this programmatically, set this option inside the mobileinit eve
     <div data-role="footer" data-theme="b" data-position="fixed">
 		<h1>Fixed Footer</h1>
 	</div>]]></html>
+	</example>
+	<example>
+		<desc>Injecting a fixed toolbar</desc>
+		<html><![CDATA[
+	<div data-role="content">
+		<p>This page demonstrates how to correctly inject fixed toolbars.</p>
+		<a href="#" id="inject-toolbar" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Inject Header</a>
+	</div>
+		]]></html>
+		<code><![CDATA[
+$.mobile.document.on( "click", "#inject-toolbar", function() {
+	$( "<div data-role='header'><h1>Dynamic Fixed Toolbar Header</h1></div>")
+		.appendTo( $( "#inject-toolbar" ).closest( ".ui-page" ) )
+		.toolbar({ position: "fixed" });
+
+	// This second step ensures that the insertion of the new toolbar does not
+	// affect page height
+	$.mobile.resetActivePageHeight();
+});
+]]></code>
 	</example>
 	<category slug="widgets"/>
 </entry>
