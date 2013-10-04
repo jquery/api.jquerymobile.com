@@ -112,8 +112,8 @@
 </table>
 <p></p>
 
-<h2><a href="../collapsible-set/">Collapsible set</a></h2>
-<p>A number of collapsibles wrapped in a container with the <code>data-role="collapsible-set"</code></p>
+<h2><a href="../collapsibleset/">Collapsible set</a></h2>
+<p>A number of collapsibles wrapped in a container with the <code>data-role="collapsibleset"</code></p>
 <table class="column-headers">
 	<tr>
 		<th>data-collapsed-icon</th>
@@ -146,7 +146,7 @@
 </table>
 <p></p>
 
-<h2><a href="../page/">Content</a></h2>
+<h2>Content</h2>
 <p>Container with <code>data-role="content"</code></p>
 <table class="column-headers">
 	<tr>
@@ -222,38 +222,9 @@
 
 <h2>Field container</h2>
 <p>Container with <code>data-role="fieldcontain"</code> wrapped around label/form element pair</p>
+<p><strong>Note: <code>data-role="fieldcontain"</code> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Add class <code>ui-field-contain</code> instead.</strong></p>
 
-<h2><a href="../fixedtoolbar/">Fixed Toolbar</a></h2>
-<p>Container with <code>data-role="header"</code> or <code>data-role="footer"</code> plus the attribute <code>data-position="fixed"</code></p>
-<table class="column-headers">
-	<tr>
-		<th>data-disable-page-zoom</th>
-		<td><strong>true</strong> | false - User-scaling-ability for pages with fixed toolbars</td>
-	</tr>
-	<tr>
-		<th>data-fullscreen</th>
-		<td>true | <strong>false</strong> - Setting toolbars <u>over</u> the page-content</td>
-	</tr>
-	<tr>
-		<th>data-tap-toggle</th>
-		<td><strong>true</strong> | false - Ability to toggle toolbar-visibility on user tap/click</td>
-	</tr>
-	<tr>
-		<th>data-transition</th>
-		<td><strong>slide</strong> | fade | none - Show/hide-transition when a tap/click occurs</td>
-	</tr>
-	<tr>
-		<th>data-update-page-padding</th>
-		<td><strong>true</strong> | false - Have the page top and bottom padding updated on resize, transition, "updatelayout" events (the framework always updates the padding on the "pageshow" event).</td>
-	</tr>
-	<tr>
-		<th>data-visible-on-page-show</th>
-		<td><strong>true</strong> | false - Toolbar-visibility when parent page is shown</td>
-	</tr>
-</table>
-<p></p>
-
-<h2><a href="../slider/">Flip toggle switch</a></h2>
+<h2><a href="../flipswitch/">Flip toggle switch</a></h2>
 <p>Select with <code>data-role="slider"</code> and two <code style="font-weight:normal;">option</code> element</p>
 <table class="column-headers">
 	<tr>
@@ -271,50 +242,6 @@
 	<tr>
 		<th>data-track-theme</th>
 		<td>swatch letter (a-z) - Added to the form element</td>
-	</tr>
-</table>
-<p></p>
-
-<h2><a href="../footer/">Footer</a></h2>
-<p>Container with <code>data-role="footer"</code></p>
-<table class="column-headers">
-	<tr>
-		<th>data-id</th>
-		<td>string - Unique ID. Required for persistent footers</td>
-	</tr>
-	<tr>
-		<th>data-position</th>
-		<td>fixed</td>
-	</tr>
-	<tr>
-		<th>data-fullscreen</th>
-		<td>true | <strong>false</strong> - Used in conjunction with fixed toolbars</td>
-	</tr>
-	<tr>
-		<th>data-theme</th>
-		<td>swatch letter (a-z)</td>
-	</tr>
-</table>
-<p></p>
-
-<h2><a href="../header/">Header</a></h2>
-<p>Container with <code>data-role="header"</code></p>
-<table class="column-headers">
-	<tr>
-		<th>data-id</th>
-		<td>string - Unique ID. Required for persistent headers</td>
-	</tr>
-	<tr>
-		<th>data-position</th>
-		<td>fixed</td>
-	</tr>
-	<tr>
-		<th>data-fullscreen</th>
-		<td>true | <strong>false</strong> - Used in conjunction with fixed toolbars</td>
-	</tr>
-	<tr>
-		<th>data-theme</th>
-		<td>swatch letter (a-z)</td>
 	</tr>
 </table>
 <p></p>
@@ -450,36 +377,16 @@
 <p>Container with <code>data-role="page"</code></p>
 <table class="column-headers">
 	<tr>
-		<th>data-add-back-btn</th>
-		<td>true | <strong>false</strong> - Auto add back button, header only</td>
-	</tr>
-	<tr>
-		<th>data-back-btn-text</th>
-		<td>string</td>
-	</tr>
-	<tr>
-		<th>data-back-btn-theme</th>
-		<td>swatch letter (a-z)</td>
-	</tr>
-	<tr>
-		<th>data-close-btn-text</th>
-		<td>string - Text for the close button, dialog only</td>
-	</tr>
-	<tr>
 		<th>data-dom-cache</th>
 		<td>true | <strong>false</strong></td>
 	</tr>
 	<tr>
-		<th>data-fullscreen</th>
-		<td>true | <strong>false</strong> - Used in conjunction with fixed toolbars <p class="ui-body ui-body-e"><strong>Deprecated</strong> in 1.1 - use on header and footer instead.</p></td>
-	</tr>
-	<tr>
 		<th>data-overlay-theme</th>
-		<td>swatch letter (a-z) - Overlay theme when the page is opened in a dialog</td>
+		<td>swatch letter (a-z) - Overlay theme when the page is opened as a dialog</td>
 	</tr>
 	<tr>
 		<th>data-theme</th>
-		<td>swatch letter (a-z) - Default "c"</td>
+		<td>swatch letter (a-z) - Default "a"</td>
 	</tr>
 	<tr>
 		<th>data-title</th>
@@ -664,5 +571,65 @@
 	<tr>
 		<th>data-theme</th>
 		<td>swatch letter (a-z) - Added to the form element</td>
+	</tr>
+</table>
+<p></p>
+
+<h2><a href="../toolbar/">Toolbar</a></h2>
+<p>Container with <code>data-role="header"</code> or <code>data-role="footer"</code></p>
+<table class="column-headers">
+	<tr>
+		<th>data-add-back-btn</th>
+		<td>true | <strong>false</strong> - Auto add back button, header only</td>
+	</tr>
+	<tr>
+		<th>data-back-btn-text</th>
+		<td>string - Header only</td>
+	</tr>
+	<tr>
+		<th>data-back-btn-theme</th>
+		<td>swatch letter (a-z) - Header only</td>
+	</tr>
+	<tr>
+		<th>data-id</th>
+		<td>string - Unique ID. Required for persistent footers</td>
+	</tr>
+	<tr>
+		<th>data-position</th>
+		<td>fixed</td>
+	</tr>
+	<tr>
+		<th>data-theme</th>
+		<td>swatch letter (a-z)</td>
+	</tr>
+</table>
+<p></p>
+
+<h2><a href="../toolbar/">Fixed toolbar</a></h2>
+<p>Container with <code>data-role="header"</code> or <code>data-role="footer"</code> plus the attribute <code>data-position="fixed"</code></p>
+<table class="column-headers">
+	<tr>
+		<th>data-disable-page-zoom</th>
+		<td><strong>true</strong> | false - User-scaling-ability for pages with fixed toolbars</td>
+	</tr>
+	<tr>
+		<th>data-fullscreen</th>
+		<td>true | <strong>false</strong> - Setting toolbars <u>over</u> the page-content</td>
+	</tr>
+	<tr>
+		<th>data-tap-toggle</th>
+		<td><strong>true</strong> | false - Ability to toggle toolbar-visibility on user tap/click</td>
+	</tr>
+	<tr>
+		<th>data-transition</th>
+		<td><strong>slide</strong> | fade | none - Show/hide-transition when a tap/click occurs</td>
+	</tr>
+	<tr>
+		<th>data-update-page-padding</th>
+		<td><strong>true</strong> | false - Have the page top and bottom padding updated on resize, transition, "updatelayout" events (the framework always updates the padding on the "pageshow" event).</td>
+	</tr>
+	<tr>
+		<th>data-visible-on-page-show</th>
+		<td><strong>true</strong> | false - Toolbar-visibility when parent page is shown</td>
 	</tr>
 </table>
