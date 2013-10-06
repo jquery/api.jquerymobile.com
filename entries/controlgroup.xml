@@ -53,6 +53,13 @@
 			</desc>
 			<type name="Boolean" />
 		</option>
+		<option name="theme" default="null, inherited from parent" example-value='"b"'>
+			<desc>Sets the color scheme (swatch) for the controlgroup. It accepts a single letter from a-z that maps to the swatches included in your theme.
+				<p>Possible values: swatch letter (a-z).</p>
+				<p>This option is also exposed as a data attribute: <code>data-theme="b"</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
 		<option name="type" default="vertical" example-value='"horizontal"'>
 			<desc>
 				<p>Sets whether children should be stacked on top of each other or next to each other. If set to "horizontal", the children of the controlgroup will be stacked next to each other.</p>
