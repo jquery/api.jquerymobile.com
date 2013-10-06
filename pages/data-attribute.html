@@ -46,7 +46,6 @@
 		<td>swatch letter (a-z)</td>
 	</tr>
 </table>
-<p>Multiple buttons can be wrapped in a container with a <code>data-role="controlgroup"</code> attribute for a vertically grouped set. Add the <code>data-type="horizontal"</code> attribute for the buttons to sit side-by-side. Add the <code>data-mini="true"</code> to get the mini/compact sized version for all the buttons that appear in the controlgroup. </p>
 
 <h2><a href="../checkboxradio/">Checkbox</a></h2>
 <p>Pairs of labels and inputs with <code>type="checkbox"</code> are auto-enhanced, no <code>data-role</code> required</p>
@@ -64,7 +63,6 @@
 		<td>swatch letter (a-z) - Added to the form element</td>
 	</tr>
 </table>
-<p>Multiple checkboxes can be wrapped in a container with a <code>data-role="controlgroup"</code> attribute for a vertically grouped set. Add the <code>data-type="horizontal"</code> attribute for the checkboxes to sit side-by-side. Add the <code>data-mini="true"</code> to get the mini/compact sized version for all the checkboxes that appear in the controlgroup. </p>
 
 <h2><a href="../collapsible/">Collapsible</a></h2>
 <p>A heading and content wrapped in a container with the <code>data-role="collapsible"</code></p>
@@ -157,11 +155,19 @@
 <p></p>
 
 <h2><a href="../controlgroup/">Controlgroup</a></h2>
-<p>DIV or FIELDSET container with <code>data-role="controlgroup"</code>. Visually integrate multiple button-styled elements into a group.</p>
+<p>DIV or FIELDSET container with <code>data-role="controlgroup"</code>. Visually integrate multiple button-styled elements.</p>
 <table class="column-headers">
+	<tr>
+		<th>data-exclude-invisible</th>
+		<td><strong>true</strong> | false - Sets whether to exclude invisible children in the assignment of rounded corners</td>
+	</tr>
 	<tr>
 		<th>data-mini</th>
 		<td>true | <strong>false</strong> - Compact sized version for all items in the controlgroup</td>
+	</tr>
+	<tr>
+		<th>data-theme</th>
+		<td>swatch letter (a-z)</td>
 	</tr>
 	<tr>
 		<th>data-type</th>
@@ -475,7 +481,6 @@
 		<td>swatch letter (a-z) - Added to the form element</td>
 	</tr>
 </table>
-			<p>Multiple radion buttons can be wrapped in a container with a <code>data-role="controlgroup"</code> attribute for a vertically grouped set. Add the <code>data-type="horizontal"</code> attribute for the radio buttons to sit side-by-side. Add the <code>data-mini="true"</code> to get the mini/compact sized version for all the radio buttons that appear in the controlgroup. </p>
 
 <h2><a href="../selectmenu/">Selectmenu</a></h2>
 <p>All <code>select</code> form elements are auto-enhanced, no <code>data-role</code> required</p>
@@ -521,7 +526,6 @@
 		<td>swatch letter (a-z) - Added to the form element</td>
 	</tr>
 </table>
-<p>Multiple selects can be wrapped in a fieldset with a <code>data-role="controlgroup"</code> attribute for a vertically grouped set. Add the <code>data-type="horizontal"</code> attribute for the selects to sit side-by-side.</p>
 
 <h2><a href="../slider/">Slider</a></h2>
 <p>Inputs with <code>type="range"</code> are auto-enhanced, no <code>data-role</code> required</p>
