@@ -43,9 +43,11 @@
 
 		<h3>Field containers</h3>
 
-		<p>Optionally wrap the text input in a container with the <code>data-role="fieldcontain"</code> attribute to help visually group it in a longer form.</p>
+		<p>Optionally wrap the text input in a container with class <code>ui-field-contain</code> to help visually group it in a longer form.</p>
+		<p><strong>Note: The <code>data-</code> attribute <code>data-role="fieldcontain"</code> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Add class <code>ui-field-contain</code> instead.</strong></p>
+
 <pre><code><![CDATA[
-<div data-role="fieldcontain">
+<div class="ui-field-contain">
 	<label for="name">Text Input:</label>
 	<input type="text" name="name" id="name" value="" />
 </div>
@@ -63,7 +65,8 @@
         <h2>Textareas</h2>
 
 		<p>For multi-line text inputs, use a <code>textarea</code> element. The <code>autogrow</code> extension provides functionality for auto-growing the height of the textarea to avoid the need for an internal scrollbar. </p>
-		<p>Set the <code>for</code> attribute of the <code>label</code> to match the <code>id</code> of the <code>textarea</code> so they are semantically associated, and wrap them in a <code>div</code> with the <code>data-role="fieldcontain"</code> attribute to group them.</p>
+		<p>Set the <code>for</code> attribute of the <code>label</code> to match the <code>id</code> of the <code>textarea</code> so they are semantically associated, and wrap them in a <code>div</code> with class <code>ui-field-contain</code> to group them.</p>
+		<p><strong>Note: The <code>data-</code> attribute <code>data-role="fieldcontain"</code> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Add class <code>ui-field-contain</code> instead.</strong></p>
 
 <pre><code><![CDATA[
 <label for="textarea-a">Textarea:</label>
@@ -76,7 +79,7 @@ I'm a basic textarea. If this is pre-populated with content, the height will be 
 		<iframe src="/resources/textinput/example5.html" style="width:100%;height:190px;border:0px"></iframe></p>
 
 <pre><code><![CDATA[
-<div data-role="fieldcontain">
+<div class="ui-field-contain">
 <label for="textarea">Textarea:</label>
 	<textarea name="textarea" id="textarea"></textarea>
 </div>
@@ -126,9 +129,11 @@ $( "input" ).textinput();
 
 		<h3>Field containers</h3>
 
-		<p>Optionally wrap the search input in a container with the <code>data-role="fieldcontain"</code> attribute to help visually group it in a longer form.</p>
+		<p>Optionally wrap the search input in a container with tlass <code>ui-field-contain</code> to help visually group it in a longer form.</p>
+		<p><strong>Note: The <code>data-</code> attribute <code>data-role="fieldcontain"</code> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Add class <code>ui-field-contain</code> instead.</strong></p>
+		
 <pre><code><![CDATA[
-<div data-role="fieldcontain">
+<div class="ui-field-contain">
 	<label for="search-2">Search Input:</label>
 	<input type="search" name="search-2" id="search-2" value="" />
 </div>

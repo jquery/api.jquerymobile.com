@@ -42,10 +42,11 @@
 
 		<h3>Field containers</h3>
 
-		<p>Optionally wrap the selects in a container with the <code>data-role="fieldcontain"</code> attribute to help visually group it in a longer form.</p>
+		<p>Optionally wrap the selects in a container with class <code>ui-field-contain</code> to help visually group it in a longer form.</p>
+		<p><strong>Note: The <code>data-</code> attribute <code>data-role="fieldcontain"</code> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Add class <code>ui-field-contain</code> instead.</strong></p>
 
 <pre><code><![CDATA[
-<div data-role="fieldcontain">
+<div class="ui-field-contain">
 	<label for="select-choice-1" class="select">Shipping method:</label>
 	<select name="select-choice-1" id="select-choice-1">
 		<option value="standard">Standard: 7 day</option>
@@ -66,7 +67,7 @@
 		<p>The following example organizes the options into <code>optgroup</code> elements. Support for this feature in mobile selects is a bit spotty, but is improving.</p>
 
 <pre><code><![CDATA[
-<div data-role="fieldcontain">
+<div class="ui-field-contain">
 	<label for="select-choice-nc" class="select">Preferred delivery:</label>
 	<select name="select-choice-8" id="select-choice-nc">
     	<optgroup label="FedEx">
@@ -100,7 +101,7 @@
 		<p>Lastly, one needs to wrap the <code>fieldset</code> in a <code>div</code> with <code>data-role="controlgroup"</code> attribute, so it can be styled as a group.</p>
 
 <pre><code><![CDATA[
-<div data-role="fieldcontain">
+<div class="ui-field-contain">
 	<fieldset data-role="controlgroup">
 		<legend>Date of Birth:</legend>
 

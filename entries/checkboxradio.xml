@@ -32,10 +32,13 @@
 
 		<h3>Field containers &amp; Legends</h3>
 
+		<p>Optionally wrap the checkboxes in a container with class <code>ui-field-contain</code> to help visually group it in a longer form.</p>
+		<p><strong>Note: The <code>data-</code> attribute <code>data-role="fieldcontain"</code> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Add class <code>ui-field-contain</code> instead.</strong></p>
+
 		<p>Because checkboxes use the <code>label</code> element for the text displayed next to the checkbox form element, we recommend wrapping the checkbox in a <code>fieldset</code> element that has a <code>legend</code> which acts as the title for the question. Add the <code>data-role="controlgroup"</code> attribute to the <code>fieldset</code> so it can be styled in a parallel way as text inputs, selects or other form elements.</p>
 
 <pre><code><![CDATA[
-<div data-role="fieldcontain">
+<div class="ui-field-contain">
 	<fieldset data-role="controlgroup">
 		<legend>Agree to the terms:</legend>
 		<input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom">
@@ -50,7 +53,7 @@
 		<p>Typically, there are multiple checkboxes listed under a question title. To visually integrate multiple checkboxes into a grouped button set, the framework will automatically remove all margins between buttons and round only the top and bottom corners of the set if there is a <code>data-role="controlgroup"</code> attribute on the <code>fieldset</code>.</p>
 
 <pre><code><![CDATA[
-<div data-role="fieldcontain">
+<div class="ui-field-contain">
 	<fieldset data-role="controlgroup">
 		<legend>Choose as many snacks as you'd like:</legend>
 			<input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="custom">
@@ -75,7 +78,7 @@
 		<p>Checkboxes can also be used for grouped button sets where more than one button can be selected at once, such as the bold, italic and underline button group seen in word processors. To make a horizontal button set, add the <code>data-type="horizontal"</code> to the <code>fieldset</code>. </p>
 
 <pre><code><![CDATA[
-<div data-role="fieldcontain">
+<div class="ui-field-contain">
 	<fieldset data-role="controlgroup" data-type="horizontal">
 		<legend>Font styling:</legend>
 		<input type="checkbox" name="checkbox-6" id="checkbox-6" class="custom">
@@ -144,10 +147,11 @@
 
 		<h3>Field containers</h3>
 
-		<p>Optionally wrap the radiobuttons in a container with the <code>data-role="fieldcontain"</code> attribute to help visually group it in a longer form.</p>
+		<p>Optionally wrap the radio buttons in a container with class <code>ui-field-contain</code> to help visually group it in a longer form.</p>
+		<p><strong>Note: The <code>data-</code> attribute <code>data-role="fieldcontain"</code> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Add class <code>ui-field-contain</code> instead.</strong></p>
 
 <pre><code><![CDATA[
-<div data-role="fieldcontain">
+<div class="ui-field-contain">
 	<fieldset data-role="controlgroup">
 		<legend>Choose a pet:</legend>
 		<input type="radio" name="radio-choice-2" id="radio-choice-1" value="choice-1" checked="checked">
@@ -241,7 +245,7 @@
 		<h1>jQuery Mobile Example</h1>
 	</div>
 	<div data-role="content">
-		<div data-role="fieldcontain">
+		<div class="ui-field-contain">
 			<form>
 				<fieldset data-role="controlgroup">
 					<legend>Agree to the terms:</legend>
