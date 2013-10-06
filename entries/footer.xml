@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="footer" namespace="fn" type="widget" widgetnamespace="mobile">
 	<title>Footer Widget</title>
-	<desc>Creates a footer widget</desc>
+	<desc>See Toolbar Widget</desc>
 	<longdesc>
 		<p>As of jQuery Mobile 1.4.0 the functionality of the footer widget has been moved to the <a href="/toolbar/">toolbar widget</a>.</p>
   </longdesc>
