@@ -9,7 +9,7 @@
 		<p>To add a slider widget to your page, use a standard input with the <code>type="range"</code> attribute. The input's value is used to configure the starting position of the handle and the value is populated in the text input. Specify <code>min</code> and <code>max</code> attribute values to set the slider's range. If you want to constrain input to specific increments, add the <code>step</code> attribute. Set the <code>value</code> attribute to define the initial value. The framework will parse these attributes to configure the slider widget.</p>
 		<p>As you drag the slider's handle, the framework will update the native input's value (and vice-versa) so they are always in sync; this ensures that the value is submitted with the form.</p>
 		<p>Set the <code>for</code> attribute of the <code>label</code> to match the <code>id</code> of the <code>input</code> so they are semantically associated. It's possible to accessibly hide the label if it's not desired in the page layout, but we require that it is present in the markup for semantic and accessibility reasons.</p>
-		<p>The framework will find all <code>input</code> elements with a <code>type="range"</code> and automatically enhance them into a slider with an accompanying input without any need to apply a <code>data-role</code> attribute. To prevent the automatic enhancement of this input into a slider, add <code>data-role="none"</code> attribute to the input and wrap them in a <code>div</code> with the <code>data-role="fieldcontain"</code> attribute to group them. </p>
+		<p>The framework will find all <code>input</code> elements with a <code>type="range"</code> and automatically enhance them into a slider with an accompanying input without any need to apply a <code>data-role</code> attribute. To prevent the automatic enhancement of this input into a slider, add <code>data-role="none"</code> attribute to the input.</p>
 		<p>In this example, the acceptable range is 0-100.</p>
 
 <pre><code>
@@ -57,10 +57,11 @@
 
 		<h3>Field containers</h3>
 
-		<p>Optionally wrap the slider markup in a container with the <code>data-role="fieldcontain"</code> attribute to help visually group it in a longer form. In this example, the step attribute is omitted to allow any whole number value to be selected.</p>
+		<p>Optionally wrap the slider markup in a container with class <code>ui-field-contain</code> to help visually group it in a longer form. In this example, the step attribute is omitted to allow any whole number value to be selected.</p>
+		<p><strong>Note: The <code>data-</code> attribute <code>data-role="fieldcontain"</code> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Add class <code>ui-field-contain</code> instead.</strong></p>
 
 <pre><code>
-&lt;div data-role="fieldcontain"&gt;
+&lt;div class="ui-field-contain"&gt;
 	&lt;label for="slider-2"&gt;Input slider:&lt;/label&gt;
 	&lt;input type="range" name="slider-2" id="slider-2" value="25" min="0" max="100" /&gt;
 &lt;/div&gt;
@@ -84,7 +85,7 @@ $( "input" ).slider();
 		<p>To set the theme swatch for the slider, add a <code>data-theme</code> attribute to the <code>input</code> which will apply the theme to both the input, handle and track. The track swatch can be set separately by adding the <code>data-track-theme</code> attribute to apply the down state version of the selected button swatch.</p>
 
 <pre><code>
-&lt;div data-role="fieldcontain"&gt;
+&lt;div class="ui-field-contain"&gt;
 	&lt;label for="slider-3"&gt;Input slider:&lt;/label&gt;
 	&lt;input type="range" name="slider-3" id="slider-3" value="25" min="0" max="100" data-theme="b" data-track-theme="a" /&gt;
 &lt;/div&gt;
@@ -146,10 +147,11 @@ $( "input" ).slider();
 
 		<h3>Field containers</h3>
 
-		<p>Optionally wrap the switch markup in a container with the <code>data-role="fieldcontain"</code> attribute to help visually group it in a longer form. In this example, the step attribute is omitted to allow any whole number value to be selected.</p>
+		<p>Optionally wrap the switch markup in a container with class <code>ui-field-contain</code> to help visually group it in a longer form. In this example, the step attribute is omitted to allow any whole number value to be selected.</p>
+		<p><strong>Note: The <code>data-</code> attribute <code>data-role="fieldcontain"</code> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Add class <code>ui-field-contain</code> instead.</strong></p>
 
 <pre><code>
-&lt;div data-role="fieldcontain"&gt;
+&lt;div class="ui-field-contain"&gt;
 	&lt;label for="flip-2"&gt;Select slider:&lt;/label&gt;
 	&lt;select name="flip-2" id="flip-2" data-role="slider" data-mini="true"&gt;
 		&lt;option value="off"&gt;Off&lt;/option&gt;
@@ -166,7 +168,7 @@ $( "input" ).slider();
 		<p>Like all form elements, this widget will automatically inherit the theme from its parent container. To choose a specific theme color swatch, specify the <code>data-theme</code> attribute on the <code>select</code> and specify a swatch letter.</p>
 
 <pre><code>
-&lt;div data-role=&quot;fieldcontain&quot;&gt;
+&lt;div class=&quot;ui-field-contain&quot;&gt;
 	&lt;label for=&quot;flip-3&quot;&gt;Flip switch:&lt;/label&gt;
 	&lt;select name=&quot;flip-3&quot; id=&quot;flip-3&quot; data-role=&quot;slider&quot; data-theme=&quot;b&quot;&gt;
 		&lt;option value=&quot;no&quot;&gt;No&lt;/option&gt;
@@ -184,7 +186,7 @@ $( "input" ).slider();
 		<p>Here's an example of a flip switch with the swatch "a" applied to the track and swatch "c" applied to the handle:</p>
 
 <pre><code>
-&lt;div data-role="fieldcontain"&gt;
+&lt;div class="ui-field-contain"&gt;
 	&lt;label for="flip-5"&gt;Flip switch:&lt;/label&gt;
 	&lt;select name="flip-5" id="flip-5" data-role="slider" data-theme="a" data-track-theme="b"&gt;
 		&lt;option value="no"&gt;No&lt;/option&gt;
@@ -208,7 +210,7 @@ $( "input" ).slider();
 	<p>Like all form elements, this widget will automatically inherit the theme from its parent container. To choose a specific theme color swatch, specify the <code>data-theme</code> attribute on the select and specify a swatch letter.</p>
 
 <pre><code>
-&lt;div data-role="fieldcontain"&gt;
+&lt;div class="ui-field-contain"&gt;
 	&lt;label for="flip-3"&gt;Flip switch:&lt;/label&gt;
 	&lt;select name="flip-3" id="flip-3" data-role="slider" data-theme="a"&gt;
 		&lt;option value="no"&gt;No&lt;/option&gt;
@@ -222,7 +224,7 @@ $( "input" ).slider();
 		<p>Here's an example of a flip switch with the swatch "a" applied to the track and swatch "c" applied to the handle:</p>
 
 <pre><code>
-&lt;div data-role="fieldcontain"&gt;
+&lt;div class="ui-field-contain"&gt;
 	&lt;label for="flip-5"&gt;Flip switch:&lt;/label&gt;
 	&lt;select name="flip-5" id="flip-5" data-role="slider" data-theme="a" data-track-theme="b"&gt;
 		&lt;option value="no"&gt;No&lt;/option&gt;
