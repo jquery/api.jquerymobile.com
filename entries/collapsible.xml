@@ -100,7 +100,7 @@
 
 		<h2>Providing pre-rendered markup</h2>
 		<p>You can improve the load time of your page by providing the markup that the collapsible widget would normally create during its initialization.</p>
-		<p>The collapsible widget creates an anchor from the heading element and wraps the rest of the children of the outermost widget in a <code>div</code> that will serve as the container for the collapsible content.</p>
+		<p>The collapsible widget creates an anchor from the heading element and wraps the rest of the children of the outermost widget in a <code>div</code> that will serve as the container for the collapsible content. By providing this markup yourself, and by indicating that you have done so by setting the attribute <code>data-enhanced="true"</code>, you instruct the <placeholder name="name"/> widget to skip these DOM manipulations and to assume that the required DOM structure is already present.</p>
 		<p>When you provide such pre-rendered markup you must also set all the classes that the framework would normally set, and you must also set all data-attributes whose values differ from the default to indicate that the pre-rendered markup reflects the non-default value of the corresponding widget option.</p>
 		<p>In the example below, pre-rendered markup for a collapsible is provided. The attribute <code>data-collapsed-icon="arrow-r"</code> is explicitly specified, since the use of the<code>ui-icon-arrow-r</code> class on the anchor element indicates that the value of the "collapsedIcon" widget option is to be "arrow-r".</p>
 
