@@ -117,10 +117,8 @@ $.mobile.filterable.prototype.options.filterCallback = function( index, searchVa
 ]]></code></pre>
 		<iframe src="/resources/filterable/example3.html" style="width:100%;height:300px;border:0px"></iframe>
 
-		<h2>Providing pre-rendered markup</h2>
-		<p>You can improve the load time of your page by providing the markup that the button widget would normally create during its initialization.</p>
+		<xi:include href="../includes/pre-rendered-common.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<p>The <placeholder name="name"/> widget runs the filter on its children upon instantiation to ensure that the initial list of displayed children satisfies the initial value of the input source. By setting the attribute <code>data-enhanced="true"</code>, you instruct the <placeholder name="name"/> widget that no initial filtering is to be performed. This means that you must apply the class <code>ui-screen-hidden</code> to any children which must initially be hidden due to the initial value of the search input.</p>
-		<p>When you provide such pre-rendered markup you must also set all the classes that the framework would normally set, and you must also set all data-attributes whose values differ from the default to indicate that the pre-rendered markup reflects the non-default value of the corresponding widget option.</p>
 		<p><strong>Note:</strong> If the element whose children are to be filtered is enhanced by another widget as well, such as for example a <a href="/listview/">listview</a> or a <a href="/controlgroup/">controlgroup</a> then you are required to provide pre-rendered markup for the other widget as well, because the attribute <code>data-enhanced="true"</code> will influence the initialization behavior of the other widget as well.</p>
 		<p>In the example below, pre-rendered markup for a <placeholder name="name"/> is provided. The attribute <code>data-filter-reveal="true"</code> is explicitly specified, since the presence of the <code>ui-screen-hidden</code> class on all the children indicates that they are initially hidden. The controlgroup widget containing the children is also pre-rendered, because the <code>data-enhanced="true"</code> attribute applies to the <a href="/controlgroup/">controlgroup</a> widget as much as it does to the <placeholder name="name"/> widget.</p>
 <pre><code><![CDATA[
