@@ -164,7 +164,7 @@ $( ".mySearchInput" ).textinput();
 
 		<h2>Providing pre-rendered markup</h2>
 		<p>You can improve the load time of your page by providing the markup that the <placeholder name="name"/> widget would normally create during its initialization.</p>
-		<p>The <placeholder name="name"/> widget wraps <code>input</code>-based widgets in  <code>div</code> used for creating the style. <code>textarea</code> elements are not wrapped in such a <code>div</code>.</p>
+		<p>The <placeholder name="name"/> widget wraps <code>input</code>-based widgets in  <code>div</code> used for creating the style. <code>textarea</code> elements are not wrapped in such a <code>div</code>. By providing this markup yourself, and by indicating that you have done so by setting the attribute <code>data-enhanced="true"</code>, you instruct the <placeholder name="name"/> widget to skip these DOM manipulations and to assume that the required DOM structure is already present.</p>
 		<p>When you provide such pre-rendered markup you must also set all the classes that the framework would normally set, and you must also set all data-attributes whose values differ from the default to indicate that the pre-rendered markup reflects the non-default value of the corresponding widget option.</p>
 		<p>In the example below, we add the attribute <code>data-corners="false"</code> to the input, because the class <code>ui-corner-all</code> is absent from the wrapper, indicating that the value of the "corners" option should be false.</p>
 <pre><code><![CDATA[
