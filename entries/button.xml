@@ -36,10 +36,8 @@ $( "[type='submit']" ).button();
 
 		<iframe src="/resources/button/example7.html" style="width:100%;height:90px;border:0px"></iframe>
 
-		<h2>Providing pre-rendered markup</h2>
-		<p>You can improve the load time for your page by providing the markup that the <placeholder name="name"/> widget would normally create during its initialization.</p>
-		<p>The <placeholder name="name"/> widget adds a wrapper <code>div</code> around the <code>input</code>. By providing such a wrapper yourself, and by indicating that you have done so by setting the attribute <code>data-enhanced="true"</code>, you instruct the <placeholder name="name"/> widget to skip the generation of the wrapper div and to assume that the parent of the <code>input</code> is the wrapper div.</p>
-		<p>When you provide such pre-rendered markup you must also set all the classes that the framework would normally set, and you must also set all data-attributes whose values differ from the default to indicate that the pre-rendered markup reflects the non-default value of the corresponding widget option.</p>
+		<xi:include href="../includes/pre-rendered-common.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<p>The <placeholder name="name"/> widget adds a wrapper <code>div</code> around the <code>input</code>.</p>
 		<p>In the example below, pre-rendered markup for a <placeholder name="name"/> is provided. The attribute <code>data-corners="false"</code> is explicitly specified, since the absence of the <code>ui-corner-all</code> class on the wrapper element indicates that the "corners" widget option is to be false.</p>
 
 <pre><code>

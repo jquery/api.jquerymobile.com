@@ -376,10 +376,8 @@ $( document ).on( "pageinit", function() {
 });
 </code></pre>
 
-		<h2>Providing pre-rendered markup</h2>
-		<p>You can improve the load time of your page by providing the markup that the <placeholder name="name"/> widget would normally create during its initialization.</p>
-		<p>The <placeholder name="name"/> widget moves the element on which it is instantiated such that it becomes the last child element of a page <code>div</code> or, if the element is not inside a page, it will become the last child element of the <code>body</code>. It then wraps the element in a container <code>div</code>, and prepends a newly created element that serves as the modal overlay screen to the parent of the container. By providing this markup yourself, and by indicating that you have done so by setting the attribute <code>data-enhanced="true"</code>, you instruct the <placeholder name="name"/> widget to skip these DOM manipulations and to assume that the required DOM structure is already present.</p>
-		<p>When you provide such pre-rendered markup you must also set all the classes that the framework would normally set, and you must also set all data-attributes whose values differ from the default to indicate that the pre-rendered markup reflects the non-default value of the corresponding widget option.</p>
+		<xi:include href="../includes/pre-rendered-common.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<p>The <placeholder name="name"/> widget moves the element on which it is instantiated such that it becomes the last child element of a page <code>div</code> or, if the element is not inside a page, it will become the last child element of the <code>body</code>. It then wraps the element in a container <code>div</code>, and prepends a newly created element that serves as the modal overlay screen to the parent of the container.</p>
 		<p>The example below includes an entire jQuery Mobile page rather than just the popup. This helps illustrate where you must place the markup for the pre-rendered popup widget in relation to the jQuery Mobile page on which it is to appears. In the example, the popup has the attribute <code>data-overlay-theme="b"</code> to reflect the fact that the modal overlay screen has an associated theme.</p>
 
 <pre><code>
