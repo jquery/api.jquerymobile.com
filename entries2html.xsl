@@ -9,9 +9,9 @@
 	&lt;meta charset="utf-8"&gt;
 	&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
 	&lt;title&gt;<xsl:value-of select="//entry/@name"/> demo&lt;/title&gt;
-	&lt;link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0-alpha.2/jquery.mobile-1.4.0-alpha.2.min.css"&gt;
-	&lt;script src="http://code.jquery.com/jquery-1.9.1.min.js"&gt;&lt;/script&gt;
-	&lt;script src="http://code.jquery.com/mobile/1.4.0-alpha.2/jquery.mobile-1.4.0-alpha.2.min.js"&gt;&lt;/script&gt;<xsl:if test="css">
+	&lt;link rel="stylesheet" href="http://code.jquery.com/mobile/git/jquery.mobile-git.min.css"&gt;
+	&lt;script src="http://code.jquery.com/jquery-1.10.2.min.js"&gt;&lt;/script&gt;
+	&lt;script src="http://code.jquery.com/mobile/git/jquery.mobile-git.min.js"&gt;&lt;/script&gt;<xsl:if test="css">
 	&lt;style&gt;<xsl:value-of select="css/text()"/>	&lt;/style&gt;</xsl:if>
 &lt;/head&gt;
 &lt;body&gt;
