@@ -31,7 +31,7 @@
 		<p>The table works by hiding and showing columns based on two inputs: available screen width or by the user checking and unchecking which columns to display in a column picker popup. Add <code>data-priority</code> attributes to each of the table headers of columns you want to responsively display and assign a priority (1 = highest, 6 = lowest). Any table header given a priority will be available in the column picker menu. </p>
 		<p>To make a column <em>persistent</em> so it's not available for hiding, omit the <code>data-priority</code> attribute. This will make the column visible at all widths and won't be available in the column chooser menu.</p>
 
-<pre><code>&lt;th&gt;I&#x27;m am critical and can&#x27;t be removed&lt;/th&gt;
+<pre><code>&lt;th&gt;I&#x27;m critical and can&#x27;t be removed&lt;/th&gt;
 &lt;th data-priority=&quot;1&quot;&gt;I&#x27;m very important&lt;/th&gt;
 &lt;th data-priority=&quot;3&quot;&gt;I&#x27;m somewhat&lt;/th&gt;
 &lt;th data-priority=&quot;5&quot;&gt;I&#x27;m less important&lt;/th&gt;
@@ -139,6 +139,51 @@
 
 		<p>It's fairly common to need to logically group multiple columns together under a heading group for financial or scientific data. The framework can support the most simple version of this by allowing for two rows of table headers (<code>TH</code>), with the first row containing simple <code>colspan</code> attributes to group the columns below. In this configuration, the framework will parse the first row only for the priority and expose these heading groups as the options in the column chooser popup. In this configuration, the second heading will not be exposed as columns that can be hidden or shown independently of the groupings in the chooser. </p>
 
+		<xi:include href="../includes/pre-rendered-common.xml" xmlns:xi="http://www.w3.org/2003/XInclude" />
+		<p>The columntoggle table places an anchor before the table that invokes a popup listing the columns available for showing/hiding. The ID of the popup and thus the href of the anchor should be the ID of the table suffixed by the string <code>-popup</code>. You may separately pre-enhance the popup widget, or you may allow autoinitialization to enhance it.</p>
+		<p>The popup widget must contain a single controlgroup widget which in turn contains all the checkboxes representing the columns of the table.</p>
+		<p>In the example below the parameter <code>data-column-btn-theme="b"</code> is added to the table explicitly to indicate that the theme applied to the "Columns..." button is not the default (<code>null</code>).</p>
+
+<pre><code>
+&lt;div data-role=&quot;popup&quot; id=&quot;table-column-toggle-popup&quot; class=&quot;ui-table-columntoggle-popup&quot;&gt;
+	&lt;fieldset data-role=&quot;controlgroup&quot;&gt;
+		&lt;label&gt;Rank&lt;input type=&quot;checkbox&quot; checked data-cacheval=&quot;false&quot; locked=&quot;true&quot;&gt;&lt;/input&gt;&lt;/label&gt;
+		&lt;label&gt;Year&lt;input type=&quot;checkbox&quot; checked data-cacheval=&quot;false&quot; locked=&quot;true&quot;&gt;&lt;/input&gt;&lt;/label&gt;
+		&lt;label&gt;Rotten Tomato Rating&lt;input type=&quot;checkbox&quot; checked data-cacheval=&quot;false&quot; locked=&quot;true&quot;&gt;&lt;/input&gt;&lt;/label&gt;
+		&lt;label&gt;Reviews&lt;input type=&quot;checkbox&quot; checked data-cacheval=&quot;false&quot; locked=&quot;true&quot;&gt;&lt;/input&gt;&lt;/label&gt;
+	&lt;/fieldset&gt;
+&lt;/div&gt;
+&lt;a href=&quot;#table-column-toggle-popup&quot; class=&quot;ui-table-columntoggle-btn ui-btn ui-btn-b ui-corner-all ui-shadow ui-mini&quot; data-rel=&quot;popup&quot;&gt;Columns...&lt;/a&gt;
+&lt;table data-role=&quot;table&quot; id=&quot;table-column-toggle&quot; data-mode=&quot;columntoggle&quot; data-enhanced=&quot;true&quot; class=&quot;ui-table ui-table-columntoggle&quot; data-column-btn-theme=&quot;b&quot;&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th data-priority=&quot;2&quot; data-colstart=&quot;1&quot; class=&quot;ui-table-priority-2 ui-table-cell-visible&quot;&gt;Rank&lt;/th&gt;
+			&lt;th data-colstart=&quot;2&quot;&gt;Movie Title&lt;/th&gt;
+			&lt;th data-priority=&quot;3&quot; data-colstart=&quot;3&quot; class=&quot;ui-table-priority-3 ui-table-cell-visible&quot;&gt;Year&lt;/th&gt;
+			&lt;th data-priority=&quot;1&quot; data-colstart=&quot;4&quot; class=&quot;ui-table-priority-1 ui-table-cell-visible&quot;&gt;&lt;abbr title=&quot;Rotten Tomato Rating&quot;&gt;Rating&lt;/abbr&gt;&lt;/th&gt;
+			&lt;th data-priority=&quot;5&quot; data-colstart=&quot;5&quot; class=&quot;ui-table-priority-5 ui-table-cell-visible&quot;&gt;Reviews&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;ui-table-priority-2 ui-table-cell-visible&quot;&gt;1&lt;/th&gt;
+			&lt;td&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Citizen_Kane&quot; data-rel=&quot;external&quot;&gt;Citizen Kane&lt;/a&gt;&lt;/td&gt;
+			&lt;td class=&quot;ui-table-priority-3 ui-table-cell-visible&quot;&gt;1941&lt;/td&gt;
+			&lt;td class=&quot;ui-table-priority-1 ui-table-cell-visible&quot;&gt;100%&lt;/td&gt;
+			&lt;td class=&quot;ui-table-priority-5 ui-table-cell-visible&quot;&gt;74&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;ui-table-priority-2 ui-table-cell-visible&quot;&gt;2&lt;/th&gt;
+			&lt;td&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Casablanca_(film)&quot; data-rel=&quot;external&quot;&gt;Casablanca&lt;/a&gt;&lt;/td&gt;
+			&lt;td class=&quot;ui-table-priority-3 ui-table-cell-visible&quot;&gt;1942&lt;/td&gt;
+			&lt;td class=&quot;ui-table-priority-1 ui-table-cell-visible&quot;&gt;97%&lt;/td&gt;
+			&lt;td class=&quot;ui-table-priority-5 ui-table-cell-visible&quot;&gt;64&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+			<iframe src="../resources/table-columntoggle/example1.html" style="width: 100%; height: 240px; border: 0px;"></iframe>
+
   	</longdesc>
 	<added>1.3</added>
 	<options>
@@ -181,6 +226,7 @@
 			</desc>
 			<type name="String" />
 		</option>
+		<xi:include href="../includes/widget-option-enhanced.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</options>
 	<events>
 		<event name="create">
