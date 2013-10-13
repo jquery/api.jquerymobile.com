@@ -20,6 +20,9 @@ core_version="$1"
 jqm_version="$2"
 
 if test "x$core_version" = "x" -o "x$jqm_version" = "x"; then
+	echo "Modifies entries2html.xsl and the examples in resources/ with the given version of core and mobile."
+	echo "Commit the result if you wish to make the change permanent."
+	echo ""
 	echo "Usage: $(basename $0) <core_version> <jqm_version>"
 	exit 1
 fi
