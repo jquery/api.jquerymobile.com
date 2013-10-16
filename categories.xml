@@ -12,6 +12,11 @@
 	<category name="Methods" slug="methods">
 		<desc><![CDATA[
 			<p>jQuery Mobile exposes several methods and properties on the $.mobile object for use in your applications.</p>]]></desc>
+		<category name="Path" slug="path">
+			<desc><![CDATA[
+				<p>A collection of methods for dealing with paths.</p>
+			]]></desc>
+		</category>
 	</category>
 	<category name="CSS Framework" slug="css-framework">
 		<desc><![CDATA[
