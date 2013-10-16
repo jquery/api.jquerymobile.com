@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<entry type="method" name="jQuery.mobile.path.getDocumentUrl">
+	<title>jQuery.mobile.path.getDocumentUrl()</title>
+	<desc>Utility method for retrieving the URL of the original document.</desc>
+	<signature>
+		<argument name="asParsedObject" type="Boolean" default="false">
+			<desc>
+				The function normally returns the original document's URL as a string. However, if you specify a truthy value for this parameter, the original document's URL will be returned in a hash as a parsed URL.
+			</desc>
+		</argument>
+	</signature>
+	<category slug="methods/path"/>
+</entry>
