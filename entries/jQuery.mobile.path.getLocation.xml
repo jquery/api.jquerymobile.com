@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<entry type="method" name="jQuery.mobile.path.getLocation" return="String">
+	<title>jQuery.mobile.path.getLocation()</title>
+	<desc>Utility method for safely retrieving the current location.</desc>
+	<longdesc>
+		<p>The browser's <code>location.href</code> may contain the username/password information. <code>getLocation()</code> always returns <code>location.href</code> stripped of the username/password information if present, ensuring that your code is not vulnerable to XSS attacks.</p>
+	</longdesc>
+	<signature>
+	</signature>
+	<category slug="methods/path"/>
+</entry>

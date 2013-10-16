@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<entry type="method" name="jQuery.mobile.path.parseLocation">
+	<title>jQuery.mobile.path.parseLocation()</title>
+	<desc>Utility method for retrieving the current location as a parsed object.</desc>
+	<signature>
+	</signature>
+	<longdesc>
+		<p>This method gets the current location via <a href="/jQuery.mobile.path.getLocation"><code>getLocation()</code></a> and returns the result of parsing this value via <a href="/jQuery.mobile.path.parseUrl"><code>parseUrl()</code></a>.</p>
+	</longdesc>
+	<category slug="methods/path"/>
+</entry>
