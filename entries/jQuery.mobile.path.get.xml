@@ -46,5 +46,5 @@ $(document).ready(function() {
 	<longdesc>
 		<p>Utility method for determining the directory portion of an URL. If the URL has no trailing slash, the last component of the URL is considered to be a file. This function returns the directory portion of a given URL.</p>
 	</longdesc>
-	<category slug="methods"/>
+	<category slug="methods/path"/>
 </entry>

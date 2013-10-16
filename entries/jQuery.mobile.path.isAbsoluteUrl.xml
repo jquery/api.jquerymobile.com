@@ -43,5 +43,5 @@ $(document).ready(function() {
 	<longdesc>
 		<p>Utility method for determining if a URL is absolute. This function returns a boolean true if the URL is absolute, false if not.</p>
 	</longdesc>
-	<category slug="methods"/>
+	<category slug="methods/path"/>
 </entry>

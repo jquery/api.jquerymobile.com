@@ -48,5 +48,5 @@ $(document).ready(function() {
 	<longdesc>
 		<p>This function returns a string that is an absolute version of the relative URL passed in.</p>
 	</longdesc>
-	<category slug="methods"/>
+	<category slug="methods/path"/>
 </entry>
