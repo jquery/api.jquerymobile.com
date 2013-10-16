@@ -59,10 +59,10 @@ $( document ).on( "mobileinit", function() {
 
 <dl>
 	<dt id="activeBtnClass"><code>activeBtnClass</code> <em>string</em>, default: "ui-btn-active"</dt>
-	<dd>The CSS class used for "active" button state.</dd>
+	<dd>The CSS class used for "active" button state.<div style="padding: 0.5em 1em; margin: 1em; background: #FFF3A5;"><strong>Deprecated</strong> in 1.4 and will be removed in 1.5. The class "ui-btn-active" will continue to be applied to elements as before.</div></dd>
 	<br />
 	<dt id="activePageClass"><code>activePageClass</code> <em>string</em>, default: "ui-page-active"</dt>
-	<dd>The CSS class used for the page currently in view or in a transition.</dd>
+	<dd>The CSS class used for the page currently in view or in a transition.<div style="padding: 0.5em 1em; margin: 1em; background: #FFF3A5;"><strong>Deprecated</strong> in 1.4 and will be removed in 1.5. The class "ui-page-active" will continue to be applied to elements as before.</div></dd>
 	<br />
 	<dt id="ajaxEnabled"><code>ajaxEnabled</code> <em>boolean</em>, default: true</dt>
 	<dd>jQuery Mobile will automatically handle link clicks and form submissions through Ajax, when possible. If false, URL hash listening will be disabled as well, and URLs will load as ordinary HTTP requests.</dd>
@@ -78,13 +78,26 @@ $( document ).on( "mobileinit", function() {
 	<div class="warning"><strong>Deprecated</strong> in 1.4 - use <code>$.mobile.hoverDelay</code> instead.</dd>
 	<br />
 	<dt id="defaultDialogTransition"><code>defaultDialogTransition</code> <em>string</em>, default: 'pop'</dt>
-	<dd>Set the default transition for dialog changes that use Ajax. Set to 'none' for no transitions.</dd>
+	<dd>Set the default transition for dialog changes that use AJAX. Set to 'none' for no transitions.
+	<div class="warning"><strong>Deprecated</strong> in 1.4.</div>
+		<p>When using pages styled as dialogs (<code>data-role="page" data-dialog="true"</code>), if you wish for them to have a different transition than regular pages, you must specify the transition on the link that opens them by adding the attribute <code>data-transition="pop"</code> to the link. "pop" is just an example. You may specify any transition you wish, such as "slide", "flip", or "none".</p>
+		<p>Similarly, when calling the <a href="/pagecontainer/">pagecontainer</a>'s <code>change()</code> method, you must also specify the transition explicitly, if you wish it to be different from the <code>$.mobile.defaultPageTransition</code>:
+		<pre><code>
+$( ":mobile-pagecontainer" )
+	.pagecontainer( "change", "dialog.html", { transition: "pop" } );
+</code></pre>
+		</p>
+	</dd>
+$.mobile.defaultDialogTransition is deprecated.
 	<br />
 	<dt id="defaultPageTransition"><code>defaultPageTransition</code> <em>string</em>, default: 'fade'</dt>
 	<dd>Set the default transition for page changes that use Ajax. Note: default changed from 'slide' to 'fade' in 1.1. Set to 'none' for no transitions.</dd>
 	<br />
 	<dt id="dynamicBaseEnabled"><code>dynamicBaseEnabled</code> <em>boolean</em>, default: true</dt>
 	<dd>When this property is set to <code>false</code> the base tag value in browsers that support a dynamic base tag and URL prefixes in browsers that don't <em>won't</em> be updated to reflect where the page was loaded from. This means that resource references that are relative to the page on which they are defined may break. This option is available for web frameworks that operate under a universal base tag value where all links and assets are relative to a signal base.</dd>
+	<br />
+	<dt id="focusClass"><code>focusClass</code> <em>string</em>, default: "ui-focus"</dt>
+	<dd>The CSS class used for "active" button state.<div style="padding: 0.5em 1em; margin: 1em; background: #FFF3A5;"><strong>Deprecated</strong> in 1.4 and will be removed in 1.5. The class "ui-focus" will continue to be applied to elements as before.</div></dd>
 	<br />
 	<dt id="getMaxScrollForTransition"><code>getMaxScrollForTransition</code> <em>integer</em>, default: 3</dt>
 	<dd>Set a scroll position breakpoint for transitions. If the scroll position is greater than the window height multiplied by the value that has been set, transition "none" will be used.</dd>
@@ -104,8 +117,8 @@ $( document ).on( "mobileinit", function() {
 	<dt id="maxTransitionWidth"><code>maxTransitionWidth</code> <em>integer, boolean</em>, default: false</dt>
 	<dd>Set a max width for transitions. The option accepts any number representing a pixel width and its default value <code>false</code>. If a number value is set, transition "none" will be used if the window is wider than the specified value.</dd>
     <br />
-	<dt id="minScrollBack"><code>minScrollBack</code> <em>integer</em>, default: 250</dt>
-	<dd>Minimum scroll distance that will be remembered when returning to a page.</dd>
+	<dt id="minScrollBack"><code>minScrollBack</code> <em>integer</em>, default: 0</dt>
+	<dd>Minimum scroll distance that will be remembered when returning to a page.<div class="warning"><strong>Deprecated</strong> in 1.4 and will be removed in 1.5. Any and all scrolling will be remembered. This matches native behavior. The old default value of 250 has changed to 0 during the deprecation period.</div></dd>
 	<br />
 	<dt id="ns"><code>ns</code> <em>string</em>, default: ""</dt>
 	<dd>The namespace used in data attributes (e.g., data-role). Can be set to any string, including a blank string which is the default. When using, it's clearest if you include a trailing dash, such as "mynamespace-" which maps to <code>data-mynamespace-foo="..."</code>.
