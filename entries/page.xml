@@ -8,6 +8,8 @@
 
 			<p>The goal of this model is to allow developers to create websites using best practices &#8212; where ordinary links will "just work" without any special configuration &#8212; while creating a rich, native-like experience that can't be achieved with standard HTTP requests.</p>
 
+			<p>The page widget will auto-enhance its content upon creation. This means that it will instantiate widgets on its child elements by invoking <a href="/enhanceWithin/"><code>.enhanceWithin()</code></a> on itself.</p>
+
 	</longdesc>
 	<added>1.0</added>
 	<options>
@@ -25,7 +27,7 @@
 				<p>The value of this option is a selector that will be used along with <code>keepNativeDefault</code> to prevent elements matching from being enhanced.</p>
 				<p>This option is also exposed as a data attribute: <code>data-keep-native=".do-not-enhance</code>.</p>
 			</desc>
-			<type name="String" />s
+			<type name="String" />
 		</option>
 		<option name="keepNativeDefault" default=":jqmData(role='none'), :jqmData(role='nojs')" example-value='".do-not-enhance"'>
 			<desc>
