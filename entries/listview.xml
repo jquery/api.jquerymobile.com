@@ -5,7 +5,7 @@
 	<desc>Creates a listview widget</desc>
 	<longdesc>
 		<h3>Basic linked lists</h3>
-			<p>A listview is coded as a simple unordered list containing linked list items with a <code>data-role="listview"</code> attribute. jQuery Mobile will apply all the necessary styles to transform the list into a mobile-friendly listview with right arrow indicator that fills the full width of the browser window. When you tap on the list item, the framework will trigger a click on the first link inside the list item, issue an Ajax request for the URL in the link, create the new page in the DOM, then kick off a page transition. View the <a href="../api/data-attributes.html">data- attribute reference</a> to see all the possible attributes you can add to listviews.</p>
+			<p>A listview is coded as a simple unordered list containing linked list items with a <code>data-role="listview"</code> attribute. jQuery Mobile will apply all the necessary styles to transform the list into a mobile-friendly listview with right arrow indicator that fills the full width of the browser window. When you tap on the list item, the framework will trigger a click on the first link inside the list item, issue an Ajax request for the URL in the link, create the new page in the DOM, then kick off a page transition. View the <a href="/data-attribute/">data- attribute reference</a> to see all the possible attributes you can add to listviews.</p>
 			<p>Here is the HTML markup for a basic linked list.</p>
 
 <pre><code><![CDATA[
@@ -26,13 +26,13 @@
 			<p><iframe src="/resources/listview/example3.html" style="width:100%;height:940px;border:0px"></iframe></p>
 
 			<h3>Read-only lists</h3>
-			<p>Listviews can also be used to display a non-interactive list of items, usually as an inset list. This list is built from an unordered or ordered list that don't have linked list items. The framework styles the list items as buttons like the other list types (see <a href="../lists/lists-themes.html">theming lists</a>), but without a gradient on the background.</p>
+			<p>Listviews can also be used to display a non-interactive list of items, usually as an inset list. This list is built from an unordered or ordered list that don't have linked list items. The framework styles static list items identically to list items containing links, but static items receive the body background color (<code>ui-body-a</code>) rather than the button background color (<code>ui-btn-a</code>).</p>
 
 			<p><iframe src="/resources/listview/example4.html" style="width:100%;height:2240px;border:0px"></iframe></p>
 
 			<h3>Split button lists</h3>
 			<p>In cases where there is more than one possible action per list item, a split button can be used to offer two independently clickable items - the list item and a small arrow icon in the far right. To make a split list item, simply add a second link inside the <code>li</code> and the framework will add a vertical divider line, style the link as an icon-only arrow button, and set the <code>title</code> attribute of the link to the text of the link for accessibility.</p>
-			<p>You can set the icon for the right split icon by specifying a <code>data-split-icon</code> attribute on the listview with an <a href="icons">icon name</a> you want. The default icon is "arrow-r" but can be configured with the <code>splitIcon</code> <a href="#option-splitIcon">listview option</a>. By adding a <code>data-icon</code> attribute to the list item, you can set individual icons for each split. The theme swatch color of the split button defaults to "b" (blue in the default theme) but can be set by specifying a swatch letter with the <code>data-split-theme</code> attribute at the listview level or for individual splits with the <code>data-theme</code> attribute at the link level.</p>
+			<p>You can set the icon for the right split icon by specifying a <code>data-split-icon</code> attribute on the listview with an <a href="/classes/#icons">icon name</a> you want. The default icon is "arrow-r" but can be configured with the <code>splitIcon</code> <a href="#option-splitIcon">listview option</a>. By adding a <code>data-icon</code> attribute to the list item, you can set individual icons for each split. The theme swatch color of the split button defaults to "b" (blue in the default theme) but can be set by specifying a swatch letter with the <code>data-split-theme</code> attribute at the listview level or for individual splits with the <code>data-theme</code> attribute at the link level.</p>
 
 			<p><iframe src="/resources/listview/example5.html" style="width:100%;height:950px;border:0px"></iframe></p>
 
@@ -67,9 +67,32 @@ $( "#mylistview" ).listview({
 
 			<p><iframe src="/resources/listview/example7.html" style="width:100%;height:1410px;border:0px"></iframe></p>
 
+			<h3>Hiding dividers</h3>
+			<p>The listview hidedividers extension provides the option <a href="#option-hideDividers"><code>hideDividers</code></a>. When set to true, and you call <code>.listview( "refresh" )</code> after hiding a list item by adding the class <code>ui-screen-hidden</code> to it, the extension will hide those dividers that are followed immediately by another divider.</p>
+			<p><iframe src="/resources/listview/example17.html" style="width:100%;height:640px;border:0px"></iframe></p>
+
 			<h3>Search filter</h3>
 			<p>As of jQuery Mobile 1.4.0 this functionality has been transferred to the <a href="/filterable/">filterable</a> widget, which provides a more generic solution.</p>
 			<p><strong>Note:</strong>Features such as automatic text input generation and special handling of listview dividers are deprecated as of 1.4.0. The documentation for <a href="/filterable/">filterable</a> describes the migration path for listviews.</p>
+
+			<h3>Filter reveal</h3>
+
+			<p>The filter reveal feature makes is easy to build a simple autocomplete with local data. When a filterable list has the <code>data-filter-reveal="true"</code> attribute, it will auto-hide all the list items when the search field is blank. The <code>data-filter-placeholder</code> attribute can be added to specify the placeholder text for the filter. If you need to search against a long list of values, we provide a way to create a filter with a remote data source.</p>
+
+			<p><iframe src="/resources/listview/example15.html" style="width:100%;height:240px;border:0px"></iframe></p>
+
+			<h3>Remote autocomplete with listview filter</h3>
+
+			<p>To use the listview filter as an autocomplete that taps into remote data sources, you can use the <code>listviewbeforefilter</code> event to dynamically populate a listview as a user types a search query. This is useful when you have a very large data set like cities, zip codes, or products that can't be loaded up-front locally. Use the view source button to see the JavaScript that powers this demo.</p>
+
+			<p>If you have a small list of items, you can use the listview filter reveal option to make an autocomplete with local listview data.</p>
+
+			<p><iframe src="/resources/listview/example16.html" style="width:100%;height:1040px;border:0px"></iframe></p>
+
+
+			<h3>Cities worldwide</h3>
+
+			<p>After you enter <strong>at least three characters</strong> the autocomplete function will show all possible matches.</p>
 
 			<h3>Text formatting &amp; counts</h3>
 			<p>The framework includes text formatting conventions for common list patterns like header/descriptions, secondary information and counts through semantic HTML markup.</p>
@@ -94,23 +117,6 @@ $( "#mylistview" ).listview({
 
 			<p><iframe src="/resources/listview/example14.html" style="width:100%;height:2240px;border:0px"></iframe></p>
 
-			<h3>Filter reveal</h3>
-
-			<p>The filter reveal feature makes is easy to build a simple autocomplete with local data. When a filterable list has the <code>data-filter-reveal="true"</code> attribute, it will auto-hide all the list items when the search field is blank. The <code>data-filter-placeholder</code> attribute can be added to specify the placeholder text for the filter. If you need to search against a long list of values, we provide a way to create a filter with a remote data source.</p>
-
-			<p><iframe src="/resources/listview/example15.html" style="width:100%;height:240px;border:0px"></iframe></p>
-
-			<h3>Remote autocomplete with listview filter</h3>
-
-			<p>To use the listview filter as an autocomplete that taps into remote data sources, you can use the <code>listviewbeforefilter</code> event to dynamically populate a listview as a user types a search query. This is useful when you have a very large data set like cities, zip codes, or products that can't be loaded up-front locally. Use the view source button to see the JavaScript that powers this demo.</p>
-
-			<p>If you have a small list of items, you can use the listview filter reveal option to make an autocomplete with local listview data.</p>
-
-			<p><iframe src="/resources/listview/example16.html" style="width:100%;height:1040px;border:0px"></iframe></p>
-
-			<h3>Cities worldwide</h3>
-			<p>After you enter <strong>at least three characters</strong> the autocomplete function will show all possible matches.</p>
-
 			<h3>Calling the listview plugin</h3>
 			<p>You can directly call the listview plugin on any selector, just like any jQuery plugin:</p>
 <pre><code><![CDATA[
@@ -129,6 +135,43 @@ $( "#mylist" ).listview( "refresh" );
 	</longdesc>
 	<added>1.0</added>
 	<options>
+		<option name="autodividers" default="false" example="true" type="Boolean">
+			<desc>This option is provided by the <code>listview.autodividers</code> extension.
+				<p>When set to true, dividers are automatically created for the listview items.</p>
+				<p>The function stored in the value of the <a href="#option-autodividersSelector">autodividersSelector</a> option governs the text displayed on the dividers.</p>
+				<p>This option is also exposed as a data-attribute: <code>data-autodividers="true"</code>.</p>
+			</desc>
+		</option>
+		<option name="autodividersSelector" default="n/a" type="Function">
+			<desc>This option is provided by the <code>listview.autodividers</code> extension.
+				<p>The value of this option is a function that returns a string. It receives a jQuery collection object containing an element. It computes the returned string from the element. The function is called for each list item in sequence, and a divider is created whenever the function returns a value for a list item that is different from the value it returned for the previous list item.</p>
+				<p>The function may return <code>null</code> for a given list item. In that case, no new divider is created even if the value returned for the previous list item was something other than <code>null</code>.</p>
+				<p>The default value of this option is a function that returns the capitalized first letter of the list item text:</p>
+<pre><code><![CDATA[
+function defaultAutodividersSelector( elt ) {
+	// look for the text in the given element
+	var text = $.trim( elt.text() ) || null;
+
+	if ( !text ) {
+		return null;
+	}
+
+	// create the text for the divider (first uppercased letter)
+	text = text.slice( 0, 1 ).toUpperCase();
+
+	return text;
+}
+]]></code></pre>
+			</desc>
+		</option>
+		<option name="countTheme" type="String" default="null, inherited from parent" example-value='"b"' deprecated="1.4.0">
+			<desc>
+				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0.</strong>
+				<p>Sets the color scheme (swatch) for the list item count bubble. It accepts a single letter from a-z that maps to the swatches included in your theme.</p>
+				<p>Possible values: swatch letter (a-z).</p>
+				<p>This option is also exposed as a data attribute: <code>data-count-theme="b"</code>.</p>
+			</desc>
+		</option>
 		<xi:include href="../includes/widget-option-defaults.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="dividerTheme" default='null, inherited from parent' example-value='"b"'>
@@ -149,13 +192,14 @@ $( "#mylist" ).listview( "refresh" );
 			<desc>
 				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0. It is now implemented in the <a href="/filterable/#option-filterCallback">filterable</a> widget.</strong>
 				<p>The function to determine which rows to hide when the search filter textbox changes. The function accepts two arguments -- the text of the list item (or data-filtertext value if present), and the search string. Return true to hide the item, false to leave it visible.</p>
-<pre><code>
+<pre><code><![CDATA[
 $( document ).on( "mobileinit", function() {
 	$.mobile.listview.prototype.options.filterCallback = function( text, searchValue ) {
 		// only show items that *begin* with the search string
 		return text.toLowerCase().substring( 0, searchValue.length ) !== searchValue;
 	};
-});</code></pre>
+});
+]]></code></pre>
 			</desc>
 			<type name="Function" />
 		</option>
@@ -182,6 +226,12 @@ $( document ).on( "mobileinit", function() {
 				<p>This option is also exposed as a data attribute: <code>data-filter-theme="a"</code>.</p>
 			</desc>
 			<type name="String" />
+		</option>
+		<option name="hideDividers" default="false" example-value="true">
+			<desc>This option is provided by the <code>listview.hidedividers</code> extension.
+				<p>When set to <code>true</code> and all list items residing under a given divider become hidden, then the divider itself is hidden.</p>
+				<p>This option is also exposed as a data-attribute: <code>data-hide-dividers="true"</code>.</p>
+			</desc>
 		</option>
 		<option name="icon" default='"carat-r"' example-value='"star"'>
 			<desc>Applies an icon from the icon set to all linked list buttons.
