@@ -297,7 +297,7 @@ $( "#mypanel" ).trigger( "updatelayout" );
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="theme" default='"a"' example-value='"b"'>
+		<option name="theme" default='null, inherited from parent' example-value='"b"'>
 			<desc>
 				Sets the color scheme (swatch) for the <placeholder name="name" /> widget. It accepts a single letter from a-z that maps to the swatches included in your theme.
 				<p>Possible values: swatch letter (a-z).</p>
