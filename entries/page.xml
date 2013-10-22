@@ -60,8 +60,11 @@
 		</event>
 	</events>
 	<methods>
-		<method name="keepNativeSelector">
-			<desc>Returns the selector used to filter elements which are not to be enhanced.</desc>
+		<method name="keepNativeSelector" return="Selector" deprecated="1.4.0">
+			<desc>
+				<strong>This method is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. The new <a href="/global-config/#keepNative">keepNative</a> option replaces it.</strong>
+				<p>Returns the selector used to filter elements which are not to be enhanced.</p>
+			</desc>
 		</method>
 		<method name="removeContainerBackground">
 			<desc>Removes the background swatch from the page widget's container (usually the body).</desc>

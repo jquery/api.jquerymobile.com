@@ -111,6 +111,9 @@ $.mobile.defaultDialogTransition is deprecated.
 	<dt id="ignoreContentEnabled"><code>ignoreContentEnabled</code> <em>boolean</em>, default: false</dt>
 	<dd><em>Warning:</em> Setting this property to true will cause performance degradation on enhancement. Once set, all automatic enhancements made by the framework to each enhanceable element of the user's markup will first check for a <code>data-enhance=false</code> parent node. If one is found the markup will be ignored. This setting and the accompanying data attribute provide a mechanism through which users can prevent enhancement over large sections of markup.</dd>
 	<br />
+	<dt id="keepNative"><code>keepNative</code> <em>Selector</em>, default: ":jqmData(role='none'), :jqmData(role='nojs')"</dt>
+	<dd>Elements matching the selector specified in this option will never be enhanced. This is different from <a href="#ignoreContentEnabled">ignoreContentEnabled</a> because it does not affect the children of elements that match this selector.</dd>
+	<br />
 	<dt id="linkBindingEnabled"><code>linkBindingEnabled</code> <em>boolean</em>, default: true</dt>
 	<dd>jQuery Mobile will automatically bind the clicks on anchor tags in your document. Setting this option to false will prevent all anchor click handling <em>including</em> the addition of active button state and alternate link bluring. This should only be used when attempting to delegate the click management to another library or custom code.</dd>
 	<br />
