@@ -112,8 +112,8 @@ $( ":mobile-pagecontainer" )
 	<dt id="maxTransitionWidth"><code>maxTransitionWidth</code> <em>integer, boolean</em>, default: false</dt>
 	<dd>Set a max width for transitions. The option accepts any number representing a pixel width and its default value <code>false</code>. If a number value is set, transition "none" will be used if the window is wider than the specified value.</dd>
     <br />
-	<dt id="minScrollBack"><code>minScrollBack</code> <em>integer</em>, default: 250</dt>
-	<dd>Minimum scroll distance that will be remembered when returning to a page.<div style="padding: 0.5em 1em; margin: 1em; background: #FFF3A5;"><strong>Deprecated</strong> in 1.4 and will be removed in 1.5. Any and all scrolling will be remembered. This matches native behavior. The default value is 0 during the deprecation period.</div></dd>
+	<dt id="minScrollBack"><code>minScrollBack</code> <em>integer</em>, default: 0</dt>
+	<dd>Minimum scroll distance that will be remembered when returning to a page.<div style="padding: 0.5em 1em; margin: 1em; background: #FFF3A5;"><strong>Deprecated</strong> in 1.4 and will be removed in 1.5. Any and all scrolling will be remembered. This matches native behavior. The old default value of 250 has changed to 0 during the deprecation period.</div></dd>
 	<br />
 	<dt id="ns"><code>ns</code> <em>string</em>, default: ""</dt>
 	<dd>The namespace used in data attributes (e.g., data-role). Can be set to any string, including a blank string which is the default. When using, it's clearest if you include a trailing dash, such as "mynamespace-" which maps to <code>data-mynamespace-foo="..."</code>.
