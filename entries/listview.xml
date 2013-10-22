@@ -161,6 +161,14 @@ function defaultAutodividersSelector( elt ) {
 </code></pre>
 			</desc>
 		</option>
+		<option name="countTheme" type="String" default="null, inherited from parent" example-value='"b"' deprecated="1.4.0">
+			<desc>
+				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0.</strong>
+				<p>Sets the color scheme (swatch) for the list item count bubble. It accepts a single letter from a-z that maps to the swatches included in your theme.</p>
+				<p>Possible values: swatch letter (a-z).</p>
+				<p>This option is also exposed as a data attribute: <code>data-count-theme="b"</code>.</p>
+			</desc>
+		</option>
 		<xi:include href="../includes/widget-option-defaults.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="dividerTheme" default='null, inherited from parent' example-value='"b"'>
