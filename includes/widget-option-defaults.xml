@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<option name="defaults" default="false" example-value="true">
+	<desc>
+		Seting this option to <code>true</code> indicates that other widgets options have default values and causes jQuery Mobile's widget autoenhancement code to omit the step where it retrieves option values from data attributes. This can improve startup time.
+		<p>This option is also exposed as a data attribute: <code>data-defaults="true"</code>.</p>
+	</desc>
+	<type name="Boolean" />
+</option>

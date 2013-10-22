@@ -72,6 +72,8 @@
 			<p>The classes option is only configurable via JavaScript because it expects an object literal value.</p></desc>
 			<type name="String" />
 		</option>
+		<xi:include href="../includes/widget-option-defaults.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</options>
 	<events>

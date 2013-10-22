@@ -132,6 +132,8 @@ $( "#mylist" ).listview( "refresh" );
 	</longdesc>
 	<added>1.0</added>
 	<options>
+		<xi:include href="../includes/widget-option-defaults.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="dividerTheme" default='null, inherited from parent' example-value='"b"'>
 			<desc>Sets the color scheme (swatch) for list dividers. It accepts a single letter from a-z that maps to one of the swatches included in your theme.
 				<p>This option is also exposed as a data attribute: <code>data-divider-theme="b"</code>.</p>

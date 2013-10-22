@@ -119,6 +119,7 @@ $( "div#range-slider" ).rangeslider();
 	</longdesc>
 	<added>1.3</added>
 	<options>
+		<xi:include href="../includes/widget-option-defaults.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="highlight" default="true" example-value="false">
 			<desc>Sets an active state fill on the track between the two rangeslider handles when set to "true".

@@ -13,6 +13,8 @@
 	</longdesc>
 	<added>1.0</added>
 	<options>
+		<xi:include href="../includes/widget-option-defaults.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="domCache" default="false" example-value="true">
 			<desc>
 				<p>Sets whether to keep the page in the DOM after the user has navigated away from it.</p>
