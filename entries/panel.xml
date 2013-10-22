@@ -252,6 +252,7 @@ $( "#idofpanel" ).panel( "close" );
 			<desc>Class added to the panel when opening. Used for targeting hardware acceleration only during transitions.</desc>
 			<type name="String" />
 		</option>
+		<xi:include href="../includes/widget-option-defaults.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="dismissible" default="true" example-value="false">
 			<desc>Sets whether the panel can be closed by clicking outside onto the page.

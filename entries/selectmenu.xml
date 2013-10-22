@@ -242,6 +242,7 @@ $( "select" ).selectmenu();
 			</desc>
 			<type name="Boolean" />
 		</option>
+		<xi:include href="../includes/widget-option-defaults.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="icon" default='"arrow-down"' example-value='"star"'>
 			<desc>Replaces the default icon "arrow-down" with an icon from the icon set. Setting this attribute to "false" suppresses the icon.

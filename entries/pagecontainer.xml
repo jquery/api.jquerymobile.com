@@ -69,6 +69,8 @@
 	<added>1.4</added>
 
 	<options>
+		<xi:include href="../includes/widget-option-defaults.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="theme" default="a" example-value='"b"'>
 			<desc>
 				Sets the color scheme (swatch) for the <placeholder name="name" /> widget. It accepts a single letter from a-z that maps to the swatches included in your theme.

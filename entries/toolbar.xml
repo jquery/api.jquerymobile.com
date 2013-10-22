@@ -264,6 +264,7 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 			</desc>
 			<type name="String" />
 		</option>
+		<xi:include href="../includes/widget-option-defaults.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="disablePageZoom" default="true" example-value="false">
 			<desc>This option is provided by the <code>fixedToolbar</code> extension.

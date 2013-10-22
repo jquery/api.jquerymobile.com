@@ -155,6 +155,7 @@
 			</desc>
 			<type name="Boolean" />
 		</option>
+		<xi:include href="../includes/widget-option-defaults.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-enhanced.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="expandCueText" default='" click to expand contents"' example-value='" expand with a click"'>
