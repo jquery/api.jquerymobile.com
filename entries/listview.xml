@@ -140,7 +140,7 @@ $( "#mylist" ).listview( "refresh" );
 		</option>
 		<option name="filter" default="false" example-value="true" deprecated="1.4.0">
 			<desc>
-				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0. It is now implemented in the <a href="/filterable/">filterable</a> widget.</strong>
+				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0. It has become the <code>initSelector</code> for the <a href="/filterable/">filterable</a> widget.</strong>
 				<p>Adds a search filter bar to listviews.</p>
 				<p>This option is also exposed as a data attribute: <code>data-filter="true"</code>.</p>
 			</desc>
@@ -148,7 +148,7 @@ $( "#mylist" ).listview( "refresh" );
 		</option>
 		<option name="filterCallback" default="n/a">
 			<desc>
-				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0. It is now implemented in the <a href="/filterable/">filterable</a> widget.</strong>
+				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0. It is now implemented in the <a href="/filterable/#option-filterCallback">filterable</a> widget.</strong>
 				<p>The function to determine which rows to hide when the search filter textbox changes. The function accepts two arguments -- the text of the list item (or data-filtertext value if present), and the search string. Return true to hide the item, false to leave it visible.</p>
 <pre><code>
 $( document ).on( "mobileinit", function() {
@@ -160,11 +160,19 @@ $( document ).on( "mobileinit", function() {
 			</desc>
 			<type name="Function" />
 		</option>
-		<option name="filterPlaceholder" default='"Filter items..."' example-value='Search..."'>
+		<option name="filterPlaceholder" default='"Filter items..."' example-value='"Search..."'>
 			<desc>
 				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0.</strong>
 				<p>The placeholder text used in search filter bars.</p>
 				<p>This option is also exposed as a data attribute: <code>data-filter-placeholder="Search..."</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<option name="filterReveal" default='false' example-value='true'>
+			<desc>
+				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0. It is now implemented in the <a href="/filterable/#option-filterReveal">filterable</a> widget.</strong>
+				<p>When <code>true</code>, and the search input string is empty, all items are hidden instead of shown.</p>
+				<p>This option is also exposed as a data attribute: <code>data-filter-reveal="true"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
