@@ -68,30 +68,8 @@ $( "#mylistview" ).listview({
 			<p><iframe src="/resources/listview/example7.html" style="width:100%;height:1410px;border:0px"></iframe></p>
 
 			<h3>Search filter</h3>
-			<p>jQuery Mobile provides a very easy way to filter a list with a simple client-side search feature. To make a list filterable, simply add the <code>data-filter="true"</code> attribute to the list. The framework will then append a search box above the list and add the behavior to filter out list items that don't contain the current search string as the user types. The input's placeholder text defaults to "Filter items...". To configure the placeholder text in the search input, you can either <a href="../api/globalconfig.html">bind to the <code>mobileinit</code> event</a> and set the <code>$.mobile.listview.prototype.options.filterPlaceholder</code> option to a string of your choosing, or use the data attribute <code>data-filter-placeholder</code> on your listview. By default the search box will inherit its theme from its parent. The search box theme can be configured using the data attribute <code>data-filter-theme</code> on your listview.</p>
-
-			<p><iframe src="/resources/listview/example8.html" style="width:100%;height:1010px;border:0px"></iframe></p>
-
-      		<p>If you want to change the way in which list items are filtered, i.e. fuzzy search or matching from the beginning of the string, you can configure the callback used internally by defining <code>$.mobile.listview.prototype.options.filterCallback</code> during <code>mobileinit</code> or after the widget has been created with <code>$( "#mylist" ).listview( "option", "filterCallback", yourFilterFunction)</code>. Any function defined for the callback will be provided three arguments. First, the text of the current list item, second the value being searched for, and third the list item being filtered. A truthy value will result in a hidden list item. The default callback which filters entries without the <code>searchValue</code> as a substring is described below:
-      		</p>
-
-<pre><code><![CDATA[
-function( text, searchValue, item ) {
-  return text.toString().toLowerCase().indexOf( searchValue ) === -1;
-};
-]]></code></pre>
-
-			<p>To filter list items by values other than the text, add a <code>data-filtertext</code> attribute to the list item.  The value of this attribute will be passed as the first argument to the <code>filterCallback</code> function instead of the text. Alternately you can use an attribute of your choosing as defined on the list item itself.</p>
-
-			<p>By default, the listview filter simply searches against the content in each list item. If you want the filter to search against different content, add the <code>data-filtertext</code>	attribute to the item and populate it with one or many keywords and phrases that should be used to match against. Note that if this attribute is added, the contents of the list item are ignored.</p>
-			<p>This attribute is useful for dealing with allowing for ticker symbols and full company names to be searched, or for covering common spellings and abbreviations for countries.</p>
-
-<pre><code><![CDATA[
-<li data-filtertext="NASDAQ:AAPL Apple Inc."><a href="#">Apple</a></li>
-<li data-filtertext="USA U.S.A. United States of America"><a href="#">United States</a></li>
-]]></code></pre>
-
-			<p><iframe src="/resources/listview/example9.html" style="width:100%;height:410px;border:0px"></iframe></p>
+			<p>As of jQuery Mobile 1.4.0 this functionality has been transferred to the <a href="/filterable/">filterable</a> widget, which provides a more generic solution.</p>
+			<p><strong>Note:</strong>Features such as automatic text input generation and special handling of listview dividers are deprecated as of 1.4.0. The documentation for <a href="/filterable/">filterable</a> describes the migration path for listviews.</p>
 
 			<h3>Text formatting &amp; counts</h3>
 			<p>The framework includes text formatting conventions for common list patterns like header/descriptions, secondary information and counts through semantic HTML markup.</p>
@@ -154,6 +132,52 @@ $( "#mylist" ).listview( "refresh" );
 		<option name="dividerTheme" default='null, inherited from parent' example-value='"b"'>
 			<desc>Sets the color scheme (swatch) for list dividers. It accepts a single letter from a-z that maps to one of the swatches included in your theme.
 				<p>This option is also exposed as a data attribute: <code>data-divider-theme="b"</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<option name="filter" default="false" example-value="true" deprecated="1.4.0">
+			<desc>
+				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0. It has become the <code>initSelector</code> for the <a href="/filterable/">filterable</a> widget.</strong>
+				<p>Adds a search filter bar to listviews.</p>
+				<p>This option is also exposed as a data attribute: <code>data-filter="true"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
+		<option name="filterCallback" default="n/a" deprecated="1.4.0">
+			<desc>
+				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0. It is now implemented in the <a href="/filterable/#option-filterCallback">filterable</a> widget.</strong>
+				<p>The function to determine which rows to hide when the search filter textbox changes. The function accepts two arguments -- the text of the list item (or data-filtertext value if present), and the search string. Return true to hide the item, false to leave it visible.</p>
+<pre><code>
+$( document ).on( "mobileinit", function() {
+	$.mobile.listview.prototype.options.filterCallback = function( text, searchValue ) {
+		// only show items that *begin* with the search string
+		return text.toLowerCase().substring( 0, searchValue.length ) !== searchValue;
+	};
+});</code></pre>
+			</desc>
+			<type name="Function" />
+		</option>
+		<option name="filterPlaceholder" default='"Filter items..."' example-value='"Search..."' deprecated="1.4.0">
+			<desc>
+				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0.</strong>
+				<p>The placeholder text used in search filter bars.</p>
+				<p>This option is also exposed as a data attribute: <code>data-filter-placeholder="Search..."</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<option name="filterReveal" default='false' example-value='true' deprecated="1.4.0">
+			<desc>
+				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0. It is now implemented in the <a href="/filterable/#option-filterReveal">filterable</a> widget.</strong>
+				<p>When <code>true</code>, and the search input string is empty, all items are hidden instead of shown.</p>
+				<p>This option is also exposed as a data attribute: <code>data-filter-reveal="true"</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<option name="filterTheme" default='null, inherited from parent' example-value='"b"' deprecated="1.4.0">
+			<desc>
+				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0.</strong>
+				<p>Sets the color scheme (swatch) for the search filter bar. It accepts a single letter from a-z that maps to one of the swatches included in your theme.</p>
+				<p>This option is also exposed as a data attribute: <code>data-filter-theme="a"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
