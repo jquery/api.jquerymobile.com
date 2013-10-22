@@ -88,7 +88,7 @@
 &lt;/form&gt;
 </code></pre>
 		<iframe src="/resources/filterable/example2.html" style="width:100%;height:300px;border:0px"></iframe>
-		<h3>Custom filters</h3>
+		<h3 id="custom-filter-example">Custom filters</h3>
 		<p>The <placeholder name="name"/> widget's <code>filterCallback</code> option allows you to set a custom callback. In the example below items are filtered by their ordinal, which can be specified using page printing conventions such as "1,2" or "4-9", or both ("1,2,4-9,12").</p>
 <pre><code>
 $.mobile.filterable.prototype.options.filterCallback = function( index, searchValue ) {
@@ -169,6 +169,7 @@ $.mobile.filterable.prototype.options.filterCallback = function( index, searchVa
 				A function that will be called to determine whether an element in the list of children is considered to be filtered. It must return <code>true</code> if the element is to be filtered, and it must return <code>false</code> if the element is to be shown. The function is called once for each of the DOM elements and its context is set to the DOM element for which a decision is needed. Thus, the keyword <code>this</code> refers to the DOM element for which it must be decided whether it should be shown.
 			<p>The default value of this attribute is a function that will examine each child for the presence of the <code>data-filtertext</code> attribute. If such an attribute is found, the function returns <code>true</code> if the string contained in the function's <code>searchValue</code> parameter cannot be found inside the value of the <code>data-filtertext</code> attribute. If no such attribute is found, the text content of the child is searched for the presence of the value of the function's <code>searchValue</code> parameter, and the function returns <code>true</code> if the search fails.</p>
 			<p>For backwards compatibility with the jQuery Mobile 1.3 listview filter extension, the function provided as the default value of this attribute will never hide listview dividers, however, <strong>this behavior is deprecated as of jQuery Mobile 1.4.0 and will be removed in jQuery Mobile 1.5.0.</strong></p>
+			<p>You can provide a <a href="#custom-filter-example">custom callback</a> if you need to process the children in special ways.</p>
 			</desc>
 			<type name="Function">
 				<argument name="index" type="Number"/>
