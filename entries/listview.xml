@@ -132,6 +132,35 @@ $( "#mylist" ).listview( "refresh" );
 	</longdesc>
 	<added>1.0</added>
 	<options>
+		<option name="autodividers" default="false" example="true" type="Boolean">
+			<desc>This option is provided by the <code>listview.autodividers</code> extension.
+				<p>When set to true, dividers are automatically created for the listview items.</p>
+				<p>The function stored in the value of the <a href="#option-autodividersSelector">autodividersSelector</a> option governs the text displayed on the dividers.</p>
+				<p>This option is also exposed as a data-attribute: <code>data-autodividers="true"</code>.</p>
+			</desc>
+		</option>
+		<option name="autodividersSelector" default="n/a" type="Function">
+			<desc>This option is provided by the <code>listview.autodividers</code> extension.
+				<p>The value of this option is a function that returns a string. It receives a jQuery collection object containing an element. It computes the returned string from the element. The function is called for each list item in sequence, and a divider is created whenever the function returns a value for a list item that is different from the value it returned for the previous list item.</p>
+				<p>The function may return <code>null</code> for a given list item. In that case, no new divider is created even if the value returned for the previous list item was something other than <code>null</code>.</p>
+				<p>The default value of this option is a function that returns the capitalized first letter of the list item text:</p>
+<pre><code>
+function defaultAutodividersSelector( elt ) {
+	// look for the text in the given element
+	var text = $.trim( elt.text() ) || null;
+
+	if ( !text ) {
+		return null;
+	}
+
+	// create the text for the divider (first uppercased letter)
+	text = text.slice( 0, 1 ).toUpperCase();
+
+	return text;
+}
+</code></pre>
+			</desc>
+		</option>
 		<xi:include href="../includes/widget-option-defaults.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="dividerTheme" default='null, inherited from parent' example-value='"b"'>
@@ -185,6 +214,12 @@ $( document ).on( "mobileinit", function() {
 				<p>This option is also exposed as a data attribute: <code>data-filter-theme="a"</code>.</p>
 			</desc>
 			<type name="String" />
+		</option>
+		<option name="hideDividers" default="false" example-value="true">
+			<desc>This option is provided by the <code>listview.hidedividers</code> extension.
+				<p>When set to <code>true</code> and all list items residing under a given divider become hidden, then the divider itself is hidden.</p>
+				<p>This option is also exposed as a data-attribute: <code>data-hide-dividers="true"</code>.</p>
+			</desc>
 		</option>
 		<option name="icon" default='"carat-r"' example-value='"star"'>
 			<desc>Applies an icon from the icon set to all linked list buttons.
