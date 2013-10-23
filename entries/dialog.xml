@@ -100,8 +100,8 @@ $.mobile.changePage( "#myDialog", { role: "dialog" } );
 		</option>
 		<option name="closeBtnText" default='"Close"' example-value='"Fermer"'>
 			<desc>
-				<p>Customizes the text of the close button which is helpful for translating this into different languages. This is displayed as an icon-only button by default so the text isn't visible on-screen, but is read by screen readers so this is an important accessibility feature.</p>
-				<p>This option is also exposed as a data attribute: <code>data-close-btn-text</code>.</p>
+				<p>Customizes the text of the close button which is helpful for translating this into different languages. The close button is displayed as an icon-only button by default so the text isn't visible on-screen, but is read by screen readers so this is an important accessibility feature.</p>
+				<p>This option is also exposed as a data attribute: <code>data-close-btn-text="Fermer"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
