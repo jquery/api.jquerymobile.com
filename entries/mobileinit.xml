@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<entry name="mobileinit" type="event" return="jQuery">
+	<title>mobileinit</title>
+	<desc>Event indicating that jQuery Mobile has finished loading.</desc>
+	<longdesc>
+		<p>This event is triggered after jQuery Mobile has finished loading, but before it has started enhancing the start page. Thus, handlers of this event have the opportunity to modify jQuery Mobile's global configuration <a href="/global-config/">options</a> and all the widgets' default option values before they influence the library's behavior.</p>
+		<p>You must connect a handler to the <placeholder name="name"/> event before you load jQuery Mobile, because it is triggered as part of the library's loading process. The easiest way of achieving this is to place a <code>script</code> tag after the <code>script</code> tag that loads jQuery, and before the <code>script</code> tag that loads jQuery Mobile:
+<pre><code><![CDATA[
+<!doctype html>
+<html>
+<head>
+	<title>Example illustrating use of the "mobileinit" event</title>
+	<meta charset=utf-8 />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.4.0-beta.1/jquery.mobile-1.4.0-beta.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script>
+// Update configuration to our liking
+$( document ).on( "mobileinit", function() {
+
+	// We want popups to cover the page behind them with a dark background
+	$.mobile.popup.prototype.options.overlayTheme = "b";
+
+	// Set a namespace for jQuery Mobile data attributes
+	$.mobile.ns = "jqm-";
+});
+	</script>
+	<script src="http://code.jquery.com/mobile/1.4.0-beta.1/jquery.mobile-1.4.0-beta.1.min.js"></script>
+</head>
+<body>
+	<div data-jqm-role="page">
+		<div data-jqm-role="header">
+			<h2>jQuery Mobile Example</h2>
+		</div>
+		<div data-jqm-role="content">
+			<div id="the-popup" data-jqm-role="popup" data-jqm-position-to="window">
+				<p>Example popup.</p>
+			</div>
+			<a href="#the-popup" data-jqm-rel="popup" class="ui-btn ui-corner-all ui-shadow">Open Popup</a>
+		</div>
+	</div>
+</body>
+</html>
+]]></code></pre>
+		<iframe src="/resources/mobileinit/example1.html" style="width:100%;height:390px;border:0px"></iframe></p>
+	</longdesc>
+	<added>1.0</added>
+	<signature>
+		<argument name="preventDefault" type="Function" optional="true">
+			<desc>A function to invoke in the event binding to prevent the synthetic click event by the browser.</desc>
+		</argument>
+
+	</signature>
+	<category slug="events"/>
+</entry>
