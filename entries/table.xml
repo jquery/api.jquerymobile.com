@@ -89,6 +89,9 @@
 		</event>
 	</events>
 	<methods>
+		<method name="rebuild">
+			<desc>Re-process the entire table to ensure it is displayed correctly.</desc>
+		</method>
 	</methods>
 	<example>
 		<height>350</height>
