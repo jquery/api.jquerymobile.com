@@ -73,81 +73,81 @@
 					<td class="enum-value"><div style="white-space: nowrap;">ui-btn-icon-notext</div></td>
 					<td>The button text is suppressed, and only the icon is shown. The result is a circular button the size of the icon.</td>
 				</tr>
-				<tr><th colspan="2">Icons</th></tr>
+				<tr><th colspan="2" id="icons">Icons</th></tr>
 				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-alert</div></td>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>alert</strong></div></td>
 					<td>An exclamation mark inside a triangle.</td>
 				</tr>
 				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-arrow-l</div></td>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>arrow-l</strong></div></td>
 					<td>An arrow pointing left (&#8592;).</td>
 				</tr>
 				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-arrow-r</div></td>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>arrow-r</strong></div></td>
 					<td>An arrow pointing right (&#8594;).</td>
 				</tr>
 				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-arrow-u</div></td>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>arrow-u</strong></div></td>
 					<td>An arrow pointing up (&#8593;).</td>
 				</tr>
 				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-arrow-d</div></td>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>arrow-d</strong></div></td>
 					<td>An arrow pointing down (&#8595;).</td>
 				</tr>
 				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-back</div></td>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>back</strong></div></td>
 					<td>A curved arrow arcing counterclockwise upwards.</td>
 				</tr>
 				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-bars</div></td>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>bars</strong></div></td>
 					<td>Three horizontal bars one above the other.</td>
 				</tr>
 				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-check</div></td>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>check</strong></div></td>
 					<td>A checkmark (&#10003;).</td>
 				</tr>
 				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-delete</div></td>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>delete</strong></div></td>
 					<td>A diagonal cross similar to (&#10005;).</td>
 				</tr>
 				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-edit</div></td>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>edit</strong></div></td>
 					<td>A pencil - similar to (&#9998;) but pointing to the lower left.</td>
 				</tr>
 				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-forward</div></td>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>forward</strong></div></td>
 					<td>A curved arrow arcing clockwise upwards.</td>
 				</tr>
 				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-gear</div></td>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>gear</strong></div></td>
 					<td>A gear (&#9881;).</td>
 				</tr>
 				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-grid</div></td>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>grid</strong></div></td>
 					<td>A 3&#10005;3 grid.</td>
 				</tr>
 				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-home</div></td>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>home</strong></div></td>
 					<td>A house similar to (&#8962;).</td>
 				</tr>
 				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-minus</div></td>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>minus</strong></div></td>
 					<td>A "minus" sign (-).</td>
 				</tr>
 				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-plus</div></td>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>plus</strong></div></td>
 					<td>A "plus" sign (+).</td>
 				</tr>
 				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-refresh</div></td>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>refresh</strong></div></td>
 					<td>A circular arrow similar to (&#10227;).</td>
 				</tr>
 				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-search</div></td>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>search</strong></div></td>
 					<td>A magnifying glass.</td>
 				</tr>
 				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-star</div></td>
+					<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>star</strong></div></td>
 					<td>A star similar to (&#10029;).</td>
 				</tr>
 				<tr><th colspan="2">Theme</th></tr>
