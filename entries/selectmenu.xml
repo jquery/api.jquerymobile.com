@@ -236,6 +236,12 @@ $( "select" ).selectmenu();
 	</longdesc>
 	<added>1.0</added>
 	<options>
+		<option name="closeText" default='"Close"' example-value='"Fermer"'>
+			<desc>
+				<p>Customizes the text of the close button which is helpful for translating this into different languages. The close button is displayed as an icon-only button by default so the text isn't visible on-screen, but is read by screen readers so this is an important accessibility feature.</p>
+				<p>This option is also exposed as a data attribute: <code>data-close-text="Fermer"</code>.</p>
+			</desc>
+		</option>
 		<option name="corners" default="true" example-value="false">
 			<desc>Applies the theme button border-radius to the select button if set to true.
 			<p>This option is also exposed as a data attribute: <code>data-corners="false"</code>.</p>
@@ -244,7 +250,21 @@ $( "select" ).selectmenu();
 		</option>
 		<xi:include href="../includes/widget-option-defaults.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="icon" default='"arrow-down"' example-value='"star"'>
+		<option name="dividerTheme" default="null, inherited from parent" example-value='"b"'>
+			<desc>
+				Sets the color scheme (swatch) for the listview dividers that represent the <code>optgroup</code> headers. It accepts a single letter from a-z that maps to the swatches included in your theme.
+				<p>Possible values: swatch letter (a-z).</p>
+				<p>This option is also exposed as a data attribute: <code>data-divider-theme="b"</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<option name="hidePlaceholderMenuItems" type="Boolean" default="true" example-value="false">
+			<desc>
+				Sets whether placeholder menu items are hidden. When true, the menu item used as the placeholder for the select menu widget will not appear in the list of choices.
+				<p>This option is also exposed as a data attribute: <code>data-hide-placeholder-menu-items="false"</code>.</p>
+			</desc>
+		</option>
+		<option name="icon" default='"carat-d"' example-value='"star"'>
 			<desc>Replaces the default icon "arrow-down" with an icon from the icon set. Setting this attribute to "false" suppresses the icon.
 				<p>To suppress the icon, a boolean expression must be used:</p>
 				<p>This option is also exposed as a data attribute: <code>data-icon="star"</code>.</p>
