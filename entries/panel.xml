@@ -380,7 +380,7 @@ $( "#mypanel" ).trigger( "updatelayout" );
 		<html><![CDATA[<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
-	<div data-role="content">
+	<div role="main" class="ui-content">
 		<a href="#defaultpanel" data-role="button" data-inline="true" data-icon="bars">Default panel</a>
 	</div>
 

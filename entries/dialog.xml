@@ -144,7 +144,7 @@ $.mobile.changePage( "#myDialog", { role: "dialog" } );
 		<html><![CDATA[<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
-	<div data-role="content">
+	<div role="main" class="ui-content">
 		<a href="#dialogPage" data-rel="dialog">Open dialog</a>
 	</div>
 	<div data-role="footer">
@@ -156,7 +156,7 @@ $.mobile.changePage( "#myDialog", { role: "dialog" } );
 	<div data-role="header">
 		<h2>Dialog</h2>
 	</div>
-	<div data-role="content">
+	<div role="main" class="ui-content">
 		<p>I am a dialog</p>
 	</div>]]></html>
 	</example>

@@ -287,7 +287,7 @@ $( "input" ).slider();
 		<html><![CDATA[<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
-	<div data-role="content">
+	<div role="main" class="ui-content">
 		<label for="slider-0">Input slider:</label>
 		<input type="range" name="slider-0" id="slider-0" value="60" min="0" max="100" />
 	</div>]]></html>
@@ -297,7 +297,7 @@ $( "input" ).slider();
 		<html><![CDATA[<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
-	<div data-role="content">
+	<div role="main" class="ui-content">
 		<label for="flip-0">Select slider:</label>
 		<select name="flip-0" id="flip-0" data-role="slider">
 			<option value="off">Off</option>

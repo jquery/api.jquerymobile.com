@@ -133,7 +133,7 @@
 	<html><![CDATA[<div data-role="header">
 		<h1>Responsive Grid Example</h1>
 	</div>
-	<div data-role="content">
+	<div role="main" class="ui-content">
 		<div class="ui-grid-b my-breakpoint">
 			<div class="ui-block-a"><div class="ui-body ui-body-d">Block A</div></div>
 			<div class="ui-block-b"><div class="ui-body ui-body-d">Block B</div></div>

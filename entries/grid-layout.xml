@@ -112,7 +112,7 @@
 		<html><![CDATA[<div data-role="header">
 		<h1>Grid Layout Example</h1>
 	</div>
-	<div data-role="content">
+	<div role="main" class="ui-content">
 		<fieldset class="ui-grid-a">
 		<div class="ui-grid-a">
 			<div class="ui-block-a"><strong>I'm Block A</strong> and text inside will wrap.</div>

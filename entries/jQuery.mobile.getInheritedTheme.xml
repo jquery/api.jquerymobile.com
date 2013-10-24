@@ -28,7 +28,7 @@
 	<div data-role="header">
 		<h2>jQuery Mobile Example</h2>
 	</div>
-	<div data-role="content" data-theme="b">
+	<div role="main" class="ui-content">
 		<p>Click the button below to find out what theme it inherits.</p>
 		<a href="#" id="check-theme" class="ui-btn ui-corner-all ui-shadow">Check my theme</a> 
 	</div>

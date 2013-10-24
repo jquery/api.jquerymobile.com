@@ -201,7 +201,7 @@
 		<html><![CDATA[<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
-	<div data-role="content">
+	<div role="main" class="ui-content">
 		<div class="ui-field-contain">
 			<form>
 				<fieldset data-role="controlgroup">
@@ -219,7 +219,7 @@
 		<html><![CDATA[<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
-	<div data-role="content">
+	<div role="main" class="ui-content">
 		<form>
 			<fieldset data-role="controlgroup">
 				<legend>Choose a pet:</legend>

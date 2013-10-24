@@ -385,7 +385,7 @@ $( document ).on( "pageinit", function() {
 	<div data-role="header">
 		<h1>Example Page</h1>
 	</div>
-	<div data-role="content">
+	<div role="main" class="ui-content">
 		<a href="#pre-rendered" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Open pre-rendered popup</a>
 	</div>
 	&lt;!-- the following two divs represent the pre-rendered popup widget --&gt;
@@ -587,7 +587,7 @@ $( document ).on( "pageinit", function() {
 		<html><![CDATA[<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
-	<div data-role="content">
+	<div role="main" class="ui-content">
 		<a href="#popupBasic" data-rel="popup">Open Popup</a>
 
 		<div data-role="popup" id="popupBasic">

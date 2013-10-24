@@ -126,7 +126,7 @@ $( "[type='submit']" ).button( "refresh" );
 		<html><![CDATA[<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
-	<div data-role="content">
+	<div role="main" class="ui-content">
     <form action="#" method="get">
       <input type="submit" value="Input Button"></input>
     </form>

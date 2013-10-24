@@ -82,7 +82,7 @@
 		<html><![CDATA[<div data-role="header">
 		<h1>Page header (optional): Example page</h1>
 	</div>
-	<div data-role="content">
+	<div role="main" class="ui-content">
 		<h2>Page content</h2>
 		<p>Page content goes here.</p>
 	</div>

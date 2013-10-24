@@ -381,7 +381,7 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 		<html><![CDATA[<div data-role="header">
 		<h1>Page Title</h1>
 	</div>
-	<div data-role="content">
+	<div role="main" class="ui-content">
 		<p>Some content here</p>
 	</div> ]]></html>
 	</example>
@@ -390,7 +390,7 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 		<html><![CDATA[<div data-role="header" <div data-role="header" data-position="fixed" data-theme="b">
 		<h1>Fixed Header</h1>
 	</div>
-	<div data-role="content" >
+	<div role="main" class="ui-content">
 
 		<p>This page demonstrates the "fixed" toolbar mode. </p>
 		<br /><br />
@@ -409,7 +409,7 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 	<example>
 		<desc>Injecting a fixed toolbar</desc>
 		<html><![CDATA[
-	<div data-role="content">
+	<div role="main" class="ui-content">
 		<p>This page demonstrates how to correctly inject fixed toolbars.</p>
 		<a href="#" id="inject-toolbar" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Inject Header</a>
 	</div>
