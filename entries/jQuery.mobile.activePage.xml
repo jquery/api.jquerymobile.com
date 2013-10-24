@@ -1,50 +1,10 @@
 <?xml version="1.0"?>
-<entry type="property" name="jQuery.mobile.activePage" return="jQuery">
+<entry type="property" name="jQuery.mobile.activePage" return="jQuery" deprecated="1.4.0">
 	<title>jQuery.mobile.activePage</title>
 	<desc>Reference to the page currently in view.</desc>
-	<signature>
-		<added>1.0</added>
-	</signature>
-	<example>
-		<desc>Example of the activePage property</desc>
-		<css><![CDATA[
-	#myResult {
-		border: 1px solid;
-		border-color: #108040;
-		padding: 10px;
-	}
-]]></css>
-		<html><![CDATA[
-<div data-role="page" id="page1">
-	<div data-role="header">
-		<h1>Page 1</h1>
-	</div>
-	<div data-role="content">
-		<a href="#page2" data-role="button" data-inline="true">Go to Page 2</a>
-		<input type="button" value="Which Page is this?" class="myButton" data-inline="true"/> <br>
-		<div class="myResult">The result will be displayed here</div>
-	</div>
-</div>
-
-<div data-role="page" id="page2">
-	<div data-role="header">
-		<h1>Page 2</h1>
-	</div>
-	<div data-role="content">
-		<a href="#page1" data-role="button" data-inline="true">Go to Page 1</a>
-		<input type="button" value="Which Page is this?" class="myButton" data-inline="true"/> <br>
-		<div class="myResult">The result will be displayed here</div>
-	</div>
-</div>
-]]></html>
-		<code><![CDATA[
-$(function() {
-	$( ".myButton" ).on( "click", function() {
-		var whichPageId = $.mobile.activePage.attr( "id" );
-		$( ".myResult" ).html( "This is " + whichPageId );
-	});
-});
-]]></code>
-	</example>
+	<longdesc>
+		<strong>Note: <placeholder name="name"/> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Use the <a href="/pagecontainer/#method-getActivePage">getActivePage()</a> method from the <code>pagecontainer</code> widget instead.</strong>
+	</longdesc>
+	<added>1.0</added>
 	<category slug="properties"/>
 </entry>
