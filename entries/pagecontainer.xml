@@ -351,6 +351,9 @@ $( ":mobile-pagecontainer" ).on( "pagecontainershow", function( event, ui ) {
 	</events>
 
 	<methods>
+		<method name="back">
+			<desc>Go back one history entry. If browser history manipulation is enabled, the browser history will also be updated.</desc>
+		</method>
 		<method name="change">
 			<example>$( ":mobile-pagecontainer" ).pagecontainer( "change", "confirm.html", { role: "dialog" } );</example>
 			<desc>Programmatically change from one page to another.</desc>
@@ -405,6 +408,20 @@ $( ":mobile-pagecontainer" ).on( "pagecontainershow", function( event, ui ) {
 				</property>
 			</argument>
 		</method>
+		<method name="forward">
+			<desc>Go forward one history entry. If browser history manipulation is enabled, the browser history will also be updated.</desc>
+		</method>
+		<method name="getActivePage" return="jQuery">
+			<desc>Return the currently active page.</desc>
+		</method>
+		<method name="go" return="jQuery">
+			<desc>Go a number of history entries forward or back. If browser history manipulation is enabled, the browser history will also be updated.</desc>
+			<signature return="jQuery" example-params="-1">
+				<argument name="steps" type="number">
+					<desc>The number of steps to take. A positive number will move forward through the history, whereas a negative number will move backwards through the history.</desc>
+				</argument>
+			</signature>
+		</method>
 		<method name="load" return="Promise">
 			<example>$( ":mobile-pagecontainer" ).pagecontainer( "load", "confirm.html", { role: "dialog" } );</example>
 			<desc>Load an external page, enhance its content, and insert it into the DOM.</desc>
@@ -446,6 +463,20 @@ $( ":mobile-pagecontainer" ).on( "pagecontainershow", function( event, ui ) {
 					<desc>The number of milliseconds by which to delay the appearance of the loading message. If the load completes within this time, no loading message is displayed.</desc>
 				</property>
 			</argument>
+		</method>
+		<method name="transition">
+			<desc>Perform a transition between two pages.</desc>
+			<signature example-params="toPage, triggerData, settings">
+				<argument name="toPage" type="jQuery">
+					<desc>jQuery collection object containing the page to which to transition.</desc>
+				</argument>
+				<argument name="triggerData" type="Object">
+					<desc>Data to pass to the transition-related events related to this transition.</desc>
+				</argument>
+				<argument name="settings" type="Object">
+					<desc>Settings associated with the page change.</desc>
+				</argument>
+			</signature>
 		</method>
 	</methods>
 	<category slug="widgets"/>
