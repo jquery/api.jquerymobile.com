@@ -41,6 +41,10 @@ $.widget( "my.widget", /* NOTE: no base needed */ {
 	<category name="Miscellaneous" slug="misc">
 		<desc></desc>
 	</category>
+	<category name="Properties" slug="properties">
+		<desc><![CDATA[
+			<p>jQuery Mobile exposes several properties on the $.mobile object for use in your applications.</p>]]></desc>
+	</category>
 	<category name="Reference" slug="reference">
 		<desc><![CDATA[
 			<p>The jQuery Mobile framework uses HTML5 data- attributes to allow for markup-based initialization and configuration of widgets.</p>]]></desc>
