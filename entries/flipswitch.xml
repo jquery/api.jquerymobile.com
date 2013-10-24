@@ -5,7 +5,7 @@
 	<desc>Creates a <placeholder name="name"/> widget</desc>
 	<longdesc>
 		<h2>Flip switches</h2>
-		<p>The flip switch is an alternative look to the checkbox. It can be toggled by a click or a swipe.</p>
+		<p>The flip switch is an alternative look to the checkbox or the two-option select menu. It can be toggled by a click or a swipe.</p>
 		<p>To create a flip switch add the attribute <code>data-role="flipswitch"</code> to a checkbox <code>input</code> or to a <code>select</code> which has two <code>option</code> values.</p>
 		<h3>Checkbox-based flipswitch</h3>
 		<p>Use the following markup to create a flipswitch based on a checkbox <code>input</code>:
