@@ -245,7 +245,7 @@
 	<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
-	<div data-role="content">
+	<div role="main" class="ui-content">
 		<div data-role="collapsible">
 			<h3>I'm a header</h3>
 			<p>I'm the collapsible content. By default I'm closed, but you can click the header to open me.</p>

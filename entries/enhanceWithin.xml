@@ -42,7 +42,7 @@ $.mobile.document.on( "click", "#insert-content", function() {
 <div data-role="header">
 	<h2>jQuery Mobile Example</h2>
 </div>
-<div data-role="content" id="page-content">
+<div role="main" class="ui-content" id="page-content">
 	<p>Content will be added at runtime when you click the button below.</p>
 	<p><a href="#" id="insert-content" class="ui-btn ui-corner-all ui-shadow">Insert</a></p>
 </div>

@@ -258,7 +258,7 @@
 	<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
-	<div data-role="content">
+	<div role="main" class="ui-content">
 		<table data-role="table" id="table-column-toggle" data-mode="columntoggle" class="ui-responsive table-stroke">
 			<thead>
 				<tr>

@@ -24,7 +24,7 @@
 		}
 ]]></css>
 				<html><![CDATA[
-	<div data-role="content">
+	<div role="main" class="ui-content">
 		<p>The absoulte URL used is http://foo.com/a/b/c/test.html</p>
 		<input type="button" value="file.html" id="button1" class="myButton" data-inline="true">
 		<input type="button" value="../../foo/file.html" id="button2" class="myButton" data-inline="true">

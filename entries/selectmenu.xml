@@ -356,7 +356,7 @@ $( "select" ).selectmenu();
 	<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
-	<div data-role="content">
+	<div role="main" class="ui-content">
 		<label for="select-choice-0" class="select">Shipping method:</label>
 		<select name="select-choice-0" id="select-choice-0">
 			<option value="standard">Standard: 7 day</option>

@@ -135,7 +135,7 @@ $( document ).on( "mobileinit", function() {
 	<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
-	<div data-role="content">
+	<div role="main" class="ui-content">
 		<table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive table-stroke">
 			<thead>
 				<tr>

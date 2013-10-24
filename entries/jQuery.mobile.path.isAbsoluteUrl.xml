@@ -19,7 +19,7 @@
 		}
 ]]></css>
 				<html><![CDATA[
-	<div data-role="content">
+	<div role="main" class="ui-content">
 		<input type="button" value="http://foo.com/a/file.html" id="button1" class="myButton" data-inline="true" />
 		<input type="button" value="//foo.com/a/file.html" id="button2" class="myButton" data-inline="true" />
 		<input type="button" value="/a/file.html" id="button3" class="myButton" data-inline="true" />

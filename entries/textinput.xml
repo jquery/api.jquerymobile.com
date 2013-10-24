@@ -253,9 +253,9 @@ $( ".mySearchInput" ).textinput();
 	<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
-	<div data-role="content">
+	<div role="main" class="ui-content">
 		<label for="basic">Text Input:</label>
-		<input type="text" name="name" id="basic" value=""  />
+		<input type="text" name="name" id="basic" value="">
 	</div>
 </div>
 ]]></html>
@@ -267,9 +267,9 @@ $( ".mySearchInput" ).textinput();
 	<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
-	<div data-role="content">
+	<div role="main" class="ui-content">
 		<label for="search-basic">Search Input:</label>
-		<input type="search" name="search" id="search-basic" value="" />
+		<input type="search" name="search" id="search-basic" value="">
 	</div>
 </div>
 ]]></html>
