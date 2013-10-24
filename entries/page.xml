@@ -13,6 +13,14 @@
 	</longdesc>
 	<added>1.0</added>
 	<options>
+		<option name="contentTheme" type="String" default="null, inherited from parent" example-value="b" deprecated="1.4.0">
+			<desc>
+				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0.</strong>
+				<p>Sets the color scheme (swatch) for the content <code>div</code> of the <placeholder name="name" /> widget. It accepts a single letter from a-z that maps to the swatches included in your theme.</p>
+				<p>Possible values: swatch letter (a-z).</p>
+				<p>This option is also exposed as a data attribute: <code>data-content-theme="b"</code>.</p>
+			</desc>
+		</option>
 		<xi:include href="../includes/widget-option-defaults.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="domCache" default="false" example-value="true">
