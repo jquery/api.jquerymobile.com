@@ -193,27 +193,45 @@ $( "#idofpanel" ).panel( "close" );
 			<type name="String" />
 		</option>
 		<option name="classes.contentFixedToolbar" default='"ui-panel-fixed-toolbar-wrap"'>
-			<desc>Class added to the page container to suppress scrolling horizontally</desc>
+			<desc>
+				<p><strong>Note: This class is no longer used as of 1.4.0, so setting this option will have no effect on the panel.</strong></p>
+				<p>Class added to the page container to suppress scrolling horizontally</p>
+			</desc>
 			<type name="String" />
 		</option>
 		<option name="classes.contentFixedToolbarClosed" default='"ui-panel-content-fixed-toolbar-closed"'>
-			<desc>Class added to fixed toolbars after the close animation is complete.</desc>
+			<desc>
+				<p><strong>Note: This class is no longer used as of 1.4.0, so setting this option will have no effect on the panel.</strong></p>
+				<p>Class added to fixed toolbars after the close animation is complete.</p>
+			</desc>
 			<type name="String" />
 		</option>
 		<option name="classes.contentFixedToolbarOpen" default='"ui-panel-content-fixed-toolbar-open"'>
-			<desc>Class added to fixed toolbars when the panel is opening.</desc>
+			<desc>
+				<p><strong>Note: This class is no longer used as of 1.4.0, so setting this option will have no effect on the panel.</strong></p>
+				<p>Class added to fixed toolbars when the panel is opening.</p>
+			</desc>
 			<type name="String" />
 		</option>
 		<option name="classes.contentWrap" default='"ui-panel-content-wrap"'>
-			<desc>Class added to the wrapper injected around the page contents (header, content, footer), needed for positioning of the panel.</desc>
+			<desc>
+				<p><strong>Note: This class is no longer used as of 1.4.0, so setting this option will have no effect on the panel.</strong></p>
+				<p>Class added to the wrapper injected around the page contents (header, content, footer), needed for positioning of the panel.</p>
+			</desc>
 			<type name="String" />
 		</option>
 		<option name="classes.contentWrapClosed" default='"ui-panel-content-wrap-closed"'>
-			<desc>Class added to the page contents wrapper after the close animation is complete.</desc>
+			<desc>
+				<p><strong>Note: This class is no longer used as of 1.4.0, so setting this option will have no effect on the panel.</strong></p>
+				<p>Class added to the page contents wrapper after the close animation is complete.</p>
+			</desc>
 			<type name="String" />
 		</option>
 		<option name="classes.contentWrapOpen" default='"ui-panel-content-wrap-open"'>
-			<desc>Class added to the wrapper injected around the page contents (header, content, footer) when the panel is opening. Used for targeting hardware acceleration only during transitions.</desc>
+			<desc>
+				<p><strong>Note: This class is no longer used as of 1.4.0, so setting this option will have no effect on the panel.</strong></p>
+				<p>Class added to the wrapper injected around the page contents (header, content, footer) when the panel is opening. Used for targeting hardware acceleration only during transitions.</p>
+			</desc>
 			<type name="String" />
 		</option>
 		<option name="classes.modal" default='"ui-panel-dismiss"'>
@@ -224,12 +242,27 @@ $( "#idofpanel" ).panel( "close" );
 			<desc>Class added to the invisible overlay over the page when the panel is open. Used to dismiss the panel.</desc>
 			<type name="String" />
 		</option>
+		<option name="classes.pageContainer" default='"ui-panel-page-container"'>
+			<desc></desc>
+		</option>
+		<option name="classes.pageContentPrefix" default='"ui-panel-page-content"'>
+			<desc>Used for wrapper and fixed toolbars position, display and open classes.</desc>
+		</option>
+		<option name="classes.pageFixedToolbar" default='"ui-panel-fixed-toolbar"'>
+			<desc></desc>
+		</option>
 		<option name="classes.pagePanel" default='"ui-page-panel"'>
-			<desc>Class added to the page container when a panel widget is present.</desc>
+			<desc>
+				<p><strong>Note: This class is no longer used as of 1.4.0, so setting this option will have no effect on the panel.</strong></p>
+				<p>Class added to the page container when a panel widget is present.</p>
+			</desc>
 			<type name="String" />
 		</option>
 		<option name="classes.pagePanelOpen" default='"ui-page-panel-open"'>
-			<desc>Class added to the page when a panel is open.</desc>
+			<desc>
+				<p><strong>Note: This class is no longer used as of 1.4.0, so setting this option will have no effect on the panel.</strong></p>
+				<p>Class added to the page when a panel is open.</p>
+			</desc>
 			<type name="String" />
 		</option>
 		<option name="classes.panel" default='"ui-panel"'>
