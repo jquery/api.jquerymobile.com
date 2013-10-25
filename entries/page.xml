@@ -4,16 +4,65 @@
 	<title>Page Widget</title>
 	<desc>Primary unit of content.</desc>
 	<longdesc>
+		<h2>Pages</h2>
+
 		<p>The page widget is responsible for managing a single item in jQuery Mobile's page-based architecture. It is designed to support either single page widgets within a HTML document, or multiple local internal linked page widgets within a HTML document.</p>
 
-			<p>The goal of this model is to allow developers to create websites using best practices &#8212; where ordinary links will "just work" without any special configuration &#8212; while creating a rich, native-like experience that can't be achieved with standard HTTP requests.</p>
+		<p>The goal of this model is to allow developers to create websites using best practices &#8212; where ordinary links will "just work" without any special configuration &#8212; while creating a rich, native-like experience that can't be achieved with standard HTTP requests.</p>
 
-			<p>The page widget will auto-enhance its content upon creation. This means that it will instantiate widgets on its child elements by invoking <a href="/enhanceWithin/"><code>.enhanceWithin()</code></a> on itself.</p>
+		<p>The page widget will auto-enhance its content upon creation. This means that it will instantiate widgets on its child elements by invoking <a href="/enhanceWithin/"><code>.enhanceWithin()</code></a> on itself.</p>
+
+		<h3>Dialogs</h3>
+
+		<p>The <placeholder name="name"/> widget has the option <code>dialog</code> which you can set to <code>true</code> to obtain a page styled like a dialog, such as in the example below:
+<pre><code><![CDATA[
+<div data-role="page" data-dialog="true">
+	<div data-role="header">
+		<h2>Are you sure?</h2>
+	</div>
+	<div class="ui-content" role="main">
+		<h2>Are you sure you wish to exit the application?</h2>
+		<p>You have unsaved changes. If you exit without saving them, you will lose them.</p>
+		<div class="ui-grid-a">
+			<div class="ui-block-a">
+				<a href="#" id="exit-button" class="ui-btn ui-btn-b ui-shadow ui-corner-all">Exit</a>
+			</div>
+			<div class="ui-block-b">
+				<a href="#" id="cancel-button" class="ui-btn ui-shadow ui-corner-all">Canel</a>
+			</div>
+		</div>
+	</div>
+</div>
+]]></code></pre>
+		<iframe src="/resources/page/example0.html" style="width:100%;height:420px;border:0px"></iframe></p>
 
 	</longdesc>
 	<added>1.0</added>
 	<options>
-		<option name="contentTheme" type="String" default="null, inherited from parent" example-value="b" deprecated="1.4.0">
+		<option name="closeBtn" type="String" default='"left"' example-value='"none"'>
+			<desc>This option is provided by the <code>dialog</code> extension.
+				<p>Sets the position of the dialog close button in the header.</p>
+				<p>Possible values:
+					<dl>
+						<dt>"left"</dt>
+						<dd>The button will be placed on the left edge of the titlebar.</dd>
+						<dt>"right"</dt>
+						<dd>The button will be placed on the right edge of the titlebar.</dd>
+						<dt>"none"</dt>
+						<dd>The dialog will not have a close button.</dd>
+					</dl>
+				</p>
+				<p>This option is also exposed as a data attribute: <code>data-close-btn</code>.</p>
+			</desc>
+		</option>
+		<option name="closeBtnText" default='"Close"' example-value='"Fermer"'>
+			<desc>This option is provided by the <code>dialog</code> extension.
+				<p>Customizes the text of the close button which is helpful for translating this into different languages. The close button is displayed as an icon-only button by default so the text isn't visible on-screen, but is read by screen readers so this is an important accessibility feature.</p>
+				<p>This option is also exposed as a data attribute: <code>data-close-btn-text="Fermer"</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<option name="contentTheme" type="String" default="null, inherited from parent" example-value='"b"' deprecated="1.4.0">
 			<desc>
 				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0.</strong>
 				<p>Sets the color scheme (swatch) for the content <code>div</code> of the <placeholder name="name" /> widget. It accepts a single letter from a-z that maps to the swatches included in your theme.</p>
@@ -21,7 +70,19 @@
 				<p>This option is also exposed as a data attribute: <code>data-content-theme="b"</code>.</p>
 			</desc>
 		</option>
+		<option name="corners" type="Boolean" default="true" example-value="false">
+			<desc>This option is provided by the <code>dialog</code> extension.
+				<p>Sets whether to draw the dialog with rounded corners.</p>
+				<p>This option is also exposed as a data attribute: <code>data-corners="false"</code>.</p>
+			</desc>
+		</option>
 		<xi:include href="../includes/widget-option-defaults.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<option name="dialog" type="Boolean" default="false" example-value="true">
+			<desc>This option is provided by the <code>dialog</code> extension.
+				<p>Sets whether the page should be styled like a dialog.</p>
+				<p>This option is also exposed as a data attribute: <code>data-dialog="true"</code>.</p>
+			</desc>
+		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="domCache" default="false" example-value="true">
 			<desc>
@@ -37,7 +98,7 @@
 				<p>The value of this option is a selector that will be used in addition to the <a href="#option-keepNativeDefault">keepNativeDefault</a> option to prevent elements matching it from being enhanced.</p>
 				<p>This option is also exposed as a data attribute: <code>data-keep-native=".do-not-enhance</code>.</p>
 			</desc>
-			<type name="String" />
+			<type name="Selector" />
 		</option>
 		<option name="keepNativeDefault" default='":jqmData(role=&#39;none&#39;), :jqmData(role=&#39;nojs&#39;)"' example-value='".do-not-enhance"' deprecated="1.4.0">
 			<desc>
@@ -45,7 +106,14 @@
 				<p>The value of this option is a selector that will be used to prevent elements matching it from being enhanced.</p>
 				<p>This option is also exposed as a data attribute: <code>data-keep-native-default=".do-not-enhance</code>.</p>
 			</desc>
-			<type name="String" />
+			<type name="Selector" />
+		</option>
+		<option name="overlayTheme" type="String" default='"a"' example-value='"b"'>
+			<desc>This option is provided by the <code>dialog</code> extension.
+				<p>Dialogs appear to be floating above an overlay layer. This overlay adopts the swatch "a" content color by default, but the data-overlay-theme attribute can be added to the element to set the overlay to any swatch letter.</p>
+				<p> Possible values: swatch letter (a-z)</p>
+				<p>This option is also exposed as a data attribute: <code>data-overlay-theme="b"</code>.</p>
+			</desc>
 		</option>
 		<option name="theme" default='"a"' example-value='"b"'>
 			<desc>
@@ -71,17 +139,33 @@
 		</event>
 	</events>
 	<methods>
+		<method name="bindRemove">
+			<desc>Instruct the page to remove itself when it is hidden.
+				<p>Pages have both <code>data-external-page="true"</code> and <code>data-dom-cache="false"</code> when you call bindRemove(), otherwise the method will do nothing.</p>
+			</desc>
+			<signature example-params="function() { alert( 'Page hidden' ); }">
+				<argument name="callback" type="Function">
+					<desc>An optional callback to replace the internal handling of the page removal. The internal callback only removes the page if it is not being hidden as part of a same-page transition.</desc>
+				</argument>
+			</signature>
+		</method>
 		<method name="keepNativeSelector" return="Selector" deprecated="1.4.0">
 			<desc>
 				<strong>This method is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. The new <a href="/global-config/#keepNative">keepNative</a> option replaces it.</strong>
 				<p>Returns the selector used to filter elements which are not to be enhanced.</p>
 			</desc>
 		</method>
-		<method name="removeContainerBackground">
-			<desc>Removes the background swatch from the page widget's container (usually the body).</desc>
+		<method name="removeContainerBackground" deprecated="1.4.0">
+			<desc>
+				<strong>This method is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0.</strong>
+				<p>Removes the background swatch from the page widget's container (usually the body).</p>
+			</desc>
 		</method>
-		<method name="setContainerBackground" example-params='"c"'>
-			<desc>Sets a new background swatch for the page widget's container (usually the body).</desc>
+		<method name="setContainerBackground" example-params='"b"' deprecated="1.4.0">
+			<desc>
+				<strong>This method is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0.</strong>
+				<p>Sets a new background swatch for the page widget's container (usually the body).</p>
+			</desc>
 			<argument name="theme" type="String">
 			</argument>
 		</method>
