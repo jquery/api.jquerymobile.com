@@ -77,6 +77,11 @@
 			</desc>
 		</option>
 		<xi:include href="../includes/widget-option-defaults.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<option name="degradeInputs">
+			<desc>
+				<p><strong>This option is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Use <a href="/global-config/#degradeInputs"><code>$.mobile.degradeInputs</code></a> instead.</strong></p>
+			</desc>
+		</option>
 		<option name="dialog" type="Boolean" default="false" example-value="true">
 			<desc>This option is provided by the <code>dialog</code> extension.
 				<p>Sets whether the page should be styled like a dialog.</p>

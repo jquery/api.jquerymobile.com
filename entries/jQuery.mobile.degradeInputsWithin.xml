@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<entry type="method" name="jQuery.mobile.degradeInputsWithin" return="Undefined">
+	<added>1.4.0</added>
+	<title>jQuery.mobile.degradeInputsWithin()</title>
+	<desc>Alter the input type of form widgets.</desc>
+	<longdesc>
+		<p>Some native input types have undesirable native behavior. <placeholder name="name"/> will alter the input type of such elements during page creation to fallback input types whose native behavior is acceptable. You can then achieve the user experience you desire by instantiating jQuery Mobile widgets on the modified native elements.</p>
+	</longdesc>
+	<signature example-params="target">
+		<argument name="target" type="Element">
+			<desc>The element whose children should be considered for input degradation.</desc>
+		</argument>
+	</signature>
+	<category slug="methods"/>
+	<example>
+		<desc>Degrading Inputs</desc>
+		<html><![CDATA[
+	<div data-role="header">
+		<h2>jQuery Mobile Example</h2>
+	</div>
+	<div class="ui-content" role="main">
+		<form>
+			<fieldset>
+				<div class="ui-field-contain">
+					<label for="degraded-range">Type <code>range</code> degraded to <code>number</code></label>
+					<input type="range" id="degraded-range" min="0" max="91" value="17"></input>
+				</div>
+				<div class="ui-field-contain">
+					<label for="degraded-search">Type <code>search</code> degraded to <code>text</code></label>
+					<input type="search" id="degraded-search"></input>
+				</div>
+				<div class="ui-field-contain">
+					<label for="unchanged-url">Unchanged type <code>url</code></label>
+					<input type="url" id="unchanged-url"></input>
+				</div>
+			</fieldset>
+		</form>
+	</div>]]></html>
+	</example>
+</entry>

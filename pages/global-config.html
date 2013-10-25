@@ -91,6 +91,38 @@ $( ":mobile-pagecontainer" )
 	<dt id="defaultPageTransition"><code>defaultPageTransition</code> <em>string</em>, default: 'fade'</dt>
 	<dd>Set the default transition for page changes that use Ajax. Note: default changed from 'slide' to 'fade' in 1.1. Set to 'none' for no transitions.</dd>
 	<br />
+	<dt id="degradeInputs"><code>degradeInputs</code> <em>object</em></dt>
+	<dd>This setting influences the default behaviour of the function <a href="/jQuery.mobile.degradeInputsWithin/">$.mobile.degradeInputsWithin()</a>. It specifies how inputs are to be degraded. Each property is the name of an input type, and the property's value is either <code>false</code>, meaning to leave inputs of the given type untouched, or a string giving an alternative input type into which elements of the given input type should be converted. By default, only <code>input</code> elements of type <code>"range"</code> and of type <code>"search"</code> are degraded:
+ 		<dl>
+			<dt><code>"color"</code>, default: <code>false</code></dt>
+			<dd>The input type to which to convert <code>input</code> elements of type <code>"color"</code>.</dd>
+			<dt><code>"date"</code>, default: <code>false</code></dt>
+			<dd>The input type to which to convert <code>input</code> elements of type <code>"date"</code>.</dd>
+			<dt><code>"datetime"</code>, default: <code>false</code></dt>
+			<dd>The input type to which to convert <code>input</code> elements of type <code>"datetime"</code>.</dd>
+			<dt><code>"datetime-local"</code>, default: <code>false</code></dt>
+			<dd>The input type to which to convert <code>input</code> elements of type <code>"datetime-local"</code>.</dd>
+			<dt><code>"email"</code>, default: <code>false</code></dt>
+			<dd>The input type to which to convert <code>input</code> elements of type <code>"email"</code>.</dd>
+			<dt><code>"month"</code>, default: <code>false</code></dt>
+			<dd>The input type to which to convert <code>input</code> elements of type <code>"month"</code>.</dd>
+			<dt><code>"number"</code>, default: <code>false</code></dt>
+			<dd>The input type to which to convert <code>input</code> elements of type <code>"number"</code>.</dd>
+			<dt><code>"range"</code>, default: <code>"number"</code></dt>
+			<dd>The input type to which to convert <code>input</code> elements of type <code>"range"</code>.</dd>
+			<dt><code>"search"</code>, default: <code>"text"</code></dt>
+			<dd>The input type to which to convert <code>input</code> elements of type <code>"search"</code>.</dd>
+			<dt><code>"tel"</code>, default: <code>false</code></dt>
+			<dd>The input type to which to convert <code>input</code> elements of type <code>"tel"</code>.</dd>
+			<dt><code>"time"</code>, default: <code>false</code></dt>
+			<dd>The input type to which to convert <code>input</code> elements of type <code>"time"</code>.</dd>
+			<dt><code>"url"</code>, default: <code>false</code></dt>
+			<dd>The input type to which to convert <code>input</code> elements of type <code>"url"</code>.</dd>
+			<dt><code>"week"</code>, default: <code>false</code></dt>
+			<dd>The input type to which to convert <code>input</code> elements of type <code>"week"</code>.</dd>
+		</dl>
+	</dd>
+	<br />
 	<dt id="dynamicBaseEnabled"><code>dynamicBaseEnabled</code> <em>boolean</em>, default: true</dt>
 	<dd>When this property is set to <code>false</code> the base tag value in browsers that support a dynamic base tag and URL prefixes in browsers that don't <em>won't</em> be updated to reflect where the page was loaded from. This means that resource references that are relative to the page on which they are defined may break. This option is available for web frameworks that operate under a universal base tag value where all links and assets are relative to a signal base.</dd>
 	<br />
