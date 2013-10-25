@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<option name="initSelector" default="null" deprecated="1.4.0">
+<option name="initSelector" default="See below" deprecated="1.4.0">
 	<desc>
 		<p>The default <code>initSelector</code> for the <placeholder name="name" /> widget is:</p>
 <pre><code>
@@ -15,5 +15,5 @@ $( document ).on( "mobileinit", function() {
 		<p><strong>Note:</strong> Remember to attach the <code>mobileinit</code> handler after you have loaded jQuery, but before you load jQuery Mobile, because the event is triggered as part of jQuery Mobile's loading process.</p>
 		<p>The value of this option is a jQuery selector string. The framework selects elements based on the value of this option and instantiates <placeholder name="name" /> widgets on each of the resulting list of elements.</p>
 	</desc>
-	<type name="String" />
+	<type name="Selector" />
 </option>
