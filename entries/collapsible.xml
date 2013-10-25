@@ -105,7 +105,7 @@
 <pre><code>
 &lt;div data-role="collapsible" data-enhanced="true" class="ui-collapsible ui-collapsible-inset ui-corner-all ui-collapsible-collapsed" data-collapsed-icon="arrow-r"&gt;
 	&lt;h2 class="ui-collapsible-heading ui-collapsible-heading-collapsed"&gt;
-		&lt;a href="#" class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-icon-arrow-d"&gt;
+		&lt;a href="#" class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-icon-arrow-r"&gt;
 			Pre-rendered collapsible
 			&lt;span class="ui-collapsible-heading-status"&gt; click to expand contents&lt;/span&gt;
 		&lt;/a&gt;
