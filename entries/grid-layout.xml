@@ -55,7 +55,7 @@
 
 			<iframe src="/resources/grid-layout/example3.html" style="width:100%;height:130px;border:0"></iframe>
 
-			<p>Theme classes (not data-theme attributes) from the <a href="../api/themes.html" class="ui-link">theming system</a> can be added to an element, including grids. On the blocks below, we're adding two classes: <code>ui-bar</code> to add the default bar padding and <code>ui-bar-e</code> to apply the background gradient and font styling for the "e" toolbar theme swatch. For illustration purposes, an inline <code>style="height:120px"</code> attribute is also added to each grid to set each to a standard height. </p>
+			<p>Theme classes (not data-theme attributes) from the <a href="/classes/#theme-classes" class="ui-link">theming system</a> can be added to an element, including grids. On the blocks below, we're adding two classes: <code>ui-bar</code> to add the default bar padding and <code>ui-bar-e</code> to apply the background gradient and font styling for the "e" toolbar theme swatch. For illustration purposes, an inline <code>style="height:120px"</code> attribute is also added to each grid to set each to a standard height. </p>
 
 			<iframe src="/resources/grid-layout/example4.html" style="width:100%;height:150px;border:0"></iframe>
 
