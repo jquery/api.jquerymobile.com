@@ -157,6 +157,39 @@
 				</tr>
 			</table>
 		</p>
+		<h3 id="theme-classes">Theme-related classes</h3>
+		<p>The class prefixes in the table below are used for applying a swatch to various parts of the user interface. The actual class name is constructed by appending the swatch letter (a-z) to the prefix. For example, the class <code>ui-body-<strong>a</strong></code> is the swatch applied to the page.
+			<table>
+				<tr>
+					<td class="enum-value" id="theme-classes-ui-bar"><div style="white-space: nowrap;">ui-bar-[a-z]</div></td>
+					<td>Sets the color scheme (swatch) for a bar. This includes headers and footers, or bars you include in the page.</td>
+				</tr>
+				<tr>
+					<td class="enum-value" id="theme-classes-ui-body"><div style="white-space: nowrap;">ui-body-[a-z]</div></td>
+					<td>Sets the color scheme (swatch) for a content block. This includes page content panes (<strong>deprecated as of 1.4.0</strong>), listview items, popups, collapsibles, the loader widget, sliders, and panels.</td>
+				</tr>
+				<tr>
+					<td class="enum-value" id="theme-classes-ui-btn"><div style="white-space: nowrap;">ui-btn-[a-z]</div></td>
+					<td>Sets the color scheme (swatch) for a button.</td>
+				</tr>
+				<tr>
+					<td class="enum-value" id="theme-classes-ui-group-theme"><div style="white-space: nowrap;">ui-group-theme-[a-z]</div></td>
+					<td>Sets the color scheme (swatch) for controlgroups, listviews, and collapsible sets (accordions).</td>
+				</tr>
+				<tr>
+					<td class="enum-value" id="theme-classes-ui-overlay"><div style="white-space: nowrap;">ui-overlay-[a-z]</div></td>
+					<td>Sets the color scheme (swatch) for backgrounds such as those of popup widgets, and page containers.</td>
+				</tr>
+				<tr>
+					<td class="enum-value" id="theme-classes-ui-page-theme"><div style="white-space: nowrap;">ui-page-theme-[a-z]</div></td>
+					<td>Sets the color scheme (swatch) for pages.</td>
+				</tr>
+				<tr>
+					<td class="enum-value" id="theme-classes-ui-panel-page-container"><div style="white-space: nowrap;">ui-panel-page-container-[a-z]</div></td>
+					<td>Panels temporarily set the theme on the page container using this class.</td>
+				</tr>
+			</table>
+		</p>
 	</longdesc>
 	<category slug="css-framework"/>
 </entry>
