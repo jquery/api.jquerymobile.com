@@ -1,11 +1,13 @@
 <?xml version="1.0"?>
-<entry name="tap" type="event" return="jQuery">
+<entry name="taphold" type="event" return="jQuery">
 	<title>taphold</title>
 	<desc>Triggered after a sustained complete touch event.</desc>
 	<longdesc>
-		<p>The jQuery Mobile <code>taphold</code> event triggers after a sustained, complete touch event (also known as a long press).</p>
+		<p>The jQuery Mobile <code><placeholder name="name"/></code> event triggers after a sustained, complete touch event (also known as a long press).</p>
 
 		<p><code>$.event.special.tap.tapholdThreshold</code> (default: 750) - This value dictates how long the user must hold their tap before the taphold event is fired on the target element.</p>
+
+		<p><code>$.event.special.tap.emitTapOnTaphold</code> (default: true) - This value dictates whether a tap event will be emitted along with the <placeholder name="name"/> event.</p>
 
 		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<pre>
