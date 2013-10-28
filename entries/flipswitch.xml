@@ -9,42 +9,42 @@
 		<p>To create a flip switch add the attribute <code>data-role="flipswitch"</code> to a checkbox <code>input</code> or to a <code>select</code> which has two <code>option</code> values.</p>
 		<h3>Checkbox-based flipswitch</h3>
 		<p>Use the following markup to create a flipswitch based on a checkbox <code>input</code>:
-<pre><code>
-&lt;fieldset&gt;
-	&lt;div data-role=&quot;fieldcontain&quot;&gt;
-		&lt;label for=&quot;checkbox-based-flipswitch&quot;&gt;Checkbox-based:&lt;/label&gt;
-		&lt;input type=&quot;checkbox&quot; id=&quot;checkbox-based-flipswitch&quot; data-role=&quot;flipswitch&quot;&gt;&lt;/input&gt;
-	&lt;/div&gt;
-&lt;/fieldset&gt;
-</code></pre>
+<pre><code><![CDATA[
+<fieldset>
+	<div data-role="fieldcontain">
+		<label for="checkbox-based-flipswitch">Checkbox-based:</label>
+		<input type="checkbox" id="checkbox-based-flipswitch" data-role="flipswitch"></input>
+	</div>
+</fieldset>
+]]></code></pre>
 		<iframe src="/resources/flipswitch/example1.html" style="width:100%;height:120px;border:0px"></iframe>
 		The labels for the flipswitch are controlled by the <code>onText</code> and <code>offText</code> options.</p>
 		<h3>Select-based flipswitch</h3>
 		<p>You can also create a flipswitch based on a <code>select</code> element:
-<pre><code>
-&lt;fieldset&gt;
-	&lt;div data-role=&quot;fieldcontain&quot;&gt;
-		&lt;label for=&quot;select-based-flipswitch&quot;&gt;Select-based:&lt;/label&gt;
-		&lt;select id=&quot;select-based-flipswitch&quot; data-role=&quot;flipswitch&quot;&gt;
-			&lt;option value=&quot;leave&quot;&gt;Bye&lt;/option&gt;
-			&lt;option value=&quot;arrive&quot;&gt;Hi&lt;/option&gt;
-		&lt;/select&gt;
-	&lt;/div&gt;
-&lt;/fieldset&gt;
-</code></pre>
+<pre><code><![CDATA[
+<fieldset>
+	<div data-role="fieldcontain">
+		<label for="select-based-flipswitch">Select-based:</label>
+		<select id="select-based-flipswitch" data-role="flipswitch">
+			<option value="leave">Bye</option>
+			<option value="arrive">Hi</option>
+		</select>
+	</div>
+</fieldset>
+]]></code></pre>
 		<iframe src="/resources/flipswitch/example2.html" style="width:100%;height:120px;border:0px"></iframe>
 		The labels for the flipswitch are controlled by the labels of the <code>select</code> element's <code>option</code> elements. The first option is used for the inactive, "off" state, and the second option is used for the active, "on" state.</p>
 
 		<xi:include href="../includes/pre-rendered-common.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<p>The <placeholder name="name"/> widget adds a wrapper <code>div</code> around the <code>input</code>. In addition to the original element, the wrapper also contains two <code>span</code> elements where the two labels are stored. The first <code>span</code> is styled as a button with the text for the active state appearing outside the button's bounding box to the left. To make the <placeholder name="name"/> reachable by tabbing, you can add the <code>tabindex="1"</code> attribute to the first <code>span</code>.</p>
 		<p>In the example below, pre-rendered markup for a <placeholder name="name"/> is provided. The attribute <code>data-corners="false"</code> is explicitly specified, since the absence of the <code>ui-corner-all</code> class on the wrapper element indicates that the "corners" widget option is to be false.</p>
-<pre><code>
-&lt;div class=&quot;ui-flipswitch ui-shadow-inset ui-bar-inherit&quot;&gt;
-	&lt;span tabindex=&quot;1&quot; class=&quot;ui-flipswitch-on ui-btn ui-shadow ui-btn-inherit&quot;&gt;On&lt;/span&gt;
-	&lt;span class=&quot;ui-flipswitch-off&quot;&gt;Off&lt;/span&gt;
-	&lt;input type=&quot;checkbox&quot; data-role=&quot;flipswitch&quot; data-enhanced=&quot;true&quot; data-corners=&quot;false&quot; name=&quot;flip-checkbox&quot; class=&quot;ui-flipswitch-input&quot;&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div class="ui-flipswitch ui-shadow-inset ui-bar-inherit">
+	<span tabindex="1" class="ui-flipswitch-on ui-btn ui-shadow ui-btn-inherit">On</span>
+	<span class="ui-flipswitch-off">Off</span>
+	<input type="checkbox" data-role="flipswitch" data-enhanced="true" data-corners="false" name="flip-checkbox" class="ui-flipswitch-input">
+</div>
+]]></code></pre>
 		<iframe src="/resources/flipswitch/example3.html" style="width:100%;height:120px;border:0px"></iframe>
 
 	</longdesc>
