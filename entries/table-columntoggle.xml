@@ -14,7 +14,9 @@
 
 		<p>The column chooser mode requires a <code>table</code> element with two attributes: <code>data-role=&quot;table&quot;</code> and <code>data-mode=&quot;columntoggle&quot;</code>. An <code>ID</code> attribute is also required on the table to associate it with the column chooser popup menu.</p>
 
-		<pre><code>&lt;table data-role=&quot;table&quot; data-mode=&quot;columntoggle&quot; id=&quot;my-table&quot;&gt;</code></pre>
+<pre><code><![CDATA[
+<table data-role="table" data-mode="columntoggle" id="my-table">
+]]></code></pre>
 
 		<h3>How column toggle mode works</h3>
 
@@ -31,17 +33,19 @@
 		<p>The table works by hiding and showing columns based on two inputs: available screen width or by the user checking and unchecking which columns to display in a column picker popup. Add <code>data-priority</code> attributes to each of the table headers of columns you want to responsively display and assign a priority (1 = highest, 6 = lowest). Any table header given a priority will be available in the column picker menu. </p>
 		<p>To make a column <em>persistent</em> so it's not available for hiding, omit the <code>data-priority</code> attribute. This will make the column visible at all widths and won't be available in the column chooser menu.</p>
 
-<pre><code>&lt;th&gt;I&#x27;m critical and can&#x27;t be removed&lt;/th&gt;
-&lt;th data-priority=&quot;1&quot;&gt;I&#x27;m very important&lt;/th&gt;
-&lt;th data-priority=&quot;3&quot;&gt;I&#x27;m somewhat&lt;/th&gt;
-&lt;th data-priority=&quot;5&quot;&gt;I&#x27;m less important&lt;/th&gt;
-</code></pre>
+<pre><code><![CDATA[
+<th>I'm critical and can't be removed</th>
+<th data-priority="1">I'm very important</th>
+<th data-priority="3">I'm somewhat</th>
+<th data-priority="5">I'm less important</th>
+]]></code></pre>
 
 
 		<p>Behind the scenes, the plugin will apply classes to each cell that map to the priority set in the data attribute on the header. For example, if a table heading has a <code>data-priority="3"</code> attribute, every cell in that column will assigned a <code>ui-table-priority-3</code> class once enhanced. These classes are then used in media queries to hide and show columns based on screen width (see below).</p>
 
-<pre><code>&lt;td class=&quot;ui-table-priority-3&quot;&gt;97%&lt;/td&gt;
-</code></pre>
+<pre><code><![CDATA[
+<td class="ui-table-priority-3">97%</td>
+]]></code></pre>
 
 		<p>You may use any priority naming convention and assign as many (or few) levels of priority for the columns. The plugin  simply generates class names based on the values in the <code>data-priority</code> attribute so even though we default to using a numeric system of 1-6, any naming convention is possible. </p>
 
@@ -64,7 +68,7 @@
 		<p>In the example styles below for a <code>my-custom-class</code> class on the table, the priority 1 columns are shown first, at widths above <code>20em</code> (320px), then priority 2 kicks in above <code>30em</code> (480px) and so on up to wide desktop widths with priority 6. Feel free to change these breakpoints in your stylesheet and choose how many priority levels you'd like to use.</p>
 
 
-<pre><code>
+<pre><code><![CDATA[
 /* Show priority 1 at 320px (20em x 16px) */
 @media screen and (min-width: 20em) {
    .my-custom-class th.ui-table-priority-1,
@@ -79,10 +83,10 @@
      display: table-cell;
    }
 }
-...more breakpoints...
-</code></pre>
+/* ...more breakpoints... */
+]]></code></pre>
 <p>Due to CSS specificity, you will also need to include the class definitions for the hidden and visible states <em>after</em> the custom breakpoints in your custom stylesheet so be sure to include these as well:</p>
-<pre><code>
+<pre><code><![CDATA[
 /* Manually hidden */
 .my-custom-class th.ui-table-cell-hidden,
 .my-custom-class td.ui-table-cell-hidden {
@@ -94,7 +98,7 @@
 .my-custom-class td.ui-table-cell-visible {
    display: table-cell;
 }
-</code></pre>
+]]></code></pre>
 
 		<h3>Applying a preset breakpoint</h3>
 
@@ -102,7 +106,9 @@
 
 		<p>These breakpoints can applied by adding a <code>class="ui-responsive"</code> to the table element. Here is an example of a table with this class added:</p>
 
-		<pre><code>&lt;table data-role=&quot;table&quot; class=&quot;ui-responsive&quot; data-mode=&quot;columntoggle&quot; id=&quot;my-table&quot;&gt;</code></pre>
+<pre><code><![CDATA[
+<table data-role="table" class="ui-responsive" data-mode="columntoggle" id="my-table">
+]]></code></pre>
 
 		<p>The six preset breakpoints classes included in the column toggle stylesheet use regular increments of 10em (160 pixels). Here is a summary of the breakpoints assigned to each priority in the preset styles: </p>
 
@@ -144,44 +150,111 @@
 		<p>The popup widget must contain a single controlgroup widget which in turn contains all the checkboxes representing the columns of the table.</p>
 		<p>In the example below the parameter <code>data-column-btn-theme="b"</code> is added to the table explicitly to indicate that the theme applied to the "Columns..." button is not the default (<code>null</code>).</p>
 
-<pre><code>
-&lt;div data-role=&quot;popup&quot; id=&quot;table-column-toggle-popup&quot; class=&quot;ui-table-columntoggle-popup&quot;&gt;
-	&lt;fieldset data-role=&quot;controlgroup&quot;&gt;
-		&lt;label&gt;Rank&lt;input type=&quot;checkbox&quot; checked data-cacheval=&quot;false&quot; locked=&quot;true&quot;&gt;&lt;/input&gt;&lt;/label&gt;
-		&lt;label&gt;Year&lt;input type=&quot;checkbox&quot; checked data-cacheval=&quot;false&quot; locked=&quot;true&quot;&gt;&lt;/input&gt;&lt;/label&gt;
-		&lt;label&gt;Rotten Tomato Rating&lt;input type=&quot;checkbox&quot; checked data-cacheval=&quot;false&quot; locked=&quot;true&quot;&gt;&lt;/input&gt;&lt;/label&gt;
-		&lt;label&gt;Reviews&lt;input type=&quot;checkbox&quot; checked data-cacheval=&quot;false&quot; locked=&quot;true&quot;&gt;&lt;/input&gt;&lt;/label&gt;
-	&lt;/fieldset&gt;
-&lt;/div&gt;
-&lt;a href=&quot;#table-column-toggle-popup&quot; class=&quot;ui-table-columntoggle-btn ui-btn ui-btn-b ui-corner-all ui-shadow ui-mini&quot; data-rel=&quot;popup&quot;&gt;Columns...&lt;/a&gt;
-&lt;table data-role=&quot;table&quot; id=&quot;table-column-toggle&quot; data-mode=&quot;columntoggle&quot; data-enhanced=&quot;true&quot; class=&quot;ui-table ui-table-columntoggle&quot; data-column-btn-theme=&quot;b&quot;&gt;
-	&lt;thead&gt;
-		&lt;tr&gt;
-			&lt;th data-priority=&quot;2&quot; data-colstart=&quot;1&quot; class=&quot;ui-table-priority-2 ui-table-cell-visible&quot;&gt;Rank&lt;/th&gt;
-			&lt;th data-colstart=&quot;2&quot;&gt;Movie Title&lt;/th&gt;
-			&lt;th data-priority=&quot;3&quot; data-colstart=&quot;3&quot; class=&quot;ui-table-priority-3 ui-table-cell-visible&quot;&gt;Year&lt;/th&gt;
-			&lt;th data-priority=&quot;1&quot; data-colstart=&quot;4&quot; class=&quot;ui-table-priority-1 ui-table-cell-visible&quot;&gt;&lt;abbr title=&quot;Rotten Tomato Rating&quot;&gt;Rating&lt;/abbr&gt;&lt;/th&gt;
-			&lt;th data-priority=&quot;5&quot; data-colstart=&quot;5&quot; class=&quot;ui-table-priority-5 ui-table-cell-visible&quot;&gt;Reviews&lt;/th&gt;
-		&lt;/tr&gt;
-	&lt;/thead&gt;
-	&lt;tbody&gt;
-		&lt;tr&gt;
-			&lt;th class=&quot;ui-table-priority-2 ui-table-cell-visible&quot;&gt;1&lt;/th&gt;
-			&lt;td&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Citizen_Kane&quot; data-rel=&quot;external&quot;&gt;Citizen Kane&lt;/a&gt;&lt;/td&gt;
-			&lt;td class=&quot;ui-table-priority-3 ui-table-cell-visible&quot;&gt;1941&lt;/td&gt;
-			&lt;td class=&quot;ui-table-priority-1 ui-table-cell-visible&quot;&gt;100%&lt;/td&gt;
-			&lt;td class=&quot;ui-table-priority-5 ui-table-cell-visible&quot;&gt;74&lt;/td&gt;
-		&lt;/tr&gt;
-		&lt;tr&gt;
-			&lt;th class=&quot;ui-table-priority-2 ui-table-cell-visible&quot;&gt;2&lt;/th&gt;
-			&lt;td&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Casablanca_(film)&quot; data-rel=&quot;external&quot;&gt;Casablanca&lt;/a&gt;&lt;/td&gt;
-			&lt;td class=&quot;ui-table-priority-3 ui-table-cell-visible&quot;&gt;1942&lt;/td&gt;
-			&lt;td class=&quot;ui-table-priority-1 ui-table-cell-visible&quot;&gt;97%&lt;/td&gt;
-			&lt;td class=&quot;ui-table-priority-5 ui-table-cell-visible&quot;&gt;64&lt;/td&gt;
-		&lt;/tr&gt;
-	&lt;/tbody&gt;
-&lt;/table&gt;
-</code></pre>
+<pre><code><![CDATA[
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>table-columntoggle demo</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/git/jquery.mobile-git.min.css">
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/git/jquery.mobile-git.min.js"></script>
+</head>
+<body>
+	<div data-role="page">
+		<div data-role="header">
+			<h1>jQuery Mobile Example</h1>
+		</div>
+		<div role="main" class="ui-content">
+			<table data-role="table" id="table-column-toggle" data-mode="columntoggle" class="ui-responsive table-stroke">
+				<thead>
+					<tr>
+						<th data-priority="2">Rank</th>
+						<th>Movie Title</th>
+						<th data-priority="3">Year</th>
+						<th data-priority="1"><abbr title="Rotten Tomato Rating">Rating</abbr></th>
+						<th data-priority="5">Reviews</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>1</th>
+						<td><a href="http://en.wikipedia.org/wiki/Citizen_Kane" data-rel="external">Citizen Kane</a></td>
+						<td>1941</td>
+						<td>100%</td>
+						<td>74</td>
+					</tr>
+					<tr>
+						<th>2</th>
+						<td><a href="http://en.wikipedia.org/wiki/Casablanca_(film)" data-rel="external">Casablanca</a></td>
+						<td>1942</td>
+						<td>97%</td>
+						<td>64</td>
+					</tr>
+					<tr>
+						<th>3</th>
+						<td><a href="http://en.wikipedia.org/wiki/The_Godfather" data-rel="external">The Godfather</a></td>
+						<td>1972</td>
+						<td>97%</td>
+						<td>87</td>
+					</tr>
+					<tr>
+						<th>4</th>
+						<td><a href="http://en.wikipedia.org/wiki/Gone_with_the_Wind_(film)" data-rel="external">Gone with the Wind</a></td>
+						<td>1939</td>
+						<td>96%</td>
+						<td>87</td>
+					</tr>
+					<tr>
+						<th>5</th>
+						<td><a href="http://en.wikipedia.org/wiki/Lawrence_of_Arabia_(film)" data-rel="external">Lawrence of Arabia</a></td>
+						<td>1962</td>
+						<td>94%</td>
+						<td>87</td>
+					</tr>
+					<tr>
+						<th>6</th>
+						<td><a href="http://en.wikipedia.org/wiki/Dr._Strangelove" data-rel="external">Dr. Strangelove Or How I Learned to Stop Worrying and Love the Bomb</a></td>
+						<td>1964</td>
+						<td>92%</td>
+						<td>74</td>
+					</tr>
+					<tr>
+						<th>7</th>
+						<td><a href="http://en.wikipedia.org/wiki/The_Graduate" data-rel="external">The Graduate</a></td>
+						<td>1967</td>
+						<td>91%</td>
+						<td>122</td>
+					</tr>
+					<tr>
+						<th>8</th>
+						<td><a href="http://en.wikipedia.org/wiki/The_Wizard_of_Oz_(1939_film)" data-rel="external">The Wizard of Oz</a></td>
+						<td>1939</td>
+						<td>90%</td>
+						<td>72</td>
+					</tr>
+					<tr>
+						<th>9</th>
+						<td><a href="http://en.wikipedia.org/wiki/Singin%27_in_the_Rain" data-rel="external">Singin' in the Rain</a></td>
+						<td>1952</td>
+						<td>89%</td>
+						<td>85</td>
+					</tr>
+					<tr>
+						<th>10</th>
+						<td class="title"><a href="http://en.wikipedia.org/wiki/Inception" data-rel="external">Inception</a></td>
+						<td>2010</td>
+						<td>84%</td>
+						<td>78</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
+]]></code></pre>
 			<iframe src="../resources/table-columntoggle/example1.html" style="width: 100%; height: 240px; border: 0px;"></iframe>
 
   	</longdesc>
