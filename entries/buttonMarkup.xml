@@ -107,7 +107,7 @@ $( "button#myButton" )
 			<h3>Icon set</h3>
 
 			<p>The following <code>data-icon</code> attributes can be referenced to create the icons shown below:
-			<iframe src="/resources/buttonMarkup/example10.html" style="width:100%;height:1840px;border:0px"></iframe></p>
+			<iframe src="/resources/buttonMarkup/example10.html" style="width:100%;height:1970px;border:0px"></iframe></p>
 
 			<h3>Icon positioning</h3>
 			<p>By default, all icons in buttons are placed to the left of the button text.
