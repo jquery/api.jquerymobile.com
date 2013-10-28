@@ -8,13 +8,13 @@
 			<p>A listview is coded as a simple unordered list containing linked list items with a <code>data-role="listview"</code> attribute. jQuery Mobile will apply all the necessary styles to transform the list into a mobile-friendly listview with right arrow indicator that fills the full width of the browser window. When you tap on the list item, the framework will trigger a click on the first link inside the list item, issue an Ajax request for the URL in the link, create the new page in the DOM, then kick off a page transition. View the <a href="/data-attribute/">data- attribute reference</a> to see all the possible attributes you can add to listviews.</p>
 			<p>Here is the HTML markup for a basic linked list.</p>
 
-<pre><code>
-&lt;ul data-role=&quot;listview&quot;&gt;
-	&lt;li&gt;&lt;a href=&quot;acura.html&quot;&gt;Acura&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href=&quot;audi.html&quot;&gt;Audi&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href=&quot;bmw.html&quot;&gt;BMW&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</code></pre>
+<pre><code><![CDATA[
+<ul data-role="listview">
+	<li><a href="acura.html">Acura</a></li>
+	<li><a href="audi.html">Audi</a></li>
+	<li><a href="bmw.html">BMW</a></li>
+</ul>
+]]></code></pre>
 
 		<p><iframe src="/resources/listview/example1.html" style="width:100%;height:940px;border:0px"></iframe></p>
 
@@ -47,19 +47,19 @@
 
 			<p>By default, the text used to create dividers is the uppercased first letter of the item's text. Alternatively you can specify divider text by setting the <code>autodividersSelector</code> option on the listview programmatically. For example, to add a custom selector to the element with <code>id="mylistview"</code>:</p>
 
-<pre><code>
+<pre><code><![CDATA[
 $( "#mylistview" ).listview({
   autodividers: true,
 
-  // the selector function is passed a &lt;li&gt; element from the listview;
-  // it should return the appropriate divider text for that &lt;li&gt;
+  // the selector function is passed a <li> element from the listview;
+  // it should return the appropriate divider text for that <li>
   // element as a string
   autodividersSelector: function ( li ) {
     var out = /* generate a string based on the content of li */;
     return out;
   }
 });
-</code></pre>
+]]></code></pre>
 
 			<p>Note that if you are using formatted list items that contain a floating element (for example <code>ui-li-aside</code>), this element precedes its siblings regardless of the order in your HTML markup. This results in the first character of the floating element being used as divider text. Therefore it is recommended to specify the divider text in this case.</p>
 
@@ -120,15 +120,15 @@ $( "#mylistview" ).listview({
 			<h3>Calling the listview plugin</h3>
 
 			<p>You can directly call the listview plugin on any selector, just like any jQuery plugin:</p>
-<pre><code>
+<pre><code><![CDATA[
 $( "#mylist" ).listview();
-</code></pre>
+]]></code></pre>
 
 			<h3>Updating lists</h3>
 			<p>If you add items to a listview, you'll need to call the <code>refresh()</code> method on it to update the styles. For example:</p>
-<pre><code>
+<pre><code><![CDATA[
 $( "#mylist" ).listview( "refresh" );
-</code></pre>
+]]></code></pre>
 
 			<p>Note that the <code>refresh()</code> method only affects <strong>new nodes</strong> appended to a list. This is done for performance reasons. Any list items already enhanced will be ignored by the refresh process. This means that if you change the contents or attributes on an already enhanced list item, these won't be reflected. If you want a list item to be updated, replace it with fresh markup before calling refresh.</p>
 
@@ -148,7 +148,7 @@ $( "#mylist" ).listview( "refresh" );
 				<p>The value of this option is a function that returns a string. It receives a jQuery collection object containing an element. It computes the returned string from the element. The function is called for each list item in sequence, and a divider is created whenever the function returns a value for a list item that is different from the value it returned for the previous list item.</p>
 				<p>The function may return <code>null</code> for a given list item. In that case, no new divider is created even if the value returned for the previous list item was something other than <code>null</code>.</p>
 				<p>The default value of this option is a function that returns the capitalized first letter of the list item text:</p>
-<pre><code>
+<pre><code><![CDATA[
 function defaultAutodividersSelector( elt ) {
 	// look for the text in the given element
 	var text = $.trim( elt.text() ) || null;
@@ -162,7 +162,7 @@ function defaultAutodividersSelector( elt ) {
 
 	return text;
 }
-</code></pre>
+]]></code></pre>
 			</desc>
 		</option>
 		<option name="countTheme" type="String" default="null, inherited from parent" example-value='"b"' deprecated="1.4.0">
@@ -193,13 +193,14 @@ function defaultAutodividersSelector( elt ) {
 			<desc>
 				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0. It is now implemented in the <a href="/filterable/#option-filterCallback">filterable</a> widget.</strong>
 				<p>The function to determine which rows to hide when the search filter textbox changes. The function accepts two arguments -- the text of the list item (or data-filtertext value if present), and the search string. Return true to hide the item, false to leave it visible.</p>
-<pre><code>
+<pre><code><![CDATA[
 $( document ).on( "mobileinit", function() {
 	$.mobile.listview.prototype.options.filterCallback = function( text, searchValue ) {
 		// only show items that *begin* with the search string
 		return text.toLowerCase().substring( 0, searchValue.length ) !== searchValue;
 	};
-});</code></pre>
+});
+]]></code></pre>
 			</desc>
 			<type name="Function" />
 		</option>
