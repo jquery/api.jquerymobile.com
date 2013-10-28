@@ -9,22 +9,21 @@
 		By adding a parent wrapper with a <code>data-role="collapsibleset"</code> attribute around a number of collapsibles, the framework will style these to looks like a visually grouped widget and make it behave like an accordion so only one section can be open at a time.</p>
 		<p>By default, all the sections will be collapsed. To set a section to be open when the page loads, add the <code>data-collapsed="false"</code> attribute to the heading of the section you want expanded.</p>
 
-<pre><code>
-&lt;div data-role="collapsibleset"&gt;
+<pre><code><![CDATA[
+<div data-role="collapsibleset">
 
-	&lt;div data-role=&quot;collapsible&quot; data-collapsed=&quot;false&quot;&gt;
-		&lt;h3&gt;Section 1&lt;/h3&gt;
-		&lt;p&gt;I&#x27;m the collapsible set content for section 1.&lt;/p&gt;
-	&lt;/div&gt;
+	<div data-role="collapsible" data-collapsed="false">
+		<h3>Section 1</h3>
+		<p>I'm the collapsible set content for section 1.</p>
+	</div>
 
-	&lt;div data-role=&quot;collapsible&quot;&gt;
-		&lt;h3&gt;Section 2&lt;/h3&gt;
-		&lt;p&gt;I&#x27;m the collapsible set content for section 2.&lt;/p&gt;
-	&lt;/div&gt;
+	<div data-role="collapsible">
+		<h3>Section 2</h3>
+		<p>I'm the collapsible set content for section 2.</p>
+	</div>
 
-&lt;/div&gt;
-</code></pre>
-
+</div>
+]]></code></pre>
 
 		<p>Here is an example of a collapsible set with 5 sections.
 		<iframe src="/resources/collapsibleset/example1.html" style="width:100%;height:310px;border:0px"></iframe></p>
@@ -53,8 +52,9 @@
 
 		<p>The standard <code>data-theme</code> attribute can be used to set the color of each collapsible in a set. To provide a clearer visual grouping of the content with the headers, add the <code>data-content-theme</code> attribute with a swatch letter. This adds a themed background color and border to the content block. For consistent theming, add these attributes to the parent collapsible set.
 
-<pre><code>&lt;div data-role=&quot;collapsibleset&quot; data-theme=&quot;b&quot; data-content-theme=&quot;a&quot;&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="collapsibleset" data-theme="b" data-content-theme="a">
+]]></code></pre>
 
 		<iframe src="/resources/collapsibleset/example6.html" style="width:100%;height:240px;border:0px"></iframe></p>
 
@@ -67,25 +67,25 @@
 		<p>The <placeholder name="name"/> widget does not require that the collapsibles it contains also be pre-rendered.</p>
 		<p>In the example below, pre-rendered markup for a <placeholder name="name"/> is provided. The attribute <code>data-corners="false"</code> is explicitly specified, since the absence of the <code>ui-corner-all</code> class on the container element indicates that the "corners" widget option is to be false. One of the child collapsibles is provided as-is, while the other is pre-rendered.</p>
 
-<pre><code>
-&lt;div data-role="collapsibleset" class="ui-collapsible-set" data-corners="false"&gt;
-	&lt;div data-role="collapsible"&gt;
-		&lt;h2&gt;Child collapsible&lt;/h2&gt;
-		&lt;p&gt;This is the collapsible content.&lt;/p&gt;
-	&lt;/div&gt;
-	&lt;div data-role="collapsible" data-enhanced="true" class="ui-collapsible ui-collapsible-inset ui-corner-all" data-collapsed="false" data-corners="true"&gt;
-		&lt;h2 class="ui-collapsible-heading"&gt;
-			&lt;a href="#" class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-icon-minus"&gt;
+<pre><code><![CDATA[
+<div data-role="collapsibleset" class="ui-collapsible-set" data-corners="false">
+	<div data-role="collapsible">
+		<h2>Child collapsible</h2>
+		<p>This is the collapsible content.</p>
+	</div>
+	<div data-role="collapsible" data-enhanced="true" class="ui-collapsible ui-collapsible-inset ui-corner-all" data-collapsed="false" data-corners="true">
+		<h2 class="ui-collapsible-heading">
+			<a href="#" class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-icon-minus">
 				Pre-rendered child collapsible
-				&lt;span class="ui-collapsible-heading-status"&gt;click to collapse contents&lt;/span&gt;
-			&lt;/a&gt;
-		&lt;/h2&gt;
-		&lt;div class="ui-collapsible-content" aria-hidden="false"&gt;
-			&lt;p&gt;This is the collapsible content.&lt;/p&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+				<span class="ui-collapsible-heading-status">click to collapse contents</span>
+			</a>
+		</h2>
+		<div class="ui-collapsible-content" aria-hidden="false">
+			<p>This is the collapsible content.</p>
+		</div>
+	</div>
+</div>
+]]></code></pre>
 
 	<iframe src="/resources/collapsibleset/example8.html" style="width:100%;height:240px;border:0px"></iframe>
 
