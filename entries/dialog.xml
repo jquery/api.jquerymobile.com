@@ -6,28 +6,28 @@
 	<longdesc>
 		<strong>Dialogs are deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. The <code>dialog</code> option provided by the <code>page.dialog</code> extension of the <a href="/page/">page</a> widget allows you to style a page as a dialog, however, the special navigational handling will be removed. You may also consider implementing dialogs using <a href="/popup/">popup</a> widgets.</strong>
 		<p>Any page can be presented as a modal dialog by adding the <code>data-rel="dialog"</code> attribute to the page anchor link. When the "dialog" attribute is applied, the framework adds styles to add rounded corners, margins around the page and a dark background to make the "dialog" appear to be suspended above the page.</p>
-<pre><code>
-&lt;a href="foo.html" data-rel="dialog"&gt;Open dialog&lt;/a&gt;
-</code></pre>
+<pre><code><![CDATA[
+<a href="foo.html" data-rel="dialog">Open dialog</a>
+]]></code></pre>
 
 		<iframe src="/resources/dialog/example1.html" style="width:100%;height:420px;border:0px"></iframe>
 
 		<p>You can open a dialog programmatically by calling the <a href="/jQuery.mobile.changePage/"><strong>$.mobile.changePage</strong></a> method:</p>
-<pre><code>
+<pre><code><![CDATA[
 // Dialog loaded via AJAX
 $.mobile.changePage( "path/to/dialog.html", { role: "dialog" } );
 
 // Dialog present in a multipage document
 $.mobile.changePage( "#myDialog", { role: "dialog" } );
-</code></pre>
+]]></code></pre>
 
 		<h3>Transitions</h3>
 
 		<p>By default, the dialog will open with a 'pop' transition. Like all pages, you can specify any page transition you want on the dialog by adding the <code>data-transition</code> attribute to the link. To make it feel more dialog-like, we recommend specifying a transition of "pop", "slidedown" or "flip".<br />Possible values include: fade, <b>pop</b>, <b>flip</b>, turn, flow, slidefade, slide, slideup, slidedown, none. </p>
 
-<pre><code>
-&lt;a href="foo.html" data-rel="dialog" data-transition="pop"&gt;Open dialog&lt;/a&gt;
-</code></pre>
+<pre><code><![CDATA[
+<a href="foo.html" data-rel="dialog" data-transition="pop">Open dialog</a>
+]]></code></pre>
 
 		<iframe src="/resources/dialog/example2.html" style="width:100%;height:420px;border:0px"></iframe>
 
@@ -77,7 +77,7 @@ $.mobile.changePage( "#myDialog", { role: "dialog" } );
 
 		<p>For the sake of readability, dialogs have a default <code>width</code> of 92.5% and a <code>max-width</code> of 500 pixels. There is also a 10% top <code>margin</code> to give dialogs larger top margin on larger screens, but collapse to a small margin on smartphones. The dialog's inner container is shifted towards the <code>top</code> with 15px to hide the corner styling if a dialog is used as a control sheet (see above). To override these styles, add the following CSS override rule to your stylesheet and tweak as needed:</p>
 
-<pre><code>
+<pre><code><![CDATA[
 .ui-dialog-contain {
 	width: 92.5%;
 	max-width: 500px;
@@ -86,7 +86,7 @@ $.mobile.changePage( "#myDialog", { role: "dialog" } );
 	position: relative;
 	top: -15px;
 }
-</code></pre>
+]]></code></pre>
 
 	</longdesc>
 	<added>1.0</added>
