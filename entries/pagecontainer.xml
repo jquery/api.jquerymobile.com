@@ -11,36 +11,36 @@
 		<h3>Multipage Documents</h3>
 		<p>In its simplest form, the HTML document retrieved by the browser has a <code>body</code> consisting of several <code>div</code> elements which are enhanced using the <code>page</code> widget. Each such page has an <code>id</code> attribute to distinguish it from other pages.</p>
 		<p>The pages can be interlinked using anchors. When the user clicks such an anchor, a new history entry is created, and the page to which the anchor refers is displayed by means of a smooth transition from the previous page. The example below illustrates a multipage setup. <strong>Note:</strong> If the example below animates using a fade transition instead of the slide transition requested in the anchor, it is because your browser does not support CSS 3D transforms.</p>
-<pre><code>
-&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-	&lt;title&gt;Multipage example&lt;/title&gt;
-	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;
-	&lt;link rel=&quot;stylesheet&quot; href=&quot;http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css&quot; /&gt;
-	&lt;script src=&quot;http://code.jquery.com/jquery-1.10.1.min.js&quot;&gt;&lt;/script&gt;
-	&lt;script src=&quot;http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-	&lt;div data-role=&quot;page&quot; id=&quot;page1&quot;&gt;
-		&lt;div data-role=&quot;header&quot;&gt;
-			&lt;h1&gt;Page 1&lt;/h1&gt;
-		&lt;/div&gt;
-		&lt;div data-role=&quot;content&quot;&gt;
-			&lt;a href=&quot;#page2&quot; data-transition=&quot;slide&quot; class=&quot;ui-btn ui-corner-all ui-btn-inline&quot;&gt;Go To Page 2&lt;/a&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div data-role=&quot;page&quot; id=&quot;page2&quot;&gt;
-		&lt;div data-role=&quot;header&quot;&gt;
-			&lt;h1&gt;Page 2&lt;/h1&gt;
-		&lt;/div&gt;
-		&lt;div data-role=&quot;content&quot;&gt;
-			&lt;a href=&quot;#page1&quot; data-rel=&quot;back&quot; data-transition=&quot;slide&quot; class=&quot;ui-btn ui-corner-all ui-btn-inline&quot;&gt;Go Back To Page 1&lt;/a&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<pre><code><![CDATA[
+<!doctype html>
+<html>
+<head>
+	<title>Multipage example</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="page1">
+		<div data-role="header">
+			<h1>Page 1</h1>
+		</div>
+		<div role="main" class="ui-content">
+			<a href="#page2" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline">Go To Page 2</a>
+		</div>
+	</div>
+	<div data-role="page" id="page2">
+		<div data-role="header">
+			<h1>Page 2</h1>
+		</div>
+		<div role="main" class="ui-content">
+			<a href="#page1" data-rel="back" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline">Go Back To Page 1</a>
+		</div>
+	</div>
+</body>
+</html>
+]]></code></pre>
 		<iframe src="/resources/pagecontainer/example1.html" style="width:100%;height:200px;border:0px;"></iframe>
 
 		<h3>HTTP-analogous navigation via AJAX</h3>
@@ -102,8 +102,8 @@
 				</property>
 				<property name="deferred">
 					<desc>Deferred to be resolved or rejected upon completion of content load. Callbacks that call <code>preventDefault()</code> on the event <strong>MUST</strong> call <code>resolve()</code> or <code>reject()</code> on this object so that <code>change()</code> requests resume processing. Deferred object observers expect the deferred object to be resolved like this:
-<pre><code>
-$( document ).on( &quot;pagecontainerbeforeload&quot;, function( event, data ) {
+<pre><code><![CDATA[
+$( document ).on( "pagecontainerbeforeload", function( event, data ) {
 
 	// Let the framework know we're going to handle the load.
 
@@ -118,10 +118,10 @@ $( document ).on( &quot;pagecontainerbeforeload&quot;, function( event, data ) {
 	data.deferred.resolve( data.absUrl, data.options, page );
 
 });
-</code></pre>
+]]></code></pre>
 					<p>or rejected like this:</p>
-<pre><code>
-$( document ).on( &quot;pagecontainerbeforeload&quot;, function( event, data ) {
+<pre><code><![CDATA[
+$( document ).on( "pagecontainerbeforeload", function( event, data ) {
 
 	// Let the framework know we're going to handle the load.
 
@@ -134,7 +134,8 @@ $( document ).on( &quot;pagecontainerbeforeload&quot;, function( event, data ) {
 
 	data.deferred.reject( data.absUrl, data.options );
 
-});</code></pre>
+});
+]]></code></pre>
 					</desc>
 					<type name="Deferred"/>
 				</property>
@@ -186,11 +187,11 @@ $( document ).on( &quot;pagecontainerbeforeload&quot;, function( event, data ) {
 			<desc>Triggered after the transition animation has completed. <strong>Note:</strong> Unlike the deprecated <code>pagehide</code> event, this event is not triggered on the "fromPage" but the <placeholder name="name"/> widget's element.
 				<p>Note that this event will not be dispatched during the transition of the first page at application startup since there is no previously active page.</p>
 				<p>You can access the <code>nextPage</code> properties via the second argument of a bound callback function. For example:</p>
-<pre><code>
+<pre><code><![CDATA[
 $( ":mobile-pagecontainer" ).on( "pagecontainerhide", function( event, ui ) {
   alert( "This page was just shown: " + ui.nextPage );
 });
-</code></pre>
+]]></code></pre>
 				<p>For these handlers to be invoked during the initial page load, you must bind them before jQuery Mobile executes. This can be done in the <code>mobileinit</code> handler, as described on the global config page.</p>
 			</desc>
 			<argument name="event" type="Event" />
@@ -251,8 +252,8 @@ $( ":mobile-pagecontainer" ).on( "pagecontainerhide", function( event, ui ) {
 				</property>
 				<property name="deferred">
 					<desc>Callbacks that call <code>preventDefault()</code> on the event, <strong>MUST</strong> call <code>resolve()</code> or <code>reject()</code> on this object so that <code>change()</code> requests resume processing. Deferred object observers expect the deferred object to be resolved like this:
-<pre><code>
-$( document ).on( &quot;pageloadfailed&quot;, function( event, data ) {
+<pre><code><![CDATA[
+$( document ).on( "pageloadfailed", function( event, data ) {
 
 	// Let the framework know we're going to handle things.
 
@@ -267,10 +268,10 @@ $( document ).on( &quot;pageloadfailed&quot;, function( event, data ) {
 	data.deferred.resolve( data.absUrl, data.options, page );
 
 });
-</code></pre>
+]]></code></pre>
 						<p>or rejected like this:</p>
-<pre><code>
-$( document ).on( &quot;pageloadfailed&quot;, function( event, data ) {
+<pre><code><![CDATA[
+$( document ).on( "pageloadfailed", function( event, data ) {
 
 	// Let the framework know we're going to handle things.
 
@@ -284,7 +285,7 @@ $( document ).on( &quot;pageloadfailed&quot;, function( event, data ) {
 	data.deferred.reject( data.absUrl, data.options );
 
 });
-</code></pre>
+]]></code></pre>
 					</desc>
 					<type name="Deferred"/>
 				</property>
@@ -310,11 +311,11 @@ $( document ).on( &quot;pageloadfailed&quot;, function( event, data ) {
 		<event name="show">
 			<desc>Triggered after the transition animation has completed.<strong>Note:</strong> Unlike the deprecated <code>pageshow</code> event, this event is not triggered on the "toPage" but the <placeholder name="name"/> widget's element.
 				<p>You can access the <code>prevPage</code> properties via the second argument of a bound callback function. For example: </p>
-<pre><code>
+<pre><code><![CDATA[
 $( ":mobile-pagecontainer" ).on( "pagecontainershow", function( event, ui ) {
   alert( "This page was just hidden: " + ui.prevPage );
 });
-</code></pre>
+]]></code></pre>
 				<p>For these handlers to be invoked during the initial page load, you must bind them before jQuery Mobile executes. This can be done in the <code>mobileinit</code> handler, as described on the global config page.</p>
 			</desc>
 			<argument name="event" type="Event"/>
