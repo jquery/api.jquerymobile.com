@@ -14,7 +14,7 @@
 
 			<pre>
 				<code>
-$(document).on("mobileinit", function(){
+$( document ).on( "mobileinit", function() {
   //apply overrides here
 });
 				</code>
@@ -34,8 +34,8 @@ $(document).on("mobileinit", function(){
 
 			<pre>
 				<code>
-$(document).on("mobileinit", function(){
-  $.extend(  $.mobile , {
+$( document ).on( "mobileinit", function() {
+  $.extend( $.mobile , {
     foo: bar
   });
 });
@@ -45,7 +45,7 @@ $(document).on("mobileinit", function(){
 			<p>Alternatively, you can set them using object property notation.</p>
 			<pre>
 				<code>
-$(document).on("mobileinit", function(){
+$( document ).on( "mobileinit", function() {
   $.mobile.foo = bar;
 });
 				</code>
