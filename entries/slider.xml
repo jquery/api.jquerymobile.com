@@ -12,10 +12,10 @@
 		<p>The framework will find all <code>input</code> elements with a <code>type="range"</code> and automatically enhance them into a slider with an accompanying input without any need to apply a <code>data-role</code> attribute. To prevent the automatic enhancement of this input into a slider, add <code>data-role="none"</code> attribute to the input.</p>
 		<p>In this example, the acceptable range is 0-100.</p>
 
-<pre><code>
-&lt;label for="slider-1"&gt;Input slider:&lt;/label&gt;
-&lt;input type="range" name="slider-1" id="slider-1" value="60" min="0" max="100" /&gt;
-</code></pre>
+<pre><code><![CDATA[
+<label for="slider-1">Input slider:</label>
+<input type="range" name="slider-1" id="slider-1" value="60" min="0" max="100" />
+]]></code></pre>
 
 		<p>The default slider with these settings is displayed like this:
 		<iframe src="/resources/slider/example1.html" style="width:100%;height:90px;border:0px"></iframe></p>
@@ -24,10 +24,10 @@
 		<p>To force the slider to snap to a specific increment, add the <code>step</code> attribute to the input. By default, the step is 1, but in this example, the step is 50 and the maximum value is 500.</p>
 		<p>In this example, the acceptable range is 0-100.</p>
 
-<pre><code>
-&lt;label for="slider-1"&gt;Input slider:&lt;/label&gt;
-&lt;input type="range" name="slider-1" id="slider-1" value="60" min="0" max="100" /&gt;
-</code></pre>
+<pre><code><![CDATA[
+<label for="slider-1">Input slider:</label>
+<input type="range" name="slider-1" id="slider-1" value="60" min="0" max="100" />
+]]></code></pre>
 
 		<p>This will produce an input that snaps to increments of 50. If a value is added to the input that isn't valid with the step increment, the value will be reset on blur to the closest step.
 		<iframe src="/resources/slider/example2.html" style="width:100%;height:90px;border:0px"></iframe></p>
@@ -36,10 +36,10 @@
 
 		<p>To have a highlight fill on the track up to the slider handle position, add the <code>data-highlight="true"</code> attribute to the input. The fill uses active state swatch. </p>
 
-<pre><code>
-&lt;label for="slider-fill"&gt;Input slider:&lt;/label&gt;
-&lt;input type="range" name="slider-fill" id="slider-fill" value="60" min="0" max="100" data-highlight="true" /&gt;
-</code></pre>
+<pre><code><![CDATA[
+<label for="slider-fill">Input slider:</label>
+<input type="range" name="slider-fill" id="slider-fill" value="60" min="0" max="100" data-highlight="true" />
+]]></code></pre>
 
 		<iframe src="/resources/slider/example3.html" style="width:100%;height:90px;border:0px"></iframe>
 
@@ -47,10 +47,10 @@
 
 		<p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a mini version. </p>
 
-<pre><code>
-&lt;label for="slider-mini"&gt;Input slider:&lt;/label&gt;
-&lt;input type="range" name="slider-mini" id="slider-mini" value="25" min="0" max="100" data-highlight="true" data-mini="true" /&gt;
-</code></pre>
+<pre><code><![CDATA[
+<label for="slider-mini">Input slider:</label>
+<input type="range" name="slider-mini" id="slider-mini" value="25" min="0" max="100" data-highlight="true" data-mini="true" />
+]]></code></pre>
 
 		<p>This will produce a slider and its corresponding input that are not as tall as the standard version. The input also has a smaller text size.
 		<iframe src="/resources/slider/example3.html" style="width:100%;height:90px;border:0px"></iframe></p>
@@ -60,12 +60,12 @@
 		<p>Optionally wrap the slider markup in a container with class <code>ui-field-contain</code> to help visually group it in a longer form. In this example, the step attribute is omitted to allow any whole number value to be selected.</p>
 		<p><strong>Note: The <code>data-</code> attribute <code>data-role="fieldcontain"</code> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Add class <code>ui-field-contain</code> instead.</strong></p>
 
-<pre><code>
-&lt;div class="ui-field-contain"&gt;
-	&lt;label for="slider-2"&gt;Input slider:&lt;/label&gt;
-	&lt;input type="range" name="slider-2" id="slider-2" value="25" min="0" max="100" /&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div class="ui-field-contain">
+	<label for="slider-2">Input slider:</label>
+	<input type="range" name="slider-2" id="slider-2" value="25" min="0" max="100" />
+</div>
+]]></code></pre>
 
 		<p>The slider is now displayed like this:
 		<iframe src="/resources/slider/example4.html" style="width:100%;height:90px;border:0px"></iframe></p>
@@ -76,20 +76,20 @@
 
 		<p>This plugin will auto initialize on any page that contains a text input with the <code>type="range"</code> attribute. However, if needed you can directly call the slider plugin on any selector, just like any jQuery plugin:</p>
 
-<pre><code>
+<pre><code><![CDATA[
 $( "input" ).slider();
-</code></pre>
+]]></code></pre>
 
 		<h3>Theming the slider</h3>
 
 		<p>To set the theme swatch for the slider, add a <code>data-theme</code> attribute to the <code>input</code> which will apply the theme to both the input, handle and track. The track swatch can be set separately by adding the <code>data-track-theme</code> attribute to apply the down state version of the selected button swatch.</p>
 
-<pre><code>
-&lt;div class="ui-field-contain"&gt;
-	&lt;label for="slider-3"&gt;Input slider:&lt;/label&gt;
-	&lt;input type="range" name="slider-3" id="slider-3" value="25" min="0" max="100" data-theme="b" data-track-theme="a" /&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div class="ui-field-contain">
+	<label for="slider-3">Input slider:</label>
+	<input type="range" name="slider-3" id="slider-3" value="25" min="0" max="100" data-theme="b" data-track-theme="a" />
+</div>
+]]></code></pre>
 
 		<p>This will produce a themed slider:
 		<iframe src="/resources/slider/example5.html" style="width:100%;height:90px;border:0px"></iframe></p>
@@ -100,13 +100,13 @@ $( "input" ).slider();
 		<p>To create a flip toggle, start with a <code>select</code> with two options. The first option will be styled as the "off" state switch and the second will be styled as the "on" state so write your options accordingly.</p>
 		<p>Set the <code>for</code> attribute of the <code>label</code> to match the <code>id</code> of the <code>input</code> so they are semantically associated. It's possible to accessibly hide the label if it's not desired in the page layout, but we require that it is present in the markup for semantic and accessibility reasons.</p>
 
-<pre><code>
-&lt;label for="flip-1"&gt;Flip switch:&lt;/label&gt;
-&lt;select name="flip-1" id="flip-1" data-role="slider"&gt;
-  &lt;option value="off"&gt;Off&lt;/option&gt;
-  &lt;option value="on"&gt;On&lt;/option&gt;
-&lt;/select&gt;
-</code></pre>
+<pre><code><![CDATA[
+<label for="flip-1">Flip switch:</label>
+<select name="flip-1" id="flip-1" data-role="slider">
+	<option value="off">Off</option>
+	<option value="on">On</option>
+</select>
+]]></code></pre>
 
 		<p>This will produce a basic flip toggle switch input. The default styles set the width of the switch to 100% of the parent container and stack the label on a separate line.
 		<iframe src="/resources/switch/example1.html" style="width:100%;height:90px;border:0px"></iframe></p>
@@ -115,15 +115,15 @@ $( "input" ).slider();
 
 		<p>The control is proportionally scaled, so to use longer labels one can just add a line of CSS setting the switch to the desired width. For example, given the following markup:</p>
 
-<pre><code>
-&lt;div class="containing-element"&gt;
-	&lt;label for="flip-min"&gt;Flip switch:&lt;/label&gt;
-	&lt;select name="flip-min" id="flip-min" data-role="slider"&gt;
-		&lt;option value="off"&gt;Switch Off&lt;/option&gt;
-		&lt;option value="on"&gt;Switch On&lt;/option&gt;
-	&lt;/select&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div class="containing-element">
+	<label for="flip-min">Flip switch:</label>
+	<select name="flip-min" id="flip-min" data-role="slider">
+		<option value="off">Switch Off</option>
+		<option value="on">Switch On</option>
+</select>
+</div>
+]]></code></pre>
 
 		<p><code>.containing-element .ui-slider-switch { width: 9em }</code> will produce:
 		<iframe src="/resources/switch/example2.html" style="width:100%;height:90px;border:0px"></iframe></p>
@@ -134,13 +134,13 @@ $( "input" ).slider();
 
 		<p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a mini version. </p>
 
-<pre><code>
-&lt;label for="flip-mini"&gt;Select slider:&lt;/label&gt;
-&lt;select name="flip-mini" id="flip-mini" data-role="slider" data-mini="true"&gt;
-	&lt;option value="off"&gt;Off&lt;/option&gt;
-	&lt;option value="on"&gt;On&lt;/option&gt;
-&lt;/select&gt;
-</code></pre>
+<pre><code><![CDATA[
+<label for="flip-mini">Select slider:</label>
+<select name="flip-mini" id="flip-mini" data-role="slider" data-mini="true">
+	<option value="off">Off</option>
+	<option value="on">On</option>
+</select>
+]]></code></pre>
 
 		<p>This will produce a flip switch that is not as tall as the standard version and has a smaller text size.
 		<iframe src="/resources/switch/example3.html" style="width:100%;height:90px;border:0px"></iframe></p>
@@ -150,15 +150,15 @@ $( "input" ).slider();
 		<p>Optionally wrap the switch markup in a container with class <code>ui-field-contain</code> to help visually group it in a longer form. In this example, the step attribute is omitted to allow any whole number value to be selected.</p>
 		<p><strong>Note: The <code>data-</code> attribute <code>data-role="fieldcontain"</code> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Add class <code>ui-field-contain</code> instead.</strong></p>
 
-<pre><code>
-&lt;div class="ui-field-contain"&gt;
-	&lt;label for="flip-2"&gt;Select slider:&lt;/label&gt;
-	&lt;select name="flip-2" id="flip-2" data-role="slider" data-mini="true"&gt;
-		&lt;option value="off"&gt;Off&lt;/option&gt;
-		&lt;option value="on"&gt;On&lt;/option&gt;
-	&lt;/select&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div class="ui-field-contain">
+	<label for="flip-2">Select slider:</label>
+	<select name="flip-2" id="flip-2" data-role="slider" data-mini="true">
+		<option value="off">Off</option>
+		<option value="on">On</option>
+	</select>
+</div>
+]]></code></pre>
 
 		<p>The flip toggle switch is now displayed like this:
 		<iframe src="/resources/switch/example4.html" style="width:100%;height:90px;border:0px"></iframe></p>
@@ -167,15 +167,15 @@ $( "input" ).slider();
 
 		<p>Like all form elements, this widget will automatically inherit the theme from its parent container. To choose a specific theme color swatch, specify the <code>data-theme</code> attribute on the <code>select</code> and specify a swatch letter.</p>
 
-<pre><code>
-&lt;div class=&quot;ui-field-contain&quot;&gt;
-	&lt;label for=&quot;flip-3&quot;&gt;Flip switch:&lt;/label&gt;
-	&lt;select name=&quot;flip-3&quot; id=&quot;flip-3&quot; data-role=&quot;slider&quot; data-theme=&quot;b&quot;&gt;
-		&lt;option value=&quot;no&quot;&gt;No&lt;/option&gt;
-		&lt;option value=&quot;yes&quot;&gt;Yes&lt;/option&gt;
-	&lt;/select&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div class="ui-field-contain">
+	<label for="flip-3">Flip switch:</label>
+	<select name="flip-3" id="flip-3" data-role="slider" data-theme="b">
+		<option value="no">No</option>
+		<option value="yes">Yes</option>
+	</select>
+</div>
+]]></code></pre>
 
 		<p>This results in a switch with the swatch "b" colors for the handle. Note that the lefthand "on" state gets the active state color.
 		<iframe src="/resources/switch/example5.html" style="width:100%;height:90px;border:0px"></iframe></p>
@@ -185,15 +185,15 @@ $( "input" ).slider();
 		<p>It is also possible to theme the track of the flip switch by adding the <code>data-track-theme</code> attribute and specifying the chosen swatch letter on the <code>select</code>.</p>
 		<p>Here's an example of a flip switch with the swatch "a" applied to the track and swatch "c" applied to the handle:</p>
 
-<pre><code>
-&lt;div class="ui-field-contain"&gt;
-	&lt;label for="flip-5"&gt;Flip switch:&lt;/label&gt;
-	&lt;select name="flip-5" id="flip-5" data-role="slider" data-theme="a" data-track-theme="b"&gt;
-		&lt;option value="no"&gt;No&lt;/option&gt;
-		&lt;option value="yes"&gt;Yes&lt;/option&gt;
-	&lt;/select&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div class="ui-field-contain">
+	<label for="flip-5">Flip switch:</label>
+	<select name="flip-5" id="flip-5" data-role="slider" data-theme="a" data-track-theme="b">
+		<option value="no">No</option>
+		<option value="yes">Yes</option>
+	</select>
+</div>
+]]></code></pre>
 
 		<iframe src="/resources/switch/example7.html" style="width:100%;height:90px;border:0px"></iframe>
 
@@ -209,29 +209,29 @@ $( "input" ).slider();
 
 	<p>Like all form elements, this widget will automatically inherit the theme from its parent container. To choose a specific theme color swatch, specify the <code>data-theme</code> attribute on the select and specify a swatch letter.</p>
 
-<pre><code>
-&lt;div class="ui-field-contain"&gt;
-	&lt;label for="flip-3"&gt;Flip switch:&lt;/label&gt;
-	&lt;select name="flip-3" id="flip-3" data-role="slider" data-theme="a"&gt;
-		&lt;option value="no"&gt;No&lt;/option&gt;
-		&lt;option value="yes"&gt;Yes&lt;/option&gt;
-	&lt;/select&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div class="ui-field-contain">
+	<label for="flip-3">Flip switch:</label>
+	<select name="flip-3" id="flip-3" data-role="slider" data-theme="a">
+		<option value="no">No</option>
+		<option value="yes">Yes</option>
+	</select>
+</div>
+]]></code></pre>
 
 		<p>This results in a switch with the swatch "a" colors for the handle. Note that the lefthand "on" state gets the active state color.</p>
 		<p>It is also possible to theme the track of the flip switch by adding the data-track-theme attribute and specifying the chosen swatch letter on the select.</p>
 		<p>Here's an example of a flip switch with the swatch "a" applied to the track and swatch "c" applied to the handle:</p>
 
-<pre><code>
-&lt;div class="ui-field-contain"&gt;
-	&lt;label for="flip-5"&gt;Flip switch:&lt;/label&gt;
-	&lt;select name="flip-5" id="flip-5" data-role="slider" data-theme="a" data-track-theme="b"&gt;
-		&lt;option value="no"&gt;No&lt;/option&gt;
-		&lt;option value="yes"&gt;Yes&lt;/option&gt;
-	&lt;/select&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div class="ui-field-contain">
+	<label for="flip-5">Flip switch:</label>
+	<select name="flip-5" id="flip-5" data-role="slider" data-theme="a" data-track-theme="b">
+		<option value="no">No</option>
+		<option value="yes">Yes</option>
+	</select>
+</div>
+]]></code></pre>
 
 	</longdesc>
 	<added>1.0</added>
