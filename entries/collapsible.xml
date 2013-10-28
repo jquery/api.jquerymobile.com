@@ -9,12 +9,12 @@
 		<p>Directly inside this container, add any header (H1-H6) or legend element. The framework will style the header to look like a clickable button and add a "+" icon to the left to indicate it's expandable.</p>
 		<p>After the header, add any HTML markup you want to be collapsible. The framework will wrap this markup in a container that will be hidden/shown when the heading is clicked.</p>
 		<p>By default, the content will be collapsed.</p>
-<pre><code>
-&lt;div data-role=&quot;collapsible&quot;&gt;
-	&lt;h3&gt;I&#x27;m a header&lt;/h3&gt;
-	&lt;p&gt;I&#x27;m the collapsible content. By default I'm closed, but you can click the header to open me.&lt;/p&gt;
-&lt;/div&gt;
-	</code></pre>
+<pre><code><![CDATA[
+<div data-role="collapsible">
+	<h3>I'm a header</h3>
+	<p>I'm the collapsible content. By default I'm closed, but you can click the header to open me.</p>
+</div>
+]]></code></pre>
 		<p>This code will create a collapsible widget like this:
 		<iframe src="/resources/collapsible/example1.html" style="width:100%;height:140px;border:0px"></iframe>
 		</p>
@@ -23,9 +23,9 @@
 
 		<p>When you add the <code>data-collapsed="false"</code> attribute to the wrapper the collapsible will initially be expanded.</p>
 
-<pre><code>
-&lt;div data-role=&quot;collapsible&quot; data-collapsed=&quot;false&quot;&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="collapsible" data-collapsed="false">
+]]></code></pre>
 
 		<p>This code will create a collapsible widget like this:
 		<iframe src="/resources/collapsible/example2.html" style="width:100%;height:140px;border:0px"></iframe></p>
@@ -34,9 +34,9 @@
 
 		<p>By default collapsibles have an inset appearance. To make them full width without corner styling add the <code>data-inset="false"</code> attribute to the element.</p>
 
-<pre><code>
-&lt;div data-role=&quot;collapsible&quot; data-inset=&quot;false&quot;&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="collapsible" data-inset="false">
+]]></code></pre>
 
 		<p>This code will create a non-inset collapsible:
 		<iframe src="/resources/collapsible/example3.html" style="width:100%;height:140px;border:0px"></iframe></p>
@@ -45,9 +45,9 @@
 
 		<p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a <a href="../forms/forms-all-mini.html">mini version</a>.</p>
 
-<pre><code>
-&lt;div data-role=&quot;collapsible&quot; data-mini=&quot;true&quot;&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="collapsible" data-mini="true">
+]]></code></pre>
 
 		<p>This code will create a mini collapsible widget:
 		<iframe src="/resources/collapsible/example4.html" style="width:100%;height:140px;border:0px"></iframe></p>
@@ -68,12 +68,12 @@
 
 		<p>To provide a stronger visual connection between the collapsible header and content, add the <code>data-content-theme</code> attribute to the wrapper and specify a theme swatch letter. This applies the border and background color of the swatch to the content block and changes the corner rounding to square off the bottom of the header and round the bottom of the content block instead to visually group these elements.</p>
 
-<pre><code>
-&lt;div data-role=&quot;collapsible&quot; data-content-theme=&quot;b&quot;&gt;
-	&lt;h3&gt;Header&lt;/h3&gt;
-	&lt;p&gt;I&#x27;m the collapsible content with a themed content block set to "b".&lt;/p&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="collapsible" data-content-theme="b">
+	<h3>Header</h3>
+	<p>I'm the collapsible content with a themed content block set to "b".</p>
+</div>
+]]></code></pre>
 
 		<iframe src="/resources/collapsible/example7.html" style="width:100%;height:140px;border:0px"></iframe>
 
@@ -81,11 +81,12 @@
 
 		<p>To set the theme on a collapsible header button, add the <code>data-theme</code> attribute to the wrapper and specify a swatch letter. Note that you can mix and match swatch letters between the header and content with these theme attributes.</p>
 
-<pre><code>&lt;div data-role=&quot;collapsible&quot; data-theme=&quot;b&quot; data-content-theme=&quot;b&quot;&gt;
-	&lt;h3&gt;Header swatch B&lt;/h3&gt;
-	&lt;p&gt;I&#x27;m the collapsible content with a themed content block set to "b".&lt;/p&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="collapsible" data-theme="b" data-content-theme="b">
+	<h3>Header swatch B</h3>
+	<p>I'm the collapsible content with a themed content block set to "b".</p>
+</div>
+]]></code></pre>
 
 		<iframe src="/resources/collapsible/example8.html" style="width:100%;height:260px;border:0px"></iframe>
 
@@ -102,19 +103,19 @@
 		<p>The <placeholder name="name"/> widget creates an anchor from the heading element and wraps the rest of the children of the outermost widget in a <code>div</code> that will serve as the container for the collapsible content.</p>
 		<p>In the example below, pre-rendered markup for a <placeholder name="name"/> is provided. The attribute <code>data-collapsed-icon="arrow-r"</code> is explicitly specified, since the use of the<code>ui-icon-arrow-r</code> class on the anchor element indicates that the value of the "collapsedIcon" widget option is to be "arrow-r".</p>
 
-<pre><code>
-&lt;div data-role="collapsible" data-enhanced="true" class="ui-collapsible ui-collapsible-inset ui-corner-all ui-collapsible-collapsed" data-collapsed-icon="arrow-r"&gt;
-	&lt;h2 class="ui-collapsible-heading ui-collapsible-heading-collapsed"&gt;
-		&lt;a href="#" class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-icon-arrow-r"&gt;
+<pre><code><![CDATA[
+<div data-role="collapsible" data-enhanced="true" class="ui-collapsible ui-collapsible-inset ui-corner-all ui-collapsible-collapsed" data-collapsed-icon="arrow-r">
+	<h2 class="ui-collapsible-heading ui-collapsible-heading-collapsed">
+		<a href="#" class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-icon-arrow-r">
 			Pre-rendered collapsible
-			&lt;span class="ui-collapsible-heading-status"&gt; click to expand contents&lt;/span&gt;
-		&lt;/a&gt;
-	&lt;/h2&gt;
-	&lt;div class="ui-collapsible-content ui-collapsible-content-collapsed" aria-hidden="true"&gt;
-		&lt;p&gt;This is the collapsible-content&lt;/p&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+			<span class="ui-collapsible-heading-status"> click to expand contents</span>
+		</a>
+	</h2>
+	<div class="ui-collapsible-content ui-collapsible-content-collapsed" aria-hidden="true">
+		<p>This is the collapsible-content</p>
+	</div>
+</div>
+]]></code></pre>
 
 <iframe src="/resources/collapsible/example10.html" style="width:100%;height:200px;border:0px"></iframe>
 
