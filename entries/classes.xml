@@ -5,26 +5,26 @@
 	<desc>CSS classes for common styles</desc>
 	<longdesc>
 		<h2>Style Classes</h2>
-		<p>jQuery Mobile uses the following style classes:
-			<table>
-				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-corner-all</div></td>
-					<td>Adds rounded corners to the element.</td>
-				</tr>
-				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-shadow</div></td>
-					<td>Adds an item shadow around the element.</td>
-				</tr>
-				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-overlay-shadow</div></td>
-					<td>Adds an overlay shadow around the element. The intended effect is for the element to appear to float above other elements.</td>
-				</tr>
-				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-mini</div></td>
-					<td>Reduces the font size and scales down paddings proportionally to produce a miniature version of the element for use in toolbars and tight spaces.</td>
-				</tr>
-			</table>
-			These classes can be applied any of the framework's widgets.</p>
+		<p>jQuery Mobile uses the following style classes:</p>
+		<table>
+			<tr>
+				<td class="enum-value"><div style="white-space: nowrap;">ui-corner-all</div></td>
+				<td>Adds rounded corners to the element.</td>
+			</tr>
+			<tr>
+				<td class="enum-value"><div style="white-space: nowrap;">ui-shadow</div></td>
+				<td>Adds an item shadow around the element.</td>
+			</tr>
+			<tr>
+				<td class="enum-value"><div style="white-space: nowrap;">ui-overlay-shadow</div></td>
+				<td>Adds an overlay shadow around the element. The intended effect is for the element to appear to float above other elements.</td>
+			</tr>
+			<tr>
+				<td class="enum-value"><div style="white-space: nowrap;">ui-mini</div></td>
+				<td>Reduces the font size and scales down paddings proportionally to produce a miniature version of the element for use in toolbars and tight spaces.</td>
+			</tr>
+		</table>
+		<p>These classes can be applied any of the framework's widgets.</p>
 		<h3>Widget-specific classes</h3>
 		<table>
 			<tr>
@@ -37,51 +37,50 @@
 			</tr>
 		</table>
 		<h3>Button-specific classes</h3>
-		<p>In addition to the style classes, you can add the following classes to <code>a</code> (anchor) and <code>button</code> elements to render them touch-friendly:
-			<table>
-				<tr><th colspan="2">Basic options</th></tr>
-				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-btn</div></td>
-					<td>You must add this class to indicate that the element is to be styled as a button. This is a prerequisite for adding any other button-related classes.</td>
-				</tr>
-				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-btn-inline</div></td>
-					<td>Displays the button inline. This means that it will only consume as much space as is needed for the label. This allows you to place buttons side by side, flowing with the text.</td>
-				</tr>
-				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-shadow-icon</div></td>
-					<td>Draws a shadow around the icon. <strong>Note: This class is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0.</strong></td>
-				</tr>
-				<tr><th colspan="2">Icon positioning</th></tr>
-				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-btn-icon-top</div></td>
-					<td>The icon appears above the text</td>
-				</tr>
-				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-btn-icon-right</div></td>
-					<td>The icon appears to the right of the text</td>
-				</tr>
-				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-btn-icon-bottom</div></td>
-					<td>The icon appears below the text</td>
-				</tr>
-				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-btn-icon-left</div></td>
-					<td>The icon appears to the left of the text</td>
-				</tr>
-				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-btn-icon-notext</div></td>
-					<td>The button text is suppressed, and only the icon is shown. The result is a circular button the size of the icon.</td>
-				</tr>
-				<tr><th colspan="2">Theme</th></tr>
-				<tr>
-					<td class="enum-value"><div style="white-space: nowrap;">ui-btn-[a-z]</div></td>
-					<td>Sets the color scheme (swatch) for the button. Use a single letter from a-z that maps to the swatches included in your theme. For example: <code>ui-btn-b</code></td>
-				</tr>
-			</table>
-		</p>
+		<p>In addition to the style classes, you can add the following classes to <code>a</code> (anchor) and <code>button</code> elements to render them touch-friendly:</p>
+		<table>
+			<tr><th colspan="2">Basic options</th></tr>
+			<tr>
+				<td class="enum-value"><div style="white-space: nowrap;">ui-btn</div></td>
+				<td>You must add this class to indicate that the element is to be styled as a button. This is a prerequisite for adding any other button-related classes.</td>
+			</tr>
+			<tr>
+				<td class="enum-value"><div style="white-space: nowrap;">ui-btn-inline</div></td>
+				<td>Displays the button inline. This means that it will only consume as much space as is needed for the label. This allows you to place buttons side by side, flowing with the text.</td>
+			</tr>
+			<tr>
+				<td class="enum-value"><div style="white-space: nowrap;">ui-shadow-icon</div></td>
+				<td>Draws a shadow around the icon. <strong>Note: This class is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0.</strong></td>
+			</tr>
+			<tr><th colspan="2">Icon positioning</th></tr>
+			<tr>
+				<td class="enum-value"><div style="white-space: nowrap;">ui-btn-icon-top</div></td>
+				<td>The icon appears above the text</td>
+			</tr>
+			<tr>
+				<td class="enum-value"><div style="white-space: nowrap;">ui-btn-icon-right</div></td>
+				<td>The icon appears to the right of the text</td>
+			</tr>
+			<tr>
+				<td class="enum-value"><div style="white-space: nowrap;">ui-btn-icon-bottom</div></td>
+				<td>The icon appears below the text</td>
+			</tr>
+			<tr>
+				<td class="enum-value"><div style="white-space: nowrap;">ui-btn-icon-left</div></td>
+				<td>The icon appears to the left of the text</td>
+			</tr>
+			<tr>
+				<td class="enum-value"><div style="white-space: nowrap;">ui-btn-icon-notext</div></td>
+				<td>The button text is suppressed, and only the icon is shown. The result is a circular button the size of the icon.</td>
+			</tr>
+			<tr><th colspan="2">Theme</th></tr>
+			<tr>
+				<td class="enum-value"><div style="white-space: nowrap;">ui-btn-[a-z]</div></td>
+				<td>Sets the color scheme (swatch) for the button. Use a single letter from a-z that maps to the swatches included in your theme. For example: <code>ui-btn-b</code></td>
+			</tr>
+		</table>
 		<h3 id="icon-classes">Icon classes</h3>
-		<p>Icons are used by a variety of widgets. The table below lists all the available icon classes. The widgets which support an icon usually have an option named "icon". The value for that option is the name of the icon, which is appended to the prefix <code>ui-icon-</code> to create the icon class name. In the class list below, the icon names are emphasized as part of the icon class name.</p>
+		<p><a href="/icons/">Icons</a> are used by a variety of widgets. The table below lists all the available icon classes. The widgets which support an icon usually have an option named "icon". The value for that option is the name of the icon, which is appended to the prefix <code>ui-icon-</code> to create the icon class name. In the class list below, the icon names are emphasized as part of the icon class name.</p>
 		<table>
 			<tr>
 				<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>alert</strong></div></td>
@@ -161,38 +160,37 @@
 			</tr>
 		</table>
 		<h3 id="theme-classes">Theme-related classes</h3>
-		<p>The class prefixes in the table below are used for applying a swatch to various parts of the user interface. The actual class name is constructed by appending the swatch letter (a-z) to the prefix. For example, the class <code>ui-body-<strong>a</strong></code> is the swatch applied to the page.
-			<table>
-				<tr>
-					<td class="enum-value" id="theme-classes-ui-bar"><div style="white-space: nowrap;">ui-bar-[a-z]</div></td>
-					<td>Sets the color scheme (swatch) for a bar. This includes headers and footers, or bars you include in the page.</td>
-				</tr>
-				<tr>
-					<td class="enum-value" id="theme-classes-ui-body"><div style="white-space: nowrap;">ui-body-[a-z]</div></td>
-					<td>Sets the color scheme (swatch) for a content block. This includes page content panes (<strong>deprecated as of 1.4.0</strong>), listview items, popups, collapsibles, the loader widget, sliders, and panels.</td>
-				</tr>
-				<tr>
-					<td class="enum-value" id="theme-classes-ui-btn"><div style="white-space: nowrap;">ui-btn-[a-z]</div></td>
-					<td>Sets the color scheme (swatch) for a button.</td>
-				</tr>
-				<tr>
-					<td class="enum-value" id="theme-classes-ui-group-theme"><div style="white-space: nowrap;">ui-group-theme-[a-z]</div></td>
-					<td>Sets the color scheme (swatch) for controlgroups, listviews, and collapsible sets (accordions).</td>
-				</tr>
-				<tr>
-					<td class="enum-value" id="theme-classes-ui-overlay"><div style="white-space: nowrap;">ui-overlay-[a-z]</div></td>
-					<td>Sets the color scheme (swatch) for backgrounds such as those of popup widgets, and page containers.</td>
-				</tr>
-				<tr>
-					<td class="enum-value" id="theme-classes-ui-page-theme"><div style="white-space: nowrap;">ui-page-theme-[a-z]</div></td>
-					<td>Sets the color scheme (swatch) for pages.</td>
-				</tr>
-				<tr>
-					<td class="enum-value" id="theme-classes-ui-panel-page-container"><div style="white-space: nowrap;">ui-panel-page-container-[a-z]</div></td>
-					<td>Panels temporarily set the theme on the page container using this class.</td>
-				</tr>
-			</table>
-		</p>
+		<p>The class prefixes in the table below are used for applying a swatch to various parts of the user interface. The actual class name is constructed by appending the swatch letter (a-z) to the prefix. For example, the class <code>ui-body-<strong>a</strong></code> is the swatch applied to the page.</p>
+		<table>
+			<tr>
+				<td class="enum-value" id="theme-classes-ui-bar"><div style="white-space: nowrap;">ui-bar-[a-z]</div></td>
+				<td>Sets the color scheme (swatch) for a bar. This includes headers and footers, or bars you include in the page.</td>
+			</tr>
+			<tr>
+				<td class="enum-value" id="theme-classes-ui-body"><div style="white-space: nowrap;">ui-body-[a-z]</div></td>
+				<td>Sets the color scheme (swatch) for a content block. This includes page content panes (<strong>deprecated as of 1.4.0</strong>), listview items, popups, collapsibles, the loader widget, sliders, and panels.</td>
+			</tr>
+			<tr>
+				<td class="enum-value" id="theme-classes-ui-btn"><div style="white-space: nowrap;">ui-btn-[a-z]</div></td>
+				<td>Sets the color scheme (swatch) for a button.</td>
+			</tr>
+			<tr>
+				<td class="enum-value" id="theme-classes-ui-group-theme"><div style="white-space: nowrap;">ui-group-theme-[a-z]</div></td>
+				<td>Sets the color scheme (swatch) for controlgroups, listviews, and collapsible sets (accordions).</td>
+			</tr>
+			<tr>
+				<td class="enum-value" id="theme-classes-ui-overlay"><div style="white-space: nowrap;">ui-overlay-[a-z]</div></td>
+				<td>Sets the color scheme (swatch) for backgrounds such as those of popup widgets, and page containers.</td>
+			</tr>
+			<tr>
+				<td class="enum-value" id="theme-classes-ui-page-theme"><div style="white-space: nowrap;">ui-page-theme-[a-z]</div></td>
+				<td>Sets the color scheme (swatch) for pages.</td>
+			</tr>
+			<tr>
+				<td class="enum-value" id="theme-classes-ui-panel-page-container"><div style="white-space: nowrap;">ui-panel-page-container-[a-z]</div></td>
+				<td>Panels temporarily set the theme on the page container using this class.</td>
+			</tr>
+		</table>
 	</longdesc>
 	<category slug="css-framework"/>
 </entry>
