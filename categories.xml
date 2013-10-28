@@ -38,6 +38,10 @@ $.widget( "my.widget", /* NOTE: no base needed */ {
 			<p>jQuery Mobile offers CSS-based enhancements for common user interface elements.</p>]]>
 		</desc>
 	</category>
+	<category name="Icons" slug="jqmicons">
+		<desc><![CDATA[
+			<p>jQuery Mobile offers a set of built-in icons that can be applied to buttons, collapsibles, listview buttons and more.</p>]]></desc>
+	</category>
 	<category name="Miscellaneous" slug="misc">
 		<desc></desc>
 	</category>
