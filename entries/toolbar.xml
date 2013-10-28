@@ -12,11 +12,11 @@
 		<p>The header is a <placeholder name="name"/> at the top of the page that usually contains the page title text and optional buttons positioned to the left and/or right of the title for navigation or actions. Headers can optionally be positioned as fixed so they remain at the top of the screen at all times instead of scrolling with the page.</p>
 		<p>The title text is normally an H1 heading element but it's possible to use any heading level (H1-H6) to allow for semantic flexibility. For example, a page containing multiple mobile "pages" may use a H1 element on the home "page" and a H2 element on the secondary pages. All heading levels are styled identically by default to maintain visual consistency.</p>
 
-<pre><code>
-&lt;div data-role="header"&gt;
-	&lt;h1&gt; Page Title &lt;/h1&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="header">
+	<h1> Page Title </h1>
+</div>
+]]></code></pre>
 		<iframe src="/resources/toolbar/example1.html" style="width:100%;height:90px;border:0px"></iframe>
 
 		<h3>Default header features</h3>
@@ -33,13 +33,13 @@
 		<p><strong>The behavior whereby the first two buttons automatically get the <code>ui-btn-left</code> and <code>ui-btn-right</code> classes is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Thereafter you must add those classes in your markup if you wish to position the buttons left and/or right.</strong></p>
 		<p>The <placeholder name="name"/> plugin looks for immediate children of the header container, and automatically sets the first link in the left button slot and the second link in the right. In this example, the 'Cancel' button will appear in the left slot and 'Save' will appear in the right slot based on their sequence in the source order. </p>
 
-<pre><code>
-&lt;div data-role=&quot;header&quot;&gt;
-	&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot; data-icon=&quot;delete&quot;&gt;Cancel&lt;/a&gt;
-	&lt;h1&gt;Edit Contact&lt;/h1&gt;
-	&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot; data-icon=&quot;check&quot;&gt;Save&lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="header">
+	<a href="index.html" data-role="button" data-icon="delete">Cancel</a>
+	<h1>Edit Contact</h1>
+	<a href="index.html" data-role="button" data-icon="check">Save</a>
+</div>
+]]></code></pre>
 
 		<iframe src="/resources/toolbar/example2.html" style="width:100%;height:90px;border:0px"></iframe>
 
@@ -47,37 +47,37 @@
 
 		<p>Buttons automatically adopt the swatch color of the bar they sit in, so a link in a header bar with the "a" color will also be styled as "a" colored buttons. It's simple to make a button visually stand out. Here, we add the <code>data-theme</code> attribute and set the color swatch for the button to "b" to make the "Save" button stand out.</p>
 
-<pre><code>
-&lt;div data-role=&quot;header&quot;&gt;
-	&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot; data-icon=&quot;delete&quot;&gt;Cancel&lt;/a&gt;
-	&lt;h1&gt;Edit Contact&lt;/h1&gt;
-	&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot; data-icon=&quot;check&quot; data-theme=&quot;b&quot;&gt;Save&lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="header">
+	<a href="index.html" data-role="button" data-icon="delete">Cancel</a>
+	<h1>Edit Contact</h1>
+	<a href="index.html" data-role="button" data-icon="check" data-theme="b">Save</a>
+</div>
+]]></code></pre>
 
 		<iframe src="/resources/toolbar/example3.html" style="width:100%;height:90px;border:0px"></iframe>
 
 		<h4>Controlling button position with classes</h4>
 		<p>The button position can also be controlled by adding classes to the button anchors, rather than relying on source order. This is especially useful if you only want a button in the right slot. To specify the button position, add the class of <code>ui-btn-left</code> or <code>ui-btn-right</code> to the anchor.</p>
 
-<pre><code>
-&lt;div data-role=&quot;header&quot;&gt;
-	&lt;h1&gt;Page Title&lt;/h1&gt;
-	&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot; data-icon=&quot;gear&quot; class=&quot;ui-btn-right&quot;&gt;Options&lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="header">
+	<h1>Page Title</h1>
+	<a href="index.html" data-role="button" data-icon="gear" class="ui-btn-right">Options</a>
+</div>
+]]></code></pre>
 
 		<iframe src="/resources/toolbar/example4.html" style="width:100%;height:90px;border:0px"></iframe>
 
 		<h3>Adding buttons to <placeholder name="name"/> widgets without heading</h3>
 		<p>The heading in the header bar has some margin that will give the bar its height. If you choose not to use a heading, you will need to add an element with <code>class="ui-title"</code> so that the bar can get the height and display correctly.</p>
 
-<pre><code>
-&lt;div data-role=&quot;header&quot;&gt;
-	&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot; data-icon=&quot;gear&quot; class=&quot;ui-btn-right&quot;&gt;Options&lt;/a&gt;
-	&lt;span class=&quot;ui-title&quot; /&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="header">
+	<a href="index.html" data-role="button" data-icon="gear" class="ui-btn-right">Options</a>
+	<span class="ui-title" />
+</div>
+]]></code></pre>
 
 		<iframe src="/resources/toolbar/example5.html" style="width:100%;height:90px;border:0px"></iframe>
 
@@ -99,11 +99,11 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 		<p>If you need to create a header that doesn't follow the default configuration, simply wrap your custom styled markup in any container, such as <code>div</code>. The plugin won't apply the automatic button logic to the wrapped content inside the header container so you can write custom styles for laying out the content in your header.</p>
 		<p>It's also possible to create custom bars without using the header data-role at all. For example, start with any container and add the <code>ui-bar</code> class to apply standard bar padding and add the <code>ui-bar-b</code> class to assign the bar swatch styles from your theme. (The "b" can be any swatch letter.)</p>
 
-<pre><code>
-&lt;div class=&quot;ui-bar ui-bar-b&quot;&gt;
-	&lt;h3&gt;I&#x27;m just a div with bar classes and a mini inline &lt;a href=&quot;#&quot; data-role=&quot;button&quot; data-mini=&quot;true&quot;&gt;Button&lt;/a&gt;&lt;/h3&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div class="ui-bar ui-bar-b">
+	<h3>I'm just a div with bar classes and a mini inline <a href="#" data-role="button" data-mini="true">Button</a></h3>
+</div>
+]]></code></pre>
 
 		<iframe src="/resources/toolbar/example6.html" style="width:100%;height:90px;border:0px"></iframe>
 
@@ -118,11 +118,11 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 		<h3>Footer bar structure</h3>
 		<p>The <code>footer</code> bar has the same basic structure as the header except it uses the <code>data-role</code> attribute value of <code>footer</code>.</p>
 
-<pre><code>
-&lt;div data-role="footer"&gt;
-	&lt;h4&gt;Footer content&lt;/h4&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="footer">
+	<h4>Footer content</h4>
+</div>
+]]></code></pre>
 		<iframe src="/resources/toolbar/example8.html" style="width:100%;height:90px;border:0px"></iframe>
 
 		<p>The footer <placeholder name="name"/> inherits its theme swatch from the <a href="/page/">page</a> by default but you can easily set the theme swatch color by adding the <code>data-theme</code> attribute to the header. For example, <code>data-theme="b"</code>. When you use external headers you must set a theme, because there is no parent page from which it can inherit a theme.</p>
@@ -136,13 +136,13 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 		<p>Any link or valid button markup with a <code>data-role="button"</code> attribute added to the footer will automatically be turned into a button. To save space, buttons in <placeholder name="name"/> widgets are automatically set to inline styling so the button is only as wide as the text and icons it contains.</p>
 		<p>By default, <placeholder name="name"/> widgets don't have any padding to accommodate nav bars and other widgets. To include padding on the bar, add a <code>class="ui-bar"</code> to the footer.</p>
 
-<pre><code>
-&lt;div data-role=&quot;footer&quot; class=&quot;ui-bar&quot;&gt;
-	&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot; data-icon=&quot;plus&quot;&gt;Add&lt;/a&gt;
-	&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot; data-icon=&quot;arrow-u&quot;&gt;Up&lt;/a&gt;
-	&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot; data-icon=&quot;arrow-d&quot;&gt;Down&lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="footer" class="ui-bar">
+	<a href="index.html" data-role="button" data-icon="plus">Add</a>
+	<a href="index.html" data-role="button" data-icon="arrow-u">Up</a>
+	<a href="index.html" data-role="button" data-icon="arrow-d">Down</a>
+</div>
+]]></code></pre>
 
 		<p>This creates this <placeholder name="name"/> with buttons sitting in a row
 		<iframe src="/resources/toolbar/example9.html" style="width:100%;height:90px;border:0px"></iframe></p>
@@ -151,7 +151,9 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 
 		<p>To group buttons together into a button set, wrap the links in a wrapper with <code>data-role=&quot;controlgroup&quot;</code> and <code>data-type=&quot;horizontal&quot;</code> attributes.</p>
 
-		<code>&lt;div data-role=&quot;controlgroup&quot; data-type=&quot;horizontal&quot;&gt;</code>
+<pre><code><![CDATA[
+<div data-role="controlgroup" data-type="horizontal">
+]]></code></pre>
 
 		<p>This creates a grouped set of buttons:
 		<iframe src="/resources/toolbar/example10.html" style="width:100%;height:90px;border:0px"></iframe></p>
@@ -171,18 +173,18 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 		<p>To enable this behavior on a header or footer, add the <code>data-position="fixed"</code> attribute to a jQuery Mobile <placeholder name="name"/> element.</p>
 
 		<p>Fixed header markup example:</p>
-		<pre><code>
-&lt;div data-role=&quot;header&quot; data-position=&quot;fixed&quot;&gt;
-	&lt;h1&gt;Fixed Header&lt;/h1&gt;
-&lt;/div&gt;
-		</code></pre>
+<pre><code><![CDATA[
+<div data-role="header" data-position="fixed">
+	<h1>Fixed Header</h1>
+</div>
+]]></code></pre>
 
 		<p>Fixed footer markup example:</p>
-		<pre><code>
-&lt;div data-role=&quot;footer&quot; data-position=&quot;fixed&quot;&gt;
-	&lt;h1&gt;Fixed Footer&lt;/h1&gt;
-&lt;/div&gt;
-		</code></pre>
+<pre><code><![CDATA[
+<div data-role="footer" data-position="fixed">
+	<h1>Fixed Footer</h1>
+</div>
+]]></code></pre>
 
 		<iframe src="/resources/toolbar/example12.html" style="width:100%;height:420px;border:0px"></iframe>
 
@@ -194,11 +196,11 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 
 				<p>To enable this option on a fixed header or footer, add the <code>data-fullscreen</code> attribute to the element.</p>
 
-				<pre><code>
-&lt;div data-role=&quot;header&quot; data-position=&quot;fixed&quot; data-fullscreen=&quot;true&quot;&gt;
-	&lt;h1&gt;Fixed Header!&lt;/h1&gt;
-&lt;/div&gt;
-				</code></pre>
+<pre><code><![CDATA[
+<div data-role="header" data-position="fixed" data-fullscreen="true">
+	<h1>Fixed Header!</h1>
+</div>
+]]></code></pre>
 		<iframe src="/resources/toolbar/example13.html" style="width:100%;height:420px;border:0px"></iframe>
 
 		<h3>Forms in toolbars</h3>
