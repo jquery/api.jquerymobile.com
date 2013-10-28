@@ -19,27 +19,28 @@
 			<h3>General table markup guidelines</h3>
 
 				<p>Here is the basic table markup you should use for both table modes:</p>
-<pre><code>&lt;table data-role=&quot;table&quot; id=&quot;my-table&quot; data-mode=&quot;reflow&quot;&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Rank&lt;/th&gt;
-      &lt;th&gt;Movie Title&lt;/th&gt;
-      &lt;th&gt;Year&lt;/th&gt;
-      &lt;th&gt;&lt;abbr title=&quot;Rotten Tomato Rating&quot;&gt;Rating&lt;/abbr&gt;&lt;/th&gt;
-      &lt;th&gt;Reviews&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;th&gt;1&lt;/th&gt;
-      &lt;td&gt;&lt;a href=&quot;foo.com&quot; data-rel=&quot;external&quot;&gt;Citizen Kane&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;1941&lt;/td&gt;
-      &lt;td&gt;100%&lt;/td&gt;
-      &lt;td&gt;74&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;
-</code></pre>
+<pre><code><![CDATA[
+<table data-role="table" id="my-table" data-mode="reflow">
+	<thead>
+		<tr>
+			<th>Rank</th>
+			<th>Movie Title</th>
+			<th>Year</th>
+			<th><abbr title="Rotten Tomato Rating">Rating</abbr></th>
+			<th>Reviews</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>1</th>
+			<td><a href="foo.com" data-rel="external">Citizen Kane</a></td>
+			<td>1941</td>
+			<td>100%</td>
+			<td>74</td>
+		</tr>
+	</tbody>
+</table>
+]]></code></pre>
 
 		<p>Both table modes start with standard HTML table markup but there are some specific guidelines you must follow for the responsive table to work correctly:  </p>
 		<ul class="bullet">
