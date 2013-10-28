@@ -35,62 +35,61 @@
 				</p></li>
 			</ol>
 		The example below illustrates a simple <placeholder name="name"/> widget setup.</p>
-<pre><code>
-&lt;form&gt;
-	&lt;input type="text" data-type="search" id="filterable-input"&gt;&lt;/input&gt;
-&lt;/form&gt;
-&lt;form data-role="controlgroup" data-filter="true" data-input="#filterable-input"&gt;
-	&lt;label for="pizza"&gt;
+<pre><code><![CDATA[
+<form>
+	<input type="text" data-type="search" id="filterable-input"></input>
+</form>
+<form data-role="controlgroup" data-filter="true" data-input="#filterable-input">
+	<label for="pizza">
 		Pizza
-		&lt;input type="checkbox" id="pizza"&gt;&lt;/input&gt;
-	&lt;/label&gt;
-	&lt;label for="goulash"&gt;
+		<input type="checkbox" id="pizza"></input>
+	</label>
+	<label for="goulash">
 		Goulash
-		&lt;input type="checkbox" id="goulash"&gt;&lt;/input&gt;
-	&lt;/label&gt;
-	&lt;label for="falafel"&gt;
+		<input type="checkbox" id="goulash"></input>
+	</label>
+	<label for="falafel">
 		Falafel
-		&lt;input type="checkbox" id="falafel"&gt;&lt;/input&gt;
-	&lt;/label&gt;
-	&lt;label for="spring-rolls"&gt;
+		<input type="checkbox" id="falafel"></input>
+	</label>
+	<label for="spring-rolls">
 		Spring Rolls
-		&lt;input type="checkbox" id="spring-rolls"&gt;&lt;/input&gt;
-	&lt;/label&gt;
-&lt;/form&gt;
-</code></pre>
+		<input type="checkbox" id="spring-rolls"></input>
+	</label>
+</form>
+]]></code></pre>
 		<iframe src="/resources/filterable/example1.html" style="width:100%;height:300px;border:0px"></iframe>
 
 		<h3>"Reveal" mode</h3>
 		<p>The normal initial state of a <placeholder name="name"/> widget is that all the children are shown. In contrast, a <placeholder name="name"/> in "reveal" mode initially hides all its children. Once the user starts filtering, however, the <placeholder name="name"/> widget will display only those children that contain the text entered by the user, whether the <placeholder name="name"/> widget is in "reveal" mode or not.</p>
 		<p>You can turn on "reveal" mode by adding the attribute <code>data-filter-reveal="true"</code> to the element whose children will be filtered.</p>
 		<p>The example below illustrates the behavior of a <placeholder name="name"/> widget in "reveal" mode:</p>
-<pre><code>
-&lt;form&gt;
-	&lt;input type="text" data-type="search" id="filterable-input"&gt;&lt;/input&gt;
-&lt;/form&gt;
-&lt;form data-role="controlgroup" data-filter-reveal="true" data-filter="true" data-input="#filterable-input"&gt;
-	&lt;label for="pizza"&gt;
+<pre><code><![CDATA[
+<form>
+	<input type="text" data-type="search" id="filterable-input"></input>
+</form>
+<form data-role="controlgroup" data-filter-reveal="true" data-filter="true" data-input="#filterable-input">
+	<label for="pizza">
 		Pizza
-		&lt;input type="checkbox" id="pizza"&gt;&lt;/input&gt;
-	&lt;/label&gt;
-	&lt;label for="goulash"&gt;
+		<input type="checkbox" id="pizza"></input>
+	</label>
+	<label for="goulash">
 		Goulash
-		&lt;input type="checkbox" id="goulash"&gt;&lt;/input&gt;
-	&lt;/label&gt;
-	&lt;label for="falafel"&gt;
+		<input type="checkbox" id="goulash"></input>
+	</label>
+	<label for="falafel">
 		Falafel
-		&lt;input type="checkbox" id="falafel"&gt;&lt;/input&gt;
-	&lt;/label&gt;
-	&lt;label for="spring-rolls"&gt;
+		<input type="checkbox" id="falafel"></input>
+	</label>
+	<label for="spring-rolls">
 		Spring Rolls
-		&lt;input type="checkbox" id="spring-rolls"&gt;&lt;/input&gt;
-	&lt;/label&gt;
-&lt;/form&gt;
-</code></pre>
+		<input type="checkbox" id="spring-rolls"></input>
+	</label>
+</form>]]></code></pre>
 		<iframe src="/resources/filterable/example2.html" style="width:100%;height:300px;border:0px"></iframe>
 		<h3 id="custom-filter-example">Custom filters</h3>
 		<p>The <placeholder name="name"/> widget's <code>filterCallback</code> option allows you to set a custom callback. In the example below items are filtered by their ordinal, which can be specified using page printing conventions such as "1,2" or "4-9", or both ("1,2,4-9,12").</p>
-<pre><code>
+<pre><code><![CDATA[
 $.mobile.filterable.prototype.options.filterCallback = function( index, searchValue ) {
 	var idx;
 
@@ -101,12 +100,12 @@ $.mobile.filterable.prototype.options.filterCallback = function( index, searchVa
 				return ar.length === 1 ? parseInt( element ) :
 					[ [ parseInt( ar[ 0 ] ), parseInt( ar[ 1 ] ) ] ];
 		});
-		for ( idx = 0 ; idx &lt; searchValue.length ; idx++ ) {
-			if ( ( $.type( searchValue[ idx ] ) === "number" &amp;&amp;
+		for ( idx = 0 ; idx < searchValue.length ; idx++ ) {
+			if ( ( $.type( searchValue[ idx ] ) === "number" &&
 					index === searchValue[ idx ] ) ||
-				( $.type( searchValue[ idx ] ) === "array" &amp;&amp;
-					index &gt;= searchValue[ idx ][ 0 ] &amp;&amp;
-					index &lt;= searchValue[ idx ][ 1 ] ) ) {
+				( $.type( searchValue[ idx ] ) === "array" &&
+					index >= searchValue[ idx ][ 0 ] &&
+					index <= searchValue[ idx ][ 1 ] ) ) {
 				return false;
 			}
 		}
@@ -114,32 +113,32 @@ $.mobile.filterable.prototype.options.filterCallback = function( index, searchVa
 
 	return !!searchValue;
 };
-</code></pre>
+]]></code></pre>
 		<iframe src="/resources/filterable/example3.html" style="width:100%;height:300px;border:0px"></iframe>
 
 		<xi:include href="../includes/pre-rendered-common.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<p>The <placeholder name="name"/> widget runs the filter on its children upon instantiation to ensure that the initial list of displayed children satisfies the initial value of the input source. By setting the attribute <code>data-enhanced="true"</code>, you instruct the <placeholder name="name"/> widget that no initial filtering is to be performed. This means that you must apply the class <code>ui-screen-hidden</code> to any children which must initially be hidden due to the initial value of the search input.</p>
 		<p><strong>Note:</strong> If the element whose children are to be filtered is enhanced by another widget as well, such as for example a <a href="/listview/">listview</a> or a <a href="/controlgroup/">controlgroup</a> then you are required to provide pre-rendered markup for the other widget as well, because the attribute <code>data-enhanced="true"</code> will influence the initialization behavior of the other widget as well.</p>
 		<p>In the example below, pre-rendered markup for a <placeholder name="name"/> is provided. The attribute <code>data-filter-reveal="true"</code> is explicitly specified, since the presence of the <code>ui-screen-hidden</code> class on all the children indicates that they are initially hidden. The controlgroup widget containing the children is also pre-rendered, because the <code>data-enhanced="true"</code> attribute applies to the <a href="/controlgroup/">controlgroup</a> widget as much as it does to the <placeholder name="name"/> widget.</p>
-<pre><code>
-&lt;form&gt;
-	&lt;input id="pre-rendered-filterable" data-type="search"&gt;&lt;/input&gt;
-&lt;/form&gt;
-&lt;div
+<pre><code><![CDATA[
+<form>
+	<input id="pre-rendered-filterable" data-type="search"></input>
+</form>
+<div
 	class="ui-controlgroup ui-controlgroup-vertical ui-corner-all"
 	data-role="controlgroup"
 	data-filter="true"
 	data-input="#pre-rendered-filterable"
 	data-filter-reveal="true"
-	data-enhanced="true"&gt;
-	&lt;div class="ui-controlgroup-controls"&gt;
-		&lt;a href="index.html" class="ui-screen-hidden" data-role="button"&gt;General&lt;/a&gt;
-		&lt;a href="settings.html" class="ui-screen-hidden" data-role="button"&gt;Settings&lt;/a&gt;
-		&lt;a href="advanced.html" class="ui-screen-hidden" data-role="button"&gt;Advanced&lt;/a&gt;
-		&lt;a href="notifications.html" class="ui-screen-hidden" data-role="button"&gt;Notifications&lt;/a&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+	data-enhanced="true">
+	<div class="ui-controlgroup-controls">
+		<a href="index.html" class="ui-screen-hidden" data-role="button">General</a>
+		<a href="settings.html" class="ui-screen-hidden" data-role="button">Settings</a>
+		<a href="advanced.html" class="ui-screen-hidden" data-role="button">Advanced</a>
+		<a href="notifications.html" class="ui-screen-hidden" data-role="button">Notifications</a>
+	</div>
+</div>
+]]></code></pre>
 		<iframe src="/resources/filterable/example4.html" style="width:100%;height:300px;border:0px"></iframe>
 
 	</longdesc>
