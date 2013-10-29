@@ -10,7 +10,7 @@
 	<script src="http://code.jquery.com/mobile/git/jquery.mobile-git.min.js"></script>
     <script>
 		$( document ).on( "pageinit", "#myPage", function() {
-			$( "#autocomplete" ).on( "listviewbeforefilter", function ( e, data ) {
+			$( "#autocomplete" ).on( "filterablebeforefilter", function ( e, data ) {
 				var $ul = $( this ),
 					$input = $( data.input ),
 					value = $input.val(),
@@ -50,9 +50,9 @@
 	.ui-content{
 		padding:10px 15px 0px 15px;
 	}
-	.ui-listview-filter-inset {
-			margin-top: 0;
-		}
+	.ui-filter-inset {
+		margin-top: 0;
+	}
 	</style>
 </head>
 
@@ -60,7 +60,7 @@
 <div data-role="page" id="myPage" style="max-height:1040px; min-height:1040px;">
 	<div role="main" class="ui-content">
     	<div data-demo-html="true" data-demo-js="true" data-demo-css="true">
-			<ul id="autocomplete" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Find a city..." data-filter-theme="d"></ul>
+			<ul id="autocomplete" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Find a city..." data-filter-theme="a"></ul>
 		</div>
 	</div>
 </div>
