@@ -83,7 +83,7 @@ $( "#mylistview" ).listview({
 
 			<h3>Remote autocomplete with listview filter</h3>
 
-			<p>To use the listview filter as an autocomplete that taps into remote data sources, you can use the <code>listviewbeforefilter</code> event to dynamically populate a listview as a user types a search query. This is useful when you have a very large data set like cities, zip codes, or products that can't be loaded up-front locally. Use the view source button to see the JavaScript that powers this demo.</p>
+			<p>To use the filter as an autocomplete that taps into remote data sources, you can use the <code>filterablebeforefilter</code> event to dynamically populate a listview as a user types a search query. This is useful when you have a very large data set like cities, zip codes, or products that can't be loaded up-front locally. Use the view source button to see the JavaScript that powers this demo.</p>
 
 			<p>If you have a small list of items, you can use the listview filter reveal option to make an autocomplete with local listview data.</p>
 
