@@ -138,9 +138,9 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 
 <pre><code><![CDATA[
 <div data-role="footer" class="ui-bar">
-	<a href="index.html" data-role="button" data-icon="plus">Add</a>
-	<a href="index.html" data-role="button" data-icon="arrow-u">Up</a>
-	<a href="index.html" data-role="button" data-icon="arrow-d">Down</a>
+	<a href="index.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-icon-right ui-icon-plus">Add</a>
+	<a href="index.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-icon-right ui-icon-arrow-u">Up</a>
+	<a href="index.html" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-icon-right ui-icon-arrow-d">Down</a>
 </div>
 ]]></code></pre>
 
