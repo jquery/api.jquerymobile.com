@@ -265,7 +265,7 @@ $( "select" ).selectmenu();
 			</desc>
 		</option>
 		<option name="icon" default='"carat-d"' example-value='"star"'>
-			<desc>Replaces the default icon "arrow-down" with an icon from the icon set. Setting this attribute to "false" suppresses the icon.
+			<desc>Replaces the default icon "carat-d" with an icon from the icon set. Setting this attribute to "false" suppresses the icon.
 				<p>To suppress the icon, a boolean expression must be used:</p>
 				<p>This option is also exposed as a data attribute: <code>data-icon="star"</code>.</p>
 			</desc>
