@@ -111,6 +111,22 @@
 				<td>Three horizontal bars one above the other.</td>
 			</tr>
 			<tr>
+				<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>carat-b</strong></div></td>
+				<td>A carat pointing down (v).</td>
+			</tr>
+			<tr>
+				<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>carat-l</strong></div></td>
+				<td>A carat pointing left (&gt;).</td>
+			</tr>
+			<tr>
+				<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>carat-r</strong></div></td>
+				<td>A carat pointing right (&lt;).</td>
+			</tr>
+			<tr>
+				<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>carat-t</strong></div></td>
+				<td>A carat pointing up (^).</td>
+			</tr>
+			<tr>
 				<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>check</strong></div></td>
 				<td>A checkmark (&#10003;).</td>
 			</tr>
