@@ -73,7 +73,7 @@ $( "#mylistview" ).listview({
 
 			<h3>Search filter</h3>
 			<p>As of jQuery Mobile 1.4.0 this functionality has been transferred to the <a href="/filterable/">filterable</a> widget, which provides a more generic solution.</p>
-			<p><strong>Note:</strong>Features such as automatic text input generation and special handling of listview dividers are deprecated as of 1.4.0. The documentation for <a href="/filterable/">filterable</a> describes the migration path for listviews.</p>
+			<p><strong>Note:</strong> Features such as automatic text input generation and special handling of listview dividers are deprecated as of 1.4.0. The documentation for <a href="/filterable/">filterable</a> describes the migration path for listviews.</p>
 
 			<h3>Filter reveal</h3>
 
