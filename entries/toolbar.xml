@@ -25,12 +25,16 @@
 
 		<h3>Adding buttons</h3>
 
-		<p><strong>The behavior whereby anchor elements are automatically enhanced as buttons is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Thereafter you must add button classes if you wish to style them as buttons.</strong></p>
+		<div class="warning">
+			<p><strong>Note:</strong> The behavior whereby anchor elements are automatically enhanced as buttons is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Thereafter you must add button classes if you wish to style them as buttons.</p>
+		</div>
 
 		<p>In the standard header configuration, there are slots for buttons on either side of the text heading. Each button is typically an <code>a</code> (anchor) element or a <code>button</code> element that has the attribute <code>data-role="button"</code> set. To save space, buttons in <placeholder name="name"/> widgets are set to inline styling so the button is only as wide as the text and icons it contains. </p>
 
 		<h4>Default button positioning</h4>
-		<p><strong>The behavior whereby the first two buttons automatically get the <code>ui-btn-left</code> and <code>ui-btn-right</code> classes is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Thereafter you must add those classes in your markup if you wish to position the buttons left and/or right.</strong></p>
+		<div class="warning">
+			<p><strong>Note:</strong> The behavior whereby the first two buttons automatically get the <code>ui-btn-left</code> and <code>ui-btn-right</code> classes is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Thereafter you must add those classes in your markup if you wish to position the buttons left and/or right.</p>
+		</div>
 		<p>The <placeholder name="name"/> plugin looks for immediate children of the header container, and automatically sets the first link in the left button slot and the second link in the right. In this example, the 'Cancel' button will appear in the left slot and 'Save' will appear in the right slot based on their sequence in the source order. </p>
 
 <pre><code><![CDATA[
@@ -83,7 +87,9 @@
 
 		<h3>Adding Back buttons</h3>
 
-		<strong>The options <code>addBackBtn</code>, <code>backBtnTheme</code>, and <code>backBtnText</code> have moved from the <a href="/page/">page</a> widget to the <placeholder name="name"/> widget as of jQuery Mobile 1.4.0.</strong>
+		<div class="warning">
+			<p><strong>Note:</strong> The options <code>addBackBtn</code>, <code>backBtnTheme</code>, and <code>backBtnText</code> have moved from the <a href="/page/">page</a> widget to the <placeholder name="name"/> widget as of jQuery Mobile 1.4.0.</p>
+		</div>
 		<p>jQuery Mobile has a feature to automatically create and append "back" buttons to any header, though it is disabled by default. This is primarily useful in chromeless installed applications, such as those running in a native app webview. The framework automatically generates a "back" button on a header when the <placeholder name="name"/> plugin's <code>addBackBtn</code> option is true. This can also be set via markup if the header div has a <code>data-add-back-btn="true"</code> attribute.</p>
 		<p>If you use the attribute <code>data-rel="back"</code> on an anchor, any clicks on that anchor will mimic the back button, going back one history entry and ignoring the anchor's default href. This is particularly useful when linking back to a named page, such as a link that says "home", or when generating "back" buttons with JavaScript, such as a button to close a dialog. When using this feature in your source markup, <strong>be sure to provide a meaningful href that actually points to the URL of the referring page. This will allow the feature to work for users in C-Grade browsers.</strong></p>
 		<p>If you just want a reverse transition without actually going back in history, you should use the <code>data-direction="reverse"</code> attribute.</p>
@@ -131,7 +137,9 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 		<p>Since footers do not have the same prescriptive markup conventions as headers, we recommend using layout grids or writing custom styles to achieve the design you want.</p>
 
 		<h3>Adding buttons</h3>
-		<p><strong>The behavior whereby anchor elements are automatically enhanced as buttons is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Thereafter you must set the attribute <code>data-role="button"</code> on those anchors you wish the framework to enhance as buttons.</strong></p>
+		<div class="warning">
+			<p><strong>Note:</strong> The behavior whereby anchor elements are automatically enhanced as buttons is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Thereafter you must set the attribute <code>data-role="button"</code> on those anchors you wish the framework to enhance as buttons.</p>
+		</div>
 
 		<p>Any link or valid button markup with a <code>data-role="button"</code> attribute added to the footer will automatically be turned into a button. To save space, buttons in <placeholder name="name"/> widgets are automatically set to inline styling so the button is only as wide as the text and icons it contains.</p>
 		<p>By default, <placeholder name="name"/> widgets don't have any padding to accommodate nav bars and other widgets. To include padding on the bar, add a <code>class="ui-bar"</code> to the footer.</p>
@@ -151,7 +159,9 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 
 		<p>To group buttons together into a button set, wrap the links in a wrapper with <code><![CDATA[data-role="controlgroup"]]></code> and <code><![CDATA[data-type="horizontal"]]></code> attributes.</p>
 
-		<code><![CDATA[<div data-role="controlgroup" data-type="horizontal">]]></code>
+<pre><code><![CDATA[
+<div data-role="controlgroup" data-type="horizontal">
+]]></code></pre>
 
 		<p>This creates a grouped set of buttons:
 		<iframe src="/resources/toolbar/example10.html" style="width:100%;height:90px;border:0px"></iframe></p>
@@ -201,11 +211,9 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 		<iframe src="/resources/toolbar/example13.html" style="width:100%;height:420px;border:0px"></iframe>
 
 		<h3>Forms in toolbars</h3>
-
 		<p>While all form elements are now tested to work correctly within <em>static</em> toolbars as of jQuery Mobile 1.1, we recommend extensive testing when using form elements within <em>fixed</em> toolbars or within any <code>position: fixed</code> elements. This can potentially trigger a number of unpredictable issues in various mobile browsers, Android 2.2/2.3 in particular (detailed in <b>Known issues in Android 2.2/2.3</b>, below).</p>
 
 		<h3>Changes in jQuery Mobile 1.1</h3>
-
 		<p>Prior to version 1.1, jQuery Mobile used dynamically re-positioned toolbars for the fixed header effect because very few mobile browsers supported the <code>position:fixed</code> CSS property, and simulating fixed support through the use of "fake" JavaScript overflow-scrolling behavior would have reduced our browser support reach, in addition to feeling unnatural on certain platforms. This behavior was not ideal, and jQuery Mobile 1.1 took a new approach to fixed toolbars that allows much broader support. The framework now offers true fixed toolbars on many popular platforms, while gracefully degrading non-supporting platforms to static positioning.</p>
 
 		<h3>Polyfilling older platforms</h3>
@@ -237,7 +245,7 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 
 		<div class="warning">
 			<h2>No longer supported: touchOverflowEnabled</h2>
-			<p>Prior to jQuery Mobile 1.1, true fixed toolbar support was contingent on native browser support for the CSS property <code>overflow-scrolling: touch</code>, which is currently only supported in iOS5. As of version 1.1, jQuery Mobile no longer uses this CSS property at all. We've removed all internal usage of this property in the framework, but we've left it defined globally on the $.mobile object to reduce the risk that its removal will cause trouble with existing applications. This property is flagged for removal, so please update your code to no longer use it. The support test for this property, however, remains defined under <code>$.support</code> and we have no plans to remove that test at this time. </p>
+			<p>Prior to jQuery Mobile 1.1, true fixed toolbar support was contingent on native browser support for the CSS property <code>overflow-scrolling: touch</code>, which is currently only supported in iOS5. As of version 1.1, jQuery Mobile no longer uses this CSS property at all. We've removed all internal usage of this property in the framework, but we've left it defined globally on the $.mobile object to reduce the risk that its removal will cause trouble with existing applications. This property is flagged for removal, so please update your code to no longer use it. The support test for this property, however, remains defined under <code>$.support</code> and we have no plans to remove that test at this time.</p>
 		</div>
 
 	</longdesc>
@@ -377,16 +385,22 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 	</methods>
 	<example>
 		<desc>A basic example of a header</desc>
-		<html><![CDATA[<div data-role="header">
+		<html><![CDATA[
+<div data-role="page" id="page1">
+		<div data-role="header">
 		<h1>Page Title</h1>
 	</div>
 	<div role="main" class="ui-content">
 		<p>Some content here</p>
-	</div> ]]></html>
+	</div>
+</div>
+]]></html>
 	</example>
 	<example>
 		<desc>A basic example of a page with fixed toolbars.</desc>
-		<html><![CDATA[<div data-role="header" <div data-role="header" data-position="fixed" data-theme="b">
+		<html><![CDATA[
+<div data-role="page" id="page2">
+	<div data-role="header" data-position="fixed" data-theme="b">
 		<h1>Fixed Header</h1>
 	</div>
 	<div role="main" class="ui-content">
@@ -403,15 +417,19 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 	</div>
     <div data-role="footer" data-theme="b" data-position="fixed">
 		<h1>Fixed Footer</h1>
-	</div>]]></html>
+	</div>
+</div>
+]]></html>
 	</example>
 	<example>
 		<desc>Injecting a fixed toolbar</desc>
 		<html><![CDATA[
+<div data-role="page" id="page3">
 	<div role="main" class="ui-content">
 		<p>This page demonstrates how to correctly inject fixed toolbars.</p>
 		<a href="#" id="inject-toolbar" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Inject Header</a>
 	</div>
+</div>
 		]]></html>
 		<code><![CDATA[
 $.mobile.document.on( "click", "#inject-toolbar", function() {
