@@ -10,9 +10,9 @@
 		<p>To create a single checkbox, add an <code>input</code> with a <code>type="checkbox"</code> attribute and a corresponding <code>label</code>. If the <code>input</code> isn't wrapped in its corresponding <code>label</code>, be sure to set the <code>for</code> attribute of the <code>label</code> to match the <code>id</code> of the <code>input</code> so they are semantically associated.</p>
 
 <pre><code><![CDATA[
-<label><input type="checkbox" name="checkbox-0" /> I agree </label>
+<label><input type="checkbox" name="checkbox-0"> I agree </label>
 
-<input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" />
+<input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom">
 <label for="checkbox-1">I agree</label>
 ]]></code></pre>
 		<p>The above snippets will produce two basic checkboxes. The default styles will set the width of the element to 100% of the parent container.
@@ -23,7 +23,7 @@
 		<p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a mini version.</p>
 
 <pre><code><![CDATA[
-<input type="checkbox" name="checkbox-mini" id="checkbox-mini-1" class="custom" data-mini="true" />
+<input type="checkbox" name="checkbox-mini" id="checkbox-mini-1" class="custom" data-mini="true">
 <label for="checkbox-mini-1">I agree</label>
 ]]></code></pre>
 
@@ -41,7 +41,7 @@
 <div class="ui-field-contain">
 	<fieldset data-role="controlgroup">
 		<legend>Agree to the terms:</legend>
-		<input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" />
+		<input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom">
 		<label for="checkbox-2">I agree</label>
 	</fieldset>
 </div>
@@ -54,7 +54,7 @@
 		<iframe src="/resources/checkbox/example4.html" style="width:100%;height:220px;border:0px"></iframe></p>
 
 <pre><code><![CDATA[
-<fieldset data-role="controlgroup" data-type="horizontal" >
+<fieldset data-role="controlgroup" data-type="horizontal">
 ]]></code></pre>
 
 		<p>The framework will float the labels so they sit side-by-side on a line, hide the checkbox icons and only round the left and right edges of the group.<iframe src="/resources/checkbox/example5.html" style="width:100%;height:100px;border:0px"></iframe></p>
@@ -72,16 +72,16 @@
 <pre><code><![CDATA[
 <fieldset data-role="controlgroup">
 	<legend>Choose a pet:</legend>
-	<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
+	<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked">
 	<label for="radio-choice-1">Cat</label>
 
-	<input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2" />
+	<input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2">
 	<label for="radio-choice-2">Dog</label>
 
-	<input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3" />
+	<input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3">
 	<label for="radio-choice-3">Hamster</label>
 
-	<input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4" />
+	<input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4">
 	<label for="radio-choice-4">Lizard</label>
 </fieldset>
 ]]></code></pre>
@@ -95,13 +95,13 @@
 
 <pre><code><![CDATA[
 <fieldset data-role="controlgroup" data-mini="true">
-	<input type="radio" name="radio-mini" id="radio-mini-1" value="choice-1" checked="checked" />
+	<input type="radio" name="radio-mini" id="radio-mini-1" value="choice-1" checked="checked">
 	<label for="radio-mini-1">Credit</label>
 
-	<input type="radio" name="radio-mini" id="radio-mini-2" value="choice-2" />
+	<input type="radio" name="radio-mini" id="radio-mini-2" value="choice-2">
 	<label for="radio-mini-2">Debit</label>
 
-	<input type="radio" name="radio-mini" id="radio-mini-3" value="choice-3" />
+	<input type="radio" name="radio-mini" id="radio-mini-3" value="choice-3">
 	<label for="radio-mini-3">Cash</label>
 </fieldset>
 ]]></code></pre>
@@ -118,16 +118,16 @@
 <div class="ui-field-contain">
 	<fieldset data-role="controlgroup">
 		<legend>Choose a pet:</legend>
-		<input type="radio" name="radio-choice-2" id="radio-choice-1" value="choice-1" checked="checked" />
+		<input type="radio" name="radio-choice-2" id="radio-choice-1" value="choice-1" checked="checked">
 		<label for="radio-choice-1">Cat</label>
 
-		<input type="radio" name="radio-choice-2" id="radio-choice-2" value="choice-2" />
+		<input type="radio" name="radio-choice-2" id="radio-choice-2" value="choice-2">
 		<label for="radio-choice-2">Dog</label>
 
-		<input type="radio" name="radio-choice-2" id="radio-choice-3" value="choice-3" />
+		<input type="radio" name="radio-choice-2" id="radio-choice-3" value="choice-3">
 		<label for="radio-choice-3">Hamster</label>
 
-		<input type="radio" name="radio-choice-2" id="radio-choice-4" value="choice-4" />
+		<input type="radio" name="radio-choice-2" id="radio-choice-4" value="choice-4">
 		<label for="radio-choice-4">Lizard</label>
 	</fieldset>
 </div>
@@ -140,7 +140,7 @@
 		<p>Radio buttons can also be used for grouped button sets where only a single button can be selected at once, such as a view switcher control. To make a horizontal radio button set, add the <code>data-type="horizontal"</code> to the <code>fieldset</code>.</p>
 
 <pre><code><![CDATA[
-<fieldset data-role="controlgroup" data-type="horizontal" >
+<fieldset data-role="controlgroup" data-type="horizontal">
 ]]></code></pre>
 
 		<iframe src="/resources/radiobutton/example4.html" style="width:100%;height:90px;border:0px"></iframe>
@@ -206,7 +206,7 @@
 			<form>
 				<fieldset data-role="controlgroup">
 					<legend>Agree to the terms:</legend>
-					<input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" />
+					<input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom">
 					<label for="checkbox-2">I agree</label>
 				</fieldset>
 			</form>
@@ -223,16 +223,16 @@
 		<form>
 			<fieldset data-role="controlgroup">
 				<legend>Choose a pet:</legend>
-				<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
+				<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked">
 				<label for="radio-choice-1">Cat</label>
 
-				<input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2" />
+				<input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2">
 				<label for="radio-choice-2">Dog</label>
 
-				<input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3" />
+				<input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3">
 				<label for="radio-choice-3">Hamster</label>
 
-				<input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4" />
+				<input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4">
 				<label for="radio-choice-4">Lizard</label>
 			</fieldset>
 		</form>
