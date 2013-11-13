@@ -3,7 +3,7 @@
 	<category name="Widgets" slug="widgets">
 		<desc><![CDATA[
 			<p>Widgets are feature-rich, stateful plugins that have a full life-cycle, along with methods and events. Check out the <a href="http://api.jqueryui.com/jQuery.widget/">widget factory</a> documentation for more details.
-				<div style="padding: 0.5em 1em; margin: 1em; background: #FFF3A5;"><strong>Note</strong>: The base widget (<code>$.mobile.widget</code>) is deprecated as of 1.4 and will be removed in 1.5. It is now sufficient to base your custom jQuery Mobile widgets on the jQuery UI <a href="http://api.jqueryui.com/jQuery.widget/">widget factory</a> itself. This means that in your call to <code>$.widget()</code> you can omit the base altogether.
+				<div class="warning"><strong>Note</strong>: The base widget (<code>$.mobile.widget</code>) is deprecated as of 1.4 and will be removed in 1.5. It is now sufficient to base your custom jQuery Mobile widgets on the jQuery UI <a href="http://api.jqueryui.com/jQuery.widget/">widget factory</a> itself. This means that in your call to <code>$.widget()</code> you can omit the base altogether.
 					<pre><code>
 $.widget( "my.widget", /* NOTE: no base needed */ {
   options: {
