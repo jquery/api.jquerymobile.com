@@ -56,21 +56,21 @@ $( "[type='submit']" ).button();
 
 		<p><strong>Input type="button"</strong> based button:</p>
 <pre><code>	
-&lt;input type=&quot;button&quot; value=&quot;Button&quot; /&gt;
+&lt;input type=&quot;button&quot; value=&quot;Button&quot;&gt;
 </code></pre>
 
 		<iframe src="/resources/button/example5.html" style="width:100%;height:90px;border:0px"></iframe>
 		
 		<p><strong>Input type="submit"</strong> based button:</p>
 <pre><code>
-&lt;input type=&quot;submit&quot; value=&quot;Submit Button&quot; /&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Submit Button&quot;&gt;
 </code></pre>
 
 		<iframe src="/resources/button/example6.html" style="width:100%;height:90px;border:0px"></iframe>
 			
 		<p><strong>Input type="reset"</strong> based button:</p>
 <pre><code>
-&lt;input type=&quot;reset&quot; value=&quot;Reset Button&quot; /&gt;
+&lt;input type=&quot;reset&quot; value=&quot;Reset Button&quot;&gt;
 </code></pre>
 		
 		<iframe src="/resources/button/example7.html" style="width:100%;height:90px;border:0px"></iframe>
