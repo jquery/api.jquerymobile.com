@@ -108,19 +108,19 @@
 		</option>
 		<option name="collapsed" default="true" example-value="false">
 			<desc>When false, the container is initially expanded with a minus icon in the header.
-				<p>This option is also exposed as a data attribute:<code>data-collapsed="false"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-collapsed="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
 		<option name="collapsedIcon" default='"plus"' example-value='"arrow-r"'>
 			<desc>Sets the icon for the header of the collapsible container when in a collapsed state.
-				<p>This option is also exposed as a data attribute:<code>data-collapsed-icon="arrow-r"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-collapsed-icon="arrow-r"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
 		<option name="corners" default="true" example-value="false">
 			<desc>Applies the theme border-radius if set to true.
-				<p>This option is also exposed as a data attribute:<code>data-corners="false"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-corners="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
