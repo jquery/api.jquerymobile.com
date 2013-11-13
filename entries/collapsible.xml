@@ -125,20 +125,20 @@
 		<option name="collapseCueText" default='" click to collapse contents"'  example-value='"collapse with a click"'>
 			<desc>This text is used to provide audible feedback for users with screen reader software.
 				<p>If the value is unset for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.</p>
-				<p>This option is also exposed as a data attribute:<code>data-collapse-cue-text=" collapses with a click"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-collapse-cue-text=" collapses with a click"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
 		<option name="collapsed" default="true" example-value="false">
 			<desc>When false, the container is initially expanded with a minus icon in the header.
-				<p>This option is also exposed as a data attribute:<code>data-collapsed="false"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-collapsed="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
 		<option name="collapsedIcon" default='"plus"' example-value='"arrow-r"'>
 			<desc>Sets the icon for the header of the collapsible container when in a collapsed state.
 				<p>If the value is unset for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.</p>
-				<p>This option is also exposed as a data attribute:<code>data-collapsed-icon="arrow-r"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-collapsed-icon="arrow-r"</code>.</p>
 			</desc>
 			<type name="String">
 				<desc>The name of the icon you wish to use.</desc>
@@ -151,7 +151,7 @@
 		<option name="corners" default="true" example-value="false">
 			<desc>Applies the theme border-radius if set to true.
 				<p>If the value is unset for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.</p>
-				<p>This option is also exposed as a data attribute:<code>data-corners="false"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-corners="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
@@ -161,7 +161,7 @@
 		<option name="expandCueText" default='" click to expand contents"' example-value='" expand with a click"'>
 			<desc>This text is used to provide audible feedback for users with screen reader software.
 				<p>If the value is unset for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.</p>
-				<p>This option is also exposed as a data attribute:<code>data-expand-cue-text=" expand by clicking"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-expand-cue-text=" expand by clicking"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
