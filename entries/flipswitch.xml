@@ -13,7 +13,7 @@
 <fieldset>
 	<div data-role="fieldcontain">
 		<label for="checkbox-based-flipswitch">Checkbox-based:</label>
-		<input type="checkbox" id="checkbox-based-flipswitch" data-role="flipswitch"></input>
+		<input type="checkbox" id="checkbox-based-flipswitch" data-role="flipswitch">
 	</div>
 </fieldset>
 ]]></code></pre>
@@ -123,5 +123,21 @@
 			</desc>
 		</method>
 	</methods>
+	<example>
+		<desc>A basic example of a checkbox in a fieldcontainer</desc>
+		<html><![CDATA[<div data-role="header">
+		<h1>jQuery Mobile Example</h1>
+	</div>
+	<div role="main" class="ui-content">
+		<div class="ui-field-contain">
+			<form>
+				<div data-role="fieldcontain">
+					<label for="checkbox-based-flipswitch-0">Checkbox-based:</label>
+					<input type="checkbox" id="checkbox-based-flipswitch-0" data-role="flipswitch">
+				</div>
+			</form>
+		</div>
+	</div>	]]></html>
+	</example>
 	<category slug="widgets"/>
 </entry>
