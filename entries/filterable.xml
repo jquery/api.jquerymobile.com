@@ -37,24 +37,24 @@
 		The example below illustrates a simple <placeholder name="name"/> widget setup.</p>
 <pre><code><![CDATA[
 <form>
-	<input type="text" data-type="search" id="filterable-input"></input>
+	<input type="text" data-type="search" id="filterable-input">
 </form>
 <form data-role="controlgroup" data-filter="true" data-input="#filterable-input">
 	<label for="pizza">
 		Pizza
-		<input type="checkbox" id="pizza"></input>
+		<input type="checkbox" id="pizza">
 	</label>
 	<label for="goulash">
 		Goulash
-		<input type="checkbox" id="goulash"></input>
+		<input type="checkbox" id="goulash">
 	</label>
 	<label for="falafel">
 		Falafel
-		<input type="checkbox" id="falafel"></input>
+		<input type="checkbox" id="falafel">
 	</label>
 	<label for="spring-rolls">
 		Spring Rolls
-		<input type="checkbox" id="spring-rolls"></input>
+		<input type="checkbox" id="spring-rolls">
 	</label>
 </form>
 ]]></code></pre>
@@ -66,24 +66,24 @@
 		<p>The example below illustrates the behavior of a <placeholder name="name"/> widget in "reveal" mode:</p>
 <pre><code><![CDATA[
 <form>
-	<input type="text" data-type="search" id="filterable-input"></input>
+	<input type="text" data-type="search" id="filterable-input">
 </form>
 <form data-role="controlgroup" data-filter-reveal="true" data-filter="true" data-input="#filterable-input">
 	<label for="pizza">
 		Pizza
-		<input type="checkbox" id="pizza"></input>
+		<input type="checkbox" id="pizza">
 	</label>
 	<label for="goulash">
 		Goulash
-		<input type="checkbox" id="goulash"></input>
+		<input type="checkbox" id="goulash">
 	</label>
 	<label for="falafel">
 		Falafel
-		<input type="checkbox" id="falafel"></input>
+		<input type="checkbox" id="falafel">
 	</label>
 	<label for="spring-rolls">
 		Spring Rolls
-		<input type="checkbox" id="spring-rolls"></input>
+		<input type="checkbox" id="spring-rolls">
 	</label>
 </form>
 ]]></code></pre>
@@ -123,7 +123,7 @@ $.mobile.filterable.prototype.options.filterCallback = function( index, searchVa
 		<p>In the example below, pre-rendered markup for a <placeholder name="name"/> is provided. The attribute <code>data-filter-reveal="true"</code> is explicitly specified, since the presence of the <code>ui-screen-hidden</code> class on all the children indicates that they are initially hidden. The controlgroup widget containing the children is also pre-rendered, because the <code>data-enhanced="true"</code> attribute applies to the <a href="/controlgroup/">controlgroup</a> widget as much as it does to the <placeholder name="name"/> widget.</p>
 <pre><code><![CDATA[
 <form>
-	<input id="pre-rendered-filterable" data-type="search"></input>
+	<input id="pre-rendered-filterable" data-type="search">
 </form>
 <div
 	class="ui-controlgroup ui-controlgroup-vertical ui-corner-all"
