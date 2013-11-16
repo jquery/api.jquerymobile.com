@@ -137,16 +137,15 @@ $( "div" ).navbar({
 	<div data-role="content">
 		<p>Some Content here</p>
 	</div>
-	<div data-role="footer">	
+	<div data-role="footer">
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#" class="ui-btn-active">One</a></li>
 				<li><a href="#">Two</a></li>
 			</ul>
-		</div><!-- /navbar --> 
-	</div>
-</div>
-]]></html>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
+</div><!-- /page -->]]></html>
 	</example>
 	<category slug="widgets"/>
 </entry>
