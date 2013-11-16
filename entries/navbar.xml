@@ -119,7 +119,7 @@
 		<p>Navbars inherit the theme swatch from their parent container, just like buttons. If a navbar is placed in the header or footer toolbar, it will inherit the default toolbar swatch "a" for bars unless you set this in the markup. </p>
 		<p>Here are a few examples of navbars in various container swatches that automatically inherit their parent's swatch letter. Note that in these examples, instead of using a <code>data-theme</code> attribute, we're manually adding the swatch classes to apply the body swatch (<code>ui-body-a</code>) and the class to add the standard body padding (ui-body), but the inheritance works the same way:</p>
 
-		<iframe src="/resources/navbar/example14.html" style="width:100%;height:90px;border:0px"></iframe>
+		<iframe src="/resources/navbar/example14.html" style="width:100%;height:290px;border:0px"></iframe>
 
 		<p>To set the theme color for a navbar item, add the <code>data-theme</code> attribute to the individual links and specify a theme swatch. Note that applying a theme swatch to the navbar container is <em>not</em> supported.</p>
 		<iframe src="/resources/navbar/example15.html" style="width:100%;height:90px;border:0px"></iframe>
