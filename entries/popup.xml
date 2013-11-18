@@ -11,7 +11,7 @@
 <a href="#popupBasic" data-rel="popup">Open Popup</a>
 
 <div data-role="popup" id="popupBasic">
-	<p>This is a completely basic popup, no options set.<p>
+	<p>This is a completely basic popup, no options set.</p>
 </div>
 ]]></code></pre>
 
@@ -132,7 +132,7 @@ $( document ).on( "pageinit", function() {
 });
 ]]></code></pre>
 
-            <p>Note that the video will still be playing in the iframe when the popup is closed. If available you can use the 3rd party API to stop the video on the <code>popupafterclose</code> event. Another way is to create the iframe when the popup is opened and destroy it when the popup is closed, but this would drop support for browsers that have JavaScript disabled.</p>
+			<p>Note that the video will still be playing in the iframe when the popup is closed. If available you can use the 3rd party API to stop the video on the <code>popupafterclose</code> event. Another way is to create the iframe when the popup is opened and destroy it when the popup is closed, but this would drop support for browsers that have JavaScript disabled.</p>
 
 			<h3>Map example</h3>
 			<p>In the second example, an iframe is used to display <strong>Google Maps API</strong>. Using an iframe prevents issues with the controls of the map.
@@ -302,7 +302,7 @@ $( "#myPopupDiv" ).popup( "close" )
 			<li>If centering the popup over an element would cause the overall height of the document to increase, the popup is shifted upwards at most until its top coordinate becomes 0.</li>
 		</ol>
 
-        <p>Also note that a popup is currently always placed at the center of the window after an orientation change or window resize event.</p>
+		<p>Also note that a popup is currently always placed at the center of the window after an orientation change or window resize event.</p>
 
 		<p>See <a href="#methods">methods</a> for information about setting the popup position programmatically, including the option to specify <strong>x and y coordinates</strong>.</p>
 
@@ -589,7 +589,7 @@ $( document ).on( "pageinit", function() {
 		<a href="#popupBasic" data-rel="popup">Open Popup</a>
 
 		<div data-role="popup" id="popupBasic">
-			<p>This is a completely basic popup, no options set.<p>
+			<p>This is a completely basic popup, no options set.</p>
 		</div>
 	</div>]]></html>
 	</example>
