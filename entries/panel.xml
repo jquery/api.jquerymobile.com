@@ -32,7 +32,7 @@
 		<p>If a page contains a panel the framework wraps the header, content and footer sections in a <code>div</code>. When opening a panel with display mode "reveal" or "push" the transition is applied to this wrapper. An exception is fixed headers and footers. Those are not included in the wrapper, but will transition in sync with it. Be aware of the fact that all your visible page content should live inside those page sections.</p>
 
 		<h4>CSS Multi-column Layout</h4>
-		<p>To avoid blinks when opening a panel, we force hardware acceleration on WebKit browsers. The CSS that is used to do this can cause issues with buttons and form elements on the page if their container has a CSS multi-column layout (<code>column-count</code>). To resolve this you have to set the following rule for the element or its container: </p>
+		<p>To avoid blinks when opening a panel, we force hardware acceleration on WebKit browsers. The CSS that is used to do this can cause issues with buttons and form elements on the page if their container has a CSS multi-column layout (<code>column-count</code>). To resolve this you have to set the following rule for the element or its container:</p>
 
 <pre><code><![CDATA[
 -webkit-transform: translate3d(0,0,0);
@@ -82,6 +82,8 @@ $( "#idofpanel" ).panel( "open" , optionsHash );
 ]]></code></pre>
 
 		<iframe src="/resources/panel/example2.html" style="width:100%;height:440px;border:0px"></iframe>
+
+		<p>When using markup to control panels, you can only have a single panel open at once. Clicking a link to open a panel while one is already open will auto-close the first. This is done to keep the markup-only configuration simple.</p>
 
 		<h3>Closing a panel</h3>
 		<p>Clicking the link that opened the panel, swiping left or right, or tapping the Esc key will close the panel. To turn off the swipe-to-close behavior, add the <code>data-swipe-close="false"</code> attribute to the panel.</p>
@@ -142,7 +144,7 @@ $( "#idofpanel" ).panel( "close" );
 @media (min-width:35em) {
 
 	/* wrap on wide viewports once open */
-	
+
 	.ui-panel-page-content-open.ui-panel-page-content-position-left {
 		margin-right: 17em;
 	}
@@ -150,14 +152,14 @@ $( "#idofpanel" ).panel( "close" );
 		margin-left: 17em;
 	}
 	.ui-panel-page-content-open {
-		width: auto;	
+		width: auto;
 	}
-	
+
 	/* disable "dismiss" on wide viewports */
 	.ui-panel-dismiss {
 		display: none;
 	}
-	
+
 	/* same as the above but for panels with display mode "push" only */
 
 	.ui-panel-page-content-open.ui-panel-page-content-position-left.ui-panel-page-content-display-push {
@@ -167,7 +169,7 @@ $( "#idofpanel" ).panel( "close" );
 		margin-left: 17em;
 	}
 	.ui-panel-page-content-open.ui-panel-page-content-display-push {
-		width: auto;	
+		width: auto;
 	}
 
 	.ui-panel-dismiss-display-push {
@@ -399,7 +401,7 @@ $( "#idofpanel" ).panel( "close" );
 		</method>
 	</methods>
 	<example>
-		<height>380</height>
+		<height>450px</height>
 		<desc>A basic example of a panel.</desc>
 		<css><![CDATA[
 	.panel-content {
