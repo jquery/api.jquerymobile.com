@@ -2,7 +2,9 @@
 <entry type="method" name="jQuery.mobile.getDocumentBase" deprecated="1.4.0">
 	<title>jQuery.mobile.getDocumentBase()</title>
 	<desc>Utility method for retrieving the original document base URL.
-		<p><strong>Note: <placeholder name="name"/> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Use the <a href="/jQuery.mobile.path.getDocumentBase/">jQuery.mobile.path.getDocumentBase()</a> method instead.</strong></p>
+		<div class="warning">
+			<p><strong>Note:</strong> <placeholder name="name"/> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Use the <a href="/jQuery.mobile.path.getDocumentBase/">jQuery.mobile.path.getDocumentBase()</a> method instead.</p>
+		</div>
 	</desc>
 	<signature>
 		<argument name="asParsedObject" type="Boolean" default="false">

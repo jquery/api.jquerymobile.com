@@ -5,7 +5,9 @@
 	<desc>Creates a rangeslider widget</desc>
 	<longdesc>
 		<h2>Range Slider</h2>
-		<strong>Note: The <placeholder name="name"/> widget is deprecated as of jQuery Mobile 1.4.0.</strong>
+		<div class="warning">
+			<p><strong>Note: </strong>The <placeholder name="name"/> widget is deprecated as of jQuery Mobile 1.4.0.</p>
+		</div>
 		<p>The rangeslider widget can be considered as a double handle slider. To add a rangeslider widget to your page, use two standard inputs with the <code>type="range"</code> attribute, and put them inside a <code>&lt;div&gt;</code> container. The input values are used to configure the starting position of the handles and the values are populated in the corresponding text inputs (the first one at the beginning of the rangeslider, and the second one at the end). Specify <code>min</code> and <code>max</code> attribute values to set the rangeslider's range. If you want to constrain inputs to specific increments, add the <code>step</code> attribute. Set the <code>value</code> attribute on each input to define their initial value. The framework will parse these attributes to configure the rangeslider widget.</p>
 		<p>As you drag the rangeslider's handles, the framework will update the native input values (and vice-versa) so they are always in sync; this ensures that the values are submitted with the form.</p>
 		<p>Set the <code>for</code> attribute of the <code>labels</code> to match the <code>ids</code> of the <code>inputs</code> so they are semantically associated. It's possible to accessibly hide the labels if they're not desired in the page layout, but we require that they are present in the markup for semantic and accessibility reasons.</p>
@@ -90,7 +92,9 @@
 		<h3>Field containers</h3>
 
 		<p>Optionally wrap the rangeslider markup in a container with class <code>ui-field-contain</code> to help visually group it in a longer form. In this example, the step attribute is omitted to allow any whole number value to be selected.</p>
-		<p><strong>Note: The <code>data-</code> attribute <code>data-role="fieldcontain"</code> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Use the <code>ui-field-contain</code> class instead.</strong></p>
+		<div class="warning">
+			<p><strong>Note: </strong>The <code>data-</code> attribute <code>data-role="fieldcontain"</code> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Use the <code>ui-field-contain</code> class instead.</p>
+		</div>
 
 <pre><code><![CDATA[
 <div class="ui-field-contain">
