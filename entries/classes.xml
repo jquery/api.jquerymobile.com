@@ -50,7 +50,8 @@
 			</tr>
 			<tr>
 				<td class="enum-value"><div style="white-space: nowrap;">ui-shadow-icon</div></td>
-				<td>Draws a shadow around the icon. <strong>Note: This class is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0.</strong></td>
+				<td>Draws a shadow around the icon.
+					<p class="warning"><strong>Note:</strong> This class is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0.</p></td>
 			</tr>
 			<tr><th colspan="2">Icon positioning</th></tr>
 			<tr>
