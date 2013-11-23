@@ -13,6 +13,7 @@
 	</signature>
 	<category slug="methods"/>
 	<example>
+		<height>400</height>
 		<desc>Degrading Inputs</desc>
 		<html><![CDATA[
 	<div data-role="header">
