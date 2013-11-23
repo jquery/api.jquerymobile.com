@@ -11,6 +11,7 @@
 	<signature>
 	</signature>
 	<example>
+		<height>550</height>
 		<desc>Injecting new content at runtime and enhancing it with <code><placeholder name="name"/></code>.</desc>
 		<html><![CDATA[
 <script>
