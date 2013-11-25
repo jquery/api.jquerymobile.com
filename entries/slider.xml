@@ -60,7 +60,9 @@
 		<h3>Field containers</h3>
 
 		<p>Optionally wrap the slider markup in a container with class <code>ui-field-contain</code> to help visually group it in a longer form. In this example, the step attribute is omitted to allow any whole number value to be selected.</p>
-		<p><strong>Note: The <code>data-</code> attribute <code>data-role="fieldcontain"</code> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Add class <code>ui-field-contain</code> instead.</strong></p>
+		<div class="warning">
+			<p><strong>Note:</strong> The <code>data-</code> attribute <code>data-role="fieldcontain"</code> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Add class <code>ui-field-contain</code> instead.</p>
+		</div>
 
 <pre><code><![CDATA[
 <div class="ui-field-contain">
@@ -150,7 +152,9 @@ $( "input" ).slider();
 		<h3>Field containers</h3>
 
 		<p>Optionally wrap the switch markup in a container with class <code>ui-field-contain</code> to help visually group it in a longer form. In this example, the step attribute is omitted to allow any whole number value to be selected.</p>
-		<p><strong>Note: The <code>data-</code> attribute <code>data-role="fieldcontain"</code> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Add class <code>ui-field-contain</code> instead.</strong></p>
+		<div class="warning">
+			<p><strong>Note:</strong> The <code>data-</code> attribute <code>data-role="fieldcontain"</code> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Add class <code>ui-field-contain</code> instead.</p>
+		</div>
 
 <pre><code><![CDATA[
 <div class="ui-field-contain">
