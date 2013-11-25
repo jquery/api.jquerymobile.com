@@ -16,7 +16,7 @@
 
 <pre><code><![CDATA[
 <label for="slider-1">Input slider:</label>
-<input type="range" name="slider-1" id="slider-1" value="60" min="0" max="100" />
+<input type="range" name="slider-1" id="slider-1" value="60" min="0" max="100">
 ]]></code></pre>
 
 		<p>The default slider with these settings is displayed like this:
@@ -28,7 +28,7 @@
 
 <pre><code><![CDATA[
 <label for="slider-1">Input slider:</label>
-<input type="range" name="slider-1" id="slider-1" value="60" min="0" max="100" />
+<input type="range" name="slider-1" id="slider-1" value="60" min="0" max="100">
 ]]></code></pre>
 
 		<p>This will produce an input that snaps to increments of 50. If a value is added to the input that isn't valid with the step increment, the value will be reset on blur to the closest step.
@@ -40,7 +40,7 @@
 
 <pre><code><![CDATA[
 <label for="slider-fill">Input slider:</label>
-<input type="range" name="slider-fill" id="slider-fill" value="60" min="0" max="100" data-highlight="true" />
+<input type="range" name="slider-fill" id="slider-fill" value="60" min="0" max="100" data-highlight="true">
 ]]></code></pre>
 
 		<iframe src="/resources/slider/example3.html" style="width:100%;height:90px;border:0px"></iframe>
@@ -51,7 +51,7 @@
 
 <pre><code><![CDATA[
 <label for="slider-mini">Input slider:</label>
-<input type="range" name="slider-mini" id="slider-mini" value="25" min="0" max="100" data-highlight="true" data-mini="true" />
+<input type="range" name="slider-mini" id="slider-mini" value="25" min="0" max="100" data-highlight="true" data-mini="true">
 ]]></code></pre>
 
 		<p>This will produce a slider and its corresponding input that are not as tall as the standard version. The input also has a smaller text size.
@@ -67,7 +67,7 @@
 <pre><code><![CDATA[
 <div class="ui-field-contain">
 	<label for="slider-2">Input slider:</label>
-	<input type="range" name="slider-2" id="slider-2" value="25" min="0" max="100" />
+	<input type="range" name="slider-2" id="slider-2" value="25" min="0" max="100">
 </div>
 ]]></code></pre>
 
@@ -91,7 +91,7 @@ $( "input" ).slider();
 <pre><code><![CDATA[
 <div class="ui-field-contain">
 	<label for="slider-3">Input slider:</label>
-	<input type="range" name="slider-3" id="slider-3" value="25" min="0" max="100" data-theme="b" data-track-theme="a" />
+	<input type="range" name="slider-3" id="slider-3" value="25" min="0" max="100" data-theme="b" data-track-theme="a">
 </div>
 ]]></code></pre>
 
@@ -295,7 +295,7 @@ $( "input" ).slider();
 	</div>
 	<div role="main" class="ui-content">
 		<label for="slider-0">Input slider:</label>
-		<input type="range" name="slider-0" id="slider-0" value="60" min="0" max="100" />
+		<input type="range" name="slider-0" id="slider-0" value="60" min="0" max="100">
 	</div>]]></html>
 	</example>
 	<example>
