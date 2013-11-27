@@ -1,39 +1,39 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="collapsibleset" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="collapsibleset" init-selector=":jqmData(role=&#39;collapsibleset&#39;)">
-	<title>Collapsible set Widget</title>
-	<desc>Creates a collapsible set of collapsible blocks of content</desc>
+	<title>Collapsibleset Widget</title>
+	<desc>Creates a set of collapsible blocks of content</desc>
 	<longdesc>
-		<h2>Collapsible sets</h2>
-		<p>Collapsible sets start with the exact same markup as individual collapsibles.
-		By adding a parent wrapper with a <code>data-role="collapsibleset"</code> attribute around a number of collapsibles, the framework will style these to looks like a visually grouped widget and make it behave like an accordion so only one section can be open at a time.</p>
-		<p>By default, all the sections will be collapsed. To set a section to be open when the page loads, add the <code>data-collapsed="false"</code> attribute to the heading of the section you want expanded.</p>
+		<h2>Sets of collapsibles</h2>
+		<p>jQuery Mobile will visually style a set of <a href="/collapsible/">collapsibles</a> as a group and will make the set behave like an accordion in that only one collapsible can be open at a time if you wrap the collapsibles in a <code>div</code> that has the attribute <code>data-role="collapsibleset"</code>.</p>
+
+		<p>By default, all the collapsible sections will be collapsed. To set a section to be open when the page loads, add the <code>data-collapsed="false"</code> attribute to the heading of the section you want expanded.</p>
 
 <pre><code><![CDATA[
 <div data-role="collapsible-set">
 
 	<div data-role="collapsible" data-collapsed="false">
 		<h3>Section 1</h3>
-		<p>I'm the collapsible set content for section 1.</p>
+		<p>I'm the collapsibleset content for section 1. My content is initially visible.</p>
 	</div>
 
 	<div data-role="collapsible">
 		<h3>Section 2</h3>
-		<p>I'm the collapsible set content for section 2.</p>
+		<p>I'm the collapsibleset content for section 2.</p>
 	</div>
 
 </div>
 ]]></code></pre>
 
-		<p>Here is an example of a collapsible set with 5 sections.
+		<p>Here is an example of a <placeholder name="name"/> widget with 5 sections.
 		<iframe src="/resources/collapsibleset/example1.html" style="width:100%;height:310px;border:0px"></iframe></p>
 
-		<h3>Non-inset collapsible sets</h3>
+		<h3>Non-inset <placeholder name="name"/> widgets</h3>
 
 		<p>For full width collapsibles without corner styling add the <code>data-inset="false"</code> attribute to the set.
 		<iframe src="/resources/collapsibleset/example2.html" style="width:100%;height:240px;border:0px"></iframe></p>
 
-		<h3>Mini collapsible sets</h3>
+		<h3>Mini <placeholder name="name"/> widgets</h3>
 
 		<p>For a more compact version that is useful in tight spaces, add the <code>data-mini="true"</code> attribute to the set to create a mini version.
 		<iframe src="/resources/collapsibleset/example3.html" style="width:100%;height:210px;border:0px"></iframe></p>
@@ -50,7 +50,7 @@
 
 		<h3>Theming collapsible content</h3>
 
-		<p>The standard <code>data-theme</code> attribute can be used to set the color of each collapsible in a set. To provide a clearer visual grouping of the content with the headers, add the <code>data-content-theme</code> attribute with a swatch letter. This adds a themed background color and border to the content block. For consistent theming, add these attributes to the parent collapsible set.
+		<p>The standard <code>data-theme</code> attribute can be used to set the color of each collapsible in a set. To provide a clearer visual grouping of the content with the headers, add the <code>data-content-theme</code> attribute with a swatch letter. This adds a themed background color and border to the content block. For consistent theming, add these attributes to the parent <placeholder name="name"/> widget.
 
 <pre><code><![CDATA[
 <div data-role="collapsible-set" data-theme="b" data-content-theme="a">
@@ -118,7 +118,7 @@
 				<p>Possible values: left, right, top, bottom, none, notext.</p>
 				<p>This option is also exposed as a data attribute: <code>data-iconpos="right"</code>.</p>
 			</desc>
-	    	<type name="String" />
+			<type name="String" />
 		</option>
 		<option name="initSelector" default="null" deprecated="1.4.0">
 			<desc>
@@ -140,13 +140,13 @@
 			<type name="String" />
 		</option>
 		<option name="inset" default="true" example-value="false">
-			<desc>By setting this option to false the collapsibles will get a full width appearance without corners. If the value is false for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.
+			<desc>By setting this option to false the collapsibles will get a full width appearance without corners. If the value is false for an individual collapsible container, but that container is part of a <placeholder name="name"/> widget, then the value is inherited from the parent <placeholder name="name"/> widget.
 				<p>This option is also exposed as a data attribute: <code>data-inset="true"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
 		<option name="mini" default="false" example-value="true">
-			<desc>Sets the size of the element to a more compact, mini version. If the value is false for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.
+			<desc>Sets the size of the element to a more compact, mini version. If the value is false for an individual collapsible container, but that container is part of a <placeholder name="name"/> widget, then the value is inherited from the parent <placeholder name="name"/> widget.
 				<p>This option is also exposed as a data attribute: <code>data-mini="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
@@ -162,14 +162,14 @@
 		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="refresh">
-			<desc>Updates the collapsible set.
-				<p>If you manipulate a collapsible set via JavaScript (e.g. by adding new collapsibles, removing old ones, or showing/hiding existing ones), you must call the refresh method on it to update the visual styling. This method will instantiate collapsibles on child elements which are marked <code>data-role="collapsible"</code>, so there is no need to manually call <code>.collapsible()</code>.</p>
+			<desc>Updates the <placeholder name="name"/> widget.
+				<p>If you manipulate a <placeholder name="name"/> widget via JavaScript (e.g. by adding new collapsibles, removing old ones, or showing/hiding existing ones), you must call the refresh method on it to update the visual styling. This method will instantiate collapsibles on child elements which are marked <code>data-role="collapsible"</code>, so there is no need to manually call <code>.collapsible()</code>.</p>
 
 			</desc>
 		</method>
 	</methods>
 	<example>
-		<desc>A basic example of a collapsible set.</desc>
+		<desc>A basic example of a <placeholder name="name"/> widget.</desc>
 		<html><![CDATA[
 <div data-role="page" id="page1">
 	<div data-role="header">
@@ -179,11 +179,11 @@
 		<div data-role="collapsibleset">
 			<div data-role="collapsible" data-collapsed="false">
 				<h3>Section A</h3>
-				<p>I'm the collapsible set content for section A.</p>
+				<p>I'm the collapsibleset content for section A.</p>
 			</div>
 			<div data-role="collapsible">
 				<h3>Section B</h3>
-				<p>I'm the collapsible set content for section B.</p>
+				<p>I'm the collapsibleset content for section B.</p>
 			</div>
 		</div>
 	</div>
