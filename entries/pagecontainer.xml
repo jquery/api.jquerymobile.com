@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="pagecontainer" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="pagecontainer">
-	<title>Page Container Widget</title>
+	<title>Pagecontainer Widget</title>
 	<desc>Manages a collection of pages.</desc>
 	<longdesc>
 		<h2>Smooth Navigation Between Pages</h2>
-		<strong>Note: The page container widget is designed to be a singleton instantiated by the framework on the <code>body</code> element. This limitation will be removed in future versions of jQuery Mobile.</strong>
+		<strong>Note: The <placeholder name="name"/> widget is designed to be a singleton instantiated by the framework on the <code>body</code> element. This limitation will be removed in future versions of jQuery Mobile.</strong>
 		<p>jQuery Mobile's central abstraction is the use of multiple pages inside a single HTML document. The children of the <code>body</code> are all <code>div</code> elements that have been enhanced into <a href="/page/">page</a> widgets. These are jQuery Mobile pages.</p>
 		<p>Only one page is visible at a time. Upon navigation, the currently visible page is hidden, and another page is shown. Moving from one page to another is accomplished via a transition. This is not possible when navigating between HTML documents via HTTP, because the browser discards all state associated with the source page when navigating to the target page, making it impossible to perform this task via a smooth transition effect such as a fade or a slide.</p>
 		<h3>Multipage Documents</h3>
