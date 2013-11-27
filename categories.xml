@@ -42,9 +42,6 @@ $.widget( "my.widget", /* NOTE: no base needed */ {
 		<desc><![CDATA[
 			<p>jQuery Mobile offers a set of built-in icons that can be applied to buttons, collapsibles, listview buttons and more.</p>]]></desc>
 	</category>
-	<category name="Miscellaneous" slug="misc">
-		<desc></desc>
-	</category>
 	<category name="Properties" slug="properties">
 		<desc><![CDATA[
 			<p>jQuery Mobile exposes several properties on the $.mobile object for use in your applications.</p>]]></desc>
