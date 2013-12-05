@@ -10,7 +10,7 @@
 		<dd>
 			<dl>
 				<dt>Arguments:</dt>
-				<dd>See <a href="http://api.jquery.com/jQuery.data/">jQuery's data</a> method<br />
+				<dd>See <a href="//api.jquery.com/jQuery.data/">jQuery's data</a> method<br />
 				<b>Note:</b><br />
 				Calling <code>jqmData()</code> with no argument will return <code>undefined</code>. This behavior is subject to change in future versions.</dd>
 				<dt>Also:</dt>
