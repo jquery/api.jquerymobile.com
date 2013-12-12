@@ -107,7 +107,7 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 
 <pre><code><![CDATA[
 <div class="ui-bar ui-bar-b">
-	<h3>I'm just a div with bar classes and a mini inline <a href="#" data-role="button" data-mini="true">Button</a></h3>
+	<h3>I'm just a div with bar classes and a mini inline <a href="#" data-role="button" data-inline="true" data-mini="true">Button</a></h3>
 </div>
 ]]></code></pre>
 
