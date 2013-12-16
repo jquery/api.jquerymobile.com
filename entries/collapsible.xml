@@ -95,7 +95,7 @@
 
 		<h3>Collapsible sets (accordions)</h3>
 
-		<p>It's possible to combine multiple collapsibles into a grouped set that acts like an <a href="/collapsible-set/">accordion widget</a>.</p>
+		<p>It's possible to combine multiple collapsibles into a grouped set that acts like an <a href="/collapsibleset/">accordion widget</a>.</p>
 
   	</longdesc>
 	<added>1.0</added>

@@ -8,66 +8,67 @@
 		By adding a parent wrapper with a <code>data-role="collapsible-set"</code> attribute around a number of collapsibles, the framework will style these to looks like a visually grouped widget and make it behave like an accordion so only one section can be open at a time.</p>
 		<p>By default, all the sections will be collapsed. To set a section to be open when the page loads, add the <code>data-collapsed="false"</code> attribute to the heading of the section you want expanded.</p>
 
-<pre><code>
-&lt;div data-role="collapsible-set"&gt;
+<pre><code><![CDATA[
+<div data-role="collapsible-set">
 
-	&lt;div data-role=&quot;collapsible&quot; data-collapsed=&quot;false&quot;&gt;
-		&lt;h3&gt;Section 1&lt;/h3&gt;
-		&lt;p&gt;I&#x27;m the collapsible set content for section 1.&lt;/p&gt;
-	&lt;/div&gt;
+	<div data-role="collapsible" data-collapsed="false">
+		<h3>Section 1</h3>
+		<p>I'm the collapsible set content for section 1.</p>
+	</div>
 
-	&lt;div data-role=&quot;collapsible&quot;&gt;
-		&lt;h3&gt;Section 2&lt;/h3&gt;
-		&lt;p&gt;I&#x27;m the collapsible set content for section 2.&lt;/p&gt;
-	&lt;/div&gt;
+	<div data-role="collapsible">
+		<h3>Section 2</h3>
+		<p>I'm the collapsible set content for section 2.</p>
+	</div>
 
-&lt;/div&gt;
-</code></pre>
+</div>
+]]></code></pre>
 
 		<p>Here is an example of a collapsible set with 5 sections.
-		<iframe src="/resources/collapsible-set/example1.html" style="width:100%;height:310px;border:0px"></iframe></p>
+		<iframe src="/resources/collapsibleset/example1.html" style="width:100%;height:310px;border:0px"></iframe></p>
 
 		<h3>Non-inset collapsible sets</h3>
 
 		<p>For full width collapsibles without corner styling add the <code>data-inset="false"</code> attribute to the set.
-		<iframe src="/resources/collapsible-set/example2.html" style="width:100%;height:240px;border:0px"></iframe></p>
+		<iframe src="/resources/collapsibleset/example2.html" style="width:100%;height:240px;border:0px"></iframe></p>
 
 		<h3>Mini collapsible sets</h3>
 
 		<p>For a more compact version that is useful in tight spaces, add the <code>data-mini="true"</code> attribute to the set to create a mini version.
-		<iframe src="/resources/collapsible-set/example3.html" style="width:100%;height:210px;border:0px"></iframe></p>
+		<iframe src="/resources/collapsibleset/example3.html" style="width:100%;height:210px;border:0px"></iframe></p>
 
 		<h3>Custom icons</h3>
 
 		<p>Collapsible headings’ default icons can be overridden by using the <code>data-collapsed-icon</code> and <code>data-expanded-icon</code> attributes, either at the <code>collapsible-set</code> level or on an individual collapsible basis.
-		<iframe src="/resources/collapsible-set/example4.html" style="width:100%;height:240px;border:0px"></iframe></p>
+		<iframe src="/resources/collapsibleset/example4.html" style="width:100%;height:240px;border:0px"></iframe></p>
 
 		<h3>Icon positioning</h3>
 
 		<p>Collapsible headings’ default icon positioning can be overridden by using the <code>data-iconpos</code> attribute, either at the <code>collapsible-set</code> level or on an individual collapsible basis.
-		<iframe src="/resources/collapsible-set/example5.html" style="width:100%;height:310px;border:0px"></iframe></p>
+		<iframe src="/resources/collapsibleset/example5.html" style="width:100%;height:310px;border:0px"></iframe></p>
 
 		<h3>Theming collapsible content</h3>
 
 		<p>The standard <code>data-theme</code> attribute can be used to set the color of each collapsible in a set. To provide a clearer visual grouping of the content with the headers, add the <code>data-content-theme</code> attribute with a swatch letter. This adds a themed background color and border to the content block. For consistent theming, add these attributes to the parent collapsible set.
 
-<pre><code>&lt;div data-role=&quot;collapsible-set&quot; data-theme=&quot;c&quot; data-content-theme=&quot;d&quot;&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="collapsible-set" data-theme="c" data-content-theme="d">
+]]></code></pre>
 
-		<iframe src="/resources/collapsible-set/example6.html" style="width:100%;height:240px;border:0px"></iframe></p>
+		<iframe src="/resources/collapsibleset/example6.html" style="width:100%;height:240px;border:0px"></iframe></p>
 
 		<h3>Theming individual sections</h3>
 
 		<p>To have individual sections in a group styled differently, add <code>data-theme</code> and <code>data-content-theme</code> attributes to specific collapsibles.
-		<iframe src="/resources/collapsible-set/example7.html" style="width:100%;height:240px;border:0px"></iframe></p>
+		<iframe src="/resources/collapsibleset/example7.html" style="width:100%;height:240px;border:0px"></iframe></p>
 
 		<h3>Expanding or collapsing items in a set</h3>
 
 		<p>To expand or collapse items in a set, call the respective methods on individual collapsibles. The selector for the collapse method can include multiple items in a set:</p>
 
-<pre><code>
+<pre><code><![CDATA[
 $( "#myCollapsibleSet" ).children().trigger( "collapse" );
-</code></pre>
+]]></code></pre>
 
 	</longdesc>
 	<added>1.0</added>
@@ -99,11 +100,11 @@ $( "#myCollapsibleSet" ).children().trigger( "collapse" );
 		</option>
 	    <option name="initSelector"  default='":jqmData(role=&#39;collapsible-set&#39;)"'>
 			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as collapsibles. To change which elements are initialized, bind this option to the mobileinit event:
-<pre><code>
+<pre><code><![CDATA[
 $( document ).on( "mobileinit", function() {
     $.mobile.collapsibleset.prototype.options.initSelector = ".mycollapsibleset";
 });
-</code></pre>
+]]></code></pre>
 			</desc>
 			<type name="CSS selector string" />
 		</option>
