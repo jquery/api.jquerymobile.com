@@ -10,10 +10,10 @@
 
 		<p>To collect standard alphanumeric text, use an <code>input</code> with a <code>type="text"</code> attribute. Set the <code>for</code> attribute of the <code>label</code> to match the <code>id</code> of the <code>input</code> so they are semantically associated. It's possible to accessibly hide the label if it's not desired in the page layout, but we require that it is present in the markup for semantic and accessibility reasons.</p>
 
-<pre><code>
-&lt;label for=&quot;basic&quot;&gt;Text Input:&lt;/label&gt;
-&lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;basic&quot; value=&quot;&quot; /&gt;
-</code></pre>
+<pre><code><![CDATA[
+<label for="basic">Text Input:</label>
+<input type="text" name="name" id="basic" value="" />
+]]></code></pre>
 		<p>This will produce a basic text input. The default styles set the width of the input to 100% of the parent container and stack the label on a separate line.
 		<iframe src="/resources/textinput/example1.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
@@ -21,10 +21,10 @@
 
 		<p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a mini version.</p>
 
-<pre><code>
-&lt;label for=&quot;basic&quot;&gt;Text Input:&lt;/label&gt;
-&lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;basic&quot; value=&quot;&quot; data-mini=&quot;true&quot; /&gt;
-</code></pre>
+<pre><code><![CDATA[
+<label for="basic">Text Input:</label>
+<input type="text" name="name" id="basic" value="" data-mini="true" />
+]]></code></pre>
 
 		<p>This will produce an input that is not as tall as the standard version and has a smaller text size.
 		<iframe src="/resources/textinput/example2.html" style="width:100%;height:90px;border:0px"></iframe></p>
@@ -33,10 +33,10 @@
 
 		<p>To add a clear button to any input (like the search input), add the <code>data-clear-btn="true"</code> attribute. The text for this clear button can be customized via the <code>data-clear-btn-text="clear input"</code> attribute. Search buttons have the clear button by default and cannot be controlled by this option. Note that this is available for all the input types below except for <code>textareas</code>.</p>
 
-<pre><code>
-&lt;label for=&quot;clear-demo&quot;&gt;Text Input:&lt;/label&gt;
-&lt;input type=&quot;text&quot; name=&quot;clear&quot; id=&quot;clear-demo&quot; value=&quot;&quot; data-clear-btn=&quot;true&quot; /&gt;
-</code></pre>
+<pre><code><![CDATA[
+<label for="clear-demo">Text Input:</label>
+<input type="text" name="clear" id="clear-demo" value="" data-clear-btn="true" />
+]]></code></pre>
 
 		<p>This markup creates a text input with a clear button that becomes visible as soon as a character has been entered.
 		<iframe src="/resources/textinput/example7.html" style="width:100%;height:90px;border:0px"></iframe></p>
@@ -44,12 +44,12 @@
 		<h3>Field containers</h3>
 
 		<p>Optionally wrap the text input in a container with the <code>data-role="fieldcontain"</code> attribute to help visually group it in a longer form.</p>
-<pre><code>
-&lt;div data-role=&quot;fieldcontain&quot;&gt;
-	&lt;label for=&quot;name&quot;&gt;Text Input:&lt;/label&gt;
-	&lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;name&quot; value=&quot;&quot; /&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="fieldcontain">
+	<label for="name">Text Input:</label>
+	<input type="text" name="name" id="name" value="" />
+</div>
+]]></code></pre>
 
 		<p>The text input is now displayed like this:
 		<iframe src="/resources/textinput/example3.html" style="width:100%;height:90px;border:0px"></iframe></p>
@@ -65,22 +65,22 @@
 		<p>For multi-line text inputs, use a <code>textarea</code> element. The framework will auto-grow the height of the textarea to avoid the need for an internal scrollbar. </p>
 		<p>Set the <code>for</code> attribute of the <code>label</code> to match the <code>id</code> of the <code>textarea</code> so they are semantically associated, and wrap them in a <code>div</code> with the <code>data-role="fieldcontain"</code> attribute to group them.</p>
 
-<pre><code>
-&lt;label for=&quot;textarea-a&quot;&gt;Textarea:&lt;/label&gt;
-&lt;textarea name=&quot;textarea&quot; id=&quot;textarea-a&quot;&gt;
-I&#x27;m a basic textarea. If this is pre-populated with content, the height will be automatically adjusted to fit without needing to scroll. That is a pretty handy usability feature.
-&lt;/textarea&gt;
-</code></pre>
+<pre><code><![CDATA[
+<label for="textarea-a">Textarea:</label>
+<textarea name="textarea" id="textarea-a">
+I'm a basic textarea. If this is pre-populated with content, the height will be automatically adjusted to fit without needing to scroll. That is a pretty handy usability feature.
+</textarea>
+]]></code></pre>
 
 		<p>This will produce a basic textarea with the width set to 100% of the parent container and the label stacked on a separate line. The textarea will grow to fit new lines as you type:
 		<iframe src="/resources/textinput/example5.html" style="width:100%;height:190px;border:0px"></iframe></p>
 
-<pre><code>
-&lt;div data-role=&quot;fieldcontain&quot;&gt;
-&lt;label for=&quot;textarea&quot;&gt;Textarea:&lt;/label&gt;
-	&lt;textarea name=&quot;textarea&quot; id=&quot;textarea&quot;&gt;&lt;/textarea&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="fieldcontain">
+<label for="textarea">Textarea:</label>
+	<textarea name="textarea" id="textarea"></textarea>
+</div>
+]]></code></pre>
 
 		<p>The textarea is displayed like this and will grow to fit new lines as you type:
 		<iframe src="/resources/textinput/example6.html" style="width:100%;height:190px;border:0px"></iframe></p>
@@ -88,9 +88,9 @@ I&#x27;m a basic textarea. If this is pre-populated with content, the height wil
         <h3>Calling the textinput plugin</h3>
 
 		<p>This plugin will auto initialize on any page that contains a textarea or any of the text input types listed above without any need for a <code>data-role</code> attribute in the markup. However, if needed, you can directly call the <code>textinput</code> plugin on any selector, just like any jQuery plugin:</p>
-<pre><code>
+<pre><code><![CDATA[
 $( "input" ).textinput();
-</code></pre>
+]]></code></pre>
 
 		<h3>Degraded input types</h3>
 
@@ -103,10 +103,10 @@ $( "input" ).textinput();
 		<p>Search inputs are a new HTML type that is styled with pill-shaped corners and adds an "x" icon to clear the field once you start typing. Start with an input with a type="search" attribute in your markup.</p>
 		<p>Set the <code>for</code> attribute of the <code>label</code> to match the <code>id</code> of the <code>input</code> so they are semantically associated. It's possible to accessibly hide the label if it's not desired in the page layout, but we require that it is present in the markup for semantic and accessibility reasons.</p>
 
-<pre><code>
-&lt;label for="search-basic"&gt;Search Input:&lt;/label&gt;
-&lt;input type="search" name="search" id="search-basic" value="" /&gt;
-</code></pre>
+<pre><code><![CDATA[
+<label for="search-basic">Search Input:</label>
+<input type="search" name="search" id="search-basic" value="" />
+]]></code></pre>
 		<p>This will produce a basic search input. The default styles set the width of the input to 100% of the parent container and stack the label on a separate line.
 		<iframe src="/resources/search-input/example1.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
@@ -114,10 +114,10 @@ $( "input" ).textinput();
 
 		<p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a mini version.</p>
 
-<pre><code>
-&lt;label for=&quot;search-mini&quot;&gt;Search Input:&lt;/label&gt;
-&lt;input type=&quot;search&quot; name=&quot;search-mini&quot; id=&quot;search-mini&quot; value=&quot;&quot; data-mini=&quot;true&quot;/&gt;
-</code></pre>
+<pre><code><![CDATA[
+<label for="search-mini">Search Input:</label>
+<input type="search" name="search-mini" id="search-mini" value="" data-mini="true"/>
+]]></code></pre>
 
 		<p>This will produce a search input that is not as tall as the standard version and has a smaller text size.
 		<iframe src="/resources/search-input/example2.html" style="width:100%;height:90px;border:0px"></iframe></p>
@@ -125,12 +125,12 @@ $( "input" ).textinput();
 		<h3>Field containers</h3>
 
 		<p>Optionally wrap the search input in a container with the <code>data-role="fieldcontain"</code> attribute to help visually group it in a longer form.</p>
-<pre><code>
-&lt;div data-role=&quot;fieldcontain&quot;&gt;
-	&lt;label for=&quot;search-2&quot;&gt;Search Input:&lt;/label&gt;
-	&lt;input type=&quot;search&quot; name=&quot;search-2&quot; id=&quot;search-2&quot; value=&quot;&quot; /&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="fieldcontain">
+	<label for="search-2">Search Input:</label>
+	<input type="search" name="search-2" id="search-2" value="" />
+</div>
+]]></code></pre>
 
 		<p>The search input is now displayed like this:
 		<iframe src="/resources/search-input/example3.html" style="width:100%;height:90px;border:0px"></iframe>
@@ -150,9 +150,9 @@ $( "input" ).textinput();
 
 		<p>This plugin will auto-initialize on any page that contains a text input with the <code>type="search"</code> attribute without any need for a <code>data-role</code> attribute in the markup. However, if needed, you can directly call the <code>textinput</code> plugin on a selector, just like any jQuery plugin:</p>
 
-<pre><code>
+<pre><code><![CDATA[
 $( ".mySearchInput" ).textinput();
-</code></pre>
+]]></code></pre>
 
 	</longdesc>
 	<added>1.0</added>
@@ -176,11 +176,11 @@ $( ".mySearchInput" ).textinput();
         </option>
 		<option name="initSelector" default="input[type='text'], input[type='search'], :jqmData(type='search'), input[type='number'], :jqmData(type='number'), input[type='password'], input[type='email'], input[type='url'], input[type='tel'], textarea, input:not([type])">
 			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as textinputs. To change which elements are initialized, bind this option to the mobileinit event:
-<pre><code>
+<pre><code><![CDATA[
 $( document ).on( "mobileinit", function() {
 	$.mobile.textinput.prototype.options.initSelector = ".myInputs";
 });
-</code></pre>
+]]></code></pre>
 			</desc>
 			<type name="CSS selector string" />
 		</option>

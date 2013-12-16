@@ -9,11 +9,11 @@
 		<h3>Footer bar structure</h3>
 		<p>The <code>footer</code> bar has the same basic structure as the header except it uses the <code>data-role</code> attribute value of <code>footer</code>.</p>
 
-<pre><code>
-&lt;div data-role="footer"&gt;
-	&lt;h4&gt;Footer content&lt;/h4&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="footer">
+	<h4>Footer content</h4>
+</div>
+]]></code></pre>
 
 		<p>The <code>footer</code> toolbar will be themed with the "a" swatch by default (black in the default theme) but you can easily set the theme swatch color.
 		<iframe src="/resources/footer/example1.html" style="width:100%;height:90px;border:0px"></iframe></p>
@@ -25,22 +25,22 @@
 		<p>Any link or valid button markup added to the footer will automatically be turned into a button. To save space, buttons in toolbars are automatically set to inline styling so the button is only as wide as the text and icons it contains.</p>
 		<p>By default, toolbars don't have any padding to accommodate nav bars and other widgets. To include padding on the bar, add a <code>class="ui-bar"</code> to the footer.</p>
 
-<pre><code>
-&lt;div data-role=&quot;footer&quot; class=&quot;ui-bar&quot;&gt;
-	&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot; data-icon=&quot;plus&quot;&gt;Add&lt;/a&gt;
-	&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot; data-icon=&quot;arrow-u&quot;&gt;Up&lt;/a&gt;
-	&lt;a href=&quot;index.html&quot; data-role=&quot;button&quot; data-icon=&quot;arrow-d&quot;&gt;Down&lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="footer" class="ui-bar">
+	<a href="index.html" data-role="button" data-icon="plus">Add</a>
+	<a href="index.html" data-role="button" data-icon="arrow-u">Up</a>
+	<a href="index.html" data-role="button" data-icon="arrow-d">Down</a>
+</div>
+]]></code></pre>
 
 		<p>This creates this toolbar with buttons sitting in a row
 		<iframe src="/resources/footer/example2.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
 		<p>Note that <code>.ui-bar</code> should not be added to header or footer bars that span the full width of the page, as the additional padding will cause a full-width element to break out of its parent container. To add padding inside of a full-width toolbar, wrap the toolbar's contents in an element and apply the padding to that element.</p>
 
-		<p>To group buttons together into a button set, wrap the links in a wrapper with <code>data-role=&quot;controlgroup&quot;</code> and <code>data-type=&quot;horizontal&quot;</code> attributes.</p>
+		<p>To group buttons together into a button set, wrap the links in a wrapper with <code><![CDATA[data-role="controlgroup"]]></code> and <code><![CDATA[data-type="horizontal"]]></code> attributes.</p>
 
-		<code>&lt;div data-role=&quot;controlgroup&quot; data-type=&quot;horizontal&quot;&gt;</code>
+		<code><![CDATA[<div data-role="controlgroup" data-type="horizontal">]]></code>
 
 		<p>This creates a grouped set of buttons:
 		<iframe src="/resources/footer/example3.html" style="width:100%;height:90px;border:0px"></iframe></p>

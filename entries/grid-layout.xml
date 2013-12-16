@@ -20,12 +20,12 @@
 
 			<p>To build a two-column (50/50%) layout, start with a container with a <code>class</code> of <code>ui-grid-a</code>, and add two child containers inside it classed with <code>ui-block-a</code> for the first column and <code>ui-block-b</code> for the second:</p>
 
-<pre><code>
-&lt;div class="ui-grid-a"&gt;
-	&lt;div class="ui-block-a"&gt;&lt;strong&gt;I'm Block A&lt;/strong&gt; and text inside will wrap&lt;/div&gt;
-	&lt;div class="ui-block-b"&gt;&lt;strong&gt;I'm Block B&lt;/strong&gt; and text inside will wrap&lt;/div&gt;
-&lt;/div&gt;&lt;!-- /grid-a --&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div class="ui-grid-a">
+	<div class="ui-block-a"><strong>I'm Block A</strong> and text inside will wrap</div>
+	<div class="ui-block-b"><strong>I'm Block B</strong> and text inside will wrap</div>
+</div><!-- /grid-a -->u
+]]></code></pre>
 
 			<p>The above markup produces the following content layout:</p>
 			<iframe src="/resources/grid-layout/example1.html" style="width:100%;height:90px;border:0"></iframe>
@@ -33,25 +33,25 @@
 			<p>As you see above, by default grid blocks have no visual styling; they simply present content side-by-side.</p>
 			<p>Grid classes can be applied to any container. In this next example, we add <code>ui-grid-a</code> to a <code>fieldset</code>, and apply the <code>ui-block</code> classes to the container of each of the two buttons inside to stretch them each to 50% of the screen width:</p>
 
-<pre><code>
-&lt;fieldset class="ui-grid-a"&gt;
-	&lt;div class="ui-block-a"&gt;&lt;button type="submit" data-theme="c"&gt;Cancel&lt;/button&gt;&lt;/div&gt;
-	&lt;div class="ui-block-b"&gt;&lt;button type="submit" data-theme="b"&gt;Submit&lt;/button&gt;&lt;/div&gt;
-&lt;/fieldset&gt;
-</code></pre>
+<pre><code><![CDATA[
+<fieldset class="ui-grid-a">
+	<div class="ui-block-a"><button type="submit" data-theme="c">Cancel</button></div>
+	<div class="ui-block-b"><button type="submit" data-theme="b">Submit</button></div>
+</fieldset>
+]]></code></pre>
 
 			<iframe src="/resources/grid-layout/example2.html" style="width:100%;height:90px;border:0"></iframe>
 			<p>Please note that the framework adds left and right margin to buttons in a grid. For a single button you can use a container with class <code>ui-grid-solo</code> and wrap the button in a div with class <code>ui-block-a</code> like the example below. This way the button will get the same margin.</p>
 
-<pre><code>
-&lt;div class="ui-grid-a"&gt;
-	&lt;div class="ui-block-a"&gt;&lt;button type="button" data-theme="c"&gt;Previous&lt;/button&gt;&lt;/div&gt;
-	&lt;div class="ui-block-b"&gt;&lt;button type="button" data-theme="c"&gt;Next&lt;/button&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="ui-grid-solo"&gt;
-	&lt;div class="ui-block-a"&gt;&lt;button type="v" data-theme="b"&gt;More&lt;/button&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div class="ui-grid-a">
+	<div class="ui-block-a"><button type="button" data-theme="c">Previous</button></div>
+	<div class="ui-block-b"><button type="button" data-theme="c">Next</button></div>
+</div>
+<div class="ui-grid-solo">
+	<div class="ui-block-a"><button type="button" data-theme="b">More</button></div>
+</div>
+]]></code></pre>
 
 			<iframe src="/resources/grid-layout/example3.html" style="width:100%;height:130px;border:0"></iframe>
 
@@ -63,13 +63,13 @@
 
 			<p>The other grid layout configuration uses <code>class=ui-grid-b</code> on the parent, and 3 child container elements, each with its respective <code>ui-block-a/b/c</code> class, to create a three-column layout (33/33/33%). Note: These blocks are also styled with theme classes so the grid layout is clearly visible.</p>
 
-<pre><code>
-&lt;div class="ui-grid-b"&gt;
-	&lt;div class="ui-block-a"&gt;Block A&lt;/div&gt;
-	&lt;div class="ui-block-b"&gt;Block B&lt;/div&gt;
-	&lt;div class="ui-block-c"&gt;Block C&lt;/div&gt;
-&lt;/div&gt;&lt;!-- /grid-b --&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div class="ui-grid-b">
+	<div class="ui-block-a">Block A</div>
+	<div class="ui-block-b">Block B</div>
+	<div class="ui-block-c">Block C</div>
+</div><!-- /grid-b -->
+]]></code></pre>
 
 			<p>This will produce a 33/33/33% grid for our content.</p>
 			<iframe src="/resources/grid-layout/example5.html" style="width:100%;height:150px;border:0"></iframe>

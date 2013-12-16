@@ -10,15 +10,15 @@
 
 		<p>The framework will find all <code>select</code> elements and automatically enhance them into select menus, no need to apply a <code>data-role</code> attribute. To prevent the automatic enhancement of a select, add  <code>data-role="none"</code> attribute to the <code>select</code>.</p>
 
-<pre><code>
-&lt;label for=&quot;select-choice-0&quot; class=&quot;select&quot;&gt;Shipping method:&lt;/label&gt;
-&lt;select name=&quot;select-choice-0&quot; id=&quot;select-choice-0&quot;&gt;
-	&lt;option value=&quot;standard&quot;&gt;Standard: 7 day&lt;/option&gt;
-	&lt;option value=&quot;rush&quot;&gt;Rush: 3 days&lt;/option&gt;
-	&lt;option value=&quot;express&quot;&gt;Express: next day&lt;/option&gt;
-	&lt;option value=&quot;overnight&quot;&gt;Overnight&lt;/option&gt;
-&lt;/select&gt;
-</code></pre>
+<pre><code><![CDATA[
+<label for="select-choice-0" class="select">Shipping method:</label>
+<select name="select-choice-0" id="select-choice-0">
+	<option value="standard">Standard: 7 day</option>
+	<option value="rush">Rush: 3 days</option>
+	<option value="express">Express: next day</option>
+	<option value="overnight">Overnight</option>
+</select>
+]]></code></pre>
 
 		<p>This will produce a basic select menu. The default styles set the width of the input to 100% of the parent container and stacks the label on a separate line.
 		<iframe src="/resources/select/example1.html" style="width:100%;height:190px;border:0px"></iframe></p>
@@ -27,15 +27,15 @@
 
 		<p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a mini version. </p>
 
-<pre><code>
-&lt;label for=&quot;select-choice-min&quot; class=&quot;select&quot;&gt;Shipping method:&lt;/label&gt;
-&lt;select name=&quot;select-choice-min&quot; id=&quot;select-choice-min&quot; data-mini=&quot;true&quot;&gt;
-	&lt;option value=&quot;standard&quot;&gt;Standard: 7 day&lt;/option&gt;
-	&lt;option value=&quot;rush&quot;&gt;Rush: 3 days&lt;/option&gt;
-	&lt;option value=&quot;express&quot;&gt;Express: next day&lt;/option&gt;
-	&lt;option value=&quot;overnight&quot;&gt;Overnight&lt;/option&gt;
-&lt;/select&gt;
-</code></pre>
+<pre><code><![CDATA[
+<label for="select-choice-min" class="select">Shipping method:</label>
+<select name="select-choice-min" id="select-choice-min" data-mini="true">
+	<option value="standard">Standard: 7 day</option>
+	<option value="rush">Rush: 3 days</option>
+	<option value="express">Express: next day</option>
+	<option value="overnight">Overnight</option>
+</select>
+]]></code></pre>
 
 		<p>This will produce a select that a not as tall as the standard version and has a smaller text size.
 		<iframe src="/resources/select/example2.html" style="width:100%;height:190px;border:0px"></iframe></p>
@@ -44,17 +44,17 @@
 
 		<p>Optionally wrap the selects in a container with the <code>data-role="fieldcontain"</code> attribute to help visually group it in a longer form.</p>
 
-<pre><code>
-&lt;div data-role=&quot;fieldcontain&quot;&gt;
-	&lt;label for=&quot;select-choice-1&quot; class=&quot;select&quot;&gt;Shipping method:&lt;/label&gt;
-	&lt;select name=&quot;select-choice-1&quot; id=&quot;select-choice-1&quot;&gt;
-		&lt;option value=&quot;standard&quot;&gt;Standard: 7 day&lt;/option&gt;
-		&lt;option value=&quot;rush&quot;&gt;Rush: 3 days&lt;/option&gt;
-		&lt;option value=&quot;express&quot;&gt;Express: next day&lt;/option&gt;
-		&lt;option value=&quot;overnight&quot;&gt;Overnight&lt;/option&gt;
-	&lt;/select&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="fieldcontain">
+	<label for="select-choice-1" class="select">Shipping method:</label>
+	<select name="select-choice-1" id="select-choice-1">
+		<option value="standard">Standard: 7 day</option>
+		<option value="rush">Rush: 3 days</option>
+		<option value="express">Express: next day</option>
+		<option value="overnight">Overnight</option>
+	</select>
+</div>
+]]></code></pre>
 
 		<p>The select input is now displayed like this:
 		<iframe src="/resources/select/example3.html" style="width:100%;height:190px;border:0px"></iframe></p>
@@ -65,29 +65,29 @@
 		<h3>Optgroups</h3>
 		<p>The following example organizes the options into <code>optgroup</code> elements. Support for this feature in mobile selects is a bit spotty, but is improving.</p>
 
-<pre><code>
-&lt;div data-role="fieldcontain"&gt;
-	&lt;label for="select-choice-nc" class="select"&gt;Preferred delivery:&lt;/label&gt;
-	&lt;select name="select-choice-8" id="select-choice-nc"&gt;
-    	&lt;optgroup label="FedEx"&gt;
-			&lt;option value="firstOvernight"&gt;First Overnight&lt;/option&gt;
-			&lt;option value="expressSaver"&gt;Express Saver&lt;/option&gt;
-			&lt;option value="ground"&gt;Ground&lt;/option&gt;
-		&lt;/optgroup&gt;
-		&lt;optgroup label="UPS"&gt;
-			&lt;option value="firstOvernight"&gt;First Overnight&lt;/option&gt;
-			&lt;option value="expressSaver"&gt;Express Saver&lt;/option&gt;
-			&lt;option value="ground"&gt;Ground&lt;/option&gt;
-		&lt;/optgroup&gt;
-		&lt;optgroup label="US Mail"&gt;
-			&lt;option value="standard"&gt;Standard: 7 day&lt;/option&gt;
-			&lt;option value="rush"&gt;Rush: 3 days&lt;/option&gt;
-			&lt;option value="express"&gt;Express: next day (disabled)&lt;/option&gt;
-			&lt;option value="overnight"&gt;Overnight&lt;/option&gt;
-		&lt;/optgroup&gt;
-	&lt;/select&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="fieldcontain">
+	<label for="select-choice-nc" class="select">Preferred delivery:</label>
+	<select name="select-choice-8" id="select-choice-nc">
+    	<optgroup label="FedEx">
+			<option value="firstOvernight">First Overnight</option>
+			<option value="expressSaver">Express Saver</option>
+			<option value="ground">Ground</option>
+		</optgroup>
+		<optgroup label="UPS">
+			<option value="firstOvernight">First Overnight</option>
+			<option value="expressSaver">Express Saver</option>
+			<option value="ground">Ground</option>
+		</optgroup>
+		<optgroup label="US Mail">
+			<option value="standard">Standard: 7 day</option>
+			<option value="rush">Rush: 3 days</option>
+			<option value="express">Express: next day (disabled)</option>
+			<option value="overnight">Overnight</option>
+		</optgroup>
+	</select>
+</div>
+]]></code></pre>
 
 		<iframe src="/resources/select/example5.html" style="width:100%;height:390px;border:0px"></iframe>
 
@@ -99,43 +99,43 @@
 
 		<p>Lastly, one needs to wrap the <code>fieldset</code> in a <code>div</code> with <code>data-role="controlgroup"</code> attribute, so it can be styled as a group.</p>
 
-<pre><code>
-&lt;div data-role=&quot;fieldcontain&quot;&gt;
-	&lt;fieldset data-role=&quot;controlgroup&quot;&gt;
-		&lt;legend&gt;Date of Birth:&lt;/legend&gt;
+<pre><code><![CDATA[
+<div data-role="fieldcontain">
+	<fieldset data-role="controlgroup">
+		<legend>Date of Birth:</legend>
 
-		&lt;label for="select-choice-month">Month&lt;/label&gt;
-		&lt;select name="select-choice-month" id="select-choice-month"&gt;
-			&lt;option&gt;Month&lt;/option&gt;
-			&lt;option value="jan"&gt;January&lt;/option&gt;
-			&lt;!-- etc. --&gt;
-		&lt;/select&gt;
+		<label for="select-choice-month">Month</label>
+		<select name="select-choice-month" id="select-choice-month">
+			<option>Month</option>
+			<option value="jan">January</option>
+			<!-- etc. -->
+		</select>
 
-		&lt;label for="select-choice-day">Day&lt;/label&gt;
-		&lt;select name="select-choice-day" id="select-choice-day"&gt;
-			&lt;option&gt;Day&lt;/option&gt;
-			&lt;option value="1"&gt;1&lt;/option&gt;
-			&lt;!-- etc. --&gt;
-		&lt;/select&gt;
+		<label for="select-choice-day">Day</label>
+		<select name="select-choice-day" id="select-choice-day">
+			<option>Day</option>
+			<option value="1">1</option>
+			<!-- etc. -->
+		</select>
 
-		&lt;label for="select-choice-year">Year&lt;/label&gt;
-		&lt;select name="select-choice-year" id="select-choice-year"&gt;
-			&lt;option&gt;Year&lt;/option&gt;
-			&lt;option value="2011"&gt;2011&lt;/option&gt;
-			&lt;!-- etc. --&gt;
-		&lt;/select&gt;
-	&lt;/fieldset&gt;
-&lt;/div&gt;
-</code></pre>
+		<label for="select-choice-year">Year</label>
+		<select name="select-choice-year" id="select-choice-year">
+			<option>Year</option>
+			<option value="2011">2011</option>
+			<!-- etc. -->
+		</select>
+	</fieldset>
+</div>
+]]></code></pre>
 
 		<iframe src="/resources/select/example6.html" style="width:100%;height:390px;border:0px"></iframe>
 
 		<h3>Horizontally grouped select inputs</h3>
 		<p>Select inputs can also be used for grouped sets with more than one related selections. To make a horizontal button set, add the <code>data-type="horizontal"</code> to the fieldset. Note that the buttons which trigger the select will resize depending on the currently selected option’s value.</p>
 
-<code>
-&lt;fieldset data-role="controlgroup" data-type="horizontal"&gt;
-</code>
+<code><![CDATA[
+<fieldset data-role="controlgroup" data-type="horizontal">
+]]></code>
 		<iframe src="/resources/select/example7.html" style="width:100%;height:190px;border:0px"></iframe>
 
 		<h3>Theming selects</h3>
@@ -153,11 +153,11 @@
 
 		<p>To use custom menus on a specific <code>select</code>, just add the <code>data-native-menu="false"</code> attribute. Alternately, this can also programmatically set the select menu's <code>nativeMenu</code> configuration option to <code>false</code> in a callback bound to the <code>mobileinit</code> event to achieve the same effect. This will globally make all selects use the custom menu by default. The following must be included in the page after jQuery is loaded but before jQuery Mobile is loaded.</p>
 
-<pre><code>
+<pre><code><![CDATA[
 $(document).on( "mobileinit", function() {
 	$.mobile.selectmenu.prototype.options.nativeMenu = false;
 });
-</code></pre>
+]]></code></pre>
 
 		<p>When the <code>select</code> has a small number of options that will fit on the device's screen, the menu will appear as a small overlay with a pop transition:
 		<iframe src="/resources/select/example9.html" style="width:100%;height:270px;border:0px"></iframe></p>
@@ -181,9 +181,9 @@ $(document).on( "mobileinit", function() {
 
 		<p>You can disable this feature through the selectmenu plugin's <code>hidePlaceholderMenuItems</code> option, like this:</p>
 
-<pre><code>
+<pre><code><![CDATA[
 $.mobile.selectmenu.prototype.options.hidePlaceholderMenuItems = false;
-</code></pre>
+]]></code></pre>
 
 		<p>Examples of various placeholder options:
 		<iframe src="/resources/select/example12.html" style="width:100%;height:390px;border:0px"></iframe></p>
@@ -227,9 +227,9 @@ $.mobile.selectmenu.prototype.options.hidePlaceholderMenuItems = false;
 
 		<p>The select menu plugin will auto initialize on any page that contains a select menu, without any need for a <code>data-role</code> attribute in the markup. However, you can directly call the select menu plugin on any selector, just like any normal jQuery plugin:</p>
 
-<pre><code>
+<pre><code><![CDATA[
 $( "select" ).selectmenu();
-</code></pre>
+]]></code></pre>
 
 	</longdesc>
 	<added>1.0</added>
@@ -261,11 +261,11 @@ $( "select" ).selectmenu();
 		</option>
 		<option name="initSelector" default="select:not(:jqmData(role='slider'))">
 			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as select menus. To change which elements are initialized, bind this option to the mobileinit event:
-<pre><code>
+<pre><code><![CDATA[
 $( document ).on( "mobileinit", function() {
 	$.mobile.selectmenu.prototype.options.initSelector = ".myselect";
 });
-</code></pre>
+]]></code></pre>
 
 				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
 			</desc>

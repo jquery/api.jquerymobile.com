@@ -8,26 +8,26 @@
 		<p>jQuery Mobile has a very basic navbar widget that is useful for providing up to 5 buttons with optional icons in a bar, typically within a header or footer. There is also a persistent navbar variation that works more like a tab bar that stays fixed as you navigate across pages.</p>
 		<p>A navbar is coded as an unordered list of links wrapped in a container element that has the <code>data-role="navbar"</code> attribute. This is an example of a two-button navbar:</p>
 
-<pre><code>
-&lt;div data-role=&quot;navbar&quot;&gt;
-	&lt;ul&gt;
-		&lt;li&gt;&lt;a href=&quot;a.html&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;b.html&quot;&gt;Two&lt;/a&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;&lt;!-- /navbar --&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="navbar">
+	<ul>
+		<li><a href="a.html">One</a></li>
+		<li><a href="b.html">Two</a></li>
+	</ul>
+</div><!-- /navbar -->
+]]></code></pre>
 
 		<p>When a link in the navbar is clicked it gets the active (selected) state. The <code>ui-btn-active</code> class is first removed from all anchors in the navbar before it is added to the activated link. If this is a link to another page, the class will be removed again after the transition has completed.</p>
 		<p>To set an item to the active state upon initialization of the navbar, add <code>class="ui-btn-active"</code> to the corresponding anchor in your markup. Additionaly add a class of <code>ui-state-persist</code> to make the framework restore the active state each time the page is shown while it exists in the DOM. The example below shows a navbar with item "One" set to active:</p>
 
-<pre><code>
-&lt;div data-role=&quot;navbar&quot;&gt;
-	&lt;ul&gt;
-		&lt;li&gt;&lt;a href=&quot;a.html&quot; class=&quot;ui-btn-active ui-state-persist&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;b.html&quot;&gt;Two&lt;/a&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;&lt;!-- /navbar --&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="navbar">
+	<ul>
+		<li><a href="a.html" class="ui-btn-active ui-state-persist">One</a></li>
+		<li><a href="b.html">Two</a></li>
+	</ul>
+</div><!-- /navbar -->
+]]></code></pre>
 
 		<p>The navbar items are set to divide the space evenly so in this case, each button is 1/2 the width of the browser window:
 		<iframe src="/resources/navbar/example1.html" style="width:100%;height:90px;border:0px"></iframe></p>
@@ -54,17 +54,17 @@
 		<h3>Navbars in footers</h3>
         <p>If you want to add a navbar to the bottom of the page so it acts more like a tab bar, simply wrap the navbar in a container with a <code>data-role="footer"</code></p>
 
-<pre><code>
-&lt;div data-role=&quot;footer&quot;&gt;
-	&lt;div data-role=&quot;navbar&quot;&gt;
-		&lt;ul&gt;
-			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Two&lt;/a&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Three&lt;/a&gt;&lt;/li&gt;
-		&lt;/ul&gt;
-	&lt;/div&gt;&lt;!-- /navbar --&gt;
-&lt;/div&gt;&lt;!-- /footer --&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="footer">
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#">One</a></li>
+			<li><a href="#">Two</a></li>
+			<li><a href="#">Three</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div><!-- /footer -->
+]]></code></pre>
 
 		<iframe src="/resources/navbar/example8.html" style="width:100%;height:90px;border:0px"></iframe>
 
@@ -75,9 +75,9 @@
 
 		<p>The icon position is set <em>on the navbar container</em> instead of for individual links within for visual consistency. For example, to place the icons below the labels, add the <code>data-iconpos="bottom"</code> attribute to the navbar container.</p>
 
-<pre><code>
-&lt;div data-role=&quot;navbar&quot; data-iconpos=&quot;bottom&quot;&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="navbar" data-iconpos="bottom">
+]]></code></pre>
 
 		<p>This will result in a bottom icon alignment:
 		<iframe src="/resources/navbar/example10.html" style="width:100%;height:90px;border:0px"></iframe></p>
@@ -110,9 +110,9 @@
 		<option name="iconpos" default='"top"'>
 			<desc>Positions the icon in the button. Possible values: left, right, top, bottom, none, notext. The notext value will display an icon-only button with no text feedback.
 
-<pre><code>
-&lt;div data-role=&quot;navbar&quot; data-iconpos=&quot;bottom&quot;&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="navbar" data-iconpos="bottom">
+]]></code></pre>
 			</desc>
 		<type name="String" />
 		</option>
@@ -120,11 +120,11 @@
 	<events>
 		<event name="create">
 			<desc>triggered when a navbar is created</desc>
-<pre><code>
+<pre><code><![CDATA[
 $( "div" ).navbar({
 	create: function(event, ui) { ... }
 });
-</code></pre>
+]]></code></pre>
 		</event>
 	</events>
 	<example>

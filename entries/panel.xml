@@ -13,19 +13,19 @@
 
 		<p>Here is an example of the panel before the header, content and footer in the source order:</p>
 
-<pre><code>
-&lt;div data-role=&quot;page&quot;&gt;
+<pre><code><![CDATA[
+<div data-role="page">
 
-	&lt;div data-role=&quot;panel&quot; id=&quot;mypanel&quot;&gt;
-		&lt;!-- panel content goes here --&gt;
-	&lt;/div&gt;&lt;!-- /panel --&gt;
+	<div data-role="panel" id="mypanel">
+		<!-- panel content goes here -->
+	</div><!-- /panel -->
 
-	&lt;!-- header --&gt;
-	&lt;!-- content --&gt;
-	&lt;!-- footer --&gt;
+	<!-- header -->
+	<!-- content -->
+	<!-- footer -->
 
-&lt;/div&gt;&lt;!-- page --&gt;
-</code></pre>
+</div><!-- page -->
+]]></code></pre>
 
 		<p>Alternately, it's possible to add the panel markup <em>after</em> the header, content and footer in the source order, just before the end of the page container. Where in the source order you place the panel markup will depend on how you want to page content to read for people experiencing the page in a C-grade device (HTML only) or for a screen reader.</p>
 
@@ -34,18 +34,18 @@
 		<h4>CSS Multi-column Layout</h4>
 		<p>To avoid blinks when opening a panel, we force hardware acceleration on WebKit browsers. The CSS that is used to do this can cause issues with buttons and form elements on the page if their container has a CSS multi-column layout (<code>column-count</code>). To resolve this you have to set the following rule for the element or its container: </p>
 
-<pre><code>
+<pre><code><![CDATA[
 -webkit-transform: translate3d(0,0,0);
-</code></pre>
+]]></code></pre>
 
 		<h3>Panel markup conventions</h3>
-		<p>A panel consists of a container with a <code>data-role=&quot;panel&quot;</code> attribute and a unique <code>ID</code>. This <code>ID</code> will be referenced by the link or button to open and close the panel. The most basic panel markup looks like this:</p>
+		<p>A panel consists of a container with a <code><![CDATA[data-role="panel"]]></code> attribute and a unique <code>ID</code>. This <code>ID</code> will be referenced by the link or button to open and close the panel. The most basic panel markup looks like this:</p>
 
-<pre><code>
-&lt;div data-role=&quot;panel&quot; id=&quot;mypanel&quot;&gt;
-	&lt;!-- panel content goes here --&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="panel" id="mypanel">
+	<!-- panel content goes here -->
+</div>
+]]></code></pre>
 
 		<p>The <strong>position</strong> of the panel on the screen is set by the <code>data-position</code> attribute. The position defaults to <code>left</code>, meaning it will appear from the left edge of the screen. Specify <code>data-position="right"</code> for it to appear from the right edge instead.</p>
 
@@ -53,18 +53,18 @@
 
 		<p>Here is an example of a panel with a custom position and display option set:</p>
 
-<pre><code>
-&lt;div data-role=&quot;panel&quot; id=&quot;mypanel&quot; data-position=&quot;right&quot; data-display=&quot;push&quot;&gt;
-	&lt;!-- panel content goes here --&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="panel" id="mypanel" data-position="right" data-display="push">
+	<!-- panel content goes here -->
+</div>
+]]></code></pre>
 
 		<h4>Dynamic content</h4>
 		<p>When you dynamically add content to a panel or make hidden content visible while the panel is open, you have to trigger the <code>updatelayout</code> event on the panel.</p>
 
-<pre><code>
+<pre><code><![CDATA[
 $( "#mypanel" ).trigger( "updatelayout" );
-</code></pre>
+]]></code></pre>
 
 		<p>The framework will check the new height of the panel contents and, in case this exceeds the screen height, set the page <code>min-height</code> to this height and unfix panels with <code>data-position-fixed="true"</code>. See also <strong>Panel positioning</strong>.</p>
 
@@ -77,9 +77,9 @@ $( "#idofpanel" ).panel( "open" , optionsHash );
 
 		<p>To control a panel from a link, point the <code>href</code> to the <code>ID</code> of the panel you want to toggle (<code>mypanel</code> in the example below). This instructs the framework to bind the link to the panel. This link will toggle the visibility of the panel so tapping it will open the panel, and tapping it again will close it.</p>
 
-<pre><code>
-&lt;a href=&quot;#mypanel&quot;&gt;Open panel&lt;/a&gt;
-</code></pre>
+<pre><code><![CDATA[
+<a href="#mypanel">Open panel</a>
+]]></code></pre>
 
 		<iframe src="/resources/panel/example2.html" style="width:100%;height:440px;border:0px"></iframe>
 
@@ -90,13 +90,15 @@ $( "#idofpanel" ).panel( "open" , optionsHash );
 
 		<p>A panel can also be closed by calling the panel's <code>close</code> method directly.</p>
 
-<pre><code>$( "#idofpanel" ).panel( "close" );</code></pre>
+<pre><code><![CDATA[
+$( "#idofpanel" ).panel( "close" );
+]]></code></pre>
 
 		<p>It's common to also add a close button inside the panel. To add the link that will close the panel, add the <code>data-rel="close"</code> attribute to tell the framework to close that panel when clicked. It's important to ensure that this link also makes sense if JavaScript isn't available, so we recommend that the <code>href</code> points to the ID of the page to which the user should jump when closing. For example, if the button to open the panel is in the header bar that has and ID of <code>my-header</code>, the close link in the panel should be:</p>
 
-<pre><code>
-&lt;a href=&quot;#my-header&quot; data-rel=&quot;close&quot;&gt;Close panel&lt;/a&gt;
-</code></pre>
+<pre><code><![CDATA[
+<a href="#my-header" data-rel="close">Close panel</a>
+]]></code></pre>
 
 		<h3>Panel animations</h3>
 		<p>Panels will animate if the browser supports 3D transforms. The presence of such support is established by the same criteria for CSS animation support we use for page transitions. Panel animations use <code>translateX</code> CSS transforms to ensure they are hardware accelerated and smooth.</p>
@@ -136,7 +138,7 @@ $( "#idofpanel" ).panel( "open" , optionsHash );
 
 		<p>Here is an example of these rules wrapped in a media query to only apply this behavior above 35em (560px):</p>
 
-<pre><code>
+<pre><code><![CDATA[
 @media (min-width:35em) {
 
 	/* wrap on wide viewports once open */
@@ -167,7 +169,7 @@ $( "#idofpanel" ).panel( "open" , optionsHash );
 		display: none;
 	}
 }
-</code></pre>
+]]></code></pre>
 
 		<h4>Applying a preset breakpoint</h4>
 		<p>Included in the widget styles is a breakpoint preset for this behavior that kicks in at 55em (880px). This breakpoint is not applied by default to make it easier for you to write custom breakpoints that work best for your content and design. To apply the breakpoint preset, add the <code>ui-responsive-panel</code> class to the <em>page wrapper</em> (not the panel).</p>
@@ -195,11 +197,11 @@ $( "#idofpanel" ).panel( "open" , optionsHash );
 		</option>
 		<option name="initSelector"  default='":jqmData(role=&#39;panel&#39;)"'>
 			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as panels. To change which elements are initialized, bind this option to the mobileinit event:
-<pre><code>
+<pre><code><![CDATA[
 $( document ).on( "mobileinit", function() {
 	$.mobile.panel.prototype.options.initSelector = ".mypanel";
 });
-</code></pre>
+]]></code></pre>
 			</desc>
 			<type name="CSS selector string" />
 		</option>

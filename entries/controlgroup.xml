@@ -6,13 +6,13 @@
 	<longdesc>
 		<p>Occasionally, you may want to visually group a set of buttons to form a single block that looks contained like a navigation component. To get this effect, wrap a set of buttons in a container with the <code>data-role="controlgroup"</code> attribute &#8212; the framework will create a vertical button group, remove all margins and drop shadows between the buttons, and only round the first and last buttons of the set to create the effect that they are grouped together. </p>
 
-<pre><code>
-&lt;div data-role=&quot;controlgroup&quot;&gt;
-  &lt;a href=&quot;#&quot; data-role=&quot;button&quot;&gt;Yes&lt;/a&gt;
-  &lt;a href=&quot;#&quot; data-role=&quot;button&quot;&gt;No&lt;/a&gt;
-  &lt;a href=&quot;#&quot; data-role=&quot;button&quot;&gt;Maybe&lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="controlgroup">
+  <a href="#" data-role="button">Yes</a>
+  <a href="#" data-role="button">No</a>
+  <a href="#" data-role="button">Maybe</a>
+</div>
+]]></code></pre>
 
 		<p>This will result in the following button group:
 		<iframe src="/resources/controlgroup/example1.html" style="width:100%;height:150px;border:0px"></iframe></p>
@@ -67,10 +67,11 @@
 		<option name="initSelector"  default='":jqmData(role=&#39;controlgroup&#39;)"'>
 			<desc>
 				<p>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as controlgroups. To change which elements are initialized, bind this option to the mobileinit event:</p>
-<pre><code>
+<pre><code><![CDATA[
 $( document ).on( "mobileinit", function() {
 	$.mobile.controlgroup.prototype.options.initSelector = ".mycontrolgroup";
-});</code></pre>
+});
+]]></code></pre>
 			</desc>
 			<type name="jQuery selector string" />
 		</option>
@@ -87,9 +88,9 @@ $( document ).on( "mobileinit", function() {
 	<methods>
 		<method name="container">
 			<desc>Obtain the container element within which the controlgroup's child elements are to be placed.
-<pre><code>
+<pre><code><![CDATA[
 $( ".selector" ).controlgroup( "container" );
-</code></pre>
+]]></code></pre>
 			</desc>
 		</method>
 	</methods>

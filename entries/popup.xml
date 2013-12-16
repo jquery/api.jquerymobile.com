@@ -6,13 +6,13 @@
 	<longdesc>
 		<p>To create a popup, add the <code>data-role="popup"</code> attribute to a div with the popup contents. Then create a link with the <code>href</code> set to the <code>id</code> of the popup div, and add the attribute <code>data-rel="popup"</code> to tell the framework to open the popup when the link is tapped. This is a similar markup pattern to the <a href="../dialog/">dialog</a> widget. A popup div has to be nested inside the same page as the link.</p>
 
-<pre><code>
-&lt;a href=&quot;#popupBasic&quot; data-rel=&quot;popup&quot;&gt;Open Popup&lt;/a&gt;
+<pre><code><![CDATA[
+<a href="#popupBasic" data-rel="popup">Open Popup</a>
 
-&lt;div data-role=&quot;popup&quot; id=&quot;popupBasic&quot;&gt;
-	&lt;p&gt;This is a completely basic popup, no options set.&lt;/p&gt;
-&lt;/div&gt;
-</code></pre>
+<div data-role="popup" id="popupBasic">
+	<p>This is a completely basic popup, no options set.</p>
+</div>
+]]></code></pre>
 
 		<p>This will result in the following popup:
 		<iframe src="/resources/popup/example1.html" style="width:100%;height:90px;border:0px"></iframe></p>
@@ -35,7 +35,7 @@
 
 		<p>The handler is bound to the <code>popupbeforeposition</code> event, which ensures the image is not only scaled before it is shown but also when the window is resized (e.g. orientation change). In this code example the height is reduced by 60 to take a top and bottom tolerance of 30 pixels into account.</p>
 
-<pre><code>
+<pre><code><![CDATA[
 $( document ).on( "pageinit", function() {
     $( ".photopopup" ).on({
         popupbeforeposition: function() {
@@ -44,7 +44,7 @@ $( document ).on( "pageinit", function() {
         }
     });
 });
-</code></pre>
+]]></code></pre>
 
 		<h2>Working with iframes in popups</h2>
 
@@ -57,13 +57,13 @@ $( document ).on( "pageinit", function() {
 
 		<p>The markup is an iframe inside a popup container. The popup will have a 15 pixels padding because of class <code>ui-content</code> and a one pixel border because the framework will add class <code>ui-body-d</code> to the popup.</p>
 
-<pre><code>
-&lt;div data-role="popup" id="popupVideo" data-overlay-theme="a" data-theme="d" data-tolerance="15,15" class="ui-content"&gt;
+<pre><code><![CDATA[
+<div data-role="popup" id="popupVideo" data-overlay-theme="a" data-theme="d" data-tolerance="15,15" class="ui-content">
 
-    &lt;iframe src="http://player.vimeo.com/video/41135183" width="497" height="298" seamless&gt;&lt;/iframe&gt;
+    <iframe src="http://player.vimeo.com/video/41135183" width="497" height="298" seamless></iframe>
 
-&lt;/div&gt;
-</code></pre>
+</div>
+]]></code></pre>
 
 		<p>When using an iframe inside a popup it is important to initially <strong>set the width and height attributes to 0</strong>. This prevents the page to breaking on platforms like Android 2.3. Note that you have to set the attributes, because setting the width and height with CSS is not sufficient. You can leave the actual width and height in the markup for browsers that have JavaScript disabled and use <code>attr()</code> to set the zero values upon the <code>pageinit</code> event.</p>
 
@@ -107,7 +107,7 @@ function scale( width, height, padding, border ) {
 
 		<p>This is the complete script and the link to open the video popup:</p>
 
-<pre><code>
+<pre><code><![CDATA[
 $( document ).on( "pageinit", function() {
     $( "#popupVideo iframe" )
         .attr( "width", 0 )
@@ -130,7 +130,7 @@ $( document ).on( "pageinit", function() {
         }
     });
 });
-</code></pre>
+]]></code></pre>
 
 			<p>Note that the video will still be playing in the iframe when the popup is closed. If available you can use the 3rd party API to stop the video on the <code>popupafterclose</code> event. Another way is to create the iframe when the popup is opened and destroy it when the popup is closed, but this would drop support for browsers that have JavaScript disabled.</p>
 
@@ -140,27 +140,27 @@ $( document ).on( "pageinit", function() {
 
 		<p>This is the markup of the popup including a right close button:</p>
 
-<pre><code>
-&lt;div data-role="popup" id="popupMap" data-overlay-theme="a" data-theme="a" data-corners="false" data-tolerance="15,15"&gt;
+<pre><code><![CDATA[
+<div data-role="popup" id="popupMap" data-overlay-theme="a" data-theme="a" data-corners="false" data-tolerance="15,15">
 
-    &lt;a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close&lt;/a&gt;
+    <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
 
-    &lt;iframe src="map.html" width="480" height="320" seamless&gt;&lt;/iframe&gt;
+    <iframe src="map.html" width="480" height="320" seamless></iframe>
 
-&lt;/div&gt;
-</code></pre>
+</div>
+]]></code></pre>
 
 		<p>Expand the section below to view the source of the iframe.</p>
 
 		<div data-role="collapsible" data-content-theme="d">
 			<h3><code>map.html</code></h3>
-<pre><code>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Map&lt;/title&gt;
-    &lt;script&gt;
+<pre><code><![CDATA[
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Map</title>
+    <script>
         function initialize() {
             var myLatlng = new google.maps.LatLng( 51.520838, -0.140261 );
             var myOptions = {
@@ -170,9 +170,9 @@ $( document ).on( "pageinit", function() {
             }
             var map = new google.maps.Map( document.getElementById( "map_canvas" ), myOptions );
         }
-    &lt;/script&gt;
-    &lt;script src="http://maps.google.com/maps/api/js?sensor=false"&gt;&lt;/script&gt;
-    &lt;style&gt;
+    </script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <style>
         html {
             height: 100%;
             overflow: hidden;
@@ -185,22 +185,22 @@ $( document ).on( "pageinit", function() {
         #map_canvas {
             height: 100%;
         }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body onload="initialize()"&gt;
+    </style>
+</head>
+<body onload="initialize()">
 
-    &lt;div id="map_canvas"&gt;&lt;/div&gt;
+    <div id="map_canvas"></div>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+</body>
+</html>
+]]></code></pre>
 		</div>
 
 		<p>Setting the size of the iframe is done exactly the same as for the video example, with one exception. You should also set the width and height of the div that contains the map to prevent the page to break on platforms like Android 2.3. In this example the ID of this div is <code>#map_canvas</code>.</p>
 
 		<p>This is the complete script and the link to open the map popup:</p>
 
-<pre><code>
+<pre><code><![CDATA[
 $( document ).on( "pageinit", function() {
     $( "#popupMap iframe" )
         .attr( "width", 0 )
@@ -232,7 +232,7 @@ $( document ).on( "pageinit", function() {
         }
     });
 });
-</code></pre>
+]]></code></pre>
 
 		<h2>Overlay panels</h2>
 
@@ -241,21 +241,21 @@ $( document ).on( "pageinit", function() {
 
 		<p>Here is the HTML markup for the button and panel:</p>
 
-<pre><code>
-&lt;a href="#popupPanel" data-rel="popup" data-transition="slide" data-position-to="window" data-role="button"&gt;Open panel&lt;/a&gt;
+<pre><code><![CDATA[
+<a href="#popupPanel" data-rel="popup" data-transition="slide" data-position-to="window" data-role="button">Open panel</a>
 
-&lt;div data-role="popup" id="popupPanel" data-corners="false" data-theme="none" data-shadow="false" data-tolerance="0,0"&gt;
+<div data-role="popup" id="popupPanel" data-corners="false" data-theme="none" data-shadow="false" data-tolerance="0,0">
 
-    &lt;button data-theme="a" data-icon="back" data-mini="true"&gt;Back&lt;/button&gt;
-    &lt;button data-theme="a" data-icon="grid" data-mini="true"&gt;Menu&lt;/button&gt;
-    &lt;button data-theme="a" data-icon="search" data-mini="true"&gt;Search&lt;/button&gt;
+    <button data-theme="a" data-icon="back" data-mini="true">Back</button>
+    <button data-theme="a" data-icon="grid" data-mini="true">Menu</button>
+    <button data-theme="a" data-icon="search" data-mini="true">Search</button>
 
-&lt;/div&gt;
-</code></pre>
+</div>
+]]></code></pre>
 
 			<p>To style the panel, and attach it to the right edge, the following CSS is used. Note that <code>#popupPanel-popup</code> is the ID of the container div generated by the framework.</p>
 
-<pre><code>
+<pre><code><![CDATA[
 #popupPanel-popup {
     right: 0 !important;
     left: auto !important;
@@ -270,11 +270,11 @@ $( document ).on( "pageinit", function() {
 #popupPanel .ui-btn {
     margin: 2em 15px;
 }
-</code></pre>
+]]></code></pre>
 
 		<p>Because the popup container is positioned absolute, you can't make the panel full height with <code>height:100%;</code>. This small script sets the height of the popup to the actual screen height.</p>
 
-<pre><code>
+<pre><code><![CDATA[
 $( "#popupPanel" ).on({
     popupbeforeposition: function() {
         var h = $( window ).height();
@@ -282,50 +282,50 @@ $( "#popupPanel" ).on({
         $( "#popupPanel" ).css( "height", h );
     }
 });
-</code></pre>
+]]></code></pre>
 
 		<h3>Calling the popup plugin</h3>
 		<p>This plugin will autoinitialize on any page that contains a div with the attribute <code>data-role="popup"</code>. However, if needed you can directly call the <code>popup</code> plugin on any selector, just like any jQuery plugin and programmatically work with the popup options, methods, and events API:</p>
 
-<pre><code>
+<pre><code><![CDATA[
 $( "#myPopupDiv" ).popup();
-</code></pre>
+]]></code></pre>
 
 		<h3>Opening popups</h3>
 		<p>Using the markup-based configuration, when a link with the <code>data-rel="popup"</code> is tapped, the corresponding popup container with the id referenced in the <code>href</code> of the link will be shown. To open a popup programmatically, call popup with the <code>open</code> method on the popup container:</p>
 
-<pre><code>
+<pre><code><![CDATA[
 $( "#myPopupDiv" ).popup( "open" )
-</code></pre>
+]]></code></pre>
 
 		<h3>Closing popups</h3>
 		<p>By default popups can be closed either by clicking outside the popup widget or by pressing the <code>Esc</code> key. To prevent this, the <code>data-dismissible="false"</code> attribute can be added to the popup. Popups can also be closed via the <code>close</code> method:</p>
 
-<pre><code>
+<pre><code><![CDATA[
 $( "#myPopupDiv" ).popup( "close" )
-</code></pre>
+]]></code></pre>
 
 		<p>To add an explicit close button to a popup, add a link with the role of button into the popup container with a <code>data-rel="back"</code> attribute which will close the popup when tapped. We have created helper classes to position buttons in the upper left (<code>ui-btn-left</code>) or upper right (<code>ui-btn-right</code>) of the popup but you may need to tweak these or add custom positioning styles depending on your design. We recommend adding standard content padding to the popup to make room for the buttons (see next section).</p>
 
-<pre><code>
-&lt;div data-role=&quot;popup&quot;&gt;
-	&lt;a href=&quot;#&quot; data-rel=&quot;back&quot; data-role=&quot;button&quot; data-theme=&quot;a&quot; data-icon=&quot;delete&quot; data-iconpos=&quot;notext&quot; class=&quot;ui-btn-right&quot;&gt;Close&lt;/a&gt;
+<pre><code><![CDATA[
+<div data-role="popup">
+	<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
 	...popup contents go here...
-&lt;/div&gt;
-</code></pre>
+</div>
+]]></code></pre>
 
 		<p><iframe src="/resources/popup/example7.html" style="width:100%;height:390px;border:0px"></iframe></p>
 
 		<h3>Adding padding</h3>
 		<p>For popups with formatted text, padding is needed. We recommend adding the <code>ui-content</code> class to the popup container which adds the standard 15px of padding, just like the page content container. Write your own styles to create a more customized design if needed.</p>
 
-<pre><code>
-&lt;a href=&quot;#popupPadded&quot; data-rel=&quot;popup&quot; data-role=&quot;button&quot;&gt;Popup with padding&lt;/a&gt;
+<pre><code><![CDATA[
+<a href="#popupPadded" data-rel="popup" data-role="button">Popup with padding</a>
 
-&lt;div data-role=&quot;popup&quot; id=&quot;popupPadded&quot; class=&quot;ui-content&quot;&gt;
-	&lt;p&gt;This is a popup with the &lt;code&gt;ui-content&lt;/code&gt; class added to the popup container.&lt;/p&gt;
-&lt;/div&gt;
-</code></pre>
+<div data-role="popup" id="popupPadded" class="ui-content">
+	<p>This is a popup with the <code>ui-content</code> class added to the popup container.</p>
+</div>
+]]></code></pre>
 
 		<p>This will result in the following popup with content padding:
 		<iframe src="/resources/popup/example8.html" style="width:100%;height:190px;border:0px"></iframe></p>
@@ -355,11 +355,11 @@ $( "#myPopupDiv" ).popup( "close" )
 		<h3>Setting transitions</h3>
 		<p>By default, popups have no transition to make them open as quickly as possible. To set the transition used for a popup, add the <code>data-transition</code> attribute to the link that references the popup. The reverse version of the transition will be used when closing the popup.</p>
 
-<pre><code>
-&lt;a href=&quot;#transitionExample&quot; data-transition=&quot;flip&quot; data-rel=&quot;popup&quot;&gt;
+<pre><code><![CDATA[
+<a href="#transitionExample" data-transition="flip" data-rel="popup">
    Flip transition
-&lt;/a&gt;
-</code></pre>
+</a>
+]]></code></pre>
 
 		<p>For performance reasons on mobile devices, we recommend using simpler transitions like pop, fade or none for smooth and fast popup animations, especially with larger or complex widgets within a popup. To view all transition types, you must be on a browser that supports 3D transforms. By default, devices that lack 3D support (such as Android 2.x) will fallback to "fade" for all transition types. See the transitions page for detailed information on the transition system.
 		<iframe src="/resources/popup/example10.html" style="width:100%;height:390px;border:0px"></iframe></p>
@@ -372,11 +372,11 @@ $( "#myPopupDiv" ).popup( "close" )
 		<p><code>data-theme</code> will be inherited from the page, and will always have a valid value when the popup opens, unless you explicitly specify <code>data-theme=&quot;none&quot;</code>, in which case the popup will have a transparent background.</p>
 		<p>The <code>data-overlay-theme</code> will never be set, and the popup's background, although always present when the popup is shown, will be completely transparent, unless explicitly set using for example <code>data-overlay-theme=&quot;a&quot;</code>. In this case, the background will fade in, partially obscuring the rest of the window, to further direct attention to the popup. Here is an example of an explicitly themed popup:</p>
 
-<pre><code>
-&lt;div id=&quot;both&quot; data-role=&quot;popup&quot; data-theme=&quot;e&quot; data-overlay-theme=&quot;a&quot; class=&quot;ui-content&quot;&gt;
+<pre><code><![CDATA[
+<div id="both" data-role="popup" data-theme="e" data-overlay-theme="a" class="ui-content">
   ...Popup contents...
-&lt;/div&gt;
-</code></pre>
+</div>
+]]></code></pre>
 
 		<iframe src="/resources/popup/example11.html" style="width:100%;height:390px;border:0px"></iframe>
 
@@ -385,7 +385,7 @@ $( "#myPopupDiv" ).popup( "close" )
 		<p>This also means that custom select menus will not work inside popups, because they are themselves implemented using popups. If you place a select menu inside a popup, it will be rendered as a native select menu, even if you specify <code>data-native-menu="false"</code>.</p>
 		<p>A workaround to get chained popups working is the use of a timeout for example in the <code>popupafterclose</code> event bound to the invoking popup. In the following example, when the first popup is closed, the second will be opened by a delayed call to the <code>open</code> method:</p>
 
-<pre><code>
+<pre><code><![CDATA[
 $( document ).on( "pageinit", function() {
     $( ".popupParent" ).on({
         popupafterclose: function() {
@@ -393,7 +393,7 @@ $( document ).on( "pageinit", function() {
         }
     });
 });
-</code></pre>
+]]></code></pre>
 
 	</longdesc>
 	<added>1.2</added>
@@ -423,10 +423,11 @@ $( document ).on( "pageinit", function() {
 		<option name="initSelector"  default='":jqmData(role=&#39;popup&#39;)"'>
 			<desc>
 				<p>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as popups. To change which elements are initialized, bind this option to the mobileinit event:</p>
-<pre><code>
+<pre><code><![CDATA[
 $( document ).on( "mobileinit", function() {
 	$.mobile.popup.prototype.options.initSelector = ".mypopup";
-});</code></pre>
+});
+]]></code></pre>
 			</desc>
 			<type name="CSS selector string" />
 		</option>

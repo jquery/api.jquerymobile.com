@@ -14,7 +14,9 @@
 
 		<p>The column chooser mode requires a <code>table</code> element with two attributes: <code>data-role=&quot;table&quot;</code> and <code>data-mode=&quot;columntoggle&quot;</code>. An <code>ID</code> attribute is also required on the table to associate it with the column chooser popup menu.</p>
 
-		<pre><code>&lt;table data-role=&quot;table&quot; data-mode=&quot;columntoggle&quot; id=&quot;my-table&quot;&gt;</code></pre>
+<pre><code><![CDATA[
+<table data-role="table" data-mode="columntoggle" id="my-table">
+]]></code></pre>
 
 		<h3>How column toggle mode works</h3>
 
@@ -31,16 +33,18 @@
 		<p>The table works by hiding and showing columns based on two inputs: available screen width or by the user checking and unchecking which columns to display in a column picker popup. Add <code>data-priority</code> attributes to each of the table headers of columns you want to responsively display and assign a priority (1 = highest, 6 = lowest). Any table header given a priority will be available in the column picker menu. </p>
 		<p>To make a column <em>persistent</em> so it's not available for hiding, omit the <code>data-priority</code> attribute. This will make the column visible at all widths and won't be available in the column chooser menu.</p>
 
-<pre><code>&lt;th&gt;I&#x27;m am critical and can&#x27;t be removed&lt;/th&gt;
-&lt;th data-priority=&quot;1&quot;&gt;I&#x27;m very important&lt;/th&gt;
-&lt;th data-priority=&quot;3&quot;&gt;I&#x27;m somewhat&lt;/th&gt;
-&lt;th data-priority=&quot;5&quot;&gt;I&#x27;m less important&lt;/th&gt;
-</code></pre>
+<pre><code><![CDATA[
+<th>I'm am critical and can't be removed</th>
+<th data-priority="1">I'm very important</th>
+<th data-priority="3">I'm somewhat</th>
+<th data-priority="5">I'm less important</th>
+]]></code></pre>
 
 		<p>Behind the scenes, the plugin will apply classes to each cell that map to the priority set in the data attribute on the header. For example, if a table heading has a <code>data-priority="3"</code> attribute, every cell in that column will assigned a <code>ui-table-priority-3</code> class once enhanced. These classes are then used in media queries to hide and show columns based on screen width (see below).</p>
 
-<pre><code>&lt;td class=&quot;ui-table-priority-3&quot;&gt;97%&lt;/td&gt;
-</code></pre>
+<pre><code><![CDATA[
+<td class="ui-table-priority-3">97%</td>
+]]></code></pre>
 
 		<p>You may use any priority naming convention and assign as many (or few) levels of priority for the columns. The plugin  simply generates class names based on the values in the <code>data-priority</code> attribute so even though we default to using a numeric system of 1-6, any naming convention is possible. </p>
 
@@ -62,7 +66,7 @@
 
 		<p>In the example styles below for a <code>my-custom-class</code> class on the table, the priority 1 columns are shown first, at widths above <code>20em</code> (320px), then priority 2 kicks in above <code>30em</code> (480px) and so on up to wide desktop widths with priority 6. Feel free to change these breakpoints in your stylesheet and choose how many priority levels you'd like to use.</p>
 
-<pre><code>
+<pre><code><![CDATA[
 /* Show priority 1 at 320px (20em x 16px) */
 @media screen and (min-width: 20em) {
    .my-custom-class th.ui-table-priority-1,
@@ -78,9 +82,9 @@
    }
 }
 ...more breakpoints...
-</code></pre>
+]]></code></pre>
 <p>Due to CSS specificity, you will also need to include the class definitions for the hidden and visible states <em>after</em> the custom breakpoints in your custom stylesheet so be sure to include these as well:</p>
-<pre><code>
+<pre><code><![CDATA[
 /* Manually hidden */
 .my-custom-class th.ui-table-cell-hidden,
 .my-custom-class td.ui-table-cell-hidden {
@@ -92,7 +96,7 @@
 .my-custom-class td.ui-table-cell-visible {
    display: table-cell;
 }
-</code></pre>
+]]></code></pre>
 
 		<h3>Applying a preset breakpoint</h3>
 
@@ -100,7 +104,9 @@
 
 		<p>These breakpoints can applied by adding a <code>class="ui-responsive"</code> to the table element. Here is an example of a table with this class added:</p>
 
-		<pre><code>&lt;table data-role=&quot;table&quot; class=&quot;ui-responsive&quot; data-mode=&quot;columntoggle&quot; id=&quot;my-table&quot;&gt;</code></pre>
+<pre><code><![CDATA[
+<table data-role="table" class="ui-responsive" data-mode="columntoggle" id="my-table">
+]]></code></pre>
 
 		<p>The six preset breakpoints classes included in the column toggle stylesheet use regular increments of 10em (160 pixels). Here is a summary of the breakpoints assigned to each priority in the preset styles: </p>
 

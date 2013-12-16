@@ -9,11 +9,11 @@
 		<p>The <code>header</code> is a toolbar at the top of the page that usually contains the page title text and optional buttons positioned to the left and/or right of the title for navigation or actions. Headers can optionally be positioned as fixed so they remain at the top of the screen at all times instead of scrolling with the page.</p>
 		<p>The title text is normally an H1 heading element but it's possible to use any heading level (H1-H6) to allow for semantic flexibility. For example, a page containing multiple mobile "pages" may use a H1 element on the home "page" and a H2 element on the secondary pages. All heading levels are styled identically by default to maintain visual consistency.</p>
 
-<pre><code>
-&lt;div data-role="header"&gt;
-	&lt;h1&gt; Page Title &lt;/h1&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="header">
+	<h1> Page Title </h1>
+</div>
+]]></code></pre>
 
 		<h3>Default header features</h3>
 
@@ -27,13 +27,13 @@
 		<h4>Default button positioning</h4>
 		<p>The header plugin looks for immediate children of the header container, and automatically sets the first link in the left button slot and the second link in the right. In this example, the 'Cancel' button will appear in the left slot and 'Save' will appear in the right slot based on their sequence in the source order. </p>
 
-<pre><code>
-&lt;div data-role=&quot;header&quot;&gt;
-	&lt;a href=&quot;index.html&quot; data-icon=&quot;delete&quot;&gt;Cancel&lt;/a&gt;
-	&lt;h1&gt;Edit Contact&lt;/h1&gt;
-	&lt;a href=&quot;index.html&quot; data-icon=&quot;check&quot;&gt;Save&lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="header">
+	<a href="index.html" data-icon="delete">Cancel</a>
+	<h1>Edit Contact</h1>
+	<a href="index.html" data-icon="check">Save</a>
+</div>
+]]></code></pre>
 
 		<iframe src="/resources/header/example2.html" style="width:100%;height:90px;border:0px"></iframe>
 
@@ -41,37 +41,37 @@
 
 		<p>Buttons automatically adopt the swatch color of the bar they sit in, so a link in a header bar with the "a" color will also be styled as "a" colored buttons. It's simple to make a button visually stand out. Here, we add the <code>data-theme</code> attribute and set the color swatch for the button to "b" to make the "Save" button pop.</p>
 
-<pre><code>
-&lt;div data-role=&quot;header&quot;&gt;
-	&lt;a href=&quot;index.html&quot; data-icon=&quot;delete&quot;&gt;Cancel&lt;/a&gt;
-	&lt;h1&gt;Edit Contact&lt;/h1&gt;
-	&lt;a href=&quot;index.html&quot; data-icon=&quot;check&quot; data-theme=&quot;b&quot;&gt;Save&lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="header">
+	<a href="index.html" data-icon="delete">Cancel</a>
+	<h1>Edit Contact</h1>
+	<a href="index.html" data-icon="check" data-theme="b">Save</a>
+</div>
+]]></code></pre>
 
 		<iframe src="/resources/header/example3.html" style="width:100%;height:90px;border:0px"></iframe>
 
 		<h4>Controlling button position with classes</h4>
 		<p>The button position can also be controlled by adding classes to the button anchors, rather than relying on source order. This is especially useful if you only want a button in the right slot. To specify the button position, add the class of <code>ui-btn-left</code> or <code>ui-btn-right</code> to the anchor.</p>
 
-<pre><code>
-&lt;div data-role=&quot;header&quot;&gt;
-	&lt;h1&gt;Page Title&lt;/h1&gt;
-	&lt;a href=&quot;index.html&quot; data-icon=&quot;gear&quot; class=&quot;ui-btn-right&quot;&gt;Options&lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="header">
+	<h1>Page Title</h1>
+	<a href="index.html" data-icon="gear" class="ui-btn-right">Options</a>
+</div>
+]]></code></pre>
 
 		<iframe src="/resources/header/example4.html" style="width:100%;height:90px;border:0px"></iframe>
 
 		<h3>Adding buttons to toolbars without heading</h3>
 		<p>The heading in the header bar has some margin that will give the bar its height. If you choose not to use a heading, you will need to add an element with <code>class="ui-title"</code> so that the bar can get the height and display correctly.</p>
 
-<pre><code>
-&lt;div data-role=&quot;header&quot;&gt;
-	&lt;a href=&quot;index.html&quot; data-icon=&quot;gear&quot; class=&quot;ui-btn-right&quot;&gt;Options&lt;/a&gt;
-	&lt;span class=&quot;ui-title&quot; /&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div data-role="header">
+	<a href="index.html" data-icon="gear" class="ui-btn-right">Options</a>
+	<span class="ui-title" />
+</div>
+]]></code></pre>
 
 		<iframe src="/resources/header/example5.html" style="width:100%;height:90px;border:0px"></iframe>
 
@@ -92,11 +92,11 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 		<p>If you need to create a header that doesn't follow the default configuration, simply wrap your custom styled markup in any container, such as <code>div</code>. The plugin won't apply the automatic button logic to the wrapped content inside the header container so you can write custom styles for laying out the content in your header.</p>
 		<p>It's also possible to create custom bars without using the header data-role at all. For example, start with any container and add the <code>ui-bar</code> class to apply standard bar padding and add the <code>ui-bar-b</code> class to assign the bar swatch styles from your theme. (The "b" can be any swatch letter.)</p>
 
-<pre><code>
-&lt;div class=&quot;ui-bar ui-bar-b&quot;&gt;
-	&lt;h3&gt;I&#x27;m just a div with bar classes and a mini inline &lt;a href=&quot;#&quot; data-role=&quot;button&quot; data-mini=&quot;true&quot;&gt;Button&lt;/a&gt;&lt;/h3&gt;
-&lt;/div&gt;
-</code></pre>
+<pre><code><![CDATA[
+<div class="ui-bar ui-bar-b">
+	<h3>I'm just a div with bar classes and a mini inline <a href="#" data-role="button" data-mini="true">Button</a></h3>
+</div>
+]]></code></pre>
 
 		<iframe src="/resources/header/example6.html" style="width:100%;height:90px;border:0px"></iframe>
 

@@ -3,19 +3,19 @@
 	<title>pagebeforecreate</title>
 	<desc>Triggered on the page being initialized, before most plugin auto-initialization occurs.</desc>
 	<longdesc>
-<pre><code>
+<pre><code><![CDATA[
 $( "#aboutPage" ).on( "pagebeforecreate", function( event ) {
   alert( "This page was just inserted into the dom!" );
 });
-</code></pre>
+]]></code></pre>
 
 		<p>Note that by binding to pagebeforecreate, you can manipulate markup before jQuery Mobile's default widgets are auto-initialized. For example, say you want to add data attributes via JavaScript instead of in the HTML source, this is the event you'd use.</p>
 
-<pre><code>
+<pre><code><![CDATA[
 $( "#aboutPage" ).on( "pagebeforecreate", function( event ) {
   // manipulate this page before its widgets are auto-initialized
 });
-</code></pre>
+]]></code></pre>
 	</longdesc>
 	<added>1.0</added>
 	<signature>

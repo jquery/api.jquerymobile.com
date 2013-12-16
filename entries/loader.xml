@@ -9,25 +9,25 @@
 		<p>The loader widget handles the task of displaying the loading dialog when jQuery Mobile pulls in content via Ajax. It can also be displayed manually for custom loading actions using the <code>$.mobile.loading</code> helper method (See the global method docs).</p>
 		<p>To configure the loading dialog globally the following settings can be defined on its prototype during the <code>mobileinit</code> event.</p> Below are the defaults:
 
-		<pre><code>
+<pre><code><![CDATA[
 $( document ).on( "mobileinit", function() {
 	$.mobile.loader.prototype.options.text = "loading";
 	$.mobile.loader.prototype.options.textVisible = false;
 	$.mobile.loader.prototype.options.theme = "a";
 	$.mobile.loader.prototype.options.html = "";
 });
-		</code></pre>
+]]></code></pre>
 
 		<p>These settings will be overridden by the deprecated settings to preserve backward compatibility. Once the deprecated settings are removed these defaults will only be superseded by the method params object described in the global method docs under <code>$.mobile.loading</code>.</p>
 
-		<pre><code>
+<pre><code><![CDATA[
 $.mobile.loading( "show", {
 	text: "foo",
 	textVisible: true,
 	theme: "z",
 	html: ""
 });
-		</code></pre>
+]]></code></pre>
 	</longdesc>
 	<added>1.2</added>
 	<options>
@@ -77,10 +77,10 @@ $.mobile.loading( "show", {
 		<method name="hidePageLoadingMsg">
 			<desc><p class="ui-body ui-body-e"><strong>Deprecated</strong> in 1.2 - use <code>$.mobile.loading( "hide" )</code> instead, see examples above</p>
 			Hide the loader message, which is configurable via $.mobile.loadingMessage.
-				<pre><code>
-					//hide the page loader
-					$.mobile.hidePageLoadingMsg();
-				</code></pre>
+<pre><code><![CDATA[
+//hide the page loader
+$.mobile.hidePageLoadingMsg();
+]]></code></pre>
 			</desc>
 		</method>
 		<method name="loading">
@@ -98,13 +98,13 @@ $.mobile.loading( "show", {
 		<method name="showPageLoadingMsg">
 			<desc><p class="ui-body ui-body-e"><strong>Deprecated</strong> in 1.2 - use <code>$.mobile.loading( "show" )</code> instead, see examples above</p>
 			Show the loader message, which is configurable via $.mobile.loadingMessage.
-			<pre><code>
+<pre><code><![CDATA[
 //cue the page loader
 $.mobile.showPageLoadingMsg();
 
 //use theme swatch "b", a custom message, and no spinner
 $.mobile.showPageLoadingMsg( "b", "This is only a test", true );
-			</code></pre>
+]]></code></pre>
 		</desc>
 	</method>
 </methods>
