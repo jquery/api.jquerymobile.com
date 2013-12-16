@@ -16,7 +16,7 @@ $(function() {
 
 		// Set the page title based on the hash.
 		document.title = "The hash is " + ( hash.replace( /^#/, "" ) || "blank" ) + ".";
-	
+
 		// Iterate over all nav links, setting the "selected" class as-appropriate.
 		$( "#nav a" ).each(function() {
 			var that = $( this );
@@ -26,7 +26,7 @@ $(function() {
 	// Since the event is only triggered when the hash changes, we need to trigger
 	// the event now, to handle the hash the page may have loaded with.
 	$( window ).hashchange();
-}); 
+});
 ]]></code></pre>
 		<p>iFrame source: <span id="hashtagIframeLink">example1.html</span>
 			<iframe id="hashtagIframe" src="/resources/hashchange/example1.html" style="width:100%;height:90px;border:0px"></iframe>

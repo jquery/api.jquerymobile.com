@@ -29,7 +29,7 @@
 
 		<p>The framework CSS contains rules that make images that are immediate children of the popup scale to fit the screen. Because of the absolute positioning of the popup container and screen, the height is not adjusted to screen height on all browsers. You can prevent vertical scrolling with a simple script that sets the <code>max-height</code> of the image.</p>
 
-		<p>In the two examples below the divs with <code>data-role="popup"</code> have a class of <code>photopopup</code>. 
+		<p>In the two examples below the divs with <code>data-role="popup"</code> have a class of <code>photopopup</code>.
 		<iframe src="/resources/popup/example3.html" style="width:100%;height:590px;border:0px"></iframe>
 		</p>
 
@@ -51,7 +51,7 @@ $( document ).on( "pageinit", function() {
 		<p>You may need to embed an iframe into a popup to use a 3rd party widget. Here, we'll walk through a few real-world examples of working with iframes: videos and maps.</p>
 
 		<h3>Video example</h3>
-		
+
 		<p>Here is an example of a 3rd party video player embedded in a popup:
 		<iframe src="/resources/popup/example4.html" style="width:100%;height:390px;border:0px"></iframe></p>
 
@@ -334,7 +334,7 @@ $( "#myPopupDiv" ).popup( "close" )
 
 		<h3>Positioning options</h3>
 		<p>By default, popups open centered vertically and horizontally over the thing you clicked (the origin) which is good for popups used as tooltips or menus. The framework also applies some basic collision detection rules to ensure that the popup will appear on-screen so the ultimate position may not always be centered over the origin.</p>
-		<p>For situations like a dialog or lightbox where the popup should appear centered within the window instead of over the origin, add the <code>data-position-to</code> attribute to the <strong>link</strong> and specify a value of <code>window</code>. </p>	
+		<p>For situations like a dialog or lightbox where the popup should appear centered within the window instead of over the origin, add the <code>data-position-to</code> attribute to the <strong>link</strong> and specify a value of <code>window</code>. </p>
 		<p>It's also possible to specify any valid selector as the value of <code>position-to</code> in addition to <code>origin</code> and <code>window</code>. For example, if you add <code>data-position-to="#myElement"</code> the popup will be positioned over the element with the id <code>myElement</code>.	</p>
 
 		<p>A few examples:

@@ -32,21 +32,21 @@
 
 			<p>As you see above, by default grid blocks have no visual styling; they simply present content side-by-side.</p>
 			<p>Grid classes can be applied to any container. In this next example, we add <code>ui-grid-a</code> to a <code>fieldset</code>, and apply the <code>ui-block</code> classes to the container of each of the two buttons inside to stretch them each to 50% of the screen width:</p>
-			
+
 <pre><code>
 &lt;fieldset class="ui-grid-a"&gt;
 	&lt;div class="ui-block-a"&gt;&lt;button type="submit" data-theme="c"&gt;Cancel&lt;/button&gt;&lt;/div&gt;
-	&lt;div class="ui-block-b"&gt;&lt;button type="submit" data-theme="b"&gt;Submit&lt;/button&gt;&lt;/div&gt;	   
+	&lt;div class="ui-block-b"&gt;&lt;button type="submit" data-theme="b"&gt;Submit&lt;/button&gt;&lt;/div&gt;
 &lt;/fieldset&gt;
 </code></pre>
 
 			<iframe src="/resources/grid-layout/example2.html" style="width:100%;height:90px;border:0"></iframe>
 			<p>Please note that the framework adds left and right margin to buttons in a grid. For a single button you can use a container with class <code>ui-grid-solo</code> and wrap the button in a div with class <code>ui-block-a</code> like the example below. This way the button will get the same margin.</p>
-			
+
 <pre><code>
 &lt;div class="ui-grid-a"&gt;
 	&lt;div class="ui-block-a"&gt;&lt;button type="button" data-theme="c"&gt;Previous&lt;/button&gt;&lt;/div&gt;
-	&lt;div class="ui-block-b"&gt;&lt;button type="button" data-theme="c"&gt;Next&lt;/button&gt;&lt;/div&gt;	   
+	&lt;div class="ui-block-b"&gt;&lt;button type="button" data-theme="c"&gt;Next&lt;/button&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="ui-grid-solo"&gt;
 	&lt;div class="ui-block-a"&gt;&lt;button type="v" data-theme="b"&gt;More&lt;/button&gt;&lt;/div&gt;
@@ -54,7 +54,7 @@
 </code></pre>
 
 			<iframe src="/resources/grid-layout/example3.html" style="width:100%;height:130px;border:0"></iframe>
-			
+
 			<p>Theme classes (not data-theme attributes) from the <a href="../api/themes.html" class="ui-link">theming system</a> can be added to an element, including grids. On the blocks below, we're adding two classes: <code>ui-bar</code> to add the default bar padding and <code>ui-bar-e</code> to apply the background gradient and font styling for the "e" toolbar theme swatch. For illustration purposes, an inline <code>style="height:120px"</code> attribute is also added to each grid to set each to a standard height. </p>
 
 			<iframe src="/resources/grid-layout/example4.html" style="width:100%;height:150px;border:0"></iframe>
@@ -73,32 +73,32 @@
 
 			<p>This will produce a 33/33/33% grid for our content.</p>
 			<iframe src="/resources/grid-layout/example5.html" style="width:100%;height:150px;border:0"></iframe>
-			
+
 			<p>And an example of a 3 column grid with buttons inside:</p>
 			<iframe src="/resources/grid-layout/example6.html" style="width:100%;height:90px;border:0"></iframe>
-			
+
 			<h3>Four-column grids</h3>
 
 			<p>A four-column, 25/25/25/25% grid is created by specifying <code>class=ui-grid-c</code> on the parent and adding a fourth block. Note: These blocks are also styled with theme classes so the grid layout is clearly visible.</p>
-			
+
 			<iframe src="/resources/grid-layout/example7.html" style="width:100%;height:150px;border:0"></iframe>
 
 			<h2>Five-column grids</h2>
 
 			<p>A five-column, 20/20/20/20/20% grid is created by specifying <code>class=ui-grid-d</code> on the parent and adding a fifth block. Note: These blocks are also styled with theme classes so the grid layout is clearly visible.</p>
-			
+
 			<iframe src="/resources/grid-layout/example8.html" style="width:100%;height:150px;border:0"></iframe>
-			
+
 			<h3>Multiple row grids</h3>
 
 			<p>Grids are designed to wrap to multiple rows of items. For example, if you specify a 3-column grid (ui-grid-b) on a container that has nine child blocks, it will wrap to 3 rows of 3 items each. There is a CSS rule to clear the floats and start a new line when the <code>class=ui-block-a</code> is seen so make sure to assign block classes in a repeating sequence (a, b, c, a, b, c, etc.) that maps to the grid type:</p>
 			<iframe src="/resources/grid-layout/example9.html" style="width:100%;height:450px;border:0"></iframe>
 
 			<h3>Grids in toolbars</h3>
-			
+
 			<p>Grids are helpful for creating layouts within a toolbar. Here's a footer with a 4 column grid.</p>
 			<iframe src="/resources/grid-layout/example10.html" style="width:100%;height:90px;border:0"></iframe>
-			
+
 		</longdesc>
 	<added>1.0</added>
 	<options>

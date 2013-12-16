@@ -22,77 +22,76 @@
 	&lt;/div&gt;
 
 &lt;/div&gt;
-</code></pre>	
-	
+</code></pre>
 
 		<p>Here is an example of a collapsible set with 5 sections.
 		<iframe src="/resources/collapsible-set/example1.html" style="width:100%;height:310px;border:0px"></iframe></p>
-		
+
 		<h3>Non-inset collapsible sets</h3>
 
 		<p>For full width collapsibles without corner styling add the <code>data-inset="false"</code> attribute to the set.
 		<iframe src="/resources/collapsible-set/example2.html" style="width:100%;height:240px;border:0px"></iframe></p>
-		
+
 		<h3>Mini collapsible sets</h3>
 
-		<p>For a more compact version that is useful in tight spaces, add the <code>data-mini="true"</code> attribute to the set to create a mini version. 
+		<p>For a more compact version that is useful in tight spaces, add the <code>data-mini="true"</code> attribute to the set to create a mini version.
 		<iframe src="/resources/collapsible-set/example3.html" style="width:100%;height:210px;border:0px"></iframe></p>
-		
+
 		<h3>Custom icons</h3>
-		
+
 		<p>Collapsible headings’ default icons can be overridden by using the <code>data-collapsed-icon</code> and <code>data-expanded-icon</code> attributes, either at the <code>collapsible-set</code> level or on an individual collapsible basis.
 		<iframe src="/resources/collapsible-set/example4.html" style="width:100%;height:240px;border:0px"></iframe></p>
 
 		<h3>Icon positioning</h3>
-		
+
 		<p>Collapsible headings’ default icon positioning can be overridden by using the <code>data-iconpos</code> attribute, either at the <code>collapsible-set</code> level or on an individual collapsible basis.
 		<iframe src="/resources/collapsible-set/example5.html" style="width:100%;height:310px;border:0px"></iframe></p>
-		
+
 		<h3>Theming collapsible content</h3>
-		
+
 		<p>The standard <code>data-theme</code> attribute can be used to set the color of each collapsible in a set. To provide a clearer visual grouping of the content with the headers, add the <code>data-content-theme</code> attribute with a swatch letter. This adds a themed background color and border to the content block. For consistent theming, add these attributes to the parent collapsible set.
-		
+
 <pre><code>&lt;div data-role=&quot;collapsible-set&quot; data-theme=&quot;c&quot; data-content-theme=&quot;d&quot;&gt;
-</code></pre>	
+</code></pre>
 
 		<iframe src="/resources/collapsible-set/example6.html" style="width:100%;height:240px;border:0px"></iframe></p>
 
 		<h3>Theming individual sections</h3>
-		
+
 		<p>To have individual sections in a group styled differently, add <code>data-theme</code> and <code>data-content-theme</code> attributes to specific collapsibles.
 		<iframe src="/resources/collapsible-set/example7.html" style="width:100%;height:240px;border:0px"></iframe></p>
 
 		<h3>Expanding or collapsing items in a set</h3>
-		
+
 		<p>To expand or collapse items in a set, call the respective methods on individual collapsibles. The selector for the collapse method can include multiple items in a set:</p>
-		
+
 <pre><code>
 $( "#myCollapsibleSet" ).children().trigger( "collapse" );
 </code></pre>
-		
+
 	</longdesc>
 	<added>1.0</added>
 	<options>
 		<option name="collapsedIcon" default='"plus"' example-value='"arrow-r"'>
-			<desc>Sets the icon for the headers of the collapsible containers when in a collapsed state. 
+			<desc>Sets the icon for the headers of the collapsible containers when in a collapsed state.
 				<p>This option is also exposed as a data attribute: <code>data-collapsed-icon="arrow-r"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
 		<option name="corners" default="true" example-value="false">
-			<desc>Applies the theme border-radius to the first and last collapsible if set to true. 
+			<desc>Applies the theme border-radius to the first and last collapsible if set to true.
 				<p>This option is also exposed as a data attribute:<code>data-corners="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
 		<option name="expandedIcon" default='"minus"' example-value='"arrow-d"'>
-			<desc>Sets the icon for the header of the collapsible container when in an expanded state. 
+			<desc>Sets the icon for the header of the collapsible container when in an expanded state.
 				<p>This option is also exposed as a data attribute: <code>data-expanded-icon="arrow-d"</code>.</p>
 			</desc>
 			<type name="String" />
 		</option>
 		<option name="iconpos" default='"left"' example-value="right">
-			<desc>Positions the icon in the collapsible headers. 
+			<desc>Positions the icon in the collapsible headers.
 				<p>Possible values: left, right, top, bottom, none, notext.</p>
 				<p>This option is also exposed as a data attribute: <code>data-iconpos="right"</code>.</p>
 			</desc>
@@ -109,7 +108,7 @@ $( document ).on( "mobileinit", function() {
 			<type name="CSS selector string" />
 		</option>
 		<option name="inset"  default="true" example-value="false">
-			<desc>By setting this option to false the collapsibles will get a full width appearance without corners. If the value is false for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set. 
+			<desc>By setting this option to false the collapsibles will get a full width appearance without corners. If the value is false for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.
 				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
 			</desc>
 			<type name="Boolean" />
@@ -121,7 +120,7 @@ $( document ).on( "mobileinit", function() {
 			<type name="Boolean" />
 		</option>
 		<option name="theme" default="null, inherited from parent" example-value='"a"'>
-			<desc>Sets the color scheme (swatch) for the collapsible set. It accepts a single letter from a-z that maps to the swatches included in your theme. 
+			<desc>Sets the color scheme (swatch) for the collapsible set. It accepts a single letter from a-z that maps to the swatches included in your theme.
 				<p>Possible values: swatch letter (a-z).</p>
 				<p>This option is also exposed as a data attribute: <code>data-theme="a"</code>.</p>
 			</desc>

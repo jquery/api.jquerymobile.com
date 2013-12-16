@@ -3,11 +3,11 @@
 	<title>taphold</title>
 	<desc>Triggered after a sustained complete touch event.</desc>
 	<longdesc>
-		<p>The jQuery Mobile <code>taphold</code> event triggers after a sustained, complete touch event (also known as a long press).</p> 
+		<p>The jQuery Mobile <code>taphold</code> event triggers after a sustained, complete touch event (also known as a long press).</p>
 
 		<p><code>$.event.special.tap.tapholdThreshold</code> (default: 750) - This value dictates how long the user must hold their tap before the taphold event is fired on the target element.</p>
 
-		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>	
+		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</longdesc>
 	<added>1.0</added>
 	<signature>
@@ -52,13 +52,13 @@ $(function(){
 	#nav a:hover {
 		color: #999;
 		border-color: #999;
-		background: #eee; 
+		background: #eee;
 	}
 	#nav a.selected,
 	#nav a.selected:hover {
 		color: #0a0;
 		border-color: #0a0;
-		background: #afa; 
+		background: #afa;
 	}
 	div.box {
 		width: 3em;

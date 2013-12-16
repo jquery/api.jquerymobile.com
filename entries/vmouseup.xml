@@ -7,7 +7,7 @@
 		<p>We provide a set of "virtual" mouse events that attempt to abstract away mouse and touch events. This allows the developer to register listeners for the basic mouse events, such as mousedown, mousemove, mouseup, and click, and the plugin will take care of registering the correct listeners behind the scenes to invoke the listener at the fastest possible time for that device. In touch environments, the plugin retains the order of event firing that is seen in traditional mouse environments, so for example, vmouseup is always dispatched before vmousedown, and vmousedown before vclick, etc. The virtual mouse events also normalize how coordinate information is extracted from the event, so in touch based environments, coordinates are available from the pageX, pageY, screenX, screenY, clientX, and clientY properties, directly on the event object.</p>
 		<p>The jQuery Mobile <code>"vmouseup"</code> event handler simulates the "onmouseup" event handler on mobile devices.</p>
 		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		
+
 <pre><code><![CDATA[
 $( document ).on( "vmouseup", "p", function() {
 	$( this ).append( "<span style='color:#108040;'> vmouseup fired...</span>" );
@@ -17,7 +17,7 @@ $( document ).on( "vmouseup", "p", function() {
 		<p>
 			<iframe src="/resources/vmouseup/example1.html" style="width:100%;height:90px;border:0px"></iframe>
 		</p>
-		
+
 		<dd><p>The virtual mouse events can also be configured:</p>
 			<ul>
 				<li><code>$.vmouse.moveDistanceThreshold</code> (default: 10px) – More than this, then it is a scroll event. The vmousecancel event is called and the TouchMove event is cancelled.</li>

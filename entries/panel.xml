@@ -4,17 +4,17 @@
 	<title>Panel Widget</title>
 	<desc>Creates a panel widget</desc>
 	<longdesc>
-		<p>Panels are designed to be as flexible as possible to make it easy to create menus, collapsible columns, drawers, inspectors panes and more. 
+		<p>Panels are designed to be as flexible as possible to make it easy to create menus, collapsible columns, drawers, inspectors panes and more.
 		<iframe src="/resources/panel/example1.html" style="width:100%;height:440px;border:0px"></iframe>
 		</p>
 		<h3>Where panel markup goes in a page</h3>
-		
+
 		<p>A panel must be a sibling to the header, content and footer elements inside a jQuery Mobile page. You can add the panel markup either <em>before</em> or <em>after</em> these elements, but not in between. A panel cannot be placed outside a page, but this constraint will be removed in a future version.</p>
 
 		<p>Here is an example of the panel before the header, content and footer in the source order:</p>
 
 <pre><code>
-&lt;div data-role=&quot;page&quot;&gt;			
+&lt;div data-role=&quot;page&quot;&gt;
 
 	&lt;div data-role=&quot;panel&quot; id=&quot;mypanel&quot;&gt;
 		&lt;!-- panel content goes here --&gt;
@@ -140,7 +140,7 @@ $( "#idofpanel" ).panel( "open" , optionsHash );
 @media (min-width:35em) {
 
 	/* wrap on wide viewports once open */
-	
+
 	.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push.ui-panel-content-fixed-toolbar-position-left,
 	.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal.ui-panel-content-fixed-toolbar-position-left,
 	.ui-page-panel-open .ui-panel-content-wrap-display-push.ui-panel-content-wrap-position-left,
@@ -176,19 +176,19 @@ $( "#idofpanel" ).panel( "open" , optionsHash );
 	<added>1.3</added>
 	<options>
 		<option name="animate" default="true" example-value="false">
-			<desc>Sets whether the panel will animate when opening and closing. If set to false, the panel will just appear and disappear without animation. This is recommended for fastest performance. 
+			<desc>Sets whether the panel will animate when opening and closing. If set to false, the panel will just appear and disappear without animation. This is recommended for fastest performance.
 				<p>This option is also exposed as a data attribute:<code>data-animate="false"</code> on the panel container.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
 		<option name="dismissible" default="true" example-value="false">
-			<desc>Sets whether the panel can be closed by clicking outside onto the page. 
+			<desc>Sets whether the panel can be closed by clicking outside onto the page.
 				<p>This option is also exposed as a data attribute:<code>data-dismissible="false"</code> on the link that opens the panel.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
 		<option name="display" default='"reveal"'  example-value='"overlay"'>
-			<desc>The relationship of the panel to the page contents. Can either push the page over ("reveal"), re-flow the content to fit the panel content as a column ("push"), or sit over the content ("overlay"). 
+			<desc>The relationship of the panel to the page contents. Can either push the page over ("reveal"), re-flow the content to fit the panel content as a column ("push"), or sit over the content ("overlay").
 				<p>This option is also exposed as a data attribute:<code>data-display="push"</code> on the link that opens the panel.</p>
 			</desc>
 			<type name="String" />
@@ -204,7 +204,7 @@ $( document ).on( "mobileinit", function() {
 			<type name="CSS selector string" />
 		</option>
 		<option name="position" default='"left"'  example-value='"right"'>
-			<desc>The side of the screen the panel appears on. Values can be "left" or "right". 
+			<desc>The side of the screen the panel appears on. Values can be "left" or "right".
 				<p>This option is also exposed as a data attribute:<code>data-position="right"</code> on the link that opens the panel.</p>
 			</desc>
 			<type name="String" />
@@ -222,7 +222,7 @@ $( document ).on( "mobileinit", function() {
 			<type name="Boolean" />
 		</option>
 		<option name="theme" default='"c"' example-value='"a"'>
-			<desc>Sets the color scheme (swatch) for the panel. It accepts a single letter from a-z that maps to the swatches included in your theme. 
+			<desc>Sets the color scheme (swatch) for the panel. It accepts a single letter from a-z that maps to the swatches included in your theme.
 				<p>Possible values: swatch letter (a-z).</p>
 				<p>This option is also exposed as a data attribute: <code>data-theme="a"</code>.</p>
 			</desc>
@@ -294,7 +294,7 @@ $( document ).on( "mobileinit", function() {
 		</option>
 	</options>
 	<events>
-		<event name="beforeclose">	
+		<event name="beforeclose">
 			<desc>Triggered at the start of the process of closing a panel
 			</desc>
 			<argument name="event" type="Event">
@@ -304,7 +304,7 @@ $( document ).on( "mobileinit", function() {
 				<desc></desc>
 			</argument>
 		</event>
-		<event name="beforeopen">	
+		<event name="beforeopen">
 			<desc>Triggered at the start of the process of opening a panel
 			</desc>
 			<argument name="event" type="Event">
@@ -314,7 +314,7 @@ $( document ).on( "mobileinit", function() {
 				<desc></desc>
 			</argument>
 		</event>
-		<event name="create">	
+		<event name="create">
 			<desc>Triggered when a panel is created
 			</desc>
 			<argument name="event" type="Event">
@@ -324,7 +324,7 @@ $( document ).on( "mobileinit", function() {
 				<desc></desc>
 			</argument>
 		</event>
-		<event name="close">	
+		<event name="close">
 			<desc>Triggered when the process (and animation) of closing a panel is finished
 			</desc>
 			<argument name="event" type="Event">
@@ -334,7 +334,7 @@ $( document ).on( "mobileinit", function() {
 				<desc></desc>
 			</argument>
 		</event>
-		<event name="open">	
+		<event name="open">
 			<desc>Triggered when the process (and animation) of opening a panel is finished
 			</desc>
 			<argument name="event" type="Event">
@@ -355,7 +355,7 @@ $( document ).on( "mobileinit", function() {
 			</desc>
 		</method>
 		<method name="toggle">
-			<desc>toggles the visibility the panel so it will open a closed panel or close and open panel. 
+			<desc>toggles the visibility the panel so it will open a closed panel or close and open panel.
 			</desc>
 		</method>
 	</methods>
@@ -363,8 +363,8 @@ $( document ).on( "mobileinit", function() {
 		<height>380</height>
 		<desc>A basic example of a panel.</desc>
 		<css><![CDATA[
-	.panel-content { 
-		padding:15px; 
+	.panel-content {
+		padding:15px;
 	}
 ]]></css>
 		<html><![CDATA[
@@ -375,7 +375,7 @@ $( document ).on( "mobileinit", function() {
 	<div data-role="content">
 		<a href="#defaultpanel" data-role="button" data-inline="true" data-icon="bars">Default panel</a>
 	</div>
-	
+
 	<!-- defaultpanel  -->
 	<div data-role="panel" id="defaultpanel" data-theme="b">
 

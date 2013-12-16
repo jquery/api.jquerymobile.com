@@ -7,11 +7,11 @@
 		<p>This event is triggered by components within the framework that dynamically show/hide content, and is meant as a generic mechanism to notify other components that they may need to update their size or position. Within the framework, this event is fired on the component element whose content was shown/hidden, and bubbles all the way up to the document element. </p>
 
 <pre><code>$( "#foo" ).hide().trigger( "updatelayout" );</code></pre>
-		
+
 	</longdesc>
 	<added>1.0</added>
 	<signature>
-		
+
 	</signature>
 	<category slug="events"/>
 </entry>

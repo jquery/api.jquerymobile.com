@@ -5,9 +5,9 @@
     <desc>Creates a textinput widget for textinput, textarea or search input</desc>
     <longdesc>
 		<h2>Text Input</h2>
-		
+
 		<p>Text inputs and textareas are coded with standard HTML elements, then enhanced by jQuery Mobile to make them more attractive and useable on a mobile device. View the <a href="../data-attribute/">data- attribute reference</a> to see all the possible attributes you can add to text inputs.</p>
-			
+
 		<p>To collect standard alphanumeric text, use an <code>input</code> with a <code>type="text"</code> attribute. Set the <code>for</code> attribute of the <code>label</code> to match the <code>id</code> of the <code>input</code> so they are semantically associated. It's possible to accessibly hide the label if it's not desired in the page layout, but we require that it is present in the markup for semantic and accessibility reasons.</p>
 
 <pre><code>
@@ -16,11 +16,11 @@
 </code></pre>
 		<p>This will produce a basic text input. The default styles set the width of the input to 100% of the parent container and stack the label on a separate line.
 		<iframe src="/resources/textinput/example1.html" style="width:100%;height:90px;border:0px"></iframe></p>
-        
+
 		<h3>Mini version</h3>
-        
+
 		<p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a mini version.</p>
-		
+
 <pre><code>
 &lt;label for=&quot;basic&quot;&gt;Text Input:&lt;/label&gt;
 &lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;basic&quot; value=&quot;&quot; data-mini=&quot;true&quot; /&gt;
@@ -28,76 +28,76 @@
 
 		<p>This will produce an input that is not as tall as the standard version and has a smaller text size.
 		<iframe src="/resources/textinput/example2.html" style="width:100%;height:90px;border:0px"></iframe></p>
-        
+
 		<h3>Clear button option</h3>
 
 		<p>To add a clear button to any input (like the search input), add the <code>data-clear-btn="true"</code> attribute. The text for this clear button can be customized via the <code>data-clear-btn-text="clear input"</code> attribute. Search buttons have the clear button by default and cannot be controlled by this option. Note that this is available for all the input types below except for <code>textareas</code>.</p>
 
-<pre><code>	
+<pre><code>
 &lt;label for=&quot;clear-demo&quot;&gt;Text Input:&lt;/label&gt;
 &lt;input type=&quot;text&quot; name=&quot;clear&quot; id=&quot;clear-demo&quot; value=&quot;&quot; data-clear-btn=&quot;true&quot; /&gt;
 </code></pre>
 
 		<p>This markup creates a text input with a clear button that becomes visible as soon as a character has been entered.
 		<iframe src="/resources/textinput/example7.html" style="width:100%;height:90px;border:0px"></iframe></p>
-				
+
 		<h3>Field containers</h3>
-        
+
 		<p>Optionally wrap the text input in a container with the <code> data-role="fieldcontain"</code> attribute to help visually group it in a longer form.</p>
 <pre><code>
 &lt;div data-role=&quot;fieldcontain&quot;&gt;
 	&lt;label for=&quot;name&quot;&gt;Text Input:&lt;/label&gt;
 	&lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;name&quot; value=&quot;&quot; /&gt;
-&lt;/div&gt;	
-</code></pre>	
+&lt;/div&gt;
+</code></pre>
 
 		<p>The text input is now displayed like this:
 		<iframe src="/resources/textinput/example3.html" style="width:100%;height:90px;border:0px"></iframe></p>
-        
+
         <h3>More text input types</h3>
 		<p>In jQuery Mobile, you can use existing and new HTML5 input types such as <code>password</code>, <code>email</code>, <code>tel</code>, <code>number</code>, and more.  Some type values are rendered differently across browsers. For example, Chrome renders the <code>range</code> input as a slider. jQuery Mobile standardizes the appearance of <code>range</code> and <code>search</code> by dynamically changing their type to <code>text</code>. You can configure which input types are degraded to <code>text</code> with the <code>page</code> plugin's options.</p>
-			
+
 		<p>One major advantage of using these more specific input types if that on mobile devices, specialized keyboards that speed data entry are offered in place of the standard text keyboard. Try the following inputs on a mobile device to see which display custom keyboards on various platforms.
 		<iframe src="/resources/textinput/example4.html" style="width:100%;height:710px;border:0px"></iframe></p>
-		
+
         <h2>Textareas</h2>
-        
+
 		<p>For multi-line text inputs, use a <code>textarea</code> element. The framework will auto-grow the height of the textarea to avoid the need for an internal scrollbar. </p>
 		<p>Set the <code>for</code> attribute of the <code>label</code> to match the <code>id</code> of the <code>textarea</code> so they are semantically associated, and wrap them in a <code>div</code> with the <code> data-role="fieldcontain"</code> attribute to group them.</p>
 
-<pre><code>	
+<pre><code>
 &lt;label for=&quot;textarea-a&quot;&gt;Textarea:&lt;/label&gt;
 &lt;textarea name=&quot;textarea&quot; id=&quot;textarea-a&quot;&gt;
 I&#x27;m a basic textarea. If this is pre-populated with content, the height will be automatically adjusted to fit without needing to scroll. That is a pretty handy usability feature.
 &lt;/textarea&gt;
-</code></pre>	
+</code></pre>
 
 		<p>This will produce a basic textarea with the width set to 100% of the parent container and the label stacked on a separate line. The textarea will grow to fit new lines as you type:
 		<iframe src="/resources/textinput/example5.html" style="width:100%;height:190px;border:0px"></iframe></p>
-       
-<pre><code>	
+
+<pre><code>
 &lt;div data-role=&quot;fieldcontain&quot;&gt;
 &lt;label for=&quot;textarea&quot;&gt;Textarea:&lt;/label&gt;
 	&lt;textarea name=&quot;textarea&quot; id=&quot;textarea&quot;&gt;&lt;/textarea&gt;
 &lt;/div&gt;
-</code></pre>	
-	            
+</code></pre>
+
 		<p>The textarea is displayed like this and will grow to fit new lines as you type:
 		<iframe src="/resources/textinput/example6.html" style="width:100%;height:190px;border:0px"></iframe></p>
-        
+
         <h3>Calling the textinput plugin</h3>
 
 		<p>This plugin will auto initialize on any page that contains a textarea or any of the text input types listed above without any need for a <code>data-role</code> attribute in the markup. However, if needed, you can directly call the <code>textinput</code> plugin on any selector, just like any jQuery plugin:</p>
 <pre><code>
-$( "input" ).textinput();			
+$( "input" ).textinput();
 </code></pre>
-				
+
 		<h3>Degraded input types</h3>
-        
+
 		<p>jQuery Mobile degrades several HTML5 input types back to type=text or type=number after adding enhanced controls. For example, inputs with a type of range are enhanced with a custom slider control, and their type is set to number to offer a usable form input alongside that slider. Inputs with a type of search are degraded back to type=text after we add our own themeable search input styling.</p>
 		<p>The page plugin contains a list of input types that are set to either true which means they'll degrade to type=text, false which means they'll be left alone, or a string such as "number", which means they'll be converted to that type (such as the case of type=range).</p>
-		
-		<p>You can configure which types are changed via the page plugin's <code>degradeInputs</code> option, which can be manipulated externally via <code>$.mobile.page.prototype.options.degradeInputs</code>, which has properties: color, date, datetime, "datetime-local", email, month, number, range, search, tel, time, url, and week. Be sure to configure this inside an event handler bound to the <code>mobileinit</code> event, so that it applies to the first page as well as subsequent pages that are loaded.</p>	
+
+		<p>You can configure which types are changed via the page plugin's <code>degradeInputs</code> option, which can be manipulated externally via <code>$.mobile.page.prototype.options.degradeInputs</code>, which has properties: color, date, datetime, "datetime-local", email, month, number, range, search, tel, time, url, and week. Be sure to configure this inside an event handler bound to the <code>mobileinit</code> event, so that it applies to the first page as well as subsequent pages that are loaded.</p>
 
 		<h2>Search Input</h2>
 		<p>Search inputs are a new HTML type that is styled with pill-shaped corners and adds an "x" icon to clear the field once you start typing. Start with an input with a type="search" attribute in your markup.</p>
@@ -109,11 +109,11 @@ $( "input" ).textinput();
 </code></pre>
 		<p>This will produce a basic search input. The default styles set the width of the input to 100% of the parent container and stack the label on a separate line.
 		<iframe src="/resources/search-input/example1.html" style="width:100%;height:90px;border:0px"></iframe></p>
-        
+
 		<h3>Mini version</h3>
-        
+
 		<p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a mini version.</p>
-		
+
 <pre><code>
 &lt;label for=&quot;search-mini&quot;&gt;Search Input:&lt;/label&gt;
 &lt;input type=&quot;search&quot; name=&quot;search-mini&quot; id=&quot;search-mini&quot; value=&quot;&quot; data-mini=&quot;true&quot;/&gt;
@@ -121,38 +121,38 @@ $( "input" ).textinput();
 
 		<p>This will produce a search input that is not as tall as the standard version and has a smaller text size.
 		<iframe src="/resources/search-input/example2.html" style="width:100%;height:90px;border:0px"></iframe></p>
-        
+
 		<h3>Field containers</h3>
-        
+
 		<p>Optionally wrap the search input in a container with the <code>data-role="fieldcontain"</code> attribute to help visually group it in a longer form.</p>
 <pre><code>
 &lt;div data-role=&quot;fieldcontain&quot;&gt;
 	&lt;label for=&quot;search-2&quot;&gt;Search Input:&lt;/label&gt;
 	&lt;input type=&quot;search&quot; name=&quot;search-2&quot; id=&quot;search-2&quot; value=&quot;&quot; /&gt;
 &lt;/div&gt;
-</code></pre>	
+</code></pre>
 
 		<p>The search input is now displayed like this:
 		<iframe src="/resources/search-input/example3.html" style="width:100%;height:90px;border:0px"></iframe>
 		</p>
-		
+
 		<h3>Theming</h3>
 		<p>The <code>data-theme</code> attribute can be added to the search input to set the theme to any swatch letter.
 		<iframe src="/resources/search-input/example4.html" style="width:100%;height:90px;border:0px"></iframe>
 		</p>
-		
+
 		<h3>Setting the clear button text</h3>
-		
-		<p>The text for the button used to clear the search input of text can be configured for all search inputs by binding to the <code>mobileinit</code> event and setting the 
+
+		<p>The text for the button used to clear the search input of text can be configured for all search inputs by binding to the <code>mobileinit</code> event and setting the
 		<code>$.mobile.textinput.prototype.options.clearSearchButtonText</code> property to a string of your choosing.</p>
-			
+
 		<h3>Calling the textinput plugin</h3>
 
 		<p>This plugin will auto-initialize on any page that contains a text input with the <code>type="search"</code> attribute without any need for a <code>data-role</code> attribute in the markup. However, if needed, you can directly call the <code>textinput</code> plugin on a selector, just like any jQuery plugin:</p>
-		
+
 <pre><code>
-$( ".mySearchInput" ).textinput();			
-</code></pre>        
+$( ".mySearchInput" ).textinput();
+</code></pre>
 
 	</longdesc>
 	<added>1.0</added>
@@ -179,13 +179,13 @@ $( ".mySearchInput" ).textinput();
 <pre><code>
 $( document ).on( "mobileinit", function() {
 	$.mobile.textinput.prototype.options.initSelector = ".myInputs";
-}); 
+});
 </code></pre>
 			</desc>
 			<type name="CSS selector string" />
 		</option>
 		<option name="mini" default="false" example-value="true">
-			<desc>Sets the size of the element to a more compact, mini version. 
+			<desc>Sets the size of the element to a more compact, mini version.
 				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
 			</desc>
             <type name="Boolean" />

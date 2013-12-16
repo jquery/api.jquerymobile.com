@@ -17,7 +17,7 @@ $( document ).on( "vmouseout", "p", function() {
 		<p>
 			<iframe src="/resources/vmouseout/example1.html" style="width:100%;height:90px;border:0px"></iframe>
 		</p>
-		
+
 		<dd><p>The virtual mouse events can also be configured:</p>
 			<ul>
 				<li><code>$.vmouse.moveDistanceThreshold</code> (default: 10px) – More than this, then it is a scroll event. The vmousecancel event is called and the TouchMove event is cancelled.</li>
@@ -31,7 +31,7 @@ $( document ).on( "vmouseout", "p", function() {
 		<argument name="preventDefault" type="Function" optional="true">
 			<desc>A function to invoke in the event binding to prevent the synthetic click event by the browser.</desc>
 		</argument>
-		
+
 	</signature>
 	<category slug="events"/>
 </entry>

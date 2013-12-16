@@ -18,7 +18,7 @@
 		border-color: #108040;
 		padding: 10px;
 		}
-]]></css>		
+]]></css>
 				<html><![CDATA[
 	<div data-role="content">
 		<p>The URL used is http://jblas:password@mycompany.com:8080/mail/inbox?msg=1234&type=unread#msg-content</p>
@@ -42,7 +42,7 @@
 	</div>]]></html>
 			<code><![CDATA[
 $(document).ready(function() {
-  
+
    $( ".myButton" ).on( "click", function() {
     	// Parsing the Url below results an object that is returned with the
 		// following properties:
@@ -66,9 +66,9 @@ $(document).ready(function() {
 
 		var obj = $.mobile.path.parseUrl("http://jblas:password@mycompany.com:8080/mail/inbox?msg=1234&type=unread#msg-content");
 		var myChoice = eval( this.value );
-        
+
     $( "#myResult" ).html( myChoice );
- }) 
+ })
 });
 ]]></code>
 		</example>

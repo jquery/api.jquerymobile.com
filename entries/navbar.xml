@@ -53,9 +53,9 @@
 
 		<h3>Navbars in footers</h3>
         <p>If you want to add a navbar to the bottom of the page so it acts more like a tab bar, simply wrap the navbar in a container with a <code>data-role="footer"</code></p>
-		
+
 <pre><code>
-&lt;div data-role=&quot;footer&quot;&gt;		
+&lt;div data-role=&quot;footer&quot;&gt;
 	&lt;div data-role=&quot;navbar&quot;&gt;
 		&lt;ul&gt;
 			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
@@ -96,7 +96,7 @@
 		<p>Icons by Joseph Wain / glyphish.com. Licensed under the Creative Commons Attribution 3.0 United States License.</p>
 
         <h3>Theming navbars</h3>
-		
+
 		<p>Navbars inherit the theme swatch from their parent container, just like buttons. If a navbar is placed in the header or footer toolbar, it will inherit the default toolbar swatch "a" for bars unless you set this in the markup. </p>
 		<p>Here are a few examples of navbars in various container swatches that automatically inherit their parent's swatch letter. Note that in these examples, instead of using a <code>data-theme</code> attribute, we're manually adding the swatch classes to apply the body swatch (<code>ui-body-a</code>) and the class to add the standard body padding (ui-body), but the inheritance works the same way:</p>
 
