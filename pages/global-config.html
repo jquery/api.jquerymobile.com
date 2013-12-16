@@ -58,73 +58,73 @@ $( document ).on( "mobileinit", function() {
 		<p>The following defaults are configurable via the <code>$.mobile</code> object:</p>
 
 <dl>
-	<dt><code>activeBtnClass</code> <em>string</em>, default: "ui-btn-active"</dt>
+	<dt id="activeBtnClass"><code>activeBtnClass</code> <em>string</em>, default: "ui-btn-active"</dt>
 	<dd>The CSS class used for "active" button state.</dd>
 	<br />
-	<dt><code>activePageClass</code> <em>string</em>, default: "ui-page-active"</dt>
+	<dt id="activePageClass"><code>activePageClass</code> <em>string</em>, default: "ui-page-active"</dt>
 	<dd>The CSS class used for the page currently in view or in a transition.</dd>
 	<br />
-	<dt><code>ajaxEnabled</code> <em>boolean</em>, default: true</dt>
+	<dt id="ajaxEnabled"><code>ajaxEnabled</code> <em>boolean</em>, default: true</dt>
 	<dd>jQuery Mobile will automatically handle link clicks and form submissions through Ajax, when possible. If false, URL hash listening will be disabled as well, and URLs will load as ordinary HTTP requests.</dd>
 	<br />
-	<dt><code>allowCrossDomainPages</code> <em>boolean</em>, default: false</dt>
+	<dt id="allowCrossDomainPages"><code>allowCrossDomainPages</code> <em>boolean</em>, default: false</dt>
 	<dd>When jQuery Mobile attempts to load an external page, the request runs through <code>$.mobile.loadPage()</code>. This will only allow cross-domain requests if <code>$.mobile.allowCrossDomainPages</code> is set to true. Because the jQuery Mobile framework tracks what page is being viewed within the browser's location hash, it is possible for a cross-site scripting (XSS) attack to occur if the XSS code in question can manipulate the hash and set it to a cross-domain URL of its choice. This is the main reason that the default setting for $.mobile.allowCrossDomainPages is set to false. In PhoneGap apps that must "phone home" by loading assets off a remote server, both the <code>$.support.cors</code> AND <code>$.mobile.allowCrossDomainPages</code> must be set to true.</dd>
 	<br />
-	<dt><code>autoInitializePage</code> <em>boolean</em>, default: true</dt>
+	<dt id="autoInitializePage"><code>autoInitializePage</code> <em>boolean</em>, default: true</dt>
 	<dd>When the DOM is ready, the framework should automatically call <code>$.mobile.initializePage</code>. If false, the page will not initialize and will be visually hidden until <code>$.mobile.initializePage</code> is manually called.</dd>
 	<br />
-	<dt><code>buttonMarkup.hoverDelay</code> <em>integer</em>, default: 200</dt>
+	<dt id="buttonMarkup.hoverDelay"><code>buttonMarkup.hoverDelay</code> <em>integer</em>, default: 200</dt>
 	<dd>Set the delay for touch devices to add the hover and down classes on touch interactions for buttons throughout the framework. Reducing the delay here results in a more responsive feeling ui, but will often result in the downstate being applied during page scrolling.</dd>
 	<br />
-	<dt><code>defaultDialogTransition</code> <em>string</em>, default: 'pop'</dt>
+	<dt id="defaultDialogTransition"><code>defaultDialogTransition</code> <em>string</em>, default: 'pop'</dt>
 	<dd>Set the default transition for dialog changes that use Ajax. Set to 'none' for no transitions.</dd>
 	<br />
-	<dt><code>defaultPageTransition</code> <em>string</em>, default: 'fade'</dt>
+	<dt id="defaultPageTransition"><code>defaultPageTransition</code> <em>string</em>, default: 'fade'</dt>
 	<dd>Set the default transition for page changes that use Ajax. Note: default changed from 'slide' to 'fade' in 1.1. Set to 'none' for no transitions.</dd>
 	<br />
-	<dt><code>dynamicBaseEnabled</code> <em>boolean</em>, default: true</dt>
+	<dt id="dynamicBaseEnabled"><code>dynamicBaseEnabled</code> <em>boolean</em>, default: true</dt>
 	<dd>When this property is set to <code>false</code> the base tag value in browsers that support a dynamic base tag and URL prefixes in browsers that don't <em>won't</em> be updated to reflect where the page was loaded from. This means that resource references that are relative to the page on which they are defined may break. This option is available for web frameworks that operate under a universal base tag value where all links and assets are relative to a signal base.</dd>
 	<br />
-	<dt><code>getMaxScrollForTransition</code> <em>integer</em>, default: 3</dt>
+	<dt id="getMaxScrollForTransition"><code>getMaxScrollForTransition</code> <em>integer</em>, default: 3</dt>
 	<dd>Set a scroll position breakpoint for transitions. If the scroll position is greater than the window height multiplied by the value that has been set, transition "none" will be used.</dd>
     <br />
-	<dt><code>gradeA</code> <em>function that returns a boolean</em>, default: a function returning the value of $.support.mediaquery</dt>
+	<dt id="gradeA"><code>gradeA</code> <em>function that returns a boolean</em>, default: a function returning the value of $.support.mediaquery</dt>
 	<dd>Any support conditions that must be met in order to proceed.</dd>
 	<br />
-	<dt><code>hashListeningEnabled</code> <em>boolean</em>, default: true</dt>
+	<dt id="hashListeningEnabled"><code>hashListeningEnabled</code> <em>boolean</em>, default: true</dt>
 	<dd>jQuery Mobile will automatically listen and handle changes to the location.hash. Disabling this will prevent jQuery Mobile from handling hash changes, which allows you to handle them yourself or use simple deep-links within a document that scroll to a particular id.</dd>
 	<br />
-	<dt><code>ignoreContentEnabled</code> <em>boolean</em>, default: false</dt>
+	<dt id="ignoreContentEnabled"><code>ignoreContentEnabled</code> <em>boolean</em>, default: false</dt>
 	<dd><em>Warning:</em> Setting this property to true will cause performance degradation on enhancement. Once set, all automatic enhancements made by the framework to each enhanceable element of the user's markup will first check for a <code>data-enhance=false</code> parent node. If one is found the markup will be ignored. This setting and the accompanying data attribute provide a mechanism through which users can prevent enhancement over large sections of markup.</dd>
 	<br />
-	<dt><code>linkBindingEnabled</code> <em>boolean</em>, default: true</dt>
+	<dt id="linkBindingEnabled"><code>linkBindingEnabled</code> <em>boolean</em>, default: true</dt>
 	<dd>jQuery Mobile will automatically bind the clicks on anchor tags in your document. Setting this option to false will prevent all anchor click handling <em>including</em> the addition of active button state and alternate link bluring. This should only be used when attempting to delegate the click management to another library or custom code.</dd>
 	<br />
-	<dt><code>loadingMessage</code> <em>string</em>, default: "loading"</dt>
+	<dt id="loadingMessage"><code>loadingMessage</code> <em>string</em>, default: "loading"</dt>
 	<dd>
     Set the text that appears when a page is loading. If set to false, the message will not appear at all.
     <div class="warning"><strong>Deprecated</strong> in 1.2 - use <code>$.mobile.loader.prototype.options.text</code> instead. See the <a href="page-loading">loader docs</a> for more.</div>
   </dd>
 
-	<dt><code>loadingMessageTextVisible</code> <em>boolean</em>, default: false</dt>
+	<dt id="loadingMessageTextVisible"><code>loadingMessageTextVisible</code> <em>boolean</em>, default: false</dt>
 	<dd>
     Whether the text should be visible when a loading message is shown. The text is always visible for loading errors.
     <div class="warning"><strong>Deprecated</strong> in 1.2 - use <code>$.mobile.loader.prototype.options.textVisible</code> instead. See the <a href="page-loading">loader docs</a> for more.</div>
   </dd>
 
-	<dt><code>loadingMessageTheme</code> <em>string</em>, default: "a"</dt>
+	<dt id="loadingMessageTheme"><code>loadingMessageTheme</code> <em>string</em>, default: "a"</dt>
 	<dd>
     The theme that the loading message box uses when text is visible.
     <div class="warning"><strong>Deprecated</strong> in 1.2 - use <code>$.mobile.loader.prototype.options.theme</code> instead. See the <a href="page-loading">loader docs</a> for more.</div>
 	</dd>
 
-	<dt><code>maxTransitionWidth</code> <em>integer, boolean</em>, default: false</dt>
+	<dt id="maxTransitionWidth"><code>maxTransitionWidth</code> <em>integer, boolean</em>, default: false</dt>
 	<dd>Set a max width for transitions. The option accepts any number representing a pixel width and its default value <code>false</code>. If a number value is set, transition "none" will be used if the window is wider than the specified value.</dd>
     <br />
-	<dt><code>minScrollBack</code> <em>integer</em>, default: 250</dt>
+	<dt id="minScrollBack"><code>minScrollBack</code> <em>integer</em>, default: 250</dt>
 	<dd>Minimum scroll distance that will be remembered when returning to a page.</dd>
 	<br />
-	<dt><code>ns</code> <em>string</em>, default: ""</dt>
+	<dt id="ns"><code>ns</code> <em>string</em>, default: ""</dt>
 	<dd>The namespace used in data attributes (e.g., data-role). Can be set to any string, including a blank string which is the default. When using, it's clearest if you include a trailing dash, such as "mynamespace-" which maps to <code>data-mynamespace-foo="..."</code>.
 		<p>If you use data- namespacing, you will need to update/override one selector in the theme CSS. The following data selectors should incorporate the namespace you're using:
 		<pre><code>
@@ -133,28 +133,22 @@ $( document ).on( "mobileinit", function() {
 		</p>
 	</dd>
 	<br />
-	<dt><code>pageLoadErrorMessage</code> <em>string</em>, default: "Error Loading Page"</dt>
+	<dt id="pageLoadErrorMessage"><code>pageLoadErrorMessage</code> <em>string</em>, default: "Error Loading Page"</dt>
 	<dd>Set the text that appears when a page fails to load through Ajax.</dd>
 	<br />
-	<dt><code>pageLoadErrorMessageTheme</code> <em>string</em>, default: "e"</dt>
+	<dt id="pageLoadErrorMessageTheme"><code>pageLoadErrorMessageTheme</code> <em>string</em>, default: "e"</dt>
 	<dd>Set the theme that the error message box uses.</dd>
 	<br />
-	<dt><code>phonegapNavigationEnabled</code> <em>boolean</em>, default: false</dt>
+	<dt id="phonegapNavigationEnabled"><code>phonegapNavigationEnabled</code> <em>boolean</em>, default: false</dt>
 	<dd>Replace calls to <code>window.history.back</code> with PhoneGap's navigation helper where it is available. This addresses navigation issues on page refresh in Android PhoneGap applications using jQuery Mobile.</dd>
 	<br />
-	<dt><code>pushStateEnabled</code> <em>boolean</em>, default: true</dt>
+	<dt id="pushStateEnabled"><code>pushStateEnabled</code> <em>boolean</em>, default: true</dt>
 	<dd>Enhancement to use <code>history.replaceState</code> in supported browsers, to convert the hash-based Ajax URL into the full document path. Note that we recommend disabling this feature if Ajax is disabled or if external links are used extensively.</dd>
 	<br />
-	<dt><code>subPageUrlKey</code> <em>string</em>, default: "ui-page"</dt>
+	<dt id="subPageUrlKey"><code>subPageUrlKey</code> <em>string</em>, default: "ui-page"</dt>
 	<dd>The url parameter used for referencing widget-generated sub-pages (such as those generated by nested listviews). Translates to <em>example.html<strong>&ui-page=</strong>subpageIdentifier</em>. The hash segment before &ui-page= is used by the framework for making an Ajax request to the URL where the sub-page exists.</dd>
 	<br />
-	<dt><code>touchOverflowEnabled</code> <em>boolean</em>, default: false</dt>
-	<dd>
-	Enable smoother page transitions and true fixed toolbars in devices that support both the <code>overflow:</code> and <code>overflow-scrolling: touch; </code> CSS properties.
-	<div class="warning"><strong>Deprecated</strong> in 1.1.0</div>
-	</dd>
-
-	<dt><code>transitionFallbacks.[transition]</code> <em>string</em>, default: "fade"</dt>
+	<dt id="transitionFallbacks.[transition]"><code>transitionFallbacks.[transition]</code> <em>string</em>, default: "fade"</dt>
 	<dd>Set the fallback transition for browsers that don't support 3D transforms for a specific transition type.</dd>
 
 </dl>
