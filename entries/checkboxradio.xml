@@ -150,16 +150,16 @@
 &lt;div data-role="fieldcontain"&gt;
 	&lt;fieldset data-role="controlgroup"&gt;
 		&lt;legend&gt;Choose a pet:&lt;/legend&gt;
-		&lt;input type="radio" name="radio-choice-2" id="radio-choice-21" value="choice-1" checked="checked"&gt;
+		&lt;input type="radio" name="radio-choice-2" id="radio-choice-1" value="choice-1" checked="checked"&gt;
 		&lt;label for="radio-choice-1">Cat&lt;/label&gt;
 
-		&lt;input type="radio" name="radio-choice-2" id="radio-choice-22" value="choice-2"&gt;
+		&lt;input type="radio" name="radio-choice-2" id="radio-choice-2" value="choice-2"&gt;
 		&lt;label for="radio-choice-2">Dog&lt;/label&gt;
 
-		&lt;input type="radio" name="radio-choice-2" id="radio-choice-23" value="choice-3"&gt;
+		&lt;input type="radio" name="radio-choice-2" id="radio-choice-3" value="choice-3"&gt;
 		&lt;label for="radio-choice-3">Hamster&lt;/label&gt;
 
-		&lt;input type="radio" name="radio-choice-2" id="radio-choice-24" value="choice-4"&gt;
+		&lt;input type="radio" name="radio-choice-2" id="radio-choice-4" value="choice-4"&gt;
 		&lt;label for="radio-choice-4">Lizard&lt;/label&gt;
 	&lt;/fieldset&gt;
 &lt;/div&gt;
