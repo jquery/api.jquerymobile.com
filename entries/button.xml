@@ -99,7 +99,7 @@ $( "[type='submit']" ).button();
 <a href="index.html" data-role="button" data-icon="delete" data-iconpos="right">Delete</a>
 ]]></code></pre>
 
-			<iframe src="/resources/button/example12.html" style="width:100%;height:360px;border:0px"></iframe>
+			<iframe src="/resources/button/example12.html" style="width:100%;height:380px;border:0px"></iframe>
 
 			<p>You can also create an icon-only button, by setting the <code>data-iconpos</code> attribute to <code>notext</code>. The button plugin will hide the text on-screen, but add it as a <code>title</code> attribute on the link to provide context for screen readers and devices that support tooltips. For example, replacing <code>data-iconpos="right"</code> on the previous example with <code>data-iconpos="notext"</code>:</p>
 
