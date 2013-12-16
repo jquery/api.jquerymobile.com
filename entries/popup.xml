@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="popup" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="popup">
 	<title>Popup Widget</title>
-	<desc>Opens content in a Popup.</desc>
+	<desc>Opens content in a popup.</desc>
 	<longdesc>
 		<p>To create a popup, add the <code>data-role="popup"</code> attribute to a div with the popup contents. Then create a link with the <code>href</code> set to the <code>id</code> of the popup div, and add the attribute <code>data-rel="popup"</code> to tell the framework to open the popup when the link is tapped. This is a similar markup pattern to the <a href="../dialog/">dialog</a> widget. A popup div has to be nested inside the same page as the link.</p>
 
@@ -334,8 +334,8 @@ $( "#myPopupDiv" ).popup( "close" )
 
 		<h3>Positioning options</h3>
 		<p>By default, popups open centered vertically and horizontally over the thing you clicked (the origin) which is good for popups used as tooltips or menus. The framework also applies some basic collision detection rules to ensure that the popup will appear on-screen so the ultimate position may not always be centered over the origin.</p>
-		<p>For situations like a dialog or lightbox where the popup should appear centered within the window instead of over the origin, add the <code>data-position-to</code> attribute to the <strong>link</strong> and specify a value of <code>window</code>. </p>
-		<p>It's also possible to specify any valid selector as the value of <code>position-to</code> in addition to <code>origin</code> and <code>window</code>. For example, if you add <code>data-position-to="#myElement"</code> the popup will be positioned over the element with the id <code>myElement</code>.	</p>
+		<p>For situations like a dialog or lightbox where the popup should appear centered within the window instead of over the origin, add the <code>data-position-to</code> attribute to the <strong>link</strong> and specify a value of <code>window</code>.</p>
+		<p>It's also possible to specify any valid selector as the value of <code>position-to</code> in addition to <code>origin</code> and <code>window</code>. For example, if you add <code>data-position-to="#myElement"</code> the popup will be positioned over the element with the id <code>myElement</code>.</p>
 
 		<p>A few examples:
 		<iframe src="/resources/popup/example9.html" style="width:100%;height:390px;border:0px"></iframe></p>
@@ -343,14 +343,14 @@ $( "#myPopupDiv" ).popup( "close" )
 		<p>The popup's placement constraints, which may cause the popup not to appear centered as desired, are as follow:</p>
 		<ol>
 			<li>The width of the popup will be limited using CSS <code>max-width</code> to the width of the window minus a tolerance of 15px on either side.</li>
-			<li>A tolerance from the edges of the window (15px from each of the sides and 30px from the top and the bottom) will be observed when the popup fits inside the window. Tall popups are allowed to overflow the top and bottom edges of the window. Those parts of the popup can be viewed by manually scrolling the document. This tolerance is a <a href="#option-tolerance">configurable option</a>.</li>
+			<li>A tolerance from the edges of the window (15px from each of the sides and 30px from the top and the bottom) will be observed when the popup fits inside the window. Tall popups are allowed to overflow the top and bottom edges of the window. Those parts of the popup can be viewed by manually scrolling the document. This tolerance can be configured via the  <a href="#option-tolerance">tolerance</a> option.</li>
 			<li>The top coordinate of the popup will never be negative. This ensures that the top of the popup will not be cut off.</li>
 			<li>If centering the popup over an element would cause the overall height of the document to increase, the popup is shifted upwards at most until its top coordinate becomes 0.</li>
 		</ol>
 
 		<p>Also note that a popup is currently always placed at the center of the window after an orientation change or window resize event.</p>
 
-		<p>See methods for information about setting the popup position programmatically, including the option to specify <strong>x and y coordinates</strong>.</p>
+		<p>See <a href="#methods">methods</a> for information about setting the popup position programmatically, including the option to specify <strong>x and y coordinates</strong>.</p>
 
 		<h3>Setting transitions</h3>
 		<p>By default, popups have no transition to make them open as quickly as possible. To set the transition used for a popup, add the <code>data-transition</code> attribute to the link that references the popup. The reverse version of the transition will be used when closing the popup.</p>
@@ -380,7 +380,33 @@ $( "#myPopupDiv" ).popup( "close" )
 
 		<iframe src="/resources/popup/example11.html" style="width:100%;height:390px;border:0px"></iframe>
 
-		<h3>Note: Chaining of popups not allowed</h3>
+		<h3>Arrows</h3>
+		<p>The extension <code>widgets/popup.arrow</code> provides the <code>arrow</code> option, which is also exposed as a data attribute. For example, <code>data-arrow="t,b"</code> will result in the popup being displayed with a top or a bottom arrow.</p>
+		<p>When an arrow is requested using the <code>arrow</code> option, the popup is positioned along one of the edges of the popup such that the arrow points at the center of the origin. The value of the <code>arrow</code> option is a comma-separated list of letters referring to the edges of the popup along which the framework should attempt to place the arrow:
+			<table>
+				<tr><td class="enum-value">t</td><td>The framework should attempt to place the popup such that the arrow somewhere along the top edge of the popup points at the center of the origin.</td></tr>
+				<tr><td class="enum-value">r</td><td>The framework should attempt to place the popup such that the arrow somewhere along the right edge of the popup points at the center of the origin.</td></tr>
+				<tr><td class="enum-value">b</td><td>The framework should attempt to place the popup such that the arrow somewhere along the bottom edge of the popup points at the center of the origin.</td></tr>
+				<tr><td class="enum-value">l</td><td>The framework should attempt to place the popup such that the arrow somewhere along the left edge of the popup points at the center of the origin.</td></tr>
+			</table>
+		</p>
+		<p>For each edge given in the list, the framework calculates
+			<ol>
+				<li>the distance between the tip of the arrow and the center of the origin, and</li>
+				<li>whether minimizing the above distance would cause the arrow to appear too close to one of the corners of the popup along the given edge.</li>
+			</ol>
+		If the second condition applies, the edge is discarded as a possible solution for placing the arrow. Otherwise, the calculated distance is examined. If it is 0, meaning that the popup can be placed exactly such that the tip of the arrow points at the center of the origin, no further edges are examined, and the popup is positioned along the last examined edge. <strong>Thus, the order in which the edges are given matters.</strong></p>
+		<p>The example below shows a popup with an arrow either along its left edge or along its top edge.</p>
+<pre><code><![CDATA[
+<div data-role="popup" data-arrow="l,t" class="ui-content">
+	<h2>Popup with an arrow</h2>
+	<p>A second paragraph.</p>
+</div>
+]]></code></pre>
+
+		<iframe src="/resources/popup/example12.html" style="width:100%;height:390px;border:0px"></iframe>
+
+		<h3><strong>Note:</strong> Chaining of popups not allowed</h3>
 		<div class="warning">The framework does not currently support chaining of popups so it's not possible to embed a link from one popup to another popup. All links with a <code>data-rel="popup"</code> inside a popup will not do anything at all.</div>
 		<p>This also means that custom select menus will not work inside popups, because they are themselves implemented using popups. If you place a select menu inside a popup, it will be rendered as a native select menu, even if you specify <code>data-native-menu="false"</code>.</p>
 		<p>A workaround to get chained popups working is the use of a timeout for example in the <code>popupafterclose</code> event bound to the invoking popup. In the following example, when the first popup is closed, the second will be opened by a delayed call to the <code>open</code> method:</p>
@@ -398,6 +424,19 @@ $( document ).on( "pageinit", function() {
 	</longdesc>
 	<added>1.2</added>
 	<options>
+		<option name="arrow" default='""' example-value='"l,t,r,b"'>
+			<desc>Sets whether to draw the popup with an arrow.
+				<p>This option is provided by the <code>widgets/popup.arrow</code> extension.</p>
+				<p>This option is also exposed as a data attribute: <code>data-arrow="t,b"</code>.</p>
+				<p>The following values are valid: <code>true</code>, <code>false</code>, or a string containing a comma-separated list of the letters "l", "t", "r", and "b". The list may be empty, in which case it corresponds to a value of <code>false</code>. The value <code>true</code> corresponds to the list <code>"l,t,r,b"</code>. This list indicates along which edges the code should attempt to place the arrow. The code tries to place the arrow along each edge given in the list in the left-to-right order given in the list until one such placement would result in the arrow pointing exactly at the desired coordinates. If no arrows can be displayed the popup is positioned as though the value of this option were <code>false</code>.</p>
+			</desc>
+			<type name="String">
+				<desc>A comma-separated list of the letters "l", "t", "r", and "b".</desc>
+			</type>
+			<type name="Boolean">
+				<desc>A value of <code>true</code> is equivalent to a value of "t,r,b,l", whereas <code>false</code> indicates that no arrow is to be shown.</desc>
+			</type>
+		</option>
 		<option name="corners" default="true" example-value="false">
 			<desc>
 				<p>Sets whether to draw the popup with rounded corners.</p>
