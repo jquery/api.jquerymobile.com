@@ -40,7 +40,7 @@
 
 		<h3>Form buttons</h3>
 
-		<p>For ease of styling, the framework automatically converts any <code>button</code> or <code>input</code> element with a <code>type</code> of <code>submit</code>, <code>reset</code>, or <code>button</code> into a custom styled button - there is no need to add the <code> data-role="button"</code> attribute. However, if needed, you can directly call the button plugin on any selector, just like any jQuery plugin:</p>
+		<p>For ease of styling, the framework automatically converts any <code>button</code> or <code>input</code> element with a <code>type</code> of <code>submit</code>, <code>reset</code>, or <code>button</code> into a custom styled button - there is no need to add the <code>data-role="button"</code> attribute. However, if needed, you can directly call the button plugin on any selector, just like any jQuery plugin:</p>
 
 <pre><code>
 $( "[type='submit']" ).button();
@@ -78,7 +78,7 @@ $( "[type='submit']" ).button();
         <h2>Adding Icons to Buttons</h2>
 		<p>The jQuery Mobile framework includes a selected set of icons most often needed for mobile apps. To minimize download size, jQuery Mobile includes a single white icon sprite, and automatically adds a semi-transparent black circle behind the icon to ensure that it has good contrast on any background color.</p>
 
-			<p>An icon can be added to a button by adding a <code> data-icon</code> attribute on the anchor specifying the icon to display.  For example, the following markup:</p>
+			<p>An icon can be added to a button by adding a <code>data-icon</code> attribute on the anchor specifying the icon to display.  For example, the following markup:</p>
 
 <pre><code>
 &lt;a href=&quot;index.html&quot; data-role=&quot;button&quot; data-icon=&quot;delete&quot;&gt;Delete&lt;/a&gt;
@@ -88,20 +88,20 @@ $( "[type='submit']" ).button();
 
 			<h3>Icon set</h3>
 
-			<p>The full list of <code> data-icon</code> attributes can found on the <a href="../icons/">icons reference page</a></p>.
+			<p>The full list of <code>data-icon</code> attributes can found on the <a href="../icons/">icons reference page</a></p>.
 
 			<h3>Icon positioning</h3>
 			<p>By default, all icons in buttons are placed to the left of the button text.
 			<iframe src="/resources/button/example11.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
-			<p>This default may be overridden using the <code> data-iconpos</code> attribute to set the icon to the right, above (top) or below (bottom) the text. For example, the markup:</p>
+			<p>This default may be overridden using the <code>data-iconpos</code> attribute to set the icon to the right, above (top) or below (bottom) the text. For example, the markup:</p>
 <pre><code>
 &lt;a href=&quot;index.html&quot; data-role=&quot;button&quot; data-icon=&quot;delete&quot; data-iconpos=&quot;right&quot;&gt;Delete&lt;/a&gt;
 </code></pre>
 
 			<iframe src="/resources/button/example12.html" style="width:100%;height:360px;border:0px"></iframe>
 
-			<p>You can also create an icon-only button, by setting the <code> data-iconpos</code> attribute to <code>notext</code>. The button plugin will hide the text on-screen, but add it as a <code>title</code> attribute on the link to provide context for screen readers and devices that support tooltips. For example, replacing <code> data-iconpos="right"</code> on the previous example with <code> data-iconpos="notext"</code>:</p>
+			<p>You can also create an icon-only button, by setting the <code>data-iconpos</code> attribute to <code>notext</code>. The button plugin will hide the text on-screen, but add it as a <code>title</code> attribute on the link to provide context for screen readers and devices that support tooltips. For example, replacing <code>data-iconpos="right"</code> on the previous example with <code>data-iconpos="notext"</code>:</p>
 
 <pre><code>
 &lt;a href=&quot;index.html&quot; data-role=&quot;button&quot; data-icon=&quot;delete&quot; data-iconpos=&quot;notext&quot;&gt;Delete&lt;/a&gt;
@@ -115,7 +115,7 @@ $( "[type='submit']" ).button();
 			<iframe src="/resources/button/example16.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
 			<h3>Custom Icons</h3>
-			<p>To use custom icons, specify a <code>data-icon</code> value that has a unique name like <code>myapp-email</code> and the button plugin will generate a class by prefixing <code>ui-icon-</code> to the <code> data-icon</code> value and apply it to the button: <code>ui-icon-myapp-email</code>. </p>
+			<p>To use custom icons, specify a <code>data-icon</code> value that has a unique name like <code>myapp-email</code> and the button plugin will generate a class by prefixing <code>ui-icon-</code> to the <code>data-icon</code> value and apply it to the button: <code>ui-icon-myapp-email</code>. </p>
 			<p>You can then write a CSS rule in your stylesheet that targets the <code>ui-icon-myapp-email</code> class to specify the icon background source. To maintain visual consistency with the rest of the icons, create a white icon 18x18 pixels saved as a PNG-8 with alpha transparency.</p>
 			<p>In this example, we're just pointing to a standalone icon image, but you could just as easily use an icon sprite and specify the positioning instead, just like the icon sprite we use in the framework.</p>
 
@@ -139,7 +139,7 @@ $( "[type='submit']" ).button();
 		<p>By default, all buttons in the body content are styled as block-level elements so they fill the width of the screen:
 		<iframe src="/resources/button/example20.html" style="width:100%;height:250px;border:0px"></iframe></p>
 
-		<p>If you have multiple buttons that should sit side-by-side on the same line, add the <code> data-inline="true"</code> attribute to each button. This will style the buttons to be the width of their content and float the buttons so they sit on the same line. </p>
+		<p>If you have multiple buttons that should sit side-by-side on the same line, add the <code>data-inline="true"</code> attribute to each button. This will style the buttons to be the width of their content and float the buttons so they sit on the same line. </p>
 
 <pre><code>
 &lt;a href=&quot;index.html&quot; data-role=&quot;button&quot; data-inline=&quot;true&quot;&gt;Cancel&lt;/a&gt;
@@ -156,7 +156,7 @@ $( "[type='submit']" ).button();
 
 		<h2>Grouped buttons</h2>
 
-		<p>Occasionally, you may want to visually group a set of buttons to form a single block that looks contained like a navigation component. To get this effect, wrap a set of buttons in a container with the <code> data-role="controlgroup"</code> attribute - the framework will create a vertical button group, remove all margins and drop shadows between the buttons, and only round the first and last buttons of the set to create the effect that they are grouped together. </p>
+		<p>Occasionally, you may want to visually group a set of buttons to form a single block that looks contained like a navigation component. To get this effect, wrap a set of buttons in a container with the <code>data-role="controlgroup"</code> attribute - the framework will create a vertical button group, remove all margins and drop shadows between the buttons, and only round the first and last buttons of the set to create the effect that they are grouped together. </p>
 
 <pre><code>
 &lt;div data-role=&quot;controlgroup&quot;&gt;
@@ -183,7 +183,7 @@ $( "[type='submit']" ).button();
 		<iframe src="/resources/button/example33.html" style="width:100%;height:640px;border:0px"></iframe></p>
 
 		<h2>Assigning theme swatches</h2>
-		<p>Buttons can be manually assigned any of the button color swatches from the theme to add visual contrast with the container they sit inside by adding the <code> data-theme</code> attribute on the button markup and specifying a swatch letter. </p>
+		<p>Buttons can be manually assigned any of the button color swatches from the theme to add visual contrast with the container they sit inside by adding the <code>data-theme</code> attribute on the button markup and specifying a swatch letter. </p>
 
 <pre><code>
 &lt;a href=&quot;index.html&quot; data-role=&quot;button&quot; data-theme=&quot;a&quot;&gt;Swatch a&lt;/a&gt;

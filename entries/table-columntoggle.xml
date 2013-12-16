@@ -60,7 +60,7 @@
 
 		<p>To customize the breakpoints, copy the following style block into your custom style overrides and adjust the <code>min-width</code> media query values for each priority level to specify where various priority columns should appear.</p>
 
-		<p>In the example styles below for a <code> my-custom-class</code> class on the table, the priority 1 columns are shown first, at widths above <code>20em</code> (320px), then priority 2 kicks in above <code>30em</code> (480px) and so on up to wide desktop widths with priority 6. Feel free to change these breakpoints in your stylesheet and choose how many priority levels you'd like to use.</p>
+		<p>In the example styles below for a <code>my-custom-class</code> class on the table, the priority 1 columns are shown first, at widths above <code>20em</code> (320px), then priority 2 kicks in above <code>30em</code> (480px) and so on up to wide desktop widths with priority 6. Feel free to change these breakpoints in your stylesheet and choose how many priority levels you'd like to use.</p>
 
 <pre><code>
 /* Show priority 1 at 320px (20em x 16px) */

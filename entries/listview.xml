@@ -5,7 +5,7 @@
 	<desc>Creates a listview widget</desc>
 	<longdesc>
 		<h3>Basic linked lists</h3>
-			<p>A listview is coded as a simple unordered list containing linked list items with a <code> data-role="listview"</code> attribute. jQuery Mobile will apply all the necessary styles to transform the list into a mobile-friendly listview with right arrow indicator that fills the full width of the browser window. When you tap on the list item, the framework will trigger a click on the first link inside the list item, issue an Ajax request for the URL in the link, create the new page in the DOM, then kick off a page transition. View the <a href="../api/data-attributes.html">data- attribute reference</a> to see all the possible attributes you can add to listviews.</p>
+			<p>A listview is coded as a simple unordered list containing linked list items with a <code>data-role="listview"</code> attribute. jQuery Mobile will apply all the necessary styles to transform the list into a mobile-friendly listview with right arrow indicator that fills the full width of the browser window. When you tap on the list item, the framework will trigger a click on the first link inside the list item, issue an Ajax request for the URL in the link, create the new page in the DOM, then kick off a page transition. View the <a href="../api/data-attributes.html">data- attribute reference</a> to see all the possible attributes you can add to listviews.</p>
 			<p>Here is the HTML markup for a basic linked list.</p>
 
 <pre><code>
@@ -43,7 +43,7 @@
 			<p><iframe src="/resources/listview/example5.html" style="width:100%;height:950px;border:0px"></iframe></p>
 
 			<h3>List dividers</h3>
-			<p>List items can be turned into dividers to organize and group the list items. This is done by adding the <code> data-role="list-divider"</code> to any list item. These items are styled with the bar swatch "b" by default (blue in the default theme) but you can specify a theme for dividers by adding the <code>data-divider-theme</code> attribute to the list element (<code>ul</code> or <code>ol</code>) and specifying a theme swatch letter.</p>
+			<p>List items can be turned into dividers to organize and group the list items. This is done by adding the <code>data-role="list-divider"</code> to any list item. These items are styled with the bar swatch "b" by default (blue in the default theme) but you can specify a theme for dividers by adding the <code>data-divider-theme</code> attribute to the list element (<code>ul</code> or <code>ol</code>) and specifying a theme swatch letter.</p>
 
 			<p><iframe src="/resources/listview/example6.html" style="width:100%;height:1410px;border:0px"></iframe></p>
 
@@ -118,7 +118,7 @@ function( text, searchValue, item ) {
 			<p><iframe src="/resources/listview/example13.html" style="width:100%;height:290px;border:0px"></iframe></p>
 
 			<h3>Inset lists</h3>
-			<p>If lists are embedded in a page with other types of content, an inset list packages the list into a block that sits inside the content area with a bit of margin and rounded corners (theme controlled). By adding the <code> data-inset="true"</code> attribute to the list (ul or ol), applies the inset appearance.</p>
+			<p>If lists are embedded in a page with other types of content, an inset list packages the list into a block that sits inside the content area with a bit of margin and rounded corners (theme controlled). By adding the <code>data-inset="true"</code> attribute to the list (ul or ol), applies the inset appearance.</p>
 
 			<p><iframe src="/resources/listview/example14.html" style="width:100%;height:2240px;border:0px"></iframe></p>
 
