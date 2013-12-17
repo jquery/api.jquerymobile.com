@@ -5,9 +5,9 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="//code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
-	<script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="//code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0-alpha.2/jquery.mobile-1.4.0-alpha.2.min.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.0-alpha.2/jquery.mobile-1.4.0-alpha.2.min.js"></script>
 	<style>
 	html, body { padding: 0; margin: 0; }
 	html, .ui-mobile, .ui-mobile body {
@@ -19,14 +19,21 @@
 	.ui-content{
 		padding:10px 15px 0px 15px;
 	}
+	.custom-button {
+		border: 3px dashed;
+		border-color: red !important;
+	}
 	</style>
 </head>
 
 <body>
 <div data-role="page" style="max-height:90px; min-height:90px;">
 	<div data-role="content" >
-		<a href="index.html" data-role="button" class="ui-state-disabled">Link button</a>
+		<form>
+		<input type="button" value="The Button" data-wrapper-class="custom-button"></input>
+		</form>
 	</div>
 </div>
 </body>
 </html>
+
