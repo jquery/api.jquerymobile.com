@@ -4,8 +4,9 @@
 	<title>Collapsible set Widget</title>
 	<desc>Creates a collapsible set of collapsible blocks of content</desc>
 	<longdesc>
+		<h2>Collapsible sets</h2>
 		<p>Collapsible sets start with the exact same markup as individual collapsibles.
-		By adding a parent wrapper with a <code>data-role="collapsible-set"</code> attribute around a number of collapsibles, the framework will style these to looks like a visually grouped widget and make it behave like an accordion so only one section can be open at a time.</p>
+		By adding a parent wrapper with a <code>data-role="collapsibleset"</code> attribute around a number of collapsibles, the framework will style these to looks like a visually grouped widget and make it behave like an accordion so only one section can be open at a time.</p>
 		<p>By default, all the sections will be collapsed. To set a section to be open when the page loads, add the <code>data-collapsed="false"</code> attribute to the heading of the section you want expanded.</p>
 
 <pre><code><![CDATA[
@@ -39,12 +40,12 @@
 
 		<h3>Custom icons</h3>
 
-		<p>Collapsible headings’ default icons can be overridden by using the <code>data-collapsed-icon</code> and <code>data-expanded-icon</code> attributes, either at the <code>collapsible-set</code> level or on an individual collapsible basis.
+		<p>The icon displayed when a collapsible is shown or hidden can be overridden by using the <code>data-collapsed-icon</code> and <code>data-expanded-icon</code> attributes. Both the <code>collapsibleset</code> widget and the <code>collapsible</code> widget accepts these attributes. When you set one or both of these attributes on the <code>collapsibleset</code> widget all <code>collapsible</code> widgets that are part of the <code>collapsibleset</code> display the icon specified by the chosen value. You can override the icon displayed by individual <code>collapsible</code> widgets by setting one or both of these attributes on the <code>collapsible</code> widget itself.
 		<iframe src="/resources/collapsibleset/example4.html" style="width:100%;height:240px;border:0px"></iframe></p>
 
 		<h3>Icon positioning</h3>
 
-		<p>Collapsible headings’ default icon positioning can be overridden by using the <code>data-iconpos</code> attribute, either at the <code>collapsible-set</code> level or on an individual collapsible basis.
+		<p>The default icon positioning for collapsible headings can be overridden by using the <code>data-iconpos</code> attribute. You can set the attribute either on the <code>collapsibleset</code> to affect all collapsibles in the set, or on an individual <code>collapsible</code> widget to affect only the one widget.
 		<iframe src="/resources/collapsibleset/example5.html" style="width:100%;height:310px;border:0px"></iframe></p>
 
 		<h3>Theming collapsible content</h3>
@@ -62,13 +63,33 @@
 		<p>To have individual sections in a group styled differently, add <code>data-theme</code> and <code>data-content-theme</code> attributes to specific collapsibles.
 		<iframe src="/resources/collapsibleset/example7.html" style="width:100%;height:240px;border:0px"></iframe></p>
 
-		<h3>Expanding or collapsing items in a set</h3>
-
-		<p>To expand or collapse items in a set, call the respective methods on individual collapsibles. The selector for the collapse method can include multiple items in a set:</p>
+		<h2>Providing pre-rendered markup</h2>
+		<p>You can improve the load time for your page by providing the markup that the <code>collapsibleset</code> widget would normally create during its initialization.</p>
+		<p>The collapsible set widget does not require that the collapsibles it contains also be pre-rendered.</p>
+		<p>When you provide such pre-rendered markup you must also set all the classes that the framework would normally set, and you must also set all data-attributes whose values differ from the default to indicate that the pre-rendered markup reflects the non-default value of the corresponding widget option.</p>
+		<p>In the example below, pre-rendered markup for a collapsible set is provided. The attribute <code>data-corners="false"</code> is explicitly specified, since the absence of the <code>ui-corner-all</code> class on the container element indicates that the "corners" widget option is to be false. One of the child collapsibles is provided as-is, while the other is pre-rendered.</p>
 
 <pre><code><![CDATA[
-$( "#myCollapsibleSet" ).children().trigger( "collapse" );
+<div data-role="collapsibleset" class="ui-collapsible-set" data-corners="false">
+	<div data-role="collapsible">
+		<h2>Child collapsible</h2>
+		<p>This is the collapsible content.</p>
+	</div>
+	<div data-role="collapsible" data-enhanced="true" class="ui-collapsible ui-collapsible-inset ui-corner-all" data-collapsed="false" data-corners="true">
+		<h2 class="ui-collapsible-heading">
+			<a href="#" class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-icon-minus">
+				Pre-rendered child collapsible
+				<span class="ui-collapsible-heading-status">click to collapse contents</span>
+			</a>
+		</h2>
+		<div class="ui-collapsible-content" aria-hidden="false">
+			<p>This is the collapsible content.</p>
+		</div>
+	</div>
+</div>
 ]]></code></pre>
+
+	<iframe src="/resources/collapsibleset/example8.html" style="width:100%;height:240px;border:0px"></iframe>
 
 	</longdesc>
 	<added>1.0</added>
@@ -85,6 +106,13 @@ $( "#myCollapsibleSet" ).children().trigger( "collapse" );
 			</desc>
 			<type name="Boolean" />
 		</option>
+		<option name="enhanced" default="false" example-value="true">
+			<desc>
+				Indicates that all markup necessary to create the <code>collapsibleset</code> widget has been provided as part of the original markup.
+				<p>This option is also exposed as a data attribute: <code>data-enhanced="false"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
 		<option name="expandedIcon" default='"minus"' example-value='"arrow-d"'>
 			<desc>Sets the icon for the header of the collapsible container when in an expanded state.
 				<p>This option is also exposed as a data attribute: <code>data-expanded-icon="arrow-d"</code>.</p>
@@ -98,25 +126,15 @@ $( "#myCollapsibleSet" ).children().trigger( "collapse" );
 			</desc>
 	    	<type name="String" />
 		</option>
-	    <option name="initSelector"  default='":jqmData(role=&#39;collapsible-set&#39;)"'>
-			<desc>This is used to define the selectors (element types, data roles, etc.) that will automatically be initialized as collapsibles. To change which elements are initialized, bind this option to the mobileinit event:
-<pre><code><![CDATA[
-$( document ).on( "mobileinit", function() {
-    $.mobile.collapsibleset.prototype.options.initSelector = ".mycollapsibleset";
-});
-]]></code></pre>
-			</desc>
-			<type name="CSS selector string" />
-		</option>
-		<option name="inset"  default="true" example-value="false">
+		<option name="inset" default="true" example-value="false">
 			<desc>By setting this option to false the collapsibles will get a full width appearance without corners. If the value is false for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.
-				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-inset="true"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="mini"  default="false" example-value="true">
+		<option name="mini" default="false" example-value="true">
 			<desc>Sets the size of the element to a more compact, mini version. If the value is false for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.
-				<p>This option is also exposed as a data attribute: <code>data-inset="false"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-mini="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
@@ -138,9 +156,11 @@ $( document ).on( "mobileinit", function() {
 		</event>
 	</events>
 	<methods>
+
 		<method name="refresh">
 			<desc>Updates the collapsible set.
-				<p>If you manipulate a collapsible set via JavaScript (e.g. add new collapsible containers), you must call the refresh method on it to update the visual styling.</p>
+				<p>If you manipulate a collapsible set via JavaScript (e.g. by adding new collapsibles, removing old ones, or showing/hiding existing ones), you must call the refresh method on it to update the visual styling. This method will instantiate collapsibles on child elements which are marked <code>data-role="collapsible"</code>, so there is no need to manually call <code>.collapsible()</code>.</p>
+
 			</desc>
 		</method>
 	</methods>
