@@ -17,9 +17,9 @@
 <head>
 	<title>Multipage example</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
-	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+	<script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="//code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
 </head>
 <body>
 	<div data-role="page" id="page1">
@@ -227,7 +227,7 @@ $( ":mobile-pagecontainer" ).on( "pagecontainerhide", function( event, ui ) {
 					<type name="XMLHttpRequest" />
 				</property>
 				<property name="textStatus">
-					<desc>According to the jQuery Core <a href="http://api.jquery.com/jQuery.ajax/">documentation</a>, this will be a string describing the status. This is what gets passed as the 2nd argument to the framework's <code>$.ajax()</code> error callback. It may also be <code>null</code>.</desc>
+					<desc>According to the jQuery Core <a href="//api.jquery.com/jQuery.ajax/">documentation</a>, this will be a string describing the status. This is what gets passed as the 2nd argument to the framework's <code>$.ajax()</code> error callback. It may also be <code>null</code>.</desc>
 					<type name="String" />
 				</property>
 			</argument>
@@ -298,11 +298,11 @@ $( document ).on( "pageloadfailed", function( event, data ) {
 					<type name="XMLHttpRequest"/>
 				</property>
 				<property name="textStatus"> (null or string)
-					<desc>According to the jQuery Core <a href="http://api.jquery.com/jQuery.ajax/">documentation</a>, possible values for this property, aside from <code>null</code>, are &quot;timeout&quot;, &quot;error&quot;, &quot;abort&quot;, and &quot;parsererror&quot;. This is what gets passed as the 2nd argument to the framework's <code>$.ajax()</code> error callback.</desc>
+					<desc>According to the jQuery Core <a href="//api.jquery.com/jQuery.ajax/">documentation</a>, possible values for this property, aside from <code>null</code>, are &quot;timeout&quot;, &quot;error&quot;, &quot;abort&quot;, and &quot;parsererror&quot;. This is what gets passed as the 2nd argument to the framework's <code>$.ajax()</code> error callback.</desc>
 					<type name="String"/>
 				</property>
 				<property name="errorThrown">
-					<desc>According to the jQuery Core <a href="http://api.jquery.com/jQuery.ajax/">documentation</a>, this property may be an exception object if one occurred, or if an HTTP error occurred this will be set to the textual portion of the HTTP status. Otherwise it will be <code>null</code>. This is what gets passed as the 3rd argument to the framework's <code>$.ajax()</code> error callback.</desc>
+					<desc>According to the jQuery Core <a href="//api.jquery.com/jQuery.ajax/">documentation</a>, this property may be an exception object if one occurred, or if an HTTP error occurred this will be set to the textual portion of the HTTP status. Otherwise it will be <code>null</code>. This is what gets passed as the 3rd argument to the framework's <code>$.ajax()</code> error callback.</desc>
 					<type name="String"/>
 					<type name="Object"/>
 				</property>
