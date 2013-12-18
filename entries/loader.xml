@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
-<entry name="loading" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="loading">
+<entry name="loader" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="loading">
 	<title>Loader Widget</title>
 	<desc>Handles the task of displaying the loading dialog when jQuery Mobile pulls in content via AJAX. </desc>
 	<longdesc>
@@ -72,15 +72,6 @@ $.mobile.loading( "show", {
 			<desc>Hide the loader widget
 			</desc>
 		</method>
-		<method name="hidePageLoadingMsg">
-			<desc><p class="ui-body ui-body-e"><strong>Deprecated</strong> in 1.2 - use <code>$.mobile.loading( "hide" )</code> instead, see examples above</p>
-			Hide the loader message, which is configurable via $.mobile.loadingMessage.
-<pre><code><![CDATA[
-//hide the page loader
-$.mobile.hidePageLoadingMsg();
-]]></code></pre>
-			</desc>
-		</method>
 		<method name="loading">
 			<desc>Show or hide the loader message, which is configurable via <code>$.mobile.loader</code> prototype options as described in the widget docs or can be controlled via a params object.
 			</desc>
@@ -93,18 +84,6 @@ $.mobile.hidePageLoadingMsg();
 			<desc>
 			</desc>
 		</method>
-		<method name="showPageLoadingMsg">
-			<desc><p class="ui-body ui-body-e"><strong>Deprecated</strong> in 1.2 - use <code>$.mobile.loading( "show" )</code> instead, see examples above</p>
-			Show the loader message, which is configurable via $.mobile.loadingMessage.
-<pre><code><![CDATA[
-//cue the page loader
-$.mobile.showPageLoadingMsg();
-
-//use theme swatch "b", a custom message, and no spinner
-$.mobile.showPageLoadingMsg( "b", "This is only a test", true );
-]]></code></pre>
-		</desc>
-	</method>
 </methods>
 	<example>
 		<height>410</height>
