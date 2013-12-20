@@ -15,7 +15,7 @@
 	<div data-role="header">
 		<h1>Confirm</h1>
 	</div>
-    <div data-role="content">
+    <div role="main" class="ui-content">
 		<h1>This is the Results page!</h1>
 
         <h2>You Chose:</h2>

@@ -63,7 +63,7 @@
       <h1>loadPage() demo</h1>
     </div><!-- /header -->
 
-	<div data-role="content">
+	<div role="main" class="ui-content">
 
 		<p>First check if the 'About us' page is in the DOM, Load the page in the DOM and check again</p>
 		<input type="button" id="domcheck" data-inline="true" value="Is 'About us' in the DOM?"/>

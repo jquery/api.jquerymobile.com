@@ -90,7 +90,7 @@ $.mobile.loading( "show", {
 		<desc>Loader Examples</desc>
 		<html><![CDATA[
 <div data-role="page" id="page1">
-	<div data-role="content">
+	<div role="main" class="ui-content">
 		<div data-role="controlgroup">
 			<button class="show-page-loading-msg" data-theme="b" data-textonly="false" data-textvisible="false" data-msgtext="" data-icon="arrow-r" data-iconpos="right">Default loader</button>
 			<button class="show-page-loading-msg" data-theme="b" data-textonly="true" data-textvisible="true" data-msgtext="Text only loader" data-icon="arrow-r" data-iconpos="right">Text only</button>

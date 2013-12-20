@@ -89,7 +89,7 @@ $( ".selector" ).controlgroup( "container" );
 		<desc>A basic example of a controlgroup.</desc>
 		<html><![CDATA[
 <div data-role="page" id="page1">
-	<div data-role="content">
+	<div role="main" class="ui-content">
 		<div data-role="controlgroup">
 			<a href="#" class="ui-btn ui-corner-all">Yes</a>
 			<a href="#" class="ui-btn ui-corner-all">No</a>
