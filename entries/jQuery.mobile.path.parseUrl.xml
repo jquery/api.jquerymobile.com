@@ -20,7 +20,7 @@
 		}
 ]]></css>
 				<html><![CDATA[
-	<div data-role="content">
+	<div role="main" class="ui-content">
 		<p>The URL used is http://jblas:password@mycompany.com:8080/mail/inbox?msg=1234&type=unread#msg-content</p>
 		<input type="button" value="obj.href" id="button1" class="myButton" data-inline="true">
 		<input type="button" value="obj.hrefNoHash" id="button2" class="myButton" data-inline="true">
