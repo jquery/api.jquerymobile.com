@@ -136,9 +136,10 @@
 		<h3>Horizontally grouped select inputs</h3>
 		<p>Select inputs can also be used for grouped sets with more than one related selections. To make a horizontal button set, add the <code>data-type="horizontal"</code> to the fieldset. Note that the buttons which trigger the select will resize depending on the currently selected option’s value.</p>
 
-<code><![CDATA[
+<pre><code><![CDATA[
 <fieldset data-role="controlgroup" data-type="horizontal">
-]]></code>
+]]></code></pre>
+
 		<iframe src="/resources/select/example7.html" style="width:100%;height:190px;border:0px"></iframe>
 
 		<h3>Theming selects</h3>
