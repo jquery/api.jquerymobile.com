@@ -84,7 +84,8 @@
 		<example>
 			<desc>Load a "search results" page, using data from a form with an id of "search".</desc>
 			<html><![CDATA[
-	<div>
+	<div role="main" class="ui-content">
+	
 		<form id="search">
 			<p>Please fill in the form below:<br /><br />
 			<label for="choice">Favorite framework:</label>
@@ -93,6 +94,7 @@
 			<a href="#formResults" data-role="button" data-inline="true" data-rel="dialog">Show Results</a>
 			</p>
 		</form>
+		
 	</div>
 			]]></html>
 			<code><![CDATA[
