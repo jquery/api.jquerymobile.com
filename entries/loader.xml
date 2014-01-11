@@ -2,10 +2,10 @@
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="loader" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="loading">
 	<title>Loader Widget</title>
-	<desc>Handles the task of displaying the loading dialog when jQuery Mobile pulls in content via AJAX. </desc>
+	<desc>Handles the task of displaying the loading dialog when jQuery Mobile pulls in content via Ajax. </desc>
 	<longdesc>
 		<h2>The Loader Widget</h2>
-		<p>The loader widget handles the task of displaying the loading dialog when jQuery Mobile pulls in content via AJAX. It can also be displayed manually for custom loading actions using the <code>$.mobile.loading</code> helper method (See the global method docs).</p>
+		<p>The loader widget handles the task of displaying the loading dialog when jQuery Mobile pulls in content via Ajax. It can also be displayed manually for custom loading actions using the <code>$.mobile.loading</code> helper method (See the global method docs).</p>
 		<p>To configure the loading dialog globally the following settings can be defined on its prototype during the <code>mobileinit</code> event.</p> Below are the defaults:
 
 <pre><code><![CDATA[
