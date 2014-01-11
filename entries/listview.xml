@@ -279,7 +279,7 @@ $( document ).on( "mobileinit", function() {
 		</method>
 	</methods>
 	<example>
-		<height>260</height>
+		<height>280</height>
 		<desc>A basic example of a listview</desc>
 		<html><![CDATA[
 <div data-role="page" id="page1">
