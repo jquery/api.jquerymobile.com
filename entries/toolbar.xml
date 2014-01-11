@@ -324,7 +324,7 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 			<type name="String" />
 		</option>
 		<xi:include href="../includes/widget-option-theme.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="trackPersistentToolbars" default="true" example-value="false">
+		<option name="trackPersistentToolbars" default="true" example-value="false" deprecated="1.4.0">
 			<desc>This option is provided by the <code>fixedToolbar</code> extension.
 				<p>Whether to persist the <placeholder name="name"/> across pages.</p>
 				<p>This option is also exposed as a data attribute: <code>data-track-persistent-toolbars="false"</code>.</p>
