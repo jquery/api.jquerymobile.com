@@ -26,7 +26,7 @@
 ]]></code></pre>
 
 		<p>Here is an example of a <placeholder name="name"/> widget with 5 sections.
-		<iframe src="/resources/collapsibleset/example1.html" style="width:100%;height:310px;border:0px"></iframe></p>
+		<iframe src="/resources/collapsibleset/example1.html" style="width:100%;height:360px;border:0px"></iframe></p>
 
 		<h3>Non-inset <placeholder name="name"/> widgets</h3>
 
