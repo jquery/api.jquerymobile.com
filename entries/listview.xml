@@ -16,7 +16,7 @@
 </ul>
 ]]></code></pre>
 
-			<p><iframe src="/resources/listview/example1.html" style="width:100%;height:940px;border:0px"></iframe></p>
+			<p><iframe src="/resources/listview/example1.html" style="width:100%;height:990px;border:0px"></iframe></p>
 
 			<p><strong>Style note on non-inset lists</strong>: all standard, non-inset lists have a -1em (16px) margin to negate the 1em padding on the content area to make lists extend to the edges of the screen. If you add other widgets above or below a list, the negative margin may make these elements overlap so you'll need to add additional spacing in your custom CSS.</p>
 
@@ -28,7 +28,7 @@
 			<h3>Read-only lists</h3>
 			<p>Listviews can also be used to display a non-interactive list of items, usually as an inset list. This list is built from an unordered or ordered list that don't have linked list items. The framework styles static list items identically to list items containing links, but static items receive the body background color (<code>ui-body-a</code>) rather than the button background color (<code>ui-btn-a</code>).</p>
 
-			<p><iframe src="/resources/listview/example4.html" style="width:100%;height:2240px;border:0px"></iframe></p>
+			<p><iframe src="/resources/listview/example4.html" style="width:100%;height:2340px;border:0px"></iframe></p>
 
 			<h3>Split button lists</h3>
 			<p>In cases where there is more than one possible action per list item, a split button can be used to offer two independently clickable items - the list item and a small arrow icon in the far right. To make a split list item, simply add a second link inside the <code>li</code> and the framework will add a vertical divider line, style the link as an icon-only arrow button, and set the <code>title</code> attribute of the link to the text of the link for accessibility.</p>
@@ -104,7 +104,7 @@ $( "#mylistview" ).listview({
 			</ul>
 
 			<p><iframe src="/resources/listview/example10.html" style="width:100%;height:240px;border:0px"></iframe></p>
-			<p><iframe src="/resources/listview/example11.html" style="width:100%;height:940px;border:0px"></iframe></p>
+			<p><iframe src="/resources/listview/example11.html" style="width:100%;height:990px;border:0px"></iframe></p>
 
 			<h3>Thumbnails &amp; icons</h3>
 			<p>To add thumbnails to the left of a list item, simply add an image inside a list item as the first child element. The framework will scale the image to 80 pixels square. To use standard 16x16 pixel icons in list items, add the class of <code>ui-li-icon</code> to the image element.</p>
@@ -115,7 +115,7 @@ $( "#mylistview" ).listview({
 			<h3>Inset lists</h3>
 			<p>If lists are embedded in a page with other types of content, an inset list packages the list into a block that sits inside the content area with a bit of margin and rounded corners (theme controlled). By adding the <code>data-inset="true"</code> attribute to the list (ul or ol), applies the inset appearance.</p>
 
-			<p><iframe src="/resources/listview/example14.html" style="width:100%;height:2240px;border:0px"></iframe></p>
+			<p><iframe src="/resources/listview/example14.html" style="width:100%;height:2340px;border:0px"></iframe></p>
 
 			<h3>Calling the listview plugin</h3>
 			<p>You can directly call the listview plugin on any selector, just like any jQuery plugin:</p>
