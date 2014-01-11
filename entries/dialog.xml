@@ -15,7 +15,7 @@
 
 		<p>You can open a dialog programmatically by calling the <a href="/jQuery.mobile.changePage/"><strong>$.mobile.changePage</strong></a> method:</p>
 <pre><code><![CDATA[
-// Dialog loaded via AJAX
+// Dialog loaded via Ajax
 $.mobile.changePage( "path/to/dialog.html", { role: "dialog" } );
 
 // Dialog present in a multipage document
