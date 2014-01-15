@@ -16,7 +16,7 @@
 </div>
 ]]></code></pre>
 		<p>This code will create a collapsible widget like this:
-		<iframe src="/resources/collapsible/example1.html" style="width:100%;height:140px;border:0px"></iframe>
+		<iframe src="/resources/collapsible/example1.html" style="width:100%;height:150px;border:0px"></iframe>
 		</p>
 
 		<h3>Initially expanded collapsibles</h3>
@@ -28,7 +28,7 @@
 ]]></code></pre>
 
 		<p>This code will create a collapsible widget like this:
-		<iframe src="/resources/collapsible/example2.html" style="width:100%;height:140px;border:0px"></iframe></p>
+		<iframe src="/resources/collapsible/example2.html" style="width:100%;height:170px;border:0px"></iframe></p>
 
 		<h3>Non-inset collapsibles</h3>
 
@@ -55,12 +55,12 @@
 		<h3>Custom icons</h3>
 
 		<p>The default icon of collapsible headings can be overridden by using the <code>data-collapsed-icon</code> and <code>data-expanded-icon</code> attributes. The example below uses <code>data-collapsed-icon="arrow-r"</code> and <code>data-expanded-icon="arrow-d"</code>.
-		<iframe src="/resources/collapsible/example5.html" style="width:100%;height:140px;border:0px"></iframe></p>
+		<iframe src="/resources/collapsible/example5.html" style="width:100%;height:150px;border:0px"></iframe></p>
 
 		<h3>Icon positioning</h3>
 
 		<p>The default icon positioning of collapsible headings can be overridden by using the <code>data-iconpos</code> attribute. The example below uses <code>data-iconpos="right"</code>.
-		<iframe src="/resources/collapsible/example6.html" style="width:100%;height:140px;border:0px"></iframe></p>
+		<iframe src="/resources/collapsible/example6.html" style="width:100%;height:150px;border:0px"></iframe></p>
 
 		<h3>Theming collapsible content</h3>
 
@@ -75,7 +75,7 @@
 </div>
 ]]></code></pre>
 
-		<iframe src="/resources/collapsible/example7.html" style="width:100%;height:140px;border:0px"></iframe>
+		<iframe src="/resources/collapsible/example7.html" style="width:100%;height:150px;border:0px"></iframe>
 
 		<h3>Theming collapsible headers</h3>
 
@@ -88,12 +88,12 @@
 </div>
 ]]></code></pre>
 
-		<iframe src="/resources/collapsible/example8.html" style="width:100%;height:260px;border:0px"></iframe>
+		<iframe src="/resources/collapsible/example8.html" style="width:100%;height:270px;border:0px"></iframe>
 
 		<h3>Nested Collapsibles</h3>
 
 		<p>Collapsibles can be nested inside each other if needed. In this example, we're setting the content theme to provide clearer visual connection between the levels.
-		<iframe src="/resources/collapsible/example9.html" style="width:100%;height:540px;border:0px"></iframe></p>
+		<iframe src="/resources/collapsible/example9.html" style="width:100%;height:770px;border:0px"></iframe></p>
 
 		<h3>Collapsible sets (accordions)</h3>
 
