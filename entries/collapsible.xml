@@ -242,6 +242,7 @@
 	<example>
 		<desc>A basic example of a collapsible content block.</desc>
 		<html><![CDATA[
+<div data-role="page" id="page1">
 	<div data-role="header">
 		<h1>jQuery Mobile Example</h1>
 	</div>
@@ -251,6 +252,7 @@
 			<p>I'm the collapsible content. By default I'm closed, but you can click the header to open me.</p>
 		</div>
 	</div>
+</div>
 ]]></html>
 	</example>
 	<category slug="widgets"/>
