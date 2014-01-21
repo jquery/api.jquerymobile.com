@@ -352,8 +352,10 @@ $( ":mobile-pagecontainer" ).on( "pagecontainershow", function( event, ui ) {
 
 	<methods>
 		<method name="change">
-			<example>$( ":mobile-pagecontainer" ).pagecontainer( "change", "confirm.html", { role: "dialog" } );</example>
-			<desc>Programmatically change from one page to another.</desc>
+			<example>
+				<code>$( ":mobile-pagecontainer" ).pagecontainer( "change", "confirm.html", { role: "dialog" } );</code>
+				<desc>Programmatically change from one page to another.</desc>
+			</example>
 			<argument name="to">
 				<desc>The URL to which to navigate. This can be specified either as a string, or as a jQuery collection object containing the page DOM element.</desc>
 				<type name="String"/>
@@ -409,8 +411,10 @@ $( ":mobile-pagecontainer" ).on( "pagecontainershow", function( event, ui ) {
 			<desc>Return the currently active page.</desc>
 		</method>
 		<method name="load" return="Promise">
-			<example>$( ":mobile-pagecontainer" ).pagecontainer( "load", "confirm.html", { role: "dialog" } );</example>
-			<desc>Load an external page, enhance its content, and insert it into the DOM.</desc>
+			<example>
+				<code>$( ":mobile-pagecontainer" ).pagecontainer( "load", "confirm.html", { role: "dialog" } );</code>
+				<desc>Load an external page, enhance its content, and insert it into the DOM.</desc>
+			</example>
 			<argument name="url">
 				<desc>The URL from which to load the page. This can be an absolute or a relative URL (e.g. "about/us.html"). You can also specify a jQuery collection object.</desc>
 				<type name="String" />
