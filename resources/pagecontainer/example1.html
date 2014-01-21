@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+	<title>Multipage example</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="//code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="//code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+	<style>
+	html, body { padding: 0; margin: 0; }
+	html, .ui-mobile, .ui-mobile body {
+		height: 195px;
+	}
+	.ui-mobile, .ui-mobile .ui-page {
+		min-height: 195px;
+	}
+	.ui-content{
+		padding:10px 15px 0px 15px;
+	}
+	</style>
+</head>
+<body>
+	<div data-role="page" id="page1">
+		<div data-role="header">
+			<h1>Page 1</h1>
+		</div>
+		<div role="main" class="ui-content">
+			<a href="#page2" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline">Go To Page 2</a>
+		</div>
+	</div>
+	<div data-role="page" id="page2">
+		<div data-role="header">
+			<h1>Page 2</h1>
+		</div>
+		<div role="main" class="ui-content">
+			<a href="#page1" data-rel="back" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline">Go Back To Page 1</a>
+		</div>
+	</div>
+</body>
+</html>
