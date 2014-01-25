@@ -16,7 +16,7 @@
 <label for="checkbox-1">I agree</label>
 ]]></code></pre>
 		<p>The above snippets will produce two basic checkboxes. The default styles will set the width of the element to 100% of the parent container.
-		<iframe src="/resources/checkbox/example1.html" style="width:100%;height:120px;border:0px"></iframe></p>
+		<iframe src="/resources/checkbox/example1.html" style="width:100%;height:130px;border:0px"></iframe></p>
 
 		<h3>Mini version</h3>
 
@@ -46,7 +46,7 @@
 	</fieldset>
 </div>
 ]]></code></pre>
-		<iframe src="/resources/checkbox/example3.html" style="width:100%;height:100px;border:0px"></iframe>
+		<iframe src="/resources/checkbox/example3.html" style="width:100%;height:120px;border:0px"></iframe>
 
 		<h3>Vertically grouped checkboxes</h3>
 
@@ -71,7 +71,7 @@
 </div>
 ]]></code></pre>
 
-		<iframe src="/resources/checkbox/example4.html" style="width:100%;height:220px;border:0px"></iframe>
+		<iframe src="/resources/checkbox/example4.html" style="width:100%;height:240px;border:0px"></iframe>
 
 		<h3>Horizontal toggle sets</h3>
 
@@ -123,7 +123,7 @@
 ]]></code></pre>
 
 		<p>This will produce a vertically grouped radio button set. The default styles set the width of the button group to 100% of the parent container and stacks the label on a separate line.
-		<iframe src="/resources/radiobutton/example1.html" style="width:100%;height:210px;border:0px"></iframe></p>
+		<iframe src="/resources/radiobutton/example1.html" style="width:100%;height:240px;border:0px"></iframe></p>
 
 		<h3>Mini version</h3>
 
@@ -169,7 +169,7 @@
 </div>
 ]]></code></pre>
 
-		<iframe src="/resources/radiobutton/example3.html" style="width:100%;height:210px;border:0px"></iframe>
+		<iframe src="/resources/radiobutton/example3.html" style="width:100%;height:230px;border:0px"></iframe>
 
 		<h3>Horizontal radio button sets</h3>
 
