@@ -166,7 +166,7 @@ $(document).on( "mobileinit", function() {
 		<p>When the <code>select</code> has a small number of options that will fit on the device's screen, the menu will appear as a small overlay with a pop transition:
 		<iframe src="/resources/select/example9.html" style="width:100%;height:270px;border:0px"></iframe></p>
 
-		<p>When it has too many options to show on the device's screen, the framework will automatically create a new &quot;page&quot; populated with a standard <a href="listview">listview</a> for the options. This allows us to use the native scrolling included on the device for moving through a long list. The text inside the <code>label</code> is used as the title for this page.
+		<p>When it has too many options to show on the device's screen, the framework will automatically create a new dialog-style &quot;page&quot; populated with a standard <a href="listview">listview</a> for the options. This allows us to use the native scrolling included on the device for moving through a long list. The text inside the <code>label</code> is used as the title for this page. Be aware of the page and pagecontainer events that will be fired for this generated page.
 		<iframe src="/resources/select/example10.html" style="width:100%;height:590px;border:0px"></iframe></p>
 
 		<h3>Disabled options</h3>
