@@ -82,6 +82,16 @@
 	</options>
 
 	<events>
+		<event name="beforehide">
+			<desc>Triggered before the actual transition animation is kicked off.</desc>
+			<argument name="event" type="Event" />
+			<argument name="ui" type="Object">
+				<property name="nextPage">
+					<desc>A jQuery collection object that contains the destination page DOM element.</desc>
+					<type name="jQuery"/>
+				</property>
+			</argument>
+		</event>
 		<event name="beforeload">
 			<desc>Triggered before any load request is made.
 				<p>Callbacks bound to this event can call <code>preventDefault()</code> on the event to indicate that they are handling the load request. Callbacks that do this <strong>MUST</strong> make sure they call <code>resolve()</code> or <code>reject()</code> on the deferred object reference contained in the object passed to the callback via its <code>ui</code> parameter.</p>
@@ -142,6 +152,16 @@ $( document ).on( "pagecontainerbeforeload", function( event, data ) {
 				<property name="options">
 					<desc>This object contains the options that were passed into <a href="#method-load">load()</a>.</desc>
 					<type name="Object"/>
+				</property>
+			</argument>
+		</event>
+		<event name="beforeshow">
+			<desc>Triggered before the actual transition animation is kicked off.</desc>
+			<argument name="event" type="Event" />
+			<argument name="ui" type="Object">
+				<property name="prevPage">
+					<desc>A jQuery collection object that contains the source page DOM element.</desc>
+					<type name="jQuery"/>
 				</property>
 			</argument>
 		</event>
