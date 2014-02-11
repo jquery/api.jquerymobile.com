@@ -1,10 +1,9 @@
 <?xml version="1.0"?>
-<entry name="pageloadfailed" type="event" return="" deprecated="1.4.0">
+<entry name="pageloadfailed" new-event-name="pagecontainerloadfailed" type="event" return="" deprecated="1.4.0">
 	<title>pageloadfailed</title>
 	<desc>Triggered if the page load request failed.</desc>
 	<longdesc>
-		<strong>Note: The triggering of this event is deprecated as of jQuery Mobile 1.4.0. It will no longer be triggered in 1.5.0.</strong>
-		<p>The replacement for <placeholder name="name"/> is <a href="/pagecontainer/#event-load">pagecontainerloadfailed</a>. In jQuery Mobile 1.4.0, the two events are identical except for their name.</p>
+		<xi:include href="../includes/pageevent-deprecation.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</longdesc>
 	<added>1.0</added>
 	<signature>
