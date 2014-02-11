@@ -1,14 +1,9 @@
 <?xml version="1.0"?>
 <entry name="pagecreate" type="event" return="">
 	<title>pagecreate</title>
-	<desc>Triggered when the page has been created in the DOM (via ajax or other) but before all widgets have had an opportunity to enhance the contained markup.</desc>
+	<desc>Triggered when the page has been created in the DOM (via ajax or other) and after all widgets have had an opportunity to enhance the contained markup.</desc>
 	<longdesc>
-		<p>This event is most useful for user's wishing to create their own custom widgets for child markup enhancement as the jQuery Mobile widgets do.</p>
-<pre><code><![CDATA[
-$( "#aboutPage" ).on( "pagecreate", function( event ) {
-  $.( ":jqmData(role='sweet-plugin')" ).sweetPlugin();
-});
-]]></code></pre>
+		<p><strong>Note:</strong>This event is part of the <code><a href="/page/">page</a></code> widget as of jQuery Mobile 1.4.0. Please consult the documentation for the page widget's <a href="/page/#event-create">implementation</a>.</p>
 	</longdesc>
 	<added>1.0</added>
 	<signature>
