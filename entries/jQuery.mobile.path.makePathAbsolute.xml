@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<entry type="method" name="jQuery.mobile.path.makePathAbsolute" return="Boolean">
+	<title>jQuery.mobile.path.makePathAbsolute()</title>
+	<desc>Utility method for converting a relative file or directory path into an absolute path.</desc>
+	<signature>
+		<argument name="relPath">
+			<type name="String">
+				<desc>A relative file or directory path.</desc>
+			</type>
+		</argument>
+		<argument name="absPath">
+			<type name="String">
+				<desc>An absolute file or directory path against which to resolve.</desc>
+			</type>
+		</argument>
+	</signature>
+		<example>
+			<desc>Various uses of jQuery.mobile.path.makePathAbsolute</desc>
+				<css><![CDATA[
+	#myResult{
+		border: 1px solid;
+		border-color: #108040;
+		padding: 10px;
+		}
+]]></css>
+				<html><![CDATA[
+	<div role="main" class="ui-content">
+		<input type="button" value="file.html relative to /a/b/c/bar.html" class="myButton" data-inline="true">
+		<input type="button" value="../../file.html relative to /a/b/c/bar.html" class="myButton" data-inline="true">
+		<div id="myResult">The result will be displayed here</div>
+	</div>]]></html>
+			<code><![CDATA[
+$(document).ready(function() {
+
+  $( ".myButton" ).on( "click", function() {
+
+    var arguments = $( this ).attr( "value" ).split( " relative to " ),
+		absolutePath = $.mobile.path.makePathAbsolute( arguments[ 0 ], arguments[ 1 ] );
+
+	$( "#myResult" ).text( absolutePath );
+  })
+});
+]]></code>
+		</example>
+	<longdesc>
+		<p>Given a path that is relative to another absolute path, this utility will convert the relative path to an absolute path based on the given absolute path.</p>
+	</longdesc>
+	<category slug="methods/path"/>
+</entry>
