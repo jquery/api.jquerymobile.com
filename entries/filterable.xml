@@ -217,7 +217,18 @@ $.mobile.filterable.prototype.options.filterCallback = function( index, searchVa
 		</option>
 	</options>
 	<events>
+		<event name="beforefilter">
+			<desc>Triggered before the widget begins filtering the list of children.</desc>
+			<argument name="event" type="Event"/>
+		</event>
 		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<event name="filter">
+			<desc>Triggered after the widget has performed the filtering on the list of children. The <code>ui</code> parameter contains the list of children that was processed.</desc>
+			<argument name="event" type="Event"/>
+			<argument name="ui" type="jQuery">
+				<desc>The list of children.</desc>
+			</argument>
+		</event>
 	</events>
 	<methods>
 		<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
