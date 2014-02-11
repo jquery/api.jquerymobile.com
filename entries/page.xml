@@ -139,7 +139,7 @@
 		<event name="create">
 			<argument name="event" type="Event">
 			</argument>
-			<desc><p>Triggered after a page has been created. jQuery Mobile will use this event to apply its enhancements to the page.</p>
+			<desc><p>Triggered after a page has been created and enhancements to the page have been made.</p>
 			</desc>
 		</event>
 	</events>
