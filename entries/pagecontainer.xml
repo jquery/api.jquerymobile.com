@@ -416,9 +416,8 @@ $( ":mobile-pagecontainer" ).on( "pagecontainershow", function( event, ui ) {
 				<desc>Load an external page, enhance its content, and insert it into the DOM.</desc>
 			</example>
 			<argument name="url">
-				<desc>The URL from which to load the page. This can be an absolute or a relative URL (e.g. "about/us.html"). You can also specify a jQuery collection object.</desc>
+				<desc>The URL from which to load the page. This can be an absolute or a relative URL (e.g. "about/us.html").</desc>
 				<type name="String" />
-				<type name="jQuery" />
 			</argument>
 			<argument name="options" type="Object">
 				<desc>A hash containing options that affect the behavior of the method.</desc>
