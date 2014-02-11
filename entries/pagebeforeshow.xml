@@ -1,16 +1,9 @@
 <?xml version="1.0"?>
-<entry name="pagebeforeshow" type="event" return="">
+<entry name="pagebeforeshow" new-event-name="pagecontainerbeforeshow" type="event" return="">
 	<title>pagebeforeshow</title>
 	<desc>Triggered on the "toPage" we are transitioning to, before the actual transition animation is kicked off. </desc>
 	<longdesc>
-		<p>Callbacks for this event will receive a data object as their 2nd arg. This data object has the following properties on it: </p>
-		<ul>
-			<li><code>prevPage</code> (object)
-				<ul>
-					<li>A jQuery collection object that contains the page DOM element that we are transitioning away from. Note that this collection is empty when the first page is transitioned in during application startup.</li>
-				</ul>
-			</li>
-		</ul>
+		<xi:include href="../includes/pageevent-deprecation.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</longdesc>
 	<added>1.0</added>
 	<signature>
