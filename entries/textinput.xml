@@ -44,7 +44,7 @@
 		<h3>Field containers</h3>
 
 		<p>Optionally wrap the text input in a container with class <code>ui-field-contain</code> to help visually group it in a longer form.</p>
-		<p><strong>Note: The <code>data-</code> attribute <code>data-role="fieldcontain"</code> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Add class <code>ui-field-contain</code> instead.</strong></p>
+		<p class="warning"><strong>Note:</strong> The <code>data-</code> attribute <code>data-role="fieldcontain"</code> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Add class <code>ui-field-contain</code> instead.</p>
 
 <pre><code><![CDATA[
 <div class="ui-field-contain">
@@ -66,7 +66,7 @@
 
 		<p>For multi-line text inputs, use a <code>textarea</code> element. The <code>autogrow</code> extension provides functionality for auto-growing the height of the textarea to avoid the need for an internal scrollbar. </p>
 		<p>Set the <code>for</code> attribute of the <code>label</code> to match the <code>id</code> of the <code>textarea</code> so they are semantically associated, and wrap them in a <code>div</code> with class <code>ui-field-contain</code> to group them.</p>
-		<p><strong>Note: The <code>data-</code> attribute <code>data-role="fieldcontain"</code> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Add class <code>ui-field-contain</code> instead.</strong></p>
+		<p class="warning"><strong>Note:</strong> The <code>data-</code> attribute <code>data-role="fieldcontain"</code> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Add class <code>ui-field-contain</code> instead.</p>
 
 <pre><code><![CDATA[
 <label for="textarea-a">Textarea:</label>
@@ -97,7 +97,7 @@ $( "input" ).textinput();
 
 		<h3>Degraded input types</h3>
 
-		<strong>The location of the map of input type degradations in the page plugin is deprecated as of 1.4.0. As of 1.5.0 the input type degradation functionality will be implemented by the <code>degradeInputs</code> module.</strong>
+		<p class="warning">The location of the map of input type degradations in the page plugin is deprecated as of 1.4.0. As of 1.5.0 the input type degradation functionality will be implemented by the <code>degradeInputs</code> module.</p>
 
 		<p>jQuery Mobile degrades several HTML5 input types back to type=text or type=number after adding enhanced controls. For example, inputs with a type of range are enhanced with a custom slider control, and their type is set to number to offer a usable form input alongside that slider. Inputs with a type of search are degraded back to type=text after we add our own themeable search input styling.</p>
 		<p>The <code>degradeInputs</code> module contains a list of input types that are set to either true which means they'll degrade to type=text, false which means they'll be left alone, or a string such as "number", which means they'll be converted to that type (such as the case of type=range).</p>
@@ -130,8 +130,8 @@ $( "input" ).textinput();
 		<h3>Field containers</h3>
 
 		<p>Optionally wrap the search input in a container with tlass <code>ui-field-contain</code> to help visually group it in a longer form.</p>
-		<p><strong>Note: The <code>data-</code> attribute <code>data-role="fieldcontain"</code> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Add class <code>ui-field-contain</code> instead.</strong></p>
-		
+		<p class="warning"><strong>Note:</strong> The <code>data-</code> attribute <code>data-role="fieldcontain"</code> is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Add class <code>ui-field-contain</code> instead.</p>
+
 <pre><code><![CDATA[
 <div class="ui-field-contain">
 	<label for="search-2">Search Input:</label>
