@@ -60,7 +60,7 @@
 		<p>In jQuery Mobile, you can use existing and new HTML5 input types such as <code>password</code>, <code>email</code>, <code>tel</code>, <code>number</code>, and more.  Some type values are rendered differently across browsers. For example, Chrome renders the <code>range</code> input as a slider. jQuery Mobile standardizes the appearance of <code>range</code> and <code>search</code> by dynamically changing their type to <code>text</code>. You can configure which input types are degraded to <code>text</code> with the <code>page</code> plugin's options.</p>
 
 		<p>One major advantage of using these more specific input types if that on mobile devices, specialized keyboards that speed data entry are offered in place of the standard text keyboard. Try the following inputs on a mobile device to see which display custom keyboards on various platforms.
-		<iframe src="/resources/textinput/example4.html" style="width:100%;height:710px;border:0px"></iframe></p>
+		<iframe src="/resources/textinput/example4.html" style="width:100%;height:730px;border:0px"></iframe></p>
 
         <h2>Textareas</h2>
 
