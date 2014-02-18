@@ -12,7 +12,7 @@
 
 <pre><code><![CDATA[
 <label for="basic">Text Input:</label>
-<input type="text" name="name" id="basic" value="" />
+<input type="text" name="name" id="basic" value="">
 ]]></code></pre>
 		<p>This will produce a basic text input. The default styles set the width of the input to 100% of the parent container and stack the label on a separate line.
 		<iframe src="/resources/textinput/example1.html" style="width:100%;height:90px;border:0px"></iframe></p>
@@ -23,7 +23,7 @@
 
 <pre><code><![CDATA[
 <label for="basic">Text Input:</label>
-<input type="text" name="name" id="basic" value="" data-mini="true" />
+<input type="text" name="name" id="basic" value="" data-mini="true">
 ]]></code></pre>
 
 		<p>This will produce an input that is not as tall as the standard version and has a smaller text size.
@@ -35,7 +35,7 @@
 
 <pre><code><![CDATA[
 <label for="clear-demo">Text Input:</label>
-<input type="text" name="clear" id="clear-demo" value="" data-clear-btn="true" />
+<input type="text" name="clear" id="clear-demo" value="" data-clear-btn="true">
 ]]></code></pre>
 
 		<p>This markup creates a text input with a clear button that becomes visible as soon as a character has been entered.
@@ -49,7 +49,7 @@
 <pre><code><![CDATA[
 <div class="ui-field-contain">
 	<label for="name">Text Input:</label>
-	<input type="text" name="name" id="name" value="" />
+	<input type="text" name="name" id="name" value="">
 </div>
 ]]></code></pre>
 
@@ -110,7 +110,7 @@ $( "input" ).textinput();
 
 <pre><code><![CDATA[
 <label for="search-basic">Search Input:</label>
-<input type="search" name="search" id="search-basic" value="" />
+<input type="search" name="search" id="search-basic" value="">
 ]]></code></pre>
 		<p>This will produce a basic search input. The default styles set the width of the input to 100% of the parent container and stack the label on a separate line.
 		<iframe src="/resources/search-input/example1.html" style="width:100%;height:90px;border:0px"></iframe></p>
@@ -121,7 +121,7 @@ $( "input" ).textinput();
 
 <pre><code><![CDATA[
 <label for="search-mini">Search Input:</label>
-<input type="search" name="search-mini" id="search-mini" value="" data-mini="true"/>
+<input type="search" name="search-mini" id="search-mini" value="" data-mini="true">
 ]]></code></pre>
 
 		<p>This will produce a search input that is not as tall as the standard version and has a smaller text size.
@@ -135,7 +135,7 @@ $( "input" ).textinput();
 <pre><code><![CDATA[
 <div class="ui-field-contain">
 	<label for="search-2">Search Input:</label>
-	<input type="search" name="search-2" id="search-2" value="" />
+	<input type="search" name="search-2" id="search-2" value="">
 </div>
 ]]></code></pre>
 
