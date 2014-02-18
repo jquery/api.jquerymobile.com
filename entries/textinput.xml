@@ -166,8 +166,9 @@ $( ".mySearchInput" ).textinput();
 		<p>The <placeholder name="name"/> widget wraps <code>input</code>-based widgets in  <code>div</code> used for creating the style. <code>textarea</code> elements are not wrapped in such a <code>div</code>.</p>
 		<p>In the example below, we add the attribute <code>data-corners="false"</code> to the input, because the class <code>ui-corner-all</code> is absent from the wrapper, indicating that the value of the "corners" option should be false.</p>
 <pre><code><![CDATA[
+<label for="pre-rendered-text-field">Pre-rendered input:</label>
 <div class="ui-input-text ui-body-inherit ui-shadow-inset">
-	<input type="text" data-enhanced="true" data-corners="false" name="pre-rendered-text-field" id="pre-rendered-text-field"></input>
+	<input type="text" data-enhanced="true" data-corners="false" name="pre-rendered-text-field" id="pre-rendered-text-field">
 </div>
 ]]></code></pre>
 			<iframe src="/resources/textinput/example8.html" style="width:100%;height:90px;border:0px"></iframe>
