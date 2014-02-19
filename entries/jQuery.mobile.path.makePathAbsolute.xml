@@ -25,8 +25,8 @@
 ]]></css>
 				<html><![CDATA[
 	<div role="main" class="ui-content">
-		<input type="button" value="file.html relative to /a/b/c/bar.html" id="button1" class="myButton" data-inline="true" />
-		<input type="button" value="../../file.html relative to /a/b/c/bar.html" id="button1" class="myButton" data-inline="true" />
+		<input type="button" value="file.html relative to /a/b/c/bar.html" class="myButton" data-inline="true">
+		<input type="button" value="../../file.html relative to /a/b/c/bar.html" class="myButton" data-inline="true">
 		<div id="myResult">The result will be displayed here</div>
 	</div>]]></html>
 			<code><![CDATA[
