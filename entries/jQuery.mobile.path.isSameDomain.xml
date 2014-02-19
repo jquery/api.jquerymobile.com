@@ -69,7 +69,7 @@
 ]]></code>
 		</example>
 	<longdesc>
-		<p>Utility method for determining if two different URLs share the same domain. This function returns a boolean true if the domain is the same, false if not.</p>
+		<p>Utility method for determining if two different URLs share the same domain. This function returns a boolean <code>true</code> if the domain is the same, <code>false</code> if not.</p>
 	</longdesc>
 	<category slug="methods/path"/>
 </entry>
