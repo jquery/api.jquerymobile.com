@@ -18,55 +18,54 @@
 			<desc>Various uses of jQuery.mobile.path.isSameDomain</desc>
 				<height>350px</height>
 				<css><![CDATA[
-  .versus {
-    display: inline-block;
-  }
-  .compare {
-  	margin-bottom: 2.3em;
-  }
-  #myResult{
-    border: 1px solid;
-    border-color: #108040;
-    padding: 10px;
-  }
+	.versus {
+		display: inline-block;
+	}
+	.compare {
+		margin-bottom: 2.3em;
+	}
+	#myResult{
+		border: 1px solid;
+		border-color: #108040;
+		padding: 10px;
+	}
 ]]></css>
 				<html><![CDATA[
-  <div role="main" class="ui-content ui-mini">
-    <div>
-      <a href="javascript:void(0)" class="ui-btn ui-corner-all ui-btn-inline ui-shadow compare">Same Domain?</a>
-      <div class="versus">
-        <pre><code>http://example.com/</code></pre>
-        <pre><code>http://slashdot.org/</code></pre>
-      </div>
-    </div>
-    <div>
-      <a href="javascript:void(0)" class="ui-btn ui-corner-all ui-btn-inline ui-shadow compare">Same Domain?</a>
-      <div class="versus">
-        <pre><code>http://edition.cnn.com/</code></pre>
-        <pre><code>http://cnn.com/</code></pre>
-      </div>
-    </div>
-    <div>
-      <a href="javascript:void(0)" class="ui-btn ui-corner-all ui-btn-inline ui-shadow compare">Same Domain?</a>
-      <div class="versus">
-        <pre><code>http://www.amazon.co.uk/</code></pre>
-        <pre><code>http://www.amazon.co.uk/</code></pre>
-      </div>
-    </div>
-    <div id="myResult"></div>
-  </div>
+	<div role="main" class="ui-content ui-mini">
+		<div>
+			<a href="javascript:void(0)" class="ui-btn ui-corner-all ui-btn-inline ui-shadow compare">Same Domain?</a>
+			<div class="versus">
+				<pre><code>http://example.com/</code></pre>
+				<pre><code>http://slashdot.org/</code></pre>
+			</div>
+		</div>
+		<div>
+			<a href="javascript:void(0)" class="ui-btn ui-corner-all ui-btn-inline ui-shadow compare">Same Domain?</a>
+			<div class="versus">
+				<pre><code>http://edition.cnn.com/</code></pre>
+				<pre><code>http://cnn.com/</code></pre>
+			</div>
+		</div>
+		<div>
+			<a href="javascript:void(0)" class="ui-btn ui-corner-all ui-btn-inline ui-shadow compare">Same Domain?</a>
+			<div class="versus">
+				<pre><code>http://www.amazon.co.uk/</code></pre>
+				<pre><code>http://www.amazon.co.uk/</code></pre>
+			</div>
+		</div>
+		<div id="myResult"></div>
+	</div>
 ]]></html>
 			<code><![CDATA[
-$(document).ready(function() {
-  $( ".compare" ).on( "click", function() {
- 
-    var urlContainers = $( this ).siblings( ".versus" ).find( "code" ),
-      url1 = urlContainers.first().text(),
-    url2 = urlContainers.last().text();
- 
-    $( "#myResult" ).text( String( $.mobile.path.isSameDomain( url1, url2 ) ) );
-  })
-});
+	$(document).ready(function() {
+		$( ".compare" ).on( "click", function() {
+			var urlContainers = $( this ).siblings( ".versus" ).find( "code" ),
+				url1 = urlContainers.first().text(),
+				url2 = urlContainers.last().text();
+
+			$( "#myResult" ).text( String( $.mobile.path.isSameDomain( url1, url2 ) ) );
+		})
+	});
 ]]></code>
 		</example>
 	<longdesc>
