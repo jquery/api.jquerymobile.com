@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="textinput" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="textinput" init-selector='"input[type=&#39;text&#39;], input[type=&#39;search&#39;], :jqmData(type=&#39;search&#39;), input[type=&#39;number&#39;], :jqmData(type=&#39;number&#39;), input[type=&#39;password&#39;], input[type=&#39;email&#39;], input[type=&#39;url&#39;], input[type=&#39;tel&#39;], textarea, input[type=&#39;time&#39;], input[type=&#39;date&#39;], input[type=&#39;month&#39;], input[type=&#39;week&#39;], input[type=&#39;datetime&#39;], input[type=&#39;datetime-local&#39;], input[type=&#39;color&#39;], input:not([type]), input[type=&#39;file&#39;]"'>
 	<title>Textinput Widget</title>
-    <desc>Creates a textinput widget for textinput, textarea or search input</desc>
+    <desc>Creates a <placeholder name="name"/> widget for textinput, textarea or search input</desc>
     <longdesc>
 		<h2>Text Input</h2>
 
@@ -63,7 +63,7 @@
 		<iframe src="/resources/textinput/example4.html" style="width:100%;height:730px;border:0px"></iframe></p>
 
 		<h3 id="search-outside-page">Search input outside the page</h3>
-		<p>You can use jQuery Mobile-styled <code>textinput</code> widgets with search functionality in the absence of or outside jQuery Mobile pages. To do so, specify their input type as <code>type="text"</code>, add the attribute <code>data-type="search"</code>, and manually call the <code>textinput</code> plugin on the element.</p>
+		<p>jQuery Mobile-styled <code><placeholder name="name"/></code> widgets can be placed outside jQuery Mobile pages. To do so, specify their input type as <code>type="text"</code>, add the attribute <code>data-type="search"</code>, and manually call the <code><placeholder name="name"/></code> plugin on the element.</p>
 		<p>The markup:</p>
 <pre><code><![CDATA[
 <input id="the-search-input" type="text" data-type="search">
@@ -101,9 +101,9 @@ I'm a basic textarea. If this is pre-populated with content, the height will be 
 		<p>The textarea is displayed like this and will grow to fit new lines as you type:
 		<iframe src="/resources/textinput/example6.html" style="width:100%;height:190px;border:0px"></iframe></p>
 
-        <h3>Calling the textinput plugin</h3>
+        <h3>Calling the <placeholder name="name"/> plugin</h3>
 
-		<p>This plugin will auto initialize on any page that contains a textarea or any of the text input types listed above without any need for a <code>data-role</code> attribute in the markup. However, if needed, you can directly call the <code>textinput</code> plugin on any selector, just like any jQuery plugin:</p>
+		<p>This plugin will auto initialize on any page that contains a textarea or any of the text input types listed above without any need for a <code>data-role</code> attribute in the markup. However, if needed, you can directly call the <code><placeholder name="name"/></code> plugin on any selector, just like any jQuery plugin:</p>
 <pre><code><![CDATA[
 $( "input" ).textinput();
 ]]></code></pre>
@@ -167,9 +167,9 @@ $( "input" ).textinput();
 		<code>$.mobile.textinput.prototype.options.clearBtnText</code> property to a string of your choosing.</p>
 		<p>This option is provided by the <code>clearButton</code> extension.</p>
 
-		<h3>Calling the textinput plugin</h3>
+		<h3>Calling the <placeholder name="name"/> plugin</h3>
 
-		<p>This plugin will auto-initialize on any page that contains a text input with the <code>type="search"</code> attribute without any need for a <code>data-role</code> attribute in the markup. However, if needed, you can directly call the <code>textinput</code> plugin on a selector, just like any jQuery plugin:</p>
+		<p>This plugin will auto-initialize on any page that contains a text input with the <code>type="search"</code> attribute without any need for a <code>data-role</code> attribute in the markup. However, if needed, you can directly call the <code><placeholder name="name"/></code> plugin on a selector, just like any jQuery plugin:</p>
 
 <pre><code><![CDATA[
 $( ".mySearchInput" ).textinput();
