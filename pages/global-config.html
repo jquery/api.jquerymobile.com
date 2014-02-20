@@ -131,8 +131,8 @@ $.mobile.defaultDialogTransition is deprecated.
 	<dt id="focusClass"><code>focusClass</code> <em>string</em>, default: "ui-focus"</dt>
 	<dd>The CSS class used for "active" button state.<div class="warning"><strong>Deprecated</strong> in 1.4 and will be removed in 1.5. The class "ui-focus" will continue to be applied to elements as before.</div></dd>
 	<br />
-	<dt id="getMaxScrollForTransition"><code>getMaxScrollForTransition</code> <em>integer</em>, default: 3</dt>
-	<dd>Set a scroll position breakpoint for transitions. If the scroll position is greater than the window height multiplied by the value that has been set, transition "none" will be used.</dd>
+	<dt id="getMaxScrollForTransition"><code>getMaxScrollForTransition</code> <em>function</em></dt>
+	<dd>Set a scroll position breakpoint for transitions. If the scroll position is greater than the value returned by this function, transition "none" will be used. The default function returns three times the window height.</dd>
     <br />
 	<dt id="gradeA"><code>gradeA</code> <em>function that returns a boolean</em>, default: a function returning the value of $.support.mediaquery</dt>
 	<dd>Any support conditions that must be met in order to proceed.</dd>
