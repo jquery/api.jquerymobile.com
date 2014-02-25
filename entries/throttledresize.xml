@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <entry name="throttledresize" type="event" return="jQuery">
 	<title>throttledresize</title>
-	<desc>Enables bookmarkable #hash history.</desc>
+	<desc>Limits the rate of the execution of handlers on resize events.</desc>
 	<longdesc>
 		<p>The jQuery Mobile <code>throttledresize</code> event is a special event that prevents browsers from running continuous callbacks on resize. <code>throttledresize</code> is used internally for orientationchange in browsers like Internet Explorer. <code>throttledresize</code> ensures that a held event will execute after the timeout so logic that depends on the final conditions after a resize is complete will still execute properly.</p>
 		<p>The <code>throttledresize</code> event is triggered if orientationchange is not natively supported.</p>
