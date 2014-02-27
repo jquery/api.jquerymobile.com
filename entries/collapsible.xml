@@ -234,9 +234,19 @@
 		</event>
 	</events>
 	<methods>
+		<method name="collapse">
+			<desc>
+				Collapses the <placeholder name="name"/>.
+			</desc>
+		</method>
 		<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<method name="expand">
+			<desc>
+				Expands the <placeholder name="name"/>.
+			</desc>
+		</method>
 		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</methods>
 	<example>
