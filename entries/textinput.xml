@@ -75,6 +75,19 @@ $( function() {
 });
 ]]></code></pre>
 
+		<h3 id="search-outside-page">Search input outside the page</h3>
+		<p>jQuery Mobile-styled <code><placeholder name="name"/></code> widgets can be placed outside jQuery Mobile pages. To do so, specify their input type as <code>type="text"</code>, add the attribute <code>data-type="search"</code>, and manually call the <code><placeholder name="name"/></code> plugin on the element.</p>
+		<p>The markup:</p>
+<pre><code><![CDATA[
+<input id="the-search-input" type="text" data-type="search">
+]]></code></pre>
+		<p>The script:</p>
+<pre><code><![CDATA[
+$( function() {
+	$( "#the-search-input" ).textinput();
+});
+]]></code></pre>
+
         <h2>Textareas</h2>
 
 		<p>For multi-line text inputs, use a <code>textarea</code> element. The <code>autogrow</code> extension provides functionality for auto-growing the height of the textarea to avoid the need for an internal scrollbar. </p>
