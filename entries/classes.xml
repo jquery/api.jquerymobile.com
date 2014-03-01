@@ -116,11 +116,11 @@
 			</tr>
 			<tr>
 				<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>carat-l</strong></div></td>
-				<td>A carat pointing left (&gt;).</td>
+				<td>A carat pointing left (&lt;).</td>
 			</tr>
 			<tr>
 				<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>carat-r</strong></div></td>
-				<td>A carat pointing right (&lt;).</td>
+				<td>A carat pointing right (&gt;).</td>
 			</tr>
 			<tr>
 				<td class="enum-value"><div style="white-space: nowrap;">ui-icon-<strong>carat-t</strong></div></td>
