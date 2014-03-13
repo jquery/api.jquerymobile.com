@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="pageshow" new-event-name="pagecontainershow" type="event" return="">
+<entry name="pageshow" new-event-name="pagecontainershow" type="event" return="" deprecated="1.4.0">
 	<title>pageshow</title>
 	<desc>Triggered on the "toPage" after the transition animation has completed.</desc>
 	<longdesc>

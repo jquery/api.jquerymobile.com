@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="pagebeforeshow" new-event-name="pagecontainerbeforeshow" type="event" return="">
+<entry name="pagebeforeshow" new-event-name="pagecontainerbeforeshow" type="event" return="" deprecated="1.4.0">
 	<title>pagebeforeshow</title>
 	<desc>Triggered on the "toPage" we are transitioning to, before the actual transition animation is kicked off. </desc>
 	<longdesc>
