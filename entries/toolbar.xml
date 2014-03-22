@@ -365,11 +365,29 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 		<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<method name="hide">
+			<desc>This method is provided by the <code>fixedToolbar</code> extension.
+				<p>Hides the toolbar.</p>
+			</desc>
+			<arguments></arguments>
+		</method>
 		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="refresh">
 			<desc>Update the <placeholder name="name"/>.
 				<p>If you manipulate a <placeholder name="name"/> via JavaScript, you must call the <code>refresh</code> method on it to update the visual styling.</p>
 			</desc>
+		</method>
+		<method name="show">
+			<desc>This method is provided by the <code>fixedToolbar</code> extension.
+				<p>Shows the toolbar.</p>
+			</desc>
+			<arguments></arguments>
+		</method>
+		<method name="toggle">
+			<desc>This method is provided by the <code>fixedToolbar</code> extension.
+				<p>Calls either the show or the hide method, depending on whether the toolbar is visible.</p>
+			</desc>
+			<arguments></arguments>
 		</method>
 		<method name="updatePagePadding">
 			<desc>
