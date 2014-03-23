@@ -184,7 +184,7 @@
 			</tr>
 			<tr>
 				<td class="enum-value" id="theme-classes-ui-body"><div style="white-space: nowrap;">ui-body-[a-z]</div></td>
-				<td>Sets the color scheme (swatch) for a content block. This includes page content panes (<strong>deprecated as of 1.4.0</strong>), listview items, popups, collapsibles, the loader widget, sliders, and panels.</td>
+				<td>Sets the color scheme (swatch) for a content block. This includes page content panes (<span class="warning">deprecated as of 1.4.0</span>), listview items, popups, collapsibles, the loader widget, sliders, and panels.</td>
 			</tr>
 			<tr>
 				<td class="enum-value" id="theme-classes-ui-btn"><div style="white-space: nowrap;">ui-btn-[a-z]</div></td>
