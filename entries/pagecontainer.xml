@@ -5,7 +5,7 @@
 	<desc>Manages a collection of pages.</desc>
 	<longdesc>
 		<h2>Smooth Navigation Between Pages</h2>
-		<strong>Note: The <placeholder name="name"/> widget is designed to be a singleton instantiated by the framework on the <code>body</code> element. This limitation will be removed in future versions of jQuery Mobile.</strong>
+		<div class="warning"><strong>Note:</strong> The <placeholder name="name"/> widget is designed to be a singleton instantiated by the framework on the <code>body</code> element. This limitation will be removed in future versions of jQuery Mobile.</div>
 		<p>jQuery Mobile's central abstraction is the use of multiple pages inside a single HTML document. The children of the <code>body</code> are all <code>div</code> elements that have been enhanced into <a href="/page/">page</a> widgets. These are jQuery Mobile pages.</p>
 		<p>Only one page is visible at a time. Upon navigation, the currently visible page is hidden, and another page is shown. Moving from one page to another is accomplished via a transition. This is not possible when navigating between HTML documents via HTTP, because the browser discards all state associated with the source page when navigating to the target page, making it impossible to perform this task via a smooth transition effect such as a fade or a slide.</p>
 		<h3>Multipage Documents</h3>
@@ -62,7 +62,7 @@
 		</p>
 		<p>If these criteria are met jQuery Mobile retrieves the document via Ajax. It is important to realize that, while the document is retrieved in its entirety, only the first jQuery Mobile page is displayed. The header and the rest of the body are discarded. Thus, it is not possible to retrieve a multi-page document via Ajax, nor is it possible to execute scripts located in the header.</p>
 
-		<p>After Ajax retrieval, jQuery Mobile displays the page via a transition. The transition can be specified on the link that opens the page using the <code>data-transition</code> attribute. If no transition is specified, then <code>$.mobile.defaultPageTransition</code> is used or, if the incoming page is a dialog, then <code>$.mobile.defaultDialogTransition</code> is used. <strong>Note: The dialog widget is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0.</strong></p>
+		<p>After Ajax retrieval, jQuery Mobile displays the page via a transition. The transition can be specified on the link that opens the page using the <code>data-transition</code> attribute. If no transition is specified, then <code>$.mobile.defaultPageTransition</code> is used or, if the incoming page is a dialog, then <code>$.mobile.defaultDialogTransition</code> is used. <div class="warning"><strong>Note:</strong> The dialog widget is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0.</div></p>
 		<p>If the browser supports the <code>replaceState</code> API the location bar is updated such that it displays the URL of the document that was retrieved via Ajax. This latter step has the following implication for site/application design: Since the user can copy the URL of a page other than the start page, the application must be designed such that it can start from any of its pages. The best way to achieve this is to include jQuery Mobile and your application code in the header for all the pages of the site/application, and ensure initial state consistency during the <code>pagecreate</code> event.</p>
 	</longdesc>
 
