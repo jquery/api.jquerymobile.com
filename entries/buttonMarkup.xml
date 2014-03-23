@@ -4,7 +4,7 @@
 	<title>.buttonMarkup()</title>
 	<desc>Adds button styling to an element</desc>
 	<longdesc>
-		<strong>Note: .buttonMarkup() is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. You can now assign the full range of button style options to your <code>button</code> or <code>a</code> elements by simply adding classes.</strong>
+		<div class="warning"><strong>Note:</strong> .buttonMarkup() is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. You can now assign the full range of button style options to your <code>button</code> or <code>a</code> elements by simply adding classes.</div>
 		<p></p>
 		<h2 id="migration">Transition to class-based styling</h2>
 		Keeping in mind the followings will make it easy for you to transition from the button styling based on data attributes to the class-based process:
