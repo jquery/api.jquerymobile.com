@@ -148,6 +148,14 @@
 				</desc>
 			</type>
 		</option>
+		<option name="contentTheme" default="inherit" example-value='"b"'>
+			<desc>Sets the color scheme (swatch) for the collapsible content. It accepts a single letter from a-z that maps to the swatches included in your theme.
+				<p>If the value is unset for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.</p>
+				<p>Possible values: swatch letter (a-z).</p>
+				<p>This option is also exposed as a data attribute: <code>data-content-theme="b"</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
 		<option name="corners" default="true" example-value="false">
 			<desc>Applies the theme border-radius if set to true.
 				<p>If the value is unset for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.</p>
@@ -201,7 +209,7 @@
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<option name="theme" default="null, inherited from parent" example-value='"b"'>
+		<option name="theme" default="inherit" example-value='"b"'>
 			<desc>Sets the color scheme (swatch) for the collapsible. It accepts a single letter from a-z that maps to the swatches included in your theme.
 				<p>If the value is unset for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.</p>
 				<p>Possible values: swatch letter (a-z).</p>
