@@ -24,7 +24,7 @@
 <div class="ui-grid-a">
 	<div class="ui-block-a"><strong>I'm Block A</strong> and text inside will wrap</div>
 	<div class="ui-block-b"><strong>I'm Block B</strong> and text inside will wrap</div>
-</div><!-- /grid-a -->u
+</div><!-- /grid-a -->
 ]]></code></pre>
 
 			<p>The above markup produces the following content layout:</p>
