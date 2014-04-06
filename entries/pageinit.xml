@@ -10,7 +10,7 @@ $( document ).on( "pageinit", "#aboutPage", function( event ) {
 });
 ]]></code></pre>
 
-		<div class="warning"><b>Note:</b> This event has been deprecated in 1.4.0 in favor of <code>pagecreate</code>. Simply replace <code>pageinit</code> in the above example.</div>
+		<div class="warning"><b>Note:</b> This event has been deprecated in 1.4.0 in favor of <code><a href="/pagecreate/">pagecreate</a></code>. Simply replace <code>pageinit</code> in the above example.</div>
 	</longdesc>
 	<added>1.0</added>
 	<signature>
