@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<entry name="pageremove" type="event" return="">
+<entry name="pageremove" new-event-name="pagecontainerremove" type="event" return="" deprecated="1.4.3">
 	<title>pageremove</title>
 	<desc>Triggered just before the framework attempts to remove an external page from the DOM.</desc>
 	<longdesc>
 		<p>By default, the framework removes any non active dynamically loaded external pages from the DOM as soon as the user navigates away to a different page. The <code>pageremove</code> event is dispatched just before the framework attempts to remove the page from the DOM.</p>
 		<p>This event is triggered just before the framework attempts to remove an external page from the DOM. Event callbacks can call preventDefault on the event object to prevent the page from being removed. </p>
-
+		<xi:include href="../includes/pageevent-deprecation-1-6.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</longdesc>
 	<added>1.0</added>
 	<signature>

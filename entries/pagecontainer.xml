@@ -82,12 +82,39 @@
 	</options>
 
 	<events>
+		<event name="beforechange">
+			<desc>Triggered during the page change cyle prior to any page loading or transition.</desc>
+			<argument name="event" type="Event" />
+			<argument name="ui" type="Object">
+				<property name="toPage">
+					<desc>This property represents the page the caller wishes to make active. It can be either a jQuery collection object containing the page DOM element, or an absolute/relative url to an internal or external page. The value exactly matches the 1st arg to the changePage() call that triggered the event.</desc>
+					<type name="jQuery"/>
+					<type name="String"/>
+				</property>
+				<property name="prevPage">
+					<desc>A jQuery collection object that contains the from page DOM element.</desc>
+					<type name="jQuery"/>
+				</property>
+				<property name="options">
+					<desc>The configuration options to be used for the current <code>change()</code> call</desc>
+					<type name="jQuery"/>
+				</property>
+			</argument>
+		</event>
 		<event name="beforehide">
 			<desc>Triggered before the actual transition animation is kicked off.</desc>
 			<argument name="event" type="Event" />
 			<argument name="ui" type="Object">
 				<property name="nextPage">
 					<desc>A jQuery collection object that contains the destination page DOM element.</desc>
+					<type name="jQuery"/>
+				</property>
+				<property name="toPage">
+					<desc>A jQuery collection object that contains the destination page DOM element.</desc>
+					<type name="jQuery"/>
+				</property>
+				<property name="prevPage">
+					<desc>A jQuery collection object that contains the from page DOM element.</desc>
 					<type name="jQuery"/>
 				</property>
 			</argument>
@@ -109,6 +136,14 @@
 				<property name="dataUrl">
 					<desc>The filtered version of absUrl to be used when identifying the page and updating the browser location when the page is made active.</desc>
 					<type name="String"/>
+				</property>
+				<property name="toPage">
+					<desc>A string containing the url being loaded</desc>
+					<type name="String"/>
+				</property>
+				<property name="prevPage">
+					<desc>A jQuery collection object that contains the from page DOM element.</desc>
+					<type name="jQuery"/>
 				</property>
 				<property name="deferred">
 					<desc>Deferred to be resolved or rejected upon completion of content load. Callbacks that call <code>preventDefault()</code> on the event <strong>MUST</strong> call <code>resolve()</code> or <code>reject()</code> on this object so that <code>change()</code> requests resume processing. Deferred object observers expect the deferred object to be resolved like this:
@@ -163,6 +198,10 @@ $( document ).on( "pagecontainerbeforeload", function( event, data ) {
 					<desc>A jQuery collection object that contains the source page DOM element.</desc>
 					<type name="jQuery"/>
 				</property>
+				<property name="toPage">
+					<desc>A jQuery collection object that contains the destination page DOM element.</desc>
+					<type name="jQuery"/>
+				</property>
 			</argument>
 		</event>
 		<event name="beforetransition">
@@ -182,8 +221,26 @@ $( document ).on( "pagecontainerbeforeload", function( event, data ) {
 					<type name="String" />
 				</property>
 				<property name="toPage">
-					<desc>This property represents the page to which the caller wishes to transition. It is a jQuery collection object containing the page DOM element.</desc>
+					<desc>A jQuery collection object that contains the destination page DOM element.</desc>
 					<type name="jQuery" />
+				</property>
+				<property name="prevPage">
+					<desc>A jQuery collection object that contains the from page DOM element.</desc>
+					<type name="jQuery"/>
+				</property>
+			</argument>
+		</event>
+		<event name="change">
+			<desc>This event is triggered after the change request has finished loading the page into the DOM and all page transition animations have completed.</desc>
+			<argument name="event" type="Event" />
+			<argument name="ui" type="Object">
+				<property name="prevPage">
+					<desc>A jQuery collection object that contains the source page DOM element.</desc>
+					<type name="jQuery"/>
+				</property>
+				<property name="toPage">
+					<desc>A jQuery collection object that contains the destination page DOM element.</desc>
+					<type name="jQuery"/>
 				</property>
 			</argument>
 		</event>
@@ -199,6 +256,10 @@ $( document ).on( "pagecontainerbeforeload", function( event, data ) {
 				<property name="options">
 					<desc>The configuration options to be used for the current <code>change()</code> call.</desc>
 					<type name="Object" />
+				</property>
+				<property name="prevPage">
+					<desc>A jQuery collection object that contains the from page DOM element.</desc>
+					<type name="jQuery"/>
 				</property>
 			</argument>
 		</event>
@@ -219,6 +280,14 @@ $( ":mobile-pagecontainer" ).on( "pagecontainerhide", function( event, ui ) {
 				<property name="nextPage">
 					<desc>A jQuery collection object that contains the page DOM element to which we just transitioned.</desc>
 					<type name="jQuery" />
+				</property>
+				<property name="toPage">
+					<desc>A jQuery collection object that contains the destination page DOM element.</desc>
+					<type name="jQuery"/>
+				</property>
+				<property name="prevPage">
+					<desc>A jQuery collection object that contains the from page DOM element.</desc>
+					<type name="jQuery"/>
 				</property>
 			</argument>
 		</event>
@@ -250,6 +319,14 @@ $( ":mobile-pagecontainer" ).on( "pagecontainerhide", function( event, ui ) {
 					<desc>According to the jQuery Core <a href="//api.jquery.com/jQuery.ajax/">documentation</a>, this will be a string describing the status. This is what gets passed as the 2nd argument to the framework's <code>$.ajax()</code> error callback. It may also be <code>null</code>.</desc>
 					<type name="String" />
 				</property>
+				<property name="toPage">
+					<desc>A jQuery collection object that contains the destination page DOM element.</desc>
+					<type name="jQuery"/>
+				</property>
+				<property name="prevPage">
+					<desc>A jQuery collection object that contains the from page DOM element in a detached state.</desc>
+					<type name="jQuery"/>
+				</property>
 			</argument>
 		</event>
 		<event name="loadfailed">
@@ -269,6 +346,14 @@ $( ":mobile-pagecontainer" ).on( "pagecontainerhide", function( event, ui ) {
 				<property name="dataUrl">
 					<desc>The filtered version of absUrl to be used when identifying the page and updating the browser location when the page is made active.</desc>
 					<type name="String"/>
+				</property>
+				<property name="toPage">
+					<desc>A string containing the url the was attempted to be loaded.</desc>
+					<type name="String"/>
+				</property>
+				<property name="prevPage">
+					<desc>A jQuery collection object that contains the from page DOM element.</desc>
+					<type name="jQuery"/>
 				</property>
 				<property name="deferred">
 					<desc>Callbacks that call <code>preventDefault()</code> on the event, <strong>MUST</strong> call <code>resolve()</code> or <code>reject()</code> on this object so that <code>change()</code> requests resume processing. Deferred object observers expect the deferred object to be resolved like this:
@@ -328,6 +413,20 @@ $( document ).on( "pageloadfailed", function( event, data ) {
 				</property>
 			</argument>
 		</event>
+		<event name="remove">
+			<desc>Triggered just before the framework attempts to remove an external page from the DOM.</desc>
+			<argument name="event" type="Event" />
+			<argument name="ui" type="Object">
+				<property name="toPage">
+					<desc>A jQuery collection object that contains the destination page DOM element.</desc>
+					<type name="jQuery"/>
+				</property>
+				<property name="prevPage">
+					<desc>The page about to be removed</desc>
+					<type name="jQuery"/>
+				</property>
+			</argument>
+		</event>
 		<event name="show">
 			<desc>Triggered after the transition animation has completed.<strong>Note:</strong> Unlike the deprecated <code>pageshow</code> event, this event is not triggered on the "toPage" but the <placeholder name="name"/> widget's element.
 				<p>You can access the <code>prevPage</code> properties via the second argument of a bound callback function. For example: </p>
@@ -340,6 +439,10 @@ $( ":mobile-pagecontainer" ).on( "pagecontainershow", function( event, ui ) {
 			</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
+				<property name="toPage">
+					<desc>A jQuery collection object that contains the destination page DOM element.</desc>
+					<type name="jQuery"/>
+				</property>
 				<property name="prevPage">
 					<desc>A jQuery collection object that contains the page DOM element that we just transitioned away from. Note that this collection is empty when the first page is transitioned in during application startup.</desc>
 					<type name="jQuery"/>
@@ -365,6 +468,10 @@ $( ":mobile-pagecontainer" ).on( "pagecontainershow", function( event, ui ) {
 				<property name="toPage">
 					<desc>This property represents the page to which the caller has transitioned. It is a jQuery collection object containing the page DOM element.</desc>
 					<type name="jQuery" />
+				</property>
+				<property name="prevPage">
+					<desc>A jQuery collection object that contains the from page DOM element.</desc>
+					<type name="jQuery"/>
 				</property>
 			</argument>
 		</event>
