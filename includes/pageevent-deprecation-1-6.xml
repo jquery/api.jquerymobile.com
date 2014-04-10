@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<div class="warning">
+	<strong>Note:</strong> The triggering of this event is deprecated as of jQuery Mobile 1.4.3. It will no longer be triggered in 1.6.0.
+	<p>The replacement for <code><placeholder name="name"/></code> is the <code><a href="/pagecontainer/">pagecontainer</a></code> widget's <code><placeholder name="new-event-name"/></code> event. In jQuery Mobile >= 1.4.3, the two events are identical except for their name and the fact that <code><placeholder name="new-event-name"/></code> is triggered on the pagecontainer, whereas <code><placeholder name="name"/></code> is triggered on the page.</p>
+</div>

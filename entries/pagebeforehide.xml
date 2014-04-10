@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="pagebeforehide" new-event-name="pagecontainerbeforehide" type="event" return="">
+<entry name="pagebeforehide" new-event-name="pagecontainerbeforehide" type="event" return="" deprecated="1.4.0">
 	<title>pagebeforehide</title>
 	<desc>Triggered on the "fromPage" we are transitioning away from, before the actual transition animation is kicked off.</desc>
 	<longdesc>
