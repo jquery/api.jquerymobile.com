@@ -1,22 +1,22 @@
 <?xml version="1.0"?>
-<entry name="pagechange" type="event" return="">
+<entry name="pagechange" new-event-name="pagecontainerchange" type="event" return="" deprecated="1.4.3">
 	<title>pagechange</title>
 	<desc>This event is triggered after the <code>changePage()</code> request has finished loading the page into the DOM and all page transition animations have completed. </desc>
 	<longdesc>
 		<p>Note that any pageshow or pagehide events will have fired *BEFORE* this event is triggered. Callbacks for this particular event will be passed a data object as the 2nd arg. The properties for this object are as follows: </p>
-			<ul>
-				<li><code>toPage</code> (object or string)
-					<ul>
-						<li>This property represents the page the caller wishes to make active. It can be either a jQuery collection object containing the page DOM element, or an absolute/relative url to an internal or external page. The value exactly matches the 1st arg to the changePage() call that triggered the event.</li>
-					</ul>
-				</li>
-				<li><code>options</code> (object)
-					<ul>
-						<li>This object contains the configuration options to be used for the current <code>changePage()</code> call.</li>
-					</ul>
-				</li>
-			</ul>
-
+		<ul>
+			<li><code>toPage</code> (object or string)
+				<ul>
+					<li>This property represents the page the caller wishes to make active. It can be either a jQuery collection object containing the page DOM element, or an absolute/relative url to an internal or external page. The value exactly matches the 1st arg to the changePage() call that triggered the event.</li>
+				</ul>
+			</li>
+			<li><code>options</code> (object)
+				<ul>
+					<li>This object contains the configuration options to be used for the current <code>changePage()</code> call.</li>
+				</ul>
+			</li>
+		</ul>
+		<xi:include href="../includes/pageevent-deprecation-1-6.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</longdesc>
 	<added>1.0</added>
 	<signature>
