@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="pagebeforechange" type="event" return="">
+<entry name="pagebeforechange" new-event-name="pagecontainerbeforechange" type="event" return="" deprecated="1.4.3">
 	<title>pagebeforechange</title>
 	<desc>Triggered twice during the page change cyle: First prior to any page loading or transition and next after page loading completes successfully, but before the browser history has been modified by the navigation process.</desc>
 	<longdesc>
@@ -7,7 +7,7 @@
 		<p>When received with <code>data.toPage</code> set to a jQuery object, the event indicates that the destination page has been loaded and navigation will continue.</p>
 		<p>During the handling of this event the browser's history has not yet changed.</p>
 		<p>In addition to the <code>event</code> parameter, handlers of this event will receive a second parameter, <code>data</code>. The second parameter is an object containing the following properties:</p>
-            <ul>
+			<ul>
 				<li><code>toPage</code> (object or string)
 					<ul>
 						<li>This property represents the page the caller wishes to make active. It can be either a jQuery collection object containing the page DOM element, or an absolute/relative url to an internal or external page. The value exactly matches the 1st arg to the changePage() call that triggered the event.</li>
@@ -19,7 +19,8 @@
 					</ul>
 				</li>
 			</ul>
-              <p>It should be noted that callbacks can modify both the <code>toPage</code> and <code>options</code> properties to alter the behavior of the current <code>changePage()</code> call. So for example, the <code>toPage</code> can be mapped to a different url from within a callback to do a sort of redirect.</p>
+			<p>It should be noted that callbacks can modify both the <code>toPage</code> and <code>options</code> properties to alter the behavior of the current <code>changePage()</code> call. So for example, the <code>toPage</code> can be mapped to a different url from within a callback to do a sort of redirect.</p>
+			<xi:include href="../includes/pageevent-deprecation-1-6.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</longdesc>
 	<added>1.0</added>
 	<signature>
