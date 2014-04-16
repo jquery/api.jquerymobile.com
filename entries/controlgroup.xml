@@ -99,5 +99,34 @@ $( ".selector" ).controlgroup( "container" );
 </div>
 ]]></html>
 	</example>
+	<example>
+		<desc>Dynamically adding elements.</desc>
+		<html><![CDATA[
+<div data-role="page" id="page2">
+	<div role="main" class="ui-content">
+		<div data-role="controlgroup" data-type="horizontal" id="the-controlgroup">
+			<label>Yes<input type="radio" name="answers"></label>
+			<label>No<input type="radio" name="answers"></label>
+		</div>
+		<a href="#" id="add-button" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Add Item</a>
+	</div>
+</div>
+		]]></html>
+		<code><![CDATA[
+$( document ).on( "click", "#add-button", function() {
+	var group = $( "#the-controlgroup" ),
+		possibleLabels = [ "Oui", "Non", "Igen", "Nem", "Ja", "Nein" ],
+		label = possibleLabels[ Math.round( Math.random() * ( possibleLabels.length - 1 ) ) ];
+
+	$( "<label>" + label + "<input type='radio' name='answers'></label>" )
+
+		// We append the item to the element returned by the controlgroup's container() method
+		.appendTo( group.controlgroup( "container" ) )
+		.children()
+		.checkboxradio();
+	group.controlgroup( "refresh" );
+});
+		]]></code>
+	</example>
 	<category slug="widgets"/>
 </entry>
