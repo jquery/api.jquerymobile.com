@@ -99,7 +99,7 @@ $( "input" ).slider();
 		<h2>Flip Toggle Switch</h2>
 
 		<div class="warning">
-			<p><strong>Note:</strong> The flip toggle switch feature is deprecated as of jQuery Mobile 1.4.0. Use the Flipswitch widget instead.</p>
+			<p><strong>Note:</strong> The flip toggle switch feature is deprecated as of jQuery Mobile 1.4.0. Use the <a href="../flipswitch/">Flipswitch widget</a> instead.</p>
 		</div>
 
 		<p>A binary "flip" switch is a common UI element on mobile devices that is used for binary on/off or true/false data input. You can either drag the flip handle like a slider or tap one side of the switch.</p>
