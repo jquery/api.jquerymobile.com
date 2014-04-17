@@ -43,7 +43,7 @@
 
 		<h3>Mini collapsibles</h3>
 
-		<p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a <a href="../forms/forms-all-mini.html">mini version</a>.</p>
+		<p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a mini version.</p>
 
 <pre><code><![CDATA[
 <div data-role="collapsible" data-mini="true">
