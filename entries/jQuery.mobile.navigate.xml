@@ -4,7 +4,7 @@
 	<desc>Alter the url and track history. Works for browsers with and without the new history API.</desc>
 	<longdesc>
 		<p>The <code>$.mobile.navigate</code> method provides a uniform history manipulation API for browsers that support the new history API and those that don't (hashchange). It works in concert with the navigate event by storing and retrieving arbitrary data in association with a URL (much like <code>popState</code> and <code>replaceState</code>). When the user returns to a URL set by the navigate method the navigate event is triggered with the associated data.</p>
-		<p id="low-level" class="warning"><strong>Note:</strong> This method is a low-level utility which can be used on its own. If you use the jQuery Mobile navigation framework, you should not separately use this utility. Instead, you should use <a href="/pagecontainer/">pagecontainer</a> methods to influence the navigation process.</p>
+		<p id="low-level" class="warning"><strong>Note:</strong> This method is a low-level utility which can be used on its own. If you use the jQuery Mobile navigation framework, you should not separately use this utility. Instead, you should use <a href="/pagecontainer/">pagecontainer</a> methods to navigate to another page.</p>
 	</longdesc>
 	<signature>
 		<argument name="url">
