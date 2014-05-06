@@ -4,11 +4,11 @@
 	<title>Pagecontainer Widget</title>
 	<desc>Manages a collection of pages.</desc>
 	<longdesc>
-		<h2>Smooth Navigation Between Pages</h2>
+		<h2 id="introduction">Smooth Navigation Between Pages</h2>
 		<div class="warning"><strong>Note:</strong> The <placeholder name="name"/> widget is designed to be a singleton instantiated by the framework on the <code>body</code> element. This limitation will be removed in future versions of jQuery Mobile.</div>
 		<p>jQuery Mobile's central abstraction is the use of multiple pages inside a single HTML document. The children of the <code>body</code> are all <code>div</code> elements that have been enhanced into <a href="/page/">page</a> widgets. These are jQuery Mobile pages.</p>
 		<p>Only one page is visible at a time. Upon navigation, the currently visible page is hidden, and another page is shown. Moving from one page to another is accomplished via a transition. This is not possible when navigating between HTML documents via HTTP, because the browser discards all state associated with the source page when navigating to the target page, making it impossible to perform this task via a smooth transition effect such as a fade or a slide.</p>
-		<h3>Multipage Documents</h3>
+		<h2 id="multipage">Multipage Documents</h2>
 		<p>In its simplest form, the HTML document retrieved by the browser has a <code>body</code> consisting of several <code>div</code> elements which are enhanced using the <code>page</code> widget. Each such page has an <code>id</code> attribute to distinguish it from other pages.</p>
 		<p>The pages can be interlinked using anchors. When the user clicks such an anchor, a new history entry is created, and the page to which the anchor refers is displayed by means of a smooth transition from the previous page. The example below illustrates a multipage setup. <strong>Note:</strong> If the example below animates using a fade transition instead of the slide transition requested in the anchor, it is because your browser does not support CSS 3D transforms.</p>
 <pre><code><![CDATA[
@@ -43,7 +43,7 @@
 ]]></code></pre>
 		<iframe src="/resources/pagecontainer/example1.html" style="width:100%;height:200px;border:0px;"></iframe>
 
-		<h3>HTTP-analogous navigation via Ajax</h3>
+		<h2 id="ajax-navigation">Ajax page navigation</h2>
 		<p>jQuery Mobile allows you to replace the browser's standard HTTP navigation with Ajax-based navigation. It overrides the browser's default link handling behavior. It intercepts clicks on anchors containing links to other documents and upon each such click it checks whether the document can be retrieved via Ajax. A link has to meet the following criteria in order for the document to which it links to be retrieved via Ajax:
 			<ol>
 				<li>The global configuration option <code>$.mobile.linkBindingEnabled</code> must be <code>true</code>.</li>
@@ -63,7 +63,11 @@
 		<p>If these criteria are met jQuery Mobile retrieves the document via Ajax. It is important to realize that, while the document is retrieved in its entirety, only the first jQuery Mobile page is displayed. The header and the rest of the body are discarded. Thus, it is not possible to retrieve a multi-page document via Ajax, nor is it possible to execute scripts located in the header.</p>
 
 		<p>After Ajax retrieval, jQuery Mobile displays the page via a transition. The transition can be specified on the link that opens the page using the <code>data-transition</code> attribute. If no transition is specified, then <code>$.mobile.defaultPageTransition</code> is used or, if the incoming page is a dialog, then <code>$.mobile.defaultDialogTransition</code> is used. <div class="warning"><strong>Note:</strong> The dialog widget is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0.</div></p>
-		<p>If the browser supports the <code>replaceState</code> API the location bar is updated such that it displays the URL of the document that was retrieved via Ajax. This latter step has the following implication for site/application design: Since the user can copy the URL of a page other than the start page, the application must be designed such that it can start from any of its pages. The best way to achieve this is to include jQuery Mobile and your application code in the header for all the pages of the site/application, and ensure initial state consistency during the <code>pagecreate</code> event.</p>
+		<p>If the browser supports the <code>replaceState</code> API the location bar is updated such that it displays the URL of the document that was retrieved via Ajax. This latter step has the following implications for site/application design:</p>
+		<ol>
+			<li>Since the user can copy the URL of a page other than the start page, the application must be designed such that it can start from any of its pages. The best way to achieve this is to include jQuery Mobile and your application code in the header for all the pages of the site/application, and ensure initial state consistency during the <code>pagecreate</code> event.</li>
+			<li>If your application includes widgets shared by multiple pages, such as a global navigation menu contained in a popup, then you must make sure that each page contains a copy of the popup's markup, so that the first page that is loaded defines the popup and makes it available to subsequent pages loaded into the DOM via Ajax.</li>
+		</ol>
 	</longdesc>
 
 	<added>1.4</added>
