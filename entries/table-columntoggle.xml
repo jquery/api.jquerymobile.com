@@ -12,7 +12,7 @@
 
 		<h3>Applying column chooser mode to a table</h3>
 
-		<p>The column chooser mode requires a <code>table</code> element with two attributes: <code>data-role=&quot;table&quot;</code> and <code>data-mode=&quot;columntoggle&quot;</code>. An <code>ID</code> attribute is also required on the table to associate it with the column chooser popup menu.</p>
+		<p>The column chooser mode requires a <code>table</code> element with two attributes: <code>data-role=&quot;table&quot;</code> and <code>data-mode=&quot;columntoggle&quot;</code>. An <code>id</code> attribute is also required on the table to associate it with the column chooser popup menu and the button that launches the popup. The table's <code>id</code> attribute will serve as the prefix for the button's attribute (which will append <code>-button</code> to the previx) nad the popup's attribute (which will append <code>-popup</code> to the prefix).</p>
 
 <pre><code><![CDATA[
 <table data-role="table" data-mode="columntoggle" id="my-table">
@@ -144,7 +144,7 @@
 		<p>It's fairly common to need to logically group multiple columns together under a heading group for financial or scientific data. The framework can support the most simple version of this by allowing for two rows of table headers (<code>TH</code>), with the first row containing simple <code>colspan</code> attributes to group the columns below. In this configuration, the framework will parse the first row only for the priority and expose these heading groups as the options in the column chooser popup. In this configuration, the second heading will not be exposed as columns that can be hidden or shown independently of the groupings in the chooser. </p>
 
 		<xi:include href="../includes/pre-rendered-common.xml" xmlns:xi="http://www.w3.org/2003/XInclude" />
-		<p>The columntoggle table places an anchor before the table that invokes a popup listing the columns available for showing/hiding. The ID of the popup and thus the href of the anchor should be the ID of the table suffixed by the string <code>-popup</code>. You may separately pre-enhance the popup widget, or you may allow autoinitialization to enhance it.</p>
+		<p>The columntoggle table places an anchor before the table that invokes a popup listing the columns available for showing/hiding. The ID of the popup and thus the href of the anchor should be the ID of the table suffixed by the string <code>-popup</code>. The anchor must also have an <code>id</code> attribute which is identical to that of the table, but postfixed with <code>-button</code>. This will allow the table to correctly enable/disable when you modify its <code>disabled</code> option. You may separately pre-enhance the popup widget, or you may allow autoinitialization to enhance it.</p>
 		<p>The popup widget must contain a single controlgroup widget which in turn contains all the checkboxes representing the columns of the table.</p>
 		<p>In the example below the parameter <code>data-column-btn-theme="b"</code> is added to the table explicitly to indicate that the theme applied to the "Columns..." button is not the default (<code>null</code>).</p>
 
