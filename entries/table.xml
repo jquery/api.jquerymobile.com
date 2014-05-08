@@ -89,7 +89,13 @@
 		</event>
 	</events>
 	<methods>
-		<method name="rebuild">
+		<method name="rebuild" deprecated="1.5.0">
+			<desc>Re-process the entire table to ensure it is displayed correctly.
+				<p><strong>Note:</strong>This method is deprecated as of 1.5.0. Use the <a href="#method-refresh">refresh()</a> method instead.</p>
+			</desc>
+		</method>
+		<method name="refresh">
+			<added>1.5.0</added>
 			<desc>Re-process the entire table to ensure it is displayed correctly.</desc>
 		</method>
 	</methods>
