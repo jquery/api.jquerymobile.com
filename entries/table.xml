@@ -419,7 +419,7 @@
 		<h1>jQuery Mobile Example</h1>
 	</div>
 	<div role="main" class="ui-content">
-		<table data-role="table" id="my-table" data-mode="reflow">
+		<table data-role="table" id="my-table" data-mode="reflow" class="ui-responsive">
 			<thead>
 				<tr>
 					<th>Rank</th>
