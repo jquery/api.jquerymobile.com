@@ -46,7 +46,6 @@
 			<li>Follow standard HTML table markup guidelines for proper semantics</li>
 			<li>Do not use <code>rowspan</code> or <code>colspan</code> in your tables, these aren't supported except for grouped headers (see below)</li>
 			<li>Add <code>thead</code> and <code>tbody</code> elements</li>
-			<li>Assign a unique <code>ID</code> to the table (required for the column toggle mode)</li>
 			<li>Add the <code>data-role="table"</code> to apply the responsive table plugin</li>
 			<li>The default table mode is <code>reflow</code>, so add <code>data-mode="columntoggle"</code> to change modes</li>
 			<li>The first row of the table must contain the table headers, so be sure to use <code>TH</code> instead of <code>TD</code> tags</li>
