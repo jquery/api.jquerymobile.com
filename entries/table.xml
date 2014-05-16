@@ -142,7 +142,7 @@
 <table data-role="table" class="ui-responsive">
 ]]></code></pre>
 
-		<h3>Working with grouped column headers</h3>
+		<h3 id="working-with-grouped-headers">Working with grouped column headers</h3>
 
 		<p>It's fairly common to need to logically group multiple columns together under a heading group for financial or scientific data. The framework can support the most simple version of this by allowing for two rows of table headers (<code>TH</code>), with the first row containing simple <code>colspan</code> attributes to group the columns below. In this configuration, the framework will add a class to the label of the first cell in each group to allow you to style these differently and provide aditional visual hierarchy.</p>
 
@@ -282,10 +282,6 @@
 
 		<p>The theme for the column chooser popup can be set by adding the <code>data-column-popup-theme</code> attribute to the table and specifying any swatch letter in your theme. For custom styles or scripting, all the column chooser popups can be targeted by using the <code>ui-table-columntoggle-popup</code> structural class added to these popups. To customize a single popup, use the generated <code>ID</code> based on the table <code>ID</code> that added to each specific popup (such as <code>#movie-table-popup</code>) to target a specific popup.</p>
 
-		<h3>Working with grouped column headers</h3>
-
-		<p>It's fairly common to need to logically group multiple columns together under a heading group for financial or scientific data. The framework can support the most simple version of this by allowing for two rows of table headers (<code>TH</code>), with the first row containing simple <code>colspan</code> attributes to group the columns below. In this configuration, the framework will parse the first row only for the priority and expose these heading groups as the options in the column chooser popup. In this configuration, the second heading will not be exposed as columns that can be hidden or shown independently of the groupings in the chooser.</p>
-
 		<xi:include href="../includes/pre-rendered-common.xml" xmlns:xi="http://www.w3.org/2003/XInclude" />
 		<p>The columntoggle table places an anchor before the table that invokes a popup listing the columns available for showing/hiding. The ID of the popup and thus the href of the anchor should be the ID of the table suffixed by the string <code>-popup</code>. The anchor must also have an <code>id</code> attribute which is identical to that of the table, but postfixed with <code>-button</code>. This will allow the table to correctly enable/disable when you modify its <code>disabled</code> option. You may separately pre-enhance the popup widget, or you may allow autoinitialization to enhance it.</p>
 		<p>The popup widget must contain a single controlgroup widget which in turn contains all the checkboxes representing the columns of the table.</p>
@@ -342,6 +338,8 @@
 					<dd>Default value: <code>"ui-table-reflow"</code>. This class is appended to the <code>&lt;table&gt;</code> element upon widget instantiation when it is to be turned into a reflow table. This key is provided by the <placeholder name="name"/> widget's reflow extension.</dd>
 					<dt><code>cellLabels</code></dt>
 					<dd>Default value: <code>"ui-table-cell-label</code>. This class is added to the <code>&lt;b&gt;</code> elements which play the role of headings when the <placeholder name="name"/> is rendered as a single column on narrow screens. This key is provided by the <placeholder name="name"/> widget's reflow extension.</dd>
+					<dt><code>cellLabelsTop</code></dt>
+					<dd>Default value: <code>"ui-table-cell-label-top</code>. This class is added to the <code>&lt;b&gt;</code> elements which play the role of top level headings when the <placeholder name="name"/> is rendered as a single column on narrow screens and it has <a href="#working-with-grouped-headers">grouped</a> headers. This key is provided by the <placeholder name="name"/> widget's reflow extension.</dd>
 					<dt><code>popup</code></dt>
 					<dd>Default value: <code>"ui-table-columntoggle-popup"</code>. This class is added to the popup containing the column checklist. This key is provided by the <placeholder name="name"/> widget's columntoggle extension.</dd>
 					<dt><code>columnBtn</code></dt>
