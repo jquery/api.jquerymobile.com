@@ -341,9 +341,9 @@
 					<dt><code>cellLabelsTop</code></dt>
 					<dd>Default value: <code>"ui-table-cell-label-top</code>. This class is added to the <code>&lt;b&gt;</code> elements which play the role of top level headings when the <placeholder name="name"/> is rendered as a single column on narrow screens and it has <a href="#working-with-grouped-headers">grouped</a> headers. This key is provided by the <placeholder name="name"/> widget's reflow extension.</dd>
 					<dt><code>popup</code></dt>
-					<dd>Default value: <code>"ui-table-columntoggle-popup"</code>. This class is added to the popup containing the column checklist. This key is provided by the <placeholder name="name"/> widget's columntoggle extension.</dd>
+					<dd>Default value: <code>"ui-table-columntoggle-popup"</code>. This class is added to the popup containing the column checklist. This key is provided by the <placeholder name="name"/> widget's columntoggle popup extension.</dd>
 					<dt><code>columnBtn</code></dt>
-					<dd>Default value: <code>"ui-table-columntoggle-btn"</code>. This class is added to the button that brings up the column checklist. This key is provided by the <placeholder name="name"/> widget's columntoggle extension.</dd>
+					<dd>Default value: <code>"ui-table-columntoggle-btn"</code>. This class is added to the button that brings up the column checklist. This key is provided by the <placeholder name="name"/> widget's columntoggle popup extension.</dd>
 					<dt><code>priorityPrefix</code></dt>
 					<dd>Default value: <code>"ui-table-priority-"</code>. The table constructs a class name from this prefix by appending the value of the <code>data-priority</code> attribute it finds on the column header, if any. It then applies the resulting class to all cells under the column header. This key is provided by the <placeholder name="name"/> widget's columntoggle extension.</dd>
 					<dt><code>columnToggleTable</code></dt>
@@ -353,24 +353,28 @@
 		</option>
 		<option name="columnBtnText" type="String" default='default: "Columns..."' example-value='"Show columns"'>
 			<desc>Sets the text prompt for the column chooser button.
+				<p>This option is provided by the <code>columntoggle.popup</code> extension.</p>
 				<p>This option is also exposed as a data attribute:<code>data-column-btn-text="Show columns"</code>.</p>
 			</desc>
 		</option>
 		<option name="columnBtnTheme" type="String" default="null, inherited from parent" example-value='"b"'>
 			<desc>Sets the color scheme (swatch) for the button that opens the column checklist. It accepts a single letter from a-z that maps to the swatches included in your theme.
 				<p>Possible values: swatch letter (a-z).</p>
+				<p>This option is provided by the <code>columntoggle.popup</code> extension.</p>
 				<p>This option is also exposed as a data attribute: <code>data-column-btn-theme="b"</code>.</p>
 			</desc>
 		</option>
 		<option name="columnButton" type="Boolean" default="true" example-value="false">
 			<desc>A button will be displayed allowing the user to open the popup displaying the list of columns whenever this option is set to <code>true</code>.
 				<p>The button is placed such that it precedes the table in the DOM order.</p>
+				<p>This option is provided by the <code>columntoggle.popup</code> extension.</p>
 				<p>This option is also exposed as a data attribute: <code>data-column-button="true"</code>.</p>
 			</desc>
 		</option>
 		<option name="columnPopupTheme" type="String" default="null, inherited from parent" example-value='"b"'>
 			<desc>Sets the color scheme (swatch) for the popup that shows the column checklist. It accepts a single letter from a-z that maps to the swatches included in your theme.
 				<p>Possible values: swatch letter (a-z).</p>
+				<p>This option is provided by the <code>columntoggle.popup</code> extension.</p>
 				<p>This option is also exposed as a data attribute: <code>data-column-popup-theme="b"</code>.</p>
 			</desc>
 		</option>
@@ -385,7 +389,7 @@
 					<dt><code>"reflow"</code></dt>
 					<dd>Indicates that the table should handle narrow screens using functionality provided by the <a href="#reflow">reflow</a> extension.</dd>
 					<dt><code>"columntoggle"</code></dt>
-					<dd>Indicate sthat the table should handle narrow screens using functionality provided by the <a href="#columntoggle">columntoggle</a> extension.</dd>
+					<dd>Indicates that the table should handle narrow screens using functionality provided by the <a href="#columntoggle">columntoggle</a> extension.</dd>
 				</dl>
 				<p>This option is also exposed as a data attribute: <code>data-mode="columntoggle"</code>.</p>
 			</desc>
