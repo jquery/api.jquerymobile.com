@@ -54,7 +54,10 @@ $( "[type='submit']" ).button();
 	<options>
 		<option name="corners" default="true" example-value="false">
 			<desc>Applies the theme button border-radius if set to true.
-				<p>This option is also exposed as a data attribute: <code>data-corners="false"</code>.</p>
+				<p>If you want to disable this option, you should add the new negate class<code>(ui-corner-none)</code> at <code>data-wrapper-class</code>.</p>
+                  <pre><code><![CDATA[
+<input type="button" data-wrapper-class="ui-corner-none" value="The Button"></input>
+]]></code>
 			</desc>
 			<type name="Boolean" />
 		</option>
@@ -91,7 +94,10 @@ $( "[type='submit']" ).button();
 		<xi:include href="../includes/widget-option-mini.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="shadow" default="true">
 			<desc>Applies the drop shadow style to the <placeholder name="name"/> if set to true.
-				<p>This option is also exposed as a data attribute: <code>data-shadow="false"</code>.</p>
+				<p>If you want to disable this option, you should add the new negate class<code>(ui-shadow-none)</code> at <code>data-wrapper-class</code>.</p>
+				<pre><code><![CDATA[
+<input type="button" data-wrapper-class="ui-shadow-none" value="The Button"></input>
+]]></code></pre>
 			</desc>
 			<type name="Boolean" />
 		</option>
