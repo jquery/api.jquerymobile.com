@@ -355,11 +355,17 @@
 			<desc>Sets the text prompt for the column chooser button.
 				<p>This option is also exposed as a data attribute:<code>data-column-btn-text="Show columns"</code>.</p>
 			</desc>
-	</option>
+		</option>
 		<option name="columnBtnTheme" type="String" default="null, inherited from parent" example-value='"b"'>
 			<desc>Sets the color scheme (swatch) for the button that opens the column checklist. It accepts a single letter from a-z that maps to the swatches included in your theme.
 				<p>Possible values: swatch letter (a-z).</p>
 				<p>This option is also exposed as a data attribute: <code>data-column-btn-theme="b"</code>.</p>
+			</desc>
+		</option>
+		<option name="columnButton" type="Boolean" default="true" example-value="false">
+			<desc>A button will be displayed allowing the user to open the popup displaying the list of columns whenever this option is set to <code>true</code>.
+				<p>The button is placed such that it precedes the table in the DOM order.</p>
+				<p>This option is also exposed as a data attribute: <code>data-column-button="true"</code>.</p>
 			</desc>
 		</option>
 		<option name="columnPopupTheme" type="String" default="null, inherited from parent" example-value='"b"'>
