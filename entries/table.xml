@@ -340,14 +340,18 @@
 					<dd>Default value: <code>"ui-table-cell-label</code>. This class is added to the <code>&lt;b&gt;</code> elements which play the role of headings when the <placeholder name="name"/> is rendered as a single column on narrow screens. This key is provided by the <placeholder name="name"/> widget's reflow extension.</dd>
 					<dt><code>cellLabelsTop</code></dt>
 					<dd>Default value: <code>"ui-table-cell-label-top</code>. This class is added to the <code>&lt;b&gt;</code> elements which play the role of top level headings when the <placeholder name="name"/> is rendered as a single column on narrow screens and it has <a href="#working-with-grouped-headers">grouped</a> headers. This key is provided by the <placeholder name="name"/> widget's reflow extension.</dd>
-					<dt><code>popup</code></dt>
-					<dd>Default value: <code>"ui-table-columntoggle-popup"</code>. This class is added to the popup containing the column checklist. This key is provided by the <placeholder name="name"/> widget's columntoggle popup extension.</dd>
-					<dt><code>columnBtn</code></dt>
-					<dd>Default value: <code>"ui-table-columntoggle-btn"</code>. This class is added to the button that brings up the column checklist. This key is provided by the <placeholder name="name"/> widget's columntoggle popup extension.</dd>
+					<dt><code>cellHidden</code></dt>
+					<dd>Default value: <code>"ui-table-cell-hidden"</code>. This class is added to all cells in a column that the user has forced into the hidden state by calling the <a href="#method-toggleColumn">toggleColumn()</a> method or by unchecking a checkbox in the popup menu. This key is provided by the <placeholder name="name"/> widget's columntoggle extension.</dd>
+					<dt><code>cellVisible</code></dt>
+					<dd>Default value: <code>"ui-table-cell-visible"</code>. This class is added to all cells in a column that the user has forced into the visible state by calling the <a href="#method-toggleColumn">toggleColumn()</a> method or by checking a checkbox in the popup menu. This key is provided by the <placeholder name="name"/> widget's columntoggle extension.</dd>
 					<dt><code>priorityPrefix</code></dt>
 					<dd>Default value: <code>"ui-table-priority-"</code>. The table constructs a class name from this prefix by appending the value of the <code>data-priority</code> attribute it finds on the column header, if any. It then applies the resulting class to all cells under the column header. This key is provided by the <placeholder name="name"/> widget's columntoggle extension.</dd>
 					<dt><code>columnToggleTable</code></dt>
 					<dd>Default value: <code>"ui-table-columntoggle"</code>. This class is appended to the <code>&lt;table&gt;</code> upon widget instantiation when it is to be turned into a columntoggle table. This key is provided by the <placeholder name="name"/> widget's columntoggle extension.</dd>
+					<dt><code>popup</code></dt>
+					<dd>Default value: <code>"ui-table-columntoggle-popup"</code>. This class is added to the popup containing the column checklist. This key is provided by the <placeholder name="name"/> widget's columntoggle popup extension.</dd>
+					<dt><code>columnBtn</code></dt>
+					<dd>Default value: <code>"ui-table-columntoggle-btn"</code>. This class is added to the button that brings up the column checklist. This key is provided by the <placeholder name="name"/> widget's columntoggle popup extension.</dd>
 				</dl>
 			</desc>
 		</option>
@@ -416,6 +420,21 @@
 		<method name="refresh">
 			<added>1.5.0</added>
 			<desc>Re-process the entire table to ensure it is displayed correctly.</desc>
+		</method>
+		<method name="setColumnVisibility" added="1.5.0">
+			<desc>Sets the visibility of a column.</desc>
+			<argument name="column">
+				<desc>
+					<p>This argument may be set to either a number or a jQuery collection object.</p>
+					<p>When set to a number, the value of this argument is the zero-based DOM order index of the cell located in the table header's first row whose column's visibility is to be set.</p>
+					<p>When set to a jQuery collection object, the value of this argument is a jQuery collection object containing a cell from the column whose visibility is to be set. Only the first item in the collection object is used.</p>
+				</desc>
+				<type name="Number"></type>
+				<type name="jQuery"></type>
+			</argument>
+			<argument name="visible" type="Boolean">
+				<desc>When true, it causes the column to be always shown. When false, it causes the column to be always hidden.</desc>
+			</argument>
 		</method>
 	</methods>
 	<example>
