@@ -52,9 +52,13 @@ $( "[type='submit']" ).button();
 		</longdesc>
 	<added>1.0</added>
 	<options>
-		<option name="corners" default="true" example-value="false">
-			<desc>Applies the theme button border-radius if set to true.
-				<p>This option is also exposed as a data attribute: <code>data-corners="false"</code>.</p>
+		<option name="corners" default="true"  deprecated="1.5.0" example-value="false" >
+			<desc><strong>This option is deprecated in 1.5.0 and will be removed in 1.6.0.</strong>
+				<p>Applies the theme button border-radius if set to true.</p>
+				<p>If you want to disable this option, you should add the new negate class<code>(ui-corner-none)</code> at <code>data-wrapper-class</code>.</p>
+				<pre><code><![CDATA[
+<input type="button" data-wrapper-class="ui-corner-none" value="The Button"></input>
+]]></code></pre>
 			</desc>
 			<type name="Boolean" />
 		</option>
@@ -89,9 +93,13 @@ $( "[type='submit']" ).button();
 			<type name="Boolean" />
 		</option>
 		<xi:include href="../includes/widget-option-mini.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="shadow" default="true">
-			<desc>Applies the drop shadow style to the <placeholder name="name"/> if set to true.
-				<p>This option is also exposed as a data attribute: <code>data-shadow="false"</code>.</p>
+		<option name="shadow" default="true" deprecated="1.5.0">
+			<desc><strong>This option is deprecated in 1.5.0 and will be removed in 1.6.0.</strong>
+				<p>Applies the drop shadow style to the <placeholder name="name"/> if set to true.</p>
+				<p>If you want to disable this option, you should add the new negate class<code>(ui-shadow-none)</code> at <code>data-wrapper-class</code>.</p>
+				<pre><code><![CDATA[
+<input type="button" data-wrapper-class="ui-shadow-none" value="The Button"></input>
+]]></code></pre>
 			</desc>
 			<type name="Boolean" />
 		</option>
