@@ -90,7 +90,7 @@
 <td>1941</td>
 ]]></code></pre>
 
-		<p>an element is added before the text of each cell with a <code>class</code> of <code>ui-table-cell-label</code>:</p>
+		<p>An element is added before the text of each cell with a <code>class</code> of <code>ui-table-cell-label</code>:</p>
 <pre><code><![CDATA[
 <td><b class="ui-table-cell-label">Year</b>1941</td>
 ]]></code></pre>
@@ -136,7 +136,7 @@
 		<p>We recommend writing media query widths in <code>em</code>s so they respond to font size changes. To convert a pixel width into <code>em</code>s, divide the target width by 16 (pixels). Use this value for the <code>min-width</code> value in the media query above.</p>
 
 		<h3>Applying a preset breakpoint</h3>
-		<p>Even though we strongly encourage you to write custom breakpoints yourself, the framework includes a single pre-configured breakpoint that targets the stacked style to smaller phones and swaps to a tabular prsentation on larger phones, tablet and desktop devices. To use this preset breakpoint, add the <code>ui-responsive</code> class to the table to convert from the stacked presentation to a tabular presentation at 560px (35em). If this breakpoint doesn't work for your content, we encourage you to write a custom breakpoint as descibed above.</p>
+		<p>Even though we strongly encourage you to write custom breakpoints yourself, the framework includes a single pre-configured breakpoint that targets the stacked style to smaller phones and swaps to a tabular prsentation on larger phones, tablet and desktop devices. To use this preset breakpoint, add the <code>ui-responsive</code> class to the table to convert from the stacked presentation to a tabular presentation at 560px (35em). If this breakpoint doesn't work for your content, we encourage you to write a custom breakpoint as described above.</p>
 
 <pre><code><![CDATA[
 <table data-role="table" class="ui-responsive">
@@ -155,7 +155,7 @@
 
 		<h3>Applying column chooser mode to a table</h3>
 
-		<p>The column chooser mode requires a <code>table</code> element with two attributes: <code>data-role=&quot;table&quot;</code> and <code>data-mode=&quot;columntoggle&quot;</code>. An <code>id</code> attribute is also required on the table to associate it with the column chooser popup menu and the button that launches the popup. The table's <code>id</code> attribute will serve as the prefix for the button's attribute (which will append <code>-button</code> to the previx) nad the popup's attribute (which will append <code>-popup</code> to the prefix).</p>
+		<p>The column chooser mode requires a <code>table</code> element with two attributes: <code>data-role=&quot;table&quot;</code> and <code>data-mode=&quot;columntoggle&quot;</code>. An <code>id</code> attribute is also required on the table to associate it with the column chooser popup menu and the button that launches the popup. The table's <code>id</code> attribute will serve as the prefix for the button's attribute (which will append <code>-button</code> to the prefix) and the popup's attribute (which will append <code>-popup</code> to the prefix).</p>
 
 <pre><code><![CDATA[
 <table data-role="table" data-mode="columntoggle" id="my-table">
@@ -358,7 +358,7 @@
 		<option name="columnBtnText" type="String" default='default: "Columns..."' example-value='"Show columns"'>
 			<desc>Sets the text prompt for the column chooser button.
 				<p>This option is provided by the <code>columntoggle.popup</code> extension.</p>
-				<p>This option is also exposed as a data attribute:<code>data-column-btn-text="Show columns"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-column-btn-text="Show columns"</code>.</p>
 			</desc>
 		</option>
 		<option name="columnBtnTheme" type="String" default="null, inherited from parent" example-value='"b"'>
