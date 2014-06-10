@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../entries2html.xsl" ?>
 <entry name="filterable" namespace="fn" type="widget" widgetnamespace="mobile" event-prefix="filterable" init-selector=":jqmData(filter=&#39;true&#39;)">
-	<title>Filterable Content</title>
+	<title>Filterable Widget</title>
 	<desc>Makes the children of an element filterable.</desc>
 	<longdesc>
-		<h2>Filterable Content</h2>
+		<h2>Filterable Widget</h2>
 		<p>The <placeholder name="name"/> widget allows you to filter the children of an element. The filtering is accomplished by applying the class <code>ui-screen-hidden</code> to those children for which a filter callback function provided via the widget's <code>filterCallback</code> option returns <code>true</code>.</p>
 		<h3>Backwards compatibility</h3>
 		<strong>The <placeholder name="name"/> widget features provided for backwards compatibility are deprecated as of 1.4.0 and will be removed in 1.5.0.</strong>
