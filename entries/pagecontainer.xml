@@ -43,7 +43,7 @@
 ]]></code></pre>
 		<iframe src="/resources/pagecontainer/example1.html" style="width:100%;height:200px;border:0px;"></iframe>
 
-		<h2 id="ajax-navigation">HTTP-analogous navigation via Ajax</h2>
+		<h2 id="ajax-navigation">Ajax page navigation</h2>
 		<p>jQuery Mobile allows you to replace the browser's standard HTTP navigation with Ajax-based navigation. It overrides the browser's default link handling behavior. It intercepts clicks on anchors containing links to other documents and upon each such click it checks whether the document can be retrieved via Ajax. A link has to meet the following criteria in order for the document to which it links to be retrieved via Ajax:
 			<ol>
 				<li>The global configuration option <code>$.mobile.linkBindingEnabled</code> must be <code>true</code>.</li>
