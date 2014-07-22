@@ -19,7 +19,7 @@
 
 		<h3>Mini version</h3>
 
-		<p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a mini version.</p>
+		<p>For a more compact version that is useful in toolbars and tight spaces, add the class <code>ui-mini</code> to the element's <code>data-wrapper-class</code> attribute to create a mini version.</p>
 
 <pre><code><![CDATA[
 <label for="basic">Text Input:</label>
@@ -221,17 +221,32 @@ $( ".mySearchInput" ).textinput();
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="corners" default="true" example-value="false">
-			<desc>Applies the theme border radius if set to <code>true</code> by adding the class <code>ui-corner-all</code> to the <placeholder name="name"/> widget's outermost element.
+		<option name="corners" default="true" example-value="false" deprecated="1.5.0">
+			<desc>
+				<p class="warning"><strong>This option is deprecated as of jQuery Mobile 1.5.0.</strong>Applies the theme border radius if set to <code>true</code> by adding the class <code>ui-corner-all</code> to the <placeholder name="name"/> widget's outermost element.</p>
+				<p>Add class <code>ui-corner-none</code> to the <a href="#option-wrapperClass">wrapperClass</a> option to disable this option.</p>
 				<p>This option is also exposed as a data attribute: <code>data-corners="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
+<pre><code><![CDATA[
+<div class="ui-field-contain">
+	<label for="text-15">ui-corner-none</label>
+	<input type="text" data-wrapper-class="ui-corner-none">
+</div>
+]]></code></pre>
 		</option>
 		<xi:include href="../includes/widget-option-defaults.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-enhanced.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/widget-option-mini.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<option name="mini" default="null (false)" deprecated="1.5.0">
+			<desc>
+				<p class="warning"><strong>This option is deprecated as of jQuery Mobile 1.5.0.</strong> Add class <code>ui-mini</code> to the <a href="#option-wrapperClass">wrapperClass</a> option to achieve the mini look.</p>
+				<p>If set to <code>true</code>, this will display a more compact version of the <placeholder name="name"/> that uses less vertical height by applying the <code>ui-mini</code> class to the outermost element of the <placeholder name="name"/> widget.</p>
+				<p>This option is also exposed as a data attribute: <code>data-mini="true"</code>.</p>
+			</desc>
+		<type name="Boolean" />
+		</option>
 		<option name="preventFocusZoom" default="true on iOS platforms" example-value="true">
 			<desc>Attempts to prevent the device from focusing in on the input element when the element receives the focus.
 				<p>This option is also exposed as a data attribute: <code>data-prevent-focus-zoom="true"</code>.</p>
