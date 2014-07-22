@@ -385,7 +385,7 @@ $( document ).on( "pageinit", function() {
 	<div role="main" class="ui-content">
 		<a href="#pre-rendered" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Open pre-rendered popup</a>
 	</div>
-	&lt;!-- the following two divs represent the pre-rendered popup widget --&gt;
+	<!-- the following two divs represent the pre-rendered popup widget -->
 	<div class="ui-popup-screen ui-overlay-b ui-screen-hidden"></div>
 	<div class="ui-popup-container ui-popup-hidden ui-popup-truncate" id="pre-rendered-popup">
 		<div class="ui-popup ui-body-inherit ui-overlay-shadow ui-corner-all" id="pre-rendered" data-role="popup" data-enhanced="true" data-overlay-theme="b">
