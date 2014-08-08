@@ -525,7 +525,7 @@ $( ":mobile-pagecontainer" ).on( "pagecontainershow", function( event, ui ) {
 				<property name="role" type="String" default="undefined">
 					<desc>The data-role value to be used when displaying the page. By default this is <code>undefined</code> which means rely on the value of the @data-role attribute defined on the element.</desc>
 				</property>
-				<property name="showLoadMsg" default="true" type="Boolean">
+				<property name="showLoadMsg" default="false" type="Boolean">
 					<desc>Whether to display a message indicating that the page is loading.</desc>
 				</property>
 				<property name="transition" type="String" default="undefined">
