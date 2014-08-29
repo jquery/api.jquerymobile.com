@@ -506,6 +506,15 @@ $( ":mobile-pagecontainer" ).on( "pagecontainershow", function( event, ui ) {
 						</table>
 					</desc>
 				</property>
+				<property name="data" default="undefined">
+					<desc>The data to send with an Ajax page request.</desc>
+					<type name="Object">
+						<desc></desc>
+					</type>
+					<type name="String">
+						<desc></desc>
+					</type>
+				</property>
 				<property name="dataUrl" type="String" default="undefined">
 					<desc>The URL to use when updating the browser location upon <code>change()</code> completion. If not specified, the value of the data-url attribute of the page element is used.</desc>
 				</property>
