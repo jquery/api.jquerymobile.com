@@ -12,7 +12,7 @@
 	<title>Example illustrating use of the "mobileinit" event</title>
 	<meta charset=utf-8 />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet"  href="//code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+	<link rel="stylesheet"  href="//code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
 	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script>
 // Update configuration to our liking
@@ -25,7 +25,7 @@ $( document ).on( "mobileinit", function() {
 	$.mobile.ns = "jqm-";
 });
 	</script>
-	<script src="//code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+	<script src="//code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
 </head>
 <body>
 	<div data-jqm-role="page">
