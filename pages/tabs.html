@@ -7,7 +7,12 @@
 	}
 }</script>
 
-<p>This widget is imported unchanged from <a href="http://jqueryui.com/">jQuery UI</a>. Nevertheless, in keeping with jQuery Mobile widget features, the options documented on its jQuery UI API <a href="http://api.jqueryui.com/tabs/">reference</a> page are also available as <code>data-*</code> attributes.</p>
+<h2>Tabs</h2>
+<p>The jQuery UI tabs widget is bundled unchanged with jQuery Mobile. Thus, it's <a href="//api.jqueryui.com/tabs/">API documentation</a> fully describes its functionality.</p>
+<h2>Options and autoinitialization</h2>
+<p>When used with jQuery Mobile's autoinitialization features, the options documented on the widget's API documentation page can also be provided as <code>data-*</code> attributes in the markup. You can add the <code>data-role="tabs"</code> attribute to your tabs widget markup to indicate that the element is to be turned into a tabs widget.</p>
+<h2>Ajax considerations</h2>
+<p>jQuery Mobile provides an extension to the tabs widget (<code>tabs.ajax</code>). The extension provides no new API, however, it modifies the way in which the widget evaluates whether displaying the content referred to by the <code>href</code> attributes of the links that play the role of tabs requires retrieval via Ajax. It is necessary to include this extension if your project consists of multiple external jQuery Mobile pages, one of which features a tabs widget.</p>
 
 <section class="entry-examples" id="entry-examples">
 	<header><h2>Example:</h2></header>
