@@ -37,7 +37,7 @@
 		<p>The handler is bound to the <code>popupbeforeposition</code> event, which ensures the image is not only scaled before it is shown but also when the window is resized (e.g. orientation change). In this code example the height is reduced by 60 to take a top and bottom tolerance of 30 pixels into account.</p>
 
 <pre><code><![CDATA[
-$( document ).on( "pageinit", function() {
+$( document ).on( "pagecreate", function() {
     $( ".photopopup" ).on({
         popupbeforeposition: function() {
             var maxHeight = $( window ).height() - 60 + "px";
