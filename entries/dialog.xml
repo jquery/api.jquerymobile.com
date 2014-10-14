@@ -5,7 +5,7 @@
 	<desc>Opens content in an interactive overlay.</desc>
 	<longdesc>
 		<div class="warning">
-		<strong>Dialogs are deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. The <code>dialog</code> option provided by the <code>page.dialog</code> extension of the <a href="/page/">page</a> widget allows you to style a page as a dialog, however, the special navigational handling will be removed. You may also consider implementing dialogs using <a href="/popup/">popup</a> widgets.</strong></div>
+		<strong>Note:</strong> Dialogs are deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. The <code>dialog</code> option provided by the <code>page.dialog</code> extension of the <a href="/page/">page</a> widget allows you to style a page as a dialog, however, the special navigational handling will be removed. You may also consider implementing dialogs using <a href="/popup/">popup</a> widgets.</div>
 		<p>Any page can be presented as a modal dialog by adding the <code>data-rel="dialog"</code> attribute to the page anchor link. When the "dialog" attribute is applied, the framework adds styles to add rounded corners, margins around the page and a dark background to make the "dialog" appear to be suspended above the page.</p>
 <pre><code><![CDATA[
 <a href="foo.html" data-rel="dialog">Open dialog</a>
