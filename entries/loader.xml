@@ -32,7 +32,7 @@ $.mobile.loading( "show", {
 	<options>
 		<xi:include href="../includes/widget-option-defaults.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="html" default='""' example-value='"&lt;span class=&quot;ui-icon ui-icon-loading&quot;&gt;&lt;img src=&quot;jquery-logo.png&quot; /&gt;&lt;h2&gt;is loading for you ...&lt;/h2&gt;&lt;/span&gt;"'>
+		<option name="html" default='""' example-value='"&lt;span class=&#39;ui-icon ui-icon-loading&#39;&gt;&lt;img src=&#39;jquery-logo.png&#39; /&gt;&lt;h2&gt;is loading for you ...&lt;/h2&gt;&lt;/span&gt;"'>
 			<desc>If this is set to a non empty string value, it will be used to replace the entirety of the loader's inner html.</desc>
 			<type name="string" />
 		</option>
