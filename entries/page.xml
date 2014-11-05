@@ -28,7 +28,7 @@
 				<a href="#" id="exit-button" class="ui-btn ui-btn-b ui-shadow ui-corner-all">Exit</a>
 			</div>
 			<div class="ui-block-b">
-				<a href="#" id="cancel-button" class="ui-btn ui-shadow ui-corner-all">Canel</a>
+				<a href="#" id="cancel-button" class="ui-btn ui-shadow ui-corner-all">Cancel</a>
 			</div>
 		</div>
 	</div>
