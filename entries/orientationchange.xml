@@ -4,12 +4,12 @@
 	<desc>Device portrait/landscape orientation event</desc>
 	<longdesc>
 		<p>The jQuery Mobile <code>orientationchange</code> event triggers when a device orientation changes, either by turning the device vertically or horizontally. When bound to this event the callback function has the event object. The event object contains an <code>orientation</code> property equal to either <code>"portrait"</code> or <code>"landscape"</code>.</p>
-		<p>Note that we bind to the browser's resize event when <code>orientationchange</code> is not natively supported or if <code>$.mobile.orientationChangeEnabled</code> is set to <code>false</code>.</p>
+		<p>Note that we bind to the browser's resize event when <code>orientationchange</code> is not natively supported or if <code>$.event.special.orientationchange.disabled</code> is set to <code>true</code>.</p>
 
 		<div class="warning">
 			<h3>orientationchange timing</h3>
 
-			<p>The timing of the <code>orientationchange</code> event with relation to the change of the client height and width is different between browsers, though the current implementation will give you the correct value for <code>event.orientation</code> derived from <code>window.orientation</code>. This means that if your bindings are dependent on the height and width values you may want to disable <code>orientationChange</code> altogether with <code>$.mobile.orientationChangeEnabled = false</code> to let the fallback resize code trigger your bindings.</p>
+			<p>The timing of the <code>orientationchange</code> event with relation to the change of the client height and width is different between browsers, though the current implementation will give you the correct value for <code>event.orientation</code> derived from <code>window.orientation</code>. This means that if your bindings are dependent on the height and width values you may want to disable <code>orientationChange</code> altogether with <code>$.event.special.orientationchange.disabled = true</code> to let the fallback resize code trigger your bindings.</p>
 		</div>
 	</longdesc>
 	<added>1.0</added>
