@@ -10,7 +10,7 @@
 			As of jQuery Mobile 1.4.0, the <code>initSelector</code> is no longer a widget option. Instead, it is declared directly on the widget prototype. Thus, you may specify a custom value by handling the <code>mobileinit</code> event and overwriting the <code>initSelector</code> on the prototype:</p>
 <pre><code>
 $( document ).on( "mobileinit", function() {
-	$.mobile.<placeholder name="name"/>.prototype.initSelector = "div.custom";
+	$.mobile.<placeholder name="name"/>.initSelector = "div.custom";
 });
 </code></pre>
 		</div>
