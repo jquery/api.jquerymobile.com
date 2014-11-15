@@ -432,7 +432,7 @@ $( document ).on( "pageloadfailed", function( event, data ) {
 			</argument>
 		</event>
 		<event name="show">
-			<desc>Triggered after the transition animation has completed.<strong>Note:</strong> Unlike the deprecated <code>pageshow</code> event, this event is not triggered on the "toPage" but the <placeholder name="name"/> widget's element.
+			<desc>Triggered after the transition animation has completed. <strong>Note:</strong> Unlike the deprecated <code>pageshow</code> event, this event is not triggered on the "toPage" but the <placeholder name="name"/> widget's element.
 				<p>You can access the <code>prevPage</code> properties via the second argument of a bound callback function. For example: </p>
 <pre><code><![CDATA[
 $( ":mobile-pagecontainer" ).on( "pagecontainershow", function( event, ui ) {
