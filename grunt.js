@@ -1,3 +1,5 @@
+var rimraf = require( "rimraf" );
+
 /*jshint node:true */
 module.exports = function( grunt ) {
 
@@ -5,15 +7,11 @@ module.exports = function( grunt ) {
 
 var entryFiles = grunt.file.expandFiles( "entries/*.xml" );
 
-grunt.loadNpmTasks( "grunt-clean" );
 grunt.loadNpmTasks( "grunt-wordpress" );
 grunt.loadNpmTasks( "grunt-jquery-content" );
 grunt.loadNpmTasks( "grunt-check-modules" );
 
 grunt.initConfig({
-	clean: {
-		folder: "dist"
-	},
 	lint: {
 		grunt: "grunt.js"
 	},
@@ -44,6 +42,10 @@ grunt.initConfig({
 			}
 		}
 	}
+});
+
+grunt.registerTask( "clean", function() {
+	rimraf.sync( "dist" );
 });
 
 grunt.registerTask( "default", "build-wordpress" );
