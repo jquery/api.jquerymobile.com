@@ -3,7 +3,7 @@
 	<title>pagebeforecreate</title>
 	<desc>Triggered on the page being initialized, before most plugin auto-initialization occurs.</desc>
 	<longdesc>
-		<p><strong>Note:</strong>This event is part of the <code><a href="/page/">page</a></code> widget as of jQuery Mobile 1.4.0. Please consult the documentation for the page widget's <a href="/page/#event-create">implementation</a>.</p>
+		<p><strong>Note:</strong> This event is part of the <code><a href="/page/">page</a></code> widget as of jQuery Mobile 1.4.0. Please consult the documentation for the page widget's <a href="/page/#event-create">implementation</a>.</p>
 	</longdesc>
 	<added>1.0</added>
 	<signature>
