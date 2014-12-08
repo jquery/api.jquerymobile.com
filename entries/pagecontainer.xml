@@ -10,7 +10,8 @@
 		<p>Only one page is visible at a time. Upon navigation, the currently visible page is hidden, and another page is shown. Moving from one page to another is accomplished via a transition. This is not possible when navigating between HTML documents via HTTP, because the browser discards all state associated with the source page when navigating to the target page, making it impossible to perform this task via a smooth transition effect such as a fade or a slide.</p>
 		<h2 id="multipage">Multipage Documents</h2>
 		<p>In its simplest form, the HTML document retrieved by the browser has a <code>body</code> consisting of several <code>div</code> elements which are enhanced using the <code>page</code> widget. Each such page has an <code>id</code> attribute to distinguish it from other pages.</p>
-		<p>The pages can be interlinked using anchors. When the user clicks such an anchor, a new history entry is created, and the page to which the anchor refers is displayed by means of a smooth transition from the previous page. The example below illustrates a multipage setup. <strong>Note:</strong> If the example below animates using a fade transition instead of the slide transition requested in the anchor, it is because your browser does not support CSS 3D transforms.</p>
+		<p>The pages can be interlinked using anchors. When the user clicks such an anchor, a new history entry is created, and the page to which the anchor refers is displayed by means of a smooth transition from the previous page. The example below illustrates a multipage setup.
+		<strong>Note:</strong> If the example below animates using a fade transition instead of the slide transition requested in the anchor, it is because your browser does not support CSS 3D transforms.</p>
 <pre><code><![CDATA[
 <!doctype html>
 <html>
@@ -512,7 +513,10 @@ $( ":mobile-pagecontainer" ).on( "pagecontainershow", function( event, ui ) {
 					<desc>The number of milliseconds by which to delay the appearance of the loading message. If the load completes within this time, no loading message is displayed.</desc>
 				</property>
 				<property name="reloadPage" default="false" type="Boolean" deprecated="1.4.0">
-					<desc><strong>Note: This property is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Use property <code>reload</code> instead.</strong>
+					<desc>
+						<div class="warning">
+							<p><strong>Note:</strong> This property is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Use property <code>reload</code> instead.</p>
+						</div>
 						<p>Whether to force a reload of the page even when it is already in the DOM. Used only when the 'url' argument is a URL.</p>
 					</desc>
 				</property>
@@ -566,7 +570,10 @@ $( ":mobile-pagecontainer" ).on( "pagecontainershow", function( event, ui ) {
 					</type>
 				</property>
 				<property name="reloadPage" default="false" type="Boolean" deprecated="1.4.0">
-					<desc><strong>Note: This property is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Use property <code>reload</code> instead.</strong>
+					<desc>
+						<div class="warning">
+							<p><strong>Note:</strong> This property is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Use property <code>reload</code> instead.</p>
+						</div>
 						<p>Whether to force a reload of the page even when it is already in the DOM. Used only when the 'url' argument is a URL.</p>
 					</desc>
 				</property>
