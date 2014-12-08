@@ -74,7 +74,9 @@ $.mobile.back();
 		</option>
 		<option name="contentTheme" type="String" default="null, inherited from parent" example-value='"b"' deprecated="1.4.0">
 			<desc>
-				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0.</strong>
+				<div class="warning">
+					<p><strong>Note:</strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0.</p>
+				</div>
 				<p>Sets the color scheme (swatch) for the content <code>div</code> of the <placeholder name="name" /> widget. It accepts a single letter from a-z that maps to the swatches included in your theme.</p>
 				<p>Possible values: swatch letter (a-z).</p>
 				<p>This option is also exposed as a data attribute: <code>data-content-theme="b"</code>.</p>
@@ -87,9 +89,11 @@ $.mobile.back();
 			</desc>
 		</option>
 		<xi:include href="../includes/widget-option-defaults.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<option name="degradeInputs">
+		<option name="degradeInputs" deprecated="1.4.0">
 			<desc>
-				<p><strong>This option is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Use <a href="/global-config/#degradeInputs"><code>$.mobile.degradeInputs</code></a> instead.</strong></p>
+				<div class="warning">
+					<p><strong>Note:</strong>This option is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Use <a href="/global-config/#degradeInputs"><code>$.mobile.degradeInputs</code></a> instead.</p>
+				</div>
 			</desc>
 		</option>
 		<option name="dialog" type="Boolean" default="false" example-value="true">
@@ -109,7 +113,9 @@ $.mobile.back();
 		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="keepNative" default="null" example-value='".do-not-enhance"' deprecated="1.4.0">
 			<desc>
-				<p><strong>This option is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Use <code>$.mobile.keepNative</code> instead.</strong></p>
+				<div class="warning">
+					<p><strong>Note:</strong>This option is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Use <code>$.mobile.keepNative</code> instead.</p>
+				</div>
 				<p>The value of this option is a selector that will be used in addition to the <a href="#option-keepNativeDefault">keepNativeDefault</a> option to prevent elements matching it from being enhanced.</p>
 				<p>This option is also exposed as a data attribute: <code>data-keep-native=".do-not-enhance</code>.</p>
 			</desc>
@@ -117,7 +123,9 @@ $.mobile.back();
 		</option>
 		<option name="keepNativeDefault" default='":jqmData(role=&#39;none&#39;), :jqmData(role=&#39;nojs&#39;)"' example-value='".do-not-enhance"' deprecated="1.4.0">
 			<desc>
-				<p><strong>This option is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Use <code>$.mobile.keepNative</code> instead.</strong></p>
+				<div class="warning">
+					<p><strong>Note:</strong>This option is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Use <code>$.mobile.keepNative</code> instead.</p>
+				</div>
 				<p>The value of this option is a selector that will be used to prevent elements matching it from being enhanced.</p>
 				<p>This option is also exposed as a data attribute: <code>data-keep-native-default=".do-not-enhance</code>.</p>
 			</desc>
@@ -166,19 +174,25 @@ $.mobile.back();
 		</method>
 		<method name="keepNativeSelector" return="Selector" deprecated="1.4.0">
 			<desc>
-				<strong>This method is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. The new <a href="/global-config/#keepNative">keepNative</a> option replaces it.</strong>
+				<div class="warning">
+					<p><strong>Note:</strong>This method is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. The new <a href="/global-config/#keepNative">keepNative</a> option replaces it.</p>
+				</div>
 				<p>Returns the selector used to filter elements which are not to be enhanced.</p>
 			</desc>
 		</method>
 		<method name="removeContainerBackground" deprecated="1.4.0">
 			<desc>
-				<strong>This method is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0.</strong>
+				<div class="warning">
+					<p><strong>Note:</strong>This method is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0.</p>
+				</div>
 				<p>Removes the background swatch from the page widget's container (usually the body).</p>
 			</desc>
 		</method>
 		<method name="setContainerBackground" example-params='"b"' deprecated="1.4.0">
 			<desc>
-				<strong>This method is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0.</strong>
+				<div class="warning">
+					<p><strong>Note:</strong>This method is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0.</p>
+				</div>
 				<p>Sets a new background swatch for the page widget's container (usually the body).</p>
 			</desc>
 			<argument name="theme" type="String">
