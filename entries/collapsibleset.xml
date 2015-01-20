@@ -5,7 +5,7 @@
 	<desc>Creates a set of collapsible blocks of content</desc>
 	<longdesc>
 		<h2>Sets of collapsibles</h2>
-		<p>jQuery Mobile will visually style a set of <a href="/collapsible/">collapsibles</a> as a group and will make the set behave like an accordion in that only one collapsible can be open at a time if you wrap the collapsibles in a <code>div</code> that has the attribute <code>data-role="collapsibleset"</code>.</p>
+		<p>jQuery Mobile will visually style a set of <a href="/collapsible/">collapsibles</a> as a group and will make the set behave like an accordion in that only one collapsible can be open at a time if you wrap the collapsibles in a <code>div</code> that has the attribute <code>data-role="collapsible-set"</code>.</p>
 
 		<p>By default, all the collapsible sections will be collapsed. To set a section to be open when the page loads, add the <code>data-collapsed="false"</code> attribute to the heading of the section you want expanded.</p>
 
@@ -68,7 +68,7 @@
 		<p>In the example below, pre-rendered markup for a <placeholder name="name"/> is provided. The attribute <code>data-corners="false"</code> is explicitly specified, since the absence of the <code>ui-corner-all</code> class on the container element indicates that the "corners" widget option is to be false. One of the child collapsibles is provided as-is, while the other is pre-rendered.</p>
 
 <pre><code><![CDATA[
-<div data-role="collapsibleset" class="ui-collapsible-set" data-corners="false">
+<div data-role="collapsible-set" class="ui-collapsible-set" data-corners="false">
 	<div data-role="collapsible">
 		<h2>Child collapsible</h2>
 		<p>This is the collapsible content.</p>
@@ -127,7 +127,7 @@
 		"<placeholder name="init-selector"/>"
 		</code></pre>
 				<p><strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0.</strong></p>
-				<p><strong>The old value of the <placeholder name="name" /> widget's <code>initSelector</code> option (<code>":jqmData(role='collapsible-set')"</code>) is deprecated.</strong> As of jQuery Mobile 1.5.0, only widgets that have the attribute <code>data-role="collapsibleset"</code> will be enhanced as <placeholder name="name"/> widgets.</p>
+				<p><strong>The old value of the <placeholder name="name" /> widget's <code>initSelector</code> option (<code>":jqmData(role='collapsible-set')"</code>) is deprecated.</strong> As of jQuery Mobile 1.5.0, only widgets that have the attribute <code>data-role="collapsible-set"</code> will be enhanced as <placeholder name="name"/> widgets.</p>
 				<p>As of jQuery Mobile 1.4.0, the <code>initSelector</code> is no longer a widget option. Instead, it is declared directly on the widget prototype. Thus, you may specify a custom value by handling the <code>mobileinit</code> event and overwriting the <code>initSelector</code> on the prototype:</p>
 		<pre><code>
 		$( document ).on( "mobileinit", function() {
@@ -176,7 +176,7 @@
 		<h1>jQuery Mobile Example</h1>
 	</div>
 	<div role="main" class="ui-content">
-		<div data-role="collapsibleset">
+		<div data-role="collapsible-set">
 			<div data-role="collapsible" data-collapsed="false">
 				<h3>Section A</h3>
 				<p>I'm the collapsibleset content for section A.</p>
