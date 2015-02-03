@@ -9,7 +9,7 @@
 
 		<p>The <placeholder name="name"> event is triggered either by explicit navigation on the part of the user (e.g. by clicking on a link or by running code that results in a call to the pagecontainer <code>change()</code> method), or by implicit navigation caused by the user clicking the browser's "Back" or "Forward" buttons.</p>
 		<p>Explicit navigation results in both <placeholder name="name"> events being triggered before a new entry is added to the browser's navigation history.</p>
-		<p>Implicit navigation results in both <placeholder name="name"> events being triggered after the browser's navigation history has already been updated.</p>
+		<p>Implicit navigation results in both <placeholder name="name"> events being triggered after the browser's navigation history has been updated.</p>
 		<p>In addition to the <code>event</code> parameter, handlers of this event will receive a second parameter, <code>data</code>. The second parameter is an object containing the following properties:</p>
 			<ul>
 				<li><code>toPage</code> (object or string)
