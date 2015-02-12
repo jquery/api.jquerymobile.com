@@ -23,7 +23,7 @@
 		<p>This will produce a basic select menu. The default styles set the width of the input to 100% of the parent container and stacks the label on a separate line.
 		<iframe src="/resources/select/example1.html" style="width:100%;height:190px;border:0px"></iframe></p>
 
-		<h3>Mini version</h3>
+		<h2 id="mini-version">Mini version</h2>
 
 		<p>For a more compact version that is useful in toolbars and tight spaces, add the <code>data-mini="true"</code> attribute to the element to create a mini version. </p>
 
@@ -40,7 +40,7 @@
 		<p>This will produce a select that a not as tall as the standard version and has a smaller text size.
 		<iframe src="/resources/select/example2.html" style="width:100%;height:190px;border:0px"></iframe></p>
 
-		<h3>Field containers</h3>
+		<h2 id="field-containers">Field containers</h2>
 
 		<p>Optionally wrap the selects in a container with class <code>ui-field-contain</code> to help visually group it in a longer form.</p>
 		<div class="warning">
@@ -65,7 +65,7 @@
 		<p>An example of a select with a long list of options:
 		<iframe src="/resources/select/example4.html" style="width:100%;height:590px;border:0px"></iframe></p>
 
-		<h3>Optgroups</h3>
+		<h2 id="optgroups">Optgroups</h2>
 		<p>The following example organizes the options into <code>optgroup</code> elements. Support for this feature in mobile selects is a bit spotty, but is improving.</p>
 
 <pre><code><![CDATA[
@@ -94,7 +94,7 @@
 
 		<iframe src="/resources/select/example5.html" style="width:100%;height:390px;border:0px"></iframe>
 
-		<h3>Vertically grouped select inputs</h3>
+		<h2 id="vertically-grouped-select-inputs">Vertically grouped select inputs</h2>
 
 		<p>To create a grouped set of select inputs, first add <code>select</code> and a corresponding <code>label</code>. Set the <code>for</code> attribute of the <code>label</code> to match the <code>id</code> of the <code>select</code> so they are semantically associated.</p>
 
@@ -133,7 +133,7 @@
 
 		<iframe src="/resources/select/example6.html" style="width:100%;height:390px;border:0px"></iframe>
 
-		<h3>Horizontally grouped select inputs</h3>
+		<h2 id="horizontally-grouped-select-inputs">Horizontally grouped select inputs</h2>
 		<p>Select inputs can also be used for grouped sets with more than one related selections. To make a horizontal button set, add the <code>data-type="horizontal"</code> to the fieldset. Note that the buttons which trigger the select will resize depending on the currently selected option’s value.</p>
 
 <pre><code><![CDATA[
@@ -142,13 +142,13 @@
 
 		<iframe src="/resources/select/example7.html" style="width:100%;height:190px;border:0px"></iframe>
 
-		<h3>Theming selects</h3>
+		<h2 id="theming-selects">Theming selects</h2>
 
 		<p>You can specify any jQuery Mobile button <code>data-</code> attribute on a select element, too. In this example, we're setting the theme, icon and inline properties:
 		<iframe src="/resources/select/example8.html" style="width:100%;height:190px;border:0px"></iframe>
 		</p>
 
-		<h2>Custom select menus</h2>
+		<h2 id="custom-select-menus">Custom select menus</h2>
 		<p>The framework is capable of building a custom menu based on the <code>select</code> element's list of options.  We recommend using a custom menu when multiple selections are required, or when the menu itself must be styled with CSS.</p>
 
 		<p>You can optionally use custom-styled select menus instead of the native OS menu. The custom menu supports disabled options and multiple selection (whereas native mobile OS support for both is inconsistent), adds an elegant way to handle placeholder values, and restores missing functionality on certain platforms such as <code>optgroup</code> support on Android (all explained below).  In addition, the framework applies the custom button's theme to the menu to better match the look and feel and provide visual consistency across platforms. Lastly, custom menus often look better on desktop browsers because native desktop menus are smaller than their mobile counterparts and tend to look disproportionate.</p>
@@ -170,13 +170,13 @@ $(document).on( "mobileinit", function() {
 		<iframe src="/resources/select/example10.html" style="width:100%;height:590px;border:0px"></iframe></p>
 		<p class="warning"><strong>Note:</strong> The behavior whereby the custom select menu creates a new page when the list of options is long is deprecated as of jQuery Mobile 1.4.0. Starting with 1.5.0, the custom select menu will fall back to utilizing the select menu's native behavior when the list of options is too long.</p>
 
-		<h3>Disabled options</h3>
+		<h2 id="disabled-options">Disabled options</h2>
 
 		<p>jQuery Mobile will automatically disable and style option tags with the <code>disabled</code> attribute.  In the demo below, the second option &quot;Rush: 3 days&quot; has been set to disabled.
 
 		<iframe src="/resources/select/example11.html" style="width:100%;height:270px;border:0px"></iframe></p>
 
-		<h3>Placeholder options</h3>
+		<h2 id="placeholder-options">Placeholder options</h2>
 		<p>It's common for developers to include a &quot;null&quot; option in their select element to force a user to choose an option. If a placeholder option is present in your markup, jQuery Mobile will hide them in the overlay menu, showing only valid choices to the user, and display the placeholder text inside the menu as a header.  A placeholder option is added when the framework finds:</p>
 		<ul>
 			<li>An option with no value attribute</li>
@@ -194,7 +194,7 @@ $.mobile.selectmenu.prototype.options.hidePlaceholderMenuItems = false;
 		<p>Examples of various placeholder options:
 		<iframe src="/resources/select/example12.html" style="width:100%;height:390px;border:0px"></iframe></p>
 
-		<h3>Multiple selects</h3>
+		<h2 id="multiple-selects">Multiple selects</h2>
 
 		<p>If the <code>multiple</code> attribute is present in your markup, jQuery Mobile will enhance the element with a few extra considerations:</p>
 
@@ -215,12 +215,12 @@ $.mobile.selectmenu.prototype.options.hidePlaceholderMenuItems = false;
 
 		<iframe src="/resources/select/example14.html" style="width:100%;height:590px;border:0px"></iframe></p>
 
-		<h3>Optgroup support</h3>
+		<h2 id="optgroup-support">Optgroup support</h2>
 
 		<p>If a select menu contains <code>optgroup</code> elements, jQuery Mobile will create a divider &amp; group items based on the <code>label</code> attribute's text:
 		<iframe src="/resources/select/example15.html" style="width:100%;height:500px;border:0px"></iframe></p>
 
-		<h3>Theming selects</h3>
+		<h2 id="theming-selects">Theming selects</h2>
 
 		<p>You can specify any jQuery Mobile button <code>data-</code> attribute on a select element, too. In this example, we're setting the theme, icon and inline properties:
 		<iframe src="/resources/select/example16.html" style="width:100%;height:310px;border:0px"></iframe></p>
@@ -229,12 +229,79 @@ $.mobile.selectmenu.prototype.options.hidePlaceholderMenuItems = false;
 		<iframe src="/resources/select/example17.html" style="width:100%;height:290px;border:0px"></iframe></p>
  		<p><iframe src="/resources/select/example18.html" style="width:100%;height:590px;border:0px"></iframe></p>
 
-		<h3>Calling the select menu plugin</h3>
+		<h2 id="calling-the-select-menu-plugin">Calling the select menu plugin</h2>
 
 		<p>The select menu plugin will auto initialize on any page that contains a select menu, without any need for a <code>data-role</code> attribute in the markup. However, you can directly call the select menu plugin on any selector, just like any normal jQuery plugin:</p>
 
 <pre><code><![CDATA[
 $( "select" ).selectmenu();
+]]></code></pre>
+
+		<h2 id="id-generation">ID generation</h2>
+
+		<p>The <placeholder name="name"/> widget adds an ID to the elements it generates. If it doesn't itself have an ID, it will use a prefix consisting of <code>select-</code> and a unique number for the elements. If it does have an ID, it will use its ID as the prefix. The ID for the various elements generated by the <placeholder name="name"/> widget is then constructed as follows:</p>
+		<dl>
+			<dt>button</dt>
+			<dd>
+				<code><strong><![CDATA[<prefix>]]></strong><![CDATA[-button]]></code>
+			</dd>
+			<dt>popup</dt>
+			<dd>
+				<code><strong><![CDATA[<prefix>]]></strong><![CDATA[-listbox]]></code>
+				<p>This id is only assigned to an element when the <placeholder name="name"/> widget is constructed with the option <code>nativeMenu</code> set to <code>false</code>.</p>
+				<p>Since the menu is implemented as a popup it will assign IDs to its generated elements. See the popup widget's <a href="/popup/#id-generation">id generation</a> for details.</p>
+			</dd>
+			<dt>listview</dt>
+			<dd>
+				<code><strong><![CDATA[<prefix>]]></strong><![CDATA[-menu]]></code>
+				<p>This id is only assigned to an element when the <placeholder name="name"/> widget is constructed with the option <code>nativeMenu</code> set to <code>false</code>.</p>
+			</dd>
+		</dl>
+		<p>For example, creating a non-native <placeholder name="name"/> with</p>
+<pre><code><![CDATA[
+<select id="choose-city" data-native-menu="false">
+	<option>Caracas</option>
+	<option>Warszawa</option>
+	<option>Yekaterinburg</option>
+	<option>Pretoria</option>
+</select>
+]]></code></pre>
+		<p>will result in the following markup:</p>
+<pre><code><![CDATA[
+<div class="ui-select">
+	<a id="choose-city-button" href="#" role="button" aria-haspopup="true" class="ui-btn ui-icon-carat-d ui-btn-icon-right ui-corner-all ui-shadow" data-rel="popup">
+		<span>Caracas</span>
+	</a>
+	<select id="choose-city" data-native-menu="false" tabindex="-1">
+		<option>Caracas</option>
+		<option>Warszawa</option>
+		<option>Yekaterinburg</option>
+		<option>Pretoria</option>
+	</select>
+	<div id="choose-city-listbox-placeholder" style="display: hidden;"></div>
+</div>
+<div id="choose-city-listbox-screen" class="ui-popup-screen ui-screen-hidden ui-overlay-inherit"></div>
+<div id="choose-city-listbox-popup" class="ui-popup-container ui-popup-hidden ui-popup-truncate">
+	<div id="choose-city-listbox" class="ui-selectmenu ui-popup ui-body-inherit ui-overlay-shadow ui-corner-all">
+		<div class="ui-header" ui-bar-inherit ui-screen-hidden">
+			<h1 class="ui-title"></h1>
+		</div>
+		<ul id="choose-city-menu" class="ui-selectmenu-list ui-listview" role="listbox" aria-labelledby="choose-city-button">
+			<li data-option-index="0" data-icon="false" class="ui-first-child" role="option" aria-selected="true">
+				<a href="#" tabindex="-1" class="ui-btn ui-btn-active">Caracas</a>
+			</li>
+			<li data-option-index="0" data-icon="false" role="option" aria-selected="false">
+				<a href="#" tabindex="-1" class="ui-btn ui-btn-active">Warszawa</a>
+			</li>
+			<li data-option-index="0" data-icon="false" role="option" aria-selected="false">
+				<a href="#" tabindex="-1" class="ui-btn ui-btn-active">Yekaterinburg</a>
+			</li>
+			<li data-option-index="0" data-icon="false" class="ui-last-child" role="option" aria-selected="false">
+				<a href="#" tabindex="-1" class="ui-btn ui-btn-active">Pretoria</a>
+			</li>
+		</ul>
+	</div>
+</div>
 ]]></code></pre>
 
 	</longdesc>
