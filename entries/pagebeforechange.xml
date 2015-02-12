@@ -7,9 +7,9 @@
 		<p>When received with <code>data.toPage</code> set to a jQuery object, the event indicates that the destination page has been loaded and navigation will continue.</p>
 		<p>If the page change cycle was initiated programmatically, and, instead of a URL a jQuery object containing a page was given, then the event will be triggered both times with <code>data.toPage</code> set to the jQuery object containing the destination page.</p>
 
-		<p>The <placeholder name="name"> event is triggered either by explicit navigation on the part of the user (e.g. by clicking on a link or by running code that results in a call to the pagecontainer <code>change()</code> method), or by implicit navigation caused by the user clicking the browser's "Back" or "Forward" buttons.</p>
-		<p>Explicit navigation results in both <placeholder name="name"> events being triggered before a new entry is added to the browser's navigation history.</p>
-		<p>Implicit navigation results in both <placeholder name="name"> events being triggered after the browser's navigation history has been updated.</p>
+		<p>The <placeholder name="name"/> event is triggered either by explicit navigation on the part of the user (e.g. by clicking on a link or by running code that results in a call to the pagecontainer <code>change()</code> method), or by implicit navigation caused by the user clicking the browser's "Back" or "Forward" buttons.</p>
+		<p>Explicit navigation results in both <placeholder name="name"/> events being triggered before a new entry is added to the browser's navigation history.</p>
+		<p>Implicit navigation results in both <placeholder name="name"/> events being triggered after the browser's navigation history has been updated.</p>
 		<p>In addition to the <code>event</code> parameter, handlers of this event will receive a second parameter, <code>data</code>. The second parameter is an object containing the following properties:</p>
             <ul>
 				<li><code>toPage</code> (object or string)
