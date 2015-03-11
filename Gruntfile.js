@@ -1,6 +1,7 @@
 module.exports = function( grunt ) {
 
 grunt.loadNpmTasks( "grunt-jquery-content" );
+grunt.loadNpmTasks( "grunt-spider" );
 
 grunt.initConfig({
 	xmllint: {
@@ -20,6 +21,18 @@ grunt.initConfig({
 	},
 	"build-resources": {
 		all: "resources/**"
+	},
+	spider: {
+		"stage" : {
+			options: {
+				url:  "http://stage.api.jquerymobile.com/"
+			}
+		},
+		"production" : {
+			options: {
+				url:  "http://api.jquerymobile.com/"
+			}
+		}
 	},
 	wordpress: (function() {
 		var config = require( "./config" );
