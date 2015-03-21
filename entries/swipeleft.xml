@@ -3,7 +3,7 @@
 	<title>swipeleft</title>
 	<desc>Triggered when a swipe event occurs moving in the left direction.</desc>
 	<longdesc>
-		<p>Triggered when a horizontal drag of 30px or more (and less than 75px vertically) occurs within 1 second duration in the left direction. See <a href="../swipe/">the swipe event entry</a> for more detailed information on the swipe event.</p>
+		<p>Triggered when a horizontal drag of 30px or more (and less than 30px vertically) occurs within 1 second duration in the left direction. See <a href="../swipe/">the swipe event entry</a> for more detailed information on the swipe event.</p>
 	</longdesc>
 	<added>1.0</added>
 	<signature>
