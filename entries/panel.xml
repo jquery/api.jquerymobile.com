@@ -35,8 +35,35 @@
 		<p>To avoid blinks when opening a panel, we force hardware acceleration on WebKit browsers. The CSS that is used to do this can cause issues with buttons and form elements on the page if their container has a CSS multi-column layout (<code>column-count</code>). To resolve this you have to set the following rule for the element or its container:</p>
 
 <pre><code><![CDATA[
--webkit-transform: translate3d(0,0,0);
+-webkit-transform: translate3d( 0, 0, 0 );
 ]]></code></pre>
+
+		<h3>External Panels</h3>
+		<p>Since jQuery Mobile 1.4.0, it is also possible to have external panels. This means that you can now have panels located outside the page. Panels outside of a page must be initalized manually and will not be handled by auto init. Panels outside of pages will remain in the DOM (unless manually removed) as long as you use Ajax navigation, and can be opened or closed from any page. This can be handy when you want to use the same panel on more than one page. </p>
+
+		<p>Here is an example of an external panel:</p>
+
+<pre><code><![CDATA[
+<div data-role="page">
+	<!-- header -->
+	<!-- content -->
+	<!-- footer -->
+</div><!-- page -->
+
+<div data-role="panel" id="mypanel">
+	<!-- panel content goes here -->
+</div><!-- /panel -->
+]]></code></pre>
+
+		<p>The panel can be enhanced manually as follows:</p>
+
+<pre><code><![CDATA[
+$(function(){
+	$( "#mypanel" ).panel();
+});
+]]></code></pre>
+
+		<p>Note that if the panel contains other jQuery Mobile widgets, such as listviews, these will need to be enhanced manually as well.</p>
 
 		<h3>Panel markup conventions</h3>
 		<p>A panel consists of a container with a <code><![CDATA[data-role="panel"]]></code> attribute and a unique <code>ID</code>. This <code>ID</code> will be referenced by the link or button to open and close the panel. The most basic panel markup looks like this:</p>
@@ -194,44 +221,44 @@ $( "#idofpanel" ).panel( "close" );
 			<desc>Class added to the panel, page contents wrapper and fixed toolbars when option animate is true and the 3D transform feature test returns <code>true</code>.</desc>
 			<type name="String" />
 		</option>
-		<option name="classes.contentFixedToolbar" default='"ui-panel-fixed-toolbar-wrap"'>
+		<option name="classes.contentFixedToolbar" default='"ui-panel-fixed-toolbar-wrap"' removed="1.4">
 			<desc>
-				<p><strong>Note: This class is no longer used as of 1.4.0, so setting this option will have no effect on the panel.</strong></p>
+				<div class="warning"><strong>Note:</strong> This class is no longer used as of 1.4.0, so setting this option will have no effect on the panel.</div>
 				<p>Class added to the page container to suppress scrolling horizontally</p>
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="classes.contentFixedToolbarClosed" default='"ui-panel-content-fixed-toolbar-closed"'>
+		<option name="classes.contentFixedToolbarClosed" default='"ui-panel-content-fixed-toolbar-closed"' removed="1.4">
 			<desc>
-				<p><strong>Note: This class is no longer used as of 1.4.0, so setting this option will have no effect on the panel.</strong></p>
+				<div class="warning"><strong>Note:</strong> This class is no longer used as of 1.4.0, so setting this option will have no effect on the panel.</div>
 				<p>Class added to fixed toolbars after the close animation is complete.</p>
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="classes.contentFixedToolbarOpen" default='"ui-panel-content-fixed-toolbar-open"'>
+		<option name="classes.contentFixedToolbarOpen" default='"ui-panel-content-fixed-toolbar-open"' removed="1.4">
 			<desc>
-				<p><strong>Note: This class is no longer used as of 1.4.0, so setting this option will have no effect on the panel.</strong></p>
+				<div class="warning"><strong>Note:</strong> This class is no longer used as of 1.4.0, so setting this option will have no effect on the panel.</div>
 				<p>Class added to fixed toolbars when the panel is opening.</p>
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="classes.contentWrap" default='"ui-panel-content-wrap"'>
+		<option name="classes.contentWrap" default='"ui-panel-content-wrap"' removed="1.4">
 			<desc>
-				<p><strong>Note: This class is no longer used as of 1.4.0, so setting this option will have no effect on the panel.</strong></p>
+				<div class="warning"><strong>Note:</strong> This class is no longer used as of 1.4.0, so setting this option will have no effect on the panel.</div>
 				<p>Class added to the wrapper injected around the page contents (header, content, footer), needed for positioning of the panel.</p>
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="classes.contentWrapClosed" default='"ui-panel-content-wrap-closed"'>
+		<option name="classes.contentWrapClosed" default='"ui-panel-content-wrap-closed"' removed="1.4">
 			<desc>
-				<p><strong>Note: This class is no longer used as of 1.4.0, so setting this option will have no effect on the panel.</strong></p>
+				<div class="warning"><strong>Note:</strong> This class is no longer used as of 1.4.0, so setting this option will have no effect on the panel.</div>
 				<p>Class added to the page contents wrapper after the close animation is complete.</p>
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="classes.contentWrapOpen" default='"ui-panel-content-wrap-open"'>
+		<option name="classes.contentWrapOpen" default='"ui-panel-content-wrap-open"' removed="1.4">
 			<desc>
-				<p><strong>Note: This class is no longer used as of 1.4.0, so setting this option will have no effect on the panel.</strong></p>
+				<div class="warning"><strong>Note:</strong> This class is no longer used as of 1.4.0, so setting this option will have no effect on the panel.</div>
 				<p>Class added to the wrapper injected around the page contents (header, content, footer) when the panel is opening. Used for targeting hardware acceleration only during transitions.</p>
 			</desc>
 			<type name="String" />
@@ -245,24 +272,27 @@ $( "#idofpanel" ).panel( "close" );
 			<type name="String" />
 		</option>
 		<option name="classes.pageContainer" default='"ui-panel-page-container"'>
-			<desc></desc>
+			<desc>Class applied to the page container.</desc>
+			<type name="String" />
 		</option>
 		<option name="classes.pageContentPrefix" default='"ui-panel-page-content"'>
 			<desc>Used for wrapper and fixed toolbars position, display and open classes.</desc>
+			<type name="String" />
 		</option>
 		<option name="classes.pageFixedToolbar" default='"ui-panel-fixed-toolbar"'>
-			<desc></desc>
+			<desc>Class applied to any fixed toolbars.</desc>
+			<type name="String" />
 		</option>
-		<option name="classes.pagePanel" default='"ui-page-panel"'>
+		<option name="classes.pagePanel" default='"ui-page-panel"' removed="1.4">
 			<desc>
-				<p><strong>Note: This class is no longer used as of 1.4.0, so setting this option will have no effect on the panel.</strong></p>
+				<div class="warning"><strong>Note:</strong> This class is no longer used as of 1.4.0, so setting this option will have no effect on the panel.</div>
 				<p>Class added to the page container when a panel widget is present.</p>
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="classes.pagePanelOpen" default='"ui-page-panel-open"'>
+		<option name="classes.pagePanelOpen" default='"ui-page-panel-open"' removed="1.4">
 			<desc>
-				<p><strong>Note: This class is no longer used as of 1.4.0, so setting this option will have no effect on the panel.</strong></p>
+				<div class="warning"><strong>Note:</strong> This class is no longer used as of 1.4.0, so setting this option will have no effect on the panel.</div>
 				<p>Class added to the page when a panel is open.</p>
 			</desc>
 			<type name="String" />
