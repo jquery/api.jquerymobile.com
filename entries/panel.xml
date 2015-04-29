@@ -58,7 +58,7 @@
 		<p>The panel can be enhanced manually as follows:</p>
 
 <pre><code><![CDATA[
-$(function(){
+$( function() {
 	$( "#mypanel" ).panel();
 });
 ]]></code></pre>
