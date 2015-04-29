@@ -206,7 +206,7 @@ $.mobile.selectmenu.prototype.options.hidePlaceholderMenuItems = false;
 			<li>The text of each selected item will appear inside the button as a list.  If the button is not wide enough to display the entire list, it is truncated with an ellipses.</li>
 			<li>If no items are selected, the button's text will default to the placeholder text.</li>
 			<li>If no placeholder element exists, the default button text will be blank and the header will appear with just a close button. Because this isn't a friendly user experience, we recommended that you always specify a placeholder element when using multiple select boxes.</li>
-			<li>Currently jQuery Mobile only supports the <code>multiple</code> attribute on a <code>select</code> with <code>nativeMenu</code> set to <code>false</code>.</li>
+			<li><span class="warning">Currently jQuery Mobile only supports the <code>multiple</code> attribute on a <code>select</code> with <code>nativeMenu</code> set to <code>false</code>.</span></li>
 		</ul>
 
 		<iframe src="/resources/select/example13.html" style="width:100%;height:310px;border:0px"></iframe>
