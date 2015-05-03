@@ -60,7 +60,7 @@
 <pre><code><![CDATA[
 $( function() {
 	$( "#mypanel" ).panel();
-});
+} );
 ]]></code></pre>
 
 		<p>Note that if the panel contains other jQuery Mobile widgets, such as listviews, these will need to be enhanced manually as well.</p>
