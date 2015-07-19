@@ -7,6 +7,9 @@
 
 		<xi:include href="../includes/core-extension-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 
+		<div class="warning"><h4>Warning: Use tap with caution</h4>
+			<p>Tap makes use of vclick and therefore should be used with caution on touch devices. See the <a href="../vclick/">vclick API documentation</a> for more details.</p>
+		</div>
 	</longdesc>
 	<added>1.0</added>
 	<signature>
