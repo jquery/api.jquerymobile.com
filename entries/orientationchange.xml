@@ -19,7 +19,7 @@
 		</property>
 	</signature>
 	<example>
-		<height>90</height>
+		<height>490</height>
 		<desc>Visit this from your orientation-enabled device to see it in action!</desc>
 		<code><![CDATA[
 // Bind an event to window.orientationchange that, when the device is turned,
