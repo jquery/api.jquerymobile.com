@@ -5,13 +5,13 @@
 	<desc>Creates a responsive table</desc>
 	<longdesc>
 		<h2>Responsive tables</h2>
-		<p>One of the biggest challenges in responsive web design (RWD) is presenting tabular data. Large tables with lots of columns don't fit on smaller screens and there isn't a simple way to re-format the table content with CSS and media queries for an acceptable presentation. To address this, the framework offers two different options for presenting tables responsively. Each has benefits and tradeoffs, the right choice will depend on the data being presented.</p>
+		<p>One of the biggest challenges in responsive web design (RWD) is presenting tabular data. Large tables with lots of columns don't fit on smaller screens and there isn't a simple way to re-format the table content with CSS and media queries for an acceptable presentation. To address this, the framework offers two different options for presenting tables responsively. Each has benefits and tradeoffs, so the right choice will depend on the data being presented.</p>
 
-		<p><a href="table-reflow">Reflow mode</a> - Re-formats the table columns at narrow widths so each row of data is presented as a formatted block of label/data pairs. This is ideal for tables with product or contact information with more complex or lengthy data formatting that doesn't need comparison across rows of data.</p>
+		<p><a href="#reflow">Reflow mode</a> - Re-formats the table columns at narrow widths so each row of data is presented as a formatted block of label/data pairs. This is ideal for tables with product or contact information with more complex or lengthy data formatting that doesn't need comparison across rows of data.</p>
 
-		<p><a href="table-columntoggle">Column toggle mode</a> - Selectively hides columns at narrower widths as a sensible default but also offers a menu to let users manually control which columns they want to see. This mode is better for financial data tables that have compact values and need to maintain comparisons across columns and rows of data. It can also be used for building things like product comparison tables.</p>
+		<p><a href="#columntoggle">Column toggle mode</a> - Selectively hides columns at narrower widths as a sensible default but also offers a menu to let users manually control which columns they want to see. This mode is better for financial data tables that have compact values and need to maintain comparisons across columns and rows of data. It can also be used for building things like product comparison tables.</p>
 
-		<p>The responsive table feature is built with a core table plugin (<code>table.js</code>)  that initializes when the <code>data-role="table"</code> attribute is added to the markup. This plugin is very lightweight and adds <code>ui-table</code> class, parses the table headers and generates information on the columns of data, and fires a <code>tablecreate</code> event. Both the table modes, <a href="table-reflow">reflow</a> and <a href="table-columntoggle">column toggle</a>, are written as extensions to the table widget that hook in via the <code>create</code> event to add the additional behaviors that make the tables responsive. Reflow is the default mode so if the extension is present, it will be applied automatically if the <code>data-role="table"</code> attribute is on the table.</p>
+		<p>The responsive table feature is built with a core table plugin (<code>table.js</code>) that initializes when the <code>data-role="table"</code> attribute is added to the markup. This plugin is very lightweight. It merely adds the <code>ui-table</code> class, parses the table headers and generates information on the columns of data, and fires a <code>tablecreate</code> event. Both the table modes, <a href="#reflow">reflow</a> and <a href="#columntoggle">column toggle</a>, are written as extensions to the table widget that add the additional behaviors making the tables responsive. Reflow is the default mode so if the extension is present, it will be applied automatically if the <code>data-role="table"</code> attribute is on the table.</p>
 		<p>If only one mode is used on a project, the download builder tool can be used to package only the table plugin and the single extension to save code weight.</p>
 
 		<h3>General table markup guidelines</h3>
@@ -20,61 +20,384 @@
 
 <pre><code><![CDATA[
 <table data-role="table" id="my-table" data-mode="reflow">
-  <thead>
-    <tr>
-      <th>Rank</th>
-      <th>Movie Title</th>
-      <th>Year</th>
-      <th><abbr title="Rotten Tomato Rating">Rating</abbr></th>
-      <th>Reviews</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td><a href="foo.com" data-rel="external">Citizen Kane</a></td>
-      <td>1941</td>
-      <td>100%</td>
-      <td>74</td>
-    </tr>
-    </tbody>
+	<thead>
+		<tr>
+			<th>Rank</th>
+			<th>Movie Title</th>
+			<th>Year</th>
+			<th><abbr title="Rotten Tomato Rating">Rating</abbr></th>
+			<th>Reviews</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>1</th>
+			<td><a href="foo.com" data-rel="external">Citizen Kane</a></td>
+			<td>1941</td>
+			<td>100%</td>
+			<td>74</td>
+		</tr>
+	</tbody>
 </table>
 ]]></code></pre>
 
-		<p>Both table modes start with standard HTML table markup but there are some specific guidelines you must follow for the responsive table to work correctly:  </p>
+		<p>Both table modes start with standard HTML table markup but there are some specific guidelines you must follow for the responsive table to work correctly:</p>
 		<ul class="bullet">
 			<li>Follow standard HTML table markup guidelines for proper semantics</li>
 			<li>Do not use <code>rowspan</code> or <code>colspan</code> in your tables, these aren't supported except for grouped headers (see below)</li>
-			<li>Adding <code>thead</code> and <code>tbody</code> elements are optional but provide improved semantics</li>
-			<li>Assign a unique <code>ID</code> to the table (required for the column toggle mode)</li>
+			<li>Add <code>thead</code> and <code>tbody</code> elements</li>
 			<li>Add the <code>data-role="table"</code> to apply the responsive table plugin</li>
-			<li>The default table mode is <code>reflow</code>, add <code>data-mode="columntoggle"</code> change modes</li>
-			<li>The first row of the table must contain the table headers, be sure to use <code>TH</code> instead of <code>TD</code> tags</li>
-			<li>To display longer table header text in the column chooser or reflow labels, wrap the text in the <code>TH</code> with a <code>abbr</code> element and set the <code>title</code>. This string will be used in place.</li>
+			<li>The default table mode is <code>reflow</code>, so add <code>data-mode="columntoggle"</code> to change modes</li>
+			<li>The first row of the table must contain the table headers, so be sure to use <code>TH</code> instead of <code>TD</code> tags</li>
+			<li>To display longer table header text in the column chooser or reflow labels, wrap the text in the <code>TH</code> with an <code>abbr</code> element and set the <code>title</code>. This string will be used in place.</li>
 		</ul>
 
 		<h3>Styling and theming tables</h3>
 
-		<p>The responsive table plugin is as minimally styled as possible to give you a clean slate for your designs. The plugin focuses primarily on the difficult scripting elements: generating the labels for the reflow table and creating the button and column chooser popup. Out of the box, the table just has a few basic style rules to add a bit of padding and set the vertical alignment of cells to be top left for visual consistency. </p>
-		<p>The table will adapt to whatever content block it sits on, but there isn't an explicit theming attribute for this widget. We did this because it's simple enough to add theme classes like <code>ui-body-a</code> to individual cells if a more heavily themed look is wanted.</p>
+		<p>The responsive table plugin is as minimally styled as possible to give you a clean slate for your designs. The plugin focuses primarily on the difficult scripting elements: generating the labels for the reflow table and creating the button and column chooser popup. Out of the box, the table just has a few basic style rules to add a bit of padding and set the vertical alignment of cells to be top left for visual consistency.</p>
+		<p>The table will adapt to whatever content block it sits in, but there isn't an explicit theming attribute for this widget. We did this because it's simple enough to add theme classes like <code>ui-body-a</code> to individual cells if a more heavily themed look is wanted.</p>
 
 		<h3>Row strokes and stripes</h3>
 
-		<p>The theme CSS contains a preset row strokes and alternating row stripes style which can be applied by adding <code>table-stroke</code> or <code>table-stripe</code> class to the <code>table</code> element.</p>
+		<p>The theme CSS contains a preset style for row strokes and alternating row stripes which can be applied by adding the <code>table-stroke</code> or <code>table-stripe</code> class to the <code>table</code> element.</p>
 
-		<strong>Note: the <code>table-stroke</code> and <code>table-stripe</code> classes are deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. The demos contain an example how to apply these styles with custom CSS.</strong>
+		<p><strong>Note:</strong> the <code>table-stroke</code> and <code>table-stripe</code> classes are deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. The demos contain an example showing you how to apply these styles with custom CSS.</p>
 
-  	</longdesc>
+		<h2 id="reflow">Reflow Table</h2>
+
+		<p>The reflow table mode works by collapsing the table columns into a stacked presentation that looks like blocks of label/data pairs for each row. Since the HTML source order of a table prohibits styling a table to look like this, the plugin dynamically adds a bit of markup to make the display work (without affecting accessibility). Here is a demo of a basic table using reflow mode:</p>
+		<iframe src="/resources/table/example1.html" style="width:100%;height:740px;border:0px"></iframe>
+
+		<h3>Applying reflow mode to a table</h3>
+
+		<p>The reflow responsive table mode is the simplest in terms of markup requirements because it only requires a table with a <code>data-role=&quot;table&quot;</code> on the table element. There is no need to set the <code>data-mode</code> attribute since <code>reflow</code> is the default.</p>
+
+<pre><code><![CDATA[
+<table data-role="table" id="my-table">
+]]></code></pre>
+
+		<h3>How reflow mode works</h3>
+
+		<p>The plugin works by parsing the values (or <code>abbr title</code>) of the first row of header (<code>th</code>) elements found in the table. For example, in the table above, the third table header is parsed to grab the contents ("Year"):</p>
+
+<pre><code><![CDATA[
+<th>Year</th>
+]]></code></pre>
+
+		<p>The script then appends an element with the table header text <em>before</em> the contents of every cell in that column. For example, for every table cell in the year column:</p>
+
+<pre><code><![CDATA[
+<td>1941</td>
+]]></code></pre>
+
+		<p>An element is added before the text of each cell with a <code>class</code> of <code>ui-table-cell-label</code>:</p>
+<pre><code><![CDATA[
+<td><b class="ui-table-cell-label">Year</b>1941</td>
+]]></code></pre>
+
+		<p>With our mobile-first approach, the base styles for a reflow table stacks each row and presents each cell in the label/data style format. This is done by hiding the table header rows, making each table cell <code>display:block</code> so they are stacked. The label element injected into each cell is styled as <code>display:inline-block</code> with a <code>min-width:30%</code> rule to place the labels on the same line as the content at a consistent width to form a two column presentation.</p>
+
+		<p>It is important to note that you are required to wrap your table headers in a <code>&lt;thead&gt; ... &lt;/thead&gt;</code> block, and the table body in a <code>&lt;tbody&gt; ... &lt;/tbody&gt;</code> block, as shown in the <a href="#entry-examples">full demo example</a>.</p>
+
+		<h3>Making the table responsive</h3>
+
+		<p>By default, a table with reflow mode will display the stacked presentation style on all screen widths. The styles to make the table responsive are added by applying a media query with rules to switch to the tabular style presentation above a specific screen width.</p>
+		<p>This is done by wrapping a few simple CSS rules in and a media query that only applies the rules above a certain width breakpoint. The styles make the table header rows visible, display the cells in a tabular format, and hide the generated label elements within each. Here is an example media query that swaps the presentation at 40em (640 pixels):</p>
+
+<pre><code><![CDATA[
+@media ( min-width: 40em ) {
+	/* Show the table header rows and set all cells to display: table-cell */
+	.my-custom-breakpoint td,
+	.my-custom-breakpoint th,
+	.my-custom-breakpoint tbody th,
+	.my-custom-breakpoint tbody td,
+	.my-custom-breakpoint thead td,
+	.my-custom-breakpoint thead th {
+		display: table-cell;
+		margin: 0;
+	}
+	/* Hide the labels in each cell */
+	.my-custom-breakpoint td .ui-table-cell-label,
+	.my-custom-breakpoint th .ui-table-cell-label {
+		display: none;
+	}
+}
+]]></code></pre>
+
+		<p>It's best to use a <code>class</code> on the table to apply the breakpoint. Add these rules to your custom stylesheet that is included in the <code>head</code> of the page. We recommend creating a set of custom breakpoint classes that can be used to apply standard table breakpoints in your project.</p>
+
+		<p>In the example above, we're assuming there is a class of <code>my-custom-breakpoint</code> added to the table to apply the breakpoint. Each of the rules in the custom media query is scoped against that table class to target only tables that have the <code>my-custom-breakpoint</code> class.</p>
+
+		<p>In order for this technique to work, a browser must support media queries and the ability to style table cells as block-level elements. In testing, most popular desktop and mobile browsers meet these criteria, but older versions of Internet Explorer (8 and older) fall back to a normal table presentation. IE 9 can support this technique but there are a few additional styles needed so we recommend applying these in a <code>max-width</code> media query to only apply them below the table presentation because they are hard to negate.</p>
+
+		<h3>Choosing a breakpoint</h3>
+		<p>The goal is to determine the minimum width at which the <em>entire table</em> will fit comfortably within the screen. Find this width by populating a table with realistic sample data, then adjust the browser window until the table completely fits and has a bit of extra space to account for rendering differences across devices. This is the natural place to set the breakpoint that switches between the stacked and tabular presentation modes.</p>
+		<p>The breakpoint width is highly dependent on the number of columns in the table and content within each cell. On some sites, this may be as narrow as 30em (480px) and on others, it could be as wide as 100em (1,600px). There is no way for the framework to decide on a "standard breakpoint" that will work for everyone &#8212; that's why there isn't a breakpoint built into the table by default.</p>
+		<p>We recommend writing media query widths in <code>em</code>s so they respond to font size changes. To convert a pixel width into <code>em</code>s, divide the target width by 16 (pixels). Use this value for the <code>min-width</code> value in the media query above.</p>
+
+		<h3>Applying a preset breakpoint</h3>
+		<p>Even though we strongly encourage you to write custom breakpoints yourself, the framework includes a single pre-configured breakpoint that targets the stacked style to smaller phones and swaps to a tabular prsentation on larger phones, tablet and desktop devices. To use this preset breakpoint, add the <code>ui-responsive</code> class to the table to convert from the stacked presentation to a tabular presentation at 560px (35em). If this breakpoint doesn't work for your content, we encourage you to write a custom breakpoint as described above.</p>
+
+<pre><code><![CDATA[
+<table data-role="table" class="ui-responsive">
+]]></code></pre>
+
+		<h3 id="working-with-grouped-headers">Working with grouped column headers</h3>
+
+		<p>It's fairly common to need to logically group multiple columns together under a heading group for financial or scientific data. The framework can support the most simple version of this by allowing for two rows of table headers (<code>TH</code>), with the first row containing simple <code>colspan</code> attributes to group the columns below. In this configuration, the framework will add a class to the label of the first cell in each group to allow you to style these differently and provide aditional visual hierarchy.</p>
+
+		<h2 id="columntoggle">Column-toggle table</h2>
+
+		<p>This table mode automatically hides less important columns at narrower widths and surfaces a button to open a menu that allows the user to choose what columns they want to see. In this mode, the author attempts to define which columns are most important to show across various widths by assigning a priority to each column.</p>
+
+		<p>A user may choose to check as many columns as they want by tapping the "Columns..." button to open the column chooser popup. The popup contains a dynamically generated list of columns based on the table markup that can be checked and unchecked to adjust the visible columns.</p>
+		<iframe src="/resources/table/example2.html" style="width:100%;height:540px;border:0px"></iframe>
+
+		<h3>Applying column chooser mode to a table</h3>
+
+		<p>The column chooser mode requires a <code>table</code> element with two attributes: <code>data-role=&quot;table&quot;</code> and <code>data-mode=&quot;columntoggle&quot;</code>. An <code>id</code> attribute is also required on the table to associate it with the column chooser popup menu and the button that launches the popup. The table's <code>id</code> attribute will serve as the prefix for the button's attribute (which will append <code>-button</code> to the prefix) and the popup's attribute (which will append <code>-popup</code> to the prefix).</p>
+
+<pre><code><![CDATA[
+<table data-role="table" data-mode="columntoggle" id="my-table">
+]]></code></pre>
+
+		<h3>How column toggle mode works</h3>
+
+		<p>The plugin automates a few key things: it injects the column chooser button, and generates the popup with the check list of columns that can be hidden or shown by the user. The list of columns in the chooser menu is populated by parsing the values (or <code>abbr title</code>) of the first row of header (<code>TH</code>) elements. Only headers that have a <code>data-priority</code> attribute are included in the column chooser; headers without this attribute won't be made available in the chooser to allow developers to identify critical columns that shouldn't be hidden. If columns are hidden via responsive media queries, these will be unchecked in the chooser to reflect the current column visibility.</p>
+
+		<p>The automatic column hiding behavior is accomplished by CSS media queries that hide or show columns based on priority levels at various screen widths. Since each site will have different content and column configurations, we provide a simple media query block that you can copy, paste and customize for each project. This is explained in detail below.</p>
+
+		<p>The priorities assigned to headers and media queries used to hide columns act as a sensible default for showing the most important columns that will fit on a device. The column chooser menu gives users the ability to override these defaults and choose which columns they want to see. These user preferences take precedence over the priority mappings so if a column is manually checked, it will remain visible across all screen widths until the page is refreshed.</p>
+
+		<p>Because of the flexibility this plugin provides, it's possible for users to introduce horizontal scrolling if the data in each column is long or if many columns are selected to be shown on a smaller screen.</p>
+
+		<h3>Setting column priority</h3>
+
+		<p>The table works by hiding and showing columns based on two inputs: available screen width or by the user checking and unchecking which columns to display in a column picker popup. Add <code>data-priority</code> attributes to each of the table headers of columns you want to responsively display and assign a priority (1 = highest, 6 = lowest). Any table header given a priority will be available in the column picker menu.</p>
+		<p>To make a column <em>persistent</em> so it's not available for hiding, omit the <code>data-priority</code> attribute. This will make the column visible at all widths and won't be available in the column chooser menu.</p>
+
+<pre><code><![CDATA[
+<th>I'm critical and can't be removed</th>
+<th data-priority="1">I'm very important</th>
+<th data-priority="3">I'm somewhat</th>
+<th data-priority="5">I'm less important</th>
+]]></code></pre>
+
+		<p>Behind the scenes, the plugin will apply classes to each cell that map to the priority set in the data attribute on the header. For example, if a table heading has a <code>data-priority="3"</code> attribute, every cell in that column will assigned a <code>ui-table-priority-3</code> class once enhanced. These classes are then used in media queries to hide and show columns based on screen width (see below).</p>
+
+<pre><code><![CDATA[
+<td class="ui-table-priority-3">97%</td>
+]]></code></pre>
+
+		<p>You may use any priority naming convention and assign as many (or few) levels of priority for the columns. The plugin simply generates class names based on the values in the <code>data-priority</code> attribute so even though we default to using a numeric system of 1-6, any naming convention is possible.</p>
+
+		<p>For example, if a priority of <code>data-priority="critical"</code> is added to the heading, a class of <code>ui-table-priority-critial</code> will be applied to each cell in that column. If a priority is assigned, the column will be made available for the toggling in the column menu and adds the classes to each cell, the rest of the styling and media query creation is up to you write in your custom stylesheet.</p>
+
+		<p>It is important to note that you are required to wrap your table headers in a <code>&lt;thead&gt; ... &lt;/thead&gt;</code> block, and the table body in a <code>&lt;tbody&gt; ... &lt;/tbody&gt;</code> block, as shown in the <a href="#entry-examples">full demo Example</a>.</p>
+
+		<h3>Making the table responsive</h3>
+
+		<p>The styles for the all priority columns (1-6) start as <code>display:none</code> in the structure stylesheet since we're taking a mobile-first approach to our styles. This means that only columns that should be persistent are visible in the styles to start.</p>
+
+		<p>The framework does not automatically include the the media queries to progressively display columns at wider widths. We do this to make it easier for developers to customize the media query widths for each priority level.</p>
+
+		<p>Media queries add the responsive behavior to show and hide columns by priority. Each media query is written using <code>min-width</code> widths so they build on top of each other. The widths are set in ems so they respond to font size changes. To calculate a pixel withs in em's, divide the target width by 16 (pixels) - it's that easy.</p>
+
+		<p>Inside each media query, we override the <code>display:none</code> style properties set on all the priority columns in the basic styles to <code>display:table-cell</code> so they become visible again and act as a table.</p>
+
+		<p>To customize the breakpoints, copy the following style block into your custom style overrides and adjust the <code>min-width</code> media query values for each priority level to specify where various priority columns should appear.</p>
+
+		<p>In the example styles below for a <code>my-custom-class</code> class on the table, the priority 1 columns are shown first, at widths above <code>20em</code> (320px), then priority 2 kicks in above <code>30em</code> (480px) and so on up to wide desktop widths with priority 6. Feel free to change these breakpoints in your stylesheet and choose how many priority levels you'd like to use.</p>
+
+<pre><code><![CDATA[
+/* Show priority 1 at 320px (20em x 16px) */
+@media screen and (min-width: 20em) {
+	.my-custom-class th.ui-table-priority-1,
+	.my-custom-class td.ui-table-priority-1 {
+		display: table-cell;
+	}
+}
+/* Show priority 2 at 480px (30em x 16px) */
+@media screen and (min-width: 30em) {
+	.my-custom-class th.ui-table-priority-2,
+	.my-custom-class td.ui-table-priority-2 {
+		display: table-cell;
+	}
+}
+...more breakpoints...
+]]></code></pre>
+<p>Due to CSS specificity, you will also need to include the class definitions for the hidden and visible states <em>after</em> the custom breakpoints in your custom stylesheet so be sure to include these as well:</p>
+<pre><code><![CDATA[
+/* Manually hidden */
+.my-custom-class th.ui-table-cell-hidden,
+.my-custom-class td.ui-table-cell-hidden {
+	display: none;
+}
+
+/* Manually shown */
+.my-custom-class th.ui-table-cell-visible,
+.my-custom-class td.ui-table-cell-visible {
+	display: table-cell;
+}
+]]></code></pre>
+
+		<h3>Applying a preset breakpoint</h3>
+
+		<p>Even though we strongly encourage you to write custom breakpoints yourself, the framework includes a set of pre-configured breakpoints for each of the six priority levels that you can use if they happen work well for your content.</p>
+
+		<p>These breakpoints can applied by adding a <code>class="ui-responsive"</code> to the table element. Here is an example of a table with this class added:</p>
+
+<pre><code><![CDATA[
+<table data-role="table" class="ui-responsive" data-mode="columntoggle" id="my-table">
+]]></code></pre>
+
+		<p>The six preset breakpoints classes included in the column toggle stylesheet use regular increments of 10em (160 pixels). Here is a summary of the breakpoints assigned to each priority in the preset styles:</p>
+
+		<dl>
+			<dt><code>data-priority="1"</code></dt><dd> Displays the column at 320px (20em)</dd>
+			<dt><code>data-priority="2"</code></dt><dd> Displays the column at 480px (30em)</dd>
+			<dt><code>data-priority="3"</code></dt><dd> Displays the column at 640px (40em)</dd>
+			<dt><code>data-priority="4"</code></dt><dd> Displays the column at 800px (50em)</dd>
+			<dt><code>data-priority="5"</code></dt><dd> Displays the column at 960px (60em)</dd>
+			<dt><code>data-priority="6"</code></dt><dd> Displays the column at 1,120px (70em)</dd>
+		</dl>
+
+		<p>If these preset breakpoints don't work for your content and layout needs, we recommend that you create custom breakpoints to fine tune the styles.</p>
+
+		<h3>Working with the column menu classes</h3>
+
+		<p>When the column chooser menu opens, the column checkboxes will be checked or unchecked based on the visibility of each column based on the media queries so it accurately reflects what is being seen. These media queries to hide or show columns act as sensible defaults for what columns should be shown based on the developer's understanding of the column importance and data values. The chooser menu allows the user to have control of the table presentation so this takes precedence over the default display.</p>
+
+		<p>If an unchecked column checkbox is checked by the user, they now take control of the column. Until the page is refreshed, the visibility of that column will now always be visible, even if the screen is re-sized. Behind the scenes, a class of <code>ui-table-cell-visible</code> is added to all the cells in that column to ensure they override any visibility set via media queries.</p>
+
+		<p>The same idea applies when a column is unchecked: from then on, the column won't be seen at any width because the class of <code>ui-table-cell-hidden</code> is added to each of the cells in that column.</p>
+
+		<h3>Styling the button and column chooser popup</h3>
+
+		<p>The column chooser popup is opened via a button that is generated by the framework. The button's text is "Columns..." by default but can be set by adding the <code>data-column-btn-text</code> attribute to the table to the text string you want in the button. The button will inherit the theme from the content area, just like all buttons, but the theme can be set manually by adding the <code>data-column-btn-theme</code> attribute to any swatch letter in your theme.</p>
+
+		<p>This button is injected directly <em>before</em> the table element and has basic styles to align it to the right but you may want to further customize the appearance of this button. To style all these buttons across your site, key off the <code>ui-table-columntoggle-btn</code> structural class on this link.</p>
+
+		<p>To target styles against only a specific button, use the unique <code>href</code> value that is generated to target a specific column chooser button. For example, a table with an <code>ID</code> of <code>movie-table</code> will generate a popup with an <code>ID</code> of <code>movie-table-popup</code> so a CSS selector of <code>a[href="#movie-table-popup"]</code> will target only the column popup button for this specific table.</p>
+
+		<p>The theme for the column chooser popup can be set by adding the <code>data-column-popup-theme</code> attribute to the table and specifying any swatch letter in your theme. For custom styles or scripting, all the column chooser popups can be targeted by using the <code>ui-table-columntoggle-popup</code> structural class added to these popups. To customize a single popup, use the generated <code>ID</code> based on the table <code>ID</code> that added to each specific popup (such as <code>#movie-table-popup</code>) to target a specific popup.</p>
+
+		<xi:include href="../includes/pre-rendered-common.xml" xmlns:xi="http://www.w3.org/2003/XInclude" />
+		<p>The columntoggle table places an anchor before the table that invokes a popup listing the columns available for showing/hiding. The ID of the popup and thus the href of the anchor should be the ID of the table suffixed by the string <code>-popup</code>. The anchor must also have an <code>id</code> attribute which is identical to that of the table, but postfixed with <code>-button</code>. This will allow the table to correctly enable/disable when you modify its <code>disabled</code> option. You may separately pre-enhance the popup widget, or you may allow autoinitialization to enhance it.</p>
+		<p>The popup widget must contain a single controlgroup widget which in turn contains all the checkboxes representing the columns of the table.</p>
+		<p>In the example below the parameter <code>data-column-btn-theme="b"</code> is added to the table explicitly to indicate that the theme applied to the "Columns..." button is not the default (<code>null</code>).</p>
+
+<pre><code><![CDATA[
+<div data-role="popup" id="table-column-toggle-popup" class="ui-table-columntoggle-popup">
+	<fieldset data-role="controlgroup">
+		<label>Rank<input type="checkbox" checked data-cacheval="false" locked="true"></input></label>
+		<label>Year<input type="checkbox" checked data-cacheval="false" locked="true"></input></label>
+		<label>Rotten Tomato Rating<input type="checkbox" checked data-cacheval="false" locked="true"></input></label>
+		<label>Reviews<input type="checkbox" checked data-cacheval="false" locked="true"></input></label>
+	</fieldset>
+</div>
+<a href="#table-column-toggle-popup" class="ui-table-columntoggle-btn ui-btn ui-btn-b ui-corner-all ui-shadow ui-mini" data-rel="popup">Columns...</a>
+<table data-role="table" id="table-column-toggle" data-mode="columntoggle" data-enhanced="true" class="ui-table ui-table-columntoggle" data-column-btn-theme="b">
+	<thead>
+		<tr>
+			<th data-priority="2" data-colstart="1" class="ui-table-priority-2 ui-table-cell-visible">Rank</th>
+			<th data-colstart="2">Movie Title</th>
+			<th data-priority="3" data-colstart="3" class="ui-table-priority-3 ui-table-cell-visible">Year</th>
+			<th data-priority="1" data-colstart="4" class="ui-table-priority-1 ui-table-cell-visible"><abbr title="Rotten Tomato Rating">Rating</abbr></th>
+			<th data-priority="5" data-colstart="5" class="ui-table-priority-5 ui-table-cell-visible">Reviews</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="ui-table-priority-2 ui-table-cell-visible">1</th>
+			<td><a href="http://en.wikipedia.org/wiki/Citizen_Kane" data-rel="external">Citizen Kane</a></td>
+			<td class="ui-table-priority-3 ui-table-cell-visible">1941</td>
+			<td class="ui-table-priority-1 ui-table-cell-visible">100%</td>
+			<td class="ui-table-priority-5 ui-table-cell-visible">74</td>
+		</tr>
+		<tr>
+			<th class="ui-table-priority-2 ui-table-cell-visible">2</th>
+			<td><a href="http://en.wikipedia.org/wiki/Casablanca_(film)" data-rel="external">Casablanca</a></td>
+			<td class="ui-table-priority-3 ui-table-cell-visible">1942</td>
+			<td class="ui-table-priority-1 ui-table-cell-visible">97%</td>
+			<td class="ui-table-priority-5 ui-table-cell-visible">64</td>
+		</tr>
+	</tbody>
+</table>
+]]></code></pre>
+		<iframe src="../resources/table-columntoggle/example1.html" style="width: 100%; height: 240px; border: 0px;"></iframe>
+	</longdesc>
 	<added>1.3</added>
 	<options>
-		<option name="classes.table" default='"ui-table"' >
-			<desc>Class assigned to the table.
-			<p>The classes option is only configurable via JavaScript because it expects an object literal value.</p></desc>
-			<type name="String" />
+		<option name="classes" type="Object">
+			<desc>Hash containing class names and prefixes used on various structural elements of the table. The following keys are recognized:
+				<dl>
+					<dt><code>table</code></dt>
+					<dd>Default value: <code>"ui-table"</code>. This class is appended to the <code>&lt;table&gt;</code> element upon widget instantiation.</dd>
+					<dt><code>reflowTable</code></dt>
+					<dd>Default value: <code>"ui-table-reflow"</code>. This class is appended to the <code>&lt;table&gt;</code> element upon widget instantiation when it is to be turned into a reflow table. This key is provided by the <placeholder name="name"/> widget's reflow extension.</dd>
+					<dt><code>cellLabels</code></dt>
+					<dd>Default value: <code>"ui-table-cell-label</code>. This class is added to the <code>&lt;b&gt;</code> elements which play the role of headings when the <placeholder name="name"/> is rendered as a single column on narrow screens. This key is provided by the <placeholder name="name"/> widget's reflow extension.</dd>
+					<dt><code>cellLabelsTop</code></dt>
+					<dd>Default value: <code>"ui-table-cell-label-top</code>. This class is added to the <code>&lt;b&gt;</code> elements which play the role of top level headings when the <placeholder name="name"/> is rendered as a single column on narrow screens and it has <a href="#working-with-grouped-headers">grouped</a> headers. This key is provided by the <placeholder name="name"/> widget's reflow extension.</dd>
+					<dt><code>cellHidden</code></dt>
+					<dd>Default value: <code>"ui-table-cell-hidden"</code>. This class is added to all cells in a column that the user has forced into the hidden state by calling the <a href="#method-toggleColumn">toggleColumn()</a> method or by unchecking a checkbox in the popup menu. This key is provided by the <placeholder name="name"/> widget's columntoggle extension.</dd>
+					<dt><code>cellVisible</code></dt>
+					<dd>Default value: <code>"ui-table-cell-visible"</code>. This class is added to all cells in a column that the user has forced into the visible state by calling the <a href="#method-toggleColumn">toggleColumn()</a> method or by checking a checkbox in the popup menu. This key is provided by the <placeholder name="name"/> widget's columntoggle extension.</dd>
+					<dt><code>priorityPrefix</code></dt>
+					<dd>Default value: <code>"ui-table-priority-"</code>. The table constructs a class name from this prefix by appending the value of the <code>data-priority</code> attribute it finds on the column header, if any. It then applies the resulting class to all cells under the column header. This key is provided by the <placeholder name="name"/> widget's columntoggle extension.</dd>
+					<dt><code>columnToggleTable</code></dt>
+					<dd>Default value: <code>"ui-table-columntoggle"</code>. This class is appended to the <code>&lt;table&gt;</code> upon widget instantiation when it is to be turned into a columntoggle table. This key is provided by the <placeholder name="name"/> widget's columntoggle extension.</dd>
+					<dt><code>popup</code></dt>
+					<dd>Default value: <code>"ui-table-columntoggle-popup"</code>. This class is added to the popup containing the column checklist. This key is provided by the <placeholder name="name"/> widget's columntoggle popup extension.</dd>
+					<dt><code>columnBtn</code></dt>
+					<dd>Default value: <code>"ui-table-columntoggle-btn"</code>. This class is added to the button that brings up the column checklist. This key is provided by the <placeholder name="name"/> widget's columntoggle popup extension.</dd>
+				</dl>
+			</desc>
+		</option>
+		<option name="columnBtnText" type="String" default='default: "Columns..."' example-value='"Show columns"'>
+			<desc>Sets the text prompt for the column chooser button.
+				<p>This option is provided by the <code>columntoggle.popup</code> extension.</p>
+				<p>This option is also exposed as a data attribute: <code>data-column-btn-text="Show columns"</code>.</p>
+			</desc>
+		</option>
+		<option name="columnBtnTheme" type="String" default="null, inherited from parent" example-value='"b"'>
+			<desc>Sets the color scheme (swatch) for the button that opens the column checklist. It accepts a single letter from a-z that maps to the swatches included in your theme.
+				<p>Possible values: swatch letter (a-z).</p>
+				<p>This option is provided by the <code>columntoggle.popup</code> extension.</p>
+				<p>This option is also exposed as a data attribute: <code>data-column-btn-theme="b"</code>.</p>
+			</desc>
+		</option>
+		<option name="columnButton" type="Boolean" default="true" example-value="false">
+			<desc>A button will be displayed allowing the user to open the popup displaying the list of columns whenever this option is set to <code>true</code>.
+				<p>The button is placed such that it precedes the table in the DOM order.</p>
+				<p>This option is provided by the <code>columntoggle.popup</code> extension.</p>
+				<p>This option is also exposed as a data attribute: <code>data-column-button="true"</code>.</p>
+			</desc>
+		</option>
+		<option name="columnPopupTheme" type="String" default="null, inherited from parent" example-value='"b"'>
+			<desc>Sets the color scheme (swatch) for the popup that shows the column checklist. It accepts a single letter from a-z that maps to the swatches included in your theme.
+				<p>Possible values: swatch letter (a-z).</p>
+				<p>This option is provided by the <code>columntoggle.popup</code> extension.</p>
+				<p>This option is also exposed as a data attribute: <code>data-column-popup-theme="b"</code>.</p>
+			</desc>
 		</option>
 		<xi:include href="../includes/widget-option-defaults.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<xi:include href="../includes/widget-option-enhanced.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		<option name="mode" type="string" default='"reflow"' example-value='"columntoggle"'>
+			<desc>Specifies the way in which the table should be responsive.
+				<p>This option accepts one of two values, reflecting the two available <placeholder name="name"/> extensions which implement responsiveness:</p>
+				<dl>
+					<dt><code>"reflow"</code></dt>
+					<dd>Indicates that the table should handle narrow screens using functionality provided by the <a href="#reflow">reflow</a> extension.</dd>
+					<dt><code>"columntoggle"</code></dt>
+					<dd>Indicates that the table should handle narrow screens using functionality provided by the <a href="#columntoggle">columntoggle</a> extension.</dd>
+				</dl>
+				<p>This option is also exposed as a data attribute: <code>data-mode="columntoggle"</code>.</p>
+			</desc>
+		</option>
 	</options>
 	<events>
 		<event name="create">
@@ -89,8 +412,29 @@
 		</event>
 	</events>
 	<methods>
-		<method name="rebuild">
+		<method name="rebuild" deprecated="1.5.0">
+			<desc>Re-process the entire table to ensure it is displayed correctly.
+				<p><strong>Note:</strong>This method is deprecated as of 1.5.0 and will be removed in 1.6.0. Use the <a href="#method-refresh">refresh()</a> method instead.</p>
+			</desc>
+		</method>
+		<method name="refresh">
+			<added>1.5.0</added>
 			<desc>Re-process the entire table to ensure it is displayed correctly.</desc>
+		</method>
+		<method name="setColumnVisibility" added="1.5.0">
+			<desc>Sets the visibility of a column.</desc>
+			<argument name="column">
+				<desc>
+					<p>This argument may be set to either a number or a jQuery collection object.</p>
+					<p>When set to a number, the value of this argument is the zero-based DOM order index of the cell located in the table header's first row whose column's visibility is to be set.</p>
+					<p>When set to a jQuery collection object, the value of this argument is a jQuery collection object containing a cell from the column whose visibility is to be set. Only the first item in the collection object is used.</p>
+				</desc>
+				<type name="Number"></type>
+				<type name="jQuery"></type>
+			</argument>
+			<argument name="visible" type="Boolean">
+				<desc>When true, it causes the column to be always shown. When false, it causes the column to be always hidden.</desc>
+			</argument>
 		</method>
 	</methods>
 	<example>
@@ -102,7 +446,7 @@
 		<h1>jQuery Mobile Example</h1>
 	</div>
 	<div role="main" class="ui-content">
-		<table data-role="table" id="my-table" data-mode="reflow">
+		<table data-role="table" id="my-table" data-mode="reflow" class="ui-responsive">
 			<thead>
 				<tr>
 					<th>Rank</th>
