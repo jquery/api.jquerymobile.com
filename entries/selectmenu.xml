@@ -225,7 +225,8 @@ $.mobile.selectmenu.prototype.options.hidePlaceholderMenuItems = false;
 		<p>You can specify any jQuery Mobile button <code>data-</code> attribute on a select element, too. In this example, we're setting the theme, icon and inline properties:
 		<iframe src="/resources/select/example16.html" style="width:100%;height:310px;border:0px"></iframe></p>
 
-		<p>The <code>data-overlay-theme</code> attribute can be added to a select element to set the color of the overlay layer for the dialog-based custom select menus and the outer border of the smaller custom menus. By default, the content block colors for swatch "a"" will be used for the overlays.
+		<p>The <code>data-overlay-theme</code> attribute can be added to a select element to set the color of the overlay layer for the dialog-based custom select menus and the outer border of the smaller custom menus. By default, the content block colors for swatch "a" will be used for the overlays.
+		<p>Note: Custom selects use the popup widget for the menu. Because the popup container is elsewhere on the page it can't inherit the theme swatch from the parent of the select, and inherits from the page instead.</p>
 		<iframe src="/resources/select/example17.html" style="width:100%;height:290px;border:0px"></iframe></p>
  		<p><iframe src="/resources/select/example18.html" style="width:100%;height:590px;border:0px"></iframe></p>
 
