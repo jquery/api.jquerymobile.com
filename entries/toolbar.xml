@@ -346,14 +346,14 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 		<option name="updatePagePadding" default="true" example-value="false">
 			<desc>This option is provided by the <code>fixedToolbar</code> extension.
 				<p>Whether to set the page content div's top and bottom padding to the height of the <placeholder name="name"/>.</p>
-				<p>This opstion is also exposed as a data attribute: <code>data-update-page-padding="false"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-update-page-padding="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
 		<option name="visibleOnPageShow" default="true" example-value="false">
 			<desc>This option is provided by the <code>fixedToolbar</code> extension.
 				<p>Whether the <placeholder name="name"/> is shown along with the page.</p>
-				<p>This opstion is also exposed as a data attribute: <code>data-visible-on-page-show="false"</code>.</p>
+				<p>This option is also exposed as a data attribute: <code>data-visible-on-page-show="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
 		</option>
