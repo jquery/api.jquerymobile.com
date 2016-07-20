@@ -67,10 +67,12 @@
   	</longdesc>
 	<added>1.3</added>
 	<options>
-		<option name="classes.table" default='"ui-table"' >
-			<desc>Class assigned to the table.
-			<p>The classes option is only configurable via JavaScript because it expects an object literal value.</p></desc>
-			<type name="String" />
+		<option name="classes" type="Object">
+			<default>{
+				"ui-table": ""
+			}</default>
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</option>
 		<xi:include href="../includes/widget-option-defaults.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
