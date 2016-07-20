@@ -164,6 +164,13 @@ function defaultAutodividersSelector( elt ) {
 ]]></code></pre>
 			</desc>
 		</option>
+		<option name="classes" type="Object">
+			<default>{
+				"ui-listview-inset": "ui-corner-all ui-shadow"
+			}</default>
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		</option>
 		<option name="countTheme" type="String" default="null, inherited from parent" example-value='"b"' deprecated="1.4.0">
 			<desc>
 				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0.</strong>
