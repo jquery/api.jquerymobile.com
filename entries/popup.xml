@@ -443,6 +443,13 @@ $( document ).on( "pageinit", function() {
 				<desc>A value of <code>true</code> is equivalent to a value of "t,r,b,l", whereas <code>false</code> indicates that no arrow is to be shown.</desc>
 			</type>
 		</option>
+		<option name="classes" type="Object">
+			<default>{
+				"ui-popup": "ui-corner-all ui-overlay-shadow"
+			}</default>
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		</option>
 		<option name="corners" default="true" example-value="false">
 			<desc>
 				<p>Sets whether to draw the popup with rounded corners.</p>
