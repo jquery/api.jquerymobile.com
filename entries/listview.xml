@@ -18,6 +18,55 @@
 
 			<p><iframe src="/resources/listview/example1.html" style="width:100%;height:990px;border:0px"></iframe></p>
 
+
+			<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+			<ul>
+				<li>
+					<code>ui-listview</code>:  Outermost container for listview widget
+					<ul>
+						<li>
+							<code>ui-listview-item-static</code>: Simplest list item of listview when there are no anchor tags nested inside an item
+						</li>
+						<li>
+							<code>ui-listview-item-divider</code>: List item element which is a divider
+						</li>
+						<li>
+							<code>ui-listview-item-has-alternate</code>: List item element which has more than one anchor elements
+							<ul>
+								<li>
+									<code>ui-listview-item-button</code>: First anchor element
+
+								</li>
+								<li>
+									<code>ui-listview-item-split-button</code>: Last anchor element
+									<ul>
+										<li>
+											<code>ui-listview-item-split-icon</code>: Icon of last anchor element
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<code>ui-listview-item</code>: List item element which has only one anchor elements. If the listview item has count bubble, it will additionally have <code>ui-listview-item-has-count</code> class.
+							<ul>
+								<li>
+									<code>ui-listview-item-button</code>: Anchor element of the list item
+
+								</li>
+								<li>
+									<code>ui-listview-item-icon</code>: Icon for the list item
+								</li>
+								<li>
+									<code>ui-listview-item-count-bubble</code>: Count bubble for list item if present
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+
 			<p><strong>Style note on non-inset lists</strong>: all standard, non-inset lists have a -1em (16px) margin to negate the 1em padding on the content area to make lists extend to the edges of the screen. If you add other widgets above or below a list, the negative margin may make these elements overlap so you'll need to add additional spacing in your custom CSS.</p>
 
 			<h3>Numbered lists</h3>
