@@ -19,6 +19,34 @@
 ]]></code></pre>
 		<iframe src="/resources/toolbar/example1.html" style="width:100%;height:90px;border:0px"></iframe>
 
+		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+		<ul>
+			<li>
+				<code>ui-toolbar-header</code>:  The outermost container for toolbar header that provides border.
+				<ul>
+					<li>
+						<code>ui-toolbar-header-button-left</code>: This class can be applied to position buttons to left in toolbar header. You can provide extra classes for left button using classes option and this class as key
+					</li>
+					<li>
+						<code>ui-toolbar-title</code>: Title element of the toolbar
+					</li>
+					<li>
+						<code>ui-toolbar-header-button-right</code>: This class can be applied to position buttons to right in toolbar header. You can provide extra classes for right button using classes option and this class as key
+					</li>
+				</ul>
+			</li>
+			<li>
+				<code>ui-toolbar-footer</code>:  The outermost container for toolbar header that provides border.
+				<p><strong>Note:</strong> Toolbar footer doesn't provide classes to position button. Refer toolbar demos for more information</p>
+				<ul>
+					<li>
+						<code>ui-toolbar-title</code>: Title element of the toolbar
+					</li>
+				</ul>
+			</li>
+		</ul>
+
 		<h3>Default header features</h3>
 
 		<p>The header <placeholder name="name"/> inherits its theme swatch from the page by default but you can easily set the theme swatch color by adding the <code>data-theme</code> attribute to the header. For example, <code>data-theme="b"</code>. When you use external headers you must set a theme, because there is no parent page from which it can inherit a theme.</p>
@@ -271,6 +299,11 @@ If you're doing this programmatically, set this option inside the mobileinit eve
 				<p>This option is also exposed as a data attribute: <code>data-back-btn-theme="b"</code>.</p>
 			</desc>
 			<type name="String" />
+		</option>
+		<option name="classes" type="Object">
+			<default>{}</default>
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</option>
 		<xi:include href="../includes/widget-option-defaults.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
