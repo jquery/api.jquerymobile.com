@@ -4,8 +4,9 @@
 	<title>Controlgroup Widget</title>
 	<desc>Groups buttons together.</desc>
 
-	<xi:include href="../includes/widget-ui-include.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-
+	<longdesc>
+		<p>The jQuery UI controlgroup widget is bundled in jQuery Mobile with some changes. Thus, its <a href="//api.jqueryui.com/controlgroup/">API documentation</a> fully describes its functionality.</p>
+	</longdesc>
 	<methods>
 		<method name="container">
 			<desc>Obtain the container element within which the controlgroup's child elements are to be placed.
