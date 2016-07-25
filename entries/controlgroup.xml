@@ -7,10 +7,37 @@
 	<longdesc>
 		<p>The jQuery UI controlgroup widget is bundled in jQuery Mobile with some changes. Thus, its <a href="//api.jqueryui.com/controlgroup/">API documentation</a> fully describes its functionality.</p>
 	</longdesc>
+	<added>1.3</added>
+	<options>
+		<option name="shadow" default="false" example-value="true">
+			<desc>
+				<p>Sets whether a drop shadow is drawn around the controlgroup.</p>
+				<xi:include href="../includes/widget-option-deprecation-1.6.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+				<p>This option is also exposed as a data attribute: <code>data-shadow="false"</code>.</p>
+			</desc>
+			<type name="Boolean" />
+		</option>
+		<option name="type" default="vertical" example-value='"horizontal"'>
+			<desc>
+				<p>Sets whether children should be stacked on top of each other or next to each other. If set to "horizontal", the children of the controlgroup will be stacked next to each other.</p>
+				<xi:include href="../includes/widget-option-deprecation-1.6.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+				<p>This option is also exposed as a data attribute: <code>data-type="horizontal"</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<option name="direction" default="vertical" example-value='"horizontal"'>
+			<desc>
+				<p>By default, controlgroup displays its controls in a vertical layout. Use this option to use a horizontal layout instead.</p>
+				<p>This option is also exposed as a data-attribute <code>data-direction="horizontal"</code>.</p>
+			</desc>
+			<type name="String" />
+		</option>
+		<xi:include href="../includes/widget-option-mini.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+	</options>
 	<methods>
 		<method name="container">
 			<desc>Obtain the container element within which the controlgroup's child elements are to be placed.
-			<p><strong>Note:</strong> <code>container</code> method is deprecated in 1.5 and will be removed in 1.6</p>
+			<xi:include href="../includes/widget-method-deprecation-1.6.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 <pre><code><![CDATA[
 $( ".selector" ).controlgroup( "container" );
 ]]></code></pre>
