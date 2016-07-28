@@ -120,25 +120,6 @@
 			</desc>
 			<type name="String" />
 		</option>
-		<option name="initSelector" default="null" deprecated="1.4.0">
-			<desc>
-				<p>The default <code>initSelector</code> for the <placeholder name="name" /> widget is:</p>
-		<pre><code>
-		"<placeholder name="init-selector"/>"
-		</code></pre>
-				<p><strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0.</strong></p>
-				<p><strong>The old value of the <placeholder name="name" /> widget's <code>initSelector</code> option (<code>":jqmData(role='collapsible-set')"</code>) is deprecated.</strong> As of jQuery Mobile 1.5.0, only widgets that have the attribute <code>data-role="collapsibleset"</code> will be enhanced as <placeholder name="name"/> widgets.</p>
-				<p>As of jQuery Mobile 1.4.0, the <code>initSelector</code> is no longer a widget option. Instead, it is declared directly on the widget prototype. Thus, you may specify a custom value by handling the <code>mobileinit</code> event and overwriting the <code>initSelector</code> on the prototype:</p>
-		<pre><code>
-		$( document ).on( "mobileinit", function() {
-			$.mobile.<placeholder name="name"/>.prototype.initSelector = "div.custom";
-		});
-		</code></pre>
-				<p><strong>Note:</strong> Remember to attach the <code>mobileinit</code> handler after you have loaded jQuery, but before you load jQuery Mobile, because the event is triggered as part of jQuery Mobile's loading process.</p>
-				<p>The value of this option is a jQuery selector string. The framework selects elements based on the value of this option and instantiates <placeholder name="name" /> widgets on each of the resulting list of elements.</p>
-			</desc>
-			<type name="String" />
-		</option>
 		<option name="inset" default="true" example-value="false">
 			<desc>By setting this option to false the collapsibles will get a full width appearance without corners. If the value is false for an individual collapsible container, but that container is part of a <placeholder name="name"/> widget, then the value is inherited from the parent <placeholder name="name"/> widget.
 				<p>This option is also exposed as a data attribute: <code>data-inset="true"</code>.</p>
@@ -151,7 +132,6 @@
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</options>
 	<events>
 		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>

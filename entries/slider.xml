@@ -252,7 +252,6 @@ $( "input" ).slider();
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-mini.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-theme.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="trackTheme" default="null, inherited from parent" example-value='"a"'>

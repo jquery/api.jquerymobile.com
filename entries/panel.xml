@@ -336,7 +336,6 @@ $( "#idofpanel" ).panel( "close" );
 			</desc>
 			<type name="String" />
 		</option>
-		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="position" default='"left"'  example-value='"right"'>
 			<desc>The side of the screen the panel appears on. Values can be "left" or "right".
 				<p>This option is also exposed as a data attribute:<code>data-position="right"</code> on the link that opens the panel.</p>
