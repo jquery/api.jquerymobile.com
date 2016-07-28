@@ -290,7 +290,6 @@ $( "select" ).selectmenu();
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="inline" default="null (false)" example-value="true">
 			<desc>If set to true, this will make the select button act like an inline button so the width is determined by the button's text. By default, this is null (false) so the select button is full width, regardless of the feedback content. Possible values: true, false.
 				<p>This option is also exposed as a data attribute: <code>data-inline="true"</code>.</p>

@@ -120,7 +120,6 @@
 			</desc>
 		<type name="String" />
 		</option>
-		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 	</options>
 	<events>
 		<event name="create">
