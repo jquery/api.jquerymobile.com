@@ -10,6 +10,20 @@
 
 		<p>To collect standard alphanumeric text, use an <code>input</code> with a <code>type="text"</code> attribute. Set the <code>for</code> attribute of the <code>label</code> to match the <code>id</code> of the <code>input</code> so they are semantically associated. It's possible to accessibly hide the label if it's not desired in the page layout, but we require that it is present in the markup for semantic and accessibility reasons.</p>
 
+		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+		<ul>
+			<li>
+				<code>ui-textinput</code>:  The outermost container for textinput. <code>ui-textinput-search</code> or <code>ui-textinput-text</code> classes will be applied if textinput has <code>type='search'</code> or not accordingly. <code>ui-textinput-clear-button</code> class will be applied when <code>clearBtn</code> option is true. <code>ui-textinput-autogrow</code> class will be applied when <code>autogrow</code> option is true.
+				<ul>
+					<li>
+						<code>ui-textinput-search-icon</code>: Search icon's class when type of textinput is search
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+
 <pre><code><![CDATA[
 <label for="basic">Text Input:</label>
 <input type="text" name="name" id="basic" value="">
@@ -196,6 +210,15 @@ $( ".mySearchInput" ).textinput();
 				<p>This option is also exposed as a data attribute: <code>data-autogrow="false"</code>.</p>
 			</desc>
 			<type name="Boolean" />
+		</option>
+		<option name="classes" type="Object">
+			<default>{
+				"ui-textinput": "ui-corner-all ui-shadow-inset",
+				"ui-textinput-search-icon": "ui-icon ui-alt-icon ui-icon-search",
+				"ui-textinput-clear-button": "ui-corner-all"
+			}</default>
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		</option>
 		<option name="keyupTimeoutBuffer" default="100" example-value="150">
 			<desc>This option is provided by the <code>autogrow</code> extension.
