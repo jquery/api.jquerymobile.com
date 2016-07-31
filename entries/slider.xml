@@ -20,6 +20,31 @@
 		<p>The default slider with these settings is displayed like this:
 		<iframe src="/resources/slider/example1.html" style="width:100%;height:90px;border:0px"></iframe></p>
 
+		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+		<ul>
+			<li>
+				<code>ui-slider</code>: The outermost container for textinput.
+				<ul>
+					<li>
+						<code>ui-slider-popup</code>: Tooltip popup element in case <code>data-popup-enabled</code> is <code>true</code>
+					</li>
+					<li>
+						<code>ui-slider-input</code>: Input element of slider
+					</li>
+					<li>
+						<code>ui-slider-track</code>: Slider's track
+						<ul>
+							<li>
+								<code>ui-slider-handle</code>: Handle of slider's track
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+
 		<h3>Step increment</h3>
 		<p>To force the slider to snap to a specific increment, add the <code>step</code> attribute to the input. By default, the step is 1, but in this example, the step is 10 and the maximum value is 500.</p>
 		<p>In this example, the acceptable range is 0-100.</p>
@@ -244,6 +269,14 @@ $( "input" ).slider();
 	</longdesc>
 	<added>1.0</added>
 	<options>
+		<option name="classes" type="Object">
+			<default> {
+				"ui-slider-track": "ui-shadow-inset ui-corner-all",
+				"ui-slider-input": "ui-shadow-inset ui-corner-all"
+			}</default>
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		</option>
 		<xi:include href="../includes/widget-option-defaults.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="highlight" default="false" example-value="true">
