@@ -10,6 +10,29 @@
 		<p>As you drag the rangeslider's handles, the framework will update the native input values (and vice-versa) so they are always in sync; this ensures that the values are submitted with the form.</p>
 		<p>Set the <code>for</code> attribute of the <code>labels</code> to match the <code>ids</code> of the <code>inputs</code> so they are semantically associated. It's possible to accessibly hide the labels if they're not desired in the page layout, but we require that they are present in the markup for semantic and accessibility reasons.</p>
 		<p>The framework will find all <code>input</code> elements with a <code>type="range"</code> and automatically enhance them into a slider with an accompanying input without any need to apply a <code>data-role</code> attribute. To prevent the automatic enhancement of this input into a slider, add the <code>data-role="none"</code> attribute to the inputs.</p>
+
+		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+		<ul>
+			<li>
+				<code>ui-rangeslider</code>: The outermost container for rangeslider.
+				<ul>
+					<li>
+						<code>ui-slider-popup</code>: Tooltip popup element in case <code>data-popup-enabled</code> is <code>true</code>
+					</li>
+					<li>
+						<code>ui-slider-first</code>: Opening range input element of rangeslider
+					</li>
+					<li>
+						<code>ui-slider-last</code>: Closing range input element of rangeslider
+					</li>
+					<li>
+						<code>ui-rangeslider-sliders</code>: Sliders for rangeslider
+					</li>
+				</ul>
+			</li>
+		</ul>
+
 		<p>In this example, the acceptable range is 0-100.</p>
 
 <pre><code><![CDATA[
@@ -121,6 +144,12 @@ $( "div#range-slider" ).rangeslider();
 	</longdesc>
 	<added>1.3</added>
 	<options>
+		<option name="classes" type="Object">
+			<default>{}</default>
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		</option>
+
 		<xi:include href="../includes/widget-option-defaults.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="highlight" default="true" example-value="false">
