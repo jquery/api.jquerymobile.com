@@ -24,7 +24,7 @@
 
 		<ul>
 			<li>
-				<code>ui-slider</code>: The outermost container for textinput.
+				<code>ui-slider</code>: The outermost container for slider.
 				<ul>
 					<li>
 						<code>ui-slider-popup</code>: Tooltip popup element in case <code>data-popup-enabled</code> is <code>true</code>
