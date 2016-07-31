@@ -7,6 +7,26 @@
 		<h2>Flip switches</h2>
 		<p>The flip switch is an alternative look to the checkbox or the two-option select menu. It can be toggled by a click or a swipe.</p>
 		<p>To create a flip switch add the attribute <code>data-role="flipswitch"</code> to a checkbox <code>input</code> or to a <code>select</code> which has two <code>option</code> values.</p>
+
+		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+		<ul>
+			<li>
+				<code>ui-flipswitch</code>:  The outermost container for flipswitch. Additionally, <code>ui-flipswitch-active</code> class will be applied in case flipswitch is in active
+				<ul>
+					<li>
+						<code>ui-flipswitch-on</code>: On state label of flipswitch
+					</li>
+					<li>
+						<code>ui-flipswitch-off</code>: Off state label of flipswitch
+					</li>
+					<li>
+						<code>ui-flipswitch-input</code>: Input checkbox element for flipswitch
+					</li>
+				</ul>
+			</li>
+		</ul>
+
 		<h3>Checkbox-based flipswitch</h3>
 		<p>Use the following markup to create a flipswitch based on a checkbox <code>input</code>:
 <pre><code><![CDATA[
@@ -78,6 +98,15 @@
 	</longdesc>
 	<added>1.4</added>
 	<options>
+		<option name="classes" type="Object">
+			<default>{
+				"ui-flipswitch": "ui-shadow-inset ui-corner-all",
+				"ui-flipswitch-on": "ui-shadow"
+			}</default>
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		</option>
+
 		<option name="corners" default="true" example-value="false">
 			<desc>Applies the theme button border-radius if set to true.
 				<p>This option is also exposed as a data attribute: <code>data-corners="false"</code>.</p>
