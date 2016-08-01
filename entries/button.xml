@@ -3,62 +3,19 @@
 <entry name="button" type="widget" widgetnamespace="mobile" event-prefix="button" init-selector="input[type='button'], input[type='submit'], input[type='reset']">
 	<title>Button Widget</title>
     <desc>Creates a button widget</desc>
-    <longdesc>
-		<h2>Buttons</h2>
-		<p>Buttons are coded with standard HTML <code>input</code> elements, then enhanced by jQuery Mobile to make them more attractive and useable on a mobile device.</p>
-
-		<h3>Form buttons</h3>
-
-		<p>For ease of styling, the framework automatically converts any <code>input</code> element with a <code>type</code> of <code>submit</code>, <code>reset</code>, or <code>button</code> into a custom styled button - there is no need to add the <code>data-role="button"</code> attribute. However, if needed, you can directly call the <placeholder name="name"/> plugin on any selector, just like any jQuery plugin:</p>
-
-<pre><code><![CDATA[
-$( "[type='submit']" ).button();
-]]></code></pre>
-
-		<p><strong>Input type="button"</strong> based <placeholder name="name"/>:</p>
-<pre><code><![CDATA[
-<input type="button" value="Button">
-]]></code></pre>
-
-		<iframe src="/resources/button/example5.html" style="width:100%;height:90px;border:0px"></iframe>
-
-		<p><strong>Input type="submit"</strong> based <placeholder name="name"/>:</p>
-<pre><code><![CDATA[
-<input type="submit" value="Submit Button">
-]]></code></pre>
-
-		<iframe src="/resources/button/example6.html" style="width:100%;height:90px;border:0px"></iframe>
-
-		<p><strong>Input type="reset"</strong> based <placeholder name="name"/>:</p>
-<pre><code><![CDATA[
-<input type="reset" value="Reset Button">
-]]></code></pre>
-
-		<iframe src="/resources/button/example7.html" style="width:100%;height:90px;border:0px"></iframe>
-
-		<xi:include href="../includes/pre-rendered-common.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<p>The <placeholder name="name"/> widget adds a wrapper <code>div</code> around the <code>input</code>.</p>
-		<p>In the example below, pre-rendered markup for a <placeholder name="name"/> is provided. The attribute <code>data-corners="false"</code> is explicitly specified, since the absence of the <code>ui-corner-all</code> class on the wrapper element indicates that the "corners" widget option is to be false.</p>
-
-<pre><code><![CDATA[
-<div class="ui-btn ui-input-btn ui-shadow">
-	The Button
-	<input type="button" data-corners="false" data-enhanced="true" value="The Button"></input>
-</div>
-]]></code></pre>
-
-<iframe src="/resources/button/example49.html" style="width:100%;height:90px;border:0px"></iframe>
-
-		</longdesc>
+	<longdesc>
+		<p>The jQuery UI button widget is bundled in jQuery Mobile with some changes. Thus, its <a href="//api.jqueryui.com/button/">API documentation</a> fully describes its functionality.</p>
+	</longdesc>
 	<added>1.0</added>
 	<options>
 		<option name="corners" default="true" example-value="false">
 			<desc>Applies the theme button border-radius if set to true.
 				<p>This option is also exposed as a data attribute: <code>data-corners="false"</code>.</p>
+				<xi:include href="../includes/widget-option-deprecation-1.6.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
 			</desc>
 			<type name="Boolean" />
 		</option>
-		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<xi:include href="../includes/widget-option-enhanced.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="icon" default="null" example-value='"star"'>
 			<desc>Applies an icon from the icon set.
@@ -70,21 +27,17 @@ $( "[type='submit']" ).button();
 		<option name="iconpos" default='"left"'>
 			<desc>Positions the icon in the <placeholder name="name"/>. Possible values: left, right, top, bottom, none, notext. The notext value will display an icon-only <placeholder name="name"/> with no text feedback.
 				<p>This option is also exposed as a data attribute: <code>data-iconpos="right"</code>.</p>
+			<xi:include href="../includes/widget-option-deprecation-1.6.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
 			</desc>
 			<type name="String" />
-		</option>
-		<option name="iconshadow" default="false" deprecated="1.4.0">
-			<desc>
-				<strong>This option is deprecated in 1.4.0 and will be removed in 1.5.0.</strong>
-				<p>Applies the theme shadow to the <placeholder name="name"/>'s icon if set to true.</p>
-				<p>This option is also exposed as a data attribute: <code>data-iconshadow="true"</code>.</p>
-			</desc>
-			<type name="Boolean" />
 		</option>
 		<xi:include href="../includes/widget-option-initSelector.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="inline" default="null (false)">
 			<desc>If set to <code>true</code>, this will make the <placeholder name="name"/> act like an inline <placeholder name="name"/> so the width is determined by the <placeholder name="name"/>'s text. By default, this is null (false) so the <placeholder name="name"/> is full width, regardless of the feedback content. Possible values: true, false.
 				<p>This option is also exposed as a data attribute: <code>data-inline="true"</code>.</p>
+				<xi:include href="../includes/widget-option-deprecation-1.6.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
 			</desc>
 			<type name="Boolean" />
 		</option>
@@ -92,6 +45,8 @@ $( "[type='submit']" ).button();
 		<option name="shadow" default="true">
 			<desc>Applies the drop shadow style to the <placeholder name="name"/> if set to true.
 				<p>This option is also exposed as a data attribute: <code>data-shadow="false"</code>.</p>
+				<xi:include href="../includes/widget-option-deprecation-1.6.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
 			</desc>
 			<type name="Boolean" />
 		</option>
@@ -99,42 +54,10 @@ $( "[type='submit']" ).button();
 		<option name="wrapperClass" default="null">
 			<desc>Allows you to specify CSS classes to be set on the <placeholder name="name"/>'s wrapper element.
 				<p>This option is also exposed as a data attribute: <code>data-wrapper-class="custom-class"</code>.</p>
+				<xi:include href="../includes/widget-option-deprecation-1.6.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			</desc>
 			<type name="String" />
 		</option>
 	</options>
-	<events>
-		<xi:include href="../includes/widget-event-create.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-	</events>
-	<methods>
-		<xi:include href="../includes/widget-method-destroy.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/widget-method-disable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/widget-method-enable.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-		<method name="refresh">
-			<desc>update the form <placeholder name="name"/>.
-			<p>If you manipulate a form <placeholder name="name"/> via JavaScript, you must call the refresh method on it to update the visual styling.</p>
-<pre><code><![CDATA[
-$( "[type='submit']" ).button( "refresh" );
-]]></code></pre>
-			</desc>
-		</method>
-	</methods>
-	<example>
-	<!--<height>200</height>-->
-		<desc>A basic example of a <placeholder name="name"/></desc>
-		<html><![CDATA[
-<div data-role="page" id="page1">
-	<div data-role="header">
-		<h1>jQuery Mobile Example</h1>
-	</div>
-	<div role="main" class="ui-content">
-    <form action="#" method="get">
-      <input type="submit" value="Input Button"></input>
-    </form>
-	</div>
-</div>
-]]></html>
-	</example>
 	<category slug="widgets"/>
 </entry>
