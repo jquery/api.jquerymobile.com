@@ -49,6 +49,12 @@ $.mobile.back();
 	</longdesc>
 	<added>1.0</added>
 	<options>
+		<option name="classes" type="Object">
+			<default>{}</default>
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		</option>
+
 		<option name="closeBtn" type="String" default='"left"' example-value='"none"'>
 			<desc>This option is provided by the <code>dialog</code> extension.
 				<p>Sets the position of the dialog close button in the header.</p>
