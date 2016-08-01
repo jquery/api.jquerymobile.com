@@ -10,6 +10,44 @@
 
 		<p>The framework will find all <code>select</code> elements and automatically enhance them into select menus, no need to apply a <code>data-role</code> attribute. To prevent the automatic enhancement of a select, add  <code>data-role="none"</code> attribute to the <code>select</code>.</p>
 
+		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+		<ul>
+			<li>
+				<code>ui-selectmenu</code>:  The outermost container for selectmenu.
+				<ul>
+					<li>
+						<code>ui-selectmenu-button</code>: Custom styled button for the selectmenu
+						<ul>
+							<li>
+								<code>ui-selectmenu-button-icon</code>: Selectmenu button icon
+							</li>
+							<li>
+								<code>ui-selectmenu-button-text</code>: Selectmenu button text
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<code>ui-selectmenu-custom</code>:  The outermost container for custom selectmenu.
+				<ul>
+					<li>
+						<code>ui-selectmenu-custom-list</code>: List element for custom selectmenu
+						<ul>
+							<li>
+								<code>ui-selectmenu-custom-header-close-button</code>: Close button for custom selectmenu
+								<ul>
+									<li>
+										<code>ui-selectmenu-custom-header-close-button-icom</code>: Close button icon for custom selectmenu
+									</li>
+								</ul>
+
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
 <pre><code><![CDATA[
 <label for="select-choice-0" class="select">Shipping method:</label>
 <select name="select-choice-0" id="select-choice-0">
@@ -241,6 +279,16 @@ $( "select" ).selectmenu();
 	</longdesc>
 	<added>1.0</added>
 	<options>
+		<option name="classes" type="Object">
+			<default>{
+				"ui-selectmenu-button": "ui-corner-all ui-shadow",
+				"ui-selectmenu-custom-header-close-button": "ui-corner-all"
+
+			}</default>
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		</option>
+
 		<option name="closeText" default='"Close"' example-value='"Fermer"'>
 			<desc>
 				<p>Customizes the text of the close button which is helpful for translating this into different languages. The close button is displayed as an icon-only button by default so the text isn't visible on-screen, but is read by screen readers so this is an important accessibility feature.</p>
