@@ -5,6 +5,7 @@
 	<desc>Creates a collapsible block of content</desc>
 	<longdesc>
 		<h2>Collapsible content</h2>
+		<strong>Note:</strong> Collapsible is deprecated as of version 1.5 and will be removed in version 1.6. Use <a href="//api.jquerymobile.com/accordion">accordion</a> in place of collapsible.
 		<p>To create a collapsible block of content, create a container and add the <code>data-role="collapsible"</code> attribute. Using the <code>data-content-theme</code> attribute allows you to set a theme for the content of the collapsible.</p>
 		<p>Directly inside this container, add any header (H1-H6) or legend element. The framework will style the header to look like a clickable button and add a "+" icon to the left to indicate it's expandable.</p>
 		<p>After the header, add any HTML markup you want to be collapsible. The framework will wrap this markup in a container that will be hidden/shown when the heading is clicked.</p>
@@ -18,6 +19,32 @@
 		<p>This code will create a collapsible widget like this:
 		<iframe src="/resources/collapsible/example1.html" style="width:100%;height:150px;border:0px"></iframe>
 		</p>
+
+		<xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+		<ul>
+			<li>
+				<code>ui-collapsible</code>: The outermost container for collapsible. Contains additional classes of <code>ui-collapsible-inset</code>, <code>ui-collapsible-themed-content</code> and <code>ui-collapsible-collapsed</code> by default unless options to set them false are added.
+				<ul>
+					<li>
+						<code>ui-collapsible-heading</code>: Always visible part of collapsible, which is clicked to open it. Additionally contains <code>ui-collapsible-heading-collapsed</code> class when the collapsible is closed.
+						<ul>
+							<li>
+								<code>ui-collapsible-heading-toggle</code>: Toggler for collapsible
+								<ul>
+									<li>
+										<code>ui-collapsible-heading-status</code>: Status text of the toggler
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<code>ui-collapsible-content</code>: Content of the collapsible. Additionally contains <code>ui-collapsible-content-collapsed</code> class in case the content is collapsed.
+					</li>
+				</ul>
+			</li>
+		</ul>
 
 		<h3>Initially expanded collapsibles</h3>
 
@@ -122,6 +149,12 @@
   	</longdesc>
 	<added>1.0</added>
 	<options>
+		<option name="classes" type="Object">
+			<default>{}</default>
+			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+		</option>
+
 		<option name="collapseCueText" default='" click to collapse contents"'  example-value='" collapse with a click"'>
 			<desc>This text is used to provide audible feedback for users with screen reader software.
 				<p>If the value is unset for an individual collapsible container, but that container is part of a collapsible set, then the value is inherited from the parent collapsible set.</p>
