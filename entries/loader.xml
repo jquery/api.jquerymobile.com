@@ -12,7 +12,7 @@
 
 		<ul>
 			<li>
-				<code>ui-loader</code>: Outermost container for listview widget. If <code>textvisible</code> option is used <code>ui-loader-verbose</code> class will be added. Additionally if <code>textonly</code> option is used then <code>ui-loader-textonly</code> class will added. In all other cases where text is not present <code>ui-loader-default</code> class will be added.
+				<code>ui-loader</code>: Outermost container for loader widget. If <code>textvisible</code> option is used <code>ui-loader-verbose</code> class will be added. Additionally if <code>textonly</code> option is used then <code>ui-loader-textonly</code> class will added. In all other cases where text is not present <code>ui-loader-default</code> class will be added.
 				<ul>
 					<li>
 						<code>ui-loader-item</code>: Span element of the loader representing the icon
