@@ -7,6 +7,32 @@
 		<h2 id="popups">Popups</h2>
 		<p>To create a popup, add the <code>data-role="popup"</code> attribute to a div with the popup contents. Then create a link with the <code>href</code> set to the <code>id</code> of the popup div, and add the attribute <code>data-rel="popup"</code> to tell the framework to open the popup when the link is tapped. This is a similar markup pattern to the <a href="../dialog/">dialog</a> widget. A popup div has to be nested inside the same page as the link.</p>
 
+        <xi:include href="../includes/widget-theming.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+        <ul>
+            <li>
+                <code>ui-popup-container</code>: Outermost container for listview widget. Additionally, <code>ui-popup-active</code> class will be added when popup is active and <code>ui-popup-hidden, ui-popup-truncate</code> classes will be added when popup is inactive.
+                <ul>
+                    <li>
+                        <code>ui-popup</code>: Main container of popup which withhelds all the content
+                        <ul>
+                            <li>
+                                <code>ui-popup-arrow-guide</code>: Guide of the arrow.
+                            </li>
+                            <li>
+                                <code>ui-popup-arrow-container</code>: Container for the arrow of the popup. This will additionally have <code>ui-popup-arrow-l</code>, <code>ui-popup-arrow-t</code>, <code>ui-popup-arrow-r</code>, <code>ui-popup-arrow-b</code> classes accordingly if arrow is set to left, top, right or bottom respectively.
+                                <ul>
+                                    <li>
+                                        <code>ui-popup-arrow</code>: Main arrow element
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
 <pre><code><![CDATA[
 <a href="#popupBasic" data-rel="popup">Open Popup</a>
 
@@ -445,7 +471,8 @@ $( document ).on( "pageinit", function() {
 		</option>
 		<option name="classes" type="Object">
 			<default>{
-				"ui-popup": "ui-corner-all ui-overlay-shadow"
+				"ui-popup": "ui-corner-all ui-overlay-shadow",
+                "ui-popup-arrow": "ui-overlay-shadow"
 			}</default>
 			<xi:include href="../includes/classes-option-desc.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 			<xi:include href="../includes/classes-option-example.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
