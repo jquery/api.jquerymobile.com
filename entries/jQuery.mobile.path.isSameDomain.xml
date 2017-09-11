@@ -33,21 +33,21 @@
 				<html><![CDATA[
 	<div role="main" class="ui-content ui-mini">
 		<div>
-			<a href="javascript:void(0)" class="ui-btn ui-corner-all ui-btn-inline ui-shadow compare">Same Domain?</a>
+			<a href="javascript:void(0)" class="ui-button ui-corner-all ui-button-inline ui-shadow compare">Same Domain?</a>
 			<div class="versus">
 				<pre><code>http://example.com/</code></pre>
 				<pre><code>http://slashdot.org/</code></pre>
 			</div>
 		</div>
 		<div>
-			<a href="javascript:void(0)" class="ui-btn ui-corner-all ui-btn-inline ui-shadow compare">Same Domain?</a>
+			<a href="javascript:void(0)" class="ui-button ui-corner-all ui-button-inline ui-shadow compare">Same Domain?</a>
 			<div class="versus">
 				<pre><code>http://edition.cnn.com/</code></pre>
 				<pre><code>http://cnn.com/</code></pre>
 			</div>
 		</div>
 		<div>
-			<a href="javascript:void(0)" class="ui-btn ui-corner-all ui-btn-inline ui-shadow compare">Same Domain?</a>
+			<a href="javascript:void(0)" class="ui-button ui-corner-all ui-button-inline ui-shadow compare">Same Domain?</a>
 			<div class="versus">
 				<pre><code>http://www.amazon.co.uk/</code></pre>
 				<pre><code>http://www.amazon.co.uk/</code></pre>
