@@ -6,6 +6,7 @@
 	</signature>
 	<longdesc>
 		<p>When working with jQuery Mobile, jqmData should be used in place of jQuery core's <code>data</code> method (note that this includes <code>$.fn.data</code>, <code>$.fn.removeData</code>, and the <code>$.data</code>, <code>$.removeData</code>, and <code>$.hasData</code> utilities), as they automatically incorporate getting and setting of namespaced data attributes (even if no namespace is currently in use).
+    <strong>Note:</strong> jqmData is deprecated as of version 1.5 and will be removed in version 1.6.
 		</p>
 		<dd>
 			<dl>
