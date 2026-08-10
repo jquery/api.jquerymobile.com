@@ -75,31 +75,6 @@
 $.mobile.changePage( "../resources/us.html", { transition: "slideup", changeHash: false });
 ]]></code>
 		</example>
-		<example>
-			<desc>Transition to the "search results" page, using data from a form with an id of "search".</desc>
-			<html><![CDATA[
-<div data-role="page" id="page1">
-	<div data-role="header">
-		<h1>Page 1</h1>
-	</div>
-	<div role="main" class="ui-content">
-		<form id="search">
-			<p>Please fill in the form below:<br /><br />
-			<label for="choice">Favorite framework:</label>
-			<input type="text" name="choice" id="choice" value="jQuery Mobile" />
-			</p>
-		</form>
-	</div>
-</div>
-]]></html>
-		<code><![CDATA[
-$.mobile.changePage( "../resources/results.php", {
-	type: "post",
-	data: $( "form#search" ).serialize(),
-	changeHash: false
-});
-]]></code>
-	</example>
 	<example>
 		<desc>Transition to the "confirm" page with a "pop" transition without tracking it in history.</desc>
 		<html><![CDATA[

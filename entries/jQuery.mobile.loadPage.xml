@@ -81,29 +81,6 @@
 	});
 ]]></code>
 		</example>
-		<example>
-			<desc>Load a "search results" page, using data from a form with an id of "search".</desc>
-			<html><![CDATA[
-	<div role="main" class="ui-content">
-	
-		<form id="search">
-			<p>Please fill in the form below:<br /><br />
-			<label for="choice">Favorite framework:</label>
-			<input type="text" name="choice" id="choice" value="jQuery Mobile" />
-
-			<a href="#formResults" data-role="button" data-inline="true" data-rel="dialog">Show Results</a>
-			</p>
-		</form>
-		
-	</div>
-			]]></html>
-			<code><![CDATA[
-$.mobile.loadPage( "../resources/results.php", true, {
-	type: "post",
-	data: $( "form#search" ).serialize()
-});
-]]></code>
-		</example>
 	<longdesc>
 		<p>Load an external page, enhance its content, and insert it into the DOM. This method is called internally by the changePage() function when its first argument is a URL. This function does not affect the current active page so it can be used to load pages in the background. The function returns a deferred promise object that gets resolved after the page has been enhanced and inserted into the document.
 
