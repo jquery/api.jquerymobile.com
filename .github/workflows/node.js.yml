@@ -4,7 +4,6 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
@@ -15,17 +14,13 @@ jobs:
 
     strategy:
       matrix:
-        # Old infra requires Node 10
-        node-version: [10.x, 18.x]
+        node-version: [18.x, 20.x]
 
     steps:
     - name: Install xmllint
       run: sudo apt-get install -y libxml2-utils
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v6
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+      uses: actions/setup-node@v6
     - run: npm ci
     - run: npm test
